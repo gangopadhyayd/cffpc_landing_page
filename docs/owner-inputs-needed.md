@@ -1,5 +1,16 @@
 # Owner Inputs Needed — persistentCartApp.com
 
+> **LEAN-V1 UPDATE (2026-07-04): only 3 inputs matter for the v1 launch.**
+> 1. Approve publishing **"Trusted by 5,000+ Shopify stores since 2016"** (your real figure:
+>    5,445 distinct stores) — one yes, wired in `src/config/site.ts`.
+> 2. **Privacy policy decision** — confirm the formal policy URL to link, or send its text
+>    to host on-domain (§4 below).
+> 3. **Confirm the Green Mountain Diapers review** may stay featured on the homepage (§2 below).
+>
+> Everything else below belongs to deferred v2 features (partner terms, audit fulfillment,
+> calculator) or optional integrations — see `docs/v1-recommendation.md`. The v1 site launches
+> safely on placeholders without any of it.
+
 **The single place to finish the site.** The site is built and launch-ready *except* for the
 items below, which only you can supply. Each item says: what's needed, why, where it plugs in,
 the placeholder in use, and whether launch is safe without it. Nothing here blocks a soft launch

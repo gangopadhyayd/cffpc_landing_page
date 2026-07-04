@@ -104,3 +104,32 @@ The simplify-vs-restart call and final v1 shape live in `docs/v1-recommendation.
   zoom; problem/parity/stat sections verified in place.
 
 ---
+
+## Cycle 3 — QA, mobile truth, and launch docs (2026-07-04)
+
+### Findings & fixes
+- **Mobile "overflow" was a tooling artifact, not a bug.** Direct headless-Chrome screenshots at
+  `--window-size=390` showed the page cut off; a measured in-iframe scan at a true 390px viewport
+  (production build) proved `scrollWidth=390`, media queries applying, zero offenders — headless
+  Chrome clamps its window to ~500px and crops the capture. Real finding from the scan: the
+  laptop-base bars poked 2px past exact-390 viewports → base width 114%→110%. Mobile re-verified
+  visually via the iframe method: announce wraps, CTAs stack, the fork stacks phone → lost →
+  kept with chips carrying the branching.
+- **Link integrity sweep (all 136 pages):** one broken href — `/apple-touch-icon.png` was
+  referenced by SEOHead since the original build but never existed. Generated (180px, new mark).
+  After fix: 141 unique internal hrefs, zero broken.
+- **Structure sweep:** exactly one `<h1>` per page ✓ · `og:image` on every page ✓ · German
+  sample locale renders the new hero and stays `noindex` ✓.
+- **A11y:** stat citation line bumped ink-faint→ink-soft (small-text contrast); fork is a
+  `figure` with real DOM text in story order (screen readers get phone cart → empty → synced);
+  decorative SVGs `aria-hidden`; global `:focus-visible` + reduced-motion reset already in place,
+  fork motion additionally gated behind `prefers-reduced-motion: no-preference` + no-JS-safe.
+- Subpages (how-it-works, pricing, faq) visually reviewed at desktop — clean, on-message.
+
+### Deliverables
+- `docs/v1-recommendation.md` — simplify-vs-restart call (simplify), final v1 page set,
+  re-enable instructions, the ≤3 owner inputs, pre-publish checklist, v2 order.
+- `docs/owner-inputs-needed.md` — top-3-asks banner added.
+- Final state: **build 136 pages · typecheck 0 errors · i18n:check green · 0 broken links.**
+
+---
