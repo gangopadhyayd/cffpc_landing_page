@@ -53,10 +53,10 @@
   "hero.trust.rating": "4.8★ sull'App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "Sincronizza i carrelli dal 2016",
-  "hero.demo.caption": "Lo stesso carrello connesso su telefono e laptop — mantenuto sincronizzato automaticamente.",
+  "hero.demo.caption": "Stesso cliente, stesso accesso — dal telefono al portatile. Su Shopify predefinito il carrello resta indietro. Con Persistent Cart è già lì.",
   "demo.cart.title": "Il tuo carrello",
   "demo.cart.subtotal": "Subtotale",
-  "demo.cart.synced": "Sincronizzato tra dispositivi",
+  "demo.cart.synced": "Sincronizzato",
   "demo.cart.syncing": "Sincronizzazione…",
   "demo.cart.added": "Aggiunto da telefono",
   "demo.cart.item.shoes": "Trail Runners",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "Che cosa fa con i dati dei miei clienti?",
   "home.faq.q8.a": "Il minimo necessario per sincronizzare un carrello. Funziona solo per i clienti che hanno effettuato l’accesso e salva il contenuto del carrello associato all’account cliente del tuo negozio — nulla di più di ciò che un carrello contiene. Gli ospiti non vengono tracciati, non vengono inviate email, non compaiono richieste di consenso e i dati restano limitati al tuo negozio. Siamo Built for Shopify e seguiamo i flussi di protezione dati richiesti da Shopify.",
   "nav.faq": "FAQ",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "Il tuo carrello è vuoto",
+  "demo.cart.emptyHint": "Il carrello del telefono è rimasto indietro"
 }

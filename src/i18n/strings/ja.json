@@ -53,10 +53,10 @@
   "hero.trust.rating": "App ストアでの評価",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "2016年から App ストアで提供",
-  "hero.demo.caption": "スマホとノートPCで同じログイン中のカート — 自動で同期され続けます。",
+  "hero.demo.caption": "同じお客様、同じログイン — スマホからノートPCへ。標準のShopifyではカートは置き去りに。Persistent Cart ならもうそこにあります。",
   "demo.cart.title": "あなたのカート",
   "demo.cart.subtotal": "小計",
-  "demo.cart.synced": "デバイス間で同期済み",
+  "demo.cart.synced": "同期済み",
   "demo.cart.syncing": "同期中…",
   "demo.cart.added": "スマホで追加",
   "demo.cart.item.shoes": "トレイルランニングシューズ",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "顧客データはどう扱われますか？",
   "home.faq.q8.a": "カート同期に必要な最小限のデータのみです。ログイン済みのお客様に対してのみ動作し、ストアごとに顧客アカウントに紐づけてカートの内容を保存します — カートに入っている以上の情報は扱いません。ゲストは追跡せず、メールも送信せず、同意ポップアップも表示されません。データはあなたのストアの範囲内にとどまります。Built for Shopify として、Shopifyが定めるデータ保護フローに従っています。",
   "nav.faq": "よくある質問",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "カートは空です",
+  "demo.cart.emptyHint": "スマホのカートは置き去りに"
 }

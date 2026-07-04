@@ -53,10 +53,10 @@
   "hero.trust.rating": "avaliação na App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "Na App Store desde 2016",
-  "hero.demo.caption": "O mesmo carrinho de cliente conectado no celular e no notebook — sincronizado automaticamente.",
+  "hero.demo.caption": "Mesmo cliente, mesmo login — do celular para o notebook. No Shopify padrão, o carrinho fica para trás. Com o Persistent Cart, ele já está lá.",
   "demo.cart.title": "Seu carrinho",
   "demo.cart.subtotal": "Subtotal",
-  "demo.cart.synced": "Sincronizado entre dispositivos",
+  "demo.cart.synced": "Sincronizado",
   "demo.cart.syncing": "Sincronizando…",
   "demo.cart.added": "Adicionado no celular",
   "demo.cart.item.shoes": "Tênis de Trilha",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "O que ele faz com os dados dos meus clientes?",
   "home.faq.q8.a": "O mínimo que uma sincronização de carrinho precisa. Funciona apenas para clientes logados e guarda o conteúdo do carrinho vinculado à conta do cliente na sua loja — nada além do que um carrinho contém. Visitantes não são rastreados, nenhum e-mail é enviado, nenhum aviso de consentimento aparece e os dados ficam restritos à sua loja. Somos Built for Shopify e seguimos os fluxos de proteção de dados exigidos pela Shopify.",
   "nav.faq": "FAQ",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "Seu carrinho está vazio",
+  "demo.cart.emptyHint": "O carrinho do celular ficou para trás"
 }

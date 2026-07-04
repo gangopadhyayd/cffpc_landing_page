@@ -49,10 +49,10 @@
   "hero.trust.rating": "4.8★ in de App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "Synchroniseert winkelwagens sinds 2016",
-  "hero.demo.caption": "Dezelfde ingelogde winkelwagen op telefoon en laptop — automatisch gesynchroniseerd gehouden.",
+  "hero.demo.caption": "Dezelfde shopper, dezelfde login — van telefoon naar laptop. Op standaard Shopify blijft de winkelwagen achter. Met Persistent Cart staat hij er al.",
   "demo.cart.title": "Je winkelwagen",
   "demo.cart.subtotal": "Subtotaal",
-  "demo.cart.synced": "Gesynchroniseerd tussen apparaten",
+  "demo.cart.synced": "Gesynchroniseerd",
   "demo.cart.syncing": "Synchroniseren…",
   "demo.cart.added": "Toegevoegd op telefoon",
   "demo.cart.item.shoes": "Trail Runners",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "Wat doet het met de gegevens van mijn klanten?",
   "home.faq.q8.a": "Het minimum dat een winkelwagen-synchronisatie nodig heeft. Het werkt alleen voor ingelogde klanten en bewaart de inhoud van de winkelwagen gekoppeld aan het klantaccount van jouw winkel — niets meer dan wat een winkelwagen bevat. Gasten worden niet gevolgd, er worden geen e-mails verstuurd, er verschijnen geen toestemmingsvragen en de gegevens blijven beperkt tot jouw winkel. We zijn Built for Shopify en volgen de door Shopify vereiste gegevensbeschermingsprocessen.",
   "nav.faq": "FAQ",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "Je winkelwagen is leeg",
+  "demo.cart.emptyHint": "De winkelwagen van de telefoon bleef achter"
 }

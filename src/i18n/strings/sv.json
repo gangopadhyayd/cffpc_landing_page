@@ -53,10 +53,10 @@
   "hero.trust.rating": "betyg på App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "På App Store sedan 2016",
-  "hero.demo.caption": "Samma inloggade varukorg på mobil och laptop — automatiskt synkroniserad.",
+  "hero.demo.caption": "Samma kund, samma inloggning — från mobil till laptop. På standard-Shopify blir varukorgen kvar. Med Persistent Cart finns den redan där.",
   "demo.cart.title": "Din varukorg",
   "demo.cart.subtotal": "Delsumma",
-  "demo.cart.synced": "Synkroniserad mellan enheter",
+  "demo.cart.synced": "Synkad",
   "demo.cart.syncing": "Synkroniserar…",
   "demo.cart.added": "Tillagd på mobilen",
   "demo.cart.item.shoes": "Terrängskor",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "Vad gör den med mina kunders uppgifter?",
   "home.faq.q8.a": "Det minsta en varukorgs-synkronisering behöver. Den fungerar bara för inloggade kunder och sparar varukorgens innehåll kopplat till kundkontot i din butik — inget mer än vad en varukorg innehåller. Gäster spåras inte, inga mejl skickas, inga samtyckesrutor visas och uppgifterna stannar inom din butik. Vi är Built for Shopify och följer Shopifys obligatoriska dataskyddsflöden.",
   "nav.faq": "Vanliga frågor",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "Din varukorg är tom",
+  "demo.cart.emptyHint": "Varukorgen blev kvar i mobilen"
 }

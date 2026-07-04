@@ -53,10 +53,10 @@
   "hero.trust.rating": "App Store 上 4.8★ 好评",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "自 2016 年起同步购物车",
-  "hero.demo.caption": "手机和笔记本上同一个已登录购物车 — 自动保持同步。",
+  "hero.demo.caption": "同一位顾客，同一账号 — 从手机换到笔记本电脑。默认 Shopify 下购物车留在原地；有了 Persistent Cart，它已经在那里。",
   "demo.cart.title": "您的购物车",
   "demo.cart.subtotal": "小计",
-  "demo.cart.synced": "已跨设备同步",
+  "demo.cart.synced": "已同步",
   "demo.cart.syncing": "正在同步…",
   "demo.cart.added": "已在手机上添加",
   "demo.cart.item.shoes": "越野跑鞋",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "它会如何处理我顾客的数据？",
   "home.faq.q8.a": "只处理购物车同步所需的最少数据。它仅对已登录顾客生效，并将购物车内容与您商店的顾客账户关联保存 — 不超出购物车本身包含的信息。不追踪访客，不发送邮件，不弹出授权提示，数据仅限于您的商店范围内。我们是 Built for Shopify 应用，遵循 Shopify 要求的数据保护流程。",
   "nav.faq": "常见问题",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "您的购物车是空的",
+  "demo.cart.emptyHint": "手机上的购物车留在了原地"
 }

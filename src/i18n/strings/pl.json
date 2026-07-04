@@ -53,10 +53,10 @@
   "hero.trust.rating": "4.8★ w App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "Synchronizujemy koszyki od 2016 roku",
-  "hero.demo.caption": "Ten sam koszyk zalogowanego klienta na telefonie i laptopie — automatycznie zsynchronizowany.",
+  "hero.demo.caption": "Ten sam klient, to samo logowanie — z telefonu na laptopa. W domyślnym Shopify koszyk zostaje w tyle. Z Persistent Cart już tam jest.",
   "demo.cart.title": "Twój koszyk",
   "demo.cart.subtotal": "Suma częściowa",
-  "demo.cart.synced": "Zsynchronizowany między urządzeniami",
+  "demo.cart.synced": "Zsynchronizowany",
   "demo.cart.syncing": "Synchronizowanie…",
   "demo.cart.added": "Dodano na telefonie",
   "demo.cart.item.shoes": "Buty trailowe",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "Co robi z danymi moich klientów?",
   "home.faq.q8.a": "Tylko minimum potrzebne do synchronizacji koszyka. Działa wyłącznie dla zalogowanych klientów i zapisuje zawartość koszyka powiązaną z kontem klienta w Twoim sklepie — nic ponad to, co zawiera koszyk. Goście nie są śledzeni, żadne e-maile nie są wysyłane, nie pojawiają się prośby o zgodę, a dane pozostają ograniczone do Twojego sklepu. Jesteśmy Built for Shopify i przestrzegamy wymaganych przez Shopify procedur ochrony danych.",
   "nav.faq": "FAQ",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "Twój koszyk jest pusty",
+  "demo.cart.emptyHint": "Koszyk z telefonu został w tyle"
 }

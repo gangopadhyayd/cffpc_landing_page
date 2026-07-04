@@ -53,10 +53,10 @@
   "hero.trust.rating": "valoración en la App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "En la App Store desde 2016",
-  "hero.demo.caption": "El mismo carrito con sesión iniciada en el móvil y en el portátil, sincronizado automáticamente.",
+  "hero.demo.caption": "Mismo comprador, misma sesión: del móvil al portátil. En Shopify por defecto, el carrito se queda atrás. Con Persistent Cart, ya está ahí.",
   "demo.cart.title": "Tu carrito",
   "demo.cart.subtotal": "Subtotal",
-  "demo.cart.synced": "Sincronizado entre dispositivos",
+  "demo.cart.synced": "Sincronizado",
   "demo.cart.syncing": "Sincronizando…",
   "demo.cart.added": "Añadido en el móvil",
   "demo.cart.item.shoes": "Zapatillas de trail",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "¿Qué hace con los datos de mis clientes?",
   "home.faq.q8.a": "Lo mínimo que necesita una sincronización de carrito. Funciona solo para clientes con sesión iniciada y guarda el contenido del carrito asociado a la cuenta del cliente en tu tienda — nada más que lo que contiene un carrito. No rastrea a los invitados, no envía correos, no muestra avisos de consentimiento y los datos quedan limitados a tu tienda. Somos Built for Shopify y seguimos los flujos de protección de datos que exige Shopify.",
   "nav.faq": "Preguntas frecuentes",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "Tu carrito está vacío",
+  "demo.cart.emptyHint": "El carrito del móvil se quedó atrás"
 }

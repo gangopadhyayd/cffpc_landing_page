@@ -53,10 +53,10 @@
   "hero.trust.rating": "4.8★ App Storessa",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "Synkronoinut ostoskoreja vuodesta 2016",
-  "hero.demo.caption": "Sama kirjautuneen asiakkaan ostoskori puhelimessa ja kannettavassa — pidetään automaattisesti synkronoituna.",
+  "hero.demo.caption": "Sama asiakas, sama kirjautuminen — puhelimesta läppäriin. Oletus-Shopifyssa kori jää jälkeen. Persistent Cartin kanssa se on jo siellä.",
   "demo.cart.title": "Ostoskorisi",
   "demo.cart.subtotal": "Välisumma",
-  "demo.cart.synced": "Synkronoitu laitteiden välillä",
+  "demo.cart.synced": "Synkronoitu",
   "demo.cart.syncing": "Synkronoidaan…",
   "demo.cart.added": "Lisätty puhelimella",
   "demo.cart.item.shoes": "Maastojuoksukengät",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "Mitä se tekee asiakkaideni tiedoilla?",
   "home.faq.q8.a": "Vain sen vähimmäismäärän, jonka ostoskorin synkronointi vaatii. Se toimii vain kirjautuneille asiakkaille ja tallentaa korin sisällön asiakastiliin sidottuna kauppasi sisällä — ei mitään enempää kuin mitä ostoskori sisältää. Vieraita ei seurata, sähköposteja ei lähetetä, suostumusikkunoita ei näytetä, ja tiedot pysyvät kauppasi rajoissa. Olemme Built for Shopify ja noudatamme Shopifyn vaatimia tietosuojaprosesseja.",
   "nav.faq": "UKK",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "Ostoskorisi on tyhjä",
+  "demo.cart.emptyHint": "Puhelimen ostoskori jäi jälkeen"
 }

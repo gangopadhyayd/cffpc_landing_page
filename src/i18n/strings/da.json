@@ -53,10 +53,10 @@
   "hero.trust.rating": "4.8★ på App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "Synkroniserer kurve siden 2016",
-  "hero.demo.caption": "Den samme indloggede kurv på telefon og laptop — holdt synkroniseret automatisk.",
+  "hero.demo.caption": "Samme kunde, samme login — fra mobil til laptop. På standard-Shopify bliver kurven efterladt. Med Persistent Cart er den der allerede.",
   "demo.cart.title": "Din kurv",
   "demo.cart.subtotal": "Subtotal",
-  "demo.cart.synced": "Synkroniseret på tværs af enheder",
+  "demo.cart.synced": "Synkroniseret",
   "demo.cart.syncing": "Synkroniserer…",
   "demo.cart.added": "Tilføjet på telefonen",
   "demo.cart.item.shoes": "Trail Runners",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "Hvad gør den med mine kunders data?",
   "home.faq.q8.a": "Det minimum, en kurv-synkronisering kræver. Den virker kun for indloggede kunder og gemmer kurvens indhold knyttet til kundekontoen i din butik — ikke mere, end hvad en kurv indeholder. Gæster spores ikke, der sendes ingen mails, der vises ingen samtykkebokse, og data forbliver begrænset til din butik. Vi er Built for Shopify og følger Shopifys påkrævede databeskyttelsesflows.",
   "nav.faq": "FAQ",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "Din indkøbskurv er tom",
+  "demo.cart.emptyHint": "Kurven blev efterladt på mobilen"
 }

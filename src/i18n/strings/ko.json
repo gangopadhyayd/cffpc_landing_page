@@ -53,10 +53,10 @@
   "hero.trust.rating": "App Store 4.8★",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "2016년부터 장바구니 동기화",
-  "hero.demo.caption": "휴대폰과 노트북에서 동일한 로그인 장바구니 — 자동으로 동기화됩니다.",
+  "hero.demo.caption": "같은 고객, 같은 로그인 — 휴대폰에서 노트북으로. 기본 Shopify에서는 장바구니가 남겨지지만, Persistent Cart와 함께라면 이미 그 자리에 있습니다.",
   "demo.cart.title": "내 장바구니",
   "demo.cart.subtotal": "소계",
-  "demo.cart.synced": "기기 간 동기화 완료",
+  "demo.cart.synced": "동기화됨",
   "demo.cart.syncing": "동기화 중…",
   "demo.cart.added": "휴대폰에서 추가됨",
   "demo.cart.item.shoes": "트레일 러너",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "내 고객의 데이터는 어떻게 처리되나요?",
   "home.faq.q8.a": "장바구니 동기화에 필요한 최소한만 다룹니다. 로그인한 고객에게만 작동하며, 장바구니 내용을 스토어별 고객 계정에 연결해 저장합니다 — 장바구니에 담긴 것 이상은 저장하지 않습니다. 비회원은 추적하지 않고, 이메일을 보내지 않으며, 동의 팝업도 띄우지 않고, 데이터는 내 스토어 범위를 벗어나지 않습니다. Built for Shopify 앱으로서 Shopify가 요구하는 데이터 보호 절차를 따릅니다.",
   "nav.faq": "자주 묻는 질문",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "장바구니가 비어 있습니다",
+  "demo.cart.emptyHint": "휴대폰의 장바구니는 그대로 남았습니다"
 }

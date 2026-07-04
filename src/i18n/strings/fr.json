@@ -53,10 +53,10 @@
   "hero.trust.rating": "4.8★ sur l'App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "Synchronise les paniers depuis 2016",
-  "hero.demo.caption": "Le même panier connecté sur téléphone et ordinateur portable — synchronisé automatiquement.",
+  "hero.demo.caption": "Même client, même compte — du téléphone à l'ordinateur. Sur Shopify par défaut, le panier reste derrière. Avec Persistent Cart, il est déjà là.",
   "demo.cart.title": "Votre panier",
   "demo.cart.subtotal": "Sous-total",
-  "demo.cart.synced": "Synchronisé entre appareils",
+  "demo.cart.synced": "Synchronisé",
   "demo.cart.syncing": "Synchronisation…",
   "demo.cart.added": "Ajouté sur le téléphone",
   "demo.cart.item.shoes": "Chaussures de trail",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "Que fait-elle des données de mes clients ?",
   "home.faq.q8.a": "Le minimum nécessaire à la synchronisation d'un panier. L'application ne fonctionne que pour les clients connectés et enregistre le contenu du panier associé au compte client de votre boutique — rien de plus que ce qu'un panier contient. Les visiteurs anonymes ne sont pas suivis, aucun e-mail n'est envoyé, aucune demande de consentement n'apparaît, et les données restent limitées à votre boutique. Nous sommes Built for Shopify et suivons les processus de protection des données exigés par Shopify.",
   "nav.faq": "FAQ",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "Votre panier est vide",
+  "demo.cart.emptyHint": "Le panier du téléphone est resté derrière"
 }

@@ -71,3 +71,36 @@ The simplify-vs-restart call and final v1 shape live in `docs/v1-recommendation.
   headless viewport screenshot in Cycle 3).
 
 ---
+
+## Cycle 2 — the fork hero + multi-device mark (2026-07-04, frontend-design skill)
+
+### Design decisions
+- **Signature element: THE FORK.** The hero visual is now a decision-tree of the same shopper's
+  two futures: phone cart at top → two paths → left: dashed ink path ending in an ✕, chip
+  "Default Shopify", laptop showing *"Your cart is empty / The phone cart stayed behind"* →
+  right: solid marigold path with arrow, chip "With Persistent Cart", laptop showing the SAME
+  3-item cart + a "Synced" badge. Heroes almost never show the failure state first-class — that's
+  the deliberate aesthetic risk, and it is literally the product's pitch. Drawing style is
+  patent-diagram: fine-ink hand-rolled device silhouettes (portrait phone with camera + home bar;
+  landscape laptops with bases) and IBM Plex Mono figure labels (`— PHONE —`).
+- **Motion discipline:** first draft staggered everything in and looked broken mid-sequence
+  (screenshot-verified). Final: the diagram is COMPLETE at rest; the only motion is a marigold
+  cart-dot riding the kept path (rAF + getPointAtLength, IntersectionObserver-gated, re-runs
+  every 6.5s while visible) + one badge pop. Reduced-motion/no-JS = identical still story.
+- **Brand mark:** 3 concepts built and screenshot-compared at 128/64/30/16px. Winner: phone
+  (front, paper-filled) + laptop (back) sharing ONE marigold cart drawn across the seam with a
+  paper halo. Reads down to 16px. Applied to `Logo.astro` (invert-aware) + `favicon.svg`.
+- **OG image** regenerated: new leak headline + the fork motif (phone → ✕-empty vs synced laptop).
+- Consistency: added a real `cart` glyph to the icon set (ParityDiagram's cart chip no longer
+  uses the storefront icon); phone mini-cart drops its price column (no more truncated names —
+  the $248 subtotal is the payoff line anyway).
+- Mobile plan for the fork: below 540px the connector SVG steps aside and the outcomes stack
+  under their labeled chips (verified in Cycle 3).
+
+### Verify
+- build 136 pages green · typecheck 0 errors · i18n:check green (4 new/changed keys —
+  synced badge, empty state ×2, caption — hand-authored in all 14 locales).
+- Desktop screenshots: fork + full CTA stack above the fold at 1440×900; mark legible in header
+  zoom; problem/parity/stat sections verified in place.
+
+---

@@ -53,10 +53,10 @@
   "hero.trust.rating": "4.8★ i App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "Synkroniserer handlekurver siden 2016",
-  "hero.demo.caption": "Den samme innloggede handlekurven på mobil og laptop — holdt synkronisert automatisk.",
+  "hero.demo.caption": "Samme kunde, samme innlogging — fra mobil til laptop. På standard Shopify blir kurven igjen. Med Persistent Cart er den allerede der.",
   "demo.cart.title": "Handlekurven din",
   "demo.cart.subtotal": "Delsum",
-  "demo.cart.synced": "Synkronisert mellom enheter",
+  "demo.cart.synced": "Synkronisert",
   "demo.cart.syncing": "Synkroniserer…",
   "demo.cart.added": "Lagt til på mobil",
   "demo.cart.item.shoes": "Terrengsko",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "Hva gjør den med kundenes data?",
   "home.faq.q8.a": "Kun det minimum en kurv-synkronisering trenger. Den fungerer bare for innloggede kunder og lagrer kurvens innhold knyttet til kundekontoen i butikken din — ikke noe mer enn det en kurv inneholder. Gjester spores ikke, ingen e-poster sendes, ingen samtykkebokser vises, og dataene holder seg innenfor butikken din. Vi er Built for Shopify og følger Shopifys påkrevde personvernflyter.",
   "nav.faq": "FAQ",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "Handlekurven din er tom",
+  "demo.cart.emptyHint": "Kurven ble igjen på mobilen"
 }

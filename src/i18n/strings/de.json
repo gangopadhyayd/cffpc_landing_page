@@ -53,10 +53,10 @@
   "hero.trust.rating": "4.8★ im App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "Synchronisiert Warenkörbe seit 2016",
-  "hero.demo.caption": "Derselbe angemeldete Warenkorb auf Handy und Laptop – automatisch synchron gehalten.",
+  "hero.demo.caption": "Gleicher Käufer, gleiches Konto – vom Handy zum Laptop. Bei Standard-Shopify bleibt der Warenkorb zurück. Mit Persistent Cart ist er schon da.",
   "demo.cart.title": "Ihr Warenkorb",
   "demo.cart.subtotal": "Zwischensumme",
-  "demo.cart.synced": "Geräteübergreifend synchronisiert",
+  "demo.cart.synced": "Synchronisiert",
   "demo.cart.syncing": "Wird synchronisiert …",
   "demo.cart.added": "Am Handy hinzugefügt",
   "demo.cart.item.shoes": "Trail Runners",
@@ -236,5 +236,7 @@
   "home.faq.q8.q": "Was passiert mit den Daten meiner Kunden?",
   "home.faq.q8.a": "Nur das Minimum, das eine Warenkorb-Synchronisierung braucht. Die App funktioniert nur für angemeldete Kunden und speichert den Warenkorbinhalt zum Kundenkonto Ihres Shops – nicht mehr, als ein Warenkorb enthält. Gäste werden nicht getrackt, es werden keine E-Mails versendet, keine Einwilligungsabfragen angezeigt, und die Daten bleiben auf Ihren Shop beschränkt. Wir sind Built for Shopify und folgen Shopifys vorgeschriebenen Datenschutz-Prozessen.",
   "nav.faq": "FAQ",
-  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "Ihr Warenkorb ist leer",
+  "demo.cart.emptyHint": "Der Handy-Warenkorb blieb zurück"
 }
