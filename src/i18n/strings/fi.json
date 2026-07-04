@@ -1,6 +1,5 @@
 {
   "meta.locale.reviewNotice": "Tämä sivu on automaattinen käännös ja odottaa äidinkielisen tarkistajan tarkastusta.",
-
   "nav.product": "Näin se toimii",
   "nav.whyItMatters": "Miksi sillä on merkitystä",
   "nav.pricing": "Hinnoittelu",
@@ -14,7 +13,6 @@
   "nav.openMenu": "Avaa valikko",
   "nav.languageLabel": "Kieli",
   "nav.chooseLanguage": "Valitse kielesi",
-
   "cta.install": "Lisää Persistent Cart — aloita ilmaiseksi",
   "cta.installShort": "Lisää Shopifyyn",
   "cta.audit": "Hanki ilmainen kauppa-analyysi",
@@ -25,7 +23,6 @@
   "cta.viewPricing": "Katso hinnoittelu",
   "cta.readReviews": "Lue arvostelut",
   "cta.learnMore": "Lue lisää",
-
   "common.builtForShopify": "Built for Shopify",
   "common.since": "Shopify-kauppojen luottama vuodesta 2016",
   "common.rating": "{rating}★ Shopify App Storessa",
@@ -45,21 +42,18 @@
   "content.comparisonTitle": "Näin ne vertautuvat",
   "content.parityTitle": "Mitä suurimmat kaupat sanovat",
   "content.ctaHeading": "Lopeta kirjautuneiden ostoskorien menettäminen laitteiden välillä.",
-  "content.ctaBody": "Lisää Persistent Cart yhdellä klikkauksella, tai anna meidän tarkistaa kauppasi ensin — ilmaiseksi.",
+  "content.ctaBody": "Lisää Persistent Cart yhdellä klikkauksella — aloita ilmaiseksi, asiakkaidesi ei tarvitse tehdä mitään.",
   "content.ctaInstall": "Lisää Persistent Cart — aloita ilmaiseksi",
   "content.ctaAudit": "Hanki ilmainen kauppa-analyysi",
-
   "announce.text": "Built for Shopify · Shopify-kauppojen luottama vuodesta 2016 · 4.8★",
-
   "hero.eyebrow": "Laitteiden välinen ostoskorin synkronointi Shopifylle",
-  "hero.h1.lead": "Suuret jälleenmyyjät säilyttävät kirjautuneen asiakkaan ostoskorin jokaisella laitteella.",
-  "hero.h1.turn": "Oletuksena Shopify ei.",
-  "hero.sub": "Amazon ja Walmart säilyttävät kirjautuneen asiakkaan ostoskorin jokaisella laitteella. Persistent Cart tuo saman laitteiden välisen synkronoinnin Shopifyyn — yhdellä klikkauksella, asiakkaidesi ei tarvitse tehdä mitään, ei sähköposteja eikä ponnahdusikkunoita.",
+  "hero.h1.lead": "Asiakkaat vaihtavat laitetta jatkuvasti.",
+  "hero.h1.turn": "Shopifyn oletuskaupassa ostoskori ei seuraa mukana.",
+  "hero.sub": "Asiakas täyttää ostoskorin puhelimella, avaa kauppasi läppärillä — ja kori on tyhjä. Ei virhettä, ei sähköpostia, vain menetetty myynti. Persistent Cart korjaa tämän yhdellä klikkauksella (plus yksi kytkin teemaeditorissa): jokaisen kirjautuneen asiakkaan ostoskori seuraa mukana jokaiselle laitteelle, kuten Amazonilla ja Walmartilla jo toimii. Asiakkaidesi ei tarvitse tehdä mitään.",
   "hero.trust.rating": "4.8★ App Storessa",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "Synkronoinut ostoskoreja vuodesta 2016",
   "hero.demo.caption": "Sama kirjautuneen asiakkaan ostoskori puhelimessa ja kannettavassa — pidetään automaattisesti synkronoituna.",
-
   "demo.cart.title": "Ostoskorisi",
   "demo.cart.subtotal": "Välisumma",
   "demo.cart.synced": "Synkronoitu laitteiden välillä",
@@ -72,12 +66,10 @@
   "demo.device.laptop": "Kannettava",
   "demo.qty": "Kpl",
   "demo.replay": "Toista animaatio uudelleen",
-
   "trustbar.lead": "Alkuperäinen laitteiden välinen ostoskorisovellus Shopifylle — siihen on luottanut {stores} jo vuodesta 2016.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ aitojen kauppiaiden arvosteluista",
   "trustbar.plus": "Sitä käyttää {plusStores}",
-
   "footer.tagline": "Säilytä kirjautuneen asiakkaan ostoskori jokaisella laitteella — laitteiden välinen ostoskorin synkronointi, jota suurimmat kaupat jo käyttävät, tuotuna Shopifyyn.",
   "footer.group.product": "Tuote",
   "footer.group.learn": "Opi",
@@ -90,7 +82,6 @@
   "footer.privacy": "Tietosuoja",
   "footer.support": "Tuki",
   "footer.contact": "Yhteystiedot",
-
   "footer.link.pricing": "Hinnoittelu",
   "footer.link.calculator": "Menetettyjen ostoskorien laskuri",
   "footer.link.free-audit": "Ilmainen kauppa-analyysi",
@@ -106,26 +97,20 @@
   "footer.link.support": "Tuki",
   "footer.link.changelog": "Mitä uutta",
   "footer.link.privacy": "Tietosuoja",
-
   "a11y.skipToContent": "Siirry sisältöön",
   "a11y.homeLink": "Persistent Cart — etusivu",
-
   "notFound.title": "Sivua ei löytynyt",
   "notFound.heading": "Emme löytäneet kyseistä sivua",
   "notFound.body": "Sivu on saattanut siirtyä. Tässä muutamia hyviä paikkoja jatkaa siitä, mihin jäit.",
   "notFound.home": "Siirry etusivulle",
   "notFound.howItWorks": "Näin Persistent Cart toimii",
-  "notFound.calculator": "Arvioi menetettyjen ostoskorien tuotto",
-
   "page.home.title": "Persistent Cart — laitteiden välinen ostoskorin synkronointi Shopifylle (Built for Shopify)",
-  "page.home.desc": "Säilytä kirjautuneen asiakkaan ostoskori jokaisella laitteella — laitteiden välinen ostoskorin synkronointi, jota Amazon ja Walmart jo käyttävät, tuotuna Shopifyyn. Yksi klikkaus, ei ponnahdusikkunoita eikä sähköposteja. 4.8★, Built for Shopify, vuodesta 2016.",
-
+  "page.home.desc": "Asiakkaat vaihtavat laitetta; Shopifyn oletuskaupassa ostoskori ei seuraa mukana. Persistent Cart säilyttää kirjautuneiden asiakkaiden korin jokaisella laitteella — yksi klikkaus, ei ponnahdusikkunoita tai sähköposteja. 4,8★, Built for Shopify, vuodesta 2016.",
   "home.trust.lead": "Alkuperäinen laitteiden välinen ostoskorisovellus Shopifylle — pitänyt kirjautuneet ostoskorit synkronoituna vuodesta 2016.",
   "home.trust.stat.rating": "4.8★ {count} kauppiasarvostelusta",
   "home.trust.stat.bfs": "Built for Shopify",
   "home.trust.stat.since": "Hiljaa käynnissä vuodesta 2016",
   "home.trust.stat.stores": "Siihen luottaa {stores}",
-
   "home.problem.eyebrow": "Vuoto, jota useimmat kauppiaat eivät koskaan näe",
   "home.problem.heading": "Kauppasi pudottaa todennäköisesti kirjautuneen asiakkaan ostoskorin heti, kun hän vaihtaa laitetta.",
   "home.problem.intro": "Oletusarvoisessa Shopify-kaupassa ostoskori sijaitsee selaimen evästeessä — ei asiakkaan tilillä. Niinpä kun kirjautunut asiakas lisää tuotteita puhelimellaan lounaalla ja avaa kauppasi illalla kannettavalla, ostoskori on tyhjä. Useimmat kauppiaat eivät koskaan huomaa tätä, koska kukaan ei lähetä sähköpostia, jossa lukee \"ostoskorini katosi\". He vain jättävät ostoksen kesken.",
@@ -136,7 +121,6 @@
   "home.problem.with.title": "Ostoskori seuraa asiakasta",
   "home.problem.with.body": "Kirjautuneen asiakkaan ostoskori synkronoituu automaattisesti puhelimen, kannettavan ja paluukäyntien välillä — aivan kuten suurimmat jälleenmyyjät jo toimivat.",
   "home.problem.aha": "Se on ero ostoskorin, joka kuuluu selaimelle, ja ostoskorin, joka kuuluu asiakkaallesi, välillä.",
-
   "home.benefits.eyebrow": "Mikä muuttuu yhden klikkauksen jälkeen",
   "home.benefits.heading": "Kolme asiaa alkaa toimia niin kuin asiakkaat jo odottavat.",
   "home.benefits.1.title": "Pelasta ostoskoreja, joiden menettämisestä et tiennytkään",
@@ -145,12 +129,10 @@
   "home.benefits.2.body": "Keskeytymätön laitteiden välinen ostoskori kerää sisältöä. Asiakkaat lisäävät tuotteita mobiilissa, lisäävät lisää työpöydällä ja maksavat kerralla — sen sijaan, että rakentaisivat muistinvaraisesti pienemmän ostoskorin uudelleen.",
   "home.benefits.3.title": "Yksi klikkaus, eikä asiakkaille muutu mikään",
   "home.benefits.3.body": "Ei ponnahdusikkunoita, ei sähköposteja, ei suostumuksia, ei mitään tehtävää asiakkaille. Se toimii hiljaa taustalla — niin huomaamattomasti, että kauppiaat kertovat unohtavansa sen olevan päällä.",
-
   "home.motion.eyebrow": "Katso se toiminnassa",
   "home.motion.heading": "Sama kirjautuneen asiakkaan ostoskori, jokaisella laitteella.",
   "home.motion.intro": "Katso, kun kirjautunut asiakas lisää tuotteen puhelimellaan — ja kannettavan ostoskori päivittyy vastaamaan sitä automaattisesti. Ei päivitystä, ei kehotetta. Tämä on todellinen, oletusarvoinen toiminta: hiljainen automaattinen yhdistäminen.",
   "home.motion.note": "Oletuksena Persistent Cart yhdistää ostoskorit hiljaa. Annatko mieluummin asiakkaiden valita? Valinnainen \"säilytä tai yhdistä\" -kysely on yhden kytkimen päässä.",
-
   "home.parity.eyebrow": "Miten suurimmat kaupat tekevät tämän jo nyt",
   "home.parity.heading": "Amazon ja Walmart säilyttävät kirjautuneen asiakkaan ostoskorin jokaisella laitteella. Asiakkaat odottavat samaa myös sinun kaupaltasi.",
   "home.parity.intro": "Tämä ei ole kiva lisäominaisuus — se on peruskokemus kaupoissa, joissa asiakkaasi asioivat eniten. Heidän omat ohjesivunsa sanovat niin:",
@@ -162,10 +144,9 @@
   "home.parity.amazon.source": "Amazonin asiakaspalvelu",
   "home.parity.shopify.name": "Oletusarvoinen Shopify",
   "home.parity.shopify.quote": "Ostoskori tallennetaan selaimen evästeeseen, joten kirjautuneen asiakkaan ostoskori ei seuraa häntä toiselle laitteelle tai toiseen selaimeen.",
-  "home.parity.shopify.source": "Shopifyn evästekäytäntö + yhteisö",
-  "home.parity.cta": "Katso koko vertailu",
+  "home.parity.shopify.source": "Oma tiivistelmämme — perustuu Shopifyn evästekäytäntöön + yhteisöön",
+  "home.parity.cta": "Mikä on pysyvä ostoskori — koko selitys",
   "home.parity.diagram.caption": "Kirjautuneen asiakkaan ostoskori sijaitsee asiakkaan tilillä — saavutettavissa mistä tahansa laitteesta — eikä yhdessä selaimessa.",
-
   "home.metrics.eyebrow": "Vuosikymmen hiljaista työtä",
   "home.metrics.heading": "Ei vuoden 2025 kokeilu. Vuoden 2016 työkalu, josta kaupat maksavat yhä.",
   "home.metrics.1.label": "App Storessa vuodesta",
@@ -176,13 +157,11 @@
   "home.metrics.2.note": "Built for Shopify",
   "home.metrics.3.label": "Palveltuja kauppoja",
   "home.metrics.3.note": "Basicista Plussaan",
-
   "home.testimonial.eyebrow": "Kauppiaan sanoin",
   "home.testimonial.quote": "Ilman sovellusta asiakkaat menettävät ostoskorinsa, jos he vaihtavat laitetta… Näin EIVÄT toimi kaikki suuret verkkokauppasivustot… ostoskori pysyy käytännössä asiakkaan TILILLÄ eikä pelkästään LAITTEELLA.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "Yhdysvallat · käyttänyt Persistent Cartia yli 9 vuotta",
   "home.testimonial.cta": "Lue kaikki {count} arvostelua App Storessa",
-
   "home.compare.eyebrow": "Ennaltaehkäisyä, ei vain palautusta",
   "home.compare.heading": "Se on hylkäysstrategiasi puuttuva puolisko.",
   "home.compare.intro": "Hylätyn ostoskorin sähköpostit ja tekstiviestit laukeavat vasta, kun ostoskori on jo mennyt, ja tavoittavat vain ne asiakkaat, jotka antoivat suostumuksensa. Persistent Cart toimii ennen hylkäämistä — se estää ostoskoria katoamasta ensiksikään, jokaiselta kirjautuneelta asiakkaalta. Ne toimivat parhaiten yhdessä.",
@@ -202,27 +181,22 @@
   "home.compare.row.cost.persistent": "Ei mitään",
   "home.compare.row.cost.recovery": "Jokaisesta lähetetystä sähköpostista/tekstiviestistä",
   "home.compare.footnote": "Persistent Cart täydentää sähköpostityökaluasi — se pelastaa ostoskorit, joita automaatiosi eivät koskaan näe.",
-
   "home.calc.eyebrow": "Pane sille hintalappu",
   "home.calc.heading": "Paljonko laitteiden välinen ostoskorien menetys voisi maksaa sinulle?",
   "home.calc.intro": "Säädä muutamaa lähtöarvoa — esitäytetty alan vertailuluvuilla — saadaksesi läpinäkyvän, suuntaa-antavan haarukan. Näytämme kaavan; mikään ei ole musta laatikko.",
   "home.calc.cta": "Avaa menetettyjen ostoskorien laskuri",
-
   "home.audit.eyebrow": "Etkö ole varma, koskeeko se sinua?",
   "home.audit.heading": "Tarkistamme kauppasi laitteiden välisen ostoskorien menetyksen varalta — ilmaiseksi.",
   "home.audit.body": "Lähetä meille kauppasi, niin kerromme, säilyykö kirjautuneen asiakkaan ostoskori laitteen vaihdon yli, suunnilleen mitä se voisi maksaa ja mitkä ovat nopeat voitot — ilman sitoumusta, ilman asennusta.",
   "home.audit.cta": "Hanki ilmainen kauppa-analyysi",
-
   "home.b2b.eyebrow": "B2B ja Shopify Plus",
   "home.b2b.heading": "Pitkät, arvokkaat ostoskorit, joiden on selvittävä istunnon vaihdon yli.",
   "home.b2b.body": "Tukku- ja B2B-ostajat rakentavat suuria ostoskoreja istuntojen ja laitteiden välillä — ja sen kokoinen pudonnut ostoskori on todellinen menetetty tilaus. Persistent Cart pitää suuret kirjautuneet ostoskorit ehjinä laitteiden välillä ja käsittelee jaetut työasemat vuotamatta yhden ostajan ostoskoria toiselle.",
   "home.b2b.cta": "Persistent Cart B2B- ja Plus-kaupoille",
-
   "home.partner.eyebrow": "Toimistot, kehittäjät ja sisällöntuottajat",
   "home.partner.heading": "Ansaitse toistuvaa provisiota suosittelemalla sovellusta, joka hiljaa tuottaa kaupoille rahaa.",
   "home.partner.body": "Se on helppo suositus: yksi klikkaus, ei häiriötä asiakkaille, piilevä vuoto korjattu — ja sinulle toistuvaa provisiota. Built for Shopify, luotettu vuodesta 2016.",
   "home.partner.cta": "Tutustu kumppaniohjelmaan",
-
   "home.data.eyebrow": "Luottamus ja tietojen käsittely",
   "home.data.heading": "Se käyttää vain sitä, mitä ostoskorin synkronointiin tarvitaan.",
   "home.data.body": "Persistent Cart toimii kirjautuneille asiakkaille. Ostoskorin synkronoimiseksi se tallentaa ostoskorin sisällön asiakkaan tiliä vasten kaupassasi — ei mitään muuta kuin sen, mitä ostoskori sisältää. Vieraita ei seurata. Olemme Built for Shopify ja noudatamme Shopifyn edellyttämiä tietosuojakäytäntöjä.",
@@ -230,13 +204,11 @@
   "home.data.point.2": "Tallentaa ostoskorin sisällön synkronoidakseen sen, rajattuna kauppaasi",
   "home.data.point.3": "Ei lähetettyjä sähköposteja, ei kerättyjä yhteystietoja, ei suostumuskehotteita",
   "home.data.cta": "Lue tietosuojaperiaatteemme",
-
   "home.pricing.eyebrow": "Hinnoittelu",
   "home.pricing.heading": "Jokainen ominaisuus, jokaisessa paketissa. Hinnoiteltu Shopify-pakettisi mukaan.",
   "home.pricing.intro": "Ei ominaisuustasoja tulkittavaksi — jokainen paketti sisältää koko sovelluksen. Hintasi yksinkertaisesti vastaa Shopify-pakettiasi. Aloita ilmaiseksi, sitten 30 päivän kokeilu millä tahansa maksullisella paketilla.",
   "home.pricing.cta": "Katso koko hinnoittelu",
   "home.pricing.trialNote": "Ilmainen Free Starter -paketti · 30 päivän ilmainen kokeilu maksullisissa paketeissa",
-
   "home.faq.eyebrow": "Kysymyksiä, vastattuna",
   "home.faq.heading": "Mitä kauppiaat kysyvät ennen asennusta.",
   "home.faq.q1.q": "Eikö Shopify jo synkronoi ostoskoreja laitteiden välillä?",
@@ -252,12 +224,17 @@
   "home.faq.q6.q": "Miten tämä eroaa hylätyn ostoskorin sähköpostisovelluksestani?",
   "home.faq.q6.a": "Ne työkalut toimivat sen jälkeen, kun ostoskori on hylätty, ja tavoittavat vain suostumuksensa antaneet yhteystiedot. Persistent Cart toimii ennen — se estää ostoskoria katoamasta, kun kirjautunut asiakas vaihtaa laitetta. Ne täydentävät toisiaan: käytä molempia.",
   "home.faq.q7.q": "Mistä tiedän, onko se kauppani väärti?",
-  "home.faq.q7.a": "Testaa sitä omassa kaupassasi ennen maksamista: ilmainen Free Starter -paketti tarjoaa enintään 10 todellista ostoskorisynkronointia, ja mikä tahansa maksullinen paketti lisää 30 päivän kokeilun. Basicilla se on $4.99/kk — yhden keskikokoisen laitteiden välisen tilauksen pelastaminen kattaa sen moninkertaisesti. Ilmainen kauppa-analyysi tarkistaa todellisen kauppasi ja menetettyjen ostoskorien laskuri näyttää matematiikan, joten et arvaile.",
+  "home.faq.q7.a": "Testaa omassa kaupassasi ennen kuin maksat: Free Starter -paketti kattaa jopa 10 oikeaa ostoskorin synkronointia, ja jokainen maksullinen paketti alkaa 30 päivän kokeilulla. Basic maksaa 4,99 $ kuukaudessa — yksi pelastettu keskikokoinen tilaus laitteiden välillä kattaa sen moninkertaisesti. Näet sen toimivan omassa kaupassasi ennen kuin dollariakaan veloitetaan, joten sinun ei tarvitse arvailla.",
   "home.faq.cta": "Katso kaikki UKK:t",
-
   "home.final.heading": "Anna asiakkaillesi ostoskori, jota he odottavat — jokaisella laitteella.",
-  "home.final.body": "Lisää Persistent Cart yhdellä klikkauksella, tai anna meidän tarkistaa kauppasi ensin. Kummin tahansa, vuoto loppuu.",
+  "home.final.body": "Lisää Persistent Cart yhdellä klikkauksella — siitä hetkestä lähtien kirjautuneiden asiakkaiden korit seuraavat heitä kaikkialle.",
   "home.final.install": "Lisää Persistent Cart — aloita ilmaiseksi",
   "home.final.audit": "Hanki ilmainen kauppa-analyysi",
-  "home.final.trust": "4.8★ · Built for Shopify · Luotettu vuodesta 2016 · 30 päivän ilmainen kokeilu maksullisissa paketeissa"
+  "home.final.trust": "4.8★ · Built for Shopify · Luotettu vuodesta 2016 · 30 päivän ilmainen kokeilu maksullisissa paketeissa",
+  "home.problem.stat": "9 kymmenestä ihmisestä vaihtaa laitteesta toiseen saadakseen asiat hoidettua, ja 88 % ostajista odottaa yhtenäistä kokemusta laitteiden ja kanavien välillä.",
+  "notFound.faq": "Selaa UKK:ta",
+  "home.faq.q8.q": "Mitä se tekee asiakkaideni tiedoilla?",
+  "home.faq.q8.a": "Vain sen vähimmäismäärän, jonka ostoskorin synkronointi vaatii. Se toimii vain kirjautuneille asiakkaille ja tallentaa korin sisällön asiakastiliin sidottuna kauppasi sisällä — ei mitään enempää kuin mitä ostoskori sisältää. Vieraita ei seurata, sähköposteja ei lähetetä, suostumusikkunoita ei näytetä, ja tiedot pysyvät kauppasi rajoissa. Olemme Built for Shopify ja noudatamme Shopifyn vaatimia tietosuojaprosesseja.",
+  "nav.faq": "UKK",
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
 }

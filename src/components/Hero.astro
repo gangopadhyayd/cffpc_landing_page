@@ -11,7 +11,7 @@ interface Props {
 }
 const { locale } = Astro.props;
 
-const auditHref = localizedPath(locale, 'free-audit');
+const howItWorksHref = localizedPath(locale, 'how-it-works');
 const phoneItems = DEMO_ITEMS; // device where the 3rd item was added
 const laptopItems = DEMO_ITEMS; // synced to match
 ---
@@ -19,7 +19,6 @@ const laptopItems = DEMO_ITEMS; // synced to match
 <section class="hero">
   <div class="container-page hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow">{t(locale, 'hero.eyebrow')}</span>
       <h1 class="hero-title">
         <span class="lead">{t(locale, 'hero.h1.lead')}</span>
         <span class="turn">{t(locale, 'hero.h1.turn')}</span>
@@ -35,8 +34,8 @@ const laptopItems = DEMO_ITEMS; // synced to match
           data-event="install_click"
           data-source="hero">{t(locale, 'cta.install')}</a
         >
-        <a class="btn btn-secondary" href={auditHref} data-event="audit_cta" data-source="hero">
-          {t(locale, 'cta.audit')}
+        <a class="btn btn-secondary" href={howItWorksHref}>
+          {t(locale, 'cta.seeHowItWorks')}
         </a>
       </div>
 
@@ -73,7 +72,7 @@ const laptopItems = DEMO_ITEMS; // synced to match
 
 <style>
   .hero {
-    padding-block: clamp(2.5rem, 6vw, 5rem) clamp(2.5rem, 5vw, 4.5rem);
+    padding-block: clamp(2rem, 4.5vw, 3.75rem) clamp(2.5rem, 5vw, 4.5rem);
     position: relative;
     overflow: hidden;
   }
@@ -83,11 +82,11 @@ const laptopItems = DEMO_ITEMS; // synced to match
     align-items: center;
   }
   .hero-copy {
-    max-width: 36rem;
+    max-width: 40rem;
   }
   .hero-title {
-    font-size: clamp(2.1rem, 5vw, 3.4rem);
-    margin: 1rem 0 1.25rem;
+    font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+    margin: 0 0 1.15rem;
   }
   .hero-title .lead {
     display: block;
@@ -98,10 +97,10 @@ const laptopItems = DEMO_ITEMS; // synced to match
     color: var(--color-accent-ink);
   }
   .hero-sub {
-    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    font-size: clamp(1rem, 1.8vw, 1.12rem);
     color: var(--color-ink-soft);
     line-height: 1.6;
-    max-width: 34rem;
+    max-width: 36rem;
   }
   .hero-ctas {
     display: flex;

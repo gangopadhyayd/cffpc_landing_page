@@ -5,6 +5,9 @@ export interface ParityCard {
   source: string;
   sourceHref?: string;
   tone: 'good' | 'bad';
+  /** 'quote' renders a real <blockquote>; 'paraphrase' renders plain text
+   *  (never style our own summary as a first-party quotation). */
+  kind?: 'quote' | 'paraphrase';
 }
 interface Props {
   cards: ParityCard[];
@@ -22,7 +25,11 @@ const { cards } = Astro.props;
             {c.tone === 'good' ? '✓' : '—'}
           </span>
         </header>
-        <blockquote class="pc-quote">{c.quote}</blockquote>
+        {c.kind === 'paraphrase' ? (
+          <p class="pc-quote">{c.quote}</p>
+        ) : (
+          <blockquote class="pc-quote">{c.quote}</blockquote>
+        )}
         <footer class="pc-source">
           {c.sourceHref ? (
             <a href={c.sourceHref} target="_blank" rel="noopener nofollow">

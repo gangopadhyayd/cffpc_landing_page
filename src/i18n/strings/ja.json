@@ -1,6 +1,5 @@
 {
   "meta.locale.reviewNotice": "このページは自動翻訳であり、ネイティブによるレビューを待っています。",
-
   "nav.product": "仕組み",
   "nav.whyItMatters": "なぜ重要か",
   "nav.pricing": "料金",
@@ -14,7 +13,6 @@
   "nav.openMenu": "メニューを開く",
   "nav.languageLabel": "言語",
   "nav.chooseLanguage": "言語を選択",
-
   "cta.install": "Persistent Cart を追加 — 無料で開始",
   "cta.installShort": "無料で開始",
   "cta.audit": "無料ストア診断を受ける",
@@ -25,7 +23,6 @@
   "cta.viewPricing": "料金を見る",
   "cta.readReviews": "レビューを読む",
   "cta.learnMore": "詳しく見る",
-
   "common.builtForShopify": "Built for Shopify",
   "common.since": "2016年以来、Shopify ストアに信頼されています",
   "common.rating": "Shopify App ストアで {rating}★",
@@ -45,21 +42,18 @@
   "content.comparisonTitle": "比較してみると",
   "content.parityTitle": "大手ストアはこう言っている",
   "content.ctaHeading": "デバイス間でログイン中のカートを失うのを、もうやめましょう。",
-  "content.ctaBody": "ワンクリックで Persistent Cart を追加するか、まずは無料でストアを診断します。",
+  "content.ctaBody": "ワンクリックで Persistent Cart を追加 — 無料で始められ、お客様側の操作は不要です。",
   "content.ctaInstall": "Persistent Cart を追加 — 無料で開始",
   "content.ctaAudit": "無料ストア診断を受ける",
-
   "announce.text": "Built for Shopify · 2016年以来 Shopify ストアに信頼 · 4.8★",
-
   "hero.eyebrow": "Shopify 向けデバイス間カートアプリの元祖",
-  "hero.h1.lead": "大手小売は、ログイン中の買い物客のカートをすべてのデバイスで保持します。",
-  "hero.h1.turn": "Shopify は、標準ではそうではありません。",
-  "hero.sub": "ログイン中の買い物客がスマホからノートPCに移ると、そのカートは消えてしまいます — エラーもメールもなく、ただ売上が失われるだけです。Persistent Cart は、Amazon や Walmart がすでにそうしているように、それをすべてのデバイスで保持します。追加はワンクリック（加えて、テーマでのスイッチ1つ）、買い物客側の操作は不要、ポップアップもメールもありません。",
+  "hero.h1.lead": "買い物客は絶えずデバイスを切り替えています。",
+  "hero.h1.turn": "標準のShopifyストアでは、カートは一緒に移動しません。",
+  "hero.sub": "スマホでカートに商品を入れたお客様が、後でノートPCからストアを開くと — カートは空です。エラーもメールもなく、ただ売上が消えるだけ。Persistent Cart はワンクリック（＋テーマエディタのスイッチ1つ）でこれを解決します。ログイン済みのお客様のカートが、Amazon や Walmart と同じように、どのデバイスにもついていきます。お客様側の操作は一切不要です。",
   "hero.trust.rating": "App ストアでの評価",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "2016年から App ストアで提供",
   "hero.demo.caption": "スマホとノートPCで同じログイン中のカート — 自動で同期され続けます。",
-
   "demo.cart.title": "あなたのカート",
   "demo.cart.subtotal": "小計",
   "demo.cart.synced": "デバイス間で同期済み",
@@ -72,12 +66,10 @@
   "demo.device.laptop": "ノートPC",
   "demo.qty": "数量",
   "demo.replay": "アニメーションを再生",
-
   "trustbar.lead": "Shopify 向けデバイス間カートアプリの元祖 — 2016年以来 {stores} に信頼されています。",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "実際のマーチャントのレビューで {rating}★",
   "trustbar.plus": "{plusStores} に利用されています",
-
   "footer.tagline": "ログイン中の買い物客のカートをすべてのデバイスで保持 — 大手ストアがすでに使っているデバイス間カート同期を、Shopify に。",
   "footer.group.product": "製品",
   "footer.group.learn": "学ぶ",
@@ -90,7 +82,6 @@
   "footer.privacy": "プライバシー",
   "footer.support": "サポート",
   "footer.contact": "お問い合わせ",
-
   "footer.link.pricing": "料金",
   "footer.link.calculator": "カート損失計算ツール",
   "footer.link.free-audit": "無料ストア診断",
@@ -106,26 +97,20 @@
   "footer.link.support": "サポート",
   "footer.link.changelog": "新着情報",
   "footer.link.privacy": "プライバシー",
-
   "a11y.skipToContent": "本文へスキップ",
   "a11y.homeLink": "Persistent Cart — ホーム",
-
   "notFound.title": "ページが見つかりません",
   "notFound.heading": "そのページは見つかりませんでした",
   "notFound.body": "ページが移動した可能性があります。続きを始めるのに適した場所をいくつかご紹介します。",
   "notFound.home": "ホームページへ",
   "notFound.howItWorks": "Persistent Cart の仕組み",
-  "notFound.calculator": "カート損失額を試算する",
-
   "page.home.title": "Persistent Cart — Shopify 向けデバイス間カート同期（Built for Shopify）",
-  "page.home.desc": "ログイン中の買い物客のカートをすべてのデバイスで保持 — Amazon や Walmart がすでに使うデバイス間カート同期を Shopify に。ワンクリック、ポップアップもメールもなし。4.8★、Built for Shopify、2016年から。",
-
+  "page.home.desc": "買い物客はデバイスを切り替えますが、標準のShopifyストアではカートはついていきません。Persistent Cart はログイン済みカートをすべてのデバイスで維持します — ワンクリック、ポップアップやメールなし。4.8★、Built for Shopify、2016年から。",
   "home.trust.lead": "Shopify 向けデバイス間カートアプリの元祖 — 2016年からログイン中のカートを同期し続けています。",
   "home.trust.stat.rating": "{count} 件のマーチャントレビューで 4.8★",
   "home.trust.stat.bfs": "Built for Shopify",
   "home.trust.stat.since": "2016年から稼働",
   "home.trust.stat.stores": "{stores} に信頼されています",
-
   "home.problem.eyebrow": "ほとんどのオーナーが気づかない損失",
   "home.problem.heading": "あなたのストアは、買い物客がデバイスを切り替えた瞬間に、ログイン中のカートをおそらく失っています。",
   "home.problem.intro": "標準の Shopify ストアでは、カートは顧客のアカウントではなく、ブラウザの Cookie に保存されます。そのため、ログイン中の買い物客が昼休みにスマホで商品を追加し、その夜にノートPCであなたのストアを開くと、カートは空です。「カートが消えた」とわざわざメールしてくる人はいないので、ほとんどのオーナーはそれが起きていることに気づきません。彼らはただ、購入を完了しないだけです。",
@@ -136,7 +121,6 @@
   "home.problem.with.title": "カートは顧客についてくる",
   "home.problem.with.body": "ログイン中のカートは、スマホ、ノートPC、そして再訪をまたいで自動的に同期されます — 大手小売がすでに実現しているのと同じ仕組みです。",
   "home.problem.aha": "ブラウザに属するカートと、顧客に属するカートの違いです。",
-
   "home.benefits.eyebrow": "ワンクリックで何が変わるか",
   "home.benefits.heading": "3つのことが、買い物客がすでに期待しているとおりに動き始めます。",
   "home.benefits.1.title": "失っていたと気づきもしなかったカートを取り戻す",
@@ -145,12 +129,10 @@
   "home.benefits.2.body": "途切れないデバイス間カートは、商品が積み上がっていきます。買い物客はモバイルで追加し、デスクトップでさらに追加し、一度でチェックアウトします — 記憶を頼りに、より小さなカートを作り直すのではなく。",
   "home.benefits.3.title": "ワンクリック、そして買い物客にとっては何も変わらない",
   "home.benefits.3.body": "ポップアップもメールもオプトインもなく、顧客がすることは何もありません。バックグラウンドで静かに動作します — あまりに静かなので、マーチャントは「オンにしていることを忘れる」と言うほどです。",
-
   "home.motion.eyebrow": "動作を見る",
   "home.motion.heading": "同じログイン中のカートを、すべてのデバイスで。",
   "home.motion.intro": "ログイン中の買い物客が、スマホで商品を追加します。後でノートPCであなたのストアをログイン状態で開くと — カートはすでにそこにあり、内容も一致していて、対応すべきプロンプトもありません。これが標準動作、すなわちサイレント自動マージです。",
   "home.motion.note": "標準では、Persistent Cart はカートを静かにマージします。買い物客に選んでもらいたいですか？オプションの「保持または結合」プロンプトは、スイッチ1つで有効にできます。",
-
   "home.parity.eyebrow": "大手ストアがすでにやっている方法",
   "home.parity.heading": "Amazon や Walmart は、ログイン中のカートをすべてのデバイスで保持します。買い物客は、あなたのストアにも同じことを期待しています。",
   "home.parity.intro": "これは、あれば嬉しい程度の機能ではありません — あなたの顧客が最もよく利用するストアでの、当たり前の体験です。各社のヘルプページがそう述べています：",
@@ -162,10 +144,9 @@
   "home.parity.amazon.source": "Amazon カスタマーサービス",
   "home.parity.shopify.name": "標準の Shopify",
   "home.parity.shopify.quote": "カートはブラウザの Cookie に保存されるため、ログイン中の顧客のカートは別のデバイスやブラウザについていきません。",
-  "home.parity.shopify.source": "Shopify の Cookie ポリシー + コミュニティ",
-  "home.parity.cta": "比較の詳細を見る",
+  "home.parity.shopify.source": "当社による要約 — Shopifyのクッキーポリシーとコミュニティに基づく",
+  "home.parity.cta": "永続カートとは何か — 詳しい解説はこちら",
   "home.parity.diagram.caption": "ログイン中のカートは、1つのブラウザではなく顧客のアカウントに保存され — どのデバイスからでもアクセスできます。",
-
   "home.metrics.eyebrow": "10年にわたる安定した信頼性",
   "home.metrics.heading": "2025年の実験ではありません。2016年から、ストアが使い続けている実用ツールです。",
   "home.metrics.1.label": "App ストアでの提供開始",
@@ -176,13 +157,11 @@
   "home.metrics.2.note": "Built for Shopify",
   "home.metrics.3.label": "導入ストア数",
   "home.metrics.3.note": "Basic から Plus まで",
-
   "home.testimonial.eyebrow": "あるマーチャントの言葉",
   "home.testimonial.quote": "このアプリがなければ、顧客はデバイスを切り替えるとショッピングカートを失います… これは、大手オンライン小売サイトすべての動作の仕方とは「まったく違います」… カートは事実上、単なる「デバイス」ではなく「顧客アカウント」に紐づいて残るのです。",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "アメリカ · Persistent Cart を9年以上利用",
   "home.testimonial.cta": "App ストアで {count} 件すべてのレビューを読む",
-
   "home.compare.eyebrow": "回収だけでなく、予防",
   "home.compare.heading": "これは、カゴ落ち対策に欠けていたもう半分です。",
   "home.compare.intro": "カゴ落ちメールや SMS は、カートが失われた後に送られ、オプトインした買い物客にしか届きません。Persistent Cart はカゴ落ちの前に機能します — すべてのログイン中の買い物客に対して、そもそもカートが消えないようにするのです。両者は組み合わせると最も効果を発揮します。",
@@ -202,27 +181,22 @@
   "home.compare.row.cost.persistent": "なし",
   "home.compare.row.cost.recovery": "送信したメール/SMS ごと",
   "home.compare.footnote": "Persistent Cart はメールツールを補完します — フローが決して目にしないカートを取り戻すのです。",
-
   "home.calc.eyebrow": "数字にしてみる",
   "home.calc.heading": "デバイス間のカート損失は、いくらの損になっているでしょうか？",
   "home.calc.intro": "分かりやすい初期値があらかじめ入力されたいくつかの項目を調整すると、透明で分かりやすい概算レンジが得られます。計算式も公開しているので、ブラックボックスは一切ありません。",
   "home.calc.cta": "カート損失計算ツールを開く",
-
   "home.audit.eyebrow": "自分に関係あるか分からない？",
   "home.audit.heading": "デバイス間のカート損失がないか、あなたのストアを無料で診断します。",
   "home.audit.body": "ストアの情報をお送りいただければ、ログイン中のカートがデバイス切り替えで残るかどうか、おおよその損失額、そしてすぐに改善できるポイントをお伝えします — 義務もインストールも不要です。",
   "home.audit.cta": "無料ストア診断を受ける",
-
   "home.b2b.eyebrow": "B2B & Shopify Plus",
   "home.b2b.heading": "セッションの切り替えを乗り越えなければならない、長く高額なカート。",
   "home.b2b.body": "卸売や B2B のバイヤーは、セッションやデバイスをまたいで大きなカートを作り上げます — そして、その規模のカートを失うことは、実際の注文を1つ失うことを意味します。Persistent Cart は、大きなログイン中のカートをデバイス間でそのまま保持し、共有ワークステーションでも、あるバイヤーのカートが別のバイヤーに漏れないように扱います。",
   "home.b2b.cta": "B2B & Plus 向けの Persistent Cart",
-
   "home.partner.eyebrow": "代理店、開発者、クリエイター",
   "home.partner.heading": "紹介したすべてのストアから、12か月間 30% の継続報酬を獲得。",
   "home.partner.body": "おすすめしやすいアプリです：ワンクリック、顧客への影響なし、隠れた損失を解消 — そしてあなたには継続報酬が入ります。Built for Shopify、2016年以来信頼されています。",
   "home.partner.cta": "パートナー条件を見て申し込む",
-
   "home.data.eyebrow": "信頼とデータの取り扱い",
   "home.data.heading": "カートの同期に必要なものだけにアクセスします。",
   "home.data.body": "Persistent Cart はログイン中の顧客に対して機能します。カートを同期するために、あなたのストアにおける顧客のアカウントに紐づけてカートの内容を保存します — カートに含まれる以上のものは何も保存しません。ゲストは追跡しません。当社は Built for Shopify であり、Shopify が定めるデータ保護フローに従っています。",
@@ -230,13 +204,11 @@
   "home.data.point.2": "同期のためにカートの内容を保存、対象はあなたのストアに限定",
   "home.data.point.3": "メール送信なし、連絡先の取得なし、同意プロンプトなし",
   "home.data.cta": "プライバシーへの取り組みを読む",
-
   "home.pricing.eyebrow": "料金",
   "home.pricing.heading": "すべての機能を、すべてのプランで。料金は Shopify プランに連動。",
   "home.pricing.intro": "解読すべき機能の階層はありません — どのプランにもアプリの全機能が含まれます。料金は、あなたの Shopify プランに合わせるだけです。無料で始めて、有料プランは30日間のトライアルから。",
   "home.pricing.cta": "料金の詳細を見る",
   "home.pricing.trialNote": "無料の Starter プラン · 有料プランは30日間の無料トライアル",
-
   "home.faq.eyebrow": "よくある質問への回答",
   "home.faq.heading": "マーチャントがインストール前に尋ねること。",
   "home.faq.q1.q": "Shopify はすでにデバイス間でカートを同期しているのでは？",
@@ -252,12 +224,17 @@
   "home.faq.q6.q": "これは私のカゴ落ちメールアプリと何が違うのですか？",
   "home.faq.q6.a": "それらのツールはカゴ落ちの後に作用し、オプトインした連絡先にしか届きません。Persistent Cart は前に作用します — ログイン中の買い物客がデバイスを切り替えたときに、カートが消えないようにするのです。両者は補完的です。両方使いましょう。",
   "home.faq.q7.q": "自分のストアにとって価値があるかどうか、どう判断すればよいですか？",
-  "home.faq.q7.a": "支払う前に、自分のストアでテストしましょう：無料の Starter プランは最大10回の実際のカート同期まで動作し、どの有料プランも30日間のトライアルが付きます。Basic では月額 $4.99 — 中規模のデバイス間注文を1つ取り戻すだけで、十分に元が取れます。無料ストア診断があなたの実際のストアを確認し、カート損失計算ツールが計算を示すので、当てずっぽうにはなりません。",
+  "home.faq.q7.a": "支払う前に自分のストアで試せます。Free Starter プランでは実際のカート同期を10回まで無料でテストでき、有料プランには30日間の無料トライアルが付きます。Basic プランは月額 $4.99 — デバイスをまたいだ中規模の注文がひとつ戻れば、それだけで元が取れます。1ドルも請求される前に、自分のストアで動くところを確認できるので、推測に頼る必要はありません。",
   "home.faq.cta": "すべての FAQ を見る",
-
   "home.final.heading": "顧客が期待するカートを — すべてのデバイスで提供しましょう。",
-  "home.final.body": "ワンクリックで Persistent Cart を追加するか、まずはストアを診断させてください。どちらにしても、損失は止まります。",
+  "home.final.body": "ワンクリックで Persistent Cart を追加 — その瞬間から、ログイン済みのお客様のカートがどこへでもついていきます。",
   "home.final.install": "Persistent Cart を追加 — 無料で開始",
   "home.final.audit": "無料ストア診断を受ける",
-  "home.final.trust": "4.8★ · Built for Shopify · 2016年以来信頼 · 有料プランは30日間の無料トライアル"
+  "home.final.trust": "4.8★ · Built for Shopify · 2016年以来信頼 · 有料プランは30日間の無料トライアル",
+  "home.problem.stat": "10人中9人が用事を済ませるためにデバイスを切り替え、88%の買い物客がデバイスやチャネルをまたいで一貫した体験を期待しています。",
+  "notFound.faq": "よくある質問を見る",
+  "home.faq.q8.q": "顧客データはどう扱われますか？",
+  "home.faq.q8.a": "カート同期に必要な最小限のデータのみです。ログイン済みのお客様に対してのみ動作し、ストアごとに顧客アカウントに紐づけてカートの内容を保存します — カートに入っている以上の情報は扱いません。ゲストは追跡せず、メールも送信せず、同意ポップアップも表示されません。データはあなたのストアの範囲内にとどまります。Built for Shopify として、Shopifyが定めるデータ保護フローに従っています。",
+  "nav.faq": "よくある質問",
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
 }

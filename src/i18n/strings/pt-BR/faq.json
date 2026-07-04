@@ -4,7 +4,6 @@
   "page.faq.crumb": "FAQ",
   "page.faq.h1": "Persistent Cart, respondido.",
   "page.faq.lede": "Respostas diretas para o que os lojistas perguntam antes de instalar — como a sincronização de carrinho entre dispositivos funciona na Shopify, o que os clientes vivenciam e como o Persistent Cart se encaixa com as ferramentas que você já usa.",
-
   "faq.q1.q": "A Shopify sincroniza carrinhos entre dispositivos por padrão?",
   "faq.q1.a": "Não. Em uma loja Shopify padrão, o carrinho é armazenado em um cookie do navegador que dura cerca de duas semanas — não na conta do cliente. Então, quando um cliente conectado troca do celular para o notebook, o carrinho não o acompanha; ele não está no segundo dispositivo. A própria comunidade da Shopify confirma que a sincronização de carrinho entre dispositivos exige código personalizado ou um app.",
   "faq.q2.q": "Meus clientes verão pop-ups ou receberão e-mails?",
@@ -30,5 +29,5 @@
   "faq.q12.q": "Quais idiomas e moedas ele suporta?",
   "faq.q12.a": "Ele funciona com lojas Shopify multi-moeda e sincroniza o carrinho independentemente do idioma. O app é usado por lojas no mundo todo — a perda de carrinhos entre dispositivos não é específica de um único mercado.",
   "faq.q13.q": "Como sei que vale a pena para a minha loja?",
-  "faq.q13.a": "Teste na sua própria loja antes de pagar: o plano Starter gratuito roda até 10 sincronizações de carrinho reais, e qualquer plano pago adiciona um teste de 30 dias. No Basic, são $4.99/mês — recuperar um único pedido de porte médio feito entre dispositivos já paga isso de sobra. A auditoria gratuita da loja verifica a sua loja de verdade e a calculadora de carrinhos perdidos mostra a conta, então você não fica no chute."
+  "faq.q13.a": "Teste na sua própria loja antes de pagar: o plano Free Starter cobre até 10 sincronizações reais de carrinho, e qualquer plano pago começa com 30 dias de teste. No Basic são US$ 4,99 por mês — recuperar um único pedido médio entre dispositivos já cobre isso com folga. Você vê funcionando na sua própria loja antes de pagar um dólar, então não precisa adivinhar."
 }

@@ -12,18 +12,21 @@ interface Props {
 }
 const { locale, slug = '' } = Astro.props;
 
-const groups: { id: FooterGroup; label: string }[] = [
-  { id: 'product', label: t(locale, 'footer.group.product') },
-  { id: 'learn', label: t(locale, 'footer.group.learn') },
-  { id: 'programs', label: t(locale, 'footer.group.programs') },
-  { id: 'company', label: t(locale, 'footer.group.company') },
-];
-
 function linksFor(group: FooterGroup) {
   return PAGES.filter((p) => p.footer?.group === group)
     .sort((a, b) => a.footer!.order - b.footer!.order)
     .map((p) => ({ href: localizedPath(locale, p.slug), label: t(locale, `footer.link.${p.key}`) }));
 }
+
+// Only render groups that still have pages in the active (v1) registry.
+const groups = (
+  [
+    { id: 'product', label: t(locale, 'footer.group.product') },
+    { id: 'learn', label: t(locale, 'footer.group.learn') },
+    { id: 'programs', label: t(locale, 'footer.group.programs') },
+    { id: 'company', label: t(locale, 'footer.group.company') },
+  ] as { id: FooterGroup; label: string }[]
+).filter((g) => linksFor(g.id).length > 0);
 
 const year = 2026;
 ---

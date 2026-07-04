@@ -14,10 +14,13 @@ export interface ContentRender {
 }
 
 export const CONTENT_CONFIG: Record<string, ContentRender> = {
-  cornerstone: { sectionCount: 5, faqCount: 4, related: ['how-it-works', 'cross-device', 'big-retailers', 'cart-disappears'] },
-  'how-it-works': { sectionCount: 5, faqCount: 3, related: ['cornerstone', 'cross-device', 'cart-disappears'] },
-  'cross-device': { sectionCount: 5, faqCount: 3, related: ['cornerstone', 'cart-disappears', 'big-retailers'] },
-  'cart-disappears': { sectionCount: 4, faqCount: 4, related: ['cornerstone', 'how-it-works', 'cross-device'] },
+  // NOTE (v1 scope): `related` lists reference only pages in the v1 build.
+  // When re-enabling deferred pages (routes.ts V1_DEFERRED), restore the richer
+  // cross-links: cornerstone ↔ cross-device/big-retailers, etc.
+  cornerstone: { sectionCount: 5, faqCount: 4, related: ['how-it-works', 'cart-disappears', 'faq'] },
+  'how-it-works': { sectionCount: 5, faqCount: 3, related: ['cornerstone', 'cart-disappears', 'pricing'] },
+  'cross-device': { sectionCount: 5, faqCount: 3, related: ['cornerstone', 'cart-disappears'] },
+  'cart-disappears': { sectionCount: 4, faqCount: 4, related: ['cornerstone', 'how-it-works', 'faq'] },
   b2b: { sectionCount: 5, faqCount: 3, related: ['plus', 'uc-wholesale', 'cornerstone'] },
   plus: { sectionCount: 5, faqCount: 3, related: ['b2b', 'uc-high-aov', 'cornerstone'] },
   'uc-high-aov': { sectionCount: 4, faqCount: 2, related: ['uc-repeat', 'uc-wholesale', 'cornerstone'] },

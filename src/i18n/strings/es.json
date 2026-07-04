@@ -1,6 +1,5 @@
 {
   "meta.locale.reviewNotice": "Esta página es una traducción automática y está pendiente de revisión por un hablante nativo.",
-
   "nav.product": "Cómo funciona",
   "nav.whyItMatters": "Por qué importa",
   "nav.pricing": "Precios",
@@ -14,7 +13,6 @@
   "nav.openMenu": "Abrir menú",
   "nav.languageLabel": "Idioma",
   "nav.chooseLanguage": "Elige tu idioma",
-
   "cta.install": "Añade Persistent Cart: empieza gratis",
   "cta.installShort": "Empieza gratis",
   "cta.audit": "Consigue una auditoría gratuita de tu tienda",
@@ -25,7 +23,6 @@
   "cta.viewPricing": "Ver precios",
   "cta.readReviews": "Lee las reseñas",
   "cta.learnMore": "Más información",
-
   "common.builtForShopify": "Built for Shopify",
   "common.since": "Con la confianza de tiendas Shopify desde 2016",
   "common.rating": "{rating}★ en la Shopify App Store",
@@ -45,21 +42,18 @@
   "content.comparisonTitle": "Cómo se comparan",
   "content.parityTitle": "Lo que dicen las grandes tiendas",
   "content.ctaHeading": "Deja de perder carritos con sesión iniciada al cambiar de dispositivo.",
-  "content.ctaBody": "Añade Persistent Cart con un clic o deja que revisemos tu tienda primero, gratis.",
+  "content.ctaBody": "Añade Persistent Cart con un clic — empieza gratis, sin que tus compradores tengan que hacer nada.",
   "content.ctaInstall": "Añade Persistent Cart: empieza gratis",
   "content.ctaAudit": "Consigue una auditoría gratuita de tu tienda",
-
   "announce.text": "Built for Shopify · Con la confianza de tiendas Shopify desde 2016 · 4.8★",
-
   "hero.eyebrow": "La app de carrito entre dispositivos original para Shopify",
-  "hero.h1.lead": "Las grandes tiendas conservan el carrito de un comprador con sesión iniciada en todos sus dispositivos.",
-  "hero.h1.turn": "Shopify, por defecto, no lo hace.",
-  "hero.sub": "Cuando un comprador con sesión iniciada pasa del móvil al portátil, ese carrito desaparece: sin errores, sin correos, solo una venta perdida. Persistent Cart lo conserva en todos los dispositivos, igual que ya hacen Amazon y Walmart. Un clic para añadirlo (más un interruptor en tu tema), nada que los compradores tengan que hacer, sin ventanas emergentes ni correos.",
+  "hero.h1.lead": "Tus compradores cambian de dispositivo constantemente.",
+  "hero.h1.turn": "En una tienda Shopify por defecto, su carrito no los sigue.",
+  "hero.sub": "Un comprador llena el carrito en su móvil, abre tu tienda en su portátil — y el carrito está vacío. Sin error, sin correo, solo una venta perdida. Persistent Cart lo soluciona con un clic (más un interruptor en el editor de temas): el carrito de cada cliente con sesión iniciada lo sigue a todos sus dispositivos, como ya funciona en Amazon y Walmart. Tus compradores no tienen que hacer nada.",
   "hero.trust.rating": "valoración en la App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "En la App Store desde 2016",
   "hero.demo.caption": "El mismo carrito con sesión iniciada en el móvil y en el portátil, sincronizado automáticamente.",
-
   "demo.cart.title": "Tu carrito",
   "demo.cart.subtotal": "Subtotal",
   "demo.cart.synced": "Sincronizado entre dispositivos",
@@ -72,12 +66,10 @@
   "demo.device.laptop": "Portátil",
   "demo.qty": "Cant.",
   "demo.replay": "Repetir animación",
-
   "trustbar.lead": "La app de carrito entre dispositivos original para Shopify, con la confianza de {stores} desde 2016.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ en reseñas reales de comerciantes",
   "trustbar.plus": "Utilizada por {plusStores}",
-
   "footer.tagline": "Conserva el carrito de un comprador con sesión iniciada en todos sus dispositivos: la sincronización del carrito entre dispositivos que ya usan las grandes tiendas, ahora en Shopify.",
   "footer.group.product": "Producto",
   "footer.group.learn": "Aprende",
@@ -90,7 +82,6 @@
   "footer.privacy": "Privacidad",
   "footer.support": "Soporte",
   "footer.contact": "Contacto",
-
   "footer.link.pricing": "Precios",
   "footer.link.calculator": "Calculadora de carritos perdidos",
   "footer.link.free-audit": "Auditoría gratuita de la tienda",
@@ -106,26 +97,20 @@
   "footer.link.support": "Soporte",
   "footer.link.changelog": "Novedades",
   "footer.link.privacy": "Privacidad",
-
   "a11y.skipToContent": "Saltar al contenido",
   "a11y.homeLink": "Persistent Cart: inicio",
-
   "notFound.title": "Página no encontrada",
   "notFound.heading": "No hemos encontrado esa página",
   "notFound.body": "Puede que la página se haya movido. Aquí tienes algunos buenos puntos para retomar donde lo dejaste.",
   "notFound.home": "Ir a la página de inicio",
   "notFound.howItWorks": "Cómo funciona Persistent Cart",
-  "notFound.calculator": "Estima los ingresos que pierdes por carritos",
-
   "page.home.title": "Persistent Cart: sincronización del carrito entre dispositivos para Shopify (Built for Shopify)",
-  "page.home.desc": "Conserva el carrito de un comprador con sesión iniciada en todos sus dispositivos: la sincronización entre dispositivos que ya usan Amazon y Walmart, ahora en Shopify. Un clic, sin ventanas emergentes ni correos. 4.8★, Built for Shopify, desde 2016.",
-
+  "page.home.desc": "Los compradores cambian de dispositivo; en una tienda Shopify por defecto el carrito no los sigue. Persistent Cart mantiene el carrito de los clientes con sesión iniciada en todos sus dispositivos — un clic, sin pop-ups ni correos. 4,8★, Built for Shopify, desde 2016.",
   "home.trust.lead": "La app de carrito entre dispositivos original para Shopify, sincronizando carritos con sesión iniciada desde 2016.",
   "home.trust.stat.rating": "4.8★ en {count} reseñas de comerciantes",
   "home.trust.stat.bfs": "Built for Shopify",
   "home.trust.stat.since": "Funcionando desde 2016",
   "home.trust.stat.stores": "Con la confianza de {stores}",
-
   "home.problem.eyebrow": "La fuga que la mayoría de los propietarios nunca ve",
   "home.problem.heading": "Tu tienda probablemente pierde un carrito con sesión iniciada en cuanto un comprador cambia de dispositivo.",
   "home.problem.intro": "En una tienda Shopify por defecto, el carrito vive en una cookie del navegador, no en la cuenta del cliente. Así que cuando un comprador con sesión iniciada añade artículos en su móvil a la hora de comer y abre tu tienda en el portátil esa noche, el carrito está vacío. La mayoría de los propietarios nunca lo ven, porque nadie escribe para decir «mi carrito ha desaparecido». Simplemente no finalizan la compra.",
@@ -136,7 +121,6 @@
   "home.problem.with.title": "El carrito sigue al cliente",
   "home.problem.with.body": "El carrito con sesión iniciada se sincroniza automáticamente entre el móvil, el portátil y las visitas posteriores, igual que ya funcionan las grandes tiendas.",
   "home.problem.aha": "Es la diferencia entre un carrito que pertenece a un navegador y un carrito que pertenece a tu cliente.",
-
   "home.benefits.eyebrow": "Lo que cambia tras un clic",
   "home.benefits.heading": "Tres cosas empiezan a funcionar como los compradores ya esperan.",
   "home.benefits.1.title": "Recupera carritos que ni sabías que estabas perdiendo",
@@ -145,12 +129,10 @@
   "home.benefits.2.body": "Un carrito ininterrumpido entre dispositivos se va acumulando. Los compradores añaden en el móvil, añaden más en el ordenador y pagan una sola vez, en lugar de reconstruir de memoria un carrito más pequeño.",
   "home.benefits.3.title": "Un clic, y nada cambia para los compradores",
   "home.benefits.3.body": "Sin ventanas emergentes, sin correos, sin que nadie tenga que aceptar nada, nada que tus clientes tengan que hacer. Funciona en silencio en segundo plano, tan discretamente que los comerciantes nos dicen que olvidan que está activada.",
-
   "home.motion.eyebrow": "Míralo en acción",
   "home.motion.heading": "El mismo carrito con sesión iniciada, en todos los dispositivos.",
   "home.motion.intro": "Un comprador con sesión iniciada añade un artículo en su móvil. Más tarde abre tu tienda en un portátil, con la sesión iniciada, y el carrito ya está ahí, coincidiendo, sin ningún aviso del que ocuparse. Este es el comportamiento por defecto: una fusión automática silenciosa.",
   "home.motion.note": "Por defecto, Persistent Cart fusiona los carritos en silencio. ¿Prefieres que los compradores elijan? Un aviso opcional de «conservar o combinar» está a un solo interruptor de distancia.",
-
   "home.parity.eyebrow": "Cómo lo hacen ya las grandes tiendas",
   "home.parity.heading": "Amazon y Walmart conservan un carrito con sesión iniciada en todos los dispositivos. Los compradores esperan que la tuya también lo haga.",
   "home.parity.intro": "Esto no es una función prescindible: es la experiencia básica en las tiendas donde más compran tus clientes. Sus propias páginas de ayuda lo dicen:",
@@ -162,10 +144,9 @@
   "home.parity.amazon.source": "Servicio de atención al cliente de Amazon",
   "home.parity.shopify.name": "Shopify por defecto",
   "home.parity.shopify.quote": "El carrito se almacena en una cookie del navegador, por lo que el carrito de un cliente con sesión iniciada no le sigue a otro dispositivo o navegador.",
-  "home.parity.shopify.source": "Política de cookies de Shopify + comunidad",
-  "home.parity.cta": "Ver el desglose completo de la comparación",
+  "home.parity.shopify.source": "Nuestro resumen — basado en la política de cookies de Shopify + la comunidad",
+  "home.parity.cta": "Qué es un carrito persistente — la guía completa",
   "home.parity.diagram.caption": "Un carrito con sesión iniciada vive en la cuenta del cliente —accesible desde cualquier dispositivo— en lugar de en un solo navegador.",
-
   "home.metrics.eyebrow": "Una década de fiabilidad constante",
   "home.metrics.heading": "No es un experimento de 2025. Es una herramienta de 2016 por la que las tiendas siguen pagando.",
   "home.metrics.1.label": "En la App Store desde",
@@ -176,13 +157,11 @@
   "home.metrics.2.note": "Built for Shopify",
   "home.metrics.3.label": "Tiendas atendidas",
   "home.metrics.3.note": "desde Basic hasta Plus",
-
   "home.testimonial.eyebrow": "En palabras de un comerciante",
   "home.testimonial.quote": "Sin la aplicación, los clientes pierden su carrito de compra si cambian de dispositivo… Así NO es como funcionan todos los grandes sitios web de venta online… el carrito permanece, en la práctica, vinculado a la CUENTA del cliente y no solo al DISPOSITIVO.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "Estados Unidos · usando Persistent Cart desde hace más de 9 años",
   "home.testimonial.cta": "Lee las {count} reseñas en la App Store",
-
   "home.compare.eyebrow": "Prevención, no solo recuperación",
   "home.compare.heading": "Es la mitad que le falta a tu estrategia de abandono.",
   "home.compare.intro": "Los correos y SMS de carrito abandonado se disparan después de que el carrito ya se ha perdido, y solo llegan a los compradores que dieron su consentimiento. Persistent Cart actúa antes del abandono: evita que el carrito desaparezca, para empezar, para cada comprador con sesión iniciada. Funcionan mejor juntos.",
@@ -202,27 +181,22 @@
   "home.compare.row.cost.persistent": "Ninguno",
   "home.compare.row.cost.recovery": "Por cada correo/SMS enviado",
   "home.compare.footnote": "Persistent Cart complementa tu herramienta de correo: recupera los carritos que tus flujos nunca ven.",
-
   "home.calc.eyebrow": "Ponle una cifra",
   "home.calc.heading": "¿Cuánto te podría estar costando la pérdida de carritos entre dispositivos?",
   "home.calc.intro": "Ajusta unos pocos datos —ya rellenados con valores predeterminados orientativos— para obtener un rango transparente y orientativo. Mostramos la fórmula; nada es una caja negra.",
   "home.calc.cta": "Abrir la calculadora de carritos perdidos",
-
   "home.audit.eyebrow": "¿No estás seguro de si te afecta?",
   "home.audit.heading": "Revisaremos tu tienda para detectar pérdidas de carrito entre dispositivos, gratis.",
   "home.audit.body": "Envíanos tu tienda y te diremos si un carrito con sesión iniciada sobrevive a un cambio de dispositivo, aproximadamente cuánto te podría estar costando y las mejoras rápidas, sin compromiso y sin necesidad de instalar nada.",
   "home.audit.cta": "Consigue una auditoría gratuita de tu tienda",
-
   "home.b2b.eyebrow": "B2B y Shopify Plus",
   "home.b2b.heading": "Carritos largos y de alto valor que tienen que sobrevivir a un cambio de sesión.",
   "home.b2b.body": "Los compradores mayoristas y B2B construyen carritos grandes a lo largo de varias sesiones y dispositivos, y un carrito perdido de ese tamaño es un pedido real perdido. Persistent Cart mantiene intactos los grandes carritos con sesión iniciada entre dispositivos y gestiona las estaciones de trabajo compartidas sin filtrar el carrito de un comprador a otro.",
   "home.b2b.cta": "Persistent Cart para B2B y Plus",
-
   "home.partner.eyebrow": "Agencias, desarrolladores y creadores",
   "home.partner.heading": "Gana un 30 % recurrente durante 12 meses por cada tienda que refieras.",
   "home.partner.body": "Es una recomendación fácil: un clic, sin molestias para los clientes, una fuga oculta resuelta y comisiones recurrentes para ti. Built for Shopify, con la confianza de las tiendas desde 2016.",
   "home.partner.cta": "Consulta los términos para socios y apúntate",
-
   "home.data.eyebrow": "Confianza y tratamiento de datos",
   "home.data.heading": "Solo accede a lo que necesita para sincronizar un carrito.",
   "home.data.body": "Persistent Cart funciona para clientes con sesión iniciada. Para sincronizar un carrito, almacena su contenido vinculado a la cuenta del cliente en tu tienda: nada más que lo que contiene un carrito. No se rastrea a los invitados. Tenemos la certificación Built for Shopify y seguimos los flujos de protección de datos exigidos por Shopify.",
@@ -230,13 +204,11 @@
   "home.data.point.2": "Almacena el contenido del carrito para sincronizarlo, limitado a tu tienda",
   "home.data.point.3": "Sin envío de correos, sin captura de contactos, sin avisos de consentimiento",
   "home.data.cta": "Lee nuestro enfoque de privacidad",
-
   "home.pricing.eyebrow": "Precios",
   "home.pricing.heading": "Todas las funciones, en todos los planes. Con un precio acorde a tu plan de Shopify.",
   "home.pricing.intro": "No hay niveles de funciones que descifrar: cada plan incluye la app completa. Tu precio simplemente coincide con tu plan de Shopify. Empieza gratis y luego una prueba de 30 días en cualquier plan de pago.",
   "home.pricing.cta": "Ver todos los precios",
   "home.pricing.trialNote": "Plan Free Starter · Prueba gratuita de 30 días en los planes de pago",
-
   "home.faq.eyebrow": "Preguntas, respondidas",
   "home.faq.heading": "Lo que preguntan los comerciantes antes de instalar.",
   "home.faq.q1.q": "¿No sincroniza Shopify ya los carritos entre dispositivos?",
@@ -252,12 +224,17 @@
   "home.faq.q6.q": "¿En qué se diferencia esto de mi app de correos de carrito abandonado?",
   "home.faq.q6.a": "Esas herramientas actúan después de que se abandona un carrito y solo llegan a los contactos que dieron su consentimiento. Persistent Cart actúa antes: evita que el carrito desaparezca cuando un comprador con sesión iniciada cambia de dispositivo. Son complementarias: usa ambas.",
   "home.faq.q7.q": "¿Cómo sé si vale la pena para mi tienda?",
-  "home.faq.q7.a": "Pruébalo en tu propia tienda antes de pagar: el plan Free Starter permite hasta 10 sincronizaciones de carrito reales, y cualquier plan de pago añade una prueba de 30 días. En Basic son $4.99 al mes: recuperar un solo pedido entre dispositivos de tamaño medio lo cubre de sobra. La auditoría gratuita de la tienda revisa tu tienda real y la calculadora de carritos perdidos muestra las cuentas, así que no vas a ciegas.",
+  "home.faq.q7.a": "Pruébalo en tu propia tienda antes de pagar: el plan Free Starter cubre hasta 10 sincronizaciones de carrito reales, y cualquier plan de pago empieza con 30 días de prueba. El plan Basic cuesta 4,99 $ al mes — recuperar un solo pedido mediano entre dispositivos lo cubre de sobra. Lo ves funcionar en tu propia tienda antes de que se cobre un dólar, así que no tienes que adivinar.",
   "home.faq.cta": "Ver todas las preguntas frecuentes",
-
   "home.final.heading": "Dales a tus clientes el carrito que esperan, en todos los dispositivos.",
-  "home.final.body": "Añade Persistent Cart con un clic o deja que revisemos tu tienda primero. En cualquier caso, la fuga se detiene.",
+  "home.final.body": "Añade Persistent Cart con un clic — desde ese momento, el carrito de los clientes con sesión iniciada los sigue a todas partes.",
   "home.final.install": "Añade Persistent Cart: empieza gratis",
   "home.final.audit": "Consigue una auditoría gratuita de tu tienda",
-  "home.final.trust": "4.8★ · Built for Shopify · Con la confianza de las tiendas desde 2016 · Prueba gratuita de 30 días en los planes de pago"
+  "home.final.trust": "4.8★ · Built for Shopify · Con la confianza de las tiendas desde 2016 · Prueba gratuita de 30 días en los planes de pago",
+  "home.problem.stat": "9 de cada 10 personas cambian de dispositivo para completar una tarea, y el 88 % de los compradores espera una experiencia coherente entre dispositivos y canales.",
+  "notFound.faq": "Ver las preguntas frecuentes",
+  "home.faq.q8.q": "¿Qué hace con los datos de mis clientes?",
+  "home.faq.q8.a": "Lo mínimo que necesita una sincronización de carrito. Funciona solo para clientes con sesión iniciada y guarda el contenido del carrito asociado a la cuenta del cliente en tu tienda — nada más que lo que contiene un carrito. No rastrea a los invitados, no envía correos, no muestra avisos de consentimiento y los datos quedan limitados a tu tienda. Somos Built for Shopify y seguimos los flujos de protección de datos que exige Shopify.",
+  "nav.faq": "Preguntas frecuentes",
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
 }

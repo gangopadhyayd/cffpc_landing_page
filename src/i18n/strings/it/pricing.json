@@ -4,18 +4,15 @@
   "page.pricing.crumb": "Prezzi",
   "page.pricing.h1": "Ogni funzione, su ogni piano. Con un prezzo allineato al tuo piano Shopify.",
   "page.pricing.lede": "Non ci sono livelli di funzioni da decifrare. Ogni piano include l'app completa — il tuo prezzo corrisponde semplicemente al tuo abbonamento Shopify. Inizia gratis, poi una prova gratuita di 30 giorni su qualsiasi piano a pagamento.",
-
   "pricing.planHint": "Il tuo piano viene selezionato automaticamente in base al tuo abbonamento Shopify. Non scegli un livello di funzioni — le ottieni tutte.",
   "pricing.cta.install": "Aggiungi Persistent Cart — inizia gratis",
   "pricing.trial": "Piano Free Starter · prova gratuita di 30 giorni su tutti i piani a pagamento · annulla in qualsiasi momento",
-
   "pricing.tier.free.note": "Testa ogni funzione, fino a 10 sincronizzazioni del carrello",
   "pricing.tier.basic.note": "Per i negozi sul piano Shopify Basic",
   "pricing.tier.grow.note": "Per i negozi sul piano Shopify Grow (in precedenza \"Shopify\")",
   "pricing.tier.advanced.note": "Per i negozi sul piano Shopify Advanced",
   "pricing.tier.plus.note": "Per i negozi Shopify Plus",
   "pricing.tier.everyPlan": "Tutte le funzioni incluse",
-
   "pricing.included.title": "Incluso in ogni piano",
   "pricing.included.1": "Sincronizzazione automatica del carrello tra dispositivi per i clienti connessi",
   "pricing.included.2": "Unione automatica silenziosa di default — nessun popup, email o opt-in",
@@ -23,14 +20,12 @@
   "pricing.included.4": "Installazione a un clic, nessun codice del tema",
   "pricing.included.5": "Funziona tra telefono, desktop e visite di ritorno",
   "pricing.included.6": "Standard di qualità e prestazioni Built for Shopify",
-
   "pricing.s1.h": "Perché il prezzo è allineato al tuo piano, non alle funzioni",
   "pricing.s1.b": "La maggior parte delle app ti costringe a scegliere un livello e a razionare le funzioni. Persistent Cart no — l'app intera è il prodotto, quindi ogni piano ottiene ogni funzione. L'unica cosa che cambia è il prezzo, che segue il livello del tuo abbonamento Shopify. Un negozio Basic paga il prezzo Basic; un negozio Plus paga il prezzo Plus; entrambi ottengono funzionalità identiche. Mantiene la decisione semplice: non c'è nulla da confrontare se non se la vuoi o no.\n\nI piani Shopify più grandi significano più ordini e più acquirenti connessi che cambiano dispositivo — così il prezzo segue il valore che ottieni in cambio, non un elenco di funzioni più lungo.",
   "pricing.s2.h": "Inizia gratis, poi una prova di 30 giorni",
   "pricing.s2.b": "Il piano Free Starter ti permette di installare e testare ogni funzione per un massimo di 10 sincronizzazioni del carrello — abbastanza per vederla funzionare sul tuo negozio. Quando sei pronto, qualsiasi piano a pagamento inizia con una prova gratuita di 30 giorni, così paghi solo dopo averla vista in azione. Non c'è alcun contratto a lungo termine; annulla in qualsiasi momento dalla tua area di amministrazione Shopify.",
   "pricing.s3.h": "Ne vale la pena?",
-  "pricing.s3.b": "La risposta onesta è che dipende da quanti dei tuoi acquirenti accedono e cambiano dispositivo — che è esattamente ciò che il calcolatore dei carrelli persi e un audit gratuito del negozio aiutano a stimare. Persistent Cart è un basso costo mensile pensato per recuperare ordini che altrimenti svanirebbero in silenzio. Se anche solo una manciata di carrelli di alto valore sopravvive ogni mese quando non sarebbe successo, si ripaga da sola.",
-
+  "pricing.s3.b": "La risposta onesta: dipende da quanti dei tuoi clienti accedono e cambiano dispositivo. Persistent Cart è un piccolo costo mensile pensato per recuperare ordini che altrimenti sparirebbero in silenzio — se ogni mese sopravvive anche solo una manciata di carrelli di valore che sarebbero andati persi, si ripaga da solo. E non devi crederci sulla parola: il piano Free Starter e la prova di 30 giorni ti permettono di vederlo funzionare nel tuo negozio prima che costi qualcosa.",
   "pricing.faq.q1.q": "I piani più economici ottengono meno funzioni?",
   "pricing.faq.q1.a": "No. Ogni piano include l'app completa. Il tuo prezzo è stabilito dal livello del tuo abbonamento Shopify, non dalle funzioni che vuoi.",
   "pricing.faq.q2.q": "C'è davvero un piano gratuito?",

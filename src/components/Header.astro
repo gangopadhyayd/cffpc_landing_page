@@ -17,7 +17,6 @@ const navItems = PAGES.filter((p) => p.nav)
   .map((p) => ({ href: localizedPath(locale, p.slug), label: t(locale, p.nav!.label) }));
 
 const homeHref = localizedPath(locale, '');
-const auditHref = localizedPath(locale, 'free-audit');
 ---
 
 <header class="site-header">
@@ -38,7 +37,6 @@ const auditHref = localizedPath(locale, 'free-audit');
 
     <div class="nav-actions">
       <LanguageSwitcher locale={locale} slug={slug} />
-      <a class="btn btn-secondary btn-sm audit-link" href={auditHref}>{t(locale, 'cta.auditShort')}</a>
       <a
         class="btn btn-primary btn-sm"
         href={site.appStoreUrl}
@@ -64,12 +62,9 @@ const auditHref = localizedPath(locale, 'free-audit');
   <div class="mobile-menu" id="mobile-menu" hidden>
     <nav aria-label="Mobile">
       {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
-      <a href={localizedPath(locale, 'partners')}>{t(locale, 'nav.partners')}</a>
-      <a href={localizedPath(locale, 'pricing')}>{t(locale, 'nav.pricing')}</a>
     </nav>
     <div class="mobile-cta">
-      <a class="btn btn-secondary" href={auditHref}>{t(locale, 'cta.audit')}</a>
-      <a class="btn btn-primary" href={site.appStoreUrl} target="_blank" rel="noopener" data-event="install_click" data-source="mobile">{t(locale, 'cta.installShort')}</a>
+      <a class="btn btn-primary" href={site.appStoreUrl} target="_blank" rel="noopener" data-event="install_click" data-source="mobile">{t(locale, 'cta.install')}</a>
     </div>
   </div>
 </header>
@@ -126,9 +121,6 @@ const auditHref = localizedPath(locale, 'free-audit');
     padding: 0.55rem 0.9rem;
     font-size: 0.875rem;
   }
-  .audit-link {
-    display: none;
-  }
   .menu-toggle {
     display: inline-flex;
     background: transparent;
@@ -162,9 +154,6 @@ const auditHref = localizedPath(locale, 'free-audit');
   @media (min-width: 960px) {
     .desktop-nav {
       display: flex;
-    }
-    .audit-link {
-      display: inline-flex;
     }
     .menu-toggle {
       display: none;

@@ -1,6 +1,5 @@
 {
   "meta.locale.reviewNotice": "Denne siden er en automatisk oversettelse og venter på gjennomgang av en som har språket som morsmål.",
-
   "nav.product": "Slik fungerer det",
   "nav.whyItMatters": "Hvorfor det er viktig",
   "nav.pricing": "Priser",
@@ -14,7 +13,6 @@
   "nav.openMenu": "Åpne meny",
   "nav.languageLabel": "Språk",
   "nav.chooseLanguage": "Velg språk",
-
   "cta.install": "Legg til Persistent Cart — start gratis",
   "cta.installShort": "Legg til i Shopify",
   "cta.audit": "Få en gratis butikkgjennomgang",
@@ -25,7 +23,6 @@
   "cta.viewPricing": "Se priser",
   "cta.readReviews": "Les anmeldelsene",
   "cta.learnMore": "Les mer",
-
   "common.builtForShopify": "Built for Shopify",
   "common.since": "Betrodd av Shopify-butikker siden 2016",
   "common.rating": "{rating}★ i Shopify App Store",
@@ -45,21 +42,18 @@
   "content.comparisonTitle": "Slik står de mot hverandre",
   "content.parityTitle": "Dette sier de største butikkene",
   "content.ctaHeading": "Slutt å miste innloggede handlekurver mellom enheter.",
-  "content.ctaBody": "Legg til Persistent Cart med ett klikk, eller la oss sjekke butikken din først — gratis.",
+  "content.ctaBody": "Legg til Persistent Cart med ett klikk — start gratis, kundene dine trenger ikke gjøre noe.",
   "content.ctaInstall": "Legg til Persistent Cart — start gratis",
   "content.ctaAudit": "Få en gratis butikkgjennomgang",
-
   "announce.text": "Built for Shopify · Betrodd av Shopify-butikker siden 2016 · 4.8★",
-
   "hero.eyebrow": "Synkronisering av handlekurv mellom enheter for Shopify",
-  "hero.h1.lead": "Store forhandlere beholder en innlogget kundes handlekurv på alle enheter.",
-  "hero.h1.turn": "Som standard gjør ikke Shopify det.",
-  "hero.sub": "Amazon og Walmart beholder en innlogget kundes handlekurv på alle enheter. Persistent Cart gir Shopify den samme synkroniseringen mellom enheter — ett klikk, ingenting kundene dine trenger å gjøre, ingen e-poster eller popup-vinduer.",
+  "hero.h1.lead": "Kunder bytter enhet hele tiden.",
+  "hero.h1.turn": "I en standard Shopify-butikk følger ikke handlekurven med.",
+  "hero.sub": "En kunde fyller handlekurven på mobilen, åpner butikken din på laptopen — og kurven er tom. Ingen feil, ingen e-post, bare et tapt salg. Persistent Cart fikser det med ett klikk (pluss én bryter i temaredigereren): hver innloggede kundes kurv følger med til alle enheter, slik det allerede fungerer hos Amazon og Walmart. Kundene dine trenger ikke gjøre noe.",
   "hero.trust.rating": "4.8★ i App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "Synkroniserer handlekurver siden 2016",
   "hero.demo.caption": "Den samme innloggede handlekurven på mobil og laptop — holdt synkronisert automatisk.",
-
   "demo.cart.title": "Handlekurven din",
   "demo.cart.subtotal": "Delsum",
   "demo.cart.synced": "Synkronisert mellom enheter",
@@ -72,12 +66,10 @@
   "demo.device.laptop": "Laptop",
   "demo.qty": "Ant.",
   "demo.replay": "Spill av animasjonen på nytt",
-
   "trustbar.lead": "Den originale appen for handlekurv på tvers av enheter for Shopify — betrodd av {stores} siden 2016.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ fra ekte forhandleranmeldelser",
   "trustbar.plus": "Brukt av {plusStores}",
-
   "footer.tagline": "Behold en innlogget kundes handlekurv på alle enheter — synkroniseringen mellom enheter som de største butikkene allerede bruker, brakt til Shopify.",
   "footer.group.product": "Produkt",
   "footer.group.learn": "Lær",
@@ -90,7 +82,6 @@
   "footer.privacy": "Personvern",
   "footer.support": "Kundestøtte",
   "footer.contact": "Kontakt",
-
   "footer.link.pricing": "Priser",
   "footer.link.calculator": "Kalkulator for tapte handlekurver",
   "footer.link.free-audit": "Gratis butikkgjennomgang",
@@ -106,26 +97,20 @@
   "footer.link.support": "Kundestøtte",
   "footer.link.changelog": "Nyheter",
   "footer.link.privacy": "Personvern",
-
   "a11y.skipToContent": "Hopp til innhold",
   "a11y.homeLink": "Persistent Cart — forside",
-
   "notFound.title": "Siden ble ikke funnet",
   "notFound.heading": "Vi fant ikke den siden",
   "notFound.body": "Siden kan ha blitt flyttet. Her er noen gode steder å fortsette der du slapp.",
   "notFound.home": "Gå til forsiden",
   "notFound.howItWorks": "Slik fungerer Persistent Cart",
-  "notFound.calculator": "Beregn tapt omsetning fra handlekurver",
-
   "page.home.title": "Persistent Cart — synkronisering av handlekurv mellom enheter for Shopify (Built for Shopify)",
-  "page.home.desc": "Behold en innlogget kundes handlekurv på alle enheter — synkroniseringen mellom enheter som Amazon og Walmart allerede bruker, brakt til Shopify. Ett klikk, ingen popup-vinduer eller e-poster. 4.8★, Built for Shopify, siden 2016.",
-
+  "page.home.desc": "Kunder bytter enhet; i en standard Shopify-butikk følger ikke handlekurven med. Persistent Cart beholder innloggede kunders kurv på alle enheter — ett klikk, ingen popup-vinduer eller e-poster. 4,8★, Built for Shopify, siden 2016.",
   "home.trust.lead": "Den originale appen for handlekurv på tvers av enheter for Shopify — holder innloggede handlekurver synkronisert siden 2016.",
   "home.trust.stat.rating": "4.8★ på tvers av {count} forhandleranmeldelser",
   "home.trust.stat.bfs": "Built for Shopify",
   "home.trust.stat.since": "Har kjørt stille siden 2016",
   "home.trust.stat.stores": "Betrodd av {stores}",
-
   "home.problem.eyebrow": "Lekkasjen de fleste butikkeiere aldri ser",
   "home.problem.heading": "Butikken din mister sannsynligvis en innlogget handlekurv i det øyeblikket en kunde bytter enhet.",
   "home.problem.intro": "I en standard Shopify-butikk ligger handlekurven i en informasjonskapsel i nettleseren — ikke på kundens konto. Så når en innlogget kunde legger varer i kurven på mobilen i lunsjen og åpner butikken din på en laptop samme kveld, er handlekurven tom. De fleste butikkeiere ser det aldri skje, for ingen sender e-post for å si «handlekurven min forsvant». De fullfører bare ikke kjøpet.",
@@ -136,7 +121,6 @@
   "home.problem.with.title": "Handlekurven følger kunden",
   "home.problem.with.body": "Den innloggede handlekurven synkroniseres automatisk på tvers av mobil, laptop og senere besøk — på samme måte som de største forhandlerne allerede fungerer.",
   "home.problem.aha": "Det er forskjellen mellom en handlekurv som tilhører en nettleser, og en handlekurv som tilhører kunden din.",
-
   "home.benefits.eyebrow": "Hva som endrer seg etter ett klikk",
   "home.benefits.heading": "Tre ting begynner å fungere slik kundene allerede forventer.",
   "home.benefits.1.title": "Gjenvinn handlekurver du aldri visste du mistet",
@@ -145,12 +129,10 @@
   "home.benefits.2.body": "En uavbrutt handlekurv på tvers av enheter vokser seg større. Kundene legger til på mobil, legger til mer på datamaskinen og fullfører kjøpet én gang — i stedet for å bygge opp en mindre handlekurv på nytt fra hukommelsen.",
   "home.benefits.3.title": "Ett klikk, og ingenting endrer seg for kundene",
   "home.benefits.3.body": "Ingen popup-vinduer, ingen e-poster, ingen påmeldinger, ingenting kundene må gjøre. Den kjører stille i bakgrunnen — så stille at forhandlere forteller oss at de glemmer at den er på.",
-
   "home.motion.eyebrow": "Se det i aksjon",
   "home.motion.heading": "Den samme innloggede handlekurven, på alle enheter.",
   "home.motion.intro": "Se en innlogget kunde legge en vare i kurven på mobilen — og handlekurven på laptopen oppdateres automatisk for å stemme. Ingen oppdatering av siden, ingen spørsmål. Dette er den ekte standardatferden: en stille, automatisk sammenslåing.",
   "home.motion.note": "Som standard slår Persistent Cart sammen handlekurver i det stille. Vil du heller la kundene velge? Et valgfritt «behold eller kombiner»-spørsmål er bare én bryter unna.",
-
   "home.parity.eyebrow": "Slik gjør de største butikkene det allerede",
   "home.parity.heading": "Amazon og Walmart beholder en innlogget handlekurv på alle enheter. Kundene forventer at din gjør det samme.",
   "home.parity.intro": "Dette er ikke en kjekk-å-ha-funksjon — det er den grunnleggende opplevelsen hos butikkene kundene dine handler mest hos. Deres egne hjelpesider sier det:",
@@ -162,10 +144,9 @@
   "home.parity.amazon.source": "Amazon Customer Service",
   "home.parity.shopify.name": "Standard Shopify",
   "home.parity.shopify.quote": "Handlekurven lagres i en informasjonskapsel i nettleseren, så en innlogget kundes handlekurv følger dem ikke til en annen enhet eller nettleser.",
-  "home.parity.shopify.source": "Shopify cookie policy + community",
-  "home.parity.cta": "Se hele sammenligningen",
+  "home.parity.shopify.source": "Vår oppsummering — basert på Shopifys informasjonskapsel-policy + community",
+  "home.parity.cta": "Hva en persistent handlekurv er — hele forklaringen",
   "home.parity.diagram.caption": "En innlogget handlekurv ligger på kundens konto — tilgjengelig fra enhver enhet — i stedet for i én nettleser.",
-
   "home.metrics.eyebrow": "Et tiår med stille arbeid",
   "home.metrics.heading": "Ikke et eksperiment fra 2025. Et verktøy fra 2016 som butikker fortsetter å betale for.",
   "home.metrics.1.label": "I App Store siden",
@@ -176,13 +157,11 @@
   "home.metrics.2.note": "Built for Shopify",
   "home.metrics.3.label": "Butikker betjent",
   "home.metrics.3.note": "fra Basic til Plus",
-
   "home.testimonial.eyebrow": "Med en forhandlers egne ord",
   "home.testimonial.quote": "Uten appen mister kundene handlekurven sin hvis de bytter enhet … Slik fungerer IKKE alle de store nettbutikkene … handlekurven blir i praksis værende hos kundens KONTO i stedet for bare ENHETEN.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "USA · har brukt Persistent Cart i 9+ år",
   "home.testimonial.cta": "Les alle {count} anmeldelser i App Store",
-
   "home.compare.eyebrow": "Forebygging, ikke bare gjenvinning",
   "home.compare.heading": "Det er den manglende halvdelen av strategien din mot forlatte handlekurver.",
   "home.compare.intro": "E-post og SMS for forlatte handlekurver utløses etter at en handlekurv er borte, og når bare kunder som har meldt seg på. Persistent Cart virker før kjøpet forlates — den hindrer at handlekurven forsvinner i utgangspunktet, for hver innlogget kunde. De fungerer best sammen.",
@@ -202,27 +181,22 @@
   "home.compare.row.cost.persistent": "Ingen",
   "home.compare.row.cost.recovery": "Per sendte e-post/SMS",
   "home.compare.footnote": "Persistent Cart utfyller e-postverktøyet ditt — den gjenvinner handlekurvene flytene dine aldri ser.",
-
   "home.calc.eyebrow": "Sett et tall på det",
   "home.calc.heading": "Hvor mye kan tap av handlekurver mellom enheter koste deg?",
   "home.calc.intro": "Juster noen få verdier — forhåndsutfylt med bransjereferanser — for et transparent, illustrerende anslag. Vi viser formelen; ingenting er en svart boks.",
   "home.calc.cta": "Åpne kalkulatoren for tapte handlekurver",
-
   "home.audit.eyebrow": "Usikker på om det gjelder deg?",
   "home.audit.heading": "Vi sjekker butikken din for tap av handlekurver mellom enheter — gratis.",
   "home.audit.body": "Send oss butikken din, så forteller vi deg om en innlogget handlekurv overlever et enhetsbytte, omtrent hva det kan koste, og de raske gevinstene — uten forpliktelser, uten at du trenger å installere noe.",
   "home.audit.cta": "Få en gratis butikkgjennomgang",
-
   "home.b2b.eyebrow": "B2B og Shopify Plus",
   "home.b2b.heading": "Lange handlekurver med høy verdi som må overleve et øktbytte.",
   "home.b2b.body": "Engros- og B2B-kjøpere bygger store handlekurver på tvers av økter og enheter — og en tapt handlekurv i den størrelsen er en reell tapt ordre. Persistent Cart holder store innloggede handlekurver intakte på tvers av enheter, og håndterer delte arbeidsstasjoner uten at én kjøpers handlekurv lekker over til en annen.",
   "home.b2b.cta": "Persistent Cart for B2B og Plus",
-
   "home.partner.eyebrow": "Byråer, utviklere og innholdsskapere",
   "home.partner.heading": "Tjen løpende provisjon ved å anbefale en app som stille tjener penger for butikkene.",
   "home.partner.body": "Det er en enkel anbefaling: ett klikk, ingen forstyrrelse for kundene, en skjult lekkasje tettet — og løpende provisjon til deg. Built for Shopify, betrodd siden 2016.",
   "home.partner.cta": "Utforsk partnerprogrammet",
-
   "home.data.eyebrow": "Tillit og databehandling",
   "home.data.heading": "Den får bare tilgang til det den trenger for å synkronisere en handlekurv.",
   "home.data.body": "Persistent Cart fungerer for innloggede kunder. For å synkronisere en handlekurv lagrer den innholdet i handlekurven mot kundens konto for butikken din — ikke noe mer enn det en handlekurv inneholder. Gjester spores ikke. Vi er Built for Shopify og følger Shopifys påkrevde flyter for databeskyttelse.",
@@ -230,13 +204,11 @@
   "home.data.point.2": "Lagrer innholdet i handlekurven for å synkronisere det, avgrenset til butikken din",
   "home.data.point.3": "Ingen e-poster sendes, ingen kontakter samles inn, ingen samtykkespørsmål",
   "home.data.cta": "Les om vår tilnærming til personvern",
-
   "home.pricing.eyebrow": "Priser",
   "home.pricing.heading": "Alle funksjoner, på alle planer. Priset etter Shopify-planen din.",
   "home.pricing.intro": "Det finnes ingen funksjonsnivåer å tyde — hver plan inkluderer hele appen. Prisen din følger ganske enkelt Shopify-planen din. Start gratis, deretter en 30-dagers prøveperiode på enhver betalt plan.",
   "home.pricing.cta": "Se alle priser",
   "home.pricing.trialNote": "Free Starter-plan · 30 dagers gratis prøveperiode på betalte planer",
-
   "home.faq.eyebrow": "Spørsmål, besvart",
   "home.faq.heading": "Det forhandlere spør om før de installerer.",
   "home.faq.q1.q": "Synkroniserer ikke Shopify allerede handlekurver mellom enheter?",
@@ -252,12 +224,17 @@
   "home.faq.q6.q": "Hvordan skiller dette seg fra appen min for e-post om forlatte handlekurver?",
   "home.faq.q6.a": "Disse verktøyene virker etter at en handlekurv er forlatt og når bare påmeldte kontakter. Persistent Cart virker før — den hindrer at handlekurven forsvinner når en innlogget kunde bytter enhet. De utfyller hverandre: bruk begge.",
   "home.faq.q7.q": "Hvordan vet jeg at den er verdt det for butikken min?",
-  "home.faq.q7.a": "Test den på din egen butikk før du betaler: Free Starter-planen kjører opptil 10 ekte synkroniseringer av handlekurv, og enhver betalt plan legger til en 30-dagers prøveperiode. På Basic er den $4.99/måned — å gjenvinne én enkelt mellomstor ordre på tvers av enheter dekker den mer enn nok. Den gratis butikkgjennomgangen sjekker din faktiske butikk, og kalkulatoren for tapte handlekurver viser regnestykket, så du slipper å gjette.",
+  "home.faq.q7.a": "Test i din egen butikk før du betaler: Free Starter-planen dekker opptil 10 ekte kurv-synkroniseringer, og alle betalte planer starter med 30 dagers prøveperiode. Basic koster 4,99 $ i måneden — én reddet mellomstor bestilling på tvers av enheter dekker det med god margin. Du ser det virke i din egen butikk før en eneste dollar belastes, så du slipper å gjette.",
   "home.faq.cta": "Se alle vanlige spørsmål",
-
   "home.final.heading": "Gi kundene dine handlekurven de forventer — på alle enheter.",
-  "home.final.body": "Legg til Persistent Cart med ett klikk, eller la oss sjekke butikken din først. Uansett stopper lekkasjen.",
+  "home.final.body": "Legg til Persistent Cart med ett klikk — fra det øyeblikket følger innloggede kunders kurver med overalt.",
   "home.final.install": "Legg til Persistent Cart — start gratis",
   "home.final.audit": "Få en gratis butikkgjennomgang",
-  "home.final.trust": "4.8★ · Built for Shopify · Betrodd siden 2016 · 30 dagers gratis prøveperiode på betalte planer"
+  "home.final.trust": "4.8★ · Built for Shopify · Betrodd siden 2016 · 30 dagers gratis prøveperiode på betalte planer",
+  "home.problem.stat": "9 av 10 personer veksler mellom enheter for å få ting gjort, og 88 % av kundene forventer en konsistent opplevelse på tvers av enheter og kanaler.",
+  "notFound.faq": "Bla i ofte stilte spørsmål",
+  "home.faq.q8.q": "Hva gjør den med kundenes data?",
+  "home.faq.q8.a": "Kun det minimum en kurv-synkronisering trenger. Den fungerer bare for innloggede kunder og lagrer kurvens innhold knyttet til kundekontoen i butikken din — ikke noe mer enn det en kurv inneholder. Gjester spores ikke, ingen e-poster sendes, ingen samtykkebokser vises, og dataene holder seg innenfor butikken din. Vi er Built for Shopify og følger Shopifys påkrevde personvernflyter.",
+  "nav.faq": "FAQ",
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
 }

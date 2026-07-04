@@ -122,7 +122,7 @@ if (faqItems.length) jsonLd.push(faqPageSchema(faqItems));
         body={tt('content.ctaBody')}
         actions={[
           { label: tt('content.ctaInstall'), href: site.appStoreUrl, style: 'primary', external: true, event: 'install_click', source: pageKey },
-          { label: tt('content.ctaAudit'), href: localizedPath(locale, 'free-audit'), style: 'secondary', event: 'audit_cta', source: pageKey },
+          { label: tt('cta.viewPricing'), href: localizedPath(locale, 'pricing'), style: 'secondary' },
         ]}
         bg="soft"
       />

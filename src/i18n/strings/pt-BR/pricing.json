@@ -4,18 +4,15 @@
   "page.pricing.crumb": "Preços",
   "page.pricing.h1": "Todos os recursos, em todos os planos. Com preço de acordo com seu plano Shopify.",
   "page.pricing.lede": "Não há níveis de recursos para decifrar. Todo plano inclui o app completo — seu preço simplesmente corresponde à sua assinatura Shopify. Comece grátis e tenha um teste gratuito de 30 dias em qualquer plano pago.",
-
   "pricing.planHint": "Seu plano é selecionado automaticamente com base na sua assinatura Shopify. Você não escolhe um nível de recursos — você recebe tudo.",
   "pricing.cta.install": "Adicione o Persistent Cart — comece grátis",
   "pricing.trial": "Plano Starter gratuito · Teste gratuito de 30 dias em todos os planos pagos · cancele quando quiser",
-
   "pricing.tier.free.note": "Teste todos os recursos, até 10 sincronizações de carrinho",
   "pricing.tier.basic.note": "Para lojas no plano Shopify Basic",
   "pricing.tier.grow.note": "Para lojas no plano Shopify Grow (antigo \"Shopify\")",
   "pricing.tier.advanced.note": "Para lojas no plano Shopify Advanced",
   "pricing.tier.plus.note": "Para lojas Shopify Plus",
   "pricing.tier.everyPlan": "Todos os recursos incluídos",
-
   "pricing.included.title": "Incluído em todos os planos",
   "pricing.included.1": "Sincronização automática de carrinho entre dispositivos para clientes conectados",
   "pricing.included.2": "Mesclagem automática silenciosa por padrão — sem pop-ups, e-mails ou opt-ins",
@@ -23,14 +20,12 @@
   "pricing.included.4": "Instalação em um clique, sem código de tema",
   "pricing.included.5": "Funciona entre celular, desktop e visitas seguintes",
   "pricing.included.6": "Padrões de qualidade e desempenho Built for Shopify",
-
   "pricing.s1.h": "Por que o preço é por plano, não por recurso",
   "pricing.s1.b": "A maioria dos apps faz você escolher um nível e raciona os recursos. O Persistent Cart não — o app inteiro é o produto, então todo plano recebe todos os recursos. A única coisa que muda é o preço, que acompanha o nível da sua assinatura Shopify. Uma loja Basic paga o preço Basic; uma loja Plus paga o preço Plus; ambas recebem funcionalidade idêntica. Isso mantém a decisão simples: não há nada a comparar além de você querer ou não o app.\n\nPlanos Shopify maiores significam mais pedidos e mais clientes conectados trocando de dispositivo — então o preço acompanha o valor que você recebe de volta, não uma lista de recursos mais longa.",
   "pricing.s2.h": "Comece grátis, depois um teste de 30 dias",
   "pricing.s2.b": "O plano Starter gratuito permite instalar e testar todos os recursos por até 10 sincronizações de carrinho — o suficiente para ver o app funcionando na sua própria loja. Quando estiver pronto, qualquer plano pago começa com um teste gratuito de 30 dias, então você só paga depois de vê-lo rodando. Não há contrato de longo prazo; cancele quando quiser pelo seu painel da Shopify.",
   "pricing.s3.h": "Vale a pena?",
-  "pricing.s3.b": "A resposta honesta é que depende de quantos dos seus clientes fazem login e trocam de dispositivo — que é exatamente o que a calculadora de carrinhos perdidos e uma auditoria gratuita da loja ajudam você a estimar. O Persistent Cart é um custo mensal baixo, feito para recuperar pedidos que, de outra forma, sumiriam silenciosamente. Se apenas um punhado de carrinhos de alto valor sobreviver a cada mês quando não teria sobrevivido, ele se paga.",
-
+  "pricing.s3.b": "A resposta honesta: depende de quantos dos seus clientes fazem login e trocam de dispositivo. O Persistent Cart é um custo mensal baixo feito para recuperar pedidos que, de outra forma, sumiriam em silêncio — se a cada mês sobreviver nem que seja um punhado de carrinhos valiosos que teriam se perdido, ele se paga sozinho. E você não precisa acreditar na palavra: o plano Free Starter e o teste de 30 dias deixam você vê-lo funcionando na sua própria loja antes de custar qualquer coisa.",
   "pricing.faq.q1.q": "Os planos mais baratos têm menos recursos?",
   "pricing.faq.q1.a": "Não. Todo plano inclui o app completo. Seu preço é definido pelo nível da sua assinatura Shopify, não pelos recursos que você quer.",
   "pricing.faq.q2.q": "Existe mesmo um plano gratuito?",

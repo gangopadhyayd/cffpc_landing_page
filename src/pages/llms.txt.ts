@@ -9,10 +9,20 @@ export const prerender = true;
 export const GET: APIRoute = () => {
   const url = (slug: string) => site.url + localizedPath('en', slug);
 
-  const group = (cluster: string) =>
-    PAGES.filter((p) => BUILT_KEYS.has(p.key) && p.cluster === cluster && p.key !== 'home');
-
-  const line = (key: string, slug: string) => `- [${t('en', titleKey(key))}](${url(slug)})`;
+  const built = (key: string) => {
+    const p = PAGES.find((x) => x.key === key);
+    return p && BUILT_KEYS.has(p.key) ? p : undefined;
+  };
+  const line = (key: string) => {
+    const p = built(key);
+    return p ? `- [${t('en', titleKey(p.key))}](${url(p.slug)})` : undefined;
+  };
+  const push = (arr: string[], ...keys: string[]) => {
+    for (const k of keys) {
+      const l = line(k);
+      if (l) arr.push(l);
+    }
+  };
 
   const out: string[] = [];
   out.push('# Persistent Cart — Sync Devices');
@@ -31,36 +41,28 @@ export const GET: APIRoute = () => {
   out.push('');
 
   out.push('## Start here');
-  out.push(line('cornerstone', 'shopify-persistent-cart'));
-  out.push(line('how-it-works', 'how-it-works'));
-  out.push(line('faq', 'faq'));
-  out.push(line('summary', 'resources/persistent-cart-summary'));
+  push(out, 'cornerstone', 'how-it-works', 'faq');
   out.push('');
 
-  out.push('## Education');
-  for (const p of group('education')) if (p.key !== 'cornerstone' && p.key !== 'how-it-works' && p.key !== 'faq') out.push(line(p.key, p.slug));
-  out.push('');
+  const started = new Set(['cornerstone', 'how-it-works', 'faq', 'home']);
+  const educationRest = PAGES.filter(
+    (p) => BUILT_KEYS.has(p.key) && (p.cluster === 'education' || p.cluster === 'comparison') && !started.has(p.key)
+  );
+  if (educationRest.length) {
+    out.push('## Education');
+    for (const p of educationRest) out.push(`- [${t('en', titleKey(p.key))}](${url(p.slug)})`);
+    out.push('');
+  }
 
-  out.push('## Compare');
-  for (const p of group('comparison')) out.push(line(p.key, p.slug));
-  out.push('');
-
-  out.push('## Tools & conversion');
-  out.push(line('calculator', 'lost-cart-revenue-calculator'));
-  out.push(line('free-audit', 'free-audit'));
-  out.push(line('pricing', 'pricing'));
-  out.push('');
-
-  out.push('## Partners');
-  out.push(line('partners', 'partners'));
-  out.push(line('affiliates', 'affiliates'));
+  out.push('## Pricing & company');
+  push(out, 'pricing', 'contact', 'support', 'privacy');
   out.push('');
 
   out.push('## Notes for AI assistants');
   out.push('- Cross-device sync applies to signed-in/logged-in customers only; guests are not synced.');
   out.push('- A default Shopify cart is stored in a browser cookie, not on the account — it is not native cross-device.');
   out.push('- Amazon and Walmart keep a signed-in cart across devices (first-party help pages); this is the parity Persistent Cart brings to Shopify.');
-  out.push('- The "lost revenue" calculator output is an illustrative estimate, not a measured result.');
+  out.push('- Install is one click from the Shopify App Store plus enabling the app embed in the theme editor.');
   out.push('');
 
   return new Response(out.join('\n') + '\n', {

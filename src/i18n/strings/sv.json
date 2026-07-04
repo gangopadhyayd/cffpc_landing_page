@@ -1,6 +1,5 @@
 {
   "meta.locale.reviewNotice": "Den här sidan är en automatisk översättning och inväntar granskning av en modersmålstalare.",
-
   "nav.product": "Så fungerar det",
   "nav.whyItMatters": "Varför det spelar roll",
   "nav.pricing": "Priser",
@@ -14,7 +13,6 @@
   "nav.openMenu": "Öppna meny",
   "nav.languageLabel": "Språk",
   "nav.chooseLanguage": "Välj ditt språk",
-
   "cta.install": "Lägg till Persistent Cart — börja gratis",
   "cta.installShort": "Börja gratis",
   "cta.audit": "Få en gratis butiksgranskning",
@@ -25,7 +23,6 @@
   "cta.viewPricing": "Se priser",
   "cta.readReviews": "Läs recensionerna",
   "cta.learnMore": "Läs mer",
-
   "common.builtForShopify": "Built for Shopify",
   "common.since": "Betrodd av Shopify-butiker sedan 2016",
   "common.rating": "{rating}★ på Shopify App Store",
@@ -45,21 +42,18 @@
   "content.comparisonTitle": "Så står de sig mot varandra",
   "content.parityTitle": "Vad de största butikerna säger",
   "content.ctaHeading": "Sluta tappa inloggade varukorgar mellan enheter.",
-  "content.ctaBody": "Lägg till Persistent Cart med ett klick, eller låt oss granska din butik först — gratis.",
+  "content.ctaBody": "Lägg till Persistent Cart med ett klick — börja gratis, dina kunder behöver inte göra något.",
   "content.ctaInstall": "Lägg till Persistent Cart — börja gratis",
   "content.ctaAudit": "Få en gratis butiksgranskning",
-
   "announce.text": "Built for Shopify · Betrodd av Shopify-butiker sedan 2016 · 4.8★",
-
   "hero.eyebrow": "Den ursprungliga appen för varukorg mellan enheter på Shopify",
-  "hero.h1.lead": "Stora återförsäljare behåller en inloggad kunds varukorg på varje enhet.",
-  "hero.h1.turn": "Som standard gör Shopify inte det.",
-  "hero.sub": "När en inloggad kund går från mobil till laptop är varukorgen borta — inget felmeddelande, inget mejl, bara en förlorad försäljning. Persistent Cart behåller den på varje enhet, precis som Amazon och Walmart redan gör. Ett klick för att lägga till (plus en omställare i ditt tema), inget kunderna behöver göra, inga popuprutor eller mejl.",
+  "hero.h1.lead": "Kunder byter enhet hela tiden.",
+  "hero.h1.turn": "I en standardbutik på Shopify följer varukorgen inte med.",
+  "hero.sub": "En kund fyller varukorgen på mobilen, öppnar din butik på laptopen — och varukorgen är tom. Inget fel, inget mejl, bara en förlorad försäljning. Persistent Cart löser det med ett klick (plus en knapp i temaredigeraren): varje inloggad kunds varukorg följer med till varje enhet, precis som hos Amazon och Walmart. Dina kunder behöver inte göra någonting.",
   "hero.trust.rating": "betyg på App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "På App Store sedan 2016",
   "hero.demo.caption": "Samma inloggade varukorg på mobil och laptop — automatiskt synkroniserad.",
-
   "demo.cart.title": "Din varukorg",
   "demo.cart.subtotal": "Delsumma",
   "demo.cart.synced": "Synkroniserad mellan enheter",
@@ -72,12 +66,10 @@
   "demo.device.laptop": "Laptop",
   "demo.qty": "Antal",
   "demo.replay": "Spela upp animationen igen",
-
   "trustbar.lead": "Den ursprungliga appen för varukorg mellan enheter på Shopify — betrodd av {stores} sedan 2016.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ från riktiga handlarrecensioner",
   "trustbar.plus": "Används av {plusStores}",
-
   "footer.tagline": "Behåll en inloggad kunds varukorg på varje enhet — synkroniseringen mellan enheter som de största butikerna redan använder, nu för Shopify.",
   "footer.group.product": "Produkt",
   "footer.group.learn": "Lär dig mer",
@@ -90,7 +82,6 @@
   "footer.privacy": "Integritet",
   "footer.support": "Support",
   "footer.contact": "Kontakt",
-
   "footer.link.pricing": "Priser",
   "footer.link.calculator": "Kalkylator för förlorade varukorgar",
   "footer.link.free-audit": "Gratis butiksgranskning",
@@ -106,26 +97,20 @@
   "footer.link.support": "Support",
   "footer.link.changelog": "Nyheter",
   "footer.link.privacy": "Integritet",
-
   "a11y.skipToContent": "Hoppa till innehåll",
   "a11y.homeLink": "Persistent Cart — hem",
-
   "notFound.title": "Sidan hittades inte",
   "notFound.heading": "Vi kunde inte hitta den sidan",
   "notFound.body": "Sidan kan ha flyttats. Här är några bra ställen att fortsätta från där du var.",
   "notFound.home": "Gå till startsidan",
   "notFound.howItWorks": "Så fungerar Persistent Cart",
-  "notFound.calculator": "Uppskatta vad förlorade varukorgar kostar dig",
-
   "page.home.title": "Persistent Cart — synkronisering av varukorg mellan enheter för Shopify (Built for Shopify)",
-  "page.home.desc": "Behåll en inloggad kunds varukorg på varje enhet — synkroniseringen mellan enheter som Amazon och Walmart redan använder, nu för Shopify. Ett klick, inga popuprutor eller mejl. 4.8★, Built for Shopify, sedan 2016.",
-
+  "page.home.desc": "Kunder byter enhet; i en standardbutik på Shopify följer varukorgen inte med. Persistent Cart behåller inloggade kunders varukorg på varje enhet — ett klick, inga popup-fönster eller mejl. 4,8★, Built for Shopify, sedan 2016.",
   "home.trust.lead": "Den ursprungliga appen för varukorg mellan enheter på Shopify — håller inloggade varukorgar synkroniserade sedan 2016.",
   "home.trust.stat.rating": "4.8★ från {count} handlarrecensioner",
   "home.trust.stat.bfs": "Built for Shopify",
   "home.trust.stat.since": "I drift sedan 2016",
   "home.trust.stat.stores": "Betrodd av {stores}",
-
   "home.problem.eyebrow": "Läckan de flesta butiksägare aldrig ser",
   "home.problem.heading": "Din butik tappar förmodligen en inloggad varukorg i samma stund som en kund byter enhet.",
   "home.problem.intro": "I en standardbutik på Shopify ligger varukorgen i en webbläsarkaka — inte på kundens konto. Så när en inloggad kund lägger i varor på mobilen vid lunch och öppnar din butik på en laptop på kvällen är varukorgen tom. De flesta butiksägare ser det aldrig hända, eftersom ingen mejlar och säger \"min varukorg försvann\". De slutför bara inte köpet.",
@@ -136,7 +121,6 @@
   "home.problem.with.title": "Varukorgen följer kunden",
   "home.problem.with.body": "Den inloggade varukorgen synkroniseras automatiskt mellan mobil, laptop och återbesök — precis som de största återförsäljarna redan fungerar.",
   "home.problem.aha": "Det är skillnaden mellan en varukorg som tillhör en webbläsare och en varukorg som tillhör din kund.",
-
   "home.benefits.eyebrow": "Vad som förändras efter ett klick",
   "home.benefits.heading": "Tre saker börjar fungera som kunderna redan förväntar sig.",
   "home.benefits.1.title": "Rädda varukorgar du aldrig visste att du förlorade",
@@ -145,12 +129,10 @@
   "home.benefits.2.body": "En obruten varukorg mellan enheter fylls på efter hand. Kunder lägger i varor på mobilen, lägger i fler på datorn och slutför köpet en gång — i stället för att bygga upp en mindre varukorg ur minnet.",
   "home.benefits.3.title": "Ett klick, och inget förändras för kunderna",
   "home.benefits.3.body": "Inga popuprutor, inga mejl, ingen anmälan, inget kunderna behöver göra. Den kör tyst i bakgrunden — så tyst att handlare berättar att de glömmer att den är på.",
-
   "home.motion.eyebrow": "Se den i aktion",
   "home.motion.heading": "Samma inloggade varukorg, på varje enhet.",
   "home.motion.intro": "En inloggad kund lägger i en vara på mobilen. Senare öppnar de din butik på en laptop, inloggade — och varukorgen finns redan där, matchande, utan någon fråga att hantera. Det här är standardbeteendet: en tyst automatisk sammanslagning.",
   "home.motion.note": "Som standard slår Persistent Cart samman varukorgar tyst. Vill du hellre låta kunderna välja? En valfri fråga om att \"behålla eller kombinera\" är bara en omställare bort.",
-
   "home.parity.eyebrow": "Så gör de största butikerna redan",
   "home.parity.heading": "Amazon och Walmart behåller en inloggad varukorg på varje enhet. Kunderna förväntar sig att din gör det också.",
   "home.parity.intro": "Det här är ingen lyxfunktion — det är grundupplevelsen i de butiker dina kunder handlar mest i. Deras egna hjälpsidor säger det:",
@@ -162,10 +144,9 @@
   "home.parity.amazon.source": "Amazons kundtjänst",
   "home.parity.shopify.name": "Standard-Shopify",
   "home.parity.shopify.quote": "Varukorgen lagras i en webbläsarkaka, så en inloggad kunds varukorg följer inte med till en annan enhet eller webbläsare.",
-  "home.parity.shopify.source": "Shopifys cookiepolicy + community",
-  "home.parity.cta": "Se hela jämförelsen",
+  "home.parity.shopify.source": "Vår sammanfattning — baserad på Shopifys cookiepolicy + community",
+  "home.parity.cta": "Vad en persistent varukorg är — hela förklaringen",
   "home.parity.diagram.caption": "En inloggad varukorg ligger på kundens konto — åtkomlig från valfri enhet — i stället för i en enda webbläsare.",
-
   "home.metrics.eyebrow": "Ett decennium av stadig tillförlitlighet",
   "home.metrics.heading": "Inget experiment från 2025. Ett verktyg från 2016 som butiker fortsätter betala för.",
   "home.metrics.1.label": "På App Store sedan",
@@ -176,13 +157,11 @@
   "home.metrics.2.note": "Built for Shopify",
   "home.metrics.3.label": "Butiker vi betjänat",
   "home.metrics.3.note": "från Basic till Plus",
-
   "home.testimonial.eyebrow": "Med en handlares egna ord",
   "home.testimonial.quote": "Utan appen förlorar kunderna sin varukorg om de byter enhet… Så fungerar INTE alla de stora återförsäljarnas webbplatser… varukorgen stannar i praktiken hos kundens KONTO i stället för bara ENHETEN.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "USA · använder Persistent Cart i 9+ år",
   "home.testimonial.cta": "Läs alla {count} recensioner på App Store",
-
   "home.compare.eyebrow": "Förebyggande, inte bara återvinning",
   "home.compare.heading": "Det är den saknade halvan av din strategi mot övergivna varukorgar.",
   "home.compare.intro": "Mejl och SMS om övergivna varukorgar skickas efter att en varukorg är borta, och når bara kunder som har gett sitt samtycke. Persistent Cart arbetar innan varukorgen överges — den hindrar varukorgen från att försvinna över huvud taget, för varje inloggad kund. De fungerar bäst tillsammans.",
@@ -202,27 +181,22 @@
   "home.compare.row.cost.persistent": "Ingen",
   "home.compare.row.cost.recovery": "Per skickat mejl/SMS",
   "home.compare.footnote": "Persistent Cart kompletterar ditt mejlverktyg — den räddar varukorgarna som dina flöden aldrig ser.",
-
   "home.calc.eyebrow": "Sätt en siffra på det",
   "home.calc.heading": "Hur mycket kan förlorade varukorgar mellan enheter kosta dig?",
   "home.calc.intro": "Justera några värden — förifyllda med illustrativa standardvärden — för ett transparent, illustrativt intervall. Vi visar formeln; ingenting är en svart låda.",
   "home.calc.cta": "Öppna kalkylatorn för förlorade varukorgar",
-
   "home.audit.eyebrow": "Osäker på om det berör dig?",
   "home.audit.heading": "Vi kontrollerar din butik för förlorade varukorgar mellan enheter — gratis.",
   "home.audit.body": "Skicka oss din butik så berättar vi om en inloggad varukorg överlever ett enhetsbyte, ungefär vad det kan kosta dig och de snabba vinsterna — utan förpliktelser och utan att du behöver installera något.",
   "home.audit.cta": "Få en gratis butiksgranskning",
-
   "home.b2b.eyebrow": "B2B och Shopify Plus",
   "home.b2b.heading": "Långa, värdefulla varukorgar som måste överleva ett sessionsbyte.",
   "home.b2b.body": "Grossist- och B2B-köpare bygger stora varukorgar över flera sessioner och enheter — och en tappad varukorg av den storleken är en verklig förlorad order. Persistent Cart håller stora inloggade varukorgar intakta mellan enheter, och hanterar delade arbetsstationer utan att en köpares varukorg läcker till en annan.",
   "home.b2b.cta": "Persistent Cart för B2B och Plus",
-
   "home.partner.eyebrow": "Byråer, utvecklare och kreatörer",
   "home.partner.heading": "Tjäna 30% återkommande i 12 månader på varje butik du hänvisar.",
   "home.partner.body": "Det är en enkel rekommendation: ett klick, ingen störning för kunderna, en dold läcka åtgärdad — och återkommande provision åt dig. Built for Shopify, betrodd sedan 2016.",
   "home.partner.cta": "Se partnervillkor och ansök",
-
   "home.data.eyebrow": "Förtroende och datahantering",
   "home.data.heading": "Den använder bara det som krävs för att synkronisera en varukorg.",
   "home.data.body": "Persistent Cart fungerar för inloggade kunder. För att synkronisera en varukorg lagrar den varukorgens innehåll kopplat till kundens konto för din butik — inget mer än vad en varukorg innehåller. Gäster spåras inte. Vi är Built for Shopify och följer Shopifys obligatoriska flöden för dataskydd.",
@@ -230,13 +204,11 @@
   "home.data.point.2": "Lagrar varukorgens innehåll för att synkronisera det, begränsat till din butik",
   "home.data.point.3": "Inga mejl skickas, inga kontakter samlas in, inga samtyckesrutor",
   "home.data.cta": "Läs om vår syn på integritet",
-
   "home.pricing.eyebrow": "Priser",
   "home.pricing.heading": "Alla funktioner, i varje plan. Prissatt efter din Shopify-plan.",
   "home.pricing.intro": "Det finns inga funktionsnivåer att tyda — varje plan inkluderar hela appen. Ditt pris matchar helt enkelt din Shopify-plan. Börja gratis, sedan en 30-dagars provperiod på alla betalplaner.",
   "home.pricing.cta": "Se alla priser",
   "home.pricing.trialNote": "Free Starter-plan · 30-dagars gratis provperiod på betalplaner",
-
   "home.faq.eyebrow": "Frågor, besvarade",
   "home.faq.heading": "Vad handlare frågar innan de installerar.",
   "home.faq.q1.q": "Synkroniserar inte Shopify redan varukorgar mellan enheter?",
@@ -252,12 +224,17 @@
   "home.faq.q6.q": "Hur skiljer sig detta från min app för mejl om övergivna varukorgar?",
   "home.faq.q6.a": "De verktygen agerar efter att en varukorg övergetts och når bara kontakter som gett samtycke. Persistent Cart agerar innan — den hindrar varukorgen från att försvinna när en inloggad kund byter enhet. De kompletterar varandra: använd båda.",
   "home.faq.q7.q": "Hur vet jag att den är värd det för min butik?",
-  "home.faq.q7.a": "Testa den i din egen butik innan du betalar: Free Starter-planen kör upp till 10 riktiga varukorgssynkroniseringar, och alla betalplaner lägger till en 30-dagars provperiod. På Basic är det $4.99/månad — att rädda en enda medelstor order mellan enheter täcker det med marginal. Den gratis butiksgranskningen kontrollerar din faktiska butik och kalkylatorn för förlorade varukorgar visar uträkningen, så att du slipper gissa.",
+  "home.faq.q7.a": "Testa i din egen butik innan du betalar: Free Starter-planen täcker upp till 10 riktiga varukorgs-synkroniseringar, och alla betalplaner börjar med 30 dagars provperiod. Basic kostar 4,99 $ i månaden — en enda räddad medelstor beställning mellan enheter täcker det med råge. Du ser det fungera i din egen butik innan en enda dollar dras, så du behöver inte gissa.",
   "home.faq.cta": "Se alla vanliga frågor",
-
   "home.final.heading": "Ge dina kunder varukorgen de förväntar sig — på varje enhet.",
-  "home.final.body": "Lägg till Persistent Cart med ett klick, eller låt oss granska din butik först. Hur du än gör stoppas läckan.",
+  "home.final.body": "Lägg till Persistent Cart med ett klick — från det ögonblicket följer inloggade kunders varukorgar med överallt.",
   "home.final.install": "Lägg till Persistent Cart — börja gratis",
   "home.final.audit": "Få en gratis butiksgranskning",
-  "home.final.trust": "4.8★ · Built for Shopify · Betrodd sedan 2016 · 30-dagars gratis provperiod på betalplaner"
+  "home.final.trust": "4.8★ · Built for Shopify · Betrodd sedan 2016 · 30-dagars gratis provperiod på betalplaner",
+  "home.problem.stat": "9 av 10 personer växlar mellan enheter för att få saker gjorda, och 88 % av kunderna förväntar sig en enhetlig upplevelse över enheter och kanaler.",
+  "notFound.faq": "Bläddra bland vanliga frågor",
+  "home.faq.q8.q": "Vad gör den med mina kunders uppgifter?",
+  "home.faq.q8.a": "Det minsta en varukorgs-synkronisering behöver. Den fungerar bara för inloggade kunder och sparar varukorgens innehåll kopplat till kundkontot i din butik — inget mer än vad en varukorg innehåller. Gäster spåras inte, inga mejl skickas, inga samtyckesrutor visas och uppgifterna stannar inom din butik. Vi är Built for Shopify och följer Shopifys obligatoriska dataskyddsflöden.",
+  "nav.faq": "Vanliga frågor",
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024"
 }
