@@ -1,0 +1,28 @@
+{
+  "page.affiliates.title": "Programa de afiliados — comparte un enlace, gana de forma recurrente | Persistent Cart",
+  "page.affiliates.desc": "Creadores, reseñadores y educadores: comparte una app de Shopify de un solo clic que corrige una fuga oculta del carrito entre dispositivos, y gana comisión recurrente. Unirse es gratis.",
+  "page.affiliates.crumb": "Afiliados",
+  "page.affiliates.h1": "Comparte un enlace a una solución que las tiendas de Shopify realmente necesitan, y gana de forma recurrente.",
+  "page.affiliates.lede": "Si llegas a comerciantes de Shopify, Persistent Cart es fácil de recomendar: corrige una fuga real y oculta del carrito entre dispositivos con un solo clic, sin que los compradores tengan que hacer nada. Comparte tu enlace y gana comisión recurrente por cada tienda que se queda.",
+
+  "affiliates.terms": "30 % de comisión recurrente · 12 meses por referido · cookie de 90 días · unirse es gratis.",
+  "affiliates.how": "Únete gratis, consigue tu enlace y un kit listo para compartir, y gana por cada tienda que se queda.",
+
+  "affiliates.why.title": "Por qué convierte para tu audiencia",
+  "affiliates.why.1.title": "Una historia real y sorprendente",
+  "affiliates.why.1.body": "«Las tiendas más grandes conservan el carrito de los usuarios con sesión iniciada en todos los dispositivos; Shopify no lo hace de forma predeterminada». Es verificable, intuitivo y hace que la gente revise su propia tienda.",
+  "affiliates.why.2.title": "De bajo riesgo al recomendarlo",
+  "affiliates.why.2.body": "Un clic, sin tocar el código del tema, sin molestias para los clientes y un plan gratuito para empezar. Tu audiencia tiene muy poco que objetar.",
+  "affiliates.why.3.title": "Recurrente, no de una sola vez",
+  "affiliates.why.3.body": "Gana un {pct} % de comisión recurrente durante {months} meses por cada tienda de pago: un valor que se acumula a medida que tus referidos se quedan.",
+
+  "affiliates.tools.title": "Herramientas para compartir que venden por ti",
+  "affiliates.tools.1": "La calculadora de carritos perdidos: deja que tus lectores estimen su propia fuga",
+  "affiliates.tools.2": "La auditoría gratuita de la tienda: una llamada a la acción sin riesgo",
+  "affiliates.tools.3": "Logos limpios, fragmentos de texto y la historia de la paridad",
+
+  "affiliates.form.title": "Únete al programa de afiliados",
+  "affiliates.form.success.heading": "Estás en la cola. ¡Gracias!",
+  "affiliates.form.success.body": "Revisaremos tus datos y te enviaremos en breve tu enlace de afiliado, las herramientas para compartir y las condiciones definitivas.",
+  "affiliates.partnersCta": "¿Diriges una agencia o creas tiendas para clientes? El programa de socios puede encajar mejor."
+}

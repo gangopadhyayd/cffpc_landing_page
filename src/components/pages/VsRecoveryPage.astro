@@ -1,0 +1,38 @@
+---
+import ContentPage from './ContentPage.astro';
+import ComparisonTable from '../ComparisonTable.astro';
+import { t } from '../../i18n';
+import { preventionComparison } from '../../data/proofBlocks';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = '' } = Astro.props;
+const tt = (k: string) => t(locale, k);
+const comp = preventionComparison(locale);
+---
+
+<ContentPage
+  locale={locale}
+  slug={slug}
+  pageKey="vs-recovery"
+  sectionCount={4}
+  faqCount={3}
+  related={['compare-email', 'cornerstone', 'how-it-works']}
+>
+  <section class="content-section">
+    <h2>{tt('content.comparisonTitle')}</h2>
+    <ComparisonTable columns={comp.columns} rows={comp.rows} caption={tt('content.comparisonTitle')} />
+    <p class="vr-foot">{tt('home.compare.footnote')}</p>
+  </section>
+</ContentPage>
+
+<style>
+  .vr-foot {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-ink-soft);
+    font-style: italic;
+  }
+</style>

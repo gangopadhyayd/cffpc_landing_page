@@ -1,0 +1,110 @@
+# Owner Inputs Needed — persistentCartApp.com
+
+**The single place to finish the site.** The site is built and launch-ready *except* for the
+items below, which only you can supply. Each item says: what's needed, why, where it plugs in,
+the placeholder in use, and whether launch is safe without it. Nothing here blocks a soft launch
+in English — most items make the site richer or activate a paid integration.
+
+Legend: 🟢 = launch-safe without it (placeholder in place) · 🔴 = needed before that feature works.
+
+---
+
+## 1. Proof numbers 🟢 (qualitative placeholders are live; real figures need your sign-off to publish)
+We found **real, measured numbers** in your own analytics repos, but they're internal — the site
+currently shows safe qualitative text ("thousands of stores", "since 2016", "4.8★"). Tell us which,
+if any, to publish as specific figures, and we'll wire them into `src/config/site.ts → proof`.
+
+| Config field | Safe placeholder shown now | Real figure we found (internal — confirm before publishing) |
+|---|---|---|
+| `storesServed` | "thousands of Shopify stores" | ~**1,486 active installs** / **5,445 distinct stores all-time** (since 2016) |
+| `plusStoresServed` | "hundreds of Shopify Plus stores" | **~130–299** Plus stores (reconcile: 137 all-time-on-Plus vs 299 current-billing) |
+| `syncedCartRevenue` | "millions of dollars in cross-device carts" | ~**$26M / 30 days** in sync-tied merchant order value |
+| `cartsTransferred` | "thousands of carts a day" | ~**8–12k** true cross-device cart syncs/day |
+
+*Recommendation: publishing "trusted by 5,000+ Shopify stores since 2016" and "hundreds of Plus stores"
+would be true and far stronger than the placeholders. Round however you're comfortable. We will not
+publish any specific number without your explicit OK.*
+
+## 2. Permissions to feature merchants 🟢
+- **Green Mountain Diapers** testimonial (their review states our entire thesis) — currently quoted from
+  the public App Store listing with attribution. Confirm you're comfortable featuring it prominently.
+- Optional case studies we can build if you get permission: **techbino** (~$264k/30d on a $4.99 plan),
+  **vdbparts** (~€94k/30d) — anonymized or named. 🔴 to publish.
+- `namedMerchantLogos` is empty — supply logos + permission to show a "trusted by" logo bar.
+
+## 3. Brand & assets 🟢
+- Confirm or adjust the proposed visual identity (warm paper + ink + burnt-marigold accent; Fraunces +
+  Hanken Grotesk + IBM Plex Mono). It's live across the site.
+- Provide final **logo files** if you have them (current mark is an original SVG we made).
+- Approve the proposed **new App Store icon + screenshot concepts** (see `docs/app-store-optimization.md`).
+- A default **OG share image** is generated at `public/og/default.png` — replace if you want a custom one.
+
+## 4. Privacy policy 🔴 (decision)
+The current policy lives at an unpolished heroku URL. The site links `/privacy`, which currently shows a
+transparent **data-handling explainer** (not a formal legal policy). Choose one:
+- (a) Provide the text/URL of a polished formal policy to host on the domain, or
+- (b) Keep linking the heroku policy (we'll point `site.privacyUrl` there).
+*See `docs/legal-review.md` for the claims/wording to confirm.*
+
+## 5. Pricing 🟢 (confirm)
+- Confirm the tiers shown: **Free Starter** (≤10 syncs) · Basic **$4.99** · Grow **$8.99** · Advanced
+  **$24.99** · Plus **$99.99**, 30-day trial on paid. **Note:** the live listing currently shows Free /
+  $4.99 / $8.99 / $99.99 — the **$24.99 Advanced** tier is in code but not surfaced on the listing.
+  Tell us whether to show Advanced on the site (currently shown) or hide it to match the listing.
+- Approve the framing: **"every feature on every plan, priced to your Shopify plan."**
+
+## 6. Partner & affiliate program 🔴 (to finalize terms) / 🟢 (forms capture now)
+Provisional terms are shown on `/partners` + `/affiliates`, marked *provisional*: **30% recurring for
+12 months, 90-day cookie**, via **FirstPromoter**. Confirm/replace:
+- Commission rate(s) and payout terms · attribution/cookie window · approval criteria.
+- Where partner/affiliate applications should go (email / CRM / FirstPromoter).
+- Any existing partner relationships to feature.
+- ⚠️ The payout *tracking* needs backend work in the **Shopify app itself** (Billing webhook →
+  FirstPromoter); the marketing site only sets the `?via=` referral cookie. See `docs/partners.md`.
+
+## 7. Free audit 🔴 (fulfillment) / 🟢 (capture now)
+The `/free-audit` form captures leads at handoff (Netlify Forms, zero setup). Tell us:
+- Where audit leads should go (`LEAD_NOTIFY_EMAIL`, and/or HubSpot).
+- Who fulfills the audit + turnaround (page currently promises "1–2 business days").
+- Confirmation-email copy/sender (a default goes out via Resend once `RESEND_API_KEY` is added).
+
+## 8. Localization 🟢
+- The locale count is fixed at **15** (English canonical + 14 machine-translated, shipped `noindex`
+  until native review). Tell us which locales to prioritize for **native review** so they flip to
+  indexable (recommend: German, French, Spanish first — your review/search signal concentrates there).
+- See `docs/localization.md` for the standing rule + how review works.
+- *Minor:* a handful of keys added during the final review pass (partner earnings example, affiliate terms,
+  the ROI FAQ) are currently English placeholders in ~7 locales — they'll be replaced on the next
+  `npm run i18n:sync` with an LLM key, or during native review. Harmless (those locales are noindex).
+
+## 9. Accounts & billing to register 🔴 (you register; we've scaffolded the integration)
+You said "just tell me what to register." Full detail + env-var names in `docs/tooling-and-accounts.md`.
+**Live at handoff with NO keys:** Netlify (hosting + form capture), the consent banner, the whole English site.
+**Activate by adding a key (each degrades gracefully until then):**
+
+| Register | Unlocks | Key(s) → where |
+|---|---|---|
+| **Netlify** (+ point DNS) | hosting, deploy, lead capture | connect the Git repo; no key |
+| **GA4** | analytics | `PUBLIC_GA4_MEASUREMENT_ID` → Netlify build env |
+| **Plausible** (optional) | cookieless stats | `PUBLIC_PLAUSIBLE_DOMAIN` → build env |
+| **Search Console + Bing** | indexing | DNS TXT or `PUBLIC_GOOGLE_SITE_VERIFICATION` / `PUBLIC_BING_SITE_VERIFICATION` |
+| **Resend** | confirmation + lead emails | `RESEND_API_KEY`, `EMAIL_FROM`, `LEAD_NOTIFY_EMAIL` (+ DKIM/SPF/DMARC DNS) |
+| **HubSpot Free** (optional) | CRM sync | `HUBSPOT_PORTAL_ID`, `HUBSPOT_FORM_GUID_AUDIT`, `HUBSPOT_FORM_GUID_PARTNER` |
+| **FirstPromoter** (~$49/mo) | partner tracking/payouts | `PUBLIC_FIRSTPROMOTER_CID` (+ app-backend glue) |
+
+Rough cost: **$0 to launch**; ~**$58/mo** once FirstPromoter + Plausible are on.
+
+---
+
+## Assumptions made (flag if wrong)
+- Rating **4.8★ / 45 reviews** and the **Free Starter** plan were verified on the live listing 2026-06-30
+  (the brief said 4.9★/46 and "no free plan" — we updated to match reality).
+- Plans are **not** feature-tiered (every plan includes the full app); `/pricing` is framed accordingly.
+- Default behavior is **silent auto-merge**; install is **one click + enabling the app embed** (not zero-touch).
+- We do **not** claim automated GDPR erasure, and do **not** market draft-orders/wholesale as shipped (roadmap).
+
+## Claims to verify before publishing (also covered in `docs/legal-review.md`)
+- Re-confirm rating + pricing vs the live listing at publish time.
+- The Walmart/Amazon parity quotes (cited + linked) — re-check the source pages are unchanged.
+- The Shopify "browser-cookie cart" gap wording (cited to Shopify's cookie policy + community).
+- Calculator output is labeled an **illustrative estimate**, not a measured result — keep that framing.

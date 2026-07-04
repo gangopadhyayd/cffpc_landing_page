@@ -1,0 +1,41 @@
+{
+  "page.calculator.title": "Menetettyjen ostoskorien tuottolaskuri Shopifylle | Persistent Cart",
+  "page.calculator.desc": "Läpinäkyvä, suuntaa-antava arvio tuotosta, joka menetetään kirjautuneiden asiakkaiden vaihtaessa laitetta Shopify-kaupassasi. Säädä vertailulukuja; me näytämme kaavan.",
+  "page.calculator.h1": "Paljonko laitteiden välinen ostoskorien menetys voisi maksaa sinulle?",
+  "page.calculator.lede": "Kun kirjautunut asiakas rakentaa ostoskorin yhdellä laitteella ja viimeistelee toisella, oletusarvoinen Shopify-kauppa menettää sen. Tämä laskuri muuttaa sen karkeaksi, suuntaa-antavaksi haarukaksi — käyttäen lukujasi ja alan vertailulukuja. Jokainen syöte on muokattavissa ja kaava näytetään; mikään ei ole musta laatikko.",
+
+  "calc.heading": "Arvioi menetettyjen ostoskorien tuotto",
+  "calc.intro": "Oletukset on esitäytetty alan vertailuluvuilla. Säädä ne vastaamaan kauppaasi.",
+
+  "calc.input.orders.label": "Tilauksia kuukaudessa",
+  "calc.input.orders.help": "Suunnilleen kuinka monta tilausta kauppasi saa kuukaudessa.",
+  "calc.input.aov.label": "Keskimääräinen tilausarvo",
+  "calc.input.aov.help": "Tyypillinen tilauksesi loppusumma.",
+  "calc.input.loggedIn.label": "Kirjautuneiden asiakkaiden osuus",
+  "calc.input.loggedIn.help": "Niiden ostajien osuus, jotka asioivat tilille kirjautuneena. Vertailuluku: ~50 %.",
+  "calc.input.crossDevice.label": "Laitetta vaihtavien osuus",
+  "calc.input.crossDevice.help": "Niiden kirjautuneiden asiakkaiden osuus, jotka selaavat puhelimella ja työpöydällä ennen ostoa. Vertailuluku: ~30 % (perusteltu arvio, ei mitattu osuus).",
+  "calc.input.recovery.label": "Pelastetut ostoskorit, joista tulee tilauksia",
+  "calc.input.recovery.help": "Varovainen osuus niistä laitteiden välisistä matkoista, joista tulee tilaus, joka muutoin olisi menetetty. Oletus 2 % — tarkoituksella varovainen.",
+  "calc.currency.label": "Valuutta",
+
+  "calc.result.heading": "Suuntaa-antava palautettu tuotto",
+  "calc.result.monthly": "Kuukaudessa",
+  "calc.result.annual": "Vuodessa",
+  "calc.result.rangeNote": "Esitetty haarukkana (±), koska tämä on arvio, ei mitattu tulos.",
+  "calc.result.disclaimer": "Tämä on karkea suuntaa-antava haarukka, joka perustuu syötteisiisi ja alan keskiarvoihin — ei sovelluksesta mitattu tulos. Laitteen vaihto → menetetty myynti -yhteys on perusteltu päätelmä, ei julkaistu osuus. Käsittele sitä suuntaa-antavana mittakaavan tuntumana.",
+
+  "calc.formula.label": "Kaava (ei mustaa laatikkoa)",
+  "calc.formula.text": "Palautetut tilaukset/kk = tilaukset kuukaudessa × kirjautuneiden osuus × laitteenvaihto-osuus × pelastettujen ostoskorien osuus. Tuotto = palautetut tilaukset × keskimääräinen tilausarvo. Vuosi = × 12.",
+
+  "calc.cta.lead": "Haluatko, että tarkistamme todellisen kauppasi vertailulukujen sijaan?",
+  "calc.cta.audit": "Hanki ilmainen kauppa-analyysi",
+  "calc.cta.install": "Lisää Persistent Cart — aloita ilmaiseksi",
+
+  "calc.page.s1.h": "Miksi oletusarvoinen Shopify-kauppa vuotaa laitteiden välisiä ostoskoreja",
+  "calc.page.s1.b": "Tavallisessa Shopify-kaupassa ostoskori tallennetaan selaimen evästeeseen, ei asiakkaan tilille. Niinpä kirjautuneen asiakkaan ostoskori ei seuraa häntä puhelimesta kannettavaan — sitä ei yksinkertaisesti ole toisella laitteella. Asiakas joko rakentaa muistinvaraisesti pienemmän ostoskorin uudelleen tai ei palaa lainkaan. Koska virhettä ei näytetä eikä sähköpostia laukaista, useimmat kauppiaat eivät koskaan näe menetystä raporteissaan.",
+  "calc.page.s2.h": "Miten tätä arviota luetaan",
+  "calc.page.s2.b": "Laskuri kertoo tilausmääräsi kolmella muokattavalla osuudella: kuinka moni asiakas on kirjautuneena, kuinka moni heistä siirtyy laitteiden välillä, ja tarkoituksella varovaisella osuudella siitä, kuinka monesta noista matkoista säilytetty ostoskori tekee myynnin. Näytämme tuloksen haarukkana, emme koskaan yhtenä varmana lukuna, koska laitteen vaihdosta menetettyyn myyntiin -yhteys on perusteltu päätelmä eikä mitattu tilasto. Tämän laskelman rehellinen versio on uskottavampi kuin lainattu \"+X % myyntiä\" -väite — ja siksi näytämme kaavan.",
+  "calc.page.s3.h": "Arviosta varmuuteen",
+  "calc.page.s3.b": "Arvio on lähtökohta. Nähdäksesi, pudottaako juuri sinun kauppasi kirjautuneita ostoskoreja laitteiden välillä — ja mitä se on sinulle arvoltaan — pyydä ilmainen kauppa-analyysi. Tarkistamme kauppasi todellisen laitteiden välisen toiminnan ja lähetämme takaisin havaintomme, ilman sitoumusta ja ilman asennusta."
+}

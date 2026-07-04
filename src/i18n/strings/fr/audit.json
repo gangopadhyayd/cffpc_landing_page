@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "Audit gratuit du panier entre appareils sur Shopify | Persistent Cart",
+  "page.free-audit.desc": "Découvrez gratuitement si votre boutique Shopify perd les paniers des clients connectés lorsqu'ils changent d'appareil — ce que cela pourrait vous coûter, et les gains rapides. Sans installation requise.",
+  "page.free-audit.crumb": "Audit gratuit",
+  "page.free-audit.h1": "Votre boutique perd-elle des paniers quand les clients changent d'appareil ? Nous vérifierons — gratuitement.",
+  "page.free-audit.lede": "La plupart des marchands ignorent si leur boutique conserve le panier d'un client connecté d'un appareil à l'autre — et cette perte est invisible dans vos rapports. Envoyez-nous votre boutique : nous vérifierons, estimerons l'impact et signalerons les gains rapides. Sans engagement, sans installation requise.",
+
+  "audit.checks.title": "Ce que nous vérifierons",
+  "audit.checks.1.title": "Un panier connecté survit-il à un changement d'appareil ?",
+  "audit.checks.1.body": "Nous testons si le panier d'un client connecté le suit du téléphone à l'ordinateur sur votre boutique, ou s'il disparaît discrètement.",
+  "audit.checks.2.title": "Ce que cela vous coûte approximativement",
+  "audit.checks.2.body": "À partir du profil de votre boutique et de références du secteur, nous fournissons une estimation transparente et indicative des revenus en jeu — jamais une statistique empruntée.",
+  "audit.checks.3.title": "Les gains rapides",
+  "audit.checks.3.body": "Des recommandations concrètes et sans pression — que vous installiez ou non Persistent Cart.",
+
+  "audit.form.title": "Demander votre audit gratuit",
+  "audit.form.storeUrl": "URL de votre boutique",
+  "audit.form.storeUrlPlaceholder": "votreboutique.myshopify.com",
+  "audit.form.name": "Votre nom",
+  "audit.form.email": "E-mail",
+  "audit.form.plan": "Forfait Shopify (facultatif)",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "Je ne sais pas",
+  "audit.form.orders": "Commandes mensuelles (facultatif)",
+  "audit.form.submit": "Obtenir mon audit gratuit",
+  "audit.form.privacy": "Nous utilisons ces informations uniquement pour préparer votre audit et vous répondre. Pas de spam, aucun partage. Voir notre approche de la confidentialité.",
+  "audit.form.success.heading": "Audit demandé — merci !",
+  "audit.form.success.body": "Nous avons bien reçu votre demande et vous enverrons par e-mail votre audit gratuit du panier entre appareils sous 1 à 2 jours ouvrés. Surveillez votre boîte de réception.",
+
+  "audit.expectations": "Nous vous enverrons votre audit par e-mail sous 1 à 2 jours ouvrés. Il est réellement gratuit et il n'y a aucune obligation d'installer quoi que ce soit.",
+  "audit.trust": "De l'équipe derrière Persistent Cart — Built for Shopify, au service des boutiques depuis 2016."
+}

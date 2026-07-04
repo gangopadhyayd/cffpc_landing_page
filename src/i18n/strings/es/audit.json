@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "Auditoría gratuita del carrito entre dispositivos en Shopify | Persistent Cart",
+  "page.free-audit.desc": "Descubre gratis si tu tienda Shopify pierde carritos con sesión iniciada cuando los compradores cambian de dispositivo: cuánto te podría estar costando y las mejoras rápidas. Sin necesidad de instalar nada.",
+  "page.free-audit.crumb": "Auditoría gratuita",
+  "page.free-audit.h1": "¿Tu tienda pierde carritos cuando los compradores cambian de dispositivo? Lo comprobaremos, gratis.",
+  "page.free-audit.lede": "La mayoría de los comerciantes no saben si su tienda conserva el carrito de un comprador con sesión iniciada entre dispositivos, y la pérdida es invisible en tus informes. Envíanos tu tienda y la comprobaremos, estimaremos el impacto y te señalaremos las mejoras rápidas. Sin compromiso y sin necesidad de instalar nada.",
+
+  "audit.checks.title": "Qué comprobaremos",
+  "audit.checks.1.title": "¿Sobrevive un carrito con sesión iniciada a un cambio de dispositivo?",
+  "audit.checks.1.body": "Probamos si el carrito de un comprador con sesión iniciada le sigue del móvil al ordenador en tu tienda, o si desaparece sin más.",
+  "audit.checks.2.title": "Aproximadamente cuánto te está costando",
+  "audit.checks.2.body": "Usando el perfil de tu tienda y valores de referencia del sector, ofrecemos una estimación transparente y orientativa de los ingresos en juego, nunca una estadística prestada.",
+  "audit.checks.3.title": "Las mejoras rápidas",
+  "audit.checks.3.body": "Recomendaciones prácticas y sin presiones, instales o no Persistent Cart.",
+
+  "audit.form.title": "Solicita tu auditoría gratuita",
+  "audit.form.storeUrl": "La URL de tu tienda",
+  "audit.form.storeUrlPlaceholder": "tutienda.myshopify.com",
+  "audit.form.name": "Tu nombre",
+  "audit.form.email": "Correo electrónico",
+  "audit.form.plan": "Plan de Shopify (opcional)",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "No estoy seguro",
+  "audit.form.orders": "Pedidos mensuales (opcional)",
+  "audit.form.submit": "Conseguir mi auditoría gratuita",
+  "audit.form.privacy": "Usamos estos datos solo para preparar tu auditoría y responderte. Sin spam, sin compartir. Consulta nuestro enfoque de privacidad.",
+  "audit.form.success.heading": "Auditoría solicitada, ¡gracias!",
+  "audit.form.success.body": "Hemos recibido tu solicitud y te enviaremos por correo tu auditoría gratuita del carrito entre dispositivos en un plazo de 1-2 días laborables. Está atento a tu bandeja de entrada.",
+
+  "audit.expectations": "Te enviaremos tu auditoría por correo en un plazo de 1-2 días laborables. Es realmente gratis y no hay obligación de instalar nada.",
+  "audit.trust": "Del equipo que está detrás de Persistent Cart: Built for Shopify, ayudando a las tiendas desde 2016."
+}

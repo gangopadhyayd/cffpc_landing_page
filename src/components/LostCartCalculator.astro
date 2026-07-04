@@ -1,0 +1,313 @@
+---
+import { t } from '../i18n';
+import { site } from '../config/site';
+import { localizedPath } from '../i18n/routing';
+
+interface Props {
+  locale: string;
+}
+const { locale } = Astro.props;
+const tt = (k: string) => t(locale, k);
+const auditHref = localizedPath(locale, 'free-audit');
+
+const currencies = ['USD', 'EUR', 'GBP', 'CAD', 'AUD'];
+---
+
+<div
+  class="calc card"
+  data-calc
+  data-locale={locale}
+  data-defaults='{"orders":500,"aov":80,"loggedIn":50,"crossDevice":30,"recovery":2}'
+>
+  <form class="calc-inputs" novalidate aria-label={tt('calc.heading')}>
+    <p class="calc-intro">{tt('calc.intro')}</p>
+
+    <div class="calc-field">
+      <label for="calc-orders">{tt('calc.input.orders.label')}</label>
+      <input type="number" id="calc-orders" name="orders" min="0" step="10" value="500" inputmode="numeric" aria-describedby="calc-orders-help" />
+      <span class="calc-help" id="calc-orders-help">{tt('calc.input.orders.help')}</span>
+    </div>
+
+    <div class="calc-field calc-field-row">
+      <div>
+        <label for="calc-aov">{tt('calc.input.aov.label')}</label>
+        <input type="number" id="calc-aov" name="aov" min="0" step="1" value="80" inputmode="decimal" aria-describedby="calc-aov-help" />
+        <span class="calc-help" id="calc-aov-help">{tt('calc.input.aov.help')}</span>
+      </div>
+      <div>
+        <label for="calc-currency">{tt('calc.currency.label')}</label>
+        <select id="calc-currency" name="currency">
+          {currencies.map((c) => <option value={c}>{c}</option>)}
+        </select>
+      </div>
+    </div>
+
+    <div class="calc-field">
+      <label for="calc-loggedin">{tt('calc.input.loggedIn.label')} <output class="calc-out" id="calc-loggedin-out">50%</output></label>
+      <input type="range" id="calc-loggedin" name="loggedIn" min="0" max="100" step="1" value="50" aria-describedby="calc-loggedin-help" />
+      <span class="calc-help" id="calc-loggedin-help">{tt('calc.input.loggedIn.help')}</span>
+    </div>
+
+    <div class="calc-field">
+      <label for="calc-crossdevice">{tt('calc.input.crossDevice.label')} <output class="calc-out" id="calc-crossdevice-out">30%</output></label>
+      <input type="range" id="calc-crossdevice" name="crossDevice" min="0" max="100" step="1" value="30" aria-describedby="calc-crossdevice-help" />
+      <span class="calc-help" id="calc-crossdevice-help">{tt('calc.input.crossDevice.help')}</span>
+    </div>
+
+    <div class="calc-field">
+      <label for="calc-recovery">{tt('calc.input.recovery.label')} <output class="calc-out" id="calc-recovery-out">2%</output></label>
+      <input type="range" id="calc-recovery" name="recovery" min="0" max="10" step="0.5" value="2" aria-describedby="calc-recovery-help" />
+      <span class="calc-help" id="calc-recovery-help">{tt('calc.input.recovery.help')}</span>
+    </div>
+  </form>
+
+  <div class="calc-result" aria-live="polite">
+    <span class="eyebrow">{tt('calc.result.heading')}</span>
+    <div class="calc-figures">
+      <div class="calc-figure">
+        <span class="calc-figure-label">{tt('calc.result.monthly')}</span>
+        <span class="calc-figure-value tabular" data-result-monthly>—</span>
+      </div>
+      <div class="calc-figure calc-figure-year">
+        <span class="calc-figure-label">{tt('calc.result.annual')}</span>
+        <span class="calc-figure-value tabular" data-result-annual>—</span>
+      </div>
+    </div>
+    <p class="calc-range-note">{tt('calc.result.rangeNote')}</p>
+
+    <details class="calc-formula">
+      <summary>{tt('calc.formula.label')}</summary>
+      <p>{tt('calc.formula.text')}</p>
+    </details>
+
+    <p class="calc-disclaimer">{tt('calc.result.disclaimer')}</p>
+
+    <div class="calc-cta">
+      <p class="calc-cta-lead">{tt('calc.cta.lead')}</p>
+      <div class="calc-cta-actions">
+        <a class="btn btn-primary" href={auditHref} data-event="audit_cta" data-source="calculator">{tt('calc.cta.audit')}</a>
+        <a class="btn btn-secondary" href={site.appStoreUrl} target="_blank" rel="noopener" data-event="install_click" data-source="calculator">{tt('calc.cta.install')}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .calc {
+    display: grid;
+    gap: 0;
+    overflow: hidden;
+  }
+  .calc-inputs {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    display: grid;
+    gap: 1.1rem;
+    align-content: start;
+  }
+  .calc-intro {
+    font-size: 0.9rem;
+    color: var(--color-ink-soft);
+  }
+  .calc-field {
+    display: grid;
+    gap: 0.35rem;
+  }
+  .calc-field label {
+    font-weight: 600;
+    font-size: 0.92rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .calc-out {
+    font-family: var(--font-mono);
+    color: var(--color-accent-ink);
+    font-weight: 700;
+  }
+  .calc-field input[type='number'],
+  .calc-field select {
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--color-hairline-strong);
+    border-radius: var(--radius-md);
+    font: inherit;
+    background: var(--color-card);
+    width: 100%;
+  }
+  .calc-field input[type='range'] {
+    width: 100%;
+    accent-color: var(--color-accent);
+  }
+  .calc-field-row {
+    grid-template-columns: 2fr 1fr;
+    gap: 0.8rem;
+  }
+  .calc-field-row > div {
+    display: grid;
+    gap: 0.35rem;
+  }
+  .calc-help {
+    font-size: 0.76rem;
+    color: var(--color-ink-faint);
+    line-height: 1.45;
+  }
+  .calc-result {
+    background: var(--color-navy);
+    color: #e7e1d6;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .calc-result .eyebrow {
+    color: var(--color-accent);
+  }
+  .calc-figures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .calc-figure {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .calc-figure-label {
+    font-size: 0.78rem;
+    color: #9a9385;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .calc-figure-value {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 2.3rem);
+    font-weight: 540;
+    color: #fff;
+    line-height: 1.05;
+  }
+  .calc-figure-year .calc-figure-value {
+    color: var(--color-accent);
+  }
+  .calc-range-note {
+    font-size: 0.78rem;
+    color: #9a9385;
+  }
+  .calc-formula {
+    border-top: 1px solid rgb(255 255 255 / 0.12);
+    padding-top: 0.85rem;
+  }
+  .calc-formula summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.86rem;
+    color: #e7e1d6;
+  }
+  .calc-formula p {
+    margin-top: 0.5rem;
+    font-size: 0.84rem;
+    color: #b8b1a4;
+    font-family: var(--font-mono);
+    line-height: 1.6;
+  }
+  .calc-disclaimer {
+    font-size: 0.76rem;
+    color: #9a9385;
+    line-height: 1.55;
+    border-top: 1px solid rgb(255 255 255 / 0.12);
+    padding-top: 0.85rem;
+  }
+  .calc-cta {
+    border-top: 1px solid rgb(255 255 255 / 0.12);
+    padding-top: 1rem;
+  }
+  .calc-cta-lead {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #fff;
+  }
+  .calc-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .calc-cta-actions .btn-secondary {
+    color: #e7e1d6;
+    border-color: rgb(255 255 255 / 0.25);
+  }
+  .calc-cta-actions .btn-secondary:hover {
+    background: rgb(255 255 255 / 0.08);
+    border-color: rgb(255 255 255 / 0.5);
+  }
+  @media (min-width: 820px) {
+    .calc {
+      grid-template-columns: 1.05fr 1fr;
+    }
+  }
+</style>
+
+<script>
+  function initCalc(root: HTMLElement) {
+    const locale = root.dataset.locale || 'en';
+    const get = (n: string) => root.querySelector<HTMLInputElement | HTMLSelectElement>(`[name="${n}"]`);
+    const orders = get('orders') as HTMLInputElement;
+    const aov = get('aov') as HTMLInputElement;
+    const loggedIn = get('loggedIn') as HTMLInputElement;
+    const crossDevice = get('crossDevice') as HTMLInputElement;
+    const recovery = get('recovery') as HTMLInputElement;
+    const currency = get('currency') as HTMLSelectElement;
+
+    const outMonthly = root.querySelector('[data-result-monthly]')!;
+    const outAnnual = root.querySelector('[data-result-annual]')!;
+    const sliderOuts: Record<string, HTMLElement | null> = {
+      loggedIn: root.querySelector('#calc-loggedin-out'),
+      crossDevice: root.querySelector('#calc-crossdevice-out'),
+      recovery: root.querySelector('#calc-recovery-out'),
+    };
+
+    function money(n: number, cur: string) {
+      try {
+        return new Intl.NumberFormat(locale, {
+          style: 'currency',
+          currency: cur,
+          maximumFractionDigits: 0,
+        }).format(Math.max(0, Math.round(n)));
+      } catch {
+        return '$' + Math.round(n).toLocaleString();
+      }
+    }
+
+    function num(el: HTMLInputElement, fallback = 0) {
+      const v = parseFloat(el.value);
+      return Number.isFinite(v) ? v : fallback;
+    }
+
+    function recompute() {
+      const cur = currency.value;
+      if (sliderOuts.loggedIn) sliderOuts.loggedIn.textContent = `${num(loggedIn)}%`;
+      if (sliderOuts.crossDevice) sliderOuts.crossDevice.textContent = `${num(crossDevice)}%`;
+      if (sliderOuts.recovery) sliderOuts.recovery.textContent = `${num(recovery)}%`;
+
+      const recoveredOrders =
+        num(orders) * (num(loggedIn) / 100) * (num(crossDevice) / 100) * (num(recovery) / 100);
+      const monthly = recoveredOrders * num(aov);
+      const annual = monthly * 12;
+
+      // Illustrative band (±) — never a single confident number.
+      const mLow = monthly * 0.6;
+      const mHigh = monthly * 1.5;
+      const aLow = annual * 0.6;
+      const aHigh = annual * 1.5;
+
+      outMonthly.textContent = `${money(mLow, cur)} – ${money(mHigh, cur)}`;
+      outAnnual.textContent = `${money(aLow, cur)} – ${money(aHigh, cur)}`;
+
+      // expose for analytics
+      root.dataset.calcMonthly = String(Math.round(monthly));
+    }
+
+    root.addEventListener('input', recompute);
+    recompute();
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-calc]').forEach(initCalc);
+</script>

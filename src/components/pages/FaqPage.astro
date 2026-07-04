@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import Section from '../Section.astro';
+import FAQ from '../FAQ.astro';
+import CTABand from '../CTABand.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import { t } from '../../i18n';
+import { titleKey, descKey } from '../../config/routes';
+import { localizedPath, localizedUrl } from '../../i18n/routing';
+import { site } from '../../config/site';
+import { webPageSchema, faqPageSchema, breadcrumbSchema } from '../../lib/schema';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = '' } = Astro.props;
+const tt = (k: string) => t(locale, k);
+
+const title = tt(titleKey('faq'));
+const description = tt(descKey('faq'));
+
+const faqItems = Array.from({ length: 13 }, (_, i) => ({
+  q: tt(`faq.q${i + 1}.q`),
+  a: tt(`faq.q${i + 1}.a`),
+}));
+
+const crumbs = [
+  { label: tt('crumb.home'), href: localizedPath(locale, '') },
+  { label: tt('page.faq.crumb'), href: localizedPath(locale, 'faq') },
+];
+
+const jsonLd = [
+  webPageSchema({ url: localizedUrl(locale, slug), name: title, description, locale }),
+  breadcrumbSchema(crumbs.map((c) => ({ name: c.label, url: site.url + c.href }))),
+  faqPageSchema(faqItems),
+];
+---
+
+<Base locale={locale} slug={slug} title={title} description={description} ogType="article" jsonLd={jsonLd}>
+  <Section heading={tt('page.faq.h1')} intro={tt('page.faq.lede')} headingLevel="h1">
+    <div class="faq-head"><Breadcrumbs items={crumbs} /></div>
+    <FAQ items={faqItems} />
+  </Section>
+
+  <CTABand
+    heading={tt('content.ctaHeading')}
+    body={tt('content.ctaBody')}
+    actions={[
+      { label: tt('content.ctaInstall'), href: site.appStoreUrl, style: 'primary', external: true, event: 'install_click', source: 'faq' },
+      { label: tt('content.ctaAudit'), href: localizedPath(locale, 'free-audit'), style: 'secondary', event: 'audit_cta', source: 'faq' },
+    ]}
+    bg="soft"
+  />
+</Base>
+
+<style>
+  .faq-head {
+    margin-bottom: 1.5rem;
+  }
+</style>

@@ -1,0 +1,93 @@
+---
+/**
+ * Section primitive — consistent vertical rhythm + optional header block.
+ * bg: paper (default) | card | soft | navy | accent
+ */
+interface Props {
+  eyebrow?: string;
+  heading?: string;
+  intro?: string;
+  bg?: 'paper' | 'card' | 'soft' | 'navy' | 'accent';
+  align?: 'left' | 'center';
+  id?: string;
+  class?: string;
+  headingLevel?: 'h1' | 'h2' | 'h3';
+  wide?: boolean;
+}
+const {
+  eyebrow,
+  heading,
+  intro,
+  bg = 'paper',
+  align = 'left',
+  id,
+  class: cls = '',
+  headingLevel = 'h2',
+  wide = false,
+} = Astro.props;
+const Heading = headingLevel;
+const hasHeader = eyebrow || heading || intro;
+---
+
+<section class={`section section--${bg} ${cls}`} id={id} data-align={align}>
+  <div class={`container-page ${wide ? 'is-wide' : ''}`}>
+    {
+      hasHeader && (
+        <div class="section-header" data-align={align}>
+          {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+          {heading && <Heading class="section-heading">{heading}</Heading>}
+          {intro && <p class="section-intro">{intro}</p>}
+        </div>
+      )
+    }
+    <slot />
+  </div>
+</section>
+
+<style>
+  .section {
+    padding-block: clamp(3rem, 7vw, 5.5rem);
+  }
+  .section--card {
+    background: var(--color-card);
+    border-block: 1px solid var(--color-hairline);
+  }
+  .section--soft {
+    background: var(--color-card-soft);
+    border-block: 1px solid var(--color-hairline);
+  }
+  .section--navy {
+    background: var(--color-navy);
+    color: #e7e1d6;
+  }
+  .section--navy :global(.section-heading) {
+    color: #fff;
+  }
+  .section--navy :global(.section-intro) {
+    color: #b8b1a4;
+  }
+  .section--accent {
+    background: var(--color-accent-tint);
+  }
+  .section-header {
+    max-width: 46rem;
+    margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+  }
+  .section-header[data-align='center'] {
+    margin-inline: auto;
+    text-align: center;
+  }
+  .section-heading {
+    font-size: clamp(1.6rem, 3.5vw, 2.35rem);
+    margin-top: 0.6rem;
+  }
+  .section-intro {
+    margin-top: 0.9rem;
+    font-size: clamp(1rem, 1.6vw, 1.12rem);
+    color: var(--color-ink-soft);
+    line-height: 1.65;
+  }
+  .is-wide {
+    max-width: 1320px;
+  }
+</style>

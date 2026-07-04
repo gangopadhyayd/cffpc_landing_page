@@ -1,0 +1,42 @@
+{
+  "page.pricing.title": "Priser — alle funksjoner på alle planer | Persistent Cart for Shopify",
+  "page.pricing.desc": "Persistent Cart er priset etter Shopify-planen din — alle funksjoner er inkludert på alle planer. Start gratis, deretter en 30-dagers gratis prøveperiode på enhver betalt plan. Fra $4.99/mnd.",
+  "page.pricing.crumb": "Priser",
+  "page.pricing.h1": "Alle funksjoner, på alle planer. Priset etter Shopify-planen din.",
+  "page.pricing.lede": "Det finnes ingen funksjonsnivåer å tyde. Hver plan inkluderer hele appen — prisen din følger ganske enkelt Shopify-abonnementet ditt. Start gratis, deretter en 30-dagers gratis prøveperiode på enhver betalt plan.",
+
+  "pricing.planHint": "Planen din velges automatisk basert på Shopify-abonnementet ditt. Du velger ikke et funksjonsnivå — du får alt.",
+  "pricing.cta.install": "Legg til Persistent Cart — start gratis",
+  "pricing.trial": "Free Starter-plan · 30 dagers gratis prøveperiode på alle betalte planer · si opp når som helst",
+
+  "pricing.tier.free.note": "Test alle funksjoner, opptil 10 synkroniseringer av handlekurv",
+  "pricing.tier.basic.note": "For butikker på Shopify Basic-planen",
+  "pricing.tier.grow.note": "For butikker på Shopify Grow-planen (tidligere «Shopify»)",
+  "pricing.tier.advanced.note": "For butikker på Shopify Advanced-planen",
+  "pricing.tier.plus.note": "For Shopify Plus-butikker",
+  "pricing.tier.everyPlan": "Alle funksjoner inkludert",
+
+  "pricing.included.title": "Inkludert på alle planer",
+  "pricing.included.1": "Automatisk synkronisering av handlekurv mellom enheter for innloggede kunder",
+  "pricing.included.2": "Stille automatisk sammenslåing som standard — ingen popup-vinduer, e-poster eller påmeldinger",
+  "pricing.included.3": "Valgfritt «behold eller kombiner»-spørsmål for handlekurven",
+  "pricing.included.4": "Ett-klikks-installasjon, ingen temakode",
+  "pricing.included.5": "Fungerer på tvers av mobil, datamaskin og senere besøk",
+  "pricing.included.6": "Built for Shopify-standarder for kvalitet og ytelse",
+
+  "pricing.s1.h": "Hvorfor den er priset etter planen din, ikke etter funksjon",
+  "pricing.s1.b": "De fleste apper får deg til å velge et nivå og rasjonere funksjoner. Persistent Cart gjør ikke det — hele appen er produktet, så hver plan får alle funksjoner. Det eneste som endrer seg, er prisen, som følger nivået på Shopify-abonnementet ditt. En Basic-butikk betaler Basic-pris; en Plus-butikk betaler Plus-pris; begge får identisk funksjonalitet. Det holder beslutningen enkel: det er ingenting å sammenligne bortsett fra om du vil ha den.\n\nStørre Shopify-planer betyr flere ordrer og flere innloggede kunder som bytter enhet — så prisen følger verdien du får tilbake, ikke en lengre funksjonsliste.",
+  "pricing.s2.h": "Start gratis, deretter en 30-dagers prøveperiode",
+  "pricing.s2.b": "Free Starter-planen lar deg installere og teste alle funksjoner i opptil 10 synkroniseringer av handlekurv — nok til å se den fungere på din egen butikk. Når du er klar, starter enhver betalt plan med en 30-dagers gratis prøveperiode, så du betaler først når du har sett den kjøre. Det er ingen langtidskontrakt; si opp når som helst fra Shopify-administrasjonen din.",
+  "pricing.s3.h": "Er den verdt det?",
+  "pricing.s3.b": "Det ærlige svaret er at det kommer an på hvor mange av kundene dine som logger inn og bytter enhet — som er nettopp det kalkulatoren for tapte handlekurver og en gratis butikkgjennomgang hjelper deg å anslå. Persistent Cart er en lav månedlig kostnad utformet for å gjenvinne ordrer som ellers ville forsvunnet i det stille. Hvis bare en håndfull handlekurver med høy verdi overlever hver måned som ellers ikke ville gjort det, betaler den for seg selv.",
+
+  "pricing.faq.q1.q": "Får billigere planer færre funksjoner?",
+  "pricing.faq.q1.a": "Nei. Hver plan inkluderer hele appen. Prisen din settes av nivået på Shopify-abonnementet ditt, ikke av hvilke funksjoner du vil ha.",
+  "pricing.faq.q2.q": "Finnes det virkelig en gratis plan?",
+  "pricing.faq.q2.a": "Ja — Free Starter-planen lar deg installere og teste alle funksjoner i opptil 10 synkroniseringer av handlekurv, så du kan bekrefte at den fungerer på butikken din før du betaler.",
+  "pricing.faq.q3.q": "Hvordan fungerer den gratis prøveperioden?",
+  "pricing.faq.q3.a": "Enhver betalt plan starter med en 30-dagers gratis prøveperiode. Du blir ikke belastet før prøveperioden er over, og du kan si opp når som helst fra Shopify-administrasjonen din.",
+  "pricing.faq.q4.q": "Kan jeg si opp når som helst?",
+  "pricing.faq.q4.a": "Ja. Faktureringen håndteres gjennom Shopify, så du kan fjerne appen eller si opp fra Shopify-administrasjonen din når som helst."
+}

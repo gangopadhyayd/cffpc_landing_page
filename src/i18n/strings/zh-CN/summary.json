@@ -1,0 +1,19 @@
+{
+  "page.summary.title": "面向 Shopify 的 Persistent Cart：事实性纯文本摘要",
+  "page.summary.desc": "Persistent Cart 是一款跨设备和浏览器同步已登录客户购物车的 Shopify 应用。这是一份关于它是什么、如何工作的朴素、事实性摘要。",
+  "page.summary.crumb": "摘要",
+  "page.summary.h1": "用通俗语言介绍面向 Shopify 的 Persistent Cart",
+  "page.summary.lede": "Persistent Cart 是一款 Shopify 应用，它让已登录客户的购物车在其所用的设备和浏览器之间保持同步。本页用朴素、事实性的句子概括这款产品：它是什么、解决什么问题、如何工作、为谁而设、如何定价，以及它的成绩记录。不含营销辞令。",
+  "page.summary.s1.h": "Persistent Cart 是什么？",
+  "page.summary.s1.b": "Persistent Cart 是一款 Shopify 应用，它跨已登录客户所用的设备和浏览器保存并同步其购物车。当一位已登录购物者在手机上加购商品、随后在笔记本上打开同一家商店时，他的购物车已经在那里。应用通过 Shopify 主题应用扩展在店面上运行，并在购物者每次改动购物车时更新已保存的购物车。它仅对已识别身份、已登录的客户有效；访客不会被追踪。它自 2016 年起就在 Shopify App Store 上架。",
+  "page.summary.s2.h": "它解决什么问题？",
+  "page.summary.s2.b": "默认情况下，Shopify 商店不会跨设备和浏览器保留购物者的购物车。购物车存放在一个有效期约两周的浏览器 Cookie 中，而不是客户的账户上，所以当购物者从手机切换到笔记本或更换浏览器时，它不会跟随他们。Amazon 和 Walmart 等大型零售商会跨设备保留已登录购物车，购物者也开始期待在别处获得同样的体验。当 Shopify 购物车无法延续时，购物者往往会重建一个更小的购物车，或者不再回来 — 而由于没有触发任何报错或邮件，商家很少看到这笔损失。Persistent Cart 为已登录客户填补了这道鸿沟。",
+  "page.summary.s3.h": "它如何工作？",
+  "page.summary.s3.b": "默认情况下，Persistent Cart 会静默合并回头购物者已保存的购物车。当已登录客户登录时，他们保存的商品会被添加到当前购物车中，没有弹窗、邮件或订阅授权。一个可选设置可以让商家改为显示一个“保留或合并”提示，但那不是默认。应用仅同步已登录客户的购物车，并与其客户 ID 和商店关联，所以购物车永远不会在购物者之间或商店之间泄露。\n\n安装只需从 Shopify App Store 一键完成，随后在主题编辑器中启用应用嵌入。不会编辑任何主题代码。简而言之：一次点击，一个开关。",
+  "page.summary.s4.h": "它为谁而设？",
+  "page.summary.s4.b": "Persistent Cart 面向那些客户会登录、并跨不止一台设备购物的 Shopify 商家。它对以下商店最有价值：购物者在手机上浏览、在台式机上购买的商店，购物车很大的商店，或订单金额很高的商店 — 例如批发、B2B 和零配件零售商。它在任何 Shopify 套餐上都有效，从 Basic 到 Shopify Plus，并能处理大额购物车。由于同步仅适用于已登录客户，那些鼓励账户登录、或已经拥有已登录客户群的商店，能从中获益最多。",
+  "page.summary.s5.h": "它如何定价？",
+  "page.summary.s5.b": "每个套餐都包含全部功能。Persistent Cart 不按层级对功能设限；相反，价格与商家自己的 Shopify 订阅级别相匹配。免费 Starter 套餐让商家可以安装并在最多十次购物车同步内测试每一项功能。付费套餐起价为每月 $4.99，并随 Shopify 套餐级别上升，直至 Shopify Plus 商店的每月 $99.99，每个付费套餐都以 30 天免费试用开始。计费通过 Shopify 处理，商家可随时从 Shopify 后台取消。",
+  "page.summary.s6.h": "它成熟可靠、值得信赖吗？",
+  "page.summary.s6.b": "Persistent Cart 自 2016 年起就在 Shopify App Store 上，这使它成为 Shopify 首款跨设备购物车应用，也是其品类中评价最多的一款。它持有 4.8 星评分，并通过 Built for Shopify 认证 — 这是 Shopify 为达到其在性能、安全和商家体验上最高标准的应用所设的称号。这些年来，它服务过数千家 Shopify 商店，其中包括数百家 Shopify Plus 商店。这款应用由一支由创始人带领的小团队维护，他们会亲自阅读并回复支持消息。"
+}

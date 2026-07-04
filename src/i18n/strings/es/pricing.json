@@ -1,0 +1,42 @@
+{
+  "page.pricing.title": "Precios — todas las funciones en todos los planes | Persistent Cart para Shopify",
+  "page.pricing.desc": "El precio de Persistent Cart se ajusta a tu plan de Shopify: todas las funciones están incluidas en todos los planes. Empieza gratis y luego una prueba gratuita de 30 días en cualquier plan de pago. Desde $4.99 al mes.",
+  "page.pricing.crumb": "Precios",
+  "page.pricing.h1": "Todas las funciones, en todos los planes. Con un precio ajustado a tu plan de Shopify.",
+  "page.pricing.lede": "No hay niveles de funciones que descifrar. Cada plan incluye la app completa: tu precio simplemente coincide con tu suscripción de Shopify. Empieza gratis y luego una prueba gratuita de 30 días en cualquier plan de pago.",
+
+  "pricing.planHint": "Tu plan se selecciona automáticamente según tu suscripción de Shopify. No eliges un nivel de funciones: las tienes todas.",
+  "pricing.cta.install": "Añade Persistent Cart: empieza gratis",
+  "pricing.trial": "Plan Free Starter · prueba gratuita de 30 días en todos los planes de pago · cancela cuando quieras",
+
+  "pricing.tier.free.note": "Prueba todas las funciones, hasta 10 sincronizaciones de carrito",
+  "pricing.tier.basic.note": "Para tiendas con el plan Shopify Basic",
+  "pricing.tier.grow.note": "Para tiendas con el plan Shopify Grow (antes «Shopify»)",
+  "pricing.tier.advanced.note": "Para tiendas con el plan Shopify Advanced",
+  "pricing.tier.plus.note": "Para tiendas Shopify Plus",
+  "pricing.tier.everyPlan": "Todas las funciones incluidas",
+
+  "pricing.included.title": "Incluido en todos los planes",
+  "pricing.included.1": "Sincronización automática del carrito entre dispositivos para clientes con sesión iniciada",
+  "pricing.included.2": "Fusión automática y silenciosa de forma predeterminada: sin ventanas emergentes, correos ni pasos de aceptación",
+  "pricing.included.3": "Aviso opcional de «conservar o combinar» el carrito",
+  "pricing.included.4": "Instalación con un clic, sin código del tema",
+  "pricing.included.5": "Funciona en el móvil, el ordenador y las visitas posteriores",
+  "pricing.included.6": "Estándares de calidad y rendimiento de Built for Shopify",
+
+  "pricing.s1.h": "Por qué el precio se ajusta a tu plan, no a las funciones",
+  "pricing.s1.b": "La mayoría de las apps te obligan a elegir un nivel y racionan las funciones. Persistent Cart no: la app completa es el producto, así que cada plan incluye todas las funciones. Lo único que cambia es el precio, que sigue el nivel de tu suscripción de Shopify. Una tienda Basic paga el precio de Basic; una tienda Plus paga el precio de Plus; ambas obtienen exactamente la misma funcionalidad. Así la decisión es sencilla: no hay nada que comparar, salvo si la quieres o no.\n\nLos planes de Shopify más grandes implican más pedidos y más compradores con sesión iniciada que cambian de dispositivo, así que el precio sigue el valor que recuperas, no una lista de funciones más larga.",
+  "pricing.s2.h": "Empieza gratis y luego una prueba de 30 días",
+  "pricing.s2.b": "El plan Free Starter te permite instalar y probar todas las funciones durante un máximo de 10 sincronizaciones de carrito, suficiente para verlo funcionar en tu propia tienda. Cuando estés listo, cualquier plan de pago empieza con una prueba gratuita de 30 días, así que solo pagas una vez que lo has visto en marcha. No hay contrato a largo plazo; cancela cuando quieras desde tu panel de administración de Shopify.",
+  "pricing.s3.h": "¿Merece la pena?",
+  "pricing.s3.b": "La respuesta honesta es que depende de cuántos de tus compradores inician sesión y cambian de dispositivo, que es justo lo que la calculadora de carritos perdidos y una auditoría gratuita de la tienda te ayudan a estimar. Persistent Cart tiene un coste mensual bajo, diseñado para recuperar pedidos que de otro modo se desvanecerían en silencio. Si cada mes sobreviven aunque sea unos pocos carritos de alto valor que no lo habrían hecho, se paga solo.",
+
+  "pricing.faq.q1.q": "¿Los planes más baratos tienen menos funciones?",
+  "pricing.faq.q1.a": "No. Cada plan incluye la app completa. Tu precio lo fija el nivel de tu suscripción de Shopify, no las funciones que quieras.",
+  "pricing.faq.q2.q": "¿De verdad hay un plan gratuito?",
+  "pricing.faq.q2.a": "Sí: el plan Free Starter te permite instalar y probar todas las funciones durante un máximo de 10 sincronizaciones de carrito, así que puedes confirmar que funciona en tu tienda antes de pagar.",
+  "pricing.faq.q3.q": "¿Cómo funciona la prueba gratuita?",
+  "pricing.faq.q3.a": "Cualquier plan de pago empieza con una prueba gratuita de 30 días. No se te cobrará hasta que termine la prueba, y puedes cancelar cuando quieras desde tu panel de administración de Shopify.",
+  "pricing.faq.q4.q": "¿Puedo cancelar en cualquier momento?",
+  "pricing.faq.q4.a": "Sí. La facturación se gestiona a través de Shopify, así que puedes eliminar la app o cancelar desde tu panel de administración de Shopify en cualquier momento."
+}

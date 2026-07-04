@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+import Section from '../Section.astro';
+import LostCartCalculator from '../LostCartCalculator.astro';
+import CTABand from '../CTABand.astro';
+import { t, paragraphs } from '../../i18n';
+import { titleKey, descKey } from '../../config/routes';
+import { localizedPath, localizedUrl } from '../../i18n/routing';
+import { site } from '../../config/site';
+import { webPageSchema } from '../../lib/schema';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = '' } = Astro.props;
+const tt = (k: string) => t(locale, k);
+
+const title = tt(titleKey('calculator'));
+const description = tt(descKey('calculator'));
+const sections = [1, 2, 3].map((n) => ({ h: tt(`calc.page.s${n}.h`), body: paragraphs(tt(`calc.page.s${n}.b`)) }));
+
+const jsonLd = [webPageSchema({ url: localizedUrl(locale, slug), name: title, description, locale })];
+---
+
+<Base locale={locale} slug={slug} title={title} description={description} jsonLd={jsonLd}>
+  <Section eyebrow={tt('home.calc.eyebrow')} heading={tt('page.calculator.h1')} intro={tt('page.calculator.lede')} headingLevel="h1">
+    <LostCartCalculator locale={locale} />
+  </Section>
+
+  <Section bg="soft">
+    <div class="calc-prose">
+      {
+        sections.map((s) => (
+          <section class="cp-section">
+            <h2>{s.h}</h2>
+            {s.body.map((p) => (
+              <p>{p}</p>
+            ))}
+          </section>
+        ))
+      }
+    </div>
+  </Section>
+
+  <CTABand
+    heading={tt('content.ctaHeading')}
+    body={tt('content.ctaBody')}
+    actions={[
+      { label: tt('content.ctaAudit'), href: localizedPath(locale, 'free-audit'), style: 'primary', event: 'audit_cta', source: 'calculator' },
+      { label: tt('content.ctaInstall'), href: site.appStoreUrl, style: 'secondary', external: true, event: 'install_click', source: 'calculator' },
+    ]}
+    bg="navy"
+  />
+</Base>
+
+<style>
+  .calc-prose {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+  .cp-section {
+    margin-bottom: 2rem;
+  }
+  .cp-section h2 {
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+    margin-bottom: 0.8rem;
+  }
+  .cp-section p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    max-width: 68ch;
+  }
+</style>

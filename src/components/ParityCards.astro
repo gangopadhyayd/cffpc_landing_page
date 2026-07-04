@@ -1,0 +1,110 @@
+---
+export interface ParityCard {
+  name: string;
+  quote: string;
+  source: string;
+  sourceHref?: string;
+  tone: 'good' | 'bad';
+}
+interface Props {
+  cards: ParityCard[];
+}
+const { cards } = Astro.props;
+---
+
+<div class="parity-cards">
+  {
+    cards.map((c) => (
+      <article class={`parity-card tone-${c.tone}`}>
+        <header class="pc-head">
+          <span class="pc-name">{c.name}</span>
+          <span class={`pc-pill pill-${c.tone}`}>
+            {c.tone === 'good' ? '✓' : '—'}
+          </span>
+        </header>
+        <blockquote class="pc-quote">{c.quote}</blockquote>
+        <footer class="pc-source">
+          {c.sourceHref ? (
+            <a href={c.sourceHref} target="_blank" rel="noopener nofollow">
+              {c.source}
+            </a>
+          ) : (
+            <span>{c.source}</span>
+          )}
+        </footer>
+      </article>
+    ))
+  }
+</div>
+
+<style>
+  .parity-cards {
+    display: grid;
+    gap: 1.1rem;
+  }
+  .parity-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-lg);
+    padding: 1.4rem;
+    box-shadow: var(--shadow-card);
+    border-top: 3px solid var(--color-hairline-strong);
+  }
+  .parity-card.tone-good {
+    border-top-color: var(--color-evergreen);
+  }
+  .parity-card.tone-bad {
+    border-top-color: var(--color-accent);
+  }
+  .pc-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+  .pc-name {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 540;
+  }
+  .pc-pill {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  .pill-good {
+    background: var(--color-evergreen-tint);
+    color: var(--color-evergreen);
+  }
+  .pill-bad {
+    background: var(--color-accent-tint);
+    color: var(--color-accent-ink);
+  }
+  .pc-quote {
+    font-size: 0.96rem;
+    line-height: 1.55;
+    color: var(--color-ink);
+  }
+  .pc-source {
+    margin-top: 0.9rem;
+    font-size: 0.78rem;
+    color: var(--color-ink-faint);
+  }
+  .pc-source a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .pc-source a:hover {
+    color: var(--color-accent-ink);
+  }
+  @media (min-width: 820px) {
+    .parity-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

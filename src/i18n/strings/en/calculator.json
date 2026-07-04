@@ -1,0 +1,41 @@
+{
+  "page.calculator.title": "Lost-cart revenue calculator for Shopify | Persistent Cart",
+  "page.calculator.desc": "A transparent, illustrative estimate of revenue lost when signed-in shoppers switch devices on your Shopify store. Adjust the benchmarks; we show the formula.",
+  "page.calculator.h1": "How much could cross-device cart loss be costing you?",
+  "page.calculator.lede": "When a signed-in shopper builds a cart on one device and finishes on another, a default Shopify store loses it. This calculator turns that into a rough, illustrative range — using your numbers and industry benchmarks. Every input is editable and the formula is shown; nothing is a black box.",
+
+  "calc.heading": "Estimate your lost-cart revenue",
+  "calc.intro": "Defaults are illustrative starting points (industry benchmarks where they exist). Adjust them to match your store.",
+
+  "calc.input.orders.label": "Monthly orders",
+  "calc.input.orders.help": "Roughly how many orders your store gets per month.",
+  "calc.input.aov.label": "Average order value",
+  "calc.input.aov.help": "Your typical order total.",
+  "calc.input.loggedIn.label": "Share of shoppers signed in",
+  "calc.input.loggedIn.help": "Portion of buyers who shop while logged into an account. We default to 50% as an illustrative starting point — set it to your store's reality.",
+  "calc.input.crossDevice.label": "Share who switch devices",
+  "calc.input.crossDevice.help": "Portion of signed-in shoppers who browse across phone and desktop before buying. Benchmark: ~30% (reasoned estimate, not a measured rate).",
+  "calc.input.recovery.label": "Carts saved that become orders",
+  "calc.input.recovery.help": "Conservative share of those cross-device journeys that turn into an order they'd otherwise have lost. Default 2% — deliberately cautious.",
+  "calc.currency.label": "Currency",
+
+  "calc.result.heading": "Illustrative recovered revenue",
+  "calc.result.monthly": "Per month",
+  "calc.result.annual": "Per year",
+  "calc.result.rangeNote": "Shown as a range (±) because this is an estimate, not a measured result.",
+  "calc.result.disclaimer": "This is a rough illustrative range based on your inputs and industry averages — not a measured result from the app. The device-switch → lost-sale link is a reasoned inference, not a published rate. Treat it as a directional sense of scale.",
+
+  "calc.formula.label": "The formula (no black box)",
+  "calc.formula.text": "Recovered orders/month = Monthly orders × Signed-in share × Device-switch share × Carts-saved rate. Revenue = recovered orders × AOV. Annual = × 12.",
+
+  "calc.cta.lead": "Want us to check your actual store instead of benchmarks?",
+  "calc.cta.audit": "Get a free store audit",
+  "calc.cta.install": "Add Persistent Cart — start free",
+
+  "calc.page.s1.h": "Why a default Shopify store leaks cross-device carts",
+  "calc.page.s1.b": "On a standard Shopify store the cart is stored in a browser cookie, not on the customer's account. So a signed-in shopper's cart doesn't follow them from phone to laptop — it simply isn't there on the second device. The shopper either rebuilds a smaller cart from memory or doesn't return at all. Because no error is shown and no email is triggered, most merchants never see the loss in their reports.",
+  "calc.page.s2.h": "How to read this estimate",
+  "calc.page.s2.b": "The calculator multiplies your order volume by three editable shares: how many shoppers are signed in, how many of those move between devices, and a deliberately conservative rate for how many of those journeys a kept cart turns into a sale. We show the result as a range, never a single confident number, because the device-switch-to-lost-sale link is a reasoned inference rather than a measured statistic. The honest version of this math is more credible than a borrowed \"+X% sales\" claim — and it's why we show the formula.",
+  "calc.page.s3.h": "From estimate to certainty",
+  "calc.page.s3.b": "An estimate is a starting point. To see whether your specific store drops signed-in carts across devices — and what that's worth for you — request a free store audit. We'll check your store's actual cross-device behavior and send back what we find, with no obligation and no install required."
+}

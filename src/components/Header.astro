@@ -1,0 +1,188 @@
+---
+import Logo from './Logo.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { PAGES } from '../config/routes';
+import { localizedPath } from '../i18n/routing';
+import { t } from '../i18n';
+import { site } from '../config/site';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = '' } = Astro.props;
+
+const navItems = PAGES.filter((p) => p.nav)
+  .sort((a, b) => a.nav!.order - b.nav!.order)
+  .map((p) => ({ href: localizedPath(locale, p.slug), label: t(locale, p.nav!.label) }));
+
+const homeHref = localizedPath(locale, '');
+const auditHref = localizedPath(locale, 'free-audit');
+---
+
+<header class="site-header">
+  <div class="announce">
+    <div class="container-page announce-inner">
+      <span>{t(locale, 'announce.text')}</span>
+    </div>
+  </div>
+
+  <div class="container-page nav-row">
+    <a class="brand" href={homeHref} aria-label={t(locale, 'a11y.homeLink')}>
+      <Logo />
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary">
+      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+
+    <div class="nav-actions">
+      <LanguageSwitcher locale={locale} slug={slug} />
+      <a class="btn btn-secondary btn-sm audit-link" href={auditHref}>{t(locale, 'cta.auditShort')}</a>
+      <a
+        class="btn btn-primary btn-sm"
+        href={site.appStoreUrl}
+        target="_blank"
+        rel="noopener"
+        data-event="install_click"
+        data-source="header">{t(locale, 'cta.installShort')}</a
+      >
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label={t(locale, 'nav.openMenu')}
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile">
+      {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+      <a href={localizedPath(locale, 'partners')}>{t(locale, 'nav.partners')}</a>
+      <a href={localizedPath(locale, 'pricing')}>{t(locale, 'nav.pricing')}</a>
+    </nav>
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href={auditHref}>{t(locale, 'cta.audit')}</a>
+      <a class="btn btn-primary" href={site.appStoreUrl} target="_blank" rel="noopener" data-event="install_click" data-source="mobile">{t(locale, 'cta.installShort')}</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--color-paper) 88%, transparent);
+    backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--color-hairline);
+  }
+  .announce {
+    background: var(--color-navy);
+    color: #efe9df;
+    font-size: 0.78rem;
+    letter-spacing: 0.01em;
+  }
+  .announce-inner {
+    text-align: center;
+    padding-block: 0.45rem;
+  }
+  .nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 0.7rem;
+  }
+  .brand {
+    flex: none;
+  }
+  .desktop-nav {
+    display: none;
+    gap: 1.5rem;
+    margin-inline: auto;
+    font-size: 0.94rem;
+    font-weight: 500;
+  }
+  .desktop-nav a {
+    color: var(--color-ink-soft);
+    transition: color 0.15s;
+  }
+  .desktop-nav a:hover {
+    color: var(--color-ink);
+  }
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .btn-sm {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.875rem;
+  }
+  .audit-link {
+    display: none;
+  }
+  .menu-toggle {
+    display: inline-flex;
+    background: transparent;
+    border: 1px solid var(--color-hairline-strong);
+    border-radius: var(--radius-md);
+    padding: 0.4rem;
+    color: var(--color-ink);
+    cursor: pointer;
+  }
+  .mobile-menu {
+    border-top: 1px solid var(--color-hairline);
+    padding: 1rem 1.25rem 1.5rem;
+    background: var(--color-paper);
+  }
+  .mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .mobile-menu nav a {
+    padding: 0.7rem 0.25rem;
+    border-bottom: 1px solid var(--color-hairline);
+    font-weight: 500;
+  }
+  .mobile-cta {
+    display: grid;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 960px) {
+    .desktop-nav {
+      display: flex;
+    }
+    .audit-link {
+      display: inline-flex;
+    }
+    .menu-toggle {
+      display: none;
+    }
+    .mobile-menu {
+      display: none !important;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      menu.hidden = open;
+    });
+  }
+</script>

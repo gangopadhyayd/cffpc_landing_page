@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "Darmowy audyt koszyka między urządzeniami dla Shopify | Persistent Cart",
+  "page.free-audit.desc": "Sprawdź za darmo, czy Twój sklep Shopify gubi koszyki zalogowanych klientów przy zmianie urządzenia — ile może Cię to kosztować i co da się szybko poprawić. Bez konieczności instalacji.",
+  "page.free-audit.crumb": "Darmowy audyt",
+  "page.free-audit.h1": "Czy Twój sklep traci koszyki, gdy klienci zmieniają urządzenie? Sprawdzimy to — za darmo.",
+  "page.free-audit.lede": "Większość sprzedawców nie wie, czy ich sklep zachowuje koszyk zalogowanego klienta między urządzeniami — a strata jest niewidoczna w raportach. Prześlij nam adres swojego sklepu, a my to sprawdzimy, oszacujemy wpływ i wskażemy szybkie usprawnienia. Bez zobowiązań i bez konieczności instalacji.",
+
+  "audit.checks.title": "Co sprawdzimy",
+  "audit.checks.1.title": "Czy koszyk zalogowanego klienta przetrwa zmianę urządzenia?",
+  "audit.checks.1.body": "Sprawdzamy, czy koszyk zalogowanego klienta podąża za nim z telefonu na komputer w Twoim sklepie, czy po cichu znika.",
+  "audit.checks.2.title": "Ile mniej więcej Cię to kosztuje",
+  "audit.checks.2.body": "Na podstawie profilu Twojego sklepu i wskaźników branżowych podajemy przejrzysty, poglądowy szacunek przychodu, który jest zagrożony — nigdy zapożyczonej statystyki.",
+  "audit.checks.3.title": "Szybkie usprawnienia",
+  "audit.checks.3.body": "Praktyczne rekomendacje bez presji — niezależnie od tego, czy kiedykolwiek zainstalujesz Persistent Cart.",
+
+  "audit.form.title": "Zamów darmowy audyt",
+  "audit.form.storeUrl": "Adres URL Twojego sklepu",
+  "audit.form.storeUrlPlaceholder": "twojsklep.myshopify.com",
+  "audit.form.name": "Twoje imię",
+  "audit.form.email": "E-mail",
+  "audit.form.plan": "Plan Shopify (opcjonalnie)",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "Nie wiem",
+  "audit.form.orders": "Miesięczna liczba zamówień (opcjonalnie)",
+  "audit.form.submit": "Zamów mój darmowy audyt",
+  "audit.form.privacy": "Wykorzystujemy te dane wyłącznie do przygotowania audytu i odpowiedzi. Bez spamu, bez udostępniania. Zobacz nasze podejście do prywatności.",
+  "audit.form.success.heading": "Audyt zamówiony — dziękujemy!",
+  "audit.form.success.body": "Otrzymaliśmy Twoje zgłoszenie i prześlemy e-mailem darmowy audyt koszyka między urządzeniami w ciągu 1–2 dni roboczych. Sprawdzaj swoją skrzynkę.",
+
+  "audit.expectations": "Prześlemy Twój audyt e-mailem w ciągu 1–2 dni roboczych. Jest naprawdę darmowy i nie wiąże się z żadnym obowiązkiem instalacji.",
+  "audit.trust": "Od zespołu stojącego za Persistent Cart — Built for Shopify, pomagamy sklepom od 2016 roku."
+}

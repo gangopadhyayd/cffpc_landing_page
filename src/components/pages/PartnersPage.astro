@@ -1,0 +1,267 @@
+---
+import Base from '../../layouts/Base.astro';
+import Section from '../Section.astro';
+import FeatureGrid from '../FeatureGrid.astro';
+import LeadForm, { type FormField } from '../LeadForm.astro';
+import FAQ from '../FAQ.astro';
+import Icon from '../Icon.astro';
+import { t } from '../../i18n';
+import { titleKey, descKey } from '../../config/routes';
+import { localizedPath, localizedUrl } from '../../i18n/routing';
+import { partnerProgram } from '../../config/site';
+import { webPageSchema, faqPageSchema } from '../../lib/schema';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = '' } = Astro.props;
+const vars = { pct: partnerProgram.commissionPct, months: partnerProgram.recurringMonths, days: partnerProgram.cookieWindowDays };
+const tt = (k: string) => t(locale, k, vars);
+
+const title = tt(titleKey('partners'));
+const description = tt(descKey('partners'));
+
+const why = [1, 2, 3, 4].map((n) => ({ title: tt(`partners.why.${n}.title`), body: tt(`partners.why.${n}.body`), icon: ['gift', 'zap', 'trending-up', 'badge-check'][n - 1] }));
+const steps = [1, 2, 3, 4].map((n) => ({ title: tt(`partners.how.${n}.title`), body: tt(`partners.how.${n}.body`) }));
+const audiences = [1, 2, 3].map((n) => tt(`partners.audiences.${n}`));
+const kit = [1, 2, 3, 4].map((n) => tt(`partners.kit.${n}`));
+const terms = [
+  { label: tt('partners.terms.commission.label'), value: tt('partners.terms.commission.value') },
+  { label: tt('partners.terms.duration.label'), value: tt('partners.terms.duration.value') },
+  { label: tt('partners.terms.cookie.label'), value: tt('partners.terms.cookie.value') },
+];
+const faqItems = [1, 2, 3, 4].map((n) => ({ q: tt(`partners.faq.q${n}.q`), a: tt(`partners.faq.q${n}.a`) }));
+
+const fields: FormField[] = [
+  { name: 'name', label: tt('partners.form.name'), type: 'text', required: true, autocomplete: 'name' },
+  { name: 'email', label: tt('partners.form.email'), type: 'email', required: true, autocomplete: 'email' },
+  { name: 'company', label: tt('partners.form.company'), type: 'text', autocomplete: 'organization' },
+  {
+    name: 'audience_type',
+    label: tt('partners.form.audience'),
+    type: 'select',
+    required: true,
+    options: [
+      { value: 'agency', label: tt('partners.form.audience.agency') },
+      { value: 'affiliate', label: tt('partners.form.audience.affiliate') },
+      { value: 'consultant', label: tt('partners.form.audience.consultant') },
+      { value: 'other', label: tt('partners.form.audience.other') },
+    ],
+  },
+  { name: 'reach', label: tt('partners.form.reach'), type: 'text' },
+  { name: 'message', label: tt('partners.form.message'), type: 'textarea' },
+];
+
+const jsonLd = [
+  webPageSchema({ url: localizedUrl(locale, slug), name: title, description, locale }),
+  faqPageSchema(faqItems),
+];
+const affiliatesHref = localizedPath(locale, 'affiliates');
+---
+
+<Base locale={locale} slug={slug} title={title} description={description} jsonLd={jsonLd}>
+  <Section eyebrow={tt('home.partner.eyebrow')} heading={tt('page.partners.h1')} intro={tt('page.partners.lede')} headingLevel="h1">
+    <FeatureGrid items={why} columns={2} />
+  </Section>
+
+  <Section bg="soft" eyebrow={tt('partners.terms.title')} heading={tt('partners.how.title')}>
+    <div class="terms-band">
+      {
+        terms.map((t2) => (
+          <div class="term">
+            <span class="term-value">{t2.value}</span>
+            <span class="term-label">{t2.label}</span>
+          </div>
+        ))
+      }
+    </div>
+    <p class="terms-note"><Icon name="sparkle" size={15} /> {tt('partners.terms.provisional')}</p>
+
+    <div class="earnings-callout">
+      <h3>{tt('partners.earnings.title')}</h3>
+      <p>{tt('partners.earnings.body')}</p>
+    </div>
+
+    <ol class="steps">
+      {
+        steps.map((s, i) => (
+          <li>
+            <span class="step-num">{i + 1}</span>
+            <div>
+              <strong>{s.title}</strong>
+              <p>{s.body}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </Section>
+
+  <Section eyebrow={tt('partners.audiences.title')} heading={tt('partners.kit.title')}>
+    <div class="aud-kit">
+      <ul class="aud-list">
+        {audiences.map((a) => <li><Icon name="users" size={18} /> {a}</li>)}
+      </ul>
+      <ul class="kit-list">
+        {kit.map((k) => <li><Icon name="check" size={18} /> {k}</li>)}
+      </ul>
+    </div>
+  </Section>
+
+  <Section id="apply" bg="soft" heading={tt('partners.form.title')}>
+    <div class="partner-form-wrap">
+      <LeadForm
+        formName="partner"
+        fields={fields}
+        submitLabel={tt('partners.form.submit')}
+        successHeading={tt('partners.form.success.heading')}
+        successBody={tt('partners.form.success.body')}
+        privacyNote={tt('partners.form.privacy')}
+        source="partners"
+      />
+      <p class="affiliates-cta"><a class="link-underline" href={affiliatesHref}>{tt('partners.affiliatesCta')} →</a></p>
+    </div>
+  </Section>
+
+  <Section heading={tt('home.faq.eyebrow')}>
+    <FAQ items={faqItems} group="partners-faq" />
+  </Section>
+</Base>
+
+<style>
+  .terms-band {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: var(--color-hairline);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  .term {
+    background: var(--color-card);
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .term-value {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 540;
+    color: var(--color-accent-ink);
+  }
+  .term-label {
+    font-size: 0.85rem;
+    color: var(--color-ink-soft);
+  }
+  .terms-note {
+    display: flex;
+    gap: 0.45rem;
+    align-items: flex-start;
+    font-size: 0.84rem;
+    color: var(--color-ink-soft);
+    margin-bottom: 2rem;
+  }
+  .terms-note :global(svg) {
+    color: var(--color-accent);
+    flex: none;
+    margin-top: 0.15rem;
+  }
+  .earnings-callout {
+    background: var(--color-card);
+    border: 1px solid var(--color-hairline);
+    border-left: 3px solid var(--color-accent);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.4rem;
+    margin-bottom: 2.25rem;
+  }
+  .earnings-callout h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .earnings-callout p {
+    color: var(--color-ink-soft);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    max-width: 60ch;
+  }
+  .steps {
+    list-style: none;
+    display: grid;
+    gap: 1.25rem;
+    counter-reset: step;
+  }
+  .steps li {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--color-ink);
+    color: var(--color-paper);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex: none;
+  }
+  .steps li strong {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .steps li p {
+    color: var(--color-ink-soft);
+    font-size: 0.92rem;
+  }
+  .aud-kit {
+    display: grid;
+    gap: 2rem;
+  }
+  .aud-list,
+  .kit-list {
+    list-style: none;
+    display: grid;
+    gap: 0.7rem;
+  }
+  .aud-list li,
+  .kit-list li {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+  }
+  .aud-list :global(svg) {
+    color: var(--color-accent);
+    flex: none;
+    margin-top: 0.15rem;
+  }
+  .kit-list :global(svg) {
+    color: var(--color-evergreen);
+    flex: none;
+    margin-top: 0.15rem;
+  }
+  .partner-form-wrap {
+    background: var(--color-card);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-xl);
+    padding: clamp(1.5rem, 3vw, 2rem);
+    box-shadow: var(--shadow-card);
+    max-width: 44rem;
+  }
+  .affiliates-cta {
+    margin-top: 1.25rem;
+    font-weight: 600;
+  }
+  @media (min-width: 760px) {
+    .terms-band {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .aud-kit {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

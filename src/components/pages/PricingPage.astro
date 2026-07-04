@@ -1,0 +1,84 @@
+---
+import Base from '../../layouts/Base.astro';
+import Section from '../Section.astro';
+import PricingTable from '../PricingTable.astro';
+import FAQ from '../FAQ.astro';
+import CTABand from '../CTABand.astro';
+import { t, paragraphs } from '../../i18n';
+import { titleKey, descKey } from '../../config/routes';
+import { localizedPath, localizedUrl } from '../../i18n/routing';
+import { site } from '../../config/site';
+import { webPageSchema, faqPageSchema } from '../../lib/schema';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = '' } = Astro.props;
+const tt = (k: string, v?: Record<string, string | number>) => t(locale, k, v);
+
+const title = tt(titleKey('pricing'));
+const description = tt(descKey('pricing'));
+
+const sections = [1, 2, 3].map((n) => ({ h: tt(`pricing.s${n}.h`), body: paragraphs(tt(`pricing.s${n}.b`)) }));
+const faqItems = [1, 2, 3, 4].map((n) => ({ q: tt(`pricing.faq.q${n}.q`), a: tt(`pricing.faq.q${n}.a`) }));
+
+const jsonLd = [
+  webPageSchema({ url: localizedUrl(locale, slug), name: title, description, locale }),
+  faqPageSchema(faqItems),
+];
+---
+
+<Base locale={locale} slug={slug} title={title} description={description} jsonLd={jsonLd}>
+  <Section eyebrow={tt('home.pricing.eyebrow')} heading={tt('page.pricing.h1')} intro={tt('page.pricing.lede')} align="center" headingLevel="h1">
+    <PricingTable locale={locale} />
+  </Section>
+
+  <Section bg="soft">
+    <div class="pricing-prose">
+      {
+        sections.map((s) => (
+          <section class="pp-section">
+            <h2>{s.h}</h2>
+            {s.body.map((p) => (
+              <p>{p}</p>
+            ))}
+          </section>
+        ))
+      }
+      <section class="pp-section">
+        <h2>{tt('home.faq.eyebrow')}</h2>
+        <FAQ items={faqItems} group="pricing-faq" />
+      </section>
+    </div>
+  </Section>
+
+  <CTABand
+    heading={tt('content.ctaHeading')}
+    body={tt('content.ctaBody')}
+    actions={[
+      { label: tt('content.ctaInstall'), href: site.appStoreUrl, style: 'primary', external: true, event: 'install_click', source: 'pricing' },
+      { label: tt('content.ctaAudit'), href: localizedPath(locale, 'free-audit'), style: 'secondary', event: 'audit_cta', source: 'pricing' },
+    ]}
+    bg="navy"
+  />
+</Base>
+
+<style>
+  .pricing-prose {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+  .pp-section {
+    margin-bottom: 2.25rem;
+  }
+  .pp-section h2 {
+    font-size: clamp(1.4rem, 3vw, 1.85rem);
+    margin-bottom: 0.85rem;
+  }
+  .pp-section p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    max-width: 68ch;
+  }
+</style>

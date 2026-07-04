@@ -1,0 +1,196 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import FAQ from '../FAQ.astro';
+import CTABand from '../CTABand.astro';
+import Icon from '../Icon.astro';
+import { t, paragraphs } from '../../i18n';
+import { localizedPath, localizedUrl } from '../../i18n/routing';
+import { titleKey, descKey, breadcrumbChain, getPage } from '../../config/routes';
+import { site, SITE_UPDATED } from '../../config/site';
+import { webPageSchema, breadcrumbSchema, faqPageSchema } from '../../lib/schema';
+
+interface Props {
+  locale: string;
+  slug?: string;
+  pageKey: string;
+  sectionCount: number;
+  faqCount?: number;
+  related?: string[]; // page keys
+  showCta?: boolean;
+}
+const { locale, slug = '', pageKey, sectionCount, faqCount = 0, related = [], showCta = true } = Astro.props;
+const tt = (k: string, v?: Record<string, string | number>) => t(locale, k, v);
+
+const title = tt(titleKey(pageKey));
+const description = tt(descKey(pageKey));
+const h1 = tt(`page.${pageKey}.h1`);
+const lede = tt(`page.${pageKey}.lede`);
+
+const sections = Array.from({ length: sectionCount }, (_, i) => ({
+  h: tt(`page.${pageKey}.s${i + 1}.h`),
+  body: paragraphs(tt(`page.${pageKey}.s${i + 1}.b`)),
+}));
+
+const faqItems = Array.from({ length: faqCount }, (_, i) => ({
+  q: tt(`page.${pageKey}.faq.q${i + 1}.q`),
+  a: tt(`page.${pageKey}.faq.q${i + 1}.a`),
+}));
+
+// Breadcrumbs: Home → ancestors → current
+const chain = breadcrumbChain(pageKey);
+const crumbs = [
+  { label: tt('crumb.home'), href: localizedPath(locale, '') },
+  ...chain.map((p) => ({
+    label: t(locale, `page.${p.key}.crumb`) !== `page.${p.key}.crumb` ? tt(`page.${p.key}.crumb`) : tt(`footer.link.${p.key}`),
+    href: localizedPath(locale, p.slug),
+  })),
+];
+
+const relatedLinks = related
+  .map((k) => getPage(k))
+  .filter(Boolean)
+  .map((p) => ({
+    label: t(locale, `page.${p!.key}.crumb`) !== `page.${p!.key}.crumb` ? tt(`page.${p!.key}.crumb`) : tt(`footer.link.${p!.key}`),
+    href: localizedPath(locale, p!.slug),
+  }));
+
+const jsonLd: Record<string, unknown>[] = [
+  webPageSchema({ url: localizedUrl(locale, slug), name: title, description, locale }),
+  breadcrumbSchema(crumbs.map((c) => ({ name: c.label, url: site.url + c.href }))),
+];
+if (faqItems.length) jsonLd.push(faqPageSchema(faqItems));
+---
+
+<Base locale={locale} slug={slug} title={title} description={description} ogType="article" jsonLd={jsonLd}>
+  <article class="content">
+    <div class="container-page content-narrow">
+      <header class="content-head">
+        {crumbs.length > 1 && <Breadcrumbs items={crumbs} />}
+        <h1>{h1}</h1>
+        <p class="content-lede">{lede}</p>
+        <p class="content-updated"><Icon name="clock" size={14} /> {tt('common.lastUpdated')} {SITE_UPDATED}</p>
+      </header>
+
+      <div class="content-body">
+        {
+          sections.map((s) => (
+            <section class="content-section">
+              <h2>{s.h}</h2>
+              {s.body.map((p) => (
+                <p>{p}</p>
+              ))}
+            </section>
+          ))
+        }
+
+        <slot />
+
+        {
+          faqItems.length > 0 && (
+            <section class="content-section">
+              <h2>{tt('home.faq.eyebrow')}</h2>
+              <FAQ items={faqItems} group={`${pageKey}-faq`} />
+            </section>
+          )
+        }
+
+        {
+          relatedLinks.length > 0 && (
+            <aside class="content-related">
+              <h2>{tt('content.related')}</h2>
+              <ul>
+                {relatedLinks.map((l) => (
+                  <li>
+                    <a href={l.href} class="link-underline">
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )
+        }
+      </div>
+    </div>
+  </article>
+
+  {
+    showCta && (
+      <CTABand
+        heading={tt('content.ctaHeading')}
+        body={tt('content.ctaBody')}
+        actions={[
+          { label: tt('content.ctaInstall'), href: site.appStoreUrl, style: 'primary', external: true, event: 'install_click', source: pageKey },
+          { label: tt('content.ctaAudit'), href: localizedPath(locale, 'free-audit'), style: 'secondary', event: 'audit_cta', source: pageKey },
+        ]}
+        bg="soft"
+      />
+    )
+  }
+</Base>
+
+<style>
+  .content {
+    padding-block: clamp(2rem, 5vw, 3.5rem);
+  }
+  .content-narrow {
+    max-width: 800px;
+  }
+  .content-head {
+    margin-bottom: 2.5rem;
+  }
+  .content-head h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 1rem 0 1rem;
+  }
+  .content-lede {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    line-height: 1.55;
+    color: var(--color-ink-soft);
+    font-family: var(--font-display);
+    font-weight: 380;
+  }
+  .content-updated {
+    margin-top: 1.25rem;
+    font-size: 0.8rem;
+    color: var(--color-ink-faint);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .content-section {
+    margin-bottom: 2.25rem;
+  }
+  .content-section h2 {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    margin-bottom: 0.9rem;
+  }
+  .content-section p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: var(--color-ink);
+    max-width: 68ch;
+  }
+  .content-related {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-hairline);
+  }
+  .content-related h2 {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+    margin-bottom: 0.9rem;
+  }
+  .content-related ul {
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+  }
+  .content-related a {
+    font-weight: 600;
+  }
+</style>

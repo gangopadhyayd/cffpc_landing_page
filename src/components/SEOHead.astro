@@ -1,0 +1,77 @@
+---
+import { canonical, alternates } from '../i18n/routing';
+import { isIndexable } from '../config/locales';
+import { site } from '../config/site';
+
+interface Props {
+  locale: string;
+  slug?: string;
+  title: string;
+  description: string;
+  ogType?: string;
+  jsonLd?: Record<string, unknown>[];
+}
+
+const { locale, slug = '', title, description, ogType = 'website', jsonLd = [] } = Astro.props;
+
+const canon = canonical(locale, slug);
+const alts = alternates(slug);
+// Staging deploys (PUBLIC_STAGING=true) force noindex site-wide so the unfinished
+// preview — which carries production canonicals — can't be indexed by search engines.
+const isStaging = import.meta.env.PUBLIC_STAGING === 'true';
+const indexable = isIndexable(locale) && !isStaging;
+const ogImage = new URL(site.ogImage, site.url).href;
+const ogLocale = locale.replace('-', '_');
+
+const googleVerify = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+const bingVerify = import.meta.env.PUBLIC_BING_SITE_VERIFICATION;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canon} />
+
+{
+  indexable ? (
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+  ) : (
+    <meta name="robots" content="noindex, follow" />
+  )
+}
+
+{/* hreflang alternates + x-default — wired even for unreviewed (noindex) locales */}
+{alts.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
+
+{/* Open Graph */}
+<meta property="og:type" content={ogType} />
+<meta property="og:site_name" content="Persistent Cart" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canon} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:locale" content={ogLocale} />
+
+{/* Twitter */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+{site.twitterHandle && <meta name="twitter:site" content={site.twitterHandle} />}
+
+<meta name="theme-color" content="#f7f4ee" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+{googleVerify && <meta name="google-site-verification" content={googleVerify} />}
+{bingVerify && <meta name="msvalidate.01" content={bingVerify} />}
+
+{
+  jsonLd.map((obj) => (
+    <script type="application/ld+json" set:html={JSON.stringify(obj)} />
+  ))
+}

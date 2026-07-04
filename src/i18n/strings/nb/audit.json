@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "Gratis gjennomgang av handlekurv mellom enheter for Shopify | Persistent Cart",
+  "page.free-audit.desc": "Finn ut gratis om Shopify-butikken din mister innloggede handlekurver når kundene bytter enhet — hva det kan koste deg, og de raske gevinstene. Ingen installasjon nødvendig.",
+  "page.free-audit.crumb": "Gratis gjennomgang",
+  "page.free-audit.h1": "Mister butikken din handlekurver når kundene bytter enhet? Vi sjekker — gratis.",
+  "page.free-audit.lede": "De fleste forhandlere vet ikke om butikken deres beholder en innlogget kundes handlekurv på tvers av enheter — og tapet er usynlig i rapportene dine. Send oss butikken din, så sjekker vi, anslår konsekvensen og peker på de raske gevinstene. Uten forpliktelser, ingen installasjon nødvendig.",
+
+  "audit.checks.title": "Det vi sjekker",
+  "audit.checks.1.title": "Overlever en innlogget handlekurv et enhetsbytte?",
+  "audit.checks.1.body": "Vi tester om en innlogget kundes handlekurv følger dem fra mobil til datamaskin i butikken din, eller forsvinner i det stille.",
+  "audit.checks.2.title": "Omtrent hva det koster deg",
+  "audit.checks.2.body": "Med utgangspunkt i butikkens profil og bransjereferanser gir vi et transparent, illustrerende anslag på omsetningen som står på spill — aldri en lånt statistikk.",
+  "audit.checks.3.title": "De raske gevinstene",
+  "audit.checks.3.body": "Praktiske anbefalinger uten press — uansett om du noen gang installerer Persistent Cart eller ikke.",
+
+  "audit.form.title": "Be om din gratis gjennomgang",
+  "audit.form.storeUrl": "Nettadressen til butikken din",
+  "audit.form.storeUrlPlaceholder": "yourstore.myshopify.com",
+  "audit.form.name": "Navnet ditt",
+  "audit.form.email": "E-post",
+  "audit.form.plan": "Shopify-plan (valgfritt)",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "Usikker",
+  "audit.form.orders": "Ordrer per måned (valgfritt)",
+  "audit.form.submit": "Få min gratis gjennomgang",
+  "audit.form.privacy": "Vi bruker disse opplysningene kun til å forberede gjennomgangen din og svare deg. Ingen spam, ingen deling. Se vår tilnærming til personvern.",
+  "audit.form.success.heading": "Gjennomgang bestilt — takk!",
+  "audit.form.success.body": "Vi har mottatt forespørselen din og sender deg den gratis gjennomgangen av handlekurv mellom enheter på e-post innen 1–2 virkedager. Hold et øye med innboksen.",
+
+  "audit.expectations": "Vi sender deg gjennomgangen på e-post innen 1–2 virkedager. Den er helt gratis, og du er ikke forpliktet til å installere noe.",
+  "audit.trust": "Fra teamet bak Persistent Cart — Built for Shopify, hjelper butikker siden 2016."
+}

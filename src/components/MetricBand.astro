@@ -1,0 +1,83 @@
+---
+export interface Metric {
+  value: string;
+  label: string;
+  note?: string;
+}
+interface Props {
+  items: Metric[];
+  bg?: 'navy' | 'card' | 'soft';
+}
+const { items, bg = 'navy' } = Astro.props;
+---
+
+<div class={`metricband bg-${bg}`}>
+  {
+    items.map((m) => (
+      <div class="metric">
+        <span class="metric-value tabular">{m.value}</span>
+        <span class="metric-label">{m.label}</span>
+        {m.note && <span class="metric-note">{m.note}</span>}
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .metricband {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background: var(--color-hairline);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .metric {
+    background: var(--color-card);
+    padding: 1.6rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+    align-items: center;
+  }
+  .bg-navy {
+    background: rgb(255 255 255 / 0.08);
+    border-color: rgb(255 255 255 / 0.12);
+  }
+  .bg-navy .metric {
+    background: var(--color-navy-soft);
+    color: #e7e1d6;
+  }
+  .bg-soft .metric {
+    background: var(--color-card-soft);
+  }
+  .metric-value {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 2.9rem);
+    font-weight: 500;
+    line-height: 1;
+    color: var(--color-ink);
+  }
+  .bg-navy .metric-value {
+    color: #fff;
+  }
+  .metric-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.4rem;
+  }
+  .metric-note {
+    font-size: 0.78rem;
+    color: var(--color-ink-faint);
+  }
+  .bg-navy .metric-note {
+    color: #9a9385;
+  }
+  @media (min-width: 700px) {
+    .metricband {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

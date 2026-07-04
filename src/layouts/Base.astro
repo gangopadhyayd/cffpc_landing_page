@@ -1,0 +1,95 @@
+---
+import '../styles/global.css';
+// Self-hosted variable fonts (no Google CDN) — privacy + performance.
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/hanken-grotesk';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+
+import SEOHead from '../components/SEOHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Analytics from '../components/Analytics.astro';
+import ConsentBanner from '../components/ConsentBanner.astro';
+import { getLocale, isIndexable, DEFAULT_LOCALE } from '../config/locales';
+import { t } from '../i18n';
+
+interface Props {
+  locale: string;
+  slug?: string;
+  title: string;
+  description: string;
+  ogType?: string;
+  jsonLd?: Record<string, unknown>[];
+  bodyClass?: string;
+}
+
+const {
+  locale,
+  slug = '',
+  title,
+  description,
+  ogType = 'website',
+  jsonLd = [],
+  bodyClass = '',
+} = Astro.props;
+
+const l = getLocale(locale) ?? getLocale(DEFAULT_LOCALE)!;
+const reviewed = isIndexable(locale);
+---
+
+<!doctype html>
+<html lang={l.code} dir={l.dir}>
+  <head>
+    <SEOHead
+      locale={locale}
+      slug={slug}
+      title={title}
+      description={description}
+      ogType={ogType}
+      jsonLd={jsonLd}
+    />
+  </head>
+  <body class={bodyClass}>
+    <a class="skip-link" href="#main">{t(locale, 'a11y.skipToContent')}</a>
+    {
+      !reviewed && (
+        <div class="review-banner" role="note">
+          {t(locale, 'meta.locale.reviewNotice')}
+        </div>
+      )
+    }
+    <Header locale={locale} slug={slug} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer locale={locale} slug={slug} />
+    <ConsentBanner locale={locale} />
+    <Analytics />
+
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 100;
+        background: var(--color-ink);
+        color: var(--color-paper);
+        padding: 0.75rem 1rem;
+        border-radius: 0 0 var(--radius-md) 0;
+        font-weight: 600;
+      }
+      .skip-link:focus {
+        left: 0;
+      }
+      .review-banner {
+        background: var(--color-accent-tint);
+        color: var(--color-accent-ink);
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid var(--color-hairline);
+      }
+    </style>
+  </body>
+</html>

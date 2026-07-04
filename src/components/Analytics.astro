@@ -1,0 +1,80 @@
+---
+/**
+ * Analytics + conversion tracking — all env-gated and consent-aware.
+ * - Plausible (cookieless): loads if PUBLIC_PLAUSIBLE_DOMAIN — no consent needed.
+ * - GA4 (cookies): loads ONLY after the visitor accepts (ConsentBanner) and
+ *   PUBLIC_GA4_MEASUREMENT_ID is set.
+ * - A tiny tracker forwards [data-event] clicks + lead:submitted + calculator use
+ *   to whichever analytics is active. Goal events: install_click, audit_cta,
+ *   partner_cta, form_submit/lead_submitted, calculator_used.
+ */
+const GA_ID = import.meta.env.PUBLIC_GA4_MEASUREMENT_ID;
+const PLAUSIBLE = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
+---
+
+{
+  PLAUSIBLE && (
+    <script
+      defer
+      data-domain={PLAUSIBLE}
+      src="https://plausible.io/js/script.tagged-events.js"
+      is:inline
+    />
+  )
+}
+
+<script define:vars={{ GA_ID, PLAUSIBLE }}>
+  (function () {
+    const CONSENT_KEY = 'pc-consent';
+
+    // Unified event sink → Plausible + GA4 (whichever is loaded).
+    window.pcTrack = function (name, props) {
+      try {
+        if (window.plausible) window.plausible(name, props ? { props } : undefined);
+      } catch (e) {}
+      try {
+        if (window.gtag) window.gtag('event', name, props || {});
+      } catch (e) {}
+    };
+
+    // Load GA4 (only when consented).
+    window.pcLoadGA = function () {
+      if (!GA_ID || window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', GA_ID, { anonymize_ip: true });
+    };
+
+    if (localStorage.getItem(CONSENT_KEY) === 'granted') window.pcLoadGA();
+
+    // Track outbound + CTA clicks declared with data-event.
+    document.addEventListener('click', function (e) {
+      const el = e.target instanceof Element ? e.target.closest('[data-event]') : null;
+      if (!el) return;
+      window.pcTrack(el.getAttribute('data-event'), {
+        source: el.getAttribute('data-source') || '',
+      });
+    });
+
+    // Lead form submissions.
+    window.addEventListener('lead:submitted', function (e) {
+      window.pcTrack('lead_submitted', { form: (e.detail && e.detail.form) || '' });
+    });
+
+    // First meaningful calculator interaction (once).
+    let calcTracked = false;
+    document.addEventListener('input', function (e) {
+      if (calcTracked) return;
+      if (e.target instanceof Element && e.target.closest('[data-calc]')) {
+        calcTracked = true;
+        window.pcTrack('calculator_used');
+      }
+    });
+  })();
+</script>

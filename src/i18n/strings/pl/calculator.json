@@ -1,0 +1,41 @@
+{
+  "page.calculator.title": "Kalkulator przychodu traconego na koszykach dla Shopify | Persistent Cart",
+  "page.calculator.desc": "Przejrzysty, poglądowy szacunek przychodu traconego, gdy zalogowani klienci zmieniają urządzenie w Twoim sklepie Shopify. Dostosuj wskaźniki; my pokazujemy wzór.",
+  "page.calculator.h1": "Ile może Cię kosztować utrata koszyków przy zmianie urządzenia?",
+  "page.calculator.lede": "Gdy zalogowany klient buduje koszyk na jednym urządzeniu, a kończy na innym, domyślny sklep Shopify go traci. Ten kalkulator zamienia to w przybliżony, poglądowy zakres — na podstawie Twoich liczb i wskaźników branżowych. Każdą wartość można edytować, a wzór jest pokazany; nic nie jest czarną skrzynką.",
+
+  "calc.heading": "Oszacuj przychód tracony na koszykach",
+  "calc.intro": "Wartości domyślne są wstępnie wypełnione wskaźnikami branżowymi. Dostosuj je do swojego sklepu.",
+
+  "calc.input.orders.label": "Miesięczna liczba zamówień",
+  "calc.input.orders.help": "Mniej więcej ile zamówień Twój sklep otrzymuje miesięcznie.",
+  "calc.input.aov.label": "Średnia wartość zamówienia",
+  "calc.input.aov.help": "Typowa łączna wartość Twojego zamówienia.",
+  "calc.input.loggedIn.label": "Udział zalogowanych klientów",
+  "calc.input.loggedIn.help": "Odsetek kupujących, którzy robią zakupy zalogowani na konto. Wskaźnik: ~50%.",
+  "calc.input.crossDevice.label": "Udział zmieniających urządzenia",
+  "calc.input.crossDevice.help": "Odsetek zalogowanych klientów, którzy przed zakupem przeglądają sklep na telefonie i komputerze. Wskaźnik: ~30% (szacunek oparty na rozumowaniu, a nie zmierzona wartość).",
+  "calc.input.recovery.label": "Zachowane koszyki, które stają się zamówieniami",
+  "calc.input.recovery.help": "Ostrożny odsetek tych ścieżek między urządzeniami, które zamieniają się w zamówienie, jakie w innym wypadku byłoby utracone. Domyślnie 2% — celowo zachowawczo.",
+  "calc.currency.label": "Waluta",
+
+  "calc.result.heading": "Poglądowy odzyskany przychód",
+  "calc.result.monthly": "Miesięcznie",
+  "calc.result.annual": "Rocznie",
+  "calc.result.rangeNote": "Pokazany jako zakres (±), ponieważ to szacunek, a nie zmierzony wynik.",
+  "calc.result.disclaimer": "To przybliżony, poglądowy zakres oparty na Twoich danych i średnich branżowych — a nie zmierzony wynik z aplikacji. Powiązanie zmiany urządzenia z utraconą sprzedażą jest wnioskiem opartym na rozumowaniu, a nie opublikowanym wskaźnikiem. Traktuj to jako kierunkowe wyczucie skali.",
+
+  "calc.formula.label": "Wzór (bez czarnej skrzynki)",
+  "calc.formula.text": "Odzyskane zamówienia/miesiąc = miesięczne zamówienia × udział zalogowanych × udział zmieniających urządzenie × wskaźnik zachowanych koszyków. Przychód = odzyskane zamówienia × średnia wartość zamówienia. Rocznie = × 12.",
+
+  "calc.cta.lead": "Chcesz, żebyśmy sprawdzili Twój prawdziwy sklep zamiast wskaźników?",
+  "calc.cta.audit": "Zamów darmowy audyt sklepu",
+  "calc.cta.install": "Dodaj Persistent Cart — zacznij za darmo",
+
+  "calc.page.s1.h": "Dlaczego domyślny sklep Shopify gubi koszyki między urządzeniami",
+  "calc.page.s1.b": "W standardowym sklepie Shopify koszyk jest przechowywany w pliku cookie przeglądarki, a nie na koncie klienta. Dlatego koszyk zalogowanego klienta nie podąża za nim z telefonu na laptop — po prostu nie ma go na drugim urządzeniu. Klient albo odtwarza z pamięci mniejszy koszyk, albo w ogóle nie wraca. Ponieważ nie pojawia się żaden błąd ani nie wysyła się żaden e-mail, większość sprzedawców nigdy nie widzi tej straty w raportach.",
+  "calc.page.s2.h": "Jak czytać ten szacunek",
+  "calc.page.s2.b": "Kalkulator mnoży Twój wolumen zamówień przez trzy edytowalne udziały: ilu klientów jest zalogowanych, ilu z nich przemieszcza się między urządzeniami oraz celowo zachowawczy wskaźnik tego, ile z tych ścieżek zachowany koszyk zamienia w sprzedaż. Wynik pokazujemy jako zakres, nigdy jako jedną pewną liczbę, bo powiązanie zmiany urządzenia z utraconą sprzedażą jest wnioskiem opartym na rozumowaniu, a nie zmierzoną statystyką. Uczciwa wersja tych obliczeń jest bardziej wiarygodna niż zapożyczone hasło „+X% sprzedaży” — i dlatego pokazujemy wzór.",
+  "calc.page.s3.h": "Od szacunku do pewności",
+  "calc.page.s3.b": "Szacunek to punkt wyjścia. Aby przekonać się, czy Twój konkretny sklep gubi koszyki zalogowanych klientów między urządzeniami — i ile to dla Ciebie warte — zamów darmowy audyt sklepu. Sprawdzimy rzeczywiste działanie Twojego sklepu między urządzeniami i odeślemy to, co znajdziemy, bez zobowiązań i bez konieczności instalacji."
+}

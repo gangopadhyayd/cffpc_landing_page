@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "Gratis granskning av varukorg mellan enheter på Shopify | Persistent Cart",
+  "page.free-audit.desc": "Ta reda på gratis om din Shopify-butik tappar inloggade varukorgar när kunder byter enhet — vad det kan kosta dig och de snabba vinsterna. Ingen installation krävs.",
+  "page.free-audit.crumb": "Gratis granskning",
+  "page.free-audit.h1": "Tappar din butik varukorgar när kunder byter enhet? Vi kontrollerar det — gratis.",
+  "page.free-audit.lede": "De flesta handlare vet inte om deras butik behåller en inloggad kunds varukorg mellan enheter — och förlusten syns inte i dina rapporter. Skicka oss din butik så kontrollerar vi det, uppskattar effekten och pekar ut de snabba vinsterna. Utan förpliktelser, ingen installation krävs.",
+
+  "audit.checks.title": "Vad vi kontrollerar",
+  "audit.checks.1.title": "Överlever en inloggad varukorg ett enhetsbyte?",
+  "audit.checks.1.body": "Vi testar om en inloggad kunds varukorg följer med från mobil till dator i din butik, eller tyst försvinner.",
+  "audit.checks.2.title": "Ungefär vad det kostar dig",
+  "audit.checks.2.body": "Utifrån din butiks profil och branschriktmärken ger vi en transparent, illustrativ uppskattning av intäkterna som står på spel — aldrig en lånad statistik.",
+  "audit.checks.3.title": "De snabba vinsterna",
+  "audit.checks.3.body": "Praktiska rekommendationer utan press — oavsett om du någonsin installerar Persistent Cart eller inte.",
+
+  "audit.form.title": "Begär din gratis granskning",
+  "audit.form.storeUrl": "Din butiks-URL",
+  "audit.form.storeUrlPlaceholder": "dinbutik.myshopify.com",
+  "audit.form.name": "Ditt namn",
+  "audit.form.email": "E-post",
+  "audit.form.plan": "Shopify-plan (valfritt)",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "Vet inte",
+  "audit.form.orders": "Ordrar per månad (valfritt)",
+  "audit.form.submit": "Få min gratis granskning",
+  "audit.form.privacy": "Vi använder de här uppgifterna endast för att förbereda din granskning och svara dig. Ingen spam, ingen delning. Se vår syn på integritet.",
+  "audit.form.success.heading": "Granskning begärd — tack!",
+  "audit.form.success.body": "Vi har fått din förfrågan och mejlar din gratis granskning av varukorgen mellan enheter inom 1–2 arbetsdagar. Håll utkik i inkorgen.",
+
+  "audit.expectations": "Vi mejlar din granskning inom 1–2 arbetsdagar. Den är verkligen gratis och du är inte förpliktigad att installera något.",
+  "audit.trust": "Från teamet bakom Persistent Cart — Built for Shopify, hjälper butiker sedan 2016."
+}

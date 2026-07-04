@@ -1,0 +1,42 @@
+{
+  "page.pricing.title": "Prijzen — elke functie op elk plan | Persistent Cart voor Shopify",
+  "page.pricing.desc": "Persistent Cart is geprijsd naar je Shopify-plan — elke functie is inbegrepen op elk plan. Start gratis, daarna een gratis proefperiode van 30 dagen op elk betaald plan. Vanaf $4.99/mnd.",
+  "page.pricing.crumb": "Prijzen",
+  "page.pricing.h1": "Elke functie, op elk plan. Geprijsd naar je Shopify-plan.",
+  "page.pricing.lede": "Er zijn geen functieniveaus om te ontcijferen. Elk plan bevat de volledige app — je prijs komt simpelweg overeen met je Shopify-abonnement. Start gratis, daarna een gratis proefperiode van 30 dagen op elk betaald plan.",
+
+  "pricing.planHint": "Je plan wordt automatisch geselecteerd op basis van je Shopify-abonnement. Je kiest geen functieniveau — je krijgt het allemaal.",
+  "pricing.cta.install": "Voeg Persistent Cart toe — start gratis",
+  "pricing.trial": "Free Starter-plan · gratis proefperiode van 30 dagen op alle betaalde plannen · op elk moment opzegbaar",
+
+  "pricing.tier.free.note": "Test elke functie, tot 10 winkelwagensyncs",
+  "pricing.tier.basic.note": "Voor winkels op het Shopify Basic-plan",
+  "pricing.tier.grow.note": "Voor winkels op het Shopify Grow-plan (voorheen \"Shopify\")",
+  "pricing.tier.advanced.note": "Voor winkels op het Shopify Advanced-plan",
+  "pricing.tier.plus.note": "Voor Shopify Plus-winkels",
+  "pricing.tier.everyPlan": "Elke functie inbegrepen",
+
+  "pricing.included.title": "Inbegrepen op elk plan",
+  "pricing.included.1": "Automatische cross-device winkelwagensync voor ingelogde klanten",
+  "pricing.included.2": "Standaard geruisloze automatische samenvoeging — geen pop-ups, e-mails of opt-ins",
+  "pricing.included.3": "Optionele \"behouden of combineren\"-winkelwagenmelding",
+  "pricing.included.4": "Installatie met één klik, geen themacode",
+  "pricing.included.5": "Werkt op telefoon, desktop en bij herhaalbezoeken",
+  "pricing.included.6": "Built for Shopify kwaliteits- en prestatienormen",
+
+  "pricing.s1.h": "Waarom het is geprijsd naar je plan, niet per functie",
+  "pricing.s1.b": "De meeste apps laten je een niveau kiezen en rantsoeneren functies. Persistent Cart niet — de hele app is het product, dus elk plan krijgt elke functie. Het enige wat verandert is de prijs, die je Shopify-abonnementsniveau volgt. Een Basic-winkel betaalt Basic-prijzen; een Plus-winkel betaalt Plus-prijzen; beide krijgen identieke functionaliteit. Het houdt de beslissing simpel: er is niets te vergelijken behalve of je het wilt.\n\nGrotere Shopify-plannen betekenen meer bestellingen en meer ingelogde shoppers die van apparaat wisselen — dus de prijs volgt de waarde die je terugkrijgt, niet een langere functielijst.",
+  "pricing.s2.h": "Start gratis, daarna een proefperiode van 30 dagen",
+  "pricing.s2.b": "Het Free Starter-plan laat je elke functie installeren en testen voor maximaal 10 winkelwagensyncs — genoeg om het te zien werken in je eigen winkel. Wanneer je er klaar voor bent, begint elk betaald plan met een gratis proefperiode van 30 dagen, dus je betaalt pas zodra je het hebt zien draaien. Er is geen langetermijncontract; op elk moment opzegbaar vanuit je Shopify-admin.",
+  "pricing.s3.h": "Is het de moeite waard?",
+  "pricing.s3.b": "Het eerlijke antwoord is dat het afhangt van hoeveel van je shoppers inloggen en van apparaat wisselen — precies wat de calculator voor verloren winkelwagens en een gratis winkelaudit je helpen inschatten. Persistent Cart kost weinig per maand en is ontworpen om bestellingen te herstellen die anders stilletjes zouden verdwijnen. Als er elke maand zelfs maar een handvol hoogwaardige winkelwagens behouden blijven die anders verloren waren gegaan, verdient het zichzelf terug.",
+
+  "pricing.faq.q1.q": "Krijgen goedkopere plannen minder functies?",
+  "pricing.faq.q1.a": "Nee. Elk plan bevat de volledige app. Je prijs wordt bepaald door je Shopify-abonnementsniveau, niet door welke functies je wilt.",
+  "pricing.faq.q2.q": "Is er echt een gratis plan?",
+  "pricing.faq.q2.a": "Ja — het Free Starter-plan laat je alle functies installeren en testen voor maximaal 10 winkelwagensyncs, zodat je kunt bevestigen dat het in je winkel werkt voordat je betaalt.",
+  "pricing.faq.q3.q": "Hoe werkt de gratis proefperiode?",
+  "pricing.faq.q3.a": "Elk betaald plan begint met een gratis proefperiode van 30 dagen. Je wordt pas gefactureerd wanneer de proefperiode eindigt, en je kunt op elk moment opzeggen vanuit je Shopify-admin.",
+  "pricing.faq.q4.q": "Kan ik op elk moment opzeggen?",
+  "pricing.faq.q4.a": "Ja. De facturering wordt afgehandeld via Shopify, dus je kunt de app op elk moment verwijderen of opzeggen vanuit je Shopify-admin."
+}

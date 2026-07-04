@@ -1,0 +1,176 @@
+---
+import Icon from './Icon.astro';
+import { t } from '../i18n';
+import { site, pricingTiers } from '../config/site';
+
+interface Props {
+  locale: string;
+}
+const { locale } = Astro.props;
+const tt = (k: string, v?: Record<string, string | number>) => t(locale, k, v);
+
+const included = [1, 2, 3, 4, 5, 6].map((n) => tt(`pricing.included.${n}`));
+---
+
+<div class="pricing">
+  <div class="pricing-tiers">
+    {
+      pricingTiers.map((tier) => (
+        <div class={`ptier ${tier.highlight ? 'is-highlight' : ''}`}>
+          {tier.highlight && <span class="ptier-flag">{tt('pricing.tier.everyPlan')}</span>}
+          <span class="ptier-plan">{tier.shopifyPlan}</span>
+          <span class="ptier-price tabular">
+            {tier.price}
+            <span class="ptier-cadence">{tier.cadence}</span>
+          </span>
+          <span class="ptier-note">{tt(`pricing.tier.${tier.id}.note`)}</span>
+          <a
+            class={`btn ${tier.highlight ? 'btn-primary' : 'btn-secondary'} ptier-cta`}
+            href={site.appStoreUrl}
+            target="_blank"
+            rel="noopener"
+            data-event="install_click"
+            data-source={`pricing_${tier.id}`}
+          >
+            {tier.price === 'Free' ? tt('cta.installShort') : tt('common.freeTrial', { days: 30 })}
+          </a>
+        </div>
+      ))
+    }
+  </div>
+
+  <p class="pricing-hint"><Icon name="sparkle" size={16} /> {tt('pricing.planHint')}</p>
+
+  <div class="pricing-included">
+    <h2 class="pricing-included-title">{tt('pricing.included.title')}</h2>
+    <ul>
+      {
+        included.map((f) => (
+          <li>
+            <Icon name="check" size={18} />
+            {f}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <p class="pricing-trial">{tt('pricing.trial')}</p>
+</div>
+
+<style>
+  .pricing-tiers {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .ptier {
+    position: relative;
+    background: var(--color-card);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    box-shadow: var(--shadow-card);
+  }
+  .ptier.is-highlight {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 1px var(--color-accent), var(--shadow-raised);
+  }
+  .ptier-flag {
+    position: absolute;
+    top: -0.7rem;
+    left: 1.25rem;
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+  }
+  .ptier-plan {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-ink-faint);
+  }
+  .ptier-price {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 540;
+    line-height: 1;
+  }
+  .ptier-cadence {
+    font-size: 0.9rem;
+    color: var(--color-ink-faint);
+    font-family: var(--font-sans);
+  }
+  .ptier-note {
+    font-size: 0.84rem;
+    color: var(--color-ink-soft);
+    min-height: 2.4em;
+  }
+  .ptier-cta {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .pricing-hint {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--color-ink-soft);
+  }
+  .pricing-hint :global(svg) {
+    color: var(--color-accent);
+    flex: none;
+  }
+  .pricing-included {
+    margin-top: 2.5rem;
+    background: var(--color-card-soft);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+  }
+  .pricing-included-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.1rem;
+  }
+  .pricing-included ul {
+    list-style: none;
+    display: grid;
+    gap: 0.7rem;
+  }
+  .pricing-included li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+  }
+  .pricing-included :global(svg) {
+    color: var(--color-evergreen);
+    flex: none;
+    margin-top: 0.15rem;
+  }
+  .pricing-trial {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.88rem;
+    color: var(--color-ink-soft);
+  }
+  @media (min-width: 720px) {
+    .pricing-tiers {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+    }
+    .pricing-included ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

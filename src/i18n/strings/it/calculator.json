@@ -1,0 +1,41 @@
+{
+  "page.calculator.title": "Calcolatore del fatturato perso nei carrelli per Shopify | Persistent Cart",
+  "page.calculator.desc": "Una stima trasparente e indicativa del fatturato perso quando i clienti connessi cambiano dispositivo sul tuo negozio Shopify. Regola i benchmark; mostriamo la formula.",
+  "page.calculator.h1": "Quanto potrebbe costarti la perdita di carrelli tra dispositivi?",
+  "page.calculator.lede": "Quando un acquirente connesso costruisce un carrello su un dispositivo e lo completa su un altro, un negozio Shopify di default lo perde. Questo calcolatore lo traduce in un intervallo approssimativo e indicativo — usando i tuoi numeri e i benchmark di settore. Ogni valore è modificabile e la formula è mostrata; niente è una scatola nera.",
+
+  "calc.heading": "Stima il fatturato perso nei carrelli",
+  "calc.intro": "I valori predefiniti sono precompilati con benchmark di settore. Regolali per adattarli al tuo negozio.",
+
+  "calc.input.orders.label": "Ordini mensili",
+  "calc.input.orders.help": "All'incirca quanti ordini riceve il tuo negozio al mese.",
+  "calc.input.aov.label": "Valore medio dell'ordine",
+  "calc.input.aov.help": "Il totale tipico di un tuo ordine.",
+  "calc.input.loggedIn.label": "Quota di acquirenti connessi",
+  "calc.input.loggedIn.help": "Porzione di acquirenti che fanno acquisti dopo aver effettuato l'accesso a un account. Benchmark: ~50%.",
+  "calc.input.crossDevice.label": "Quota di chi cambia dispositivo",
+  "calc.input.crossDevice.help": "Porzione di acquirenti connessi che navigano tra telefono e desktop prima di comprare. Benchmark: ~30% (stima ragionata, non un tasso misurato).",
+  "calc.input.recovery.label": "Carrelli salvati che diventano ordini",
+  "calc.input.recovery.help": "Quota prudente di quei percorsi tra dispositivi che si trasformano in un ordine che altrimenti sarebbe andato perso. Default 2% — volutamente cauta.",
+  "calc.currency.label": "Valuta",
+
+  "calc.result.heading": "Fatturato recuperato indicativo",
+  "calc.result.monthly": "Al mese",
+  "calc.result.annual": "All'anno",
+  "calc.result.rangeNote": "Mostrato come intervallo (±) perché è una stima, non un risultato misurato.",
+  "calc.result.disclaimer": "Questo è un intervallo approssimativo e indicativo basato sui tuoi dati e sulle medie di settore — non un risultato misurato dall'app. Il legame tra cambio di dispositivo → vendita persa è un'inferenza ragionata, non un tasso pubblicato. Consideralo un senso direzionale della scala.",
+
+  "calc.formula.label": "La formula (nessuna scatola nera)",
+  "calc.formula.text": "Ordini recuperati/mese = Ordini mensili × Quota di connessi × Quota di cambio dispositivo × Tasso di carrelli salvati. Fatturato = ordini recuperati × AOV. Annuale = × 12.",
+
+  "calc.cta.lead": "Vuoi che controlliamo il tuo negozio reale invece dei benchmark?",
+  "calc.cta.audit": "Richiedi un audit gratuito del negozio",
+  "calc.cta.install": "Aggiungi Persistent Cart — inizia gratis",
+
+  "calc.page.s1.h": "Perché un negozio Shopify di default perde i carrelli tra dispositivi",
+  "calc.page.s1.b": "Su un negozio Shopify standard il carrello è memorizzato in un cookie del browser, non sull'account del cliente. Così il carrello di un acquirente connesso non lo segue dal telefono al laptop — semplicemente non c'è sul secondo dispositivo. L'acquirente o ricostruisce a memoria un carrello più piccolo o non torna affatto. Poiché non viene mostrato alcun errore e non scatta alcuna email, la maggior parte dei commercianti non vede mai la perdita nei propri report.",
+  "calc.page.s2.h": "Come leggere questa stima",
+  "calc.page.s2.b": "Il calcolatore moltiplica il tuo volume di ordini per tre quote modificabili: quanti acquirenti sono connessi, quanti di loro si spostano tra dispositivi e un tasso volutamente prudente di quanti di quei percorsi un carrello conservato trasforma in vendita. Mostriamo il risultato come intervallo, mai come un singolo numero sicuro, perché il legame tra cambio di dispositivo e vendita persa è un'inferenza ragionata anziché una statistica misurata. La versione onesta di questo calcolo è più credibile di un'affermazione presa a prestito tipo \"+X% di vendite\" — ed è il motivo per cui mostriamo la formula.",
+  "calc.page.s3.h": "Dalla stima alla certezza",
+  "calc.page.s3.b": "Una stima è un punto di partenza. Per scoprire se il tuo negozio specifico perde i carrelli dei clienti connessi tra i dispositivi — e quanto vale per te — richiedi un audit gratuito del negozio. Controlleremo il comportamento reale del tuo negozio tra dispositivi e ti rimanderemo ciò che troviamo, senza impegno e senza installazione."
+}

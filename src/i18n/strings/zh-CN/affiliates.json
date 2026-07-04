@@ -1,0 +1,28 @@
+{
+  "page.affiliates.title": "推广联盟计划 — 分享链接，赚取持续佣金 | Persistent Cart",
+  "page.affiliates.desc": "创作者、测评人与教育者：分享一款一键修复隐藏跨设备购物车流失的 Shopify 应用，赚取持续佣金。免费加入。",
+  "page.affiliates.crumb": "推广联盟",
+  "page.affiliates.h1": "分享一个 Shopify 商店真正需要的解决方案 — 并赚取持续佣金。",
+  "page.affiliates.lede": "如果您能触达 Shopify 商家，Persistent Cart 是个轻松好推荐的产品：它一键修复一处真实且隐藏的跨设备购物车流失，购物者无需做任何操作。分享您的链接，每一家持续付费的商店都能为您带来持续佣金。",
+
+  "affiliates.terms": "30% 持续佣金 · 每笔推荐 12 个月 · 90 天 Cookie · 免费加入。",
+  "affiliates.how": "免费加入，获取您的链接和一套即用型分享工具包，每一家持续留存的商店都能为您赚取佣金。",
+
+  "affiliates.why.title": "为什么它能打动您的受众",
+  "affiliates.why.1.title": "一个真实而出人意料的故事",
+  "affiliates.why.1.body": "“大型商店会在每台设备上保留已登录购物车 — 而 Shopify 默认不会。”这一点可以验证、直观易懂，会让人忍不住去查看自己的商店。",
+  "affiliates.why.2.title": "推荐起来低风险",
+  "affiliates.why.2.body": "一键搞定，无需主题代码，不打扰顾客，还有免费套餐可以上手。您的受众几乎没什么好反对的。",
+  "affiliates.why.3.title": "持续佣金，而非一次性了结",
+  "affiliates.why.3.body": "每家付费商店都能让您赚取 {pct}% 的持续佣金，长达 {months} 个月 — 随着您带来的客户持续留存，收益也会不断累积。",
+
+  "affiliates.tools.title": "替您完成推销的可分享工具",
+  "affiliates.tools.1": "购物车流失计算器 — 让读者估算自己商店的流失",
+  "affiliates.tools.2": "免费商店检测 — 一个零风险的行动号召",
+  "affiliates.tools.3": "清晰的徽标、文案片段，以及那个对比故事",
+
+  "affiliates.form.title": "加入推广联盟计划",
+  "affiliates.form.success.heading": "您已进入队列 — 感谢！",
+  "affiliates.form.success.body": "我们会审核您的信息，并尽快发送您的推广链接、可分享工具以及最终确定的条款。",
+  "affiliates.partnersCta": "经营代理机构或为客户搭建商店？合作伙伴计划可能更适合您。"
+}

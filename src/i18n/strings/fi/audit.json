@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "Ilmainen Shopifyn laitteiden välisen ostoskorin analyysi | Persistent Cart",
+  "page.free-audit.desc": "Selvitä ilmaiseksi, pudottaako Shopify-kauppasi kirjautuneita ostoskoreja, kun asiakkaat vaihtavat laitetta — mitä se voisi maksaa sinulle ja mitkä ovat nopeat voitot. Ei asennusta tarvita.",
+  "page.free-audit.crumb": "Ilmainen analyysi",
+  "page.free-audit.h1": "Menettääkö kauppasi ostoskoreja, kun asiakkaat vaihtavat laitetta? Tarkistamme — ilmaiseksi.",
+  "page.free-audit.lede": "Useimmat kauppiaat eivät tiedä, säilyttääkö heidän kauppansa kirjautuneen asiakkaan ostoskorin laitteiden välillä — ja menetys on näkymätön raporteissasi. Lähetä meille kauppasi, niin tarkistamme, arvioimme vaikutuksen ja osoitamme nopeat voitot. Ei sitoumusta, ei asennusta tarvita.",
+
+  "audit.checks.title": "Mitä tarkistamme",
+  "audit.checks.1.title": "Selviääkö kirjautuneen asiakkaan ostoskori laitteen vaihdon yli?",
+  "audit.checks.1.body": "Testaamme, seuraako kirjautuneen asiakkaan ostoskori häntä puhelimesta työpöydälle kaupassasi, vai katoaako se hiljaa.",
+  "audit.checks.2.title": "Suunnilleen mitä se maksaa sinulle",
+  "audit.checks.2.body": "Kauppasi profiilin ja alan vertailulukujen avulla annamme läpinäkyvän, suuntaa-antavan arvion pelissä olevasta tuotosta — emme koskaan lainattua tilastoa.",
+  "audit.checks.3.title": "Nopeat voitot",
+  "audit.checks.3.body": "Käytännönläheisiä, painostamattomia suosituksia — asensitpa Persistent Cartin tai et.",
+
+  "audit.form.title": "Pyydä ilmainen analyysisi",
+  "audit.form.storeUrl": "Kauppasi URL-osoite",
+  "audit.form.storeUrlPlaceholder": "kauppasi.myshopify.com",
+  "audit.form.name": "Nimesi",
+  "audit.form.email": "Sähköposti",
+  "audit.form.plan": "Shopify-paketti (valinnainen)",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "En ole varma",
+  "audit.form.orders": "Tilauksia kuukaudessa (valinnainen)",
+  "audit.form.submit": "Hanki ilmainen analyysini",
+  "audit.form.privacy": "Käytämme näitä tietoja vain analyysisi valmisteluun ja vastaamiseen. Ei roskapostia, ei jakamista. Lue tietosuojaperiaatteemme.",
+  "audit.form.success.heading": "Analyysi pyydetty — kiitos!",
+  "audit.form.success.body": "Saimme pyyntösi ja lähetämme sähköpostitse ilmaisen laitteiden välisen ostoskorin analyysisi 1–2 arkipäivän kuluessa. Pidä silmällä postilaatikkoasi.",
+
+  "audit.expectations": "Lähetämme analyysisi sähköpostitse 1–2 arkipäivän kuluessa. Se on aidosti ilmainen, eikä mihinkään asennukseen ole velvoitetta.",
+  "audit.trust": "Persistent Cartin tekijöiltä — Built for Shopify, auttanut kauppoja vuodesta 2016."
+}

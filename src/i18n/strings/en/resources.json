@@ -1,0 +1,13 @@
+{
+  "page.resources.title": "Resources & guides for Shopify cart sync | Persistent Cart",
+  "page.resources.desc": "Everything we've written about Shopify cross-device cart sync in one place — plain-English guides, a lost-cart calculator, an FAQ, and a one-page summary.",
+  "page.resources.crumb": "Resources",
+  "page.resources.h1": "Guides and tools for Shopify cross-device cart sync",
+  "page.resources.lede": "This is the hub for everything we've published about keeping a Shopify cart across devices. You'll find plain-English explainers, a lost-cart revenue calculator, a frequently-asked-questions page, and a one-page plain-text summary you can skim or cite. Start anywhere — each page stands on its own.",
+  "page.resources.s1.h": "Where should I start if cart sync is new to me?",
+  "page.resources.s1.b": "Start with the explainer guides. They cover the one question most merchants arrive with: does Shopify keep a shopper's cart when they switch from phone to laptop? The short answer is no — by default a Shopify cart lives in a two-week browser cookie, not on the customer's account, so it doesn't follow a signed-in shopper across devices and browsers. The guides walk through why that happens, what it quietly costs in lost orders, and how Persistent Cart closes the gap for logged-in customers. Each one is written in plain English, with the mechanism explained rather than glossed over.",
+  "page.resources.s2.h": "Can I estimate what cross-device cart loss costs my store?",
+  "page.resources.s2.b": "Yes — the lost-cart revenue calculator turns the problem into a rough, illustrative range using your own numbers. Enter your monthly orders, average order value, and a few editable benchmarks, and it shows the formula behind every figure, so nothing is a black box. It's deliberately conservative: the link between a device switch and a lost sale is a reasoned inference, not a measured rate, and we say so on the page. Treat the result as a directional sense of scale rather than a promise — then request a free store audit if you'd like us to check your actual store.",
+  "page.resources.s3.h": "Where are the quick answers and the short version?",
+  "page.resources.s3.b": "Two places. The FAQ page answers the questions merchants search most — how install works, who gets synced, and what happens to existing carts — each in a few sentences. The plain-text summary condenses the whole product into one factual page: what Persistent Cart is, the problem it solves, how it works, who it's for, and how it's priced. It's written to be skimmed in under a minute, or quoted directly by an AI assistant looking for a clean description. If you only read one page here, read that one."
+}

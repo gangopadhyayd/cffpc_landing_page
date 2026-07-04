@@ -1,0 +1,79 @@
+---
+import Icon from './Icon.astro';
+
+export interface Feature {
+  title: string;
+  body: string;
+  icon?: string;
+}
+interface Props {
+  items: Feature[];
+  columns?: 2 | 3 | 4;
+  variant?: 'card' | 'plain';
+}
+const { items, columns = 3, variant = 'card' } = Astro.props;
+---
+
+<div class={`feature-grid cols-${columns} variant-${variant}`}>
+  {
+    items.map((it) => (
+      <div class="feature">
+        {it.icon && (
+          <span class="feature-icon">
+            <Icon name={it.icon} size={20} />
+          </span>
+        )}
+        <h3 class="feature-title">{it.title}</h3>
+        <p class="feature-body">{it.body}</p>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .feature-grid {
+    display: grid;
+    gap: 1.1rem;
+  }
+  .variant-card .feature {
+    background: var(--color-card);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-lg);
+    padding: 1.4rem;
+    box-shadow: var(--shadow-card);
+  }
+  .variant-plain .feature {
+    padding: 0.25rem 0;
+  }
+  .feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: var(--radius-md);
+    background: var(--color-accent-tint);
+    color: var(--color-accent-ink);
+    margin-bottom: 0.9rem;
+  }
+  .feature-title {
+    font-family: var(--font-display);
+    font-size: 1.16rem;
+    font-weight: 500;
+    margin-bottom: 0.45rem;
+    line-height: 1.25;
+  }
+  .feature-body {
+    color: var(--color-ink-soft);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  @media (min-width: 640px) {
+    .cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .cols-4 { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .cols-4 { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>

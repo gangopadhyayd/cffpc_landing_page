@@ -1,0 +1,153 @@
+---
+import Base from '../../layouts/Base.astro';
+import Section from '../Section.astro';
+import LeadForm, { type FormField } from '../LeadForm.astro';
+import Icon from '../Icon.astro';
+import { t } from '../../i18n';
+import { titleKey, descKey } from '../../config/routes';
+import { localizedUrl } from '../../i18n/routing';
+import { webPageSchema } from '../../lib/schema';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = '' } = Astro.props;
+const tt = (k: string) => t(locale, k);
+
+const title = tt(titleKey('free-audit'));
+const description = tt(descKey('free-audit'));
+
+const checks = [1, 2, 3].map((n) => ({
+  title: tt(`audit.checks.${n}.title`),
+  body: tt(`audit.checks.${n}.body`),
+}));
+
+const fields: FormField[] = [
+  { name: 'store_url', label: tt('audit.form.storeUrl'), type: 'url', required: true, placeholder: tt('audit.form.storeUrlPlaceholder'), autocomplete: 'url' },
+  { name: 'name', label: tt('audit.form.name'), type: 'text', required: true, autocomplete: 'name' },
+  { name: 'email', label: tt('audit.form.email'), type: 'email', required: true, autocomplete: 'email' },
+  {
+    name: 'shopify_plan',
+    label: tt('audit.form.plan'),
+    type: 'select',
+    options: [
+      { value: 'basic', label: tt('audit.form.plan.basic') },
+      { value: 'grow', label: tt('audit.form.plan.grow') },
+      { value: 'advanced', label: tt('audit.form.plan.advanced') },
+      { value: 'plus', label: tt('audit.form.plan.plus') },
+      { value: 'unsure', label: tt('audit.form.plan.unsure') },
+    ],
+  },
+  { name: 'monthly_orders', label: tt('audit.form.orders'), type: 'number' },
+];
+
+const jsonLd = [webPageSchema({ url: localizedUrl(locale, slug), name: title, description, locale })];
+---
+
+<Base locale={locale} slug={slug} title={title} description={description} jsonLd={jsonLd}>
+  <Section eyebrow={tt('home.audit.eyebrow')} heading={tt('page.free-audit.h1')} intro={tt('page.free-audit.lede')} headingLevel="h1">
+    <div class="audit-grid">
+      <div class="audit-checks">
+        <h2 class="audit-checks-title">{tt('audit.checks.title')}</h2>
+        <ul>
+          {
+            checks.map((c) => (
+              <li>
+                <span class="ac-icon"><Icon name="search" size={18} /></span>
+                <div>
+                  <strong>{c.title}</strong>
+                  <p>{c.body}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="audit-expect"><Icon name="clock" size={15} /> {tt('audit.expectations')}</p>
+        <p class="audit-trust"><Icon name="badge-check" size={15} /> {tt('audit.trust')}</p>
+      </div>
+
+      <div class="audit-form-col">
+        <h2 class="audit-form-title">{tt('audit.form.title')}</h2>
+        <LeadForm
+          formName="audit"
+          fields={fields}
+          submitLabel={tt('audit.form.submit')}
+          successHeading={tt('audit.form.success.heading')}
+          successBody={tt('audit.form.success.body')}
+          privacyNote={tt('audit.form.privacy')}
+          source="free-audit"
+        />
+      </div>
+    </div>
+  </Section>
+</Base>
+
+<style>
+  .audit-grid {
+    display: grid;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .audit-checks-title,
+  .audit-form-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+  }
+  .audit-checks ul {
+    list-style: none;
+    display: grid;
+    gap: 1.25rem;
+  }
+  .audit-checks li {
+    display: flex;
+    gap: 0.85rem;
+  }
+  .ac-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: var(--radius-md);
+    background: var(--color-accent-tint);
+    color: var(--color-accent-ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+  .audit-checks li strong {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .audit-checks li p {
+    color: var(--color-ink-soft);
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+  .audit-expect,
+  .audit-trust {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+    margin-top: 1.5rem;
+    font-size: 0.86rem;
+    color: var(--color-ink-soft);
+  }
+  .audit-expect :global(svg),
+  .audit-trust :global(svg) {
+    color: var(--color-accent);
+    flex: none;
+    margin-top: 0.15rem;
+  }
+  .audit-form-col {
+    background: var(--color-card);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-xl);
+    padding: clamp(1.5rem, 3vw, 2rem);
+    box-shadow: var(--shadow-card);
+  }
+  @media (min-width: 880px) {
+    .audit-grid {
+      grid-template-columns: 0.9fr 1.1fr;
+    }
+  }
+</style>

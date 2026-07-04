@@ -1,0 +1,41 @@
+{
+  "page.calculator.title": "Kalkulator for tapt omsetning fra handlekurver for Shopify | Persistent Cart",
+  "page.calculator.desc": "Et transparent, illustrerende anslag på omsetningen som går tapt når innloggede kunder bytter enhet i Shopify-butikken din. Juster referanseverdiene; vi viser formelen.",
+  "page.calculator.h1": "Hvor mye kan tap av handlekurver mellom enheter koste deg?",
+  "page.calculator.lede": "Når en innlogget kunde bygger en handlekurv på én enhet og fullfører på en annen, mister en standard Shopify-butikk den. Denne kalkulatoren gjør det om til et grovt, illustrerende anslag — basert på tallene dine og bransjereferanser. Hver verdi kan redigeres, og formelen vises; ingenting er en svart boks.",
+
+  "calc.heading": "Beregn tapt omsetning fra handlekurver",
+  "calc.intro": "Standardverdiene er forhåndsutfylt med bransjereferanser. Juster dem så de passer butikken din.",
+
+  "calc.input.orders.label": "Ordrer per måned",
+  "calc.input.orders.help": "Omtrent hvor mange ordrer butikken din får per måned.",
+  "calc.input.aov.label": "Gjennomsnittlig ordreverdi",
+  "calc.input.aov.help": "Den typiske ordresummen din.",
+  "calc.input.loggedIn.label": "Andel kunder som er innlogget",
+  "calc.input.loggedIn.help": "Andelen kjøpere som handler mens de er innlogget på en konto. Referanse: ~50 %.",
+  "calc.input.crossDevice.label": "Andel som bytter enhet",
+  "calc.input.crossDevice.help": "Andelen innloggede kunder som ser på varer på både mobil og datamaskin før de kjøper. Referanse: ~30 % (begrunnet anslag, ikke en målt andel).",
+  "calc.input.recovery.label": "Lagrede handlekurver som blir ordrer",
+  "calc.input.recovery.help": "Konservativ andel av disse reisene mellom enheter som blir til en ordre de ellers ville ha mistet. Standard 2 % — bevisst forsiktig.",
+  "calc.currency.label": "Valuta",
+
+  "calc.result.heading": "Illustrerende gjenvunnet omsetning",
+  "calc.result.monthly": "Per måned",
+  "calc.result.annual": "Per år",
+  "calc.result.rangeNote": "Vist som et intervall (±) fordi dette er et anslag, ikke et målt resultat.",
+  "calc.result.disclaimer": "Dette er et grovt, illustrerende intervall basert på verdiene dine og bransjegjennomsnitt — ikke et målt resultat fra appen. Koblingen mellom enhetsbytte → tapt salg er en begrunnet slutning, ikke en publisert andel. Se på det som en retningsgivende følelse av størrelsesorden.",
+
+  "calc.formula.label": "Formelen (ingen svart boks)",
+  "calc.formula.text": "Gjenvunne ordrer/måned = Ordrer per måned × Andel innlogget × Andel som bytter enhet × Andel lagrede handlekurver. Omsetning = gjenvunne ordrer × gjennomsnittlig ordreverdi. Årlig = × 12.",
+
+  "calc.cta.lead": "Vil du at vi skal sjekke din faktiske butikk i stedet for referanseverdier?",
+  "calc.cta.audit": "Få en gratis butikkgjennomgang",
+  "calc.cta.install": "Legg til Persistent Cart — start gratis",
+
+  "calc.page.s1.h": "Hvorfor en standard Shopify-butikk lekker handlekurver mellom enheter",
+  "calc.page.s1.b": "I en standard Shopify-butikk lagres handlekurven i en informasjonskapsel i nettleseren, ikke på kundens konto. Så en innlogget kundes handlekurv følger dem ikke fra mobil til laptop — den er rett og slett ikke der på den andre enheten. Kunden bygger enten opp en mindre handlekurv på nytt fra hukommelsen eller kommer ikke tilbake i det hele tatt. Fordi ingen feilmelding vises og ingen e-post utløses, ser de fleste forhandlere aldri tapet i rapportene sine.",
+  "calc.page.s2.h": "Slik leser du dette anslaget",
+  "calc.page.s2.b": "Kalkulatoren multipliserer ordrevolumet ditt med tre redigerbare andeler: hvor mange kunder som er innlogget, hvor mange av dem som beveger seg mellom enheter, og en bevisst konservativ andel for hvor mange av disse reisene en bevart handlekurv gjør om til et salg. Vi viser resultatet som et intervall, aldri et enkelt skråsikkert tall, fordi koblingen mellom enhetsbytte og tapt salg er en begrunnet slutning snarere enn en målt statistikk. Den ærlige versjonen av denne matematikken er mer troverdig enn en lånt påstand om «+X % salg» — og det er derfor vi viser formelen.",
+  "calc.page.s3.h": "Fra anslag til sikkerhet",
+  "calc.page.s3.b": "Et anslag er et utgangspunkt. For å se om akkurat din butikk mister innloggede handlekurver på tvers av enheter — og hva det er verdt for deg — be om en gratis butikkgjennomgang. Vi sjekker butikkens faktiske atferd på tvers av enheter og sender deg det vi finner, uten forpliktelser og uten at du trenger å installere noe."
+}

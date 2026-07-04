@@ -1,0 +1,632 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../Hero.astro';
+import Section from '../Section.astro';
+import FeatureGrid from '../FeatureGrid.astro';
+import CartCard from '../CartCard.astro';
+import ParityCards from '../ParityCards.astro';
+import ParityDiagram from '../ParityDiagram.astro';
+import MetricBand from '../MetricBand.astro';
+import Testimonial from '../Testimonial.astro';
+import ComparisonTable from '../ComparisonTable.astro';
+import FAQ from '../FAQ.astro';
+import CTABand from '../CTABand.astro';
+import Icon from '../Icon.astro';
+
+import { t } from '../../i18n';
+import { titleKey, descKey } from '../../config/routes';
+import { localizedPath, localizedUrl } from '../../i18n/routing';
+import { site, proof, proofFallback, pricingTiers } from '../../config/site';
+import {
+  organizationSchema,
+  websiteSchema,
+  softwareApplicationSchema,
+  faqPageSchema,
+  webPageSchema,
+} from '../../lib/schema';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = '' } = Astro.props;
+const tt = (k: string, v?: Record<string, string | number>) => t(locale, k, v);
+
+const title = tt(titleKey('home'));
+const description = tt(descKey('home'));
+
+const hrefs = {
+  install: site.appStoreUrl,
+  audit: localizedPath(locale, 'free-audit'),
+  calculator: localizedPath(locale, 'lost-cart-revenue-calculator'),
+  partners: localizedPath(locale, 'partners'),
+  pricing: localizedPath(locale, 'pricing'),
+  bigRetailers: localizedPath(locale, 'how-big-retailers-persist-carts'),
+  b2b: localizedPath(locale, 'shopify-b2b-cart-persistence'),
+  reviews: site.appStoreUrl,
+  privacy: localizedPath(locale, 'privacy'),
+  faq: localizedPath(locale, 'faq'),
+};
+
+const reviewCount = proof.reviewCount;
+
+const benefits = [
+  { title: tt('home.benefits.1.title'), body: tt('home.benefits.1.body'), icon: 'sync' },
+  { title: tt('home.benefits.2.title'), body: tt('home.benefits.2.body'), icon: 'trending-up' },
+  { title: tt('home.benefits.3.title'), body: tt('home.benefits.3.body'), icon: 'zap' },
+];
+
+const parityCards = [
+  {
+    name: tt('home.parity.walmart.name'),
+    quote: tt('home.parity.walmart.quote'),
+    source: tt('home.parity.walmart.source'),
+    sourceHref: 'https://www.walmart.com/help/article/create-or-edit-an-account/147a20c9cada4d75b8e0128b16fb6fda',
+    tone: 'good' as const,
+  },
+  {
+    name: tt('home.parity.amazon.name'),
+    quote: tt('home.parity.amazon.quote'),
+    source: tt('home.parity.amazon.source'),
+    sourceHref: 'https://www.amazon.com/gp/help/customer/display.html?nodeId=GU235AYZNKC6PDGQ',
+    tone: 'good' as const,
+  },
+  {
+    name: tt('home.parity.shopify.name'),
+    quote: tt('home.parity.shopify.quote'),
+    source: tt('home.parity.shopify.source'),
+    sourceHref: 'https://www.shopify.com/legal/cookies',
+    tone: 'bad' as const,
+  },
+];
+
+const metrics = [
+  { value: String(proof.launchedYear), label: tt('home.metrics.1.label'), note: tt('home.metrics.1.note') },
+  { value: `${proof.reviewRating}★`, label: tt('home.metrics.2.label'), note: tt('home.metrics.2.note') },
+  {
+    value: proof.storesServed ? `${proof.storesServed.toLocaleString()}+` : tt('home.trust.stat.stores', { stores: '' }).trim() || 'Thousands',
+    label: tt('home.metrics.3.label'),
+    note: tt('home.metrics.3.note'),
+  },
+];
+// keep stores metric robust to the qualitative fallback
+metrics[2].value = proof.storesServed ? `${proof.storesServed.toLocaleString()}+` : 'Thousands';
+
+const compareColumns = [
+  { label: tt('home.compare.col.persistent'), highlight: true },
+  { label: tt('home.compare.col.recovery') },
+];
+const compareRows = [
+  {
+    label: tt('home.compare.row.when.label'),
+    cells: [
+      { value: tt('home.compare.row.when.persistent'), tone: 'good' as const },
+      { value: tt('home.compare.row.when.recovery'), tone: 'neutral' as const },
+    ],
+  },
+  {
+    label: tt('home.compare.row.who.label'),
+    cells: [
+      { value: tt('home.compare.row.who.persistent'), tone: 'good' as const },
+      { value: tt('home.compare.row.who.recovery'), tone: 'bad' as const },
+    ],
+  },
+  {
+    label: tt('home.compare.row.action.label'),
+    cells: [
+      { value: tt('home.compare.row.action.persistent'), tone: 'good' as const },
+      { value: tt('home.compare.row.action.recovery'), tone: 'bad' as const },
+    ],
+  },
+  {
+    label: tt('home.compare.row.cost.label'),
+    cells: [
+      { value: tt('home.compare.row.cost.persistent'), tone: 'good' as const },
+      { value: tt('home.compare.row.cost.recovery'), tone: 'bad' as const },
+    ],
+  },
+];
+
+const dataPoints = [tt('home.data.point.1'), tt('home.data.point.2'), tt('home.data.point.3')];
+
+const faqItems = [1, 2, 3, 4, 5, 6, 7].map((n) => ({
+  q: tt(`home.faq.q${n}.q`),
+  a: tt(`home.faq.q${n}.a`),
+}));
+
+const jsonLd = [
+  organizationSchema(),
+  websiteSchema(),
+  softwareApplicationSchema(description),
+  webPageSchema({ url: localizedUrl(locale, ''), name: title, description, locale }),
+  faqPageSchema(faqItems),
+];
+
+const storesText = proof.storesServed ? `${proof.storesServed.toLocaleString()}+ Shopify stores` : proofFallback.storesServed;
+---
+
+<Base locale={locale} slug={slug} title={title} description={description} ogType="website" jsonLd={jsonLd}>
+  <Hero locale={locale} />
+
+  {/* 2 — Trust bar */}
+  <section class="trustbar">
+    <div class="container-page trustbar-inner">
+      <p class="trustbar-lead">{tt('home.trust.lead')}</p>
+      <ul class="trustbar-stats">
+        <li><Icon name="star" size={16} /> {tt('home.trust.stat.rating', { count: reviewCount })}</li>
+        <li><Icon name="badge-check" size={16} /> {tt('home.trust.stat.bfs')}</li>
+        <li><Icon name="clock" size={16} /> {tt('home.trust.stat.since')}</li>
+        <li><Icon name="store" size={16} /> {tt('home.trust.stat.stores', { stores: storesText })}</li>
+      </ul>
+    </div>
+  </section>
+
+  {/* 3 — Problem → aha */}
+  <Section eyebrow={tt('home.problem.eyebrow')} heading={tt('home.problem.heading')} intro={tt('home.problem.intro')} bg="soft">
+    <div class="prob-grid">
+      <div class="prob-card prob-without">
+        <span class="prob-label">{tt('home.problem.without.label')}</span>
+        <h3>{tt('home.problem.without.title')}</h3>
+        <p>{tt('home.problem.without.body')}</p>
+      </div>
+      <div class="prob-card prob-with">
+        <span class="prob-label">{tt('home.problem.with.label')}</span>
+        <h3>{tt('home.problem.with.title')}</h3>
+        <p>{tt('home.problem.with.body')}</p>
+      </div>
+    </div>
+    <p class="prob-aha"><Icon name="sparkle" size={18} /> {tt('home.problem.aha')}</p>
+  </Section>
+
+  {/* 4 — Benefits */}
+  <Section eyebrow={tt('home.benefits.eyebrow')} heading={tt('home.benefits.heading')}>
+    <FeatureGrid items={benefits} columns={3} />
+  </Section>
+
+  {/* 5 — Product in motion */}
+  <Section eyebrow={tt('home.motion.eyebrow')} heading={tt('home.motion.heading')} intro={tt('home.motion.intro')} bg="card" align="center">
+    <div class="motion-scene" data-crossdevice>
+      <div class="motion-device"><CartCard locale={locale} device="phone" synced={true} /></div>
+      <div class="motion-link" aria-hidden="true">
+        <span class="motion-dot"></span>
+        <Icon name="sync" size={26} />
+      </div>
+      <div class="motion-device motion-laptop"><CartCard locale={locale} device="laptop" synced={true} /></div>
+    </div>
+    <p class="motion-note"><Icon name="badge-check" size={16} /> {tt('home.motion.note')}</p>
+  </Section>
+
+  {/* 6 — How big retailers do it (parity) */}
+  <Section eyebrow={tt('home.parity.eyebrow')} heading={tt('home.parity.heading')} intro={tt('home.parity.intro')}>
+    <ParityCards cards={parityCards} />
+    <div class="parity-diagram-wrap">
+      <ParityDiagram
+        accountLabel={tt('home.parity.shopify.name') === 'Default Shopify' ? 'Customer account' : 'Customer account'}
+        cartLabel={tt('demo.cart.title')}
+        phoneLabel={tt('demo.device.phone')}
+        laptopLabel={tt('demo.device.laptop')}
+        caption={tt('home.parity.diagram.caption')}
+      />
+    </div>
+    <p class="parity-cta">
+      <a class="link-underline" href={hrefs.bigRetailers}>{tt('home.parity.cta')} →</a>
+    </p>
+  </Section>
+
+  {/* 7 — Metric band */}
+  <Section eyebrow={tt('home.metrics.eyebrow')} heading={tt('home.metrics.heading')} bg="navy" align="center">
+    <MetricBand items={metrics} bg="navy" />
+  </Section>
+
+  {/* 8 — Testimonial */}
+  <Section eyebrow={tt('home.testimonial.eyebrow')} bg="soft" align="center">
+    <div class="testimonial-center">
+      <Testimonial
+        quote={tt('home.testimonial.quote')}
+        author={tt('home.testimonial.author')}
+        meta={tt('home.testimonial.meta')}
+        cta={tt('home.testimonial.cta', { count: reviewCount })}
+        href={hrefs.reviews}
+      />
+    </div>
+  </Section>
+
+  {/* 9 — Comparison */}
+  <Section eyebrow={tt('home.compare.eyebrow')} heading={tt('home.compare.heading')} intro={tt('home.compare.intro')}>
+    <ComparisonTable rowHeader="" columns={compareColumns} rows={compareRows} caption={tt('home.compare.heading')} />
+    <p class="compare-foot">{tt('home.compare.footnote')}</p>
+  </Section>
+
+  {/* 10 — Calculator teaser */}
+  <Section bg="card">
+    <div class="calc-teaser">
+      <div class="calc-teaser-icon"><Icon name="calculator" size={28} /></div>
+      <div class="calc-teaser-body">
+        <span class="eyebrow">{tt('home.calc.eyebrow')}</span>
+        <h2>{tt('home.calc.heading')}</h2>
+        <p>{tt('home.calc.intro')}</p>
+        <a class="btn btn-primary" href={hrefs.calculator} data-event="calculator_cta" data-source="home">{tt('home.calc.cta')}</a>
+      </div>
+    </div>
+  </Section>
+
+  {/* 11 — Free audit CTA */}
+  <CTABand
+    eyebrow={tt('home.audit.eyebrow')}
+    heading={tt('home.audit.heading')}
+    body={tt('home.audit.body')}
+    actions={[{ label: tt('home.audit.cta'), href: hrefs.audit, style: 'primary', event: 'audit_cta', source: 'home' }]}
+    bg="accent"
+  />
+
+  {/* 12 — B2B / Plus */}
+  <Section eyebrow={tt('home.b2b.eyebrow')} bg="paper">
+    <div class="b2b-grid">
+      <div>
+        <h2 class="b2b-heading">{tt('home.b2b.heading')}</h2>
+        <p class="b2b-body">{tt('home.b2b.body')}</p>
+        <a class="link-underline" href={hrefs.b2b}>{tt('home.b2b.cta')} →</a>
+      </div>
+      <div class="b2b-visual">
+        <CartCard locale={locale} device="laptop" synced={true} />
+      </div>
+    </div>
+  </Section>
+
+  {/* 13 — Partner strip */}
+  <CTABand
+    eyebrow={tt('home.partner.eyebrow')}
+    heading={tt('home.partner.heading')}
+    body={tt('home.partner.body')}
+    actions={[{ label: tt('home.partner.cta'), href: hrefs.partners, style: 'primary', event: 'partner_cta', source: 'home' }]}
+    bg="navy"
+  />
+
+  {/* 14 — Data handling */}
+  <Section eyebrow={tt('home.data.eyebrow')} heading={tt('home.data.heading')} intro={tt('home.data.body')} bg="soft">
+    <ul class="data-points">
+      {dataPoints.map((p) => (
+        <li><Icon name="check" size={18} /> {p}</li>
+      ))}
+    </ul>
+    <a class="link-underline data-cta" href={hrefs.privacy}>{tt('home.data.cta')} →</a>
+  </Section>
+
+  {/* 15 — Pricing preview */}
+  <Section eyebrow={tt('home.pricing.eyebrow')} heading={tt('home.pricing.heading')} intro={tt('home.pricing.intro')} align="center">
+    <div class="pricing-row">
+      {pricingTiers.map((tier) => (
+        <div class={`price-chip ${tier.highlight ? 'is-highlight' : ''}`}>
+          <span class="price-plan">{tier.shopifyPlan}</span>
+          <span class="price-amount tabular">{tier.price}<span class="price-cadence">{tier.cadence}</span></span>
+        </div>
+      ))}
+    </div>
+    <p class="pricing-note">{tt('home.pricing.trialNote')}</p>
+    <div class="pricing-cta">
+      <a class="btn btn-primary" href={site.appStoreUrl} target="_blank" rel="noopener" data-event="install_click" data-source="home_pricing">{tt('cta.install')}</a>
+      <a class="btn btn-secondary" href={hrefs.pricing}>{tt('home.pricing.cta')}</a>
+    </div>
+  </Section>
+
+  {/* 16 — FAQ */}
+  <Section eyebrow={tt('home.faq.eyebrow')} heading={tt('home.faq.heading')} bg="card">
+    <FAQ items={faqItems} group="home-faq" />
+    <p class="faq-more"><a class="link-underline" href={hrefs.faq}>{tt('home.faq.cta')} →</a></p>
+  </Section>
+
+  {/* 17 — Final CTA */}
+  <CTABand
+    heading={tt('home.final.heading')}
+    body={tt('home.final.body')}
+    actions={[
+      { label: tt('home.final.install'), href: site.appStoreUrl, style: 'invert', external: true, event: 'install_click', source: 'home_final' },
+      { label: tt('home.final.audit'), href: hrefs.audit, style: 'ghost', event: 'audit_cta', source: 'home_final' },
+    ]}
+    trust={tt('home.final.trust')}
+    bg="navy"
+  />
+</Base>
+
+<style>
+  .trustbar {
+    border-bottom: 1px solid var(--color-hairline);
+    padding-block: 1.5rem;
+    background: var(--color-paper);
+  }
+  .trustbar-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+  }
+  .trustbar-lead {
+    font-weight: 600;
+    max-width: 30rem;
+  }
+  .trustbar-stats {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.4rem;
+    font-size: 0.85rem;
+    color: var(--color-ink-soft);
+  }
+  .trustbar-stats li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .trustbar-stats :global(svg) {
+    color: var(--color-accent);
+  }
+
+  .prob-grid {
+    display: grid;
+    gap: 1.1rem;
+  }
+  .prob-card {
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    border: 1px solid var(--color-hairline);
+  }
+  .prob-without {
+    background: var(--color-card);
+  }
+  .prob-with {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+  .prob-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+  }
+  .prob-with .prob-label {
+    color: var(--color-accent);
+  }
+  .prob-card h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0 0.6rem;
+  }
+  .prob-with h3 {
+    color: #fff;
+  }
+  .prob-card p {
+    color: var(--color-ink-soft);
+    line-height: 1.6;
+  }
+  .prob-with p {
+    color: #c9c1b4;
+  }
+  .prob-aha {
+    margin-top: 1.5rem;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-ink);
+  }
+  .prob-aha :global(svg) {
+    color: var(--color-accent);
+    flex: none;
+  }
+
+  .motion-scene {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+    justify-items: center;
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+  .motion-device {
+    width: 100%;
+    max-width: 20rem;
+  }
+  .motion-laptop {
+    max-width: 26rem;
+  }
+  .motion-link {
+    color: var(--color-accent);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .motion-dot {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    opacity: 0.16;
+    animation: motionpulse 2.4s var(--ease-out-soft) infinite;
+  }
+  @keyframes motionpulse {
+    0% { transform: scale(0.6); opacity: 0.26; }
+    70% { transform: scale(1.5); opacity: 0; }
+    100% { opacity: 0; }
+  }
+  .motion-note {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-ink-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    justify-content: center;
+    width: 100%;
+  }
+  .motion-note :global(svg) {
+    color: var(--color-evergreen);
+    flex: none;
+  }
+
+  .parity-diagram-wrap {
+    margin-top: 1.75rem;
+  }
+  .parity-cta {
+    margin-top: 1.25rem;
+    font-weight: 600;
+  }
+
+  .testimonial-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .compare-foot {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-ink-soft);
+    font-style: italic;
+  }
+
+  .calc-teaser {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .calc-teaser-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: var(--radius-lg);
+    background: var(--color-accent-tint);
+    color: var(--color-accent-ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+  .calc-teaser-body {
+    flex: 1;
+    min-width: 18rem;
+  }
+  .calc-teaser-body h2 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin: 0.5rem 0 0.6rem;
+  }
+  .calc-teaser-body p {
+    color: var(--color-ink-soft);
+    margin-bottom: 1.25rem;
+    max-width: 44rem;
+  }
+
+  .b2b-grid {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+  }
+  .b2b-heading {
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    margin-bottom: 0.9rem;
+  }
+  .b2b-body {
+    color: var(--color-ink-soft);
+    line-height: 1.65;
+    margin-bottom: 1rem;
+    max-width: 38rem;
+  }
+  .b2b-visual {
+    max-width: 24rem;
+  }
+
+  .data-points {
+    list-style: none;
+    display: grid;
+    gap: 0.7rem;
+    max-width: 40rem;
+  }
+  .data-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-weight: 500;
+  }
+  .data-points :global(svg) {
+    color: var(--color-evergreen);
+    flex: none;
+    margin-top: 0.15rem;
+  }
+  .data-cta {
+    display: inline-block;
+    margin-top: 1.25rem;
+    font-weight: 600;
+  }
+
+  .pricing-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: center;
+  }
+  .price-chip {
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-lg);
+    padding: 0.9rem 1.2rem;
+    background: var(--color-card);
+    text-align: center;
+    min-width: 8rem;
+  }
+  .price-chip.is-highlight {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 1px var(--color-accent);
+  }
+  .price-plan {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--color-ink-faint);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .price-amount {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 540;
+    margin-top: 0.25rem;
+  }
+  .price-cadence {
+    font-size: 0.8rem;
+    color: var(--color-ink-faint);
+    font-family: var(--font-sans);
+  }
+  .pricing-note {
+    text-align: center;
+    margin-top: 1.1rem;
+    font-size: 0.9rem;
+    color: var(--color-ink-soft);
+  }
+  .pricing-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.25rem;
+  }
+
+  .faq-more {
+    margin-top: 1.25rem;
+    font-weight: 600;
+  }
+
+  @media (min-width: 760px) {
+    .prob-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .motion-scene {
+      grid-template-columns: 1fr auto 1.3fr;
+    }
+    .b2b-grid {
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+  }
+</style>

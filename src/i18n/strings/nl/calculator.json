@@ -1,0 +1,41 @@
+{
+  "page.calculator.title": "Calculator omzetverlies verloren winkelwagens voor Shopify | Persistent Cart",
+  "page.calculator.desc": "Een transparante, illustratieve schatting van de omzet die verloren gaat wanneer ingelogde shoppers van apparaat wisselen in je Shopify-winkel. Pas de benchmarks aan; wij tonen de formule.",
+  "page.calculator.h1": "Hoeveel zou cross-device winkelwagenverlies je kunnen kosten?",
+  "page.calculator.lede": "Wanneer een ingelogde shopper een winkelwagen opbouwt op het ene apparaat en afmaakt op een ander, verliest een standaard Shopify-winkel die. Deze calculator zet dat om in een ruwe, illustratieve marge — op basis van jouw cijfers en branchebenchmarks. Elk invoerveld is bewerkbaar en de formule wordt getoond; niets is een black box.",
+
+  "calc.heading": "Schat je omzetverlies door verloren winkelwagens",
+  "calc.intro": "De standaardwaarden zijn vooraf ingevuld met branchebenchmarks. Pas ze aan op je winkel.",
+
+  "calc.input.orders.label": "Maandelijkse bestellingen",
+  "calc.input.orders.help": "Ongeveer hoeveel bestellingen je winkel per maand krijgt.",
+  "calc.input.aov.label": "Gemiddelde orderwaarde",
+  "calc.input.aov.help": "Je typische ordertotaal.",
+  "calc.input.loggedIn.label": "Aandeel ingelogde shoppers",
+  "calc.input.loggedIn.help": "Aandeel kopers dat shopt terwijl ze zijn ingelogd op een account. Benchmark: ~50%.",
+  "calc.input.crossDevice.label": "Aandeel dat van apparaat wisselt",
+  "calc.input.crossDevice.help": "Aandeel ingelogde shoppers dat tussen telefoon en desktop browst voordat ze kopen. Benchmark: ~30% (beredeneerde schatting, geen gemeten percentage).",
+  "calc.input.recovery.label": "Bewaarde winkelwagens die bestellingen worden",
+  "calc.input.recovery.help": "Conservatief aandeel van die cross-device trajecten dat uitmondt in een bestelling die ze anders verloren zouden hebben. Standaard 2% — bewust voorzichtig.",
+  "calc.currency.label": "Valuta",
+
+  "calc.result.heading": "Illustratieve herstelde omzet",
+  "calc.result.monthly": "Per maand",
+  "calc.result.annual": "Per jaar",
+  "calc.result.rangeNote": "Weergegeven als een marge (±) omdat dit een schatting is, geen gemeten resultaat.",
+  "calc.result.disclaimer": "Dit is een ruwe, illustratieve marge op basis van je invoer en branchegemiddelden — geen gemeten resultaat uit de app. Het verband apparaatwissel → verloren verkoop is een beredeneerde gevolgtrekking, geen gepubliceerd percentage. Beschouw het als een richtinggevend gevoel voor de schaal.",
+
+  "calc.formula.label": "De formule (geen black box)",
+  "calc.formula.text": "Herstelde bestellingen/maand = Maandelijkse bestellingen × Aandeel ingelogd × Aandeel apparaatwissel × Percentage bewaarde winkelwagens. Omzet = herstelde bestellingen × gemiddelde orderwaarde. Jaarlijks = × 12.",
+
+  "calc.cta.lead": "Wil je dat we je daadwerkelijke winkel controleren in plaats van benchmarks?",
+  "calc.cta.audit": "Vraag een gratis winkelaudit aan",
+  "calc.cta.install": "Voeg Persistent Cart toe — start gratis",
+
+  "calc.page.s1.h": "Waarom een standaard Shopify-winkel cross-device winkelwagens lekt",
+  "calc.page.s1.b": "In een standaard Shopify-winkel wordt de winkelwagen opgeslagen in een browsercookie, niet in het account van de klant. Dus de winkelwagen van een ingelogde shopper volgt hem niet van telefoon naar laptop — hij is er gewoon niet op het tweede apparaat. De shopper bouwt ofwel een kleinere winkelwagen op uit het geheugen, of komt helemaal niet terug. Omdat er geen foutmelding wordt getoond en geen e-mail wordt geactiveerd, zien de meeste merchants het verlies nooit in hun rapporten.",
+  "calc.page.s2.h": "Hoe je deze schatting moet lezen",
+  "calc.page.s2.b": "De calculator vermenigvuldigt je ordervolume met drie bewerkbare aandelen: hoeveel shoppers zijn ingelogd, hoeveel daarvan tussen apparaten bewegen, en een bewust conservatief percentage voor hoeveel van die trajecten een bewaarde winkelwagen omzet in een verkoop. We tonen het resultaat als een marge, nooit als één zelfverzekerd getal, omdat het verband tussen een apparaatwissel en een verloren verkoop een beredeneerde gevolgtrekking is in plaats van een gemeten statistiek. De eerlijke versie van deze rekensom is geloofwaardiger dan een geleende \"+X% verkoop\"-claim — en daarom tonen we de formule.",
+  "calc.page.s3.h": "Van schatting naar zekerheid",
+  "calc.page.s3.b": "Een schatting is een startpunt. Om te zien of jouw specifieke winkel ingelogde winkelwagens laat vallen tussen apparaten — en wat dat voor jou waard is — vraag een gratis winkelaudit aan. We controleren het daadwerkelijke cross-device gedrag van je winkel en sturen je terug wat we vinden, zonder verplichting en zonder installatie."
+}

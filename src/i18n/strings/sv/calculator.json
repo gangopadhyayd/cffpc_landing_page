@@ -1,0 +1,41 @@
+{
+  "page.calculator.title": "Intäktskalkylator för förlorade varukorgar för Shopify | Persistent Cart",
+  "page.calculator.desc": "En transparent, illustrativ uppskattning av intäkter som går förlorade när inloggade kunder byter enhet i din Shopify-butik. Justera riktmärkena; vi visar formeln.",
+  "page.calculator.h1": "Hur mycket kan förlorade varukorgar mellan enheter kosta dig?",
+  "page.calculator.lede": "När en inloggad kund bygger en varukorg på en enhet och avslutar på en annan tappar en standardbutik på Shopify den. Den här kalkylatorn omvandlar det till ett grovt, illustrativt intervall — utifrån dina siffror och branschriktmärken. Varje värde går att ändra och formeln visas; ingenting är en svart låda.",
+
+  "calc.heading": "Uppskatta intäkterna du förlorar på varukorgar",
+  "calc.intro": "Standardvärdena är illustrativa utgångspunkter (branschriktmärken där sådana finns). Justera dem så att de matchar din butik.",
+
+  "calc.input.orders.label": "Ordrar per månad",
+  "calc.input.orders.help": "Ungefär hur många ordrar din butik får per månad.",
+  "calc.input.aov.label": "Genomsnittligt ordervärde",
+  "calc.input.aov.help": "Din typiska ordersumma.",
+  "calc.input.loggedIn.label": "Andel inloggade kunder",
+  "calc.input.loggedIn.help": "Andel köpare som handlar inloggade på ett konto. Vi utgår från 50% som en illustrativ utgångspunkt — ställ in den efter din butiks verklighet.",
+  "calc.input.crossDevice.label": "Andel som byter enhet",
+  "calc.input.crossDevice.help": "Andel inloggade kunder som surfar på både mobil och dator innan de köper. Riktmärke: ~30% (resonerad uppskattning, inte en uppmätt siffra).",
+  "calc.input.recovery.label": "Sparade varukorgar som blir ordrar",
+  "calc.input.recovery.help": "Konservativ andel av de här resorna mellan enheter som blir en order som annars hade gått förlorad. Standard 2% — medvetet försiktigt.",
+  "calc.currency.label": "Valuta",
+
+  "calc.result.heading": "Illustrativa återvunna intäkter",
+  "calc.result.monthly": "Per månad",
+  "calc.result.annual": "Per år",
+  "calc.result.rangeNote": "Visas som ett intervall (±) eftersom det här är en uppskattning, inte ett uppmätt resultat.",
+  "calc.result.disclaimer": "Det här är ett grovt illustrativt intervall baserat på dina värden och branschgenomsnitt — inte ett uppmätt resultat från appen. Kopplingen mellan enhetsbyte → förlorad försäljning är en resonerad slutsats, inte en publicerad siffra. Betrakta det som en riktningsvisande känsla för storleksordningen.",
+
+  "calc.formula.label": "Formeln (ingen svart låda)",
+  "calc.formula.text": "Återvunna ordrar/månad = Ordrar per månad × Andel inloggade × Andel enhetsbyten × Andel sparade varukorgar. Intäkt = återvunna ordrar × ordervärde. Per år = × 12.",
+
+  "calc.cta.lead": "Vill du att vi kontrollerar din faktiska butik i stället för riktmärken?",
+  "calc.cta.audit": "Få en gratis butiksgranskning",
+  "calc.cta.install": "Lägg till Persistent Cart — börja gratis",
+
+  "calc.page.s1.h": "Varför en standardbutik på Shopify läcker varukorgar mellan enheter",
+  "calc.page.s1.b": "I en standardbutik på Shopify lagras varukorgen i en webbläsarkaka, inte på kundens konto. Så en inloggad kunds varukorg följer inte med från mobil till laptop — den finns helt enkelt inte på den andra enheten. Kunden bygger antingen upp en mindre varukorg ur minnet eller återvänder inte alls. Eftersom inget felmeddelande visas och inget mejl utlöses ser de flesta handlare aldrig förlusten i sina rapporter.",
+  "calc.page.s2.h": "Så tolkar du den här uppskattningen",
+  "calc.page.s2.b": "Kalkylatorn multiplicerar din ordervolym med tre justerbara andelar: hur många kunder som är inloggade, hur många av dem som rör sig mellan enheter och en medvetet konservativ siffra för hur många av de resorna som en bevarad varukorg gör till en försäljning. Vi visar resultatet som ett intervall, aldrig en enda självsäker siffra, eftersom kopplingen mellan enhetsbyte och förlorad försäljning är en resonerad slutsats snarare än en uppmätt statistik. Den ärliga versionen av den här uträkningen är mer trovärdig än ett lånat påstående om \"+X% försäljning\" — och det är därför vi visar formeln.",
+  "calc.page.s3.h": "Från uppskattning till visshet",
+  "calc.page.s3.b": "En uppskattning är en utgångspunkt. För att se om just din butik tappar inloggade varukorgar mellan enheter — och vad det är värt för dig — begär en gratis butiksgranskning. Vi kontrollerar din butiks faktiska beteende mellan enheter och skickar tillbaka vad vi hittar, utan förpliktelser och utan att du behöver installera något."
+}

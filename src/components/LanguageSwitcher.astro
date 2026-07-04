@@ -1,0 +1,128 @@
+---
+import { languageLinks } from '../i18n/routing';
+import { t } from '../i18n';
+import { getLocale } from '../config/locales';
+
+interface Props {
+  locale: string;
+  slug?: string;
+  invert?: boolean;
+}
+const { locale, slug = '', invert = false } = Astro.props;
+const links = languageLinks(slug);
+const current = getLocale(locale);
+---
+
+<details class="lang" data-invert={invert}>
+  <summary aria-label={t(locale, 'nav.chooseLanguage')}>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" />
+      <path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" stroke="currentColor" stroke-width="1.4" />
+    </svg>
+    <span class="lang-current">{current?.label}</span>
+  </summary>
+  <div class="lang-menu" role="menu" aria-label={t(locale, 'nav.languageLabel')}>
+    {
+      links.map((l) => (
+        <a
+          role="menuitem"
+          href={l.href}
+          hreflang={l.code}
+          lang={l.code}
+          aria-current={l.code === locale ? 'true' : undefined}
+        >
+          <span class="lang-native">{l.label}</span>
+          <span class="lang-en">{l.englishLabel}</span>
+        </a>
+      ))
+    }
+  </div>
+</details>
+
+<style>
+  .lang {
+    position: relative;
+  }
+  .lang summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    list-style: none;
+    cursor: pointer;
+    padding: 0.5rem 0.6rem;
+    border: 1px solid var(--color-hairline-strong);
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-ink);
+    user-select: none;
+  }
+  .lang[data-invert='true'] summary {
+    color: #efe9df;
+    border-color: rgb(255 255 255 / 0.2);
+  }
+  .lang summary::-webkit-details-marker {
+    display: none;
+  }
+  .lang-current {
+    display: none;
+  }
+  .lang-menu {
+    position: absolute;
+    right: 0;
+    margin-top: 0.4rem;
+    width: 16rem;
+    max-height: 60vh;
+    overflow: auto;
+    background: var(--color-card);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-raised);
+    padding: 0.4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.15rem;
+    z-index: 60;
+  }
+  .lang-menu a {
+    display: flex;
+    flex-direction: column;
+    padding: 0.45rem 0.55rem;
+    border-radius: var(--radius-sm);
+    color: var(--color-ink);
+  }
+  .lang-menu a:hover {
+    background: var(--color-card-soft);
+  }
+  .lang-menu a[aria-current='true'] {
+    background: var(--color-accent-tint);
+    color: var(--color-accent-ink);
+  }
+  .lang-native {
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  .lang-en {
+    font-size: 0.7rem;
+    color: var(--color-ink-faint);
+  }
+  @media (min-width: 1100px) {
+    .lang-current {
+      display: inline;
+    }
+  }
+</style>
+
+<script>
+  // Close any open language menu on outside-click or Escape (progressive enhancement).
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll<HTMLDetailsElement>('details.lang[open]').forEach((d) => {
+      if (!d.contains(e.target as Node)) d.open = false;
+    });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll<HTMLDetailsElement>('details.lang[open]').forEach((d) => (d.open = false));
+    }
+  });
+</script>

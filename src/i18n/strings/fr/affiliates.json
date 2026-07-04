@@ -1,0 +1,28 @@
+{
+  "page.affiliates.title": "Programme d'affiliation — partagez un lien, gagnez des revenus récurrents | Persistent Cart",
+  "page.affiliates.desc": "Créateurs, testeurs et formateurs : partagez une application Shopify en un clic qui corrige une fuite de panier multi-appareils cachée, et gagnez une commission récurrente. Inscription gratuite.",
+  "page.affiliates.crumb": "Affiliés",
+  "page.affiliates.h1": "Partagez le lien d'une solution dont les boutiques Shopify ont vraiment besoin — et gagnez des revenus récurrents.",
+  "page.affiliates.lede": "Si vous touchez des marchands Shopify, Persistent Cart est facile à recommander : elle corrige une vraie fuite de panier multi-appareils, jusque-là invisible, en un clic, sans que les acheteurs aient quoi que ce soit à faire. Partagez votre lien et gagnez une commission récurrente sur chaque boutique qui reste fidèle.",
+
+  "affiliates.terms": "30 % de commission récurrente · 12 mois par parrainage · cookie de 90 jours · inscription gratuite.",
+  "affiliates.how": "Inscrivez-vous gratuitement, recevez votre lien et un kit prêt à partager, et gagnez sur chaque boutique qui reste fidèle.",
+
+  "affiliates.why.title": "Pourquoi cela convertit auprès de votre audience",
+  "affiliates.why.1.title": "Une histoire vraie et surprenante",
+  "affiliates.why.1.body": "« Les plus grandes boutiques conservent le panier d'un client connecté sur tous ses appareils — pas Shopify, par défaut. » C'est vérifiable, intuitif, et ça pousse les gens à vérifier leur propre boutique.",
+  "affiliates.why.2.title": "Sans risque à recommander",
+  "affiliates.why.2.body": "Un clic, aucun code de thème, aucune perturbation pour les acheteurs, un forfait gratuit pour commencer. Votre audience n'a presque rien à y redire.",
+  "affiliates.why.3.title": "Récurrent, pas un coup unique",
+  "affiliates.why.3.body": "Gagnez {pct} % de commission récurrente pendant {months} mois sur chaque boutique payante — une valeur qui se cumule à mesure que vos parrainages durent.",
+
+  "affiliates.tools.title": "Des outils à partager qui vendent à votre place",
+  "affiliates.tools.1": "Le calculateur de paniers perdus — laissez vos lecteurs estimer leur propre fuite",
+  "affiliates.tools.2": "L'audit gratuit de boutique — un appel à l'action sans risque",
+  "affiliates.tools.3": "Des logos soignés, des extraits de texte et l'argument de la parité",
+
+  "affiliates.form.title": "Rejoignez le programme d'affiliation",
+  "affiliates.form.success.heading": "Votre demande est enregistrée — merci !",
+  "affiliates.form.success.body": "Nous examinerons vos informations et vous enverrons sous peu votre lien d'affiliation, les outils à partager et les conditions définitives.",
+  "affiliates.partnersCta": "Vous dirigez une agence ou créez des boutiques pour des clients ? Le programme partenaire est peut-être plus adapté."
+}

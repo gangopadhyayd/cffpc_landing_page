@@ -1,0 +1,48 @@
+# Netlify config for persistentcartapp.com
+# Native Netlify Forms capture leads at handoff with ZERO owner credentials.
+# The submission-created function enriches them (Resend / HubSpot) when keys exist.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Clean URLs (build.format = 'file', trailingSlash = 'never')
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+# Redirect old privacy paths to the on-domain privacy page
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy"
+  status = 301
+
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+
+# Security + caching headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

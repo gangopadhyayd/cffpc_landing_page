@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "Gratis Shopify cross-device winkelwagenaudit | Persistent Cart",
+  "page.free-audit.desc": "Ontdek gratis of je Shopify-winkel ingelogde winkelwagens laat vallen wanneer shoppers van apparaat wisselen — wat het je zou kunnen kosten, en de snelle winsten. Geen installatie vereist.",
+  "page.free-audit.crumb": "Gratis audit",
+  "page.free-audit.h1": "Verliest je winkel winkelwagens wanneer shoppers van apparaat wisselen? We controleren het — gratis.",
+  "page.free-audit.lede": "De meeste merchants weten niet of hun winkel de winkelwagen van een ingelogde shopper tussen apparaten bewaart — en het verlies is onzichtbaar in je rapporten. Stuur ons je winkel en we controleren het, schatten de impact in en wijzen op de snelle winsten. Zonder verplichting, zonder installatie.",
+
+  "audit.checks.title": "Wat we controleren",
+  "audit.checks.1.title": "Overleeft een ingelogde winkelwagen een apparaatwissel?",
+  "audit.checks.1.body": "We testen of de winkelwagen van een ingelogde shopper hem volgt van telefoon naar desktop in jouw winkel, of stilletjes verdwijnt.",
+  "audit.checks.2.title": "Ongeveer wat het je kost",
+  "audit.checks.2.body": "Op basis van het profiel van je winkel en branchebenchmarks geven we een transparante, illustratieve schatting van de omzet die op het spel staat — nooit een geleende statistiek.",
+  "audit.checks.3.title": "De snelle winsten",
+  "audit.checks.3.body": "Praktische aanbevelingen zonder druk — of je Persistent Cart nu ooit installeert of niet.",
+
+  "audit.form.title": "Vraag je gratis audit aan",
+  "audit.form.storeUrl": "Je winkel-URL",
+  "audit.form.storeUrlPlaceholder": "jouwwinkel.myshopify.com",
+  "audit.form.name": "Je naam",
+  "audit.form.email": "E-mail",
+  "audit.form.plan": "Shopify-plan (optioneel)",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "Niet zeker",
+  "audit.form.orders": "Maandelijkse bestellingen (optioneel)",
+  "audit.form.submit": "Vraag mijn gratis audit aan",
+  "audit.form.privacy": "We gebruiken deze gegevens alleen om je audit voor te bereiden en te reageren. Geen spam, geen delen. Bekijk onze privacyaanpak.",
+  "audit.form.success.heading": "Audit aangevraagd — bedankt!",
+  "audit.form.success.body": "We hebben je aanvraag ontvangen en mailen je gratis cross-device winkelwagenaudit binnen 1–2 werkdagen. Houd je inbox in de gaten.",
+
+  "audit.expectations": "We mailen je audit binnen 1–2 werkdagen. Hij is echt gratis en er is geen verplichting om iets te installeren.",
+  "audit.trust": "Van het team achter Persistent Cart — Built for Shopify, helpt winkels sinds 2016."
+}

@@ -1,0 +1,41 @@
+{
+  "page.calculator.title": "Rechner für verlorenen Warenkorb-Umsatz für Shopify | Persistent Cart",
+  "page.calculator.desc": "Eine transparente, beispielhafte Schätzung des Umsatzes, der verloren geht, wenn angemeldete Käufer in Ihrem Shopify-Shop das Gerät wechseln. Passen Sie die Benchmarks an; wir zeigen die Formel.",
+  "page.calculator.h1": "Wie viel könnte Sie der geräteübergreifende Warenkorbverlust kosten?",
+  "page.calculator.lede": "Wenn ein angemeldeter Käufer auf einem Gerät einen Warenkorb aufbaut und auf einem anderen abschließt, verliert ein Standard-Shopify-Shop ihn. Dieser Rechner macht daraus eine grobe, beispielhafte Spanne – mit Ihren Zahlen und branchenüblichen Benchmarks. Jeder Wert ist editierbar und die Formel wird angezeigt; nichts ist eine Black Box.",
+
+  "calc.heading": "Verlorenen Warenkorb-Umsatz berechnen",
+  "calc.intro": "Die Standardwerte sind mit branchenüblichen Benchmarks vorausgefüllt. Passen Sie sie an Ihren Shop an.",
+
+  "calc.input.orders.label": "Bestellungen pro Monat",
+  "calc.input.orders.help": "Wie viele Bestellungen Ihr Shop ungefähr pro Monat erhält.",
+  "calc.input.aov.label": "Durchschnittlicher Bestellwert",
+  "calc.input.aov.help": "Ihr typischer Bestellwert.",
+  "calc.input.loggedIn.label": "Anteil angemeldeter Käufer",
+  "calc.input.loggedIn.help": "Anteil der Käufer, die in einem Konto angemeldet einkaufen. Benchmark: ~50 %.",
+  "calc.input.crossDevice.label": "Anteil mit Gerätewechsel",
+  "calc.input.crossDevice.help": "Anteil der angemeldeten Käufer, die vor dem Kauf zwischen Handy und Desktop wechseln. Benchmark: ~30 % (begründete Schätzung, keine gemessene Rate).",
+  "calc.input.recovery.label": "Gerettete Warenkörbe, die zu Bestellungen werden",
+  "calc.input.recovery.help": "Konservativer Anteil dieser geräteübergreifenden Wege, die zu einer Bestellung werden, die sonst verloren gegangen wäre. Standard 2 % – bewusst vorsichtig.",
+  "calc.currency.label": "Währung",
+
+  "calc.result.heading": "Beispielhaft zurückgewonnener Umsatz",
+  "calc.result.monthly": "Pro Monat",
+  "calc.result.annual": "Pro Jahr",
+  "calc.result.rangeNote": "Als Spanne (±) dargestellt, weil dies eine Schätzung ist, kein gemessenes Ergebnis.",
+  "calc.result.disclaimer": "Dies ist eine grobe, beispielhafte Spanne auf Basis Ihrer Eingaben und branchenüblicher Durchschnittswerte – kein gemessenes Ergebnis der App. Der Zusammenhang zwischen Gerätewechsel und verlorenem Verkauf ist eine begründete Schlussfolgerung, keine veröffentlichte Rate. Betrachten Sie sie als ungefähre Größenordnung.",
+
+  "calc.formula.label": "Die Formel (keine Black Box)",
+  "calc.formula.text": "Zurückgewonnene Bestellungen/Monat = Bestellungen pro Monat × Anteil angemeldet × Anteil Gerätewechsel × Rate geretteter Warenkörbe. Umsatz = zurückgewonnene Bestellungen × Bestellwert. Jährlich = × 12.",
+
+  "calc.cta.lead": "Sollen wir statt der Benchmarks Ihren tatsächlichen Shop prüfen?",
+  "calc.cta.audit": "Kostenlose Shop-Analyse anfordern",
+  "calc.cta.install": "Persistent Cart hinzufügen – kostenlos starten",
+
+  "calc.page.s1.h": "Warum ein Standard-Shopify-Shop geräteübergreifend Warenkörbe verliert",
+  "calc.page.s1.b": "In einem Standard-Shopify-Shop wird der Warenkorb in einem Browser-Cookie gespeichert, nicht im Konto des Kunden. Der Warenkorb eines angemeldeten Käufers folgt ihm also nicht vom Handy zum Laptop – er ist auf dem zweiten Gerät schlicht nicht vorhanden. Der Käufer baut entweder aus dem Gedächtnis einen kleineren Warenkorb neu auf oder kehrt gar nicht zurück. Weil keine Fehlermeldung erscheint und keine E-Mail ausgelöst wird, sehen die meisten Händler den Verlust nie in ihren Berichten.",
+  "calc.page.s2.h": "So lesen Sie diese Schätzung",
+  "calc.page.s2.b": "Der Rechner multipliziert Ihr Bestellvolumen mit drei editierbaren Anteilen: wie viele Käufer angemeldet sind, wie viele davon zwischen Geräten wechseln und einer bewusst konservativen Rate dafür, aus wie vielen dieser Wege ein behaltener Warenkorb einen Verkauf macht. Wir zeigen das Ergebnis als Spanne, nie als einzelne selbstsichere Zahl, weil der Zusammenhang zwischen Gerätewechsel und verlorenem Verkauf eher eine begründete Schlussfolgerung als eine gemessene Statistik ist. Die ehrliche Version dieser Rechnung ist glaubwürdiger als eine geliehene Behauptung „+X % Umsatz“ – und genau deshalb zeigen wir die Formel.",
+  "calc.page.s3.h": "Von der Schätzung zur Gewissheit",
+  "calc.page.s3.b": "Eine Schätzung ist ein Ausgangspunkt. Um zu sehen, ob Ihr konkreter Shop angemeldete Warenkörbe geräteübergreifend verliert – und was das für Sie wert ist –, fordern Sie eine kostenlose Shop-Analyse an. Wir prüfen das tatsächliche geräteübergreifende Verhalten Ihres Shops und senden Ihnen unsere Ergebnisse zurück, unverbindlich und ohne Installation."
+}

@@ -1,0 +1,41 @@
+{
+  "page.calculator.title": "Calculateur de revenus de paniers perdus pour Shopify | Persistent Cart",
+  "page.calculator.desc": "Une estimation transparente et indicative des revenus perdus quand des clients connectés changent d'appareil sur votre boutique Shopify. Ajustez les références ; nous montrons la formule.",
+  "page.calculator.h1": "Combien la perte de paniers entre appareils pourrait-elle vous coûter ?",
+  "page.calculator.lede": "Quand un client connecté constitue un panier sur un appareil et finit sur un autre, une boutique Shopify par défaut le perd. Ce calculateur transforme cela en une fourchette approximative et indicative — à partir de vos chiffres et de références du secteur. Chaque paramètre est modifiable et la formule est affichée ; rien n'est une boîte noire.",
+
+  "calc.heading": "Estimez vos pertes de revenus liées aux paniers",
+  "calc.intro": "Les valeurs par défaut sont pré-remplies avec des références du secteur. Ajustez-les pour correspondre à votre boutique.",
+
+  "calc.input.orders.label": "Commandes mensuelles",
+  "calc.input.orders.help": "Le nombre approximatif de commandes que votre boutique reçoit par mois.",
+  "calc.input.aov.label": "Valeur moyenne des commandes",
+  "calc.input.aov.help": "Le total typique de vos commandes.",
+  "calc.input.loggedIn.label": "Part des clients connectés",
+  "calc.input.loggedIn.help": "Proportion d'acheteurs qui font leurs achats en étant connectés à un compte. Référence : environ 50 %.",
+  "calc.input.crossDevice.label": "Part de ceux qui changent d'appareil",
+  "calc.input.crossDevice.help": "Proportion de clients connectés qui naviguent entre téléphone et ordinateur avant d'acheter. Référence : environ 30 % (estimation raisonnée, pas un taux mesuré).",
+  "calc.input.recovery.label": "Paniers enregistrés qui deviennent des commandes",
+  "calc.input.recovery.help": "Part prudente de ces parcours multi-appareils qui se transforment en une commande autrement perdue. Par défaut 2 % — volontairement prudent.",
+  "calc.currency.label": "Devise",
+
+  "calc.result.heading": "Revenus récupérés à titre indicatif",
+  "calc.result.monthly": "Par mois",
+  "calc.result.annual": "Par an",
+  "calc.result.rangeNote": "Affiché sous forme de fourchette (±) car il s'agit d'une estimation, pas d'un résultat mesuré.",
+  "calc.result.disclaimer": "Il s'agit d'une fourchette approximative et indicative fondée sur vos paramètres et des moyennes du secteur — pas d'un résultat mesuré par l'application. Le lien entre changement d'appareil et vente perdue est une déduction raisonnée, pas un taux publié. Considérez-le comme un ordre de grandeur directionnel.",
+
+  "calc.formula.label": "La formule (pas de boîte noire)",
+  "calc.formula.text": "Commandes récupérées/mois = Commandes mensuelles × Part connectée × Part de changement d'appareil × Taux de paniers enregistrés. Revenus = commandes récupérées × valeur moyenne des commandes. Annuel = × 12.",
+
+  "calc.cta.lead": "Vous voulez que nous examinions votre boutique réelle plutôt que des références ?",
+  "calc.cta.audit": "Obtenir un audit gratuit de votre boutique",
+  "calc.cta.install": "Ajouter Persistent Cart — commencez gratuitement",
+
+  "calc.page.s1.h": "Pourquoi une boutique Shopify par défaut laisse fuir les paniers entre appareils",
+  "calc.page.s1.b": "Sur une boutique Shopify standard, le panier est stocké dans un cookie de navigateur, pas dans le compte du client. Le panier d'un client connecté ne le suit donc pas du téléphone à l'ordinateur portable — il n'est tout simplement pas là sur le second appareil. Le client reconstitue de mémoire un panier plus petit, ou ne revient pas du tout. Comme aucune erreur n'est affichée et aucun e-mail déclenché, la plupart des marchands ne voient jamais cette perte dans leurs rapports.",
+  "calc.page.s2.h": "Comment lire cette estimation",
+  "calc.page.s2.b": "Le calculateur multiplie votre volume de commandes par trois parts modifiables : combien de clients sont connectés, combien d'entre eux passent d'un appareil à l'autre, et un taux volontairement prudent de parcours qu'un panier conservé transforme en vente. Nous affichons le résultat sous forme de fourchette, jamais comme un chiffre unique et affirmé, car le lien entre changement d'appareil et vente perdue est une déduction raisonnée plutôt qu'une statistique mesurée. La version honnête de ce calcul est plus crédible qu'une affirmation empruntée du type « +X % de ventes » — et c'est pourquoi nous montrons la formule.",
+  "calc.page.s3.h": "De l'estimation à la certitude",
+  "calc.page.s3.b": "Une estimation est un point de départ. Pour savoir si votre boutique précise perd des paniers connectés entre appareils — et ce que cela vaut pour vous — demandez un audit gratuit de votre boutique. Nous vérifierons le comportement réel de votre boutique entre appareils et vous renverrons nos conclusions, sans engagement et sans installation requise."
+}

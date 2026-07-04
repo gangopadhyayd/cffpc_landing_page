@@ -1,0 +1,42 @@
+{
+  "page.pricing.title": "Hinnoittelu — jokainen ominaisuus jokaisessa paketissa | Persistent Cart Shopifylle",
+  "page.pricing.desc": "Persistent Cart on hinnoiteltu Shopify-pakettisi mukaan — jokainen ominaisuus sisältyy jokaiseen pakettiin. Aloita ilmaiseksi, sitten 30 päivän ilmainen kokeilu millä tahansa maksullisella paketilla. Alkaen $4.99/kk.",
+  "page.pricing.crumb": "Hinnoittelu",
+  "page.pricing.h1": "Jokainen ominaisuus, jokaisessa paketissa. Hinnoiteltu Shopify-pakettisi mukaan.",
+  "page.pricing.lede": "Ei ominaisuustasoja tulkittavaksi. Jokainen paketti sisältää koko sovelluksen — hintasi yksinkertaisesti vastaa Shopify-tilaustasi. Aloita ilmaiseksi, sitten 30 päivän ilmainen kokeilu millä tahansa maksullisella paketilla.",
+
+  "pricing.planHint": "Pakettisi valitaan automaattisesti Shopify-tilauksesi perusteella. Et valitse ominaisuustasoa — saat kaiken.",
+  "pricing.cta.install": "Lisää Persistent Cart — aloita ilmaiseksi",
+  "pricing.trial": "Free Starter -paketti · 30 päivän ilmainen kokeilu kaikissa maksullisissa paketeissa · peru milloin tahansa",
+
+  "pricing.tier.free.note": "Testaa jokaista ominaisuutta, enintään 10 ostoskorisynkronointia",
+  "pricing.tier.basic.note": "Kaupoille Shopify Basic -paketilla",
+  "pricing.tier.grow.note": "Kaupoille Shopify Grow -paketilla (aiemmin \"Shopify\")",
+  "pricing.tier.advanced.note": "Kaupoille Shopify Advanced -paketilla",
+  "pricing.tier.plus.note": "Shopify Plus -kaupoille",
+  "pricing.tier.everyPlan": "Kaikki ominaisuudet mukana",
+
+  "pricing.included.title": "Sisältyy jokaiseen pakettiin",
+  "pricing.included.1": "Automaattinen laitteiden välinen ostoskorin synkronointi kirjautuneille asiakkaille",
+  "pricing.included.2": "Hiljainen automaattinen yhdistäminen oletuksena — ei ponnahdusikkunoita, sähköposteja tai suostumuksia",
+  "pricing.included.3": "Valinnainen \"säilytä tai yhdistä\" -ostoskorikysely",
+  "pricing.included.4": "Yhden klikkauksen asennus, ei teemakoodia",
+  "pricing.included.5": "Toimii puhelimen, työpöydän ja paluukäyntien välillä",
+  "pricing.included.6": "Built for Shopify -laatu- ja suorituskykystandardit",
+
+  "pricing.s1.h": "Miksi se on hinnoiteltu pakettisi mukaan, ei ominaisuuksittain",
+  "pricing.s1.b": "Useimmat sovellukset pakottavat sinut valitsemaan tason ja säännöstelemään ominaisuuksia. Persistent Cart ei — koko sovellus on tuote, joten jokainen paketti saa jokaisen ominaisuuden. Ainoa muuttuva asia on hinta, joka seuraa Shopify-tilauksesi tasoa. Basic-kauppa maksaa Basic-hinnan; Plus-kauppa maksaa Plus-hinnan; molemmat saavat identtisen toiminnallisuuden. Se pitää päätöksen yksinkertaisena: vertailtavaa ei ole muuta kuin se, haluatko sen.\n\nSuuremmat Shopify-paketit tarkoittavat enemmän tilauksia ja enemmän laitetta vaihtavia kirjautuneita asiakkaita — joten hinta seuraa takaisin saamaasi arvoa, ei pidempää ominaisuuslistaa.",
+  "pricing.s2.h": "Aloita ilmaiseksi, sitten 30 päivän kokeilu",
+  "pricing.s2.b": "Free Starter -paketti antaa sinun asentaa ja testata jokaista ominaisuutta enintään 10 ostoskorisynkronointiin — tarpeeksi nähdäksesi sen toimivan omassa kaupassasi. Kun olet valmis, mikä tahansa maksullinen paketti alkaa 30 päivän ilmaisella kokeilulla, joten maksat vasta, kun olet katsonut sen toimivan. Ei pitkäaikaista sopimusta; peru milloin tahansa Shopify-hallinnastasi.",
+  "pricing.s3.h": "Onko se sen arvoinen?",
+  "pricing.s3.b": "Rehellinen vastaus on, että se riippuu siitä, kuinka moni asiakkaistasi kirjautuu sisään ja vaihtaa laitetta — mikä on juuri se, mitä menetettyjen ostoskorien laskuri ja ilmainen kauppa-analyysi auttavat arvioimaan. Persistent Cart on matala kuukausikustannus, joka on suunniteltu pelastamaan tilauksia, jotka muutoin katoaisivat hiljaa. Jos joka kuukausi selviää edes kourallinen arvokkaita ostoskoreja, jotka eivät muuten olisi selvinneet, se maksaa itsensä takaisin.",
+
+  "pricing.faq.q1.q": "Saavatko halvemmat paketit vähemmän ominaisuuksia?",
+  "pricing.faq.q1.a": "Eivät. Jokainen paketti sisältää koko sovelluksen. Hintasi määräytyy Shopify-tilauksesi tason mukaan, ei sen mukaan, mitä ominaisuuksia haluat.",
+  "pricing.faq.q2.q": "Onko todella olemassa ilmainen paketti?",
+  "pricing.faq.q2.a": "Kyllä — Free Starter -paketti antaa sinun asentaa ja testata kaikkia ominaisuuksia enintään 10 ostoskorisynkronointiin, joten voit varmistaa sen toimivuuden kaupassasi ennen maksamista.",
+  "pricing.faq.q3.q": "Miten ilmainen kokeilu toimii?",
+  "pricing.faq.q3.a": "Mikä tahansa maksullinen paketti alkaa 30 päivän ilmaisella kokeilulla. Sinua ei veloiteta ennen kokeilun päättymistä, ja voit peruuttaa milloin tahansa Shopify-hallinnastasi.",
+  "pricing.faq.q4.q": "Voinko peruuttaa milloin tahansa?",
+  "pricing.faq.q4.a": "Kyllä. Laskutus hoidetaan Shopifyn kautta, joten voit poistaa sovelluksen tai peruuttaa Shopify-hallinnastasi milloin tahansa."
+}

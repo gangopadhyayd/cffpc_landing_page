@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "Gratis tjek af Shopify-kurv på tværs af enheder | Persistent Cart",
+  "page.free-audit.desc": "Find gratis ud af, om din Shopify-butik dropper indloggede kurve, når kunderne skifter enhed — hvad det kan koste dig, og de hurtige gevinster. Ingen installation krævet.",
+  "page.free-audit.crumb": "Gratis tjek",
+  "page.free-audit.h1": "Mister din butik kurve, når kunderne skifter enhed? Vi tjekker det — gratis.",
+  "page.free-audit.lede": "De fleste forhandlere ved ikke, om deres butik bevarer en indlogget kundes kurv på tværs af enheder — og tabet er usynligt i dine rapporter. Send os din butik, så tjekker vi det, estimerer effekten og peger på de hurtige gevinster. Uden forpligtelser, uden installation.",
+
+  "audit.checks.title": "Hvad vi tjekker",
+  "audit.checks.1.title": "Overlever en indlogget kurv et enhedsskift?",
+  "audit.checks.1.body": "Vi tester, om en indlogget kundes kurv følger dem fra telefon til computer i din butik, eller stille og roligt forsvinder.",
+  "audit.checks.2.title": "Omtrent hvad det koster dig",
+  "audit.checks.2.body": "Ud fra din butiks profil og branchebenchmarks giver vi et gennemsigtigt, illustrativt estimat af den omsætning, der er på spil — aldrig en lånt statistik.",
+  "audit.checks.3.title": "De hurtige gevinster",
+  "audit.checks.3.body": "Praktiske anbefalinger uden pres — uanset om du nogensinde installerer Persistent Cart.",
+
+  "audit.form.title": "Anmod om dit gratis tjek",
+  "audit.form.storeUrl": "Din butiks-URL",
+  "audit.form.storeUrlPlaceholder": "dinbutik.myshopify.com",
+  "audit.form.name": "Dit navn",
+  "audit.form.email": "E-mail",
+  "audit.form.plan": "Shopify-abonnement (valgfrit)",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "Ikke sikker",
+  "audit.form.orders": "Månedlige ordrer (valgfrit)",
+  "audit.form.submit": "Få mit gratis tjek",
+  "audit.form.privacy": "Vi bruger kun disse oplysninger til at forberede dit tjek og svare dig. Ingen spam, ingen deling. Se vores tilgang til privatliv.",
+  "audit.form.success.heading": "Tjek anmodet — tak!",
+  "audit.form.success.body": "Vi har modtaget din anmodning og sender dit gratis tjek af kurv på tværs af enheder på mail inden for 1-2 hverdage. Hold øje med din indbakke.",
+
+  "audit.expectations": "Vi sender dit tjek på mail inden for 1-2 hverdage. Det er helt gratis, og der er ingen forpligtelse til at installere noget.",
+  "audit.trust": "Fra teamet bag Persistent Cart — Built for Shopify, hjælper butikker siden 2016."
+}

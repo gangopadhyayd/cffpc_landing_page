@@ -1,0 +1,172 @@
+---
+import { DEMO_ITEMS, cartSubtotal, formatMoney, type DemoItem } from '../data/demoCart';
+import { t } from '../i18n';
+
+interface Props {
+  locale: string;
+  device: 'phone' | 'laptop';
+  items?: DemoItem[];
+  synced?: boolean;
+  class?: string;
+}
+const { locale, device, items = DEMO_ITEMS, synced = true, class: cls = '' } = Astro.props;
+const subtotal = cartSubtotal(items);
+const deviceLabel = device === 'phone' ? t(locale, 'demo.device.phone') : t(locale, 'demo.device.laptop');
+---
+
+<div class={`cart-card ${device} ${cls}`} data-device={device}>
+  <div class="cart-chrome">
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    <span class="device-label">{deviceLabel}</span>
+  </div>
+  <div class="cart-body">
+    <div class="cart-head">
+      <h3>{t(locale, 'demo.cart.title')}</h3>
+      <span class={`sync-badge ${synced ? 'is-synced' : ''}`} data-sync-badge>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span data-badge-text>{t(locale, 'demo.cart.synced')}</span>
+      </span>
+    </div>
+    <ul class="cart-items">
+      {
+        items.map((item) => (
+          <li class="cart-item" data-item={item.id}>
+            <span class="swatch" style={`background:${item.swatch}`}></span>
+            <span class="item-main">
+              <span class="item-name">{t(locale, item.nameKey)}</span>
+              <span class="item-qty">{t(locale, 'demo.qty')} {item.qty}</span>
+            </span>
+            <span class="item-price tabular">{formatMoney(item.price)}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="cart-foot">
+      <span>{t(locale, 'demo.cart.subtotal')}</span>
+      <span class="subtotal tabular" data-subtotal>{formatMoney(subtotal)}</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cart-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-raised);
+    overflow: hidden;
+    width: 100%;
+  }
+  .cart-chrome {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.55rem 0.8rem;
+    background: var(--color-card-soft);
+    border-bottom: 1px solid var(--color-hairline);
+  }
+  .cart-chrome .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-hairline-strong);
+  }
+  .device-label {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+  }
+  .cart-body {
+    padding: 0.9rem 1rem 1rem;
+  }
+  .cart-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  .cart-head h3 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+  .sync-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.22rem 0.5rem;
+    border-radius: 999px;
+    background: var(--color-evergreen-tint);
+    color: var(--color-evergreen);
+    transition: background 0.3s, color 0.3s;
+  }
+  .sync-badge svg {
+    transition: opacity 0.3s;
+  }
+  .sync-badge:not(.is-synced) {
+    background: var(--color-accent-tint);
+    color: var(--color-accent-ink);
+  }
+  .sync-badge:not(.is-synced) svg {
+    opacity: 0;
+    width: 0;
+  }
+  .cart-items {
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+  }
+  .cart-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+  .swatch {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-sm);
+    flex: none;
+  }
+  .item-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 0;
+  }
+  .item-name {
+    font-size: 0.86rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .item-qty {
+    font-size: 0.72rem;
+    color: var(--color-ink-faint);
+  }
+  .item-price {
+    margin-left: auto;
+    font-size: 0.84rem;
+    font-weight: 600;
+  }
+  .cart-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.9rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-hairline);
+    font-size: 0.9rem;
+  }
+  .subtotal {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+</style>

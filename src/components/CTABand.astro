@@ -1,0 +1,115 @@
+---
+/**
+ * Reusable call-to-action band. Pass explicit copy + actions. Used for the
+ * homepage final CTA, free-audit CTA, partner strip, and page-end CTAs.
+ * bg: paper | soft | navy | accent
+ */
+export interface CTAAction {
+  label: string;
+  href: string;
+  style?: 'primary' | 'accent' | 'secondary' | 'ghost' | 'invert';
+  external?: boolean;
+  event?: string;
+  source?: string;
+}
+interface Props {
+  eyebrow?: string;
+  heading: string;
+  body?: string;
+  actions: CTAAction[];
+  trust?: string;
+  bg?: 'paper' | 'soft' | 'navy' | 'accent';
+  align?: 'left' | 'center';
+  source?: string;
+}
+const { eyebrow, heading, body, actions, trust, bg = 'soft', align = 'center', source = 'cta' } = Astro.props;
+---
+
+<section class={`ctaband ctaband--${bg}`} data-align={align}>
+  <div class="container-page ctaband-inner">
+    {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+    <h2 class="ctaband-heading">{heading}</h2>
+    {body && <p class="ctaband-body">{body}</p>}
+    <div class="ctaband-actions">
+      {
+        actions.map((a) => (
+          <a
+            class={`btn btn-${a.style ?? 'primary'}`}
+            href={a.href}
+            target={a.external ? '_blank' : undefined}
+            rel={a.external ? 'noopener' : undefined}
+            data-event={a.event}
+            data-source={a.source ?? source}
+          >
+            {a.label}
+          </a>
+        ))
+      }
+    </div>
+    {trust && <p class="ctaband-trust">{trust}</p>}
+  </div>
+</section>
+
+<style>
+  .ctaband {
+    padding-block: clamp(3rem, 7vw, 5rem);
+  }
+  .ctaband--soft {
+    background: var(--color-card-soft);
+    border-block: 1px solid var(--color-hairline);
+  }
+  .ctaband--accent {
+    background: var(--color-accent-tint);
+  }
+  .ctaband--navy {
+    background: var(--color-navy);
+    color: #e7e1d6;
+  }
+  .ctaband-inner {
+    max-width: 44rem;
+  }
+  .ctaband[data-align='center'] .ctaband-inner {
+    margin-inline: auto;
+    text-align: center;
+  }
+  .ctaband-heading {
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    margin: 0.5rem 0 0;
+  }
+  .ctaband--navy .ctaband-heading {
+    color: #fff;
+  }
+  .ctaband-body {
+    margin-top: 1rem;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    color: var(--color-ink-soft);
+  }
+  .ctaband--navy .ctaband-body {
+    color: #b8b1a4;
+  }
+  .ctaband-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+  }
+  .ctaband[data-align='center'] .ctaband-actions {
+    justify-content: center;
+  }
+  .ctaband-trust {
+    margin-top: 1.25rem;
+    font-size: 0.82rem;
+    color: var(--color-ink-faint);
+  }
+  .ctaband--navy .ctaband-trust {
+    color: #9a9385;
+  }
+  .btn-invert {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+  .btn-invert:hover {
+    background: #fff;
+  }
+</style>

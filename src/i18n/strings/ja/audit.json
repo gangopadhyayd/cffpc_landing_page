@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "無料 Shopify デバイス間カート診断 | Persistent Cart",
+  "page.free-audit.desc": "買い物客がデバイスを切り替えたときに、あなたの Shopify ストアがログイン中のカートを失っていないか無料で確認 — その損失額と、すぐに改善できるポイントもお伝えします。インストールは不要です。",
+  "page.free-audit.crumb": "無料診断",
+  "page.free-audit.h1": "買い物客がデバイスを切り替えると、あなたのストアはカートを失っていますか？無料で確認します。",
+  "page.free-audit.lede": "ほとんどのマーチャントは、自分のストアがログイン中の買い物客のカートをデバイス間で保持しているかどうかを知りません — しかも、その損失はレポートには表れません。ストアの情報をお送りいただければ、確認し、影響額を試算し、すぐに改善できるポイントをお伝えします。義務もインストールも不要です。",
+
+  "audit.checks.title": "確認する内容",
+  "audit.checks.1.title": "ログイン中のカートはデバイス切り替えを乗り越えて残るか？",
+  "audit.checks.1.body": "あなたのストアで、ログイン中の買い物客のカートがスマホからデスクトップへついていくのか、それとも静かに消えてしまうのかをテストします。",
+  "audit.checks.2.title": "おおよその損失額",
+  "audit.checks.2.body": "あなたのストアのプロフィールと業界ベンチマークを用いて、失われている可能性のある売上を、透明で分かりやすい概算でお示しします — 借り物の統計は使いません。",
+  "audit.checks.3.title": "すぐに改善できるポイント",
+  "audit.checks.3.body": "Persistent Cart を導入してもしなくても役立つ、実践的で押し付けのない提案です。",
+
+  "audit.form.title": "無料診断を申し込む",
+  "audit.form.storeUrl": "ストアの URL",
+  "audit.form.storeUrlPlaceholder": "yourstore.myshopify.com",
+  "audit.form.name": "お名前",
+  "audit.form.email": "メールアドレス",
+  "audit.form.plan": "Shopify プラン（任意）",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "わからない",
+  "audit.form.orders": "月間注文数（任意）",
+  "audit.form.submit": "無料診断を受ける",
+  "audit.form.privacy": "これらの情報は、診断の準備とご返信のためにのみ使用します。スパムも第三者提供もありません。プライバシーへの取り組みをご覧ください。",
+  "audit.form.success.heading": "診断を申し込みました — ありがとうございます！",
+  "audit.form.success.body": "リクエストを受け付けました。デバイス間カートの無料診断結果を、1～2営業日以内にメールでお送りします。受信トレイをご確認ください。",
+
+  "audit.expectations": "診断結果は1～2営業日以内にメールでお送りします。本当に無料で、何かをインストールする義務もありません。",
+  "audit.trust": "Persistent Cart を手がけるチームより — Built for Shopify、2016年以来ストアを支援しています。"
+}

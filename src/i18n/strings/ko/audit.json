@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "무료 Shopify 기기 간 장바구니 진단 | Persistent Cart",
+  "page.free-audit.desc": "쇼핑객이 기기를 바꿀 때 당신의 Shopify 스토어가 로그인 장바구니를 떨어뜨리는지 무료로 확인하세요 — 얼마의 비용이 들 수 있는지, 그리고 손쉬운 개선점까지. 설치는 필요 없습니다.",
+  "page.free-audit.crumb": "무료 진단",
+  "page.free-audit.h1": "쇼핑객이 기기를 바꿀 때 스토어가 장바구니를 잃나요? 점검해 드립니다 — 무료입니다.",
+  "page.free-audit.lede": "대부분의 판매자는 자신의 스토어가 로그인한 쇼핑객의 장바구니를 기기 간에 유지하는지 모릅니다 — 그 손실은 리포트에 보이지 않습니다. 스토어 주소를 보내주시면 점검하고, 영향을 추정하고, 손쉬운 개선점을 짚어드립니다. 의무도, 설치도 필요 없습니다.",
+
+  "audit.checks.title": "무엇을 점검하나요",
+  "audit.checks.1.title": "로그인 장바구니가 기기 전환에서 살아남나요?",
+  "audit.checks.1.body": "당신의 스토어에서 로그인한 쇼핑객의 장바구니가 휴대폰에서 데스크톱으로 따라가는지, 아니면 조용히 사라지는지 테스트합니다.",
+  "audit.checks.2.title": "대략 얼마의 비용이 들고 있는지",
+  "audit.checks.2.body": "당신 스토어의 프로필과 업계 벤치마크를 사용해, 위험에 처한 매출에 대한 투명하고 예시적인 추정치를 제공합니다 — 빌려온 통계는 결코 쓰지 않습니다.",
+  "audit.checks.3.title": "손쉬운 개선점",
+  "audit.checks.3.body": "실용적이고 부담 없는 권장 사항 — Persistent Cart를 설치하든 안 하든 상관없습니다.",
+
+  "audit.form.title": "무료 진단 요청하기",
+  "audit.form.storeUrl": "스토어 URL",
+  "audit.form.storeUrlPlaceholder": "yourstore.myshopify.com",
+  "audit.form.name": "이름",
+  "audit.form.email": "이메일",
+  "audit.form.plan": "Shopify 플랜 (선택)",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "잘 모르겠음",
+  "audit.form.orders": "월 주문 수 (선택)",
+  "audit.form.submit": "무료 진단 받기",
+  "audit.form.privacy": "이 정보는 진단 준비와 회신에만 사용합니다. 스팸도, 공유도 없습니다. 개인정보 처리 방식을 확인하세요.",
+  "audit.form.success.heading": "진단을 요청하셨습니다 — 감사합니다!",
+  "audit.form.success.body": "요청을 접수했으며 영업일 기준 1~2일 내에 무료 기기 간 장바구니 진단 결과를 이메일로 보내드립니다. 받은편지함을 확인해 주세요.",
+
+  "audit.expectations": "영업일 기준 1~2일 내에 진단 결과를 이메일로 보내드립니다. 진짜로 무료이며, 무엇이든 설치할 의무는 없습니다.",
+  "audit.trust": "Persistent Cart 팀이 직접 진행합니다 — Built for Shopify, 2016년부터 스토어를 도와왔습니다."
+}

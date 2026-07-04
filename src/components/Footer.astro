@@ -1,0 +1,171 @@
+---
+import Logo from './Logo.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { PAGES, type FooterGroup } from '../config/routes';
+import { localizedPath } from '../i18n/routing';
+import { t } from '../i18n';
+import { site } from '../config/site';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = '' } = Astro.props;
+
+const groups: { id: FooterGroup; label: string }[] = [
+  { id: 'product', label: t(locale, 'footer.group.product') },
+  { id: 'learn', label: t(locale, 'footer.group.learn') },
+  { id: 'programs', label: t(locale, 'footer.group.programs') },
+  { id: 'company', label: t(locale, 'footer.group.company') },
+];
+
+function linksFor(group: FooterGroup) {
+  return PAGES.filter((p) => p.footer?.group === group)
+    .sort((a, b) => a.footer!.order - b.footer!.order)
+    .map((p) => ({ href: localizedPath(locale, p.slug), label: t(locale, `footer.link.${p.key}`) }));
+}
+
+const year = 2026;
+---
+
+<footer class="site-footer">
+  <div class="container-page">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <Logo invert={true} />
+        <p class="footer-tagline">{t(locale, 'footer.tagline')}</p>
+        <a
+          class="btn btn-accent btn-sm"
+          href={site.appStoreUrl}
+          target="_blank"
+          rel="noopener"
+          data-event="install_click"
+          data-source="footer">{t(locale, 'footer.install')}</a
+        >
+      </div>
+
+      <div class="footer-cols">
+        {
+          groups.map((g) => (
+            <nav class="footer-col" aria-label={g.label}>
+              <h2 class="footer-col-title">{g.label}</h2>
+              <ul>
+                {linksFor(g.id).map((l) => (
+                  <li>
+                    <a href={l.href}>{l.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-meta">
+        <span>{t(locale, 'footer.rights', { year })}</span>
+        <span class="footer-built">{t(locale, 'footer.builtBy')}</span>
+      </div>
+      <div class="footer-bottom-actions">
+        <a href="/llms.txt" class="footer-mini">llms.txt</a>
+        <LanguageSwitcher locale={locale} slug={slug} invert={true} />
+      </div>
+    </div>
+
+    <p class="footer-legal">{t(locale, 'footer.notAffiliated')}</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--color-navy);
+    color: #d9d2c6;
+    padding-block: 3.5rem 2rem;
+    margin-top: 4rem;
+  }
+  .footer-top {
+    display: grid;
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgb(255 255 255 / 0.1);
+  }
+  .footer-tagline {
+    max-width: 30ch;
+    margin: 1rem 0 1.25rem;
+    font-size: 0.92rem;
+    color: #b8b1a4;
+    line-height: 1.6;
+  }
+  .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+  }
+  .footer-col-title {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8d8678;
+    margin-bottom: 0.85rem;
+    font-weight: 500;
+  }
+  .footer-col ul {
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+  }
+  .footer-col a {
+    color: #d9d2c6;
+    font-size: 0.9rem;
+    transition: color 0.15s;
+  }
+  .footer-col a:hover {
+    color: #fff;
+  }
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.75rem;
+  }
+  .footer-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    font-size: 0.8rem;
+    color: #9a9385;
+  }
+  .footer-bottom-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .footer-mini {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: #9a9385;
+  }
+  .footer-mini:hover {
+    color: #fff;
+  }
+  .footer-legal {
+    margin-top: 1.5rem;
+    font-size: 0.74rem;
+    line-height: 1.6;
+    color: #837c6f;
+    max-width: 80ch;
+  }
+
+  @media (min-width: 760px) {
+    .footer-top {
+      grid-template-columns: 1.1fr 2fr;
+    }
+    .footer-cols {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>

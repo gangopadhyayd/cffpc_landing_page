@@ -1,0 +1,42 @@
+{
+  "page.pricing.title": "Cennik — każda funkcja w każdym planie | Persistent Cart dla Shopify",
+  "page.pricing.desc": "Cena Persistent Cart jest dopasowana do Twojego planu Shopify — każda funkcja jest dostępna w każdym planie. Zacznij za darmo, a potem 30-dniowy bezpłatny okres próbny w dowolnym planie płatnym. Od $4.99/mies.",
+  "page.pricing.crumb": "Cennik",
+  "page.pricing.h1": "Każda funkcja, w każdym planie. Cena dopasowana do Twojego planu Shopify.",
+  "page.pricing.lede": "Nie ma żadnych poziomów funkcji do rozszyfrowania. Każdy plan obejmuje pełną aplikację — Twoja cena po prostu odpowiada Twojej subskrypcji Shopify. Zacznij za darmo, a potem 30-dniowy bezpłatny okres próbny w dowolnym planie płatnym.",
+
+  "pricing.planHint": "Twój plan jest wybierany automatycznie na podstawie Twojej subskrypcji Shopify. Nie wybierasz poziomu funkcji — dostajesz wszystkie.",
+  "pricing.cta.install": "Dodaj Persistent Cart — zacznij za darmo",
+  "pricing.trial": "Plan Free Starter · 30-dniowy bezpłatny okres próbny we wszystkich planach płatnych · anuluj w dowolnej chwili",
+
+  "pricing.tier.free.note": "Przetestuj każdą funkcję, do 10 synchronizacji koszyka",
+  "pricing.tier.basic.note": "Dla sklepów na planie Shopify Basic",
+  "pricing.tier.grow.note": "Dla sklepów na planie Shopify Grow (dawniej „Shopify”)",
+  "pricing.tier.advanced.note": "Dla sklepów na planie Shopify Advanced",
+  "pricing.tier.plus.note": "Dla sklepów Shopify Plus",
+  "pricing.tier.everyPlan": "Wszystkie funkcje w komplecie",
+
+  "pricing.included.title": "Wliczone w każdy plan",
+  "pricing.included.1": "Automatyczna synchronizacja koszyka między urządzeniami dla zalogowanych klientów",
+  "pricing.included.2": "Domyślne ciche scalanie koszyków — bez wyskakujących okienek, e-maili i zgód",
+  "pricing.included.3": "Opcjonalny komunikat koszyka „zachowaj lub połącz”",
+  "pricing.included.4": "Instalacja jednym kliknięciem, bez kodu w szablonie",
+  "pricing.included.5": "Działa na telefonie, komputerze i podczas ponownych wizyt",
+  "pricing.included.6": "Standardy jakości i wydajności Built for Shopify",
+
+  "pricing.s1.h": "Dlaczego cena zależy od Twojego planu, a nie od funkcji",
+  "pricing.s1.b": "Większość aplikacji każe Ci wybrać poziom i racjonuje funkcje. Persistent Cart tego nie robi — produktem jest cała aplikacja, więc każdy plan dostaje każdą funkcję. Zmienia się tylko cena, która odpowiada poziomowi Twojej subskrypcji Shopify. Sklep Basic płaci cenę Basic; sklep Plus płaci cenę Plus; oba otrzymują identyczną funkcjonalność. Dzięki temu decyzja jest prosta: nie ma czego porównywać poza tym, czy tego chcesz.\n\nWiększe plany Shopify oznaczają więcej zamówień i więcej zalogowanych kupujących przełączających się między urządzeniami — więc cena odpowiada wartości, którą odzyskujesz, a nie dłuższej liście funkcji.",
+  "pricing.s2.h": "Zacznij za darmo, a potem 30-dniowy okres próbny",
+  "pricing.s2.b": "Plan Free Starter pozwala zainstalować i przetestować każdą funkcję w ramach do 10 synchronizacji koszyka — wystarczająco, by zobaczyć, jak działa we własnym sklepie. Gdy będziesz gotowy, każdy plan płatny zaczyna się od 30-dniowego bezpłatnego okresu próbnego, więc płacisz dopiero wtedy, gdy zobaczysz go w akcji. Bez długoterminowej umowy; anuluj w dowolnej chwili z panelu administracyjnego Shopify.",
+  "pricing.s3.h": "Czy warto?",
+  "pricing.s3.b": "Szczera odpowiedź brzmi: to zależy od tego, ilu Twoich kupujących loguje się i przełącza między urządzeniami — a właśnie to pomagają oszacować kalkulator utraconych koszyków i bezpłatny audyt sklepu. Persistent Cart to niski miesięczny koszt zaprojektowany tak, by odzyskiwać zamówienia, które w przeciwnym razie zniknęłyby bez śladu. Jeśli choćby kilka wartościowych koszyków przetrwa każdego miesiąca, choć inaczej by zniknęło, aplikacja zwraca się sama.",
+
+  "pricing.faq.q1.q": "Czy tańsze plany mają mniej funkcji?",
+  "pricing.faq.q1.a": "Nie. Każdy plan obejmuje kompletną aplikację. Twoja cena zależy od poziomu Twojej subskrypcji Shopify, a nie od tego, których funkcji chcesz.",
+  "pricing.faq.q2.q": "Czy naprawdę istnieje darmowy plan?",
+  "pricing.faq.q2.a": "Tak — plan Free Starter pozwala zainstalować i przetestować wszystkie funkcje w ramach do 10 synchronizacji koszyka, więc możesz potwierdzić, że działa w Twoim sklepie, zanim zapłacisz.",
+  "pricing.faq.q3.q": "Jak działa bezpłatny okres próbny?",
+  "pricing.faq.q3.a": "Każdy plan płatny zaczyna się od 30-dniowego bezpłatnego okresu próbnego. Nie zostaniesz obciążony, dopóki okres próbny się nie skończy, i możesz anulować w dowolnej chwili z panelu administracyjnego Shopify.",
+  "pricing.faq.q4.q": "Czy mogę anulować w dowolnej chwili?",
+  "pricing.faq.q4.a": "Tak. Rozliczenia obsługuje Shopify, więc możesz usunąć aplikację lub anulować z panelu administracyjnego Shopify w dowolnym momencie."
+}

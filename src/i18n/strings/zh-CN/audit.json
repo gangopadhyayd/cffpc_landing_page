@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "免费 Shopify 跨设备购物车检测 | Persistent Cart",
+  "page.free-audit.desc": "免费了解您的 Shopify 商店是否会在购物者切换设备时丢失已登录购物车 — 这会让您损失多少，以及有哪些可快速见效的改进。无需安装。",
+  "page.free-audit.crumb": "免费检测",
+  "page.free-audit.h1": "您的商店会在购物者切换设备时丢失购物车吗？我们来帮您检测 — 免费。",
+  "page.free-audit.lede": "多数商家并不知道自己的商店能否跨设备保留已登录购物者的购物车 — 而这种损失在您的报表里是看不见的。把您的商店发给我们，我们会进行检测、估算影响，并指出可以快速见效的改进。没有任何附加条件，也无需安装。",
+
+  "audit.checks.title": "我们会检测什么",
+  "audit.checks.1.title": "已登录购物车能否在切换设备后保留？",
+  "audit.checks.1.body": "我们会测试在您的商店上，已登录购物者的购物车能否从手机跟随到桌面端，还是会悄无声息地消失。",
+  "audit.checks.2.title": "大约会让您损失多少",
+  "audit.checks.2.body": "我们会结合您商店的具体情况和行业基准，给出一个透明的、用于示意的潜在收入损失估算 — 绝不照搬别处的数据。",
+  "audit.checks.3.title": "可快速见效的改进",
+  "audit.checks.3.body": "实用且不施加压力的建议 — 无论您最终是否安装 Persistent Cart。",
+
+  "audit.form.title": "申请您的免费检测",
+  "audit.form.storeUrl": "您的商店网址",
+  "audit.form.storeUrlPlaceholder": "yourstore.myshopify.com",
+  "audit.form.name": "您的姓名",
+  "audit.form.email": "电子邮箱",
+  "audit.form.plan": "Shopify 套餐（选填）",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "不确定",
+  "audit.form.orders": "每月订单数（选填）",
+  "audit.form.submit": "获取我的免费检测",
+  "audit.form.privacy": "我们仅使用这些信息来准备您的检测并回复您。不发垃圾邮件，不外泄。详见我们的隐私做法。",
+  "audit.form.success.heading": "检测申请已提交 — 感谢！",
+  "audit.form.success.body": "我们已收到您的申请，将在 1–2 个工作日内通过邮件发送您的免费跨设备购物车检测结果。请留意您的收件箱。",
+
+  "audit.expectations": "我们会在 1–2 个工作日内通过邮件发送您的检测结果。它确实是免费的，您也没有任何安装义务。",
+  "audit.trust": "来自 Persistent Cart 背后的团队 — Built for Shopify，自 2016 年起助力商店。"
+}

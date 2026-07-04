@@ -1,0 +1,46 @@
+---
+import ContentPage from './ContentPage.astro';
+import ParityCards from '../ParityCards.astro';
+import ParityDiagram from '../ParityDiagram.astro';
+import { t } from '../../i18n';
+import { parityCards } from '../../data/proofBlocks';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = '' } = Astro.props;
+const tt = (k: string) => t(locale, k);
+const cards = parityCards(locale);
+---
+
+<ContentPage
+  locale={locale}
+  slug={slug}
+  pageKey="big-retailers"
+  sectionCount={3}
+  related={['cornerstone', 'cross-device', 'vs-recovery']}
+>
+  <section class="content-section br-proof">
+    <h2>{tt('content.parityTitle')}</h2>
+    <ParityCards cards={cards} />
+    <div class="br-diagram">
+      <ParityDiagram
+        accountLabel="Customer account"
+        cartLabel={tt('demo.cart.title')}
+        phoneLabel={tt('demo.device.phone')}
+        laptopLabel={tt('demo.device.laptop')}
+        caption={tt('home.parity.diagram.caption')}
+      />
+    </div>
+  </section>
+</ContentPage>
+
+<style>
+  .br-proof {
+    margin-top: 1rem;
+  }
+  .br-diagram {
+    margin-top: 1.5rem;
+  }
+</style>

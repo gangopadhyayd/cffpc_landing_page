@@ -1,0 +1,42 @@
+{
+  "page.pricing.title": "Preise – jede Funktion in jedem Tarif | Persistent Cart für Shopify",
+  "page.pricing.desc": "Persistent Cart richtet sich preislich nach Ihrem Shopify-Tarif – jede Funktion ist in jedem Tarif enthalten. Kostenlos starten, dann 30 Tage kostenlos testen in jedem kostenpflichtigen Tarif. Ab $4.99/Mon.",
+  "page.pricing.crumb": "Preise",
+  "page.pricing.h1": "Jede Funktion, in jedem Tarif. Preis passend zu Ihrem Shopify-Tarif.",
+  "page.pricing.lede": "Es gibt keine Funktionsstufen zu entschlüsseln. Jeder Tarif enthält die komplette App – Ihr Preis richtet sich einfach nach Ihrem Shopify-Abo. Kostenlos starten, dann 30 Tage kostenlos testen in jedem kostenpflichtigen Tarif.",
+
+  "pricing.planHint": "Ihr Tarif wird automatisch anhand Ihres Shopify-Abos ausgewählt. Sie wählen keine Funktionsstufe – Sie erhalten alles.",
+  "pricing.cta.install": "Persistent Cart hinzufügen – kostenlos starten",
+  "pricing.trial": "Free Starter-Tarif · 30 Tage kostenlos testen in allen kostenpflichtigen Tarifen · jederzeit kündbar",
+
+  "pricing.tier.free.note": "Jede Funktion testen, bis zu 10 Warenkorb-Synchronisierungen",
+  "pricing.tier.basic.note": "Für Shops mit dem Shopify Basic-Tarif",
+  "pricing.tier.grow.note": "Für Shops mit dem Shopify Grow-Tarif (früher „Shopify“)",
+  "pricing.tier.advanced.note": "Für Shops mit dem Shopify Advanced-Tarif",
+  "pricing.tier.plus.note": "Für Shopify Plus-Shops",
+  "pricing.tier.everyPlan": "Alle Funktionen enthalten",
+
+  "pricing.included.title": "In jedem Tarif enthalten",
+  "pricing.included.1": "Automatische geräteübergreifende Warenkorb-Synchronisierung für angemeldete Kunden",
+  "pricing.included.2": "Standardmäßig lautloses automatisches Zusammenführen – keine Popups, E-Mails oder Opt-ins",
+  "pricing.included.3": "Optionale Warenkorb-Abfrage „behalten oder zusammenführen“",
+  "pricing.included.4": "Installation mit einem Klick, kein Theme-Code",
+  "pricing.included.5": "Funktioniert über Handy, Desktop und spätere Besuche hinweg",
+  "pricing.included.6": "Built for Shopify-Standards für Qualität und Performance",
+
+  "pricing.s1.h": "Warum der Preis sich nach Ihrem Tarif richtet, nicht nach Funktionen",
+  "pricing.s1.b": "Die meisten Apps zwingen Sie, eine Stufe zu wählen und Funktionen zu rationieren. Persistent Cart nicht – die ganze App ist das Produkt, also erhält jeder Tarif jede Funktion. Das Einzige, was sich ändert, ist der Preis, der sich nach Ihrem Shopify-Abo-Level richtet. Ein Basic-Shop zahlt Basic-Preise; ein Plus-Shop zahlt Plus-Preise; beide erhalten identische Funktionalität. Das hält die Entscheidung einfach: Es gibt nichts zu vergleichen außer der Frage, ob Sie es wollen.\n\nGrößere Shopify-Tarife bedeuten mehr Bestellungen und mehr angemeldete Käufer, die das Gerät wechseln – der Preis richtet sich also nach dem Wert, den Sie zurückbekommen, nicht nach einer längeren Funktionsliste.",
+  "pricing.s2.h": "Kostenlos starten, dann 30 Tage testen",
+  "pricing.s2.b": "Der Free Starter-Tarif lässt Sie jede Funktion für bis zu 10 Warenkorb-Synchronisierungen installieren und testen – genug, um es in Ihrem eigenen Shop wirken zu sehen. Wenn Sie bereit sind, beginnt jeder kostenpflichtige Tarif mit einer 30-tägigen kostenlosen Testphase, sodass Sie erst zahlen, wenn Sie es haben laufen sehen. Es gibt keinen Langzeitvertrag; jederzeit aus Ihrem Shopify-Admin kündbar.",
+  "pricing.s3.h": "Lohnt es sich?",
+  "pricing.s3.b": "Die ehrliche Antwort ist, dass es davon abhängt, wie viele Ihrer Käufer sich anmelden und das Gerät wechseln – genau das helfen der Warenkorbverlust-Rechner und eine kostenlose Shop-Analyse zu schätzen. Persistent Cart ist eine niedrige Monatsgebühr, die darauf ausgelegt ist, Bestellungen zurückzugewinnen, die sonst lautlos verschwinden würden. Wenn schon eine Handvoll hochwertiger Warenkörbe pro Monat überlebt, die es sonst nicht getan hätten, zahlt es sich von selbst.",
+
+  "pricing.faq.q1.q": "Erhalten günstigere Tarife weniger Funktionen?",
+  "pricing.faq.q1.a": "Nein. Jeder Tarif enthält die komplette App. Ihr Preis wird durch Ihr Shopify-Abo-Level bestimmt, nicht dadurch, welche Funktionen Sie wollen.",
+  "pricing.faq.q2.q": "Gibt es wirklich einen kostenlosen Tarif?",
+  "pricing.faq.q2.a": "Ja – der Free Starter-Tarif lässt Sie alle Funktionen für bis zu 10 Warenkorb-Synchronisierungen installieren und testen, sodass Sie bestätigen können, dass es in Ihrem Shop funktioniert, bevor Sie zahlen.",
+  "pricing.faq.q3.q": "Wie funktioniert die kostenlose Testphase?",
+  "pricing.faq.q3.a": "Jeder kostenpflichtige Tarif beginnt mit einer 30-tägigen kostenlosen Testphase. Sie werden erst belastet, wenn die Testphase endet, und Sie können jederzeit aus Ihrem Shopify-Admin kündigen.",
+  "pricing.faq.q4.q": "Kann ich jederzeit kündigen?",
+  "pricing.faq.q4.a": "Ja. Die Abrechnung wird über Shopify abgewickelt, sodass Sie die App jederzeit aus Ihrem Shopify-Admin entfernen oder kündigen können."
+}

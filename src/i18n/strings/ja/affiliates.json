@@ -1,0 +1,28 @@
+{
+  "page.affiliates.title": "アフィリエイトプログラム — リンクを共有して継続報酬を | Persistent Cart",
+  "page.affiliates.desc": "クリエイター、レビュアー、教育者の方へ：隠れたデバイス間のカートの取りこぼしをワンクリックで解消する Shopify アプリを共有して、継続報酬を獲得しましょう。参加は無料です。",
+  "page.affiliates.crumb": "アフィリエイト",
+  "page.affiliates.h1": "Shopify ストアが本当に必要とする解決策のリンクを共有して、継続報酬を獲得。",
+  "page.affiliates.lede": "Shopify のマーチャントにリーチできるなら、Persistent Cart はおすすめしやすい一手です。実在する隠れたデバイス間のカートの取りこぼしを、買い物客の操作なしにワンクリックで解消します。リンクを共有し、定着したストアごとに継続報酬を得ましょう。",
+
+  "affiliates.terms": "30% の継続報酬 · 紹介ごとに12か月 · 90日間の Cookie · 参加無料",
+  "affiliates.how": "無料で参加し、リンクとすぐ共有できるキットを受け取り、定着したストアごとに稼ぎましょう。",
+
+  "affiliates.why.title": "なぜオーディエンスに刺さるのか",
+  "affiliates.why.1.title": "本当で、意外性のあるストーリー",
+  "affiliates.why.1.body": "「大手ストアは、ログイン中のカートをすべてのデバイスで保持している — でも Shopify は標準ではそうではない。」検証可能で直感的、しかも自分のストアを思わず確かめたくなる話です。",
+  "affiliates.why.2.title": "低リスクで勧められる",
+  "affiliates.why.2.body": "ワンクリック、テーマコード不要、顧客への影響なし、無料プランから開始。オーディエンスが反対する理由はほとんどありません。",
+  "affiliates.why.3.title": "一度きりではなく、継続的に",
+  "affiliates.why.3.body": "有料ストアごとに、{months} か月間 {pct}% の継続報酬を獲得 — 紹介が定着するほど積み上がる価値です。",
+
+  "affiliates.tools.title": "売り込みを代行してくれる共有ツール",
+  "affiliates.tools.1": "カゴ落ち計算ツール — 読者が自分の取りこぼしを試算できます",
+  "affiliates.tools.2": "無料ストア診断 — リスクのない行動喚起",
+  "affiliates.tools.3": "整ったロゴ、コピー素材、そして大手と肩を並べるストーリー",
+
+  "affiliates.form.title": "アフィリエイトプログラムに参加する",
+  "affiliates.form.success.heading": "受付が完了しました — ありがとうございます！",
+  "affiliates.form.success.body": "内容を確認のうえ、アフィリエイトリンク、共有ツール、そして確定した条件を、まもなくお送りします。",
+  "affiliates.partnersCta": "代理店を運営、またはクライアントのストアを構築していますか？パートナープログラムのほうが合うかもしれません。"
+}

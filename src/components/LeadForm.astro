@@ -1,0 +1,227 @@
+---
+/**
+ * Reusable accessible lead form. Captures via native Netlify Forms (zero owner
+ * credentials at handoff); honeypot + time-trap spam protection; progressive
+ * enhancement to an inline success state (works without JS via native POST).
+ * Richer wiring (Resend confirmation, HubSpot) is added by the Netlify
+ * `submission-created` function when keys exist — see netlify/functions/.
+ */
+export interface FormField {
+  name: string;
+  label: string;
+  type: 'text' | 'email' | 'url' | 'number' | 'select' | 'textarea';
+  required?: boolean;
+  options?: { value: string; label: string }[];
+  placeholder?: string;
+  help?: string;
+  autocomplete?: string;
+}
+interface Props {
+  formName: string;
+  fields: FormField[];
+  submitLabel: string;
+  successHeading: string;
+  successBody: string;
+  privacyNote: string;
+  source?: string;
+}
+const { formName, fields, submitLabel, successHeading, successBody, privacyNote, source = formName } = Astro.props;
+---
+
+<div class="leadform-wrap" data-leadform data-source={source}>
+  <form
+    class="leadform"
+    name={formName}
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    action="/?submitted=1"
+  >
+    <input type="hidden" name="form-name" value={formName} />
+    <input type="hidden" name="source" value={source} />
+    <input type="hidden" name="started" value="" data-started />
+    <p class="leadform-hp" aria-hidden="true">
+      <label>Leave this field empty<input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+    </p>
+
+    {
+      fields.map((f) => (
+        <div class={`lf-field ${f.type === 'textarea' ? 'lf-full' : ''}`}>
+          <label for={`lf-${f.name}`}>
+            {f.label}
+            {f.required && <span class="lf-req" aria-hidden="true">*</span>}
+          </label>
+          {f.type === 'select' ? (
+            <select id={`lf-${f.name}`} name={f.name} required={f.required}>
+              <option value="">—</option>
+              {f.options?.map((o) => <option value={o.value}>{o.label}</option>)}
+            </select>
+          ) : f.type === 'textarea' ? (
+            <textarea id={`lf-${f.name}`} name={f.name} required={f.required} rows="4" placeholder={f.placeholder} />
+          ) : (
+            <input
+              id={`lf-${f.name}`}
+              name={f.name}
+              type={f.type}
+              required={f.required}
+              placeholder={f.placeholder}
+              autocomplete={f.autocomplete}
+            />
+          )}
+          {f.help && <span class="lf-help">{f.help}</span>}
+        </div>
+      ))
+    }
+
+    <div class="lf-submit">
+      <button type="submit" class="btn btn-primary" data-event="form_submit" data-form={formName}>{submitLabel}</button>
+      <p class="lf-privacy">{privacyNote}</p>
+    </div>
+  </form>
+
+  <div class="leadform-success card" hidden data-success role="status">
+    <div class="lf-success-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
+    <h3>{successHeading}</h3>
+    <p>{successBody}</p>
+  </div>
+</div>
+
+<style>
+  .leadform {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem 1rem;
+  }
+  .lf-field {
+    display: grid;
+    gap: 0.35rem;
+  }
+  .lf-full {
+    grid-column: 1 / -1;
+  }
+  .lf-field label {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .lf-req {
+    color: var(--color-accent);
+    margin-left: 0.15rem;
+  }
+  .lf-field input,
+  .lf-field select,
+  .lf-field textarea {
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--color-hairline-strong);
+    border-radius: var(--radius-md);
+    font: inherit;
+    background: var(--color-card);
+    width: 100%;
+  }
+  .lf-field textarea {
+    resize: vertical;
+  }
+  .lf-help {
+    font-size: 0.76rem;
+    color: var(--color-ink-faint);
+  }
+  .leadform-hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .lf-submit {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.25rem;
+  }
+  .lf-privacy {
+    font-size: 0.76rem;
+    color: var(--color-ink-faint);
+    max-width: 36ch;
+  }
+  .leadform-success {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .lf-success-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 50%;
+    background: var(--color-evergreen-tint);
+    color: var(--color-evergreen);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  .leadform-success h3 {
+    font-size: 1.4rem;
+  }
+  .leadform-success p {
+    color: var(--color-ink-soft);
+    max-width: 44ch;
+  }
+  @media (max-width: 620px) {
+    .leadform {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  function initForm(wrap: HTMLElement) {
+    const form = wrap.querySelector<HTMLFormElement>('form.leadform');
+    const success = wrap.querySelector<HTMLElement>('[data-success]');
+    const started = wrap.querySelector<HTMLInputElement>('[data-started]');
+    if (!form || !success) return;
+
+    const renderedAt = Date.now();
+    if (started) started.value = String(renderedAt);
+
+    form.addEventListener('submit', async (e) => {
+      const hp = form.querySelector<HTMLInputElement>('[name="bot-field"]');
+      const tooFast = Date.now() - renderedAt < 2500;
+      // Honeypot filled or submitted suspiciously fast → drop silently (bot).
+      if ((hp && hp.value) || tooFast) {
+        e.preventDefault();
+        success.hidden = false;
+        form.hidden = true; // pretend success; don't tip off the bot
+        return;
+      }
+
+      // Progressive enhancement: AJAX-submit to Netlify, show inline success.
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      const body = new URLSearchParams(new FormData(form) as any).toString();
+      try {
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body,
+        });
+        if (!res.ok) throw new Error('bad status');
+      } catch {
+        // Network/JS failure → fall back to a native submit so the lead isn't lost.
+        form.submit();
+        return;
+      }
+      form.hidden = true;
+      success.hidden = false;
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // analytics hook
+      window.dispatchEvent(new CustomEvent('lead:submitted', { detail: { form: form.getAttribute('name') } }));
+    });
+  }
+  document.querySelectorAll<HTMLElement>('[data-leadform]').forEach(initForm);
+</script>

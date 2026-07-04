@@ -1,0 +1,136 @@
+---
+import Icon from './Icon.astro';
+
+export interface CompCol {
+  label: string;
+  highlight?: boolean;
+}
+export interface CompCell {
+  value: string;
+  tone?: 'good' | 'bad' | 'neutral';
+}
+export interface CompRow {
+  label: string;
+  cells: CompCell[];
+}
+interface Props {
+  rowHeader?: string;
+  columns: CompCol[];
+  rows: CompRow[];
+  caption?: string;
+}
+const { rowHeader = '', columns, rows, caption } = Astro.props;
+---
+
+<div class="comp-wrap">
+  <table class="comp">
+    {caption && <caption class="sr-only">{caption}</caption>}
+    <thead>
+      <tr>
+        <th scope="col" class="row-head">{rowHeader}</th>
+        {
+          columns.map((c) => (
+            <th scope="col" class={c.highlight ? 'is-highlight' : ''}>
+              {c.label}
+            </th>
+          ))
+        }
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((r) => (
+          <tr>
+            <th scope="row">{r.label}</th>
+            {r.cells.map((cell, i) => (
+              <td class={`tone-${cell.tone ?? 'neutral'} ${columns[i]?.highlight ? 'is-highlight' : ''}`}>
+                {cell.tone === 'good' && <Icon name="circle-check" size={16} class="tone-icon" />}
+                {cell.tone === 'bad' && <Icon name="circle-x" size={16} class="tone-icon" />}
+                <span>{cell.value}</span>
+              </td>
+            ))}
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .comp-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-lg);
+    background: var(--color-card);
+    box-shadow: var(--shadow-card);
+  }
+  .comp {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 640px;
+    font-size: 0.92rem;
+  }
+  .comp caption {
+    text-align: left;
+  }
+  .comp th,
+  .comp td {
+    text-align: left;
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid var(--color-hairline);
+    vertical-align: top;
+  }
+  .comp thead th {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+    font-weight: 600;
+    background: var(--color-card-soft);
+  }
+  .comp thead th.is-highlight {
+    color: var(--color-accent-ink);
+  }
+  .comp tbody th[scope='row'] {
+    font-weight: 600;
+    color: var(--color-ink);
+    width: 30%;
+  }
+  .comp td {
+    color: var(--color-ink-soft);
+  }
+  .comp td.is-highlight {
+    background: color-mix(in srgb, var(--color-accent-tint) 45%, var(--color-card));
+    color: var(--color-ink);
+  }
+  .comp td span {
+    display: inline;
+  }
+  .tone-icon {
+    display: inline-block;
+    vertical-align: -2px;
+    margin-right: 0.35rem;
+  }
+  .tone-good .tone-icon {
+    color: var(--color-evergreen);
+  }
+  .tone-bad .tone-icon {
+    color: #b23b2e;
+  }
+  tr:last-child th,
+  tr:last-child td {
+    border-bottom: none;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

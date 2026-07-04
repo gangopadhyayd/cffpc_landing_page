@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "Kostenlose Shopify-Analyse zum geräteübergreifenden Warenkorb | Persistent Cart",
+  "page.free-audit.desc": "Finden Sie kostenlos heraus, ob Ihr Shopify-Shop angemeldete Warenkörbe verliert, wenn Käufer das Gerät wechseln – was es Sie kosten könnte und wo die schnellen Erfolge liegen. Keine Installation nötig.",
+  "page.free-audit.crumb": "Kostenlose Analyse",
+  "page.free-audit.h1": "Verliert Ihr Shop Warenkörbe, wenn Käufer das Gerät wechseln? Wir prüfen es – kostenlos.",
+  "page.free-audit.lede": "Die meisten Händler wissen nicht, ob ihr Shop den Warenkorb eines angemeldeten Käufers geräteübergreifend behält – und der Verlust ist in Ihren Berichten unsichtbar. Schicken Sie uns Ihren Shop und wir prüfen das, schätzen die Auswirkung und zeigen die schnellen Erfolge. Unverbindlich, ohne Installation.",
+
+  "audit.checks.title": "Was wir prüfen",
+  "audit.checks.1.title": "Übersteht ein angemeldeter Warenkorb einen Gerätewechsel?",
+  "audit.checks.1.body": "Wir testen, ob der Warenkorb eines angemeldeten Käufers ihm in Ihrem Shop vom Handy zum Desktop folgt oder unbemerkt verschwindet.",
+  "audit.checks.2.title": "Was es Sie ungefähr kostet",
+  "audit.checks.2.body": "Anhand des Profils Ihres Shops und branchenüblicher Benchmarks geben wir eine transparente, beispielhafte Schätzung des Umsatzes, der auf dem Spiel steht – nie eine geliehene Statistik.",
+  "audit.checks.3.title": "Die schnellen Erfolge",
+  "audit.checks.3.body": "Praktische, unverbindliche Empfehlungen – ganz gleich, ob Sie Persistent Cart jemals installieren oder nicht.",
+
+  "audit.form.title": "Ihre kostenlose Analyse anfordern",
+  "audit.form.storeUrl": "Ihre Shop-URL",
+  "audit.form.storeUrlPlaceholder": "ihrshop.myshopify.com",
+  "audit.form.name": "Ihr Name",
+  "audit.form.email": "E-Mail",
+  "audit.form.plan": "Shopify-Tarif (optional)",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "Nicht sicher",
+  "audit.form.orders": "Bestellungen pro Monat (optional)",
+  "audit.form.submit": "Meine kostenlose Analyse anfordern",
+  "audit.form.privacy": "Wir verwenden diese Angaben nur, um Ihre Analyse zu erstellen und Ihnen zu antworten. Kein Spam, keine Weitergabe. Siehe unseren Datenschutz-Ansatz.",
+  "audit.form.success.heading": "Analyse angefordert – vielen Dank!",
+  "audit.form.success.body": "Wir haben Ihre Anfrage erhalten und senden Ihnen Ihre kostenlose Analyse zum geräteübergreifenden Warenkorb innerhalb von 1–2 Werktagen per E-Mail. Behalten Sie Ihren Posteingang im Auge.",
+
+  "audit.expectations": "Wir senden Ihre Analyse innerhalb von 1–2 Werktagen per E-Mail. Sie ist wirklich kostenlos und völlig unverbindlich – Sie müssen nichts installieren.",
+  "audit.trust": "Vom Team hinter Persistent Cart – Built for Shopify, im Einsatz für Shops seit 2016."
+}

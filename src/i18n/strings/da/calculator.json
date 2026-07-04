@@ -1,0 +1,41 @@
+{
+  "page.calculator.title": "Beregner for omsætning fra tabte kurve til Shopify | Persistent Cart",
+  "page.calculator.desc": "Et gennemsigtigt, illustrativt estimat af omsætning tabt, når indloggede kunder skifter enhed i din Shopify-butik. Justér benchmarks; vi viser formlen.",
+  "page.calculator.h1": "Hvor meget kan tab af kurve på tværs af enheder koste dig?",
+  "page.calculator.lede": "Når en indlogget kunde bygger en kurv på én enhed og afslutter på en anden, mister en standard Shopify-butik den. Denne beregner omsætter det til et groft, illustrativt interval — ud fra dine tal og branchebenchmarks. Hvert input kan redigeres, og formlen vises; intet er en sort boks.",
+
+  "calc.heading": "Beregn din omsætning fra tabte kurve",
+  "calc.intro": "Standardværdier er forudfyldt med branchebenchmarks. Justér dem, så de matcher din butik.",
+
+  "calc.input.orders.label": "Månedlige ordrer",
+  "calc.input.orders.help": "Omtrent hvor mange ordrer din butik får om måneden.",
+  "calc.input.aov.label": "Gennemsnitlig ordreværdi",
+  "calc.input.aov.help": "Din typiske ordresum.",
+  "calc.input.loggedIn.label": "Andel af kunder, der er logget ind",
+  "calc.input.loggedIn.help": "Andelen af købere, der handler, mens de er logget ind på en konto. Benchmark: ~50%.",
+  "calc.input.crossDevice.label": "Andel, der skifter enhed",
+  "calc.input.crossDevice.help": "Andelen af indloggede kunder, der browser på tværs af telefon og computer, før de køber. Benchmark: ~30% (begrundet estimat, ikke en målt rate).",
+  "calc.input.recovery.label": "Reddede kurve, der bliver til ordrer",
+  "calc.input.recovery.help": "Konservativ andel af de rejser på tværs af enheder, der bliver til en ordre, de ellers ville have mistet. Standard 2% — bevidst forsigtig.",
+  "calc.currency.label": "Valuta",
+
+  "calc.result.heading": "Illustrativ reddet omsætning",
+  "calc.result.monthly": "Pr. måned",
+  "calc.result.annual": "Pr. år",
+  "calc.result.rangeNote": "Vises som et interval (±), fordi dette er et estimat, ikke et målt resultat.",
+  "calc.result.disclaimer": "Dette er et groft, illustrativt interval baseret på dine inputs og branchegennemsnit — ikke et målt resultat fra appen. Sammenhængen mellem enhedsskift og mistet salg er en begrundet slutning, ikke en offentliggjort rate. Betragt det som en retningsgivende fornemmelse af størrelsesorden.",
+
+  "calc.formula.label": "Formlen (ingen sort boks)",
+  "calc.formula.text": "Reddede ordrer/måned = Månedlige ordrer × Indlogget andel × Andel med enhedsskift × Rate for reddede kurve. Omsætning = reddede ordrer × AOV. Årligt = × 12.",
+
+  "calc.cta.lead": "Vil du have os til at tjekke din faktiske butik i stedet for benchmarks?",
+  "calc.cta.audit": "Få et gratis butikstjek",
+  "calc.cta.install": "Tilføj Persistent Cart — start gratis",
+
+  "calc.page.s1.h": "Hvorfor en standard Shopify-butik lækker kurve på tværs af enheder",
+  "calc.page.s1.b": "I en standard Shopify-butik gemmes kurven i en browsercookie, ikke på kundens konto. Så en indlogget kundes kurv følger dem ikke fra telefon til laptop — den er simpelthen ikke der på den anden enhed. Kunden genopbygger enten en mindre kurv efter hukommelsen eller vender slet ikke tilbage. Fordi der ikke vises nogen fejl og ikke udløses nogen mail, ser de fleste forhandlere aldrig tabet i deres rapporter.",
+  "calc.page.s2.h": "Sådan læser du dette estimat",
+  "calc.page.s2.b": "Beregneren ganger dit ordrevolumen med tre redigerbare andele: hvor mange kunder der er logget ind, hvor mange af dem der bevæger sig mellem enheder, og en bevidst konservativ rate for, hvor mange af de rejser en bevaret kurv gør til et salg. Vi viser resultatet som et interval, aldrig et enkelt selvsikkert tal, fordi sammenhængen mellem enhedsskift og mistet salg er en begrundet slutning frem for en målt statistik. Den ærlige version af denne matematik er mere troværdig end et lånt \"+X% salg\"-udsagn — og det er derfor, vi viser formlen.",
+  "calc.page.s3.h": "Fra estimat til sikkerhed",
+  "calc.page.s3.b": "Et estimat er et udgangspunkt. For at se, om netop din butik dropper indloggede kurve på tværs af enheder — og hvad det er værd for dig — så anmod om et gratis butikstjek. Vi tjekker din butiks faktiske adfærd på tværs af enheder og sender, hvad vi finder, tilbage, uden forpligtelser og uden installation."
+}

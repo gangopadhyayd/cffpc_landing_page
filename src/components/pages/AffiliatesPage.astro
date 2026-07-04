@@ -1,0 +1,117 @@
+---
+import Base from '../../layouts/Base.astro';
+import Section from '../Section.astro';
+import FeatureGrid from '../FeatureGrid.astro';
+import LeadForm, { type FormField } from '../LeadForm.astro';
+import Icon from '../Icon.astro';
+import { t } from '../../i18n';
+import { titleKey, descKey } from '../../config/routes';
+import { localizedPath, localizedUrl } from '../../i18n/routing';
+import { partnerProgram } from '../../config/site';
+import { webPageSchema } from '../../lib/schema';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = '' } = Astro.props;
+const vars = { pct: partnerProgram.commissionPct, months: partnerProgram.recurringMonths, days: partnerProgram.cookieWindowDays };
+const tt = (k: string) => t(locale, k, vars);
+
+const title = tt(titleKey('affiliates'));
+const description = tt(descKey('affiliates'));
+
+const why = [1, 2, 3].map((n) => ({ title: tt(`affiliates.why.${n}.title`), body: tt(`affiliates.why.${n}.body`), icon: ['sparkle', 'zap', 'gift'][n - 1] }));
+const tools = [1, 2, 3].map((n) => tt(`affiliates.tools.${n}`));
+
+const fields: FormField[] = [
+  { name: 'name', label: tt('partners.form.name'), type: 'text', required: true, autocomplete: 'name' },
+  { name: 'email', label: tt('partners.form.email'), type: 'email', required: true, autocomplete: 'email' },
+  { name: 'company', label: tt('partners.form.company'), type: 'text', autocomplete: 'url' },
+  { name: 'reach', label: tt('partners.form.reach'), type: 'text' },
+  { name: 'message', label: tt('partners.form.message'), type: 'textarea' },
+];
+
+const jsonLd = [webPageSchema({ url: localizedUrl(locale, slug), name: title, description, locale })];
+const partnersHref = localizedPath(locale, 'partners');
+---
+
+<Base locale={locale} slug={slug} title={title} description={description} jsonLd={jsonLd}>
+  <Section eyebrow={tt('home.partner.eyebrow')} heading={tt('page.affiliates.h1')} intro={tt('page.affiliates.lede')} headingLevel="h1">
+    <div class="aff-terms">
+      <strong>{tt('affiliates.terms')}</strong>
+      <span>{tt('affiliates.how')}</span>
+    </div>
+    <FeatureGrid items={why} columns={3} />
+  </Section>
+
+  <Section bg="soft" eyebrow={tt('affiliates.tools.title')}>
+    <ul class="tools-list">
+      {tools.map((x) => <li><Icon name="check" size={18} /> {x}</li>)}
+    </ul>
+  </Section>
+
+  <Section id="apply" heading={tt('affiliates.form.title')}>
+    <div class="aff-form-wrap">
+      <LeadForm
+        formName="affiliate"
+        fields={fields}
+        submitLabel={tt('partners.form.submit')}
+        successHeading={tt('affiliates.form.success.heading')}
+        successBody={tt('affiliates.form.success.body')}
+        privacyNote={tt('partners.form.privacy')}
+        source="affiliates"
+      />
+      <p class="partners-cta"><a class="link-underline" href={partnersHref}>{tt('affiliates.partnersCta')} →</a></p>
+    </div>
+  </Section>
+</Base>
+
+<style>
+  .aff-terms {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    background: var(--color-accent-tint);
+    border-radius: var(--radius-lg);
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 2rem;
+  }
+  .aff-terms strong {
+    color: var(--color-accent-ink);
+    font-size: 1.02rem;
+  }
+  .aff-terms span {
+    color: var(--color-ink-soft);
+    font-size: 0.92rem;
+  }
+  .tools-list {
+    list-style: none;
+    display: grid;
+    gap: 0.8rem;
+    max-width: 44rem;
+  }
+  .tools-list li {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    font-size: 1rem;
+  }
+  .tools-list :global(svg) {
+    color: var(--color-evergreen);
+    flex: none;
+    margin-top: 0.2rem;
+  }
+  .aff-form-wrap {
+    background: var(--color-card);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-xl);
+    padding: clamp(1.5rem, 3vw, 2rem);
+    box-shadow: var(--shadow-card);
+    max-width: 44rem;
+  }
+  .partners-cta {
+    margin-top: 1.25rem;
+    font-weight: 600;
+  }
+</style>

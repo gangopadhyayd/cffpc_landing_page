@@ -1,0 +1,28 @@
+{
+  "page.affiliates.title": "Affiliateprogram — dela en länk, tjäna återkommande | Persistent Cart",
+  "page.affiliates.desc": "Kreatörer, recensenter och utbildare: dela en Shopify-app som installeras med ett klick och täpper till ett dolt varukorgsläckage mellan enheter, och tjäna återkommande provision. Gratis att gå med.",
+  "page.affiliates.crumb": "Affiliates",
+  "page.affiliates.h1": "Dela en länk till en lösning som Shopify-butiker faktiskt behöver — och tjäna återkommande.",
+  "page.affiliates.lede": "Om du når Shopify-handlare är Persistent Cart enkel att rekommendera: den täpper till ett verkligt, dolt varukorgsläckage mellan enheter med ett klick, utan att kunderna behöver göra något. Dela din länk och tjäna återkommande provision för varje butik som stannar.",
+
+  "affiliates.terms": "30% återkommande provision · 12 månader per värvning · 90-dagars cookie · gratis att gå med.",
+  "affiliates.how": "Gå med gratis, få din länk och ett färdigt delningskit, och tjäna på varje butik som stannar.",
+
+  "affiliates.why.title": "Varför det konverterar för din publik",
+  "affiliates.why.1.title": "En sann, överraskande berättelse",
+  "affiliates.why.1.body": "\"De största butikerna behåller en inloggad varukorg på varje enhet — Shopify gör det inte som standard.\" Det är verifierbart, intuitivt och får folk att kontrollera sin egen butik.",
+  "affiliates.why.2.title": "Låg risk att rekommendera",
+  "affiliates.why.2.body": "Ett klick, ingen temakod, inga störningar för kunderna, en gratisplan att börja med. Det finns väldigt lite för din publik att invända mot.",
+  "affiliates.why.3.title": "Återkommande, inte en engångsföreteelse",
+  "affiliates.why.3.body": "Tjäna {pct}% återkommande provision i {months} månader för varje betalande butik — ett värde som växer i takt med att dina värvningar stannar.",
+
+  "affiliates.tools.title": "Delbara verktyg som sköter säljet",
+  "affiliates.tools.1": "Kalkylatorn för förlorade varukorgar — låt läsarna uppskatta sitt eget läckage",
+  "affiliates.tools.2": "Den gratis butiksgranskningen — en riskfri uppmaning till handling",
+  "affiliates.tools.3": "Snygga loggor, textsnuttar och berättelsen om paritet",
+
+  "affiliates.form.title": "Gå med i affiliateprogrammet",
+  "affiliates.form.success.heading": "Du står på kö — tack!",
+  "affiliates.form.success.body": "Vi granskar dina uppgifter och skickar inom kort din affiliatelänk, de delbara verktygen och de slutgiltiga villkoren.",
+  "affiliates.partnersCta": "Driver du en byrå eller bygger kundbutiker? Partnerprogrammet kan passa bättre."
+}

@@ -1,0 +1,79 @@
+---
+/**
+ * Catch-all router. Emits every registered page × all 15 locales from one
+ * shared component tree (config/routes.ts). Default locale (en) is served at
+ * root; other locales under /<path>/. Only pages present in COMPONENTS render —
+ * the registry can list a page before its component exists.
+ */
+import type { GetStaticPaths } from 'astro';
+import { PAGES, BUILT_KEYS } from '../config/routes';
+import { LOCALES } from '../config/locales';
+import { localizedPath } from '../i18n/routing';
+
+import { CONTENT_CONFIG } from '../config/pageRender';
+import HomePage from '../components/pages/HomePage.astro';
+import ContentPage from '../components/pages/ContentPage.astro';
+import PricingPage from '../components/pages/PricingPage.astro';
+import AuditPage from '../components/pages/AuditPage.astro';
+import PartnersPage from '../components/pages/PartnersPage.astro';
+import AffiliatesPage from '../components/pages/AffiliatesPage.astro';
+import CalculatorPage from '../components/pages/CalculatorPage.astro';
+import FaqPage from '../components/pages/FaqPage.astro';
+import BigRetailersPage from '../components/pages/BigRetailersPage.astro';
+import VsRecoveryPage from '../components/pages/VsRecoveryPage.astro';
+import CompareEmailPage from '../components/pages/CompareEmailPage.astro';
+
+// pageKey -> dedicated component (render phase only; never referenced in
+// getStaticPaths, because .astro imports split into a separate chunk).
+const CUSTOM: Record<string, any> = {
+  home: HomePage,
+  pricing: PricingPage,
+  'free-audit': AuditPage,
+  partners: PartnersPage,
+  affiliates: AffiliatesPage,
+  calculator: CalculatorPage,
+  faq: FaqPage,
+  'big-retailers': BigRetailersPage,
+  'vs-recovery': VsRecoveryPage,
+  'compare-email': CompareEmailPage,
+};
+
+export const getStaticPaths = (() => {
+  const paths: {
+    params: { slug: string | undefined };
+    props: { pageKey: string; locale: string; slug: string };
+  }[] = [];
+
+  for (const page of PAGES) {
+    if (!BUILT_KEYS.has(page.key)) continue;
+    for (const l of LOCALES) {
+      const path = localizedPath(l.code, page.slug);
+      const slugParam = path === '/' ? undefined : path.replace(/^\//, '');
+      paths.push({
+        params: { slug: slugParam },
+        props: { pageKey: page.key, locale: l.code, slug: page.slug },
+      });
+    }
+  }
+  return paths;
+}) satisfies GetStaticPaths;
+
+const { pageKey, locale, slug } = Astro.props;
+const Custom = CUSTOM[pageKey];
+const contentCfg = CONTENT_CONFIG[pageKey];
+---
+
+{
+  Custom ? (
+    <Custom locale={locale} slug={slug} />
+  ) : (
+    <ContentPage
+      locale={locale}
+      slug={slug}
+      pageKey={pageKey}
+      sectionCount={contentCfg?.sectionCount ?? 1}
+      faqCount={contentCfg?.faqCount ?? 0}
+      related={contentCfg?.related ?? []}
+    />
+  )
+}

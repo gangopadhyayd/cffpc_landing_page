@@ -1,0 +1,28 @@
+{
+  "page.affiliates.title": "Program afiliacyjny — udostępnij link, zarabiaj cyklicznie | Persistent Cart",
+  "page.affiliates.desc": "Twórcy, recenzenci i edukatorzy: udostępnijcie aplikację Shopify instalowaną jednym kliknięciem, która eliminuje ukryty wyciek koszyka między urządzeniami, i zarabiajcie cykliczną prowizję. Dołączenie jest bezpłatne.",
+  "page.affiliates.crumb": "Partnerzy afiliacyjni",
+  "page.affiliates.h1": "Udostępnij link do rozwiązania, którego sklepy Shopify naprawdę potrzebują — i zarabiaj cyklicznie.",
+  "page.affiliates.lede": "Jeśli docierasz do sprzedawców Shopify, Persistent Cart łatwo polecić: jednym kliknięciem eliminuje realny, ukryty wyciek koszyka między urządzeniami, a kupujący nie muszą robić nic. Udostępnij swój link i zarabiaj cykliczną prowizję z każdego sklepu, który zostaje.",
+
+  "affiliates.terms": "30% cyklicznej prowizji · 12 miesięcy za polecenie · 90-dniowy cookie · bezpłatne dołączenie.",
+  "affiliates.how": "Dołącz bezpłatnie, odbierz swój link oraz gotowy do udostępniania zestaw i zarabiaj z każdego sklepu, który zostaje.",
+
+  "affiliates.why.title": "Dlaczego to konwertuje u Twoich odbiorców",
+  "affiliates.why.1.title": "Prawdziwa, zaskakująca historia",
+  "affiliates.why.1.body": "„Największe sklepy utrzymują koszyk zalogowanego klienta na każdym urządzeniu — Shopify domyślnie tego nie robi.” To stwierdzenie jest weryfikowalne, intuicyjne i skłania ludzi do sprawdzenia własnego sklepu.",
+  "affiliates.why.2.title": "Niskie ryzyko przy polecaniu",
+  "affiliates.why.2.body": "Jedno kliknięcie, żadnego kodu w szablonie, żadnych zakłóceń dla klientów, darmowy plan na start. Twoi odbiorcy praktycznie nie mają się do czego przyczepić.",
+  "affiliates.why.3.title": "Cyklicznie, nie jednorazowo",
+  "affiliates.why.3.body": "Zarabiaj {pct}% cyklicznej prowizji przez {months} miesięcy z każdego płacącego sklepu — wartość, która rośnie, w miarę jak Twoje polecenia zostają.",
+
+  "affiliates.tools.title": "Narzędzia do udostępniania, które sprzedają za Ciebie",
+  "affiliates.tools.1": "Kalkulator utraconych koszyków — pozwól czytelnikom oszacować własny wyciek",
+  "affiliates.tools.2": "Bezpłatny audyt sklepu — wezwanie do działania bez ryzyka",
+  "affiliates.tools.3": "Czyste logotypy, fragmenty tekstów i historia o spójności koszyka",
+
+  "affiliates.form.title": "Dołącz do programu afiliacyjnego",
+  "affiliates.form.success.heading": "Jesteś w kolejce — dziękujemy!",
+  "affiliates.form.success.body": "Wkrótce sprawdzimy Twoje dane i wyślemy Twój link afiliacyjny, narzędzia do udostępniania oraz ostateczne warunki.",
+  "affiliates.partnersCta": "Prowadzisz agencję lub budujesz sklepy dla klientów? Program partnerski może pasować lepiej."
+}

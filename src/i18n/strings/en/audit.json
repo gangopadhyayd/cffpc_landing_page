@@ -1,0 +1,35 @@
+{
+  "page.free-audit.title": "Free Shopify cross-device cart audit | Persistent Cart",
+  "page.free-audit.desc": "Find out for free whether your Shopify store drops signed-in carts when shoppers switch devices — what it could be costing you, and the quick wins. No install required.",
+  "page.free-audit.crumb": "Free audit",
+  "page.free-audit.h1": "Does your store lose carts when shoppers switch devices? We'll check — free.",
+  "page.free-audit.lede": "Most merchants don't know whether their store keeps a signed-in shopper's cart across devices — and the loss is invisible in your reports. Send us your store and we'll check, estimate the impact, and point out the quick wins. No obligation, no install required.",
+
+  "audit.checks.title": "What we'll check",
+  "audit.checks.1.title": "Does a signed-in cart survive a device switch?",
+  "audit.checks.1.body": "We test whether a logged-in shopper's cart follows them from phone to desktop on your store, or quietly disappears.",
+  "audit.checks.2.title": "Roughly what it's costing you",
+  "audit.checks.2.body": "Using your store's profile and industry benchmarks, we give a transparent, illustrative estimate of the revenue at stake — never a borrowed stat.",
+  "audit.checks.3.title": "The quick wins",
+  "audit.checks.3.body": "Practical, no-pressure recommendations — whether or not you ever install Persistent Cart.",
+
+  "audit.form.title": "Request your free audit",
+  "audit.form.storeUrl": "Your store URL",
+  "audit.form.storeUrlPlaceholder": "yourstore.myshopify.com",
+  "audit.form.name": "Your name",
+  "audit.form.email": "Email",
+  "audit.form.plan": "Shopify plan (optional)",
+  "audit.form.plan.basic": "Basic",
+  "audit.form.plan.grow": "Grow / Shopify",
+  "audit.form.plan.advanced": "Advanced",
+  "audit.form.plan.plus": "Plus",
+  "audit.form.plan.unsure": "Not sure",
+  "audit.form.orders": "Monthly orders (optional)",
+  "audit.form.submit": "Get my free audit",
+  "audit.form.privacy": "We use these details only to prepare your audit and reply. No spam, no sharing. See our privacy approach.",
+  "audit.form.success.heading": "Audit requested — thank you!",
+  "audit.form.success.body": "We've got your request and will email your free cross-device cart audit within 1–2 business days. Keep an eye on your inbox.",
+
+  "audit.expectations": "We'll email your audit within 1–2 business days. It's genuinely free and there's no obligation to install anything.",
+  "audit.trust": "From the team behind Persistent Cart — Built for Shopify, helping stores since 2016."
+}

@@ -1,0 +1,28 @@
+{
+  "page.affiliates.title": "Affiliate program — share a link, earn recurring | Persistent Cart",
+  "page.affiliates.desc": "Creators, reviewers, and educators: share a one-click Shopify app that fixes a hidden cross-device cart leak, and earn recurring commission. Free to join.",
+  "page.affiliates.crumb": "Affiliates",
+  "page.affiliates.h1": "Share a link to a fix Shopify stores actually need — and earn recurring.",
+  "page.affiliates.lede": "If you reach Shopify merchants, Persistent Cart is an easy thing to recommend: it fixes a real, hidden cross-device cart leak in one click, with nothing for shoppers to do. Share your link and earn recurring commission on every store that sticks.",
+
+  "affiliates.terms": "30% recurring commission · 12 months per referral · 90-day cookie · free to join.",
+  "affiliates.how": "Join free, get your link and a ready-to-share kit, and earn on every store that sticks.",
+
+  "affiliates.why.title": "Why it converts for your audience",
+  "affiliates.why.1.title": "A true, surprising story",
+  "affiliates.why.1.body": "\"The biggest stores keep a signed-in cart on every device — Shopify doesn't by default.\" It's verifiable, intuitive, and makes people check their own store.",
+  "affiliates.why.2.title": "Low-risk to recommend",
+  "affiliates.why.2.body": "One click, no theme code, no customer disruption, a free plan to start. There's very little for your audience to object to.",
+  "affiliates.why.3.title": "Recurring, not one-and-done",
+  "affiliates.why.3.body": "Earn {pct}% recurring commission for {months} months on each paying store — value that compounds as your referrals stick.",
+
+  "affiliates.tools.title": "Shareable tools that do the selling",
+  "affiliates.tools.1": "The lost-cart calculator — let readers estimate their own leak",
+  "affiliates.tools.2": "The free store audit — a no-risk call to action",
+  "affiliates.tools.3": "Clean logos, copy snippets, and the parity story",
+
+  "affiliates.form.title": "Join the affiliate program",
+  "affiliates.form.success.heading": "You're in the queue — thank you!",
+  "affiliates.form.success.body": "We'll review your details and send your affiliate link, the shareable tools, and the finalized terms shortly.",
+  "affiliates.partnersCta": "Run an agency or build client stores? The partner program may fit better."
+}

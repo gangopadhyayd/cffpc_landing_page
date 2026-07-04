@@ -1,0 +1,11 @@
+{
+  "page.contact.title": "Contact the Persistent Cart team — Shopify cart sync",
+  "page.contact.desc": "Reach the Persistent Cart team at support@persistentcartapp.com. We're a small, founder-led team that reads and replies to every message — audits included.",
+  "page.contact.crumb": "Contact",
+  "page.contact.h1": "Talk to the team behind Persistent Cart",
+  "page.contact.lede": "The fastest way to reach us is email: support@persistentcartapp.com. Persistent Cart is run by a small, founder-led team, and a real person reads every message that comes in — usually the same people who build and maintain the app. Whether it's a question, a problem, or a free audit request, write to us and you'll hear back.",
+  "page.contact.s1.h": "How do I get in touch?",
+  "page.contact.s1.b": "Email support@persistentcartapp.com — that's the most direct line to us. There's no ticket maze and no outsourced call center; Persistent Cart is a small, founder-led team, and the person who answers is usually the person who can actually fix things. We read every message that comes in and reply personally. This has been our approach since 2016, and it's why merchants tend to get a straight, useful answer rather than a canned reply.\n\nIf you're already a customer, mention your store URL so we can look at your specific setup. If you're still deciding, ask anything — we'd rather answer a question now than have you guess.",
+  "page.contact.s2.h": "What can I expect when I write in?",
+  "page.contact.s2.b": "A real reply from a real person, not an auto-responder. Tell us what you're seeing — a sync that isn't working, a pricing question, or whether the app fits your store — and we'll give you a direct answer. If you'd like us to look before you commit, ask for a free store audit: we'll check whether your store drops signed-in carts across devices and browsers, and send back what we find, with no obligation and no install required. It's the lowest-friction way to see whether Persistent Cart is worth it for your store — and an easy way to start a conversation with us."
+}

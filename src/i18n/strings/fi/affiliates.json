@@ -1,0 +1,28 @@
+{
+  "page.affiliates.title": "Affiliate-ohjelma — jaa linkki, ansaitse toistuvasti | Persistent Cart",
+  "page.affiliates.desc": "Sisällöntuottajat, arvostelijat ja kouluttajat: jaa yhden klikkauksen Shopify-sovellus, joka korjaa piilevän laitteiden välisen ostoskorivuodon, ja ansaitse toistuvaa provisiota. Liittyminen on ilmaista.",
+  "page.affiliates.crumb": "Affiliatet",
+  "page.affiliates.h1": "Jaa linkki korjaukseen, jonka Shopify-kaupat oikeasti tarvitsevat — ja ansaitse toistuvasti.",
+  "page.affiliates.lede": "Jos tavoitat Shopify-kauppiaita, Persistent Cart on helppo suositeltava: se korjaa todellisen, piilevän laitteiden välisen ostoskorivuodon yhdellä klikkauksella, eikä asiakkaiden tarvitse tehdä mitään. Jaa linkkisi ja ansaitse toistuvaa provisiota jokaisesta kaupasta, joka jää käyttäjäksi.",
+
+  "affiliates.terms": "30 %:n toistuva provisio · 12 kuukautta per suosittelu · 90 päivän eväste · liittyminen ilmaista.",
+  "affiliates.how": "Liity ilmaiseksi, saa linkkisi ja valmis jaettava paketti, ja ansaitse jokaisesta kaupasta, joka jää käyttäjäksi.",
+
+  "affiliates.why.title": "Miksi se konvertoi yleisöllesi",
+  "affiliates.why.1.title": "Tosi, yllättävä tarina",
+  "affiliates.why.1.body": "\"Suurimmat kaupat säilyttävät kirjautuneen asiakkaan ostoskorin jokaisella laitteella — Shopify ei oletuksena.\" Se on todennettavissa, intuitiivinen ja saa ihmiset tarkistamaan oman kauppansa.",
+  "affiliates.why.2.title": "Vähäriskinen suositeltava",
+  "affiliates.why.2.body": "Yksi klikkaus, ei teemakoodia, ei häiriötä asiakkaille, ilmainen paketti aloitukseen. Yleisölläsi on hyvin vähän vastaan sanottavaa.",
+  "affiliates.why.3.title": "Toistuva, ei kertaluonteinen",
+  "affiliates.why.3.body": "Ansaitse {pct} %:n toistuva provisio {months} kuukauden ajan jokaisesta maksavasta kaupasta — arvoa, joka kertyy sitä mukaa, kun suosittelusi jäävät käyttäjiksi.",
+
+  "affiliates.tools.title": "Jaettavat työkalut, jotka tekevät myyntityön",
+  "affiliates.tools.1": "Menetettyjen ostoskorien laskuri — anna lukijoiden arvioida oma vuotonsa",
+  "affiliates.tools.2": "Ilmainen kauppa-analyysi — riskitön toimintakehotus",
+  "affiliates.tools.3": "Selkeät logot, tekstipätkät ja vertailutarina",
+
+  "affiliates.form.title": "Liity affiliate-ohjelmaan",
+  "affiliates.form.success.heading": "Olet jonossa — kiitos!",
+  "affiliates.form.success.body": "Käymme tietosi läpi ja lähetämme pian affiliate-linkkisi, jaettavat työkalut ja viimeistellyt ehdot.",
+  "affiliates.partnersCta": "Pyörität toimistoa tai rakennat asiakkaiden kauppoja? Kumppaniohjelma voi sopia paremmin."
+}

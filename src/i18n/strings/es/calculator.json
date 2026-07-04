@@ -1,0 +1,41 @@
+{
+  "page.calculator.title": "Calculadora de ingresos por carritos perdidos para Shopify | Persistent Cart",
+  "page.calculator.desc": "Una estimación transparente y orientativa de los ingresos que se pierden cuando los compradores con sesión iniciada cambian de dispositivo en tu tienda Shopify. Ajusta los valores de referencia; nosotros mostramos la fórmula.",
+  "page.calculator.h1": "¿Cuánto te podría estar costando la pérdida de carritos entre dispositivos?",
+  "page.calculator.lede": "Cuando un comprador con sesión iniciada monta un carrito en un dispositivo y termina en otro, una tienda Shopify por defecto lo pierde. Esta calculadora convierte eso en un rango aproximado y orientativo, usando tus cifras y los valores de referencia del sector. Todos los datos son editables y la fórmula está a la vista; nada es una caja negra.",
+
+  "calc.heading": "Estima los ingresos que pierdes por carritos",
+  "calc.intro": "Los valores predeterminados son puntos de partida orientativos (valores de referencia del sector donde existen). Ajústalos para que coincidan con tu tienda.",
+
+  "calc.input.orders.label": "Pedidos mensuales",
+  "calc.input.orders.help": "Aproximadamente cuántos pedidos recibe tu tienda al mes.",
+  "calc.input.aov.label": "Valor medio del pedido",
+  "calc.input.aov.help": "El total típico de tus pedidos.",
+  "calc.input.loggedIn.label": "Porcentaje de compradores con sesión iniciada",
+  "calc.input.loggedIn.help": "Proporción de compradores que compran con la sesión iniciada en una cuenta. Usamos un 50 % por defecto como punto de partida orientativo; ajústalo a la realidad de tu tienda.",
+  "calc.input.crossDevice.label": "Porcentaje que cambia de dispositivo",
+  "calc.input.crossDevice.help": "Proporción de compradores con sesión iniciada que navegan entre el móvil y el ordenador antes de comprar. Referencia: ~30 % (estimación razonada, no una tasa medida).",
+  "calc.input.recovery.label": "Carritos guardados que se convierten en pedidos",
+  "calc.input.recovery.help": "Proporción conservadora de esos recorridos entre dispositivos que se convierten en un pedido que de otro modo se habría perdido. Por defecto, 2 %: deliberadamente prudente.",
+  "calc.currency.label": "Moneda",
+
+  "calc.result.heading": "Ingresos recuperados orientativos",
+  "calc.result.monthly": "Al mes",
+  "calc.result.annual": "Al año",
+  "calc.result.rangeNote": "Se muestra como un rango (±) porque es una estimación, no un resultado medido.",
+  "calc.result.disclaimer": "Este es un rango aproximado y orientativo basado en tus datos y en las medias del sector, no un resultado medido por la app. La relación entre cambio de dispositivo → venta perdida es una inferencia razonada, no una tasa publicada. Tómalo como una idea aproximada de la magnitud.",
+
+  "calc.formula.label": "La fórmula (sin caja negra)",
+  "calc.formula.text": "Pedidos recuperados/mes = Pedidos mensuales × Porcentaje con sesión iniciada × Porcentaje que cambia de dispositivo × Tasa de carritos guardados. Ingresos = pedidos recuperados × AOV. Anual = × 12.",
+
+  "calc.cta.lead": "¿Quieres que revisemos tu tienda real en lugar de usar valores de referencia?",
+  "calc.cta.audit": "Consigue una auditoría gratuita de tu tienda",
+  "calc.cta.install": "Añade Persistent Cart: empieza gratis",
+
+  "calc.page.s1.h": "Por qué una tienda Shopify por defecto pierde carritos entre dispositivos",
+  "calc.page.s1.b": "En una tienda Shopify estándar, el carrito se almacena en una cookie del navegador, no en la cuenta del cliente. Así que el carrito de un comprador con sesión iniciada no le sigue del móvil al portátil: sencillamente no está en el segundo dispositivo. El comprador reconstruye de memoria un carrito más pequeño o no vuelve en absoluto. Como no se muestra ningún error ni se dispara ningún correo, la mayoría de los comerciantes nunca ven la pérdida en sus informes.",
+  "calc.page.s2.h": "Cómo interpretar esta estimación",
+  "calc.page.s2.b": "La calculadora multiplica tu volumen de pedidos por tres porcentajes editables: cuántos compradores tienen la sesión iniciada, cuántos de ellos se mueven entre dispositivos y una tasa deliberadamente conservadora de cuántos de esos recorridos convierte en venta un carrito conservado. Mostramos el resultado como un rango, nunca como una única cifra rotunda, porque la relación entre el cambio de dispositivo y la venta perdida es una inferencia razonada y no una estadística medida. La versión honesta de estas cuentas es más creíble que una afirmación prestada de «+X % de ventas», y por eso mostramos la fórmula.",
+  "calc.page.s3.h": "De la estimación a la certeza",
+  "calc.page.s3.b": "Una estimación es un punto de partida. Para ver si tu tienda concreta pierde carritos con sesión iniciada entre dispositivos —y cuánto vale eso para ti—, solicita una auditoría gratuita de la tienda. Comprobaremos el comportamiento real de tu tienda entre dispositivos y te enviaremos lo que encontremos, sin compromiso y sin necesidad de instalar nada."
+}

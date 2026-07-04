@@ -1,0 +1,41 @@
+{
+  "page.calculator.title": "Calculadora de receita de carrinhos perdidos para Shopify | Persistent Cart",
+  "page.calculator.desc": "Uma estimativa transparente e ilustrativa da receita perdida quando clientes conectados trocam de dispositivo na sua loja Shopify. Ajuste as referências; nós mostramos a fórmula.",
+  "page.calculator.h1": "Quanto a perda de carrinhos entre dispositivos pode estar custando a você?",
+  "page.calculator.lede": "Quando um cliente conectado monta um carrinho em um dispositivo e finaliza em outro, uma loja Shopify padrão o perde. Esta calculadora transforma isso em uma faixa aproximada e ilustrativa — usando os seus números e referências do setor. Todos os campos são editáveis e a fórmula é mostrada; nada é uma caixa-preta.",
+
+  "calc.heading": "Estime a receita perdida com carrinhos",
+  "calc.intro": "Os valores padrão são pontos de partida ilustrativos (referências do setor onde elas existem). Ajuste-os para corresponder à sua loja.",
+
+  "calc.input.orders.label": "Pedidos mensais",
+  "calc.input.orders.help": "Aproximadamente quantos pedidos sua loja recebe por mês.",
+  "calc.input.aov.label": "Ticket médio",
+  "calc.input.aov.help": "O valor total típico de um pedido.",
+  "calc.input.loggedIn.label": "Proporção de clientes conectados",
+  "calc.input.loggedIn.help": "Parcela de compradores que compram logados em uma conta. Usamos 50% como ponto de partida ilustrativo — ajuste para a realidade da sua loja.",
+  "calc.input.crossDevice.label": "Proporção que troca de dispositivo",
+  "calc.input.crossDevice.help": "Parcela de clientes conectados que navegam entre celular e desktop antes de comprar. Referência: ~30% (estimativa fundamentada, não uma taxa medida).",
+  "calc.input.recovery.label": "Carrinhos salvos que viram pedidos",
+  "calc.input.recovery.help": "Parcela conservadora dessas jornadas entre dispositivos que se transformam em um pedido que, de outra forma, teria sido perdido. Padrão de 2% — deliberadamente cauteloso.",
+  "calc.currency.label": "Moeda",
+
+  "calc.result.heading": "Receita recuperada ilustrativa",
+  "calc.result.monthly": "Por mês",
+  "calc.result.annual": "Por ano",
+  "calc.result.rangeNote": "Mostrado como uma faixa (±) porque isto é uma estimativa, não um resultado medido.",
+  "calc.result.disclaimer": "Esta é uma faixa ilustrativa aproximada baseada nos seus valores e em médias do setor — não um resultado medido pelo app. A ligação entre troca de dispositivo → venda perdida é uma inferência fundamentada, não uma taxa publicada. Encare-a como uma noção aproximada de escala.",
+
+  "calc.formula.label": "A fórmula (sem caixa-preta)",
+  "calc.formula.text": "Pedidos recuperados/mês = Pedidos mensais × Proporção de conectados × Proporção que troca de dispositivo × Taxa de carrinhos salvos. Receita = pedidos recuperados × ticket médio. Anual = × 12.",
+
+  "calc.cta.lead": "Quer que a gente verifique a sua loja de verdade, em vez de referências?",
+  "calc.cta.audit": "Receba uma auditoria gratuita da loja",
+  "calc.cta.install": "Adicione o Persistent Cart — comece grátis",
+
+  "calc.page.s1.h": "Por que uma loja Shopify padrão vaza carrinhos entre dispositivos",
+  "calc.page.s1.b": "Em uma loja Shopify padrão, o carrinho é armazenado em um cookie do navegador, não na conta do cliente. Então o carrinho de um cliente conectado não o acompanha do celular para o notebook — ele simplesmente não está no segundo dispositivo. O cliente ou remonta um carrinho menor de memória ou não volta mais. Como nenhum erro é exibido e nenhum e-mail é disparado, a maioria dos lojistas nunca vê essa perda nos relatórios.",
+  "calc.page.s2.h": "Como interpretar esta estimativa",
+  "calc.page.s2.b": "A calculadora multiplica o seu volume de pedidos por três proporções editáveis: quantos clientes estão conectados, quantos deles transitam entre dispositivos e uma taxa deliberadamente conservadora de quantas dessas jornadas um carrinho mantido transforma em venda. Mostramos o resultado como uma faixa, nunca um único número assertivo, porque a ligação entre troca de dispositivo e venda perdida é uma inferência fundamentada, e não uma estatística medida. A versão honesta dessa conta é mais confiável do que uma alegação emprestada de \"+X% de vendas\" — e é por isso que mostramos a fórmula.",
+  "calc.page.s3.h": "Da estimativa à certeza",
+  "calc.page.s3.b": "Uma estimativa é um ponto de partida. Para saber se a sua loja específica perde carrinhos de clientes conectados entre dispositivos — e quanto isso vale para você — solicite uma auditoria gratuita da loja. Vamos verificar o comportamento real entre dispositivos da sua loja e devolver o que encontrarmos, sem compromisso e sem precisar instalar."
+}
