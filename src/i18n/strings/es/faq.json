@@ -4,7 +4,6 @@
   "page.faq.crumb": "Preguntas frecuentes",
   "page.faq.h1": "Persistent Cart, respondido.",
   "page.faq.lede": "Respuestas directas a lo que preguntan los comerciantes antes de instalar: cómo funciona la sincronización del carrito entre dispositivos en Shopify, qué experimentan los compradores y cómo encaja Persistent Cart con las herramientas que ya usas.",
-
   "faq.q1.q": "¿Sincroniza Shopify los carritos entre dispositivos por defecto?",
   "faq.q1.a": "No. En una tienda Shopify por defecto, el carrito se almacena en una cookie del navegador que dura unas dos semanas, no en la cuenta del cliente. Así que cuando un comprador con sesión iniciada cambia del móvil al portátil, el carrito no le sigue; no está en el segundo dispositivo. La propia comunidad de Shopify confirma que la sincronización del carrito entre dispositivos requiere código personalizado o una app.",
   "faq.q2.q": "¿Verán mis clientes ventanas emergentes o recibirán correos?",
@@ -30,5 +29,5 @@
   "faq.q12.q": "¿Qué idiomas y monedas admite?",
   "faq.q12.a": "Funciona con tiendas Shopify multidivisa y sincroniza el carrito independientemente del idioma. La app la usan tiendas de todo el mundo: la pérdida de carritos entre dispositivos no es exclusiva de ningún mercado concreto.",
   "faq.q13.q": "¿Cómo sé si vale la pena para mi tienda?",
-  "faq.q13.a": "Pruébalo en tu propia tienda antes de pagar: el plan Free Starter permite hasta 10 sincronizaciones de carrito reales, y cualquier plan de pago añade una prueba de 30 días. En Basic son $4.99 al mes: recuperar un solo pedido entre dispositivos de tamaño medio lo cubre de sobra. La auditoría gratuita de la tienda revisa tu tienda real y la calculadora de carritos perdidos muestra las cuentas, así que no vas a ciegas."
+  "faq.q13.a": "Pruébalo en tu propia tienda antes de pagar: el plan Free Starter cubre hasta 10 sincronizaciones de carrito reales, y cualquier plan de pago empieza con 30 días de prueba. El plan Basic cuesta 4,99 $ al mes — recuperar un solo pedido mediano entre dispositivos lo cubre de sobra. Lo ves funcionar en tu propia tienda antes de que se cobre un dólar, así que no tienes que adivinar."
 }

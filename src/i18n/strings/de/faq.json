@@ -4,7 +4,6 @@
   "page.faq.crumb": "FAQ",
   "page.faq.h1": "Persistent Cart, beantwortet.",
   "page.faq.lede": "Klare Antworten auf das, was Händler vor der Installation fragen – wie geräteübergreifende Warenkorb-Synchronisierung in Shopify funktioniert, was Käufer erleben und wie Persistent Cart zu den Tools passt, die Sie bereits nutzen.",
-
   "faq.q1.q": "Synchronisiert Shopify Warenkörbe standardmäßig geräteübergreifend?",
   "faq.q1.a": "Nein. In einem Standard-Shopify-Shop wird der Warenkorb in einem Browser-Cookie gespeichert, das etwa zwei Wochen gültig ist – nicht im Konto des Kunden. Wenn ein angemeldeter Käufer also vom Handy zum Laptop wechselt, folgt ihm der Warenkorb nicht; er ist auf dem zweiten Gerät nicht vorhanden. Shopifys eigene Community bestätigt, dass geräteübergreifende Warenkorb-Synchronisierung eigenen Code oder eine App erfordert.",
   "faq.q2.q": "Sehen meine Kunden Popups oder bekommen sie E-Mails?",
@@ -30,5 +29,5 @@
   "faq.q12.q": "Welche Sprachen und Währungen unterstützt es?",
   "faq.q12.a": "Es funktioniert mit Multi-Währungs-Shopify-Shops und synchronisiert den Warenkorb unabhängig von der Sprache. Die App wird von Shops auf der ganzen Welt genutzt – geräteübergreifender Warenkorbverlust ist nicht auf einen einzelnen Markt beschränkt.",
   "faq.q13.q": "Woran erkenne ich, ob es sich für meinen Shop lohnt?",
-  "faq.q13.a": "Testen Sie es in Ihrem eigenen Shop, bevor Sie zahlen: Der Free Starter-Tarif umfasst bis zu 10 echte Warenkorb-Synchronisierungen, und jeder kostenpflichtige Tarif kommt mit einer 30-tägigen Testphase. Auf Basic sind es $4.99/Monat – eine einzige zurückgewonnene mittelgroße geräteübergreifende Bestellung deckt das mehr als ab. Die kostenlose Shop-Analyse prüft Ihren tatsächlichen Shop und der Warenkorbverlust-Rechner zeigt die Rechnung, sodass Sie nicht raten müssen."
+  "faq.q13.a": "Testen Sie es in Ihrem eigenen Shop, bevor Sie zahlen: Der Free Starter-Tarif umfasst bis zu 10 echte Warenkorb-Synchronisierungen, und jeder kostenpflichtige Tarif beginnt mit einer 30-tägigen Testphase. Der Basic-Tarif kostet 4,99 $ im Monat – eine einzige gerettete geräteübergreifende Bestellung mittlerer Größe deckt das mehr als ab. Sie sehen die App in Ihrem eigenen Shop arbeiten, bevor ein Dollar berechnet wird – Sie müssen also nicht raten."
 }

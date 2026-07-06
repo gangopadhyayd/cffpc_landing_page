@@ -7,7 +7,7 @@ import CTABand from '../CTABand.astro';
 import { t, paragraphs } from '../../i18n';
 import { titleKey, descKey } from '../../config/routes';
 import { localizedPath, localizedUrl } from '../../i18n/routing';
-import { site } from '../../config/site';
+import { appStoreLink } from '../../config/site';
 import { webPageSchema, faqPageSchema } from '../../lib/schema';
 
 interface Props {
@@ -57,8 +57,8 @@ const jsonLd = [
     heading={tt('content.ctaHeading')}
     body={tt('content.ctaBody')}
     actions={[
-      { label: tt('content.ctaInstall'), href: site.appStoreUrl, style: 'primary', external: true, event: 'install_click', source: 'pricing' },
-      { label: tt('content.ctaAudit'), href: localizedPath(locale, 'free-audit'), style: 'secondary', event: 'audit_cta', source: 'pricing' },
+      { label: tt('content.ctaInstall'), href: appStoreLink('pricing_cta'), style: 'primary', external: true, event: 'install_click', source: 'pricing' },
+      { label: tt('cta.seeHowItWorks'), href: localizedPath(locale, 'how-it-works'), style: 'secondary' },
     ]}
     bg="navy"
   />

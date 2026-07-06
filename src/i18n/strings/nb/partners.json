@@ -4,10 +4,8 @@
   "page.partners.crumb": "Partnere",
   "page.partners.h1": "Tjen 30 % løpende provisjon — i et helt år — på hver Shopify-butikk du henviser.",
   "page.partners.lede": "Persistent Cart er en av de enkleste anbefalingene du kan gi: ett klikk for å installere, ingenting endrer seg for kundene, og en skjult lekkasje av handlekurver mellom enheter stopper. Built for Shopify, betrodd siden 2016. Anbefal den og tjen løpende provisjon på hver butikk du henter inn. Satsene nedenfor er våre vilkår for tidlige partnere — vi bekrefter de endelige vilkårene dine skriftlig før du starter.",
-
   "partners.earnings.title": "Hva det blir til sammen",
   "partners.earnings.body": "Provisjonen er løpende, så den vokser over tid. Henvis én Shopify Plus-butikk, og du tjener omtrent $30/måned i 12 måneder — rundt $360 fra én enkelt henvisning. Advanced-butikker gir deg ~$7.50/måned, og Basic- og Grow-butikker betaler deg hver måned de blir værende. Inkluder den i oppbyggingene du allerede leverer, og en portefølje på 30–40 kundebutikker blir en meningsfull løpende inntektskilde som går av seg selv, år etter år.",
-
   "partners.why.title": "Hvorfor markedsføre Persistent Cart",
   "partners.why.1.title": "Løpende provisjon",
   "partners.why.1.body": "Tjen {pct} % løpende provisjon i {months} måneder på hver betalende butikk du henviser — ikke en engangsbelønning.",
@@ -16,8 +14,7 @@
   "partners.why.3.title": "Den tjener mer penger for kundene dine",
   "partners.why.3.body": "Gjenvunne handlekurver mellom enheter betyr flere fullførte ordrer. Du fremstår bra fordi butikkene du tar i, presterer bedre.",
   "partners.why.4.title": "Ti års merittliste i ryggen",
-  "partners.why.4.body": "Du anbefaler den originale, mest anmeldte appen for handlekurv mellom enheter for Shopify — Built for Shopify, 4.8★, i drift siden 2016 — ikke en uprøvd klone fra 2025.",
-
+  "partners.why.4.body": "Du anbefaler den originale, mest anmeldte appen for handlekurv mellom enheter for Shopify — Built for Shopify, 4.9★, i drift siden 2016 — ikke en uprøvd klone fra 2025.",
   "partners.terms.title": "Avtalen",
   "partners.terms.commission.label": "Løpende provisjon",
   "partners.terms.commission.value": "{pct} %",
@@ -26,7 +23,6 @@
   "partners.terms.cookie.label": "Attribusjonsvindu",
   "partners.terms.cookie.value": "{days} dagers informasjonskapsel",
   "partners.terms.provisional": "Dette er vilkår for tidlige partnere — vi bekrefter de endelige vilkårene dine skriftlig og låser dem fast før du starter.",
-
   "partners.how.title": "Slik fungerer det",
   "partners.how.1.title": "Søk",
   "partners.how.1.body": "Fortell oss hvordan du når Shopify-forhandlere. Godkjenningen går raskt for byråer, utviklere, innholdsskapere og konsulenter.",
@@ -36,18 +32,15 @@
   "partners.how.3.body": "Del den med kunder eller publikummet ditt. Installasjoner gjennom lenken din spores til deg.",
   "partners.how.4.title": "Tjen",
   "partners.how.4.body": "Få utbetalt løpende provisjon for hver betalende butikk du henter inn, i {months} måneder hver.",
-
   "partners.audiences.title": "Hvem dette er for",
   "partners.audiences.1": "Shopify-byråer, frilansere og utviklere som setter opp og drifter kundebutikker",
   "partners.audiences.2": "Affiliates, innholdsskapere og anmeldelsessider i Shopify-økosystemet",
   "partners.audiences.3": "Konsulenter og undervisere som rådgir forhandlere om konvertering og kundelojalitet",
-
   "partners.kit.title": "Hva du får å markedsføre med",
   "partners.kit.1": "Merkevarelogoer og godkjente tekstutdrag",
   "partners.kit.2": "Kalkulatoren for tapte handlekurver som et delbart verktøy",
   "partners.kit.3": "Tilbudet om gratis butikkgjennomgang for å varme opp publikummet ditt",
   "partners.kit.4": "En tydelig, sann historie: gapet for handlekurv mellom enheter og ett-klikks-løsningen",
-
   "partners.form.title": "Søk om å bli med i partnerprogrammet",
   "partners.form.name": "Navnet ditt",
   "partners.form.email": "E-post",
@@ -63,7 +56,6 @@
   "partners.form.privacy": "Vi bruker disse opplysningene kun til å vurdere søknaden din og ta kontakt. Ingen spam.",
   "partners.form.success.heading": "Søknad mottatt — takk!",
   "partners.form.success.body": "Vi vurderer søknaden din og kommer tilbake til deg med henvisningslenken, markedsføringspakken og de endelige vilkårene. Snakkes snart.",
-
   "partners.faq.q1.q": "Hvordan fungerer provisjonssporing for en Shopify-app?",
   "partners.faq.q1.a": "Henvisningslenken din merker installasjoner som kommer gjennom deg, og systemet vårt tilskriver betalende butikker tilbake til kontoen din. Fordi faktureringen går gjennom Shopify, bekrefter vi konverteringer ved hver vellykkede betaling — så du krediteres for butikker som faktisk blir værende.",
   "partners.faq.q2.q": "Når og hvordan får jeg betalt?",
@@ -72,6 +64,5 @@
   "partners.faq.q3.a": "Nei. Det er gratis å bli med i partnerprogrammet. Du tjener provisjon på butikkene du henter inn — det er ingen avgift og ingen minstegrense.",
   "partners.faq.q4.q": "Kan jeg inkludere den i butikkene jeg bygger for kunder?",
   "partners.faq.q4.a": "Ja — det er en av de beste tilpasningene. Byråer og utviklere installerer den som en del av en oppbygging og tjener løpende provisjon samtidig som de får butikken til å prestere bedre. Oppgi alltid affiliateforhold i tråd med de vanlige retningslinjene.",
-
   "partners.affiliatesCta": "Vil du bare dele en lenke med et publikum? Se affiliateprogrammet."
 }

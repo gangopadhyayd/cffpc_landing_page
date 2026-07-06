@@ -4,10 +4,8 @@
   "page.partners.crumb": "Partners",
   "page.partners.h1": "Tjäna 30% återkommande provision — i ett helt år — för varje Shopify-butik du värvar.",
   "page.partners.lede": "Persistent Cart är en av de enklaste rekommendationer du kan ge: ett klick för att installera, ingenting förändras för kunderna, och ett dolt varukorgsläckage mellan enheter upphör. Built for Shopify, betrodd sedan 2016. Rekommendera den och tjäna återkommande provision för varje butik du tar med. Satserna nedan är våra villkor för tidiga partner — vi bekräftar dina slutgiltiga villkor skriftligt innan du börjar.",
-
   "partners.earnings.title": "Vad det summerar till",
   "partners.earnings.body": "Provisionen är återkommande, så den växer över tid. Värva en Shopify Plus-butik så tjänar du omkring $30/månad i 12 månader — ungefär $360 från en enda värvning. Advanced-butiker ger dig ~$7.50/månad, och Basic- och Grow-butiker betalar dig varje månad de stannar. Inkludera den i de butiker du redan bygger, så blir en portfölj på 30–40 kundbutiker en betydande, passiv återkommande intäkt varje år.",
-
   "partners.why.title": "Varför marknadsföra Persistent Cart",
   "partners.why.1.title": "Återkommande provision",
   "partners.why.1.body": "Tjäna {pct}% återkommande provision i {months} månader för varje betalande butik du värvar — inte en engångsersättning.",
@@ -16,8 +14,7 @@
   "partners.why.3.title": "Den får dina kunder att tjäna mer",
   "partners.why.3.body": "Återvunna varukorgar mellan enheter betyder fler slutförda ordrar. Du gör ett gott intryck eftersom de butiker du arbetar med presterar bättre.",
   "partners.why.4.title": "Tio års facit i ryggen",
-  "partners.why.4.body": "Du rekommenderar den ursprungliga, mest recenserade appen för varukorgar mellan enheter på Shopify — Built for Shopify, 4.8★, i drift sedan 2016 — inte en oprövad klon från 2025.",
-
+  "partners.why.4.body": "Du rekommenderar den ursprungliga, mest recenserade appen för varukorgar mellan enheter på Shopify — Built for Shopify, 4.9★, i drift sedan 2016 — inte en oprövad klon från 2025.",
   "partners.terms.title": "Upplägget",
   "partners.terms.commission.label": "Återkommande provision",
   "partners.terms.commission.value": "{pct}%",
@@ -26,7 +23,6 @@
   "partners.terms.cookie.label": "Attribueringsfönster",
   "partners.terms.cookie.value": "{days}-dagars cookie",
   "partners.terms.provisional": "Det här är villkor för tidiga partner — vi bekräftar dina slutgiltiga villkor skriftligt och låser fast dem innan du börjar.",
-
   "partners.how.title": "Så fungerar det",
   "partners.how.1.title": "Ansök",
   "partners.how.1.body": "Berätta hur du når Shopify-handlare. Godkännandet går snabbt för byråer, utvecklare, kreatörer och konsulter.",
@@ -36,18 +32,15 @@
   "partners.how.3.body": "Dela den med kunder eller din publik. Installationer via din länk spåras till dig.",
   "partners.how.4.title": "Tjäna",
   "partners.how.4.body": "Få återkommande provision för varje betalande butik du tar med, i {months} månader vardera.",
-
   "partners.audiences.title": "Vem det här är för",
   "partners.audiences.1": "Shopify-byråer, frilansare och utvecklare som sätter upp och sköter kundbutiker",
   "partners.audiences.2": "Affiliates, innehållskreatörer och recensionssajter i Shopify-ekosystemet",
   "partners.audiences.3": "Konsulter och utbildare som ger handlare råd om konvertering och retention",
-
   "partners.kit.title": "Vad du får att marknadsföra med",
   "partners.kit.1": "Varumärkesloggor och godkända textsnuttar",
   "partners.kit.2": "Kalkylatorn för förlorade varukorgar som ett delbart verktyg",
   "partners.kit.3": "Erbjudandet om gratis butiksgranskning för att värma upp din publik",
   "partners.kit.4": "En tydlig, sann berättelse: varukorgsgapet mellan enheter och lösningen med ett klick",
-
   "partners.form.title": "Ansök till partnerprogrammet",
   "partners.form.name": "Ditt namn",
   "partners.form.email": "E-post",
@@ -63,7 +56,6 @@
   "partners.form.privacy": "Vi använder dessa uppgifter endast för att granska din ansökan och kontakta dig. Ingen spam.",
   "partners.form.success.heading": "Ansökan mottagen — tack!",
   "partners.form.success.body": "Vi granskar din ansökan och återkommer med din värvningslänk, marknadsföringskitet och de slutgiltiga villkoren. Vi hörs snart.",
-
   "partners.faq.q1.q": "Hur fungerar provisionsspårning för en Shopify-app?",
   "partners.faq.q1.a": "Din värvningslänk märker installationer som kommer via dig, och vårt system attribuerar betalande butiker till ditt konto. Eftersom faktureringen sker via Shopify bekräftar vi konverteringar vid varje genomförd debitering — så du krediteras för butiker som faktiskt stannar.",
   "partners.faq.q2.q": "När och hur får jag betalt?",
@@ -72,6 +64,5 @@
   "partners.faq.q3.a": "Nej. Att gå med i partnerprogrammet är gratis. Du tjänar provision på de butiker du tar med — ingen avgift och inget minimikrav.",
   "partners.faq.q4.q": "Kan jag inkludera den i butikerna jag bygger åt kunder?",
   "partners.faq.q4.a": "Ja — det är en av de bästa tillämpningarna. Byråer och utvecklare installerar den som en del av ett bygge och tjänar återkommande provision samtidigt som butiken presterar bättre. Var alltid öppen med affiliaterelationer enligt gängse riktlinjer.",
-
   "partners.affiliatesCta": "Vill du bara dela en länk med en publik? Se affiliateprogrammet."
 }

@@ -3,11 +3,17 @@
 Premium, multilingual, SEO/GEO-optimized marketing site for the Shopify app
 **Persistent Cart — Sync Devices** (cross-device cart sync for signed-in customers).
 
-Goals, in priority order: **(1)** attract paid partners & affiliates, **(2)** drive merchant
-installs, **(3)** build trust with merchants, partners, and search/AI engines.
+Goals, in priority order: **(1)** drive merchant installs, **(2)** build trust with merchants,
+partners, and search/AI engines, **(3)** attract paid partners & affiliates (deferred to v2).
 
 Built with **Astro 7 + Tailwind v4 + TypeScript + Astro i18n**. Static output, ~zero runtime JS
-except small interactive islands (calculator, nav, language switcher, forms, consent).
+except small interactive islands (nav, language switcher, hero motion, consent).
+
+> **Lean-v1 scope (current):** 9 page types × 15 locales = 136 pages. The calculator, free-audit,
+> partner/affiliate, and thin cluster pages are built but parked behind `V1_DEFERRED` in
+> `src/config/routes.ts` (delete a key to re-enable; nav/footer/sitemap/llms.txt follow).
+> Rationale, page set, and the 3 remaining owner inputs: `docs/v1-recommendation.md`;
+> change history: `docs/iteration-log.md`.
 
 ---
 

@@ -4,18 +4,15 @@
   "page.pricing.crumb": "Tarifs",
   "page.pricing.h1": "Toutes les fonctionnalités, sur tous les forfaits. Un prix aligné sur votre forfait Shopify.",
   "page.pricing.lede": "Aucun niveau de fonctionnalités à décrypter. Chaque forfait inclut l'application complète — votre prix correspond simplement à votre abonnement Shopify. Commencez gratuitement, puis profitez d'un essai gratuit de 30 jours sur n'importe quel forfait payant.",
-
   "pricing.planHint": "Votre forfait est sélectionné automatiquement en fonction de votre abonnement Shopify. Vous ne choisissez pas un niveau de fonctionnalités — vous avez tout.",
   "pricing.cta.install": "Ajoutez Persistent Cart — commencez gratuitement",
   "pricing.trial": "Forfait Free Starter · essai gratuit de 30 jours sur tous les forfaits payants · annulez à tout moment",
-
   "pricing.tier.free.note": "Testez toutes les fonctionnalités, jusqu'à 10 synchronisations de panier",
   "pricing.tier.basic.note": "Pour les boutiques sur le forfait Shopify Basic",
   "pricing.tier.grow.note": "Pour les boutiques sur le forfait Shopify Grow (anciennement « Shopify »)",
   "pricing.tier.advanced.note": "Pour les boutiques sur le forfait Shopify Advanced",
   "pricing.tier.plus.note": "Pour les boutiques Shopify Plus",
   "pricing.tier.everyPlan": "Toutes les fonctionnalités incluses",
-
   "pricing.included.title": "Inclus dans chaque forfait",
   "pricing.included.1": "Synchronisation automatique du panier entre les appareils pour les clients connectés",
   "pricing.included.2": "Fusion automatique et silencieuse par défaut — sans pop-up, e-mail ni inscription",
@@ -23,14 +20,12 @@
   "pricing.included.4": "Installation en un clic, aucun code de thème",
   "pricing.included.5": "Fonctionne sur mobile, ordinateur et lors des visites suivantes",
   "pricing.included.6": "Conforme aux normes de qualité et de performance Built for Shopify",
-
   "pricing.s1.h": "Pourquoi le prix dépend de votre forfait, et non des fonctionnalités",
   "pricing.s1.b": "La plupart des applications vous obligent à choisir un niveau et rationnent les fonctionnalités. Pas Persistent Cart — l'application entière est le produit, donc chaque forfait reçoit toutes les fonctionnalités. La seule chose qui change, c'est le prix, qui suit le niveau de votre abonnement Shopify. Une boutique Basic paie le tarif Basic ; une boutique Plus paie le tarif Plus ; les deux bénéficient de fonctionnalités identiques. La décision reste simple : il n'y a rien à comparer, si ce n'est de savoir si vous la voulez.\n\nDes forfaits Shopify plus élevés, ce sont plus de commandes et davantage d'acheteurs connectés qui changent d'appareil — le prix suit donc la valeur que vous récupérez, et non une liste de fonctionnalités plus longue.",
   "pricing.s2.h": "Commencez gratuitement, puis un essai de 30 jours",
   "pricing.s2.b": "Le forfait Free Starter vous permet d'installer et de tester toutes les fonctionnalités jusqu'à 10 synchronisations de panier — de quoi la voir fonctionner sur votre propre boutique. Lorsque vous le souhaitez, tout forfait payant débute par un essai gratuit de 30 jours : vous ne payez qu'une fois que vous l'avez vue à l'œuvre. Aucun engagement de longue durée ; annulez à tout moment depuis votre interface d'administration Shopify.",
   "pricing.s3.h": "Est-ce que ça en vaut la peine ?",
-  "pricing.s3.b": "La réponse honnête, c'est que cela dépend du nombre de vos acheteurs qui se connectent et changent d'appareil — précisément ce que le calculateur de paniers perdus et un audit gratuit de boutique vous aident à estimer. Persistent Cart représente un faible coût mensuel conçu pour récupérer des commandes qui, autrement, disparaîtraient en silence. Si ne serait-ce qu'une poignée de paniers à forte valeur survivent chaque mois alors qu'ils auraient été perdus, l'application se rembourse d'elle-même.",
-
+  "pricing.s3.b": "La réponse honnête : cela dépend du nombre de clients qui se connectent et changent d'appareil. Persistent Cart est un petit coût mensuel conçu pour récupérer des commandes qui disparaîtraient sinon en silence — si ne serait-ce qu'une poignée de paniers de valeur survit chaque mois alors qu'ils auraient été perdus, l'application s'autofinance. Et vous n'avez pas à le croire sur parole : le plan Free Starter et l'essai de 30 jours vous laissent la voir fonctionner sur votre boutique avant qu'elle ne coûte quoi que ce soit.",
   "pricing.faq.q1.q": "Les forfaits moins chers ont-ils moins de fonctionnalités ?",
   "pricing.faq.q1.a": "Non. Chaque forfait inclut l'application complète. Votre prix est déterminé par le niveau de votre abonnement Shopify, pas par les fonctionnalités que vous souhaitez.",
   "pricing.faq.q2.q": "Existe-t-il vraiment un forfait gratuit ?",

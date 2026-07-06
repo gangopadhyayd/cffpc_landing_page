@@ -4,7 +4,6 @@
   "page.faq.crumb": "FAQ",
   "page.faq.h1": "Persistent Cart, besvart.",
   "page.faq.lede": "Rette svar på det forhandlere spør om før de installerer — hvordan synkronisering av handlekurv mellom enheter fungerer på Shopify, hva kundene opplever, og hvordan Persistent Cart passer med verktøyene du allerede bruker.",
-
   "faq.q1.q": "Synkroniserer Shopify handlekurver mellom enheter som standard?",
   "faq.q1.a": "Nei. I en standard Shopify-butikk lagres handlekurven i en informasjonskapsel i nettleseren som varer i omtrent to uker — ikke på kundens konto. Så når en innlogget kunde bytter fra mobil til laptop, følger ikke handlekurven dem; den er ikke der på den andre enheten. Shopifys eget fellesskap bekrefter at synkronisering av handlekurv mellom enheter krever egen kode eller en app.",
   "faq.q2.q": "Vil kundene mine se popup-vinduer eller få e-poster?",
@@ -30,5 +29,5 @@
   "faq.q12.q": "Hvilke språk og valutaer støtter den?",
   "faq.q12.a": "Den fungerer med Shopify-butikker med flere valutaer, og den synkroniserer handlekurven uavhengig av språk. Appen brukes av butikker over hele verden — tap av handlekurv mellom enheter er ikke spesifikt for ett enkelt marked.",
   "faq.q13.q": "Hvordan vet jeg at den er verdt det for butikken min?",
-  "faq.q13.a": "Test den på din egen butikk før du betaler: Free Starter-planen kjører opptil 10 ekte synkroniseringer av handlekurv, og enhver betalt plan legger til en 30-dagers prøveperiode. På Basic er den $4.99/måned — å gjenvinne én enkelt mellomstor ordre på tvers av enheter dekker den mer enn nok. Den gratis butikkgjennomgangen sjekker din faktiske butikk, og kalkulatoren for tapte handlekurver viser regnestykket, så du slipper å gjette."
+  "faq.q13.a": "Test i din egen butikk før du betaler: Free Starter-planen dekker opptil 10 ekte kurv-synkroniseringer, og alle betalte planer starter med 30 dagers prøveperiode. Basic koster 4,99 $ i måneden — én reddet mellomstor bestilling på tvers av enheter dekker det med god margin. Du ser det virke i din egen butikk før en eneste dollar belastes, så du slipper å gjette."
 }

@@ -1,6 +1,5 @@
 {
   "meta.locale.reviewNotice": "Esta página é uma tradução automática e aguarda revisão de um falante nativo.",
-
   "nav.product": "Como funciona",
   "nav.whyItMatters": "Por que importa",
   "nav.pricing": "Preços",
@@ -14,7 +13,6 @@
   "nav.openMenu": "Abrir menu",
   "nav.languageLabel": "Idioma",
   "nav.chooseLanguage": "Escolha seu idioma",
-
   "cta.install": "Adicione o Persistent Cart — comece grátis",
   "cta.installShort": "Comece grátis",
   "cta.audit": "Receba uma auditoria gratuita da loja",
@@ -25,7 +23,6 @@
   "cta.viewPricing": "Ver preços",
   "cta.readReviews": "Leia as avaliações",
   "cta.learnMore": "Saiba mais",
-
   "common.builtForShopify": "Built for Shopify",
   "common.since": "Com a confiança de lojas Shopify desde 2016",
   "common.rating": "{rating}★ na Shopify App Store",
@@ -45,24 +42,21 @@
   "content.comparisonTitle": "Como se comparam",
   "content.parityTitle": "O que dizem as maiores lojas",
   "content.ctaHeading": "Pare de perder carrinhos de clientes conectados entre dispositivos.",
-  "content.ctaBody": "Adicione o Persistent Cart em um clique, ou peça que a gente analise sua loja antes — de graça.",
+  "content.ctaBody": "Adicione o Persistent Cart em um clique — comece grátis, sem que seus clientes precisem fazer nada.",
   "content.ctaInstall": "Adicione o Persistent Cart — comece grátis",
   "content.ctaAudit": "Receba uma auditoria gratuita da loja",
-
-  "announce.text": "Built for Shopify · Com a confiança de lojas Shopify desde 2016 · 4.8★",
-
+  "announce.text": "Built for Shopify · Com a confiança de lojas Shopify desde 2016 · 4.9★",
   "hero.eyebrow": "O app de carrinho entre dispositivos original para Shopify",
-  "hero.h1.lead": "Os grandes varejistas mantêm o carrinho de um cliente conectado em todos os dispositivos.",
-  "hero.h1.turn": "Por padrão, a Shopify não faz isso.",
-  "hero.sub": "Quando um cliente conectado passa do celular para o notebook, aquele carrinho some — sem erro, sem e-mail, apenas uma venda perdida. O Persistent Cart o mantém em todos os dispositivos, do jeito que a Amazon e o Walmart já fazem. Um clique para adicionar (mais um botão no seu tema), nada para os clientes fazerem, sem pop-ups nem e-mails.",
+  "hero.h1.lead": "Seus clientes trocam de dispositivo o tempo todo.",
+  "hero.h1.turn": "Em uma loja Shopify padrão, o carrinho não os acompanha.",
+  "hero.sub": "Um cliente enche o carrinho no celular, abre sua loja no notebook — e o carrinho está vazio. Sem erro, sem e-mail, só uma venda perdida. O Persistent Cart resolve isso em um clique (mais um botão no editor de tema): o carrinho de cada cliente logado o acompanha em todos os dispositivos, como já acontece na Amazon e no Walmart. Seus clientes não precisam fazer nada.",
   "hero.trust.rating": "avaliação na App Store",
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "Na App Store desde 2016",
-  "hero.demo.caption": "O mesmo carrinho de cliente conectado no celular e no notebook — sincronizado automaticamente.",
-
+  "hero.demo.caption": "Mesmo cliente, mesmo login — do celular para o notebook. No Shopify padrão, o carrinho fica para trás. Com o Persistent Cart, ele já está lá.",
   "demo.cart.title": "Seu carrinho",
   "demo.cart.subtotal": "Subtotal",
-  "demo.cart.synced": "Sincronizado entre dispositivos",
+  "demo.cart.synced": "Sincronizado",
   "demo.cart.syncing": "Sincronizando…",
   "demo.cart.added": "Adicionado no celular",
   "demo.cart.item.shoes": "Tênis de Trilha",
@@ -72,12 +66,10 @@
   "demo.device.laptop": "Notebook",
   "demo.qty": "Qtd",
   "demo.replay": "Repetir animação",
-
   "trustbar.lead": "O app de carrinho entre dispositivos original para Shopify — com a confiança de {stores} desde 2016.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ em avaliações reais de lojistas",
   "trustbar.plus": "Usado por {plusStores}",
-
   "footer.tagline": "Mantenha o carrinho de um cliente conectado em todos os dispositivos — a sincronização de carrinho entre dispositivos que as maiores lojas já usam, agora na Shopify.",
   "footer.group.product": "Produto",
   "footer.group.learn": "Aprenda",
@@ -90,7 +82,6 @@
   "footer.privacy": "Privacidade",
   "footer.support": "Suporte",
   "footer.contact": "Contato",
-
   "footer.link.pricing": "Preços",
   "footer.link.calculator": "Calculadora de carrinhos perdidos",
   "footer.link.free-audit": "Auditoria gratuita da loja",
@@ -106,26 +97,20 @@
   "footer.link.support": "Suporte",
   "footer.link.changelog": "Novidades",
   "footer.link.privacy": "Privacidade",
-
   "a11y.skipToContent": "Pular para o conteúdo",
   "a11y.homeLink": "Persistent Cart — início",
-
   "notFound.title": "Página não encontrada",
   "notFound.heading": "Não encontramos essa página",
   "notFound.body": "A página pode ter sido movida. Aqui estão alguns bons lugares para continuar de onde você parou.",
   "notFound.home": "Ir para a página inicial",
   "notFound.howItWorks": "Como o Persistent Cart funciona",
-  "notFound.calculator": "Estime a receita perdida com carrinhos",
-
   "page.home.title": "Persistent Cart — sincronização de carrinho entre dispositivos para Shopify (Built for Shopify)",
-  "page.home.desc": "Mantenha o carrinho de um cliente conectado em todos os dispositivos — a sincronização de carrinho entre dispositivos que Amazon e Walmart já usam, agora na Shopify. Um clique, sem pop-ups nem e-mails. 4.8★, Built for Shopify, desde 2016.",
-
+  "page.home.desc": "Clientes trocam de dispositivo; em uma loja Shopify padrão o carrinho não os acompanha. O Persistent Cart mantém o carrinho de clientes logados em todos os dispositivos — um clique, sem pop-ups nem e-mails. 4,9★, Built for Shopify, desde 2016.",
   "home.trust.lead": "O app de carrinho entre dispositivos original para Shopify — mantendo carrinhos de clientes conectados sincronizados desde 2016.",
-  "home.trust.stat.rating": "4.8★ em {count} avaliações de lojistas",
+  "home.trust.stat.rating": "4.9★ em {count} avaliações de lojistas",
   "home.trust.stat.bfs": "Built for Shopify",
   "home.trust.stat.since": "Rodando desde 2016",
   "home.trust.stat.stores": "Com a confiança de {stores}",
-
   "home.problem.eyebrow": "O vazamento que a maioria dos donos nunca vê",
   "home.problem.heading": "Sua loja provavelmente perde o carrinho de um cliente conectado no momento em que ele troca de dispositivo.",
   "home.problem.intro": "Em uma loja Shopify padrão, o carrinho fica em um cookie do navegador — não na conta do cliente. Então, quando um cliente logado adiciona itens no celular na hora do almoço e abre sua loja no notebook à noite, o carrinho está vazio. A maioria dos donos nunca percebe isso acontecer, porque ninguém manda um e-mail dizendo \"meu carrinho sumiu\". Eles simplesmente não finalizam a compra.",
@@ -136,7 +121,6 @@
   "home.problem.with.title": "O carrinho acompanha o cliente",
   "home.problem.with.body": "O carrinho do cliente conectado sincroniza entre celular, notebook e visitas seguintes automaticamente — do mesmo jeito que os maiores varejistas já funcionam.",
   "home.problem.aha": "É a diferença entre um carrinho que pertence a um navegador e um carrinho que pertence ao seu cliente.",
-
   "home.benefits.eyebrow": "O que muda depois de um clique",
   "home.benefits.heading": "Três coisas passam a funcionar do jeito que os clientes já esperam.",
   "home.benefits.1.title": "Recupere carrinhos que você nem sabia que estava perdendo",
@@ -145,12 +129,10 @@
   "home.benefits.2.body": "Um carrinho entre dispositivos sem interrupções vai se acumulando. Os clientes adicionam no celular, adicionam mais no desktop e finalizam de uma só vez — em vez de remontar um carrinho menor de memória.",
   "home.benefits.3.title": "Um clique, e nada muda para os clientes",
   "home.benefits.3.body": "Sem pop-ups, sem e-mails, sem opt-ins, nada para os clientes fazerem. Ele roda silenciosamente em segundo plano — tão discreto que os lojistas nos dizem que esquecem que está ativado.",
-
   "home.motion.eyebrow": "Veja em ação",
   "home.motion.heading": "O mesmo carrinho de cliente conectado, em todos os dispositivos.",
   "home.motion.intro": "Um cliente logado adiciona um item no celular. Depois, ele abre a sua loja em um notebook, já conectado — e o carrinho já está lá, igualzinho, sem nenhum aviso para lidar. Este é o comportamento padrão: uma mesclagem automática silenciosa.",
   "home.motion.note": "Por padrão, o Persistent Cart mescla os carrinhos silenciosamente. Prefere deixar os clientes escolherem? Um aviso opcional de \"manter ou combinar\" está a um clique de distância.",
-
   "home.parity.eyebrow": "Como as maiores lojas já fazem isso",
   "home.parity.heading": "Amazon e Walmart mantêm o carrinho de um cliente conectado em todos os dispositivos. Os clientes esperam o mesmo da sua loja.",
   "home.parity.intro": "Isso não é um recurso opcional — é a experiência básica nas lojas onde seus clientes mais compram. As próprias páginas de ajuda delas confirmam:",
@@ -162,27 +144,22 @@
   "home.parity.amazon.source": "Atendimento ao Cliente da Amazon",
   "home.parity.shopify.name": "Shopify padrão",
   "home.parity.shopify.quote": "O carrinho é armazenado em um cookie do navegador, então o carrinho de um cliente conectado não o acompanha para outro dispositivo ou navegador.",
-  "home.parity.shopify.source": "Política de cookies da Shopify + comunidade",
-  "home.parity.cta": "Veja a comparação completa",
+  "home.parity.shopify.source": "Nosso resumo — com base na política de cookies da Shopify + comunidade",
+  "home.parity.cta": "O que é um carrinho persistente — o guia completo",
   "home.parity.diagram.caption": "O carrinho de um cliente conectado fica na conta do cliente — acessível de qualquer dispositivo — em vez de em um único navegador.",
-
   "home.metrics.eyebrow": "Uma década de confiabilidade constante",
   "home.metrics.heading": "Não é um experimento de 2025. É uma ferramenta de 2016 que as lojas continuam pagando para usar.",
-  "home.metrics.1.label": "Na App Store desde",
-  "home.metrics.1.value": "2016",
-  "home.metrics.1.note": "~10 anos de sincronização entre dispositivos",
+  "home.metrics.1.label": "Valor de pedidos com carrinhos sincronizados",
+  "home.metrics.1.note": "nos últimos 90 dias, nas lojas que usam o app",
   "home.metrics.2.label": "Avaliação dos lojistas",
-  "home.metrics.2.value": "4.8★",
   "home.metrics.2.note": "Built for Shopify",
-  "home.metrics.3.label": "Lojas atendidas",
-  "home.metrics.3.note": "do Basic ao Plus",
-
+  "home.metrics.3.label": "Na App Store desde",
+  "home.metrics.3.note": "Milhares de lojas · centenas na Shopify Plus",
   "home.testimonial.eyebrow": "Nas palavras de um lojista",
   "home.testimonial.quote": "Sem o app, os clientes perdem o carrinho de compras se trocam de dispositivo… NÃO é assim que todos os grandes sites de varejo online funcionam… o carrinho efetivamente fica com a CONTA do cliente, e não apenas com o DISPOSITIVO.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "Estados Unidos · usando o Persistent Cart há mais de 9 anos",
   "home.testimonial.cta": "Leia todas as {count} avaliações na App Store",
-
   "home.compare.eyebrow": "Prevenção, não apenas recuperação",
   "home.compare.heading": "É a metade que falta na sua estratégia contra o abandono.",
   "home.compare.intro": "E-mails e SMS de carrinho abandonado disparam depois que o carrinho já foi perdido, e só alcançam clientes que deram opt-in. O Persistent Cart age antes do abandono — ele impede que o carrinho desapareça já de início, para todo cliente conectado. Juntos, funcionam melhor.",
@@ -202,27 +179,22 @@
   "home.compare.row.cost.persistent": "Nenhum",
   "home.compare.row.cost.recovery": "Por e-mail/SMS enviado",
   "home.compare.footnote": "O Persistent Cart complementa sua ferramenta de e-mail — ele recupera os carrinhos que seus fluxos nunca veem.",
-
   "home.calc.eyebrow": "Coloque um número nisso",
   "home.calc.heading": "Quanto a perda de carrinhos entre dispositivos pode estar custando a você?",
   "home.calc.intro": "Ajuste alguns valores — já preenchidos com padrões ilustrativos — para obter uma faixa transparente e ilustrativa. Mostramos a fórmula; nada é uma caixa-preta.",
   "home.calc.cta": "Abrir a calculadora de carrinhos perdidos",
-
   "home.audit.eyebrow": "Não tem certeza se isso afeta você?",
   "home.audit.heading": "Vamos verificar a perda de carrinhos entre dispositivos na sua loja — de graça.",
   "home.audit.body": "Envie sua loja e a gente diz se o carrinho de um cliente conectado sobrevive a uma troca de dispositivo, quanto isso pode estar custando aproximadamente e os ganhos rápidos — sem compromisso, sem precisar instalar.",
   "home.audit.cta": "Receba uma auditoria gratuita da loja",
-
   "home.b2b.eyebrow": "B2B e Shopify Plus",
   "home.b2b.heading": "Carrinhos longos e de alto valor que precisam sobreviver à troca de sessão.",
   "home.b2b.body": "Compradores de atacado e B2B montam carrinhos grandes ao longo de várias sessões e dispositivos — e um carrinho perdido desse tamanho é um pedido real perdido. O Persistent Cart mantém grandes carrinhos de clientes conectados intactos entre dispositivos e lida com estações de trabalho compartilhadas sem vazar o carrinho de um comprador para outro.",
   "home.b2b.cta": "Persistent Cart para B2B e Plus",
-
   "home.partner.eyebrow": "Agências, desenvolvedores e criadores",
   "home.partner.heading": "Ganhe 30% de forma recorrente por 12 meses em cada loja que você indicar.",
   "home.partner.body": "É uma recomendação fácil: um clique, nenhuma interrupção para o cliente, um vazamento oculto resolvido — e comissão recorrente para você. Built for Shopify, com confiança desde 2016.",
   "home.partner.cta": "Veja os termos de parceria e inscreva-se",
-
   "home.data.eyebrow": "Confiança e tratamento de dados",
   "home.data.heading": "Ele acessa apenas o necessário para sincronizar um carrinho.",
   "home.data.body": "O Persistent Cart funciona para clientes conectados. Para sincronizar um carrinho, ele armazena o conteúdo do carrinho vinculado à conta do cliente na sua loja — nada além do que um carrinho contém. Visitantes não são rastreados. Somos Built for Shopify e seguimos os fluxos de proteção de dados exigidos pela Shopify.",
@@ -230,13 +202,11 @@
   "home.data.point.2": "Armazena o conteúdo do carrinho para sincronizá-lo, restrito à sua loja",
   "home.data.point.3": "Nenhum e-mail enviado, nenhum contato capturado, nenhum aviso de consentimento",
   "home.data.cta": "Leia nossa abordagem de privacidade",
-
   "home.pricing.eyebrow": "Preços",
   "home.pricing.heading": "Todos os recursos, em todos os planos. Com preço de acordo com seu plano Shopify.",
   "home.pricing.intro": "Não há níveis de recursos para decifrar — todo plano inclui o app completo. Seu preço simplesmente corresponde ao seu plano Shopify. Comece grátis e tenha um teste de 30 dias em qualquer plano pago.",
   "home.pricing.cta": "Ver todos os preços",
   "home.pricing.trialNote": "Plano Starter gratuito · Teste gratuito de 30 dias nos planos pagos",
-
   "home.faq.eyebrow": "Perguntas respondidas",
   "home.faq.heading": "O que os lojistas perguntam antes de instalar.",
   "home.faq.q1.q": "A Shopify já não sincroniza carrinhos entre dispositivos?",
@@ -252,12 +222,20 @@
   "home.faq.q6.q": "Como isso é diferente do meu app de e-mail de carrinho abandonado?",
   "home.faq.q6.a": "Essas ferramentas agem depois que um carrinho é abandonado e só alcançam contatos que deram opt-in. O Persistent Cart age antes — ele impede que o carrinho desapareça quando um cliente conectado troca de dispositivo. Eles são complementares: use os dois.",
   "home.faq.q7.q": "Como sei que vale a pena para a minha loja?",
-  "home.faq.q7.a": "Teste na sua própria loja antes de pagar: o plano Starter gratuito roda até 10 sincronizações de carrinho reais, e qualquer plano pago adiciona um teste de 30 dias. No Basic, são $4.99/mês — recuperar um único pedido de porte médio feito entre dispositivos já paga isso de sobra. A auditoria gratuita da loja verifica a sua loja de verdade e a calculadora de carrinhos perdidos mostra a conta, então você não fica no chute.",
+  "home.faq.q7.a": "Teste na sua própria loja antes de pagar: o plano Free Starter cobre até 10 sincronizações reais de carrinho, e qualquer plano pago começa com 30 dias de teste. No Basic são US$ 4,99 por mês — recuperar um único pedido médio entre dispositivos já cobre isso com folga. Você vê funcionando na sua própria loja antes de pagar um dólar, então não precisa adivinhar.",
   "home.faq.cta": "Ver todas as perguntas frequentes",
-
   "home.final.heading": "Dê aos seus clientes o carrinho que eles esperam — em todos os dispositivos.",
-  "home.final.body": "Adicione o Persistent Cart em um clique, ou peça que a gente analise sua loja antes. De qualquer forma, o vazamento para.",
+  "home.final.body": "Adicione o Persistent Cart em um clique — a partir daí, o carrinho dos clientes logados os acompanha em todo lugar.",
   "home.final.install": "Adicione o Persistent Cart — comece grátis",
   "home.final.audit": "Receba uma auditoria gratuita da loja",
-  "home.final.trust": "4.8★ · Built for Shopify · Com confiança desde 2016 · Teste gratuito de 30 dias nos planos pagos"
+  "home.final.trust": "4.9★ · Built for Shopify · Com confiança desde 2016 · Teste gratuito de 30 dias nos planos pagos",
+  "home.problem.stat": "9 em cada 10 pessoas alternam entre dispositivos para concluir uma tarefa, e 88% dos consumidores esperam uma experiência consistente entre dispositivos e canais.",
+  "notFound.faq": "Ver o FAQ",
+  "home.faq.q8.q": "O que ele faz com os dados dos meus clientes?",
+  "home.faq.q8.a": "O mínimo que uma sincronização de carrinho precisa. Funciona apenas para clientes logados e guarda o conteúdo do carrinho vinculado à conta do cliente na sua loja — nada além do que um carrinho contém. Visitantes não são rastreados, nenhum e-mail é enviado, nenhum aviso de consentimento aparece e os dados ficam restritos à sua loja. Somos Built for Shopify e seguimos os fluxos de proteção de dados exigidos pela Shopify.",
+  "nav.faq": "FAQ",
+  "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
+  "demo.cart.empty": "Seu carrinho está vazio",
+  "demo.cart.emptyHint": "O carrinho do celular ficou para trás",
+  "footer.link.how-it-works": "Como funciona"
 }

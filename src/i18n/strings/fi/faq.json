@@ -4,7 +4,6 @@
   "page.faq.crumb": "UKK",
   "page.faq.h1": "Persistent Cart, vastattuna.",
   "page.faq.lede": "Suoria vastauksia siihen, mitä kauppiaat kysyvät ennen asennusta — miten laitteiden välinen ostoskorin synkronointi toimii Shopifyssa, mitä asiakkaat kokevat ja miten Persistent Cart sopii jo käyttämiisi työkaluihin.",
-
   "faq.q1.q": "Synkronoiko Shopify ostoskorit laitteiden välillä oletuksena?",
   "faq.q1.a": "Ei. Oletusarvoisessa Shopify-kaupassa ostoskori tallennetaan selaimen evästeeseen, joka kestää noin kaksi viikkoa — ei asiakkaan tilille. Niinpä kun kirjautunut asiakas vaihtaa puhelimesta kannettavaan, ostoskori ei seuraa häntä; sitä ei ole toisella laitteella. Shopifyn oma yhteisö vahvistaa, että laitteiden välinen ostoskorin synkronointi vaatii räätälöityä koodia tai sovelluksen.",
   "faq.q2.q": "Näkevätkö asiakkaani ponnahdusikkunoita tai saavatko he sähköposteja?",
@@ -30,5 +29,5 @@
   "faq.q12.q": "Mitä kieliä ja valuuttoja se tukee?",
   "faq.q12.a": "Se toimii monivaluuttaisten Shopify-kauppojen kanssa ja synkronoi ostoskorin kielestä riippumatta. Sovellusta käyttävät kaupat ympäri maailmaa — laitteiden välinen ostoskorien menetys ei ole minkään yksittäisen markkinan erityispiirre.",
   "faq.q13.q": "Mistä tiedän, onko se kauppani väärti?",
-  "faq.q13.a": "Testaa sitä omassa kaupassasi ennen maksamista: ilmainen Free Starter -paketti tarjoaa enintään 10 todellista ostoskorisynkronointia, ja mikä tahansa maksullinen paketti lisää 30 päivän kokeilun. Basicilla se on $4.99/kk — yhden keskikokoisen laitteiden välisen tilauksen pelastaminen kattaa sen moninkertaisesti. Ilmainen kauppa-analyysi tarkistaa todellisen kauppasi ja menetettyjen ostoskorien laskuri näyttää matematiikan, joten et arvaile."
+  "faq.q13.a": "Testaa omassa kaupassasi ennen kuin maksat: Free Starter -paketti kattaa jopa 10 oikeaa ostoskorin synkronointia, ja jokainen maksullinen paketti alkaa 30 päivän kokeilulla. Basic maksaa 4,99 $ kuukaudessa — yksi pelastettu keskikokoinen tilaus laitteiden välillä kattaa sen moninkertaisesti. Näet sen toimivan omassa kaupassasi ennen kuin dollariakaan veloitetaan, joten sinun ei tarvitse arvailla."
 }

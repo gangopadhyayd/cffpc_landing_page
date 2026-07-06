@@ -4,10 +4,8 @@
   "page.partners.crumb": "合作伙伴",
   "page.partners.h1": "30% 持续佣金，整整一年 — 您推荐的每一家 Shopify 商店都能赚。",
   "page.partners.lede": "Persistent Cart 是您能做出的最轻松的推荐之一：一键安装，对购物者毫无改变，一处隐藏的跨设备购物车流失就此终止。Built for Shopify，自 2016 年起深受信赖。推荐它，您带来的每一家商店都能为您赚取持续佣金。下方费率是我们的早期合作伙伴条款 — 我们会在您开始前以书面形式确认您的最终条款。",
-
   "partners.earnings.title": "算下来能赚多少",
   "partners.earnings.body": "佣金是持续性的，会不断累积。推荐一家 Shopify Plus 商店，您每月大约能赚 $30，持续 12 个月 — 单笔推荐就约合 $360。Advanced 商店每月为您带来约 $7.50，Basic 和 Grow 商店则在留存的每个月持续给您付佣。把它打包进您本就在交付的项目里，一批 30–40 家客户商店每年就能变成一条可观、省心的持续收入线。",
-
   "partners.why.title": "为什么要推广 Persistent Cart",
   "partners.why.1.title": "持续佣金",
   "partners.why.1.body": "您推荐的每一家付费商店，都能让您赚取 {pct}% 的持续佣金，长达 {months} 个月 — 而不是一次性的奖励。",
@@ -16,8 +14,7 @@
   "partners.why.3.title": "它能为您的客户赚更多钱",
   "partners.why.3.body": "挽回的跨设备购物车意味着更多完成的订单。您经手的商店表现更好，您自然也跟着出彩。",
   "partners.why.4.title": "背靠十年的成绩单",
-  "partners.why.4.body": "您推荐的是 Shopify 上首款、评价最多的跨设备购物车应用 — Built for Shopify，4.8★，自 2016 年起运行 — 而不是一个未经检验的 2025 年仿品。",
-
+  "partners.why.4.body": "您推荐的是 Shopify 上首款、评价最多的跨设备购物车应用 — Built for Shopify，4.9★，自 2016 年起运行 — 而不是一个未经检验的 2025 年仿品。",
   "partners.terms.title": "合作条款",
   "partners.terms.commission.label": "持续佣金",
   "partners.terms.commission.value": "{pct}%",
@@ -26,7 +23,6 @@
   "partners.terms.cookie.label": "归因窗口",
   "partners.terms.cookie.value": "{days} 天 Cookie",
   "partners.terms.provisional": "这些是早期合作伙伴条款 — 我们会在您开始前以书面形式确认并锁定您的最终条款。",
-
   "partners.how.title": "运作方式",
   "partners.how.1.title": "申请",
   "partners.how.1.body": "告诉我们您如何触达 Shopify 商家。代理商、开发者、创作者和顾问的审核都很快。",
@@ -36,18 +32,15 @@
   "partners.how.3.body": "把它分享给客户或您的受众。通过您的链接完成的安装都会归到您名下。",
   "partners.how.4.title": "赚取佣金",
   "partners.how.4.body": "您带来的每一家付费商店，都能为您带来持续佣金，每家长达 {months} 个月。",
-
   "partners.audiences.title": "适合谁",
   "partners.audiences.1": "搭建和管理客户商店的 Shopify 代理商、自由职业者与开发者",
   "partners.audiences.2": "Shopify 生态中的推广联盟成员、内容创作者与测评网站",
   "partners.audiences.3": "为商家就转化与留存提供建议的顾问与教育者",
-
   "partners.kit.title": "您能用来推广的素材",
   "partners.kit.1": "品牌徽标和经核准的文案片段",
   "partners.kit.2": "作为可分享工具的购物车流失计算器",
   "partners.kit.3": "用来预热受众的免费商店检测优惠",
   "partners.kit.4": "一个清晰、真实的故事：跨设备购物车鸿沟，以及那个一键解决方案",
-
   "partners.form.title": "申请加入合作伙伴计划",
   "partners.form.name": "您的姓名",
   "partners.form.email": "电子邮箱",
@@ -63,7 +56,6 @@
   "partners.form.privacy": "我们仅使用这些信息来审核您的申请并与您联系。不发垃圾邮件。",
   "partners.form.success.heading": "已收到申请 — 感谢！",
   "partners.form.success.body": "我们会审核您的申请，并把您的推荐链接、推广工具包以及最终确定的条款回复给您。回头聊。",
-
   "partners.faq.q1.q": "Shopify 应用的佣金追踪是如何运作的？",
   "partners.faq.q1.a": "您的推荐链接会标记通过您带来的安装，我们的系统会把付费商店归因到您的账户。由于计费通过 Shopify 进行，我们会在每一笔成功扣款时确认转化 — 所以您拿到的是那些真正留存下来的商店的佣金。",
   "partners.faq.q2.q": "我何时、以何种方式获得报酬？",
@@ -72,6 +64,5 @@
   "partners.faq.q3.a": "不需要。加入合作伙伴计划是免费的。您从带来的商店中赚取佣金 — 没有任何费用，也没有最低门槛。",
   "partners.faq.q4.q": "我可以把它打包进我为客户搭建的商店里吗？",
   "partners.faq.q4.a": "可以 — 这正是最契合的场景之一。代理商和开发者在搭建时把它一并安装，在让商店表现更好的同时赚取持续佣金。请始终按照惯常准则披露推广合作关系。",
-
   "partners.affiliatesCta": "只是想把链接分享给受众？请看推广联盟计划。"
 }

@@ -4,7 +4,6 @@
   "page.faq.crumb": "Vanliga frågor",
   "page.faq.h1": "Persistent Cart, besvarad.",
   "page.faq.lede": "Raka svar på vad handlare frågar innan de installerar — hur synkronisering av varukorg mellan enheter fungerar på Shopify, vad kunderna upplever, och hur Persistent Cart passar ihop med verktygen du redan använder.",
-
   "faq.q1.q": "Synkroniserar Shopify varukorgar mellan enheter som standard?",
   "faq.q1.a": "Nej. I en standardbutik på Shopify lagras varukorgen i en webbläsarkaka som varar i ungefär två veckor — inte på kundens konto. Så när en inloggad kund byter från mobil till laptop följer varukorgen inte med dem; den finns inte på den andra enheten. Shopifys egen community bekräftar att synkronisering av varukorg mellan enheter kräver anpassad kod eller en app.",
   "faq.q2.q": "Kommer mina kunder att se popuprutor eller få mejl?",
@@ -30,5 +29,5 @@
   "faq.q12.q": "Vilka språk och valutor stöder den?",
   "faq.q12.a": "Den fungerar med Shopify-butiker som har flera valutor, och den synkroniserar varukorgen oavsett språk. Appen används av butiker över hela världen — förlorade varukorgar mellan enheter är inte specifikt för någon enskild marknad.",
   "faq.q13.q": "Hur vet jag att den är värd det för min butik?",
-  "faq.q13.a": "Testa den i din egen butik innan du betalar: Free Starter-planen kör upp till 10 riktiga varukorgssynkroniseringar, och alla betalplaner lägger till en 30-dagars provperiod. På Basic är det $4.99/månad — att rädda en enda medelstor order mellan enheter täcker det med marginal. Den gratis butiksgranskningen kontrollerar din faktiska butik och kalkylatorn för förlorade varukorgar visar uträkningen, så att du slipper gissa."
+  "faq.q13.a": "Testa i din egen butik innan du betalar: Free Starter-planen täcker upp till 10 riktiga varukorgs-synkroniseringar, och alla betalplaner börjar med 30 dagars provperiod. Basic kostar 4,99 $ i månaden — en enda räddad medelstor beställning mellan enheter täcker det med råge. Du ser det fungera i din egen butik innan en enda dollar dras, så du behöver inte gissa."
 }

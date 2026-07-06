@@ -7,7 +7,7 @@ import Icon from '../Icon.astro';
 import { t, paragraphs } from '../../i18n';
 import { localizedPath, localizedUrl } from '../../i18n/routing';
 import { titleKey, descKey, breadcrumbChain, getPage } from '../../config/routes';
-import { site, SITE_UPDATED } from '../../config/site';
+import { site, SITE_UPDATED, appStoreLink } from '../../config/site';
 import { webPageSchema, breadcrumbSchema, faqPageSchema } from '../../lib/schema';
 
 interface Props {
@@ -121,8 +121,8 @@ if (faqItems.length) jsonLd.push(faqPageSchema(faqItems));
         heading={tt('content.ctaHeading')}
         body={tt('content.ctaBody')}
         actions={[
-          { label: tt('content.ctaInstall'), href: site.appStoreUrl, style: 'primary', external: true, event: 'install_click', source: pageKey },
-          { label: tt('content.ctaAudit'), href: localizedPath(locale, 'free-audit'), style: 'secondary', event: 'audit_cta', source: pageKey },
+          { label: tt('content.ctaInstall'), href: appStoreLink(pageKey), style: 'primary', external: true, event: 'install_click', source: pageKey },
+          { label: tt('cta.viewPricing'), href: localizedPath(locale, 'pricing'), style: 'secondary' },
         ]}
         bg="soft"
       />

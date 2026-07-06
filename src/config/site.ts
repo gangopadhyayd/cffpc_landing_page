@@ -50,8 +50,8 @@ export const site = {
  * figures are surfaced in docs/owner-inputs-needed.md for sign-off.
  */
 export const proof = {
-  reviewRating: 4.8, // VERIFIED 2026-06-30 (live listing; was 4.9 in brief)
-  reviewCount: 45, // VERIFIED 2026-06-30 (was 46); text + listing link only, never headline, no self-review schema
+  reviewRating: 4.9, // VERIFIED 2026-07-06 (live listing)
+  reviewCount: 47, // VERIFIED 2026-07-06; text + listing link only, never headline, no self-review schema
   launchedYear: 2016, // VERIFIED (May 2, 2016)
   yearsActive: 2026 - 2016, // derived (~10 yrs)
   builtForShopify: true, // VERIFIED (badge renders on listing)
@@ -61,9 +61,10 @@ export const proof = {
   pricingFrom: '$4.99/mo', // VERIFIED — presentation open (priced to Shopify plan)
 
   // Owner placeholders — render qualitative fallback when null.
-  storesServed: null as number | null, // REQUEST — real: ~1,486 active / 5,445 all-time (internal)
-  plusStoresServed: null as number | null, // REQUEST — real: 130–299 (internal)
-  syncedCartRevenue: null as string | null, // REQUEST — real: ~$26M/30d sync-tied GMV (internal)
+  storesServed: null as number | null, // owner-approved wording: "thousands of Shopify stores" (qualitative)
+  plusStoresServed: null as number | null, // owner-approved wording: "hundreds of Shopify Plus stores" (qualitative)
+  // OWNER-APPROVED 2026-07-06: "$60M USD in order value from synced carts in the last 90 days."
+  syncedCartRevenue: '$60M+' as string | null,
   cartsTransferred: null as string | null, // REQUEST — real: ~8–12k syncs/day (internal)
   namedMerchantLogos: [] as string[], // REQUEST — permission needed
 } as const;
@@ -83,8 +84,10 @@ export const proofFallback = {
  * not currently surfaced on the live listing (flagged for owner).
  */
 export const pricingTiers = [
+  // No tier is "highlighted": the plan is auto-selected by the merchant's own
+  // Shopify subscription, so visually recommending one would contradict that.
   { id: 'free', shopifyPlan: 'Try it', price: 'Free', cadence: '', note: 'Free Starter — test all features, up to 10 cart syncs', highlight: false },
-  { id: 'basic', shopifyPlan: 'Shopify Basic', price: '$4.99', cadence: '/mo', note: '', highlight: true },
+  { id: 'basic', shopifyPlan: 'Shopify Basic', price: '$4.99', cadence: '/mo', note: '', highlight: false },
   { id: 'grow', shopifyPlan: 'Shopify Grow', price: '$8.99', cadence: '/mo', note: 'Formerly the "Shopify" plan', highlight: false },
   // The Advanced ($24.99) tier exists in code but is NOT surfaced on the live App
   // Store listing — hidden here to match the listing until the owner confirms.
@@ -106,7 +109,21 @@ export const partnerProgram = {
   provisional: true,
 } as const;
 
+/**
+ * App Store link with UTM attribution for UI clicks. `content` identifies the
+ * on-site placement (mirrors the data-source analytics attribute). Schema.org
+ * and llms.txt keep the CLEAN base URL (site.appStoreUrl) — canonical only.
+ */
+export function appStoreLink(content: string): string {
+  const u = new URL(site.appStoreUrl);
+  u.searchParams.set('utm_source', 'persistentcartapp.com');
+  u.searchParams.set('utm_medium', 'referral');
+  u.searchParams.set('utm_campaign', 'site');
+  u.searchParams.set('utm_content', content);
+  return u.toString();
+}
+
 /** Build-stable "last updated" stamp shown on content pages (edit on refresh). */
-export const SITE_UPDATED = '2026-06-30';
+export const SITE_UPDATED = '2026-07-06';
 
 export type PricingTier = (typeof pricingTiers)[number];

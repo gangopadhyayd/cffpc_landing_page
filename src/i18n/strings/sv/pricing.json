@@ -4,18 +4,15 @@
   "page.pricing.crumb": "Priser",
   "page.pricing.h1": "Alla funktioner, i varje plan. Prissatt efter din Shopify-plan.",
   "page.pricing.lede": "Det finns inga funktionsnivåer att tyda. Varje plan inkluderar hela appen — ditt pris matchar helt enkelt ditt Shopify-abonnemang. Börja gratis, sedan 30 dagars gratis provperiod på alla betalplaner.",
-
   "pricing.planHint": "Din plan väljs automatiskt utifrån ditt Shopify-abonnemang. Du väljer ingen funktionsnivå — du får allt.",
   "pricing.cta.install": "Lägg till Persistent Cart — börja gratis",
   "pricing.trial": "Free Starter-planen · 30 dagars gratis provperiod på alla betalplaner · avsluta när som helst",
-
   "pricing.tier.free.note": "Testa alla funktioner, upp till 10 varukorgssynkroniseringar",
   "pricing.tier.basic.note": "För butiker på Shopify Basic-planen",
   "pricing.tier.grow.note": "För butiker på Shopify Grow-planen (tidigare \"Shopify\")",
   "pricing.tier.advanced.note": "För butiker på Shopify Advanced-planen",
   "pricing.tier.plus.note": "För Shopify Plus-butiker",
   "pricing.tier.everyPlan": "Alla funktioner ingår",
-
   "pricing.included.title": "Ingår i varje plan",
   "pricing.included.1": "Automatisk varukorgssynkronisering mellan enheter för inloggade kunder",
   "pricing.included.2": "Tyst automatisk sammanslagning som standard — inga popup-fönster, e-postmeddelanden eller opt-ins",
@@ -23,14 +20,12 @@
   "pricing.included.4": "Installation med ett klick, ingen temakod",
   "pricing.included.5": "Fungerar på mobil, dator och vid återbesök",
   "pricing.included.6": "Built for Shopify-standarder för kvalitet och prestanda",
-
   "pricing.s1.h": "Varför priset följer din plan, inte funktioner",
   "pricing.s1.b": "De flesta appar tvingar dig att välja en nivå och ransonera funktioner. Det gör inte Persistent Cart — hela appen är produkten, så varje plan får alla funktioner. Det enda som ändras är priset, som följer nivån på ditt Shopify-abonnemang. En Basic-butik betalar Basic-pris; en Plus-butik betalar Plus-pris; båda får identisk funktionalitet. Det håller beslutet enkelt: det finns ingenting att jämföra förutom om du vill ha den.\n\nStörre Shopify-planer innebär fler ordrar och fler inloggade kunder som byter enhet — så priset följer värdet du får tillbaka, inte en längre funktionslista.",
   "pricing.s2.h": "Börja gratis, sedan 30 dagars provperiod",
   "pricing.s2.b": "Med Free Starter-planen kan du installera och testa alla funktioner i upp till 10 varukorgssynkroniseringar — tillräckligt för att se den fungera i din egen butik. När du är redo inleds varje betalplan med 30 dagars gratis provperiod, så du betalar först när du har sett den i drift. Det finns inget långtidskontrakt; avsluta när som helst från din Shopify-admin.",
   "pricing.s3.h": "Är det värt det?",
-  "pricing.s3.b": "Det ärliga svaret är att det beror på hur många av dina kunder som loggar in och byter enhet — vilket är precis vad kalkylatorn för förlorade varukorgar och en gratis butiksgranskning hjälper dig att uppskatta. Persistent Cart är en låg månadskostnad utformad för att återvinna ordrar som annars skulle försvinna tyst. Om bara en handfull värdefulla varukorgar överlever varje månad som annars inte hade gjort det, betalar den sig själv.",
-
+  "pricing.s3.b": "Det ärliga svaret: det beror på hur många av dina kunder som loggar in och byter enhet. Persistent Cart är en låg månadskostnad byggd för att rädda beställningar som annars skulle försvinna i tysthet — om ens en handfull värdefulla varukorgar överlever varje månad som annars gått förlorade, betalar den sig själv. Och du behöver inte ta det på ordet: Free Starter-planen och 30 dagars provperiod låter dig se den fungera i din egen butik innan den kostar något.",
   "pricing.faq.q1.q": "Får billigare planer färre funktioner?",
   "pricing.faq.q1.a": "Nej. Varje plan inkluderar hela appen. Ditt pris bestäms av nivån på ditt Shopify-abonnemang, inte av vilka funktioner du vill ha.",
   "pricing.faq.q2.q": "Finns det verkligen en gratisplan?",
