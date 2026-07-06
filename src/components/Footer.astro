@@ -4,7 +4,7 @@ import LanguageSwitcher from './LanguageSwitcher.astro';
 import { PAGES, type FooterGroup } from '../config/routes';
 import { localizedPath } from '../i18n/routing';
 import { t } from '../i18n';
-import { site } from '../config/site';
+import { appStoreLink } from '../config/site';
 
 interface Props {
   locale: string;
@@ -39,7 +39,7 @@ const year = 2026;
         <p class="footer-tagline">{t(locale, 'footer.tagline')}</p>
         <a
           class="btn btn-accent btn-sm"
-          href={site.appStoreUrl}
+          href={appStoreLink('footer')}
           target="_blank"
           rel="noopener"
           data-event="install_click"

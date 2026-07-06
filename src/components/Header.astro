@@ -4,7 +4,7 @@ import LanguageSwitcher from './LanguageSwitcher.astro';
 import { PAGES } from '../config/routes';
 import { localizedPath } from '../i18n/routing';
 import { t } from '../i18n';
-import { site } from '../config/site';
+import { appStoreLink } from '../config/site';
 
 interface Props {
   locale: string;
@@ -39,7 +39,7 @@ const homeHref = localizedPath(locale, '');
       <LanguageSwitcher locale={locale} slug={slug} />
       <a
         class="btn btn-primary btn-sm"
-        href={site.appStoreUrl}
+        href={appStoreLink('header')}
         target="_blank"
         rel="noopener"
         data-event="install_click"
@@ -64,7 +64,7 @@ const homeHref = localizedPath(locale, '');
       {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
     </nav>
     <div class="mobile-cta">
-      <a class="btn btn-primary" href={site.appStoreUrl} target="_blank" rel="noopener" data-event="install_click" data-source="mobile">{t(locale, 'cta.install')}</a>
+      <a class="btn btn-primary" href={appStoreLink('mobile_menu')} target="_blank" rel="noopener" data-event="install_click" data-source="mobile">{t(locale, 'cta.install')}</a>
     </div>
   </div>
 </header>

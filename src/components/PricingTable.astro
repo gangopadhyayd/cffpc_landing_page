@@ -1,7 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import { t } from '../i18n';
-import { site, pricingTiers } from '../config/site';
+import { pricingTiers, appStoreLink } from '../config/site';
 
 interface Props {
   locale: string;
@@ -26,7 +26,7 @@ const included = [1, 2, 3, 4, 5, 6].map((n) => tt(`pricing.included.${n}`));
           <span class="ptier-note">{tt(`pricing.tier.${tier.id}.note`)}</span>
           <a
             class={`btn ${tier.highlight ? 'btn-primary' : 'btn-secondary'} ptier-cta`}
-            href={site.appStoreUrl}
+            href={appStoreLink('pricing_table')}
             target="_blank"
             rel="noopener"
             data-event="install_click"

@@ -4,10 +4,8 @@
   "page.partners.crumb": "Partner",
   "page.partners.h1": "30 % wiederkehrende Provision – ein volles Jahr lang – für jeden Shopify-Shop, den Sie vermitteln.",
   "page.partners.lede": "Persistent Cart ist eine der einfachsten Empfehlungen, die Sie aussprechen können: ein Klick zur Installation, für Käufer ändert sich nichts, und ein verstecktes geräteübergreifendes Warenkorb-Leck wird gestopft. Built for Shopify, bewährt seit 2016. Empfehlen Sie es und verdienen Sie wiederkehrende Provision für jeden Shop, den Sie bringen. Die unten aufgeführten Sätze sind unsere Frühpartner-Konditionen – Ihre endgültigen Konditionen bestätigen wir schriftlich, bevor Sie starten.",
-
   "partners.earnings.title": "Was dabei zusammenkommt",
   "partners.earnings.body": "Die Provision ist wiederkehrend, also summiert sie sich. Vermitteln Sie einen Shopify Plus-Shop, und Sie verdienen etwa $30/Monat für 12 Monate – rund $360 aus einer einzigen Empfehlung. Advanced-Shops bringen Ihnen ~$7.50/Monat, und Basic- und Grow-Shops zahlen Ihnen jeden Monat, den sie bleiben. Bündeln Sie es in die Builds, die Sie ohnehin ausliefern, und ein Bestand von 30–40 Kundenshops wird jedes Jahr zu einer spürbaren, mühelosen wiederkehrenden Einnahmequelle.",
-
   "partners.why.title": "Warum Persistent Cart bewerben",
   "partners.why.1.title": "Wiederkehrende Provision",
   "partners.why.1.body": "Verdienen Sie {pct} % wiederkehrende Provision für {months} Monate pro zahlendem Shop, den Sie vermitteln – keine einmalige Prämie.",
@@ -16,8 +14,7 @@
   "partners.why.3.title": "Es bringt Ihren Kunden mehr Geld",
   "partners.why.3.body": "Zurückgewonnene geräteübergreifende Warenkörbe bedeuten mehr abgeschlossene Bestellungen. Sie stehen gut da, weil die Shops, die Sie betreuen, besser performen.",
   "partners.why.4.title": "Ein 10-jähriger Leistungsnachweis im Rücken",
-  "partners.why.4.body": "Sie empfehlen die ursprüngliche, meistbewertete geräteübergreifende Warenkorb-App für Shopify – Built for Shopify, 4.8★, läuft seit 2016 – keinen ungetesteten Klon von 2025.",
-
+  "partners.why.4.body": "Sie empfehlen die ursprüngliche, meistbewertete geräteübergreifende Warenkorb-App für Shopify – Built for Shopify, 4.9★, läuft seit 2016 – keinen ungetesteten Klon von 2025.",
   "partners.terms.title": "Die Konditionen",
   "partners.terms.commission.label": "Wiederkehrende Provision",
   "partners.terms.commission.value": "{pct} %",
@@ -26,7 +23,6 @@
   "partners.terms.cookie.label": "Attributionsfenster",
   "partners.terms.cookie.value": "{days}-Tage-Cookie",
   "partners.terms.provisional": "Dies sind Frühpartner-Konditionen – wir bestätigen Ihre endgültigen Konditionen schriftlich und legen sie verbindlich fest, bevor Sie starten.",
-
   "partners.how.title": "So funktioniert's",
   "partners.how.1.title": "Bewerben",
   "partners.how.1.body": "Sagen Sie uns, wie Sie Shopify-Händler erreichen. Die Freigabe geht schnell für Agenturen, Entwickler, Creator und Berater.",
@@ -36,18 +32,15 @@
   "partners.how.3.body": "Teilen Sie es mit Kunden oder Ihrem Publikum. Installationen über Ihren Link werden Ihnen zugeordnet.",
   "partners.how.4.title": "Verdienen",
   "partners.how.4.body": "Erhalten Sie wiederkehrende Provision für jeden zahlenden Shop, den Sie bringen, jeweils für {months} Monate.",
-
   "partners.audiences.title": "Für wen das ist",
   "partners.audiences.1": "Shopify-Agenturen, Freelancer & Entwickler, die Kundenshops einrichten und betreuen",
   "partners.audiences.2": "Affiliates, Content-Creator & Review-Seiten im Shopify-Ökosystem",
   "partners.audiences.3": "Berater & Wissensvermittler, die Händler zu Conversion und Kundenbindung beraten",
-
   "partners.kit.title": "Womit Sie werben können",
   "partners.kit.1": "Markenlogos und freigegebene Text-Snippets",
   "partners.kit.2": "Der Warenkorbverlust-Rechner als teilbares Tool",
   "partners.kit.3": "Das Angebot der kostenlosen Shop-Analyse, um Ihr Publikum aufzuwärmen",
   "partners.kit.4": "Eine klare, wahre Geschichte: die geräteübergreifende Warenkorblücke und die Ein-Klick-Lösung",
-
   "partners.form.title": "Für das Partnerprogramm bewerben",
   "partners.form.name": "Ihr Name",
   "partners.form.email": "E-Mail",
@@ -63,7 +56,6 @@
   "partners.form.privacy": "Wir verwenden diese Angaben nur, um Ihre Bewerbung zu prüfen und Kontakt aufzunehmen. Kein Spam.",
   "partners.form.success.heading": "Bewerbung erhalten – vielen Dank!",
   "partners.form.success.body": "Wir prüfen Ihre Bewerbung und melden uns mit Ihrem Empfehlungslink, dem Promo-Kit und den finalen Konditionen zurück. Bis bald.",
-
   "partners.faq.q1.q": "Wie funktioniert das Provisions-Tracking für eine Shopify-App?",
   "partners.faq.q1.a": "Ihr Empfehlungslink markiert Installationen, die über Sie kommen, und unser System ordnet zahlende Shops Ihrem Konto zu. Weil die Abrechnung über Shopify läuft, bestätigen wir Conversions bei jeder erfolgreichen Abbuchung – sodass Sie für Shops gutgeschrieben werden, die tatsächlich bleiben.",
   "partners.faq.q2.q": "Wann und wie werde ich bezahlt?",
@@ -72,6 +64,5 @@
   "partners.faq.q3.a": "Nein. Die Teilnahme am Partnerprogramm ist kostenlos. Sie verdienen Provision an den Shops, die Sie bringen – keine Gebühr und kein Minimum.",
   "partners.faq.q4.q": "Kann ich es in die Shops bündeln, die ich für Kunden baue?",
   "partners.faq.q4.a": "Ja – das ist einer der besten Anwendungsfälle. Agenturen und Entwickler installieren es als Teil eines Builds und verdienen wiederkehrende Provision, während sie den Shop besser performen lassen. Legen Sie Affiliate-Beziehungen stets gemäß den üblichen Richtlinien offen.",
-
   "partners.affiliatesCta": "Möchten Sie nur einen Link mit einem Publikum teilen? Sehen Sie sich das Affiliate-Programm an."
 }

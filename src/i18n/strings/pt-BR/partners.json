@@ -4,10 +4,8 @@
   "page.partners.crumb": "Parceiros",
   "page.partners.h1": "Ganhe 30% de comissão recorrente — por um ano inteiro — em cada loja Shopify que você indicar.",
   "page.partners.lede": "O Persistent Cart é uma das recomendações mais fáceis que você pode fazer: um clique para instalar, nada muda para os clientes e um vazamento oculto de carrinhos entre dispositivos é estancado. Built for Shopify, de confiança desde 2016. Recomende-o e ganhe comissão recorrente em cada loja que você trouxer. As taxas abaixo são nossos termos de parceria inicial — confirmamos seus termos finais por escrito antes de você começar.",
-
   "partners.earnings.title": "Quanto isso rende no total",
   "partners.earnings.body": "A comissão é recorrente, então se acumula. Indique uma loja Shopify Plus e você ganha cerca de $30/mês por 12 meses — aproximadamente $360 de uma única indicação. Lojas Advanced rendem a você ~$7.50/mês, e lojas Basic e Grow pagam você todo mês em que permanecem. Inclua-o nos projetos que você já entrega, e uma carteira de 30 a 40 lojas de clientes vira uma linha de receita recorrente significativa e sem esforço a cada ano.",
-
   "partners.why.title": "Por que promover o Persistent Cart",
   "partners.why.1.title": "Comissão recorrente",
   "partners.why.1.body": "Ganhe {pct}% de comissão recorrente por {months} meses em cada loja pagante que você indicar — não uma recompensa única.",
@@ -16,8 +14,7 @@
   "partners.why.3.title": "Ele faz seus clientes ganharem mais dinheiro",
   "partners.why.3.body": "Carrinhos entre dispositivos recuperados significam mais pedidos concluídos. Você causa boa impressão porque as lojas em que você atua têm um desempenho melhor.",
   "partners.why.4.title": "Um histórico de 10 anos por trás de você",
-  "partners.why.4.body": "Você está recomendando o app de carrinho entre dispositivos original e mais avaliado para Shopify — Built for Shopify, 4.8★, rodando desde 2016 — não um clone de 2025 sem testes.",
-
+  "partners.why.4.body": "Você está recomendando o app de carrinho entre dispositivos original e mais avaliado para Shopify — Built for Shopify, 4.9★, rodando desde 2016 — não um clone de 2025 sem testes.",
   "partners.terms.title": "O acordo",
   "partners.terms.commission.label": "Comissão recorrente",
   "partners.terms.commission.value": "{pct}%",
@@ -26,7 +23,6 @@
   "partners.terms.cookie.label": "Janela de atribuição",
   "partners.terms.cookie.value": "Cookie de {days} dias",
   "partners.terms.provisional": "Estes são termos de parceria inicial — confirmaremos seus termos finais por escrito, e os deixaremos garantidos, antes de você começar.",
-
   "partners.how.title": "Como funciona",
   "partners.how.1.title": "Inscreva-se",
   "partners.how.1.body": "Conte como você alcança lojistas Shopify. A aprovação é rápida para agências, desenvolvedores, criadores e consultores.",
@@ -36,18 +32,15 @@
   "partners.how.3.body": "Compartilhe com clientes ou com o seu público. As instalações feitas pelo seu link são atribuídas a você.",
   "partners.how.4.title": "Ganhe",
   "partners.how.4.body": "Receba comissão recorrente por cada loja pagante que você trouxer, por {months} meses cada.",
-
   "partners.audiences.title": "Para quem é",
   "partners.audiences.1": "Agências, freelancers e desenvolvedores Shopify que configuram e gerenciam lojas de clientes",
   "partners.audiences.2": "Afiliados, criadores de conteúdo e sites de avaliação no ecossistema Shopify",
   "partners.audiences.3": "Consultores e educadores que orientam lojistas sobre conversão e retenção",
-
   "partners.kit.title": "Com o que você conta para promover",
   "partners.kit.1": "Logos da marca e trechos de texto aprovados",
   "partners.kit.2": "A calculadora de carrinhos perdidos como ferramenta compartilhável",
   "partners.kit.3": "A oferta de auditoria gratuita da loja para aquecer o seu público",
   "partners.kit.4": "Uma história clara e verdadeira: a lacuna do carrinho entre dispositivos e a solução em um clique",
-
   "partners.form.title": "Inscreva-se no programa de parceiros",
   "partners.form.name": "Seu nome",
   "partners.form.email": "E-mail",
@@ -63,7 +56,6 @@
   "partners.form.privacy": "Usamos esses dados apenas para analisar sua inscrição e entrar em contato. Sem spam.",
   "partners.form.success.heading": "Inscrição recebida — obrigado!",
   "partners.form.success.body": "Vamos analisar sua inscrição e retornar com seu link de indicação, o kit promocional e os termos finalizados. Até breve.",
-
   "partners.faq.q1.q": "Como funciona o rastreamento de comissão para um app Shopify?",
   "partners.faq.q1.a": "Seu link de indicação marca as instalações que vêm por você, e nosso sistema atribui as lojas pagantes à sua conta. Como a cobrança é feita pela Shopify, confirmamos as conversões a cada cobrança bem-sucedida — então você é creditado pelas lojas que realmente permanecem.",
   "partners.faq.q2.q": "Quando e como sou pago?",
@@ -72,6 +64,5 @@
   "partners.faq.q3.a": "Não. Participar do programa de parceiros é gratuito. Você ganha comissão pelas lojas que trouxer — sem taxa e sem mínimo.",
   "partners.faq.q4.q": "Posso incluí-lo nas lojas que construo para clientes?",
   "partners.faq.q4.a": "Sim — esse é um dos melhores encaixes. Agências e desenvolvedores o instalam como parte de um projeto e ganham comissão recorrente ao mesmo tempo em que fazem a loja ter um desempenho melhor. Sempre divulgue as relações de afiliação conforme as diretrizes habituais.",
-
   "partners.affiliatesCta": "Só quer compartilhar um link com um público? Veja o programa de afiliados."
 }

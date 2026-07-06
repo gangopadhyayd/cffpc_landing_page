@@ -8,10 +8,11 @@
  * No JS required for meaning: the resting state IS the end state; motion is
  * additive and disabled under prefers-reduced-motion.
  */
+import BfsBadge from './BfsBadge.astro';
 import { DEMO_ITEMS, cartSubtotal, formatMoney } from '../data/demoCart';
 import { localizedPath } from '../i18n/routing';
 import { t } from '../i18n';
-import { site, proof } from '../config/site';
+import { proof, appStoreLink } from '../config/site';
 
 interface Props {
   locale: string;
@@ -35,7 +36,7 @@ const subtotal = formatMoney(cartSubtotal(items));
       <div class="hero-ctas">
         <a
           class="btn btn-primary"
-          href={site.appStoreUrl}
+          href={appStoreLink('hero')}
           target="_blank"
           rel="noopener"
           data-event="install_click"
@@ -48,11 +49,11 @@ const subtotal = formatMoney(cartSubtotal(items));
 
       <ul class="hero-trust">
         <li>
-          <a href={site.appStoreUrl} target="_blank" rel="noopener" class="trust-rating">
+          <a href={appStoreLink('hero_rating')} target="_blank" rel="noopener" class="trust-rating">
             <strong>{proof.reviewRating}★</strong> {t(locale, 'hero.trust.rating')}
           </a>
         </li>
-        <li><span class="trust-bfs">{t(locale, 'hero.trust.bfs')}</span></li>
+        <li><BfsBadge label={t(locale, 'hero.trust.bfs')} /></li>
         <li>{t(locale, 'hero.trust.since')}</li>
       </ul>
     </div>
@@ -234,54 +235,91 @@ const subtotal = formatMoney(cartSubtotal(items));
     margin-inline: auto;
   }
 
-  /* device line-drawings (patent-diagram character) */
+  /* device line-drawings — unmistakably a phone and laptops */
   .device {
     position: relative;
     background: var(--color-card);
-    border: 2px solid color-mix(in srgb, var(--color-ink) 82%, transparent);
+    border: 3px solid color-mix(in srgb, var(--color-ink) 85%, transparent);
     box-shadow: var(--shadow-card);
   }
   .device-phone {
-    width: min(12rem, 66%);
+    width: min(11.2rem, 62%);
+    aspect-ratio: 10 / 15.5;
     margin-inline: auto;
-    border-radius: 18px;
-    padding: 1rem 0.6rem 0.9rem;
+    border-radius: 26px;
+    padding: 2rem 0.6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+  /* dynamic-island pill */
   .device-phone .cam {
     position: absolute;
-    top: 8px;
+    top: 9px;
     left: 50%;
     transform: translateX(-50%);
-    width: 34px;
-    height: 5px;
+    width: 52px;
+    height: 13px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-ink) 85%, transparent);
+  }
+  /* side button */
+  .device-phone::after {
+    content: '';
+    position: absolute;
+    top: 26%;
+    right: -7px;
+    width: 4px;
+    height: 44px;
     border-radius: 3px;
-    background: color-mix(in srgb, var(--color-ink) 82%, transparent);
+    background: color-mix(in srgb, var(--color-ink) 85%, transparent);
   }
   .device-phone .homebar {
     position: absolute;
-    bottom: 6px;
+    bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 42px;
-    height: 3px;
-    border-radius: 2px;
-    background: color-mix(in srgb, var(--color-ink) 30%, transparent);
+    width: 46px;
+    height: 4px;
+    border-radius: 3px;
+    background: color-mix(in srgb, var(--color-ink) 28%, transparent);
   }
   .device-laptop {
-    border-radius: 10px 10px 3px 3px;
-    padding: 0.7rem 0.75rem 0.8rem;
+    border-radius: 14px 14px 2px 2px;
+    padding: 1.15rem 0.75rem 0.8rem;
+  }
+  /* webcam dot in the screen bezel */
+  .device-laptop::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--color-ink) 45%, transparent);
   }
   .device-laptop .screen {
-    min-height: 8.45rem;
+    min-height: 9.4rem;
   }
+  /* the deck: trapezoid base with a thumb scoop */
   .laptop-base {
     position: absolute;
-    left: -5%;
-    bottom: -9px;
-    width: 110%;
-    height: 7px;
-    border-radius: 2px 2px 5px 5px;
-    background: color-mix(in srgb, var(--color-ink) 82%, transparent);
+    left: -4%;
+    bottom: -11px;
+    width: 108%;
+    height: 9px;
+    clip-path: polygon(2.5% 0, 97.5% 0, 100% 100%, 0 100%);
+    border-radius: 0 0 6px 6px;
+    background:
+      linear-gradient(
+        90deg,
+        transparent 45.5%,
+        color-mix(in srgb, var(--color-paper) 38%, transparent) 45.5% 54.5%,
+        transparent 54.5%
+      ),
+      color-mix(in srgb, var(--color-ink) 85%, transparent);
   }
   .device-tag {
     display: flex;

@@ -63,7 +63,7 @@ const svg = `
   <text x="80" y="440" font-family="Georgia, serif" font-size="44" font-weight="500" fill="#7A2C0E">their cart doesn't follow.</text>
 
   <!-- trust line -->
-  <text x="80" y="588" font-family="sans-serif" font-size="22" fill="${INK2}">Cross-device cart sync for Shopify  ·  Built for Shopify  ·  4.8★  ·  since 2016</text>
+  <text x="80" y="588" font-family="sans-serif" font-size="22" fill="${INK2}">Cross-device cart sync for Shopify  ·  Built for Shopify  ·  4.9★  ·  since 2016</text>
 
   <!-- THE FORK (right): phone → lost (x) / kept (synced) -->
   <!-- phone -->

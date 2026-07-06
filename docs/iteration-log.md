@@ -133,3 +133,36 @@ The simplify-vs-restart call and final v1 shape live in `docs/v1-recommendation.
 - Final state: **build 136 pages · typecheck 0 errors · i18n:check green · 0 broken links.**
 
 ---
+
+## Cycle 4 — owner feedback round + pre-deploy fixes (2026-07-06)
+
+Owner reviewed the running site and green-lit deployment. Changes, all owner-directed:
+
+- **Rating corrected to 4.9★ / 47 reviews** — re-verified live on the listing 2026-07-06;
+  config + every hardcoded 4.8★/4,8★ string across all 15 locale catalogs + OG image.
+- **$60M proof stat published (owner-approved):** metric band now leads with
+  **"$60M+ · Order value from synced carts · in the last 90 days, across stores using the app"**;
+  "thousands of stores · hundreds on Shopify Plus" moved into the since-2016 metric note
+  (owner-approved qualitative wording). Wired via `proof.syncedCartRevenue`.
+- **Official Built for Shopify badge** (diamond glyph as rendered on our own listing —
+  certification granted Dec 2024 per Shopify support thread) added at hero trust row +
+  homepage trust bar via new `BfsBadge.astro`. Footer disclaimer already covers attribution.
+- **Pricing "recommended tier" contradiction removed:** no tier is highlighted anywhere
+  (auto-selected by the merchant's Shopify plan, so highlighting one was wrong).
+- **UTM attribution on every install link:** new `appStoreLink(content)` helper —
+  `utm_source=persistentcartapp.com&utm_medium=referral&utm_campaign=site&utm_content=<placement>`
+  on all 14 UI links; schema.org + llms.txt keep the clean canonical URL.
+- **Bug fixed:** footer rendered raw key `footer.link.how-it-works` (key was never added when
+  the page joined the footer in cycle 1) — added in EN + programmatically mirrored from each
+  locale's `nav.product`.
+- **Hero devices now unmistakable** (owner: "the phone doesn't look like a phone"):
+  phone = tall 10:15.5 aspect, dynamic-island, side button, home bar; laptops = webcam dot +
+  trapezoid deck with thumb scoop. Verified desktop + true-390px mobile (no overflow).
+- **App Store icon deliverable:** `design-assets/app-store-icon-1200.png` (1200×1200, mark on
+  paper) for the listing refresh.
+- Locale patch: metric-band strings hand-translated ×14; `home.metrics.3.label` reuses each
+  locale's existing "On the App Store since" translation.
+
+Verify: build 136 pages · typecheck 0 errors · i18n green.
+
+---

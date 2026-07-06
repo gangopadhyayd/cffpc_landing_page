@@ -10,11 +10,12 @@ import Testimonial from '../Testimonial.astro';
 import FAQ from '../FAQ.astro';
 import CTABand from '../CTABand.astro';
 import Icon from '../Icon.astro';
+import BfsBadge from '../BfsBadge.astro';
 
 import { t } from '../../i18n';
 import { titleKey, descKey } from '../../config/routes';
 import { localizedPath, localizedUrl } from '../../i18n/routing';
-import { site, proof, proofFallback, pricingTiers } from '../../config/site';
+import { proof, proofFallback, pricingTiers, appStoreLink } from '../../config/site';
 import {
   organizationSchema,
   websiteSchema,
@@ -34,10 +35,10 @@ const title = tt(titleKey('home'));
 const description = tt(descKey('home'));
 
 const hrefs = {
-  install: site.appStoreUrl,
+  install: appStoreLink('home'),
   pricing: localizedPath(locale, 'pricing'),
   cornerstone: localizedPath(locale, 'shopify-persistent-cart'),
-  reviews: site.appStoreUrl,
+  reviews: appStoreLink('home_testimonial'),
   faq: localizedPath(locale, 'faq'),
 };
 
@@ -75,13 +76,10 @@ const parityCards = [
 ];
 
 const metrics = [
-  { value: String(proof.launchedYear), label: tt('home.metrics.1.label'), note: tt('home.metrics.1.note') },
+  // Owner-approved 2026-07-06: $60M order value from synced carts, last 90 days.
+  { value: proof.syncedCartRevenue ?? 'Millions', label: tt('home.metrics.1.label'), note: tt('home.metrics.1.note') },
   { value: `${proof.reviewRating}★`, label: tt('home.metrics.2.label'), note: tt('home.metrics.2.note') },
-  {
-    value: proof.storesServed ? `${proof.storesServed.toLocaleString()}+` : 'Thousands',
-    label: tt('home.metrics.3.label'),
-    note: tt('home.metrics.3.note'),
-  },
+  { value: String(proof.launchedYear), label: tt('home.metrics.3.label'), note: tt('home.metrics.3.note') },
 ];
 
 const faqItems = [1, 2, 3, 4, 5, 6, 7, 8].map((n) => ({
@@ -109,7 +107,7 @@ const storesText = proof.storesServed ? `${proof.storesServed.toLocaleString()}+
       <p class="trustbar-lead">{tt('home.trust.lead')}</p>
       <ul class="trustbar-stats">
         <li><Icon name="star" size={16} /> {tt('home.trust.stat.rating', { count: reviewCount })}</li>
-        <li><Icon name="badge-check" size={16} /> {tt('home.trust.stat.bfs')}</li>
+        <li><BfsBadge label={tt('home.trust.stat.bfs')} size={15} /></li>
         <li><Icon name="clock" size={16} /> {tt('home.trust.stat.since')}</li>
         <li><Icon name="store" size={16} /> {tt('home.trust.stat.stores', { stores: storesText })}</li>
       </ul>
@@ -189,7 +187,7 @@ const storesText = proof.storesServed ? `${proof.storesServed.toLocaleString()}+
     </div>
     <p class="pricing-note">{tt('home.pricing.trialNote')}</p>
     <div class="pricing-cta">
-      <a class="btn btn-primary" href={site.appStoreUrl} target="_blank" rel="noopener" data-event="install_click" data-source="home_pricing">{tt('cta.install')}</a>
+      <a class="btn btn-primary" href={appStoreLink('home_pricing')} target="_blank" rel="noopener" data-event="install_click" data-source="home_pricing">{tt('cta.install')}</a>
       <a class="btn btn-secondary" href={hrefs.pricing}>{tt('home.pricing.cta')}</a>
     </div>
   </Section>
@@ -205,7 +203,7 @@ const storesText = proof.storesServed ? `${proof.storesServed.toLocaleString()}+
     heading={tt('home.final.heading')}
     body={tt('home.final.body')}
     actions={[
-      { label: tt('home.final.install'), href: site.appStoreUrl, style: 'invert', external: true, event: 'install_click', source: 'home_final' },
+      { label: tt('home.final.install'), href: appStoreLink('home_final'), style: 'invert', external: true, event: 'install_click', source: 'home_final' },
       { label: tt('cta.viewPricing'), href: hrefs.pricing, style: 'ghost' },
     ]}
     trust={tt('home.final.trust')}

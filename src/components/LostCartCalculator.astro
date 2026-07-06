@@ -1,6 +1,6 @@
 ---
 import { t } from '../i18n';
-import { site } from '../config/site';
+import { appStoreLink } from '../config/site';
 import { localizedPath } from '../i18n/routing';
 
 interface Props {
@@ -86,7 +86,7 @@ const currencies = ['USD', 'EUR', 'GBP', 'CAD', 'AUD'];
       <p class="calc-cta-lead">{tt('calc.cta.lead')}</p>
       <div class="calc-cta-actions">
         <a class="btn btn-primary" href={auditHref} data-event="audit_cta" data-source="calculator">{tt('calc.cta.audit')}</a>
-        <a class="btn btn-secondary" href={site.appStoreUrl} target="_blank" rel="noopener" data-event="install_click" data-source="calculator">{tt('calc.cta.install')}</a>
+        <a class="btn btn-secondary" href={appStoreLink('calculator_result')} target="_blank" rel="noopener" data-event="install_click" data-source="calculator">{tt('calc.cta.install')}</a>
       </div>
     </div>
   </div>

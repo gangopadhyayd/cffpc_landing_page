@@ -7,7 +7,7 @@ import Breadcrumbs from '../Breadcrumbs.astro';
 import { t } from '../../i18n';
 import { titleKey, descKey } from '../../config/routes';
 import { localizedPath, localizedUrl } from '../../i18n/routing';
-import { site } from '../../config/site';
+import { site, appStoreLink } from '../../config/site';
 import { webPageSchema, faqPageSchema, breadcrumbSchema } from '../../lib/schema';
 
 interface Props {
@@ -47,7 +47,7 @@ const jsonLd = [
     heading={tt('content.ctaHeading')}
     body={tt('content.ctaBody')}
     actions={[
-      { label: tt('content.ctaInstall'), href: site.appStoreUrl, style: 'primary', external: true, event: 'install_click', source: 'faq' },
+      { label: tt('content.ctaInstall'), href: appStoreLink('faq_cta'), style: 'primary', external: true, event: 'install_click', source: 'faq' },
       { label: tt('cta.viewPricing'), href: localizedPath(locale, 'pricing'), style: 'secondary' },
     ]}
     bg="soft"

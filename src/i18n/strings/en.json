@@ -1,6 +1,5 @@
 {
   "meta.locale.reviewNotice": "This page is an automatic translation and is awaiting native review.",
-
   "nav.product": "How it works",
   "nav.whyItMatters": "Why it matters",
   "nav.pricing": "Pricing",
@@ -15,7 +14,6 @@
   "nav.openMenu": "Open menu",
   "nav.languageLabel": "Language",
   "nav.chooseLanguage": "Choose your language",
-
   "cta.install": "Add Persistent Cart — start free",
   "cta.installShort": "Start free",
   "cta.audit": "Get a free store audit",
@@ -26,7 +24,6 @@
   "cta.viewPricing": "View pricing",
   "cta.readReviews": "Read the reviews",
   "cta.learnMore": "Learn more",
-
   "common.builtForShopify": "Built for Shopify",
   "common.since": "Trusted by Shopify stores since 2016",
   "common.rating": "{rating}★ on the Shopify App Store",
@@ -49,9 +46,7 @@
   "content.ctaBody": "Add Persistent Cart in one click — free to start, nothing for your shoppers to do.",
   "content.ctaInstall": "Add Persistent Cart — start free",
   "content.ctaAudit": "Get a free store audit",
-
-  "announce.text": "Built for Shopify · Trusted by Shopify stores since 2016 · 4.8★",
-
+  "announce.text": "Built for Shopify · Trusted by Shopify stores since 2016 · 4.9★",
   "hero.eyebrow": "The original cross-device cart app for Shopify",
   "hero.h1.lead": "Shoppers switch devices constantly.",
   "hero.h1.turn": "On a default Shopify store, their cart doesn't follow.",
@@ -60,7 +55,6 @@
   "hero.trust.bfs": "Built for Shopify",
   "hero.trust.since": "On the App Store since 2016",
   "hero.demo.caption": "Same shopper, same login — phone to laptop. On default Shopify the cart stays behind. With Persistent Cart it's already there.",
-
   "demo.cart.title": "Your cart",
   "demo.cart.subtotal": "Subtotal",
   "demo.cart.synced": "Synced",
@@ -75,12 +69,10 @@
   "demo.device.laptop": "Laptop",
   "demo.qty": "Qty",
   "demo.replay": "Replay animation",
-
   "trustbar.lead": "The original cross-device cart app for Shopify — trusted by {stores} since 2016.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ from real merchant reviews",
   "trustbar.plus": "Used by {plusStores}",
-
   "footer.tagline": "Keep a signed-in shopper's cart on every device — the cross-device cart sync the biggest stores already use, brought to Shopify.",
   "footer.group.product": "Product",
   "footer.group.learn": "Learn",
@@ -93,8 +85,8 @@
   "footer.privacy": "Privacy",
   "footer.support": "Support",
   "footer.contact": "Contact",
-
   "footer.link.pricing": "Pricing",
+  "footer.link.how-it-works": "How it works",
   "footer.link.calculator": "Lost-cart calculator",
   "footer.link.free-audit": "Free store audit",
   "footer.link.cornerstone": "What is a persistent cart?",
@@ -109,26 +101,21 @@
   "footer.link.support": "Support",
   "footer.link.changelog": "What's new",
   "footer.link.privacy": "Privacy",
-
   "a11y.skipToContent": "Skip to content",
   "a11y.homeLink": "Persistent Cart — home",
-
   "notFound.title": "Page not found",
   "notFound.heading": "We couldn't find that page",
   "notFound.body": "The page may have moved. Here are some good places to pick up where you left off.",
   "notFound.home": "Go to the homepage",
   "notFound.howItWorks": "How Persistent Cart works",
   "notFound.faq": "Browse the FAQ",
-
   "page.home.title": "Persistent Cart — cross-device cart sync for Shopify (Built for Shopify)",
-  "page.home.desc": "Shoppers switch devices; on a default Shopify store the cart doesn't follow. Persistent Cart keeps a signed-in cart on every device — one click, no popups or emails. 4.8★, Built for Shopify, since 2016.",
-
+  "page.home.desc": "Shoppers switch devices; on a default Shopify store the cart doesn't follow. Persistent Cart keeps a signed-in cart on every device — one click, no popups or emails. 4.9★, Built for Shopify, since 2016.",
   "home.trust.lead": "The original cross-device cart app for Shopify — keeping signed-in carts in sync since 2016.",
-  "home.trust.stat.rating": "4.8★ across {count} merchant reviews",
+  "home.trust.stat.rating": "4.9★ across {count} merchant reviews",
   "home.trust.stat.bfs": "Built for Shopify",
   "home.trust.stat.since": "Running since 2016",
   "home.trust.stat.stores": "Trusted by {stores}",
-
   "home.problem.eyebrow": "The leak most owners never see",
   "home.problem.heading": "Your store probably drops a signed-in cart the moment a shopper switches devices.",
   "home.problem.intro": "On a default Shopify store, the cart lives in a browser cookie — not on the customer's account. So when a logged-in shopper adds items on their phone at lunch and opens your store on a laptop that night, the cart is empty. Most owners never see it happen, because nobody emails to say \"my cart vanished.\" They just don't check out.",
@@ -141,7 +128,6 @@
   "home.problem.aha": "It's the difference between a cart that belongs to a browser and a cart that belongs to your customer.",
   "home.problem.stat": "9 in 10 people move between devices to get things done, and 88% of shoppers expect a consistent experience across devices and channels.",
   "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
-
   "home.benefits.eyebrow": "What changes after one click",
   "home.benefits.heading": "Three things start working the way shoppers already expect.",
   "home.benefits.1.title": "Recover carts you never knew you were losing",
@@ -150,12 +136,10 @@
   "home.benefits.2.body": "An uninterrupted cross-device cart accumulates. Shoppers add on mobile, add more on desktop, and check out once — instead of rebuilding a smaller cart from memory.",
   "home.benefits.3.title": "One click, and nothing changes for shoppers",
   "home.benefits.3.body": "No popups, no emails, no opt-ins, nothing for customers to do. It runs silently in the background — so quietly that merchants tell us they forget it's on.",
-
   "home.motion.eyebrow": "See it work",
   "home.motion.heading": "The same signed-in cart, on every device.",
   "home.motion.intro": "A logged-in shopper adds an item on their phone. Later they open your store on a laptop, signed in — and the cart is already there, matching, with no prompt to deal with. This is the default behavior: a silent auto-merge.",
   "home.motion.note": "By default Persistent Cart merges carts silently. Prefer to let shoppers choose? An optional \"keep or combine\" prompt is one toggle away.",
-
   "home.parity.eyebrow": "How the biggest stores already do this",
   "home.parity.heading": "Amazon and Walmart keep a signed-in cart on every device. Shoppers expect yours to, too.",
   "home.parity.intro": "This isn't a nice-to-have feature — it's the baseline experience at the stores your customers shop most. Their own help pages say so:",
@@ -170,24 +154,19 @@
   "home.parity.shopify.source": "Our summary — based on Shopify's cookie policy + community",
   "home.parity.cta": "Learn what a persistent cart is — the full explainer",
   "home.parity.diagram.caption": "A signed-in cart lives on the customer's account — reachable from any device — instead of on one browser.",
-
   "home.metrics.eyebrow": "A decade of steady reliability",
   "home.metrics.heading": "Not a 2025 experiment. A 2016 utility that stores keep paying for.",
-  "home.metrics.1.label": "On the App Store since",
-  "home.metrics.1.value": "2016",
-  "home.metrics.1.note": "~10 years of cross-device sync",
+  "home.metrics.1.label": "Order value from synced carts",
+  "home.metrics.1.note": "in the last 90 days, across stores using the app",
   "home.metrics.2.label": "Merchant rating",
-  "home.metrics.2.value": "4.8★",
   "home.metrics.2.note": "Built for Shopify",
-  "home.metrics.3.label": "Stores served",
-  "home.metrics.3.note": "across Basic to Plus",
-
+  "home.metrics.3.label": "On the App Store since",
+  "home.metrics.3.note": "Thousands of stores · hundreds on Shopify Plus",
   "home.testimonial.eyebrow": "In a merchant's words",
   "home.testimonial.quote": "Without the app, customers lose their shopping cart if they switch devices… This is NOT how all of the large online retailer websites function… the cart effectively stays with the Customer ACCOUNT rather than just the DEVICE.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "United States · using Persistent Cart for 9+ years",
   "home.testimonial.cta": "Read all {count} reviews on the App Store",
-
   "home.compare.eyebrow": "Prevention, not just recovery",
   "home.compare.heading": "It's the missing half of your abandonment strategy.",
   "home.compare.intro": "Abandoned-cart emails and SMS fire after a cart is gone, and only reach shoppers who opted in. Persistent Cart works before abandonment — it keeps the cart from disappearing in the first place, for every signed-in shopper. They work best together.",
@@ -207,27 +186,22 @@
   "home.compare.row.cost.persistent": "None",
   "home.compare.row.cost.recovery": "Per email/SMS sent",
   "home.compare.footnote": "Persistent Cart complements your email tool — it recovers the carts your flows never see.",
-
   "home.calc.eyebrow": "Put a number on it",
   "home.calc.heading": "How much could cross-device cart loss be costing you?",
   "home.calc.intro": "Adjust a few inputs — pre-filled with illustrative defaults — for a transparent, illustrative range. We show the formula; nothing is a black box.",
   "home.calc.cta": "Open the lost-cart calculator",
-
   "home.audit.eyebrow": "Not sure if it affects you?",
   "home.audit.heading": "We'll check your store for cross-device cart loss — free.",
   "home.audit.body": "Send us your store and we'll tell you whether a signed-in cart survives a device switch, roughly what it could be costing, and the quick wins — no obligation, no install required.",
   "home.audit.cta": "Get a free store audit",
-
   "home.b2b.eyebrow": "B2B & Shopify Plus",
   "home.b2b.heading": "Long, high-value carts that have to survive a session switch.",
   "home.b2b.body": "Wholesale and B2B buyers build big carts across sessions and devices — and a dropped cart at that size is a real order lost. Persistent Cart keeps large signed-in carts intact across devices, and handles shared workstations without leaking one buyer's cart to another.",
   "home.b2b.cta": "Persistent Cart for B2B & Plus",
-
   "home.partner.eyebrow": "Agencies, developers & creators",
   "home.partner.heading": "Earn 30% recurring for 12 months on every store you refer.",
   "home.partner.body": "It's an easy recommendation: one click, no customer disruption, a hidden leak fixed — and recurring commission for you. Built for Shopify, trusted since 2016.",
   "home.partner.cta": "See partner terms & apply",
-
   "home.data.eyebrow": "Trust & data handling",
   "home.data.heading": "It accesses only what it needs to sync a cart.",
   "home.data.body": "Persistent Cart works for signed-in customers. To sync a cart it stores the cart's contents against the customer's account for your store — nothing more than what a cart contains. Guests aren't tracked. We're Built for Shopify and follow Shopify's required data-protection flows.",
@@ -235,13 +209,11 @@
   "home.data.point.2": "Stores cart contents to sync them, scoped to your store",
   "home.data.point.3": "No emails sent, no contacts captured, no consent prompts",
   "home.data.cta": "Read our privacy approach",
-
   "home.pricing.eyebrow": "Pricing",
   "home.pricing.heading": "Every feature, on every plan. Priced to your Shopify plan.",
   "home.pricing.intro": "There are no feature tiers to decode — every plan includes the full app. Your price simply matches your Shopify plan. Start free, then a 30-day trial on any paid plan.",
   "home.pricing.cta": "See full pricing",
   "home.pricing.trialNote": "Free Starter plan · 30-day free trial on paid plans",
-
   "home.faq.eyebrow": "Questions, answered",
   "home.faq.heading": "What merchants ask before installing.",
   "home.faq.q1.q": "Doesn't Shopify already sync carts across devices?",
@@ -261,10 +233,9 @@
   "home.faq.q8.q": "What does it do with my customers' data?",
   "home.faq.q8.a": "The minimum a cart sync needs. It works only for logged-in customers and stores the cart's contents against the customer's account for your store — nothing more than what a cart contains. Guests aren't tracked, no emails are sent, no consent prompts appear, and the data stays scoped to your store. We're Built for Shopify and follow Shopify's required data-protection flows.",
   "home.faq.cta": "See all FAQs",
-
   "home.final.heading": "Give your customers the cart they expect — on every device.",
   "home.final.body": "Add Persistent Cart in one click — from that moment, signed-in carts follow your customers everywhere.",
   "home.final.install": "Add Persistent Cart — start free",
   "home.final.audit": "Get a free store audit",
-  "home.final.trust": "4.8★ · Built for Shopify · Trusted since 2016 · 30-day free trial on paid plans"
+  "home.final.trust": "4.9★ · Built for Shopify · Trusted since 2016 · 30-day free trial on paid plans"
 }
