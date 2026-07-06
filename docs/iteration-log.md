@@ -165,4 +165,19 @@ Owner reviewed the running site and green-lit deployment. Changes, all owner-dir
 
 Verify: build 136 pages · typecheck 0 errors · i18n green.
 
+### Deployment state (2026-07-06)
+- **Live:** https://persistentcartapp.netlify.app — Netlify project `persistentcartapp`
+  (team dgangopa), continuous deploys from `main` of
+  github.com/gangopadhyayd/cffpc_landing_page (netlify.toml auto-config).
+- **GA4:** account "Persistent Cart" → property "persistentcartapp.com" → web stream
+  `G-B0XL737D3K`; set as `PUBLIC_GA4_MEASUREMENT_ID` in Netlify env (consent-gated loader
+  already in `Analytics.astro`). GDPR Data Processing Terms accepted.
+- **Custom domain:** persistentcartapp.com + www added in Netlify (pending DNS). The domain's
+  DNS lives on **Cloudflare** (colin/magdalena.ns.cloudflare.com), which currently 302-redirects
+  the apex to the App Store listing via a redirect rule, and carries Namecheap email-forwarding
+  MX records (`eforward*.registrar-servers.com`) that must be preserved. Remaining manual step:
+  in Cloudflare — delete the redirect rule, set apex CNAME(flattened) → apex-loadbalancer.netlify.com
+  and www CNAME → persistentcartapp.netlify.app, both DNS-only (grey cloud); keep MX/TXT.
+  SSL auto-provisions once DNS points; then GSC/Bing verification + sitemap submission.
+
 ---
