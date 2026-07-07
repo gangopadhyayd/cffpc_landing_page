@@ -42,9 +42,16 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
 <section class="hero">
   <div class="container-page hero-grid">
     <div class="hero-copy">
-      {/* Shopify banner at the very top of the fold (owner ask 2026-07-07) —
-          also fills the band the center-aligned grid used to leave blank. */}
-      <BfsBadge label={t(locale, 'home.trust.stat.bfs')} variant="official" size={34} class="hero-bfs" />
+      {/* Proof row tops the fold (owner 2026-07-07 + fold benchmark): official
+          badge + the 4.9★ chip ABOVE the H1 — the Social Snowball / Order
+          Editing placement — so the rating is never buried under the copy. */}
+      <div class="hero-proofrow">
+        <BfsBadge label={t(locale, 'home.trust.stat.bfs')} variant="official" size={34} class="hero-bfs" />
+        <a href={appStoreLink('hero_rating')} target="_blank" rel="noopener" class="trust-rating">
+          <img class="trust-rating-glyph" src="/badges/shopify-glyph.svg" alt="" width="16" height="18" loading="eager" decoding="async" />
+          <strong>{proof.reviewRating}★</strong> {t(locale, 'hero.trust.rating')}
+        </a>
+      </div>
       <h1 class="hero-title">
         <span class="lead">{t(locale, 'hero.h1.lead')}</span>
         <span class="turn">{t(locale, 'hero.h1.turn')}</span>
@@ -73,13 +80,6 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
           <span class="impact-text">
             {t(locale, 'trust.impact.qualifier')} — <strong>{t(locale, 'trust.impact.window')}</strong>
           </span>
-        </li>
-        <li>
-          <a href={appStoreLink('hero_rating')} target="_blank" rel="noopener" class="trust-rating">
-            {/* Official Shopify bag glyph — the listing chip pattern (research rec #6). */}
-            <img class="trust-rating-glyph" src="/badges/shopify-glyph.svg" alt="" width="16" height="18" loading="eager" decoding="async" />
-            <strong>{proof.reviewRating}★</strong> {t(locale, 'hero.trust.rating')}
-          </a>
         </li>
       </ul>
     </div>
@@ -221,9 +221,19 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
   .hero-copy {
     max-width: 40rem;
   }
-  .hero-copy :global(.hero-bfs) {
-    display: block;
+  .hero-proofrow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem 1.15rem;
     margin-bottom: 1.35rem;
+  }
+  .hero-proofrow .trust-rating {
+    font-size: 0.92rem;
+    color: var(--color-ink-soft);
+  }
+  .hero-proofrow .trust-rating strong {
+    font-size: 1.08rem;
   }
   .hero-title {
     font-size: clamp(1.9rem, 3.4vw, 2.7rem);

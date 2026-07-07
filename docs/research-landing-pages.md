@@ -1,5 +1,16 @@
 # Landing-Page Research — What the Best & Fastest-Rising Shopify Apps Do (vs. persistentcartapp.com)
 
+> **Fold benchmark addendum (2026-07-07, live re-capture):** all 13 sites captured live
+> at 1440×900 (playwright, real viewport) with visible above-the-fold word counts
+> measured programmatically. **persistentcartapp.com was 248 words — 2nd wordiest;
+> competitor median ≈ 85** (Social Snowball 33 · Triple Whale 37 · Klaviyo 62 ·
+> Postscript 69 · TrueProfit 75 · ParcelWILL 80 · Appstle 85 · TinyIMG 92 · Loox 162 ·
+> Order Editing 208 · Rewind 214 · Gorgias 303). Leanest-fold pattern: **rating chip at
+> the very top (above or directly under the H1)**, sub-copy 15–25 words, one product
+> visual, proof strip at the fold edge. Shipped same day: proof row (BFS badge + 4.9★
+> glyph chip) above the H1, hero sub 55→25 words, diagram caption 29→13, $30M+ stat
+> lockup kept. Fold now ≈ 127 words including diagram labels.
+
 **Date:** 2026-07-07 · **Method:** live fetch + structured teardown of 13 reference-app marketing
 sites (2 more unreachable, noted), cross-checked against the cloning-analysis repo's quantified
 top-50-velocity dataset (`~/dev/shopify_app_cloning_analysis`, snapshot 2026-05-28) and this repo's
