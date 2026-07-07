@@ -385,3 +385,13 @@ Editing glyph chip, ParcelWILL "Available for", TrueProfit/Loox footer badges):
 
 Verify: typecheck 0 errors · i18n:check green · 151 pages · screenshots desktop +
 true-390 iframe (hero chip, strip cluster, footer block) + de spot-check.
+
+### Cycle 7 addendum 3 — fold fix + BFS badge tops the hero (owner note, same day)
+
+Owner screenshot (~2000px viewport) showed a dead band above the H1: `.hero-grid`
+was `align-items: center`, so the shorter copy column floated against the tall
+plate. Fixed with `align-items: start` + the official BFS badge (34px, light) as
+the hero eyebrow above the H1 — Shopify banner at the top of the fold (owner ask;
+TinySEO precedent) and the former gap now carries content. Third BFS instance on
+the homepage (hero/strip/footer) — fine per the owner's soft-guidelines directive.
+Verified at 2000/1440/true-390.
