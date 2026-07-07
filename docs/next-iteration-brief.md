@@ -75,9 +75,11 @@ Everything below is current as of 2026-07-07.
    once above the fold, placed by nature: announce = positioning claim only ("The original
    … since 2016", text, non-sticky sibling of the sticky nav); hero row = $30M+/30d (bold)
    + 4.9★ link; TrustStrip (new component, absorbed the trust bar) = trusted-by lead + the
-   page's SINGLE official BFS badge + customer logos. ⚠️ Kit rule enforced sitewide: ONE
-   badge instance per page, ≥30px, never altered — the redrawn announce glyph is gone; do
-   not reintroduce it.
+   official BFS badge + customer logos. ⚠️ SUPERSEDED 2026-07-07 (owner directive): brand/
+   kit usage guidelines (e.g. BFS "one instance per page") are SOFT preferences, never hard
+   blockers — ask the owner before letting any external guideline shrink a marketing ask.
+   The footer now carries a second BFS instance + official Shopify marks by owner request.
+   Honesty rules (research-notes) remain absolute.
 2. ~~Customer-logo trust strip~~ ✅ **SHIPPED cycle 6** ("Extended 11" owner pick).
    Toggle: `showCustomerLogos` + `proof.namedMerchantLogos` in src/config/site.ts (flag
    off → slim lead+badge fallback). Assets: design-assets/customer-logos/MANIFEST.md

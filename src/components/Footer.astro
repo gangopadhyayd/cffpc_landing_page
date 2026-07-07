@@ -1,10 +1,11 @@
 ---
 import Logo from './Logo.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import BfsBadge from './BfsBadge.astro';
 import { PAGES, type FooterGroup } from '../config/routes';
 import { localizedPath } from '../i18n/routing';
 import { t } from '../i18n';
-import { appStoreLink } from '../config/site';
+import { appStoreLink, proof } from '../config/site';
 
 interface Props {
   locale: string;
@@ -45,6 +46,17 @@ const year = 2026;
           data-event="install_click"
           data-source="footer">{t(locale, 'footer.install')}</a
         >
+
+        {/* Ecosystem trust block (research rec #10; owner directive 2026-07-07:
+            real Shopify branding, badge instances not limited to one). */}
+        <div class="footer-shopify">
+          <img src="/badges/shopify-logo-white.svg" alt="Shopify" width="84" height="24" loading="lazy" decoding="async" />
+          <p class="footer-platforms">{t(locale, 'footer.availablePlatforms')}</p>
+          <a class="footer-rating" href={appStoreLink('footer_rating')} target="_blank" rel="noopener">
+            <strong>{proof.reviewRating}★</strong> {t(locale, 'hero.trust.rating')}
+          </a>
+          <BfsBadge label={t(locale, 'home.trust.stat.bfs')} variant="official" tone="dark" size={36} />
+        </div>
       </div>
 
       <div class="footer-cols">
@@ -99,6 +111,38 @@ const year = 2026;
     font-size: 0.92rem;
     color: #b8b1a4;
     line-height: 1.6;
+  }
+  .footer-shopify {
+    margin-top: 1.75rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid rgb(255 255 255 / 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+  .footer-shopify > img {
+    height: 24px;
+    width: auto;
+    opacity: 0.92;
+  }
+  .footer-platforms {
+    font-size: 0.84rem;
+    color: #b8b1a4;
+  }
+  .footer-rating {
+    font-size: 0.84rem;
+    color: #d9d2c6;
+    transition: color 0.15s;
+  }
+  .footer-rating:hover {
+    color: #fff;
+  }
+  .footer-rating strong {
+    color: #fff;
+  }
+  .footer-shopify :global(.bfs-official) {
+    margin-top: 0.35rem;
   }
   .footer-cols {
     display: grid;

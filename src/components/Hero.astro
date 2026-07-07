@@ -67,6 +67,8 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
         </li>
         <li>
           <a href={appStoreLink('hero_rating')} target="_blank" rel="noopener" class="trust-rating">
+            {/* Official Shopify bag glyph — the listing chip pattern (research rec #6). */}
+            <img class="trust-rating-glyph" src="/badges/shopify-glyph.svg" alt="" width="16" height="18" loading="eager" decoding="async" />
             <strong>{proof.reviewRating}★</strong> {t(locale, 'hero.trust.rating')}
           </a>
         </li>
@@ -232,12 +234,15 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     gap: 0.75rem;
     margin: 1.75rem 0 1.25rem;
   }
+  /* Stacked on purpose: with the Shopify glyph chip + "Shopify App Store"
+     the two signals no longer share a line at desktop width, and a wrapped
+     dot separator dangles — two clean rows read better. */
   .hero-trust {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem 1.1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
     font-size: 0.85rem;
     color: var(--color-ink-soft);
   }
@@ -245,14 +250,15 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     display: flex;
     align-items: center;
   }
-  .hero-trust li + li::before {
-    content: '';
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: var(--color-hairline-strong);
-    margin-right: 1.1rem;
-    margin-left: -0.55rem;
+  .trust-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+  }
+  .trust-rating-glyph {
+    height: 18px;
+    width: auto;
+    flex: none;
   }
   .trust-rating strong {
     color: var(--color-accent-ink);

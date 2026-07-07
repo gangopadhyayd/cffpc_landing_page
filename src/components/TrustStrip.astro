@@ -27,7 +27,20 @@ const showLogos = showCustomerLogos && logos.length > 0;
   <div class="container-page">
     <div class="strip-head">
       <p class="strip-lead">{t(locale, 'trustbar.lead')}</p>
-      <BfsBadge label={t(locale, 'home.trust.stat.bfs')} variant="official" size={32} />
+      <div class="strip-marks">
+        {/* Platform cluster: official Shopify wordmark + Plus as text — mirrors
+            how Shopify itself presents Plus today (shopify.com/plus = main logo,
+            "Plus" set as adjacent text; no separate lockup exists). */}
+        <div class="strip-platforms">
+          <span class="strip-platforms-label">{t(locale, 'trustbar.availableFor')}</span>
+          <span class="strip-platform-items">
+            <img src="/badges/shopify-logo.svg" alt="Shopify" width="88" height="25" loading="lazy" decoding="async" />
+            <span class="strip-platform-divider" aria-hidden="true"></span>
+            <span class="strip-plus">Shopify&nbsp;Plus</span>
+          </span>
+        </div>
+        <BfsBadge label={t(locale, 'home.trust.stat.bfs')} variant="official" size={40} />
+      </div>
     </div>
 
     {showLogos && (
@@ -69,9 +82,49 @@ const showLogos = showCustomerLogos && logos.length > 0;
     max-width: 34rem;
     text-wrap: balance;
   }
-  /* Kit guideline: clear space around the badge ≥ half its height (16px @ 32). */
+  .strip-marks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 2.25rem;
+  }
+  .strip-platforms {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .strip-platforms-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+  }
+  .strip-platform-items {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+  .strip-platform-items img {
+    height: 25px;
+    width: auto;
+    display: block;
+  }
+  .strip-platform-divider {
+    width: 1px;
+    height: 22px;
+    background: var(--color-hairline-strong);
+  }
+  .strip-plus {
+    font-weight: 700;
+    font-size: 1.02rem;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+    white-space: nowrap;
+  }
   .strip-head :global(.bfs-official) {
-    margin: 0.25rem 1rem 0.25rem 0;
+    margin-block: 0.25rem;
   }
 
   .strip-logos {

@@ -76,6 +76,8 @@
   "demo.replay": "Replay animation",
   "trustbar.lead": "Trusted by thousands of Shopify stores — including hundreds on Shopify Plus.",
   "trustbar.note": "A few of the stores syncing carts with Persistent Cart.",
+  "trustbar.availableFor": "Available for",
+  "footer.availablePlatforms": "Available for Shopify and Shopify Plus.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ from real merchant reviews",
   "trustbar.plus": "Used by {plusStores}",

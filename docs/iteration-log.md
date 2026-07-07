@@ -355,3 +355,33 @@ Owner flagged three things on the live homepage; root causes + fixes:
    prepends the number, so those homepages rendered "4.9★ 4.9★ im App Store".
    Bigger trust-hierarchy moves (badge prominence, official app-store badge near the
    CTA) parked as owner decisions — see the report in owner-inputs.
+
+### Cycle 7 addendum 2 — full Shopify branding round (owner-directed, same day)
+
+Owner picked "real Shopify logos and branding" and issued a standing directive:
+**brand/kit usage guidelines are soft preferences — never hard-block on one without
+asking** (e.g. the BFS one-instance-per-page kit rule is released; honesty rules stay
+absolute). Composition shipped (research recs #6/#9/#10; competitor patterns: Order
+Editing glyph chip, ParcelWILL "Available for", TrueProfit/Loox footer badges):
+
+- **Hero:** rating link is now a listing chip — official color bag glyph (18px) +
+  "4.9★ rating on the Shopify App Store". Trust row deliberately stacked into two
+  rows (chip no longer shares a line; a wrapped dot separator dangled).
+- **TrustStrip:** new platform cluster — mono "AVAILABLE FOR" label over
+  [official Shopify wordmark 25px | hairline | "Shopify Plus" bold text] — mirrors
+  how Shopify itself renders Plus today (shopify.com/plus header = main logo, Plus
+  as adjacent text; verified live — no distinct Plus lockup exists to fetch). BFS
+  badge 32→40px.
+- **Footer:** ecosystem block in the brand column — white Shopify wordmark (24px),
+  "Available for Shopify and Shopify Plus." (localized), linked rating chip
+  (reuses hero.trust.rating + proof.reviewRating), and a SECOND BFS badge (dark
+  tone, 36px) — multiple instances now owner-approved. Sits above the existing
+  not-affiliated trademark disclaimer, which covers the marks.
+- **Assets:** official SVGs copied design-assets/shopify-plus/ → public/badges/
+  (shopify-glyph.svg color, shopify-logo.svg mono-black, shopify-logo-white.svg).
+  Unaltered files; no constructed lockups.
+- **i18n:** +2 keys ×15 hand-authored (trustbar.availableFor, footer.availablePlatforms);
+  brand names untranslated; fi uses "Toimii Shopifyssa ja Shopify Plusissa".
+
+Verify: typecheck 0 errors · i18n:check green · 151 pages · screenshots desktop +
+true-390 iframe (hero chip, strip cluster, footer block) + de spot-check.
