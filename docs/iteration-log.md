@@ -165,6 +165,33 @@ Owner reviewed the running site and green-lit deployment. Changes, all owner-dir
 
 Verify: build 136 pages · typecheck 0 errors · i18n green.
 
+## Cycle 5 — owner feedback round 2 + go-live finishers (2026-07-07)
+
+- **"Weird f" fixed:** Fraunces' auto optical sizing swaps in old-style swash letterforms at
+  display sizes (descender lowercase f). Headings now pin `font-optical-sizing: none` +
+  `font-variation-settings: "opsz" 20, "SOFT" 0, "WONK" 0` — conventional f, same typeface.
+- **Review count removed everywhere** (undersells the product): trust bar uses the plain
+  "4.9★ on the Shopify App Store" string; testimonial CTA now "Read the reviews".
+- **Impact stat elevated:** "$60M+ in orders from synced carts — last 90 days" now leads the
+  hero trust row AND the trust bar (bold, first position); metric band still reinforces it.
+  (Independently validated same-day by the landing-page research: money-proof above the fold
+  is the #1 pattern across winning Shopify app sites.)
+- **Official BFS badge on top:** announce bar renders the official diamond + label; also in
+  hero trust + trust bar. (Owner's Desktop asset kit was macOS-TCC-blocked for the agent; the
+  glyph used is the official one extracted from our own listing. Kit files can be dropped into
+  design-assets/ to swap.)
+- **Trusted-by line restored:** trust bar lead = "Trusted by thousands of Shopify stores —
+  including hundreds on Shopify Plus." ("Shopify Plus" as text; official Plus logo pending
+  brand-kit files.)
+- Locales: announce prefix stripped mechanically ×14; trustbar.lead + trust.impact
+  hand-translated ×14. i18n green; build 136 pages; typecheck 0 errors.
+- **Search engines (browser session):** Cloudflare — GSC TXT + DMARC (p=quarantine,
+  rua=dgangopa@gmail.com) added; GSC domain property auto-verified; sitemap submitted (GSC +
+  Bing); Bing site imported from GSC (read-only webmasters scope, dgangopa@gmail.com).
+- **Research:** docs/research-landing-pages.md — 13 reference sites analyzed; top asks:
+  money-proof in hero (done this cycle), named-customer strip (needs owner permission),
+  pricing "no usage fees" line, re-enable calculator + vs-email pages for v2.
+
 ### Deployment state (2026-07-06)
 - **Live:** https://persistentcartapp.netlify.app — Netlify project `persistentcartapp`
   (team dgangopa), continuous deploys from `main` of

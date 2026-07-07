@@ -86,7 +86,10 @@
     line-height: 1.08;
     letter-spacing: -0.015em;
     color: var(--color-ink);
-    font-optical-sizing: auto;
+    /* Pin Fraunces to its text cut: at auto optical sizing the display cut
+       swaps in old-style swash letterforms (the descender lowercase f). */
+    font-optical-sizing: none;
+    font-variation-settings: "opsz" 20, "SOFT" 0, "WONK" 0;
     text-wrap: balance;
   }
 

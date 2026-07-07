@@ -45,7 +45,7 @@
   "content.ctaBody": "Añade Persistent Cart con un clic — empieza gratis, sin que tus compradores tengan que hacer nada.",
   "content.ctaInstall": "Añade Persistent Cart: empieza gratis",
   "content.ctaAudit": "Consigue una auditoría gratuita de tu tienda",
-  "announce.text": "Built for Shopify · Con la confianza de tiendas Shopify desde 2016 · 4.9★",
+  "announce.text": "Con la confianza de tiendas Shopify desde 2016 · 4.9★",
   "hero.eyebrow": "La app de carrito entre dispositivos original para Shopify",
   "hero.h1.lead": "Tus compradores cambian de dispositivo constantemente.",
   "hero.h1.turn": "En una tienda Shopify por defecto, su carrito no los sigue.",
@@ -66,7 +66,7 @@
   "demo.device.laptop": "Portátil",
   "demo.qty": "Cant.",
   "demo.replay": "Repetir animación",
-  "trustbar.lead": "La app de carrito entre dispositivos original para Shopify, con la confianza de {stores} desde 2016.",
+  "trustbar.lead": "Miles de tiendas Shopify confían en la app — incluidas cientos en Shopify Plus.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ en reseñas reales de comerciantes",
   "trustbar.plus": "Utilizada por {plusStores}",
@@ -237,5 +237,6 @@
   "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
   "demo.cart.empty": "Tu carrito está vacío",
   "demo.cart.emptyHint": "El carrito del móvil se quedó atrás",
-  "footer.link.how-it-works": "Cómo funciona"
+  "footer.link.how-it-works": "Cómo funciona",
+  "trust.impact": "{amount} en pedidos con carritos sincronizados — en los últimos 90 días"
 }

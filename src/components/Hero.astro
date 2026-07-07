@@ -48,13 +48,15 @@ const subtotal = formatMoney(cartSubtotal(items));
       </div>
 
       <ul class="hero-trust">
+        <li class="trust-impact">
+          {t(locale, 'trust.impact', { amount: proof.syncedCartRevenue ?? '' })}
+        </li>
         <li>
           <a href={appStoreLink('hero_rating')} target="_blank" rel="noopener" class="trust-rating">
             <strong>{proof.reviewRating}★</strong> {t(locale, 'hero.trust.rating')}
           </a>
         </li>
         <li><BfsBadge label={t(locale, 'hero.trust.bfs')} /></li>
-        <li>{t(locale, 'hero.trust.since')}</li>
       </ul>
     </div>
 
@@ -224,6 +226,10 @@ const subtotal = formatMoney(cartSubtotal(items));
   }
   .trust-rating strong {
     color: var(--color-accent-ink);
+  }
+  .trust-impact {
+    font-weight: 700;
+    color: var(--color-ink);
   }
   .trust-bfs {
     font-weight: 600;

@@ -45,7 +45,7 @@
   "content.ctaBody": "Legg til Persistent Cart med ett klikk — start gratis, kundene dine trenger ikke gjøre noe.",
   "content.ctaInstall": "Legg til Persistent Cart — start gratis",
   "content.ctaAudit": "Få en gratis butikkgjennomgang",
-  "announce.text": "Built for Shopify · Betrodd av Shopify-butikker siden 2016 · 4.9★",
+  "announce.text": "Betrodd av Shopify-butikker siden 2016 · 4.9★",
   "hero.eyebrow": "Synkronisering av handlekurv mellom enheter for Shopify",
   "hero.h1.lead": "Kunder bytter enhet hele tiden.",
   "hero.h1.turn": "I en standard Shopify-butikk følger ikke handlekurven med.",
@@ -66,7 +66,7 @@
   "demo.device.laptop": "Laptop",
   "demo.qty": "Ant.",
   "demo.replay": "Spill av animasjonen på nytt",
-  "trustbar.lead": "Den originale appen for handlekurv på tvers av enheter for Shopify — betrodd av {stores} siden 2016.",
+  "trustbar.lead": "Tusenvis av Shopify-butikker stoler på appen — inkludert hundrevis på Shopify Plus.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ fra ekte forhandleranmeldelser",
   "trustbar.plus": "Brukt av {plusStores}",
@@ -237,5 +237,6 @@
   "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
   "demo.cart.empty": "Handlekurven din er tom",
   "demo.cart.emptyHint": "Kurven ble igjen på mobilen",
-  "footer.link.how-it-works": "Slik fungerer det"
+  "footer.link.how-it-works": "Slik fungerer det",
+  "trust.impact": "{amount} i bestillinger fra synkroniserte handlekurver — siste 90 dager"
 }

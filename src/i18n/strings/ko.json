@@ -45,7 +45,7 @@
   "content.ctaBody": "클릭 한 번으로 Persistent Cart를 추가하세요 — 무료로 시작하고, 고객이 할 일은 없습니다.",
   "content.ctaInstall": "Persistent Cart 추가 — 무료로 시작",
   "content.ctaAudit": "무료 스토어 진단 받기",
-  "announce.text": "Built for Shopify · 2016년부터 Shopify 스토어들이 신뢰 · 4.9★",
+  "announce.text": "2016년부터 Shopify 스토어들이 신뢰 · 4.9★",
   "hero.eyebrow": "Shopify를 위한 기기 간 장바구니 동기화",
   "hero.h1.lead": "쇼핑객은 끊임없이 기기를 바꿉니다.",
   "hero.h1.turn": "기본 Shopify 스토어에서는 장바구니가 따라가지 않습니다.",
@@ -66,7 +66,7 @@
   "demo.device.laptop": "노트북",
   "demo.qty": "수량",
   "demo.replay": "애니메이션 다시 보기",
-  "trustbar.lead": "Shopify를 위한 최초의 기기 간 장바구니 앱 — 2016년부터 {stores}가 신뢰합니다.",
+  "trustbar.lead": "수천 개의 Shopify 스토어가 신뢰 — 그중 수백 곳은 Shopify Plus입니다.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "실제 판매자 리뷰 기준 {rating}★",
   "trustbar.plus": "{plusStores}가 사용 중",
@@ -237,5 +237,6 @@
   "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
   "demo.cart.empty": "장바구니가 비어 있습니다",
   "demo.cart.emptyHint": "휴대폰의 장바구니는 그대로 남았습니다",
-  "footer.link.how-it-works": "작동 방식"
+  "footer.link.how-it-works": "작동 방식",
+  "trust.impact": "최근 90일 {amount} — 동기화된 장바구니 주문 금액"
 }

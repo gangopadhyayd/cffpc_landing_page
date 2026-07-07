@@ -45,7 +45,7 @@
   "content.ctaBody": "Fügen Sie Persistent Cart mit einem Klick hinzu – kostenlos starten, ohne dass Ihre Kunden etwas tun müssen.",
   "content.ctaInstall": "Persistent Cart hinzufügen – kostenlos starten",
   "content.ctaAudit": "Kostenlose Shop-Analyse anfordern",
-  "announce.text": "Built for Shopify · Vertraut von Shopify-Shops seit 2016 · 4.9★",
+  "announce.text": "Vertraut von Shopify-Shops seit 2016 · 4.9★",
   "hero.eyebrow": "Geräteübergreifende Warenkorb-Synchronisierung für Shopify",
   "hero.h1.lead": "Käufer wechseln ständig das Gerät.",
   "hero.h1.turn": "In einem Standard-Shopify-Shop wandert der Warenkorb nicht mit.",
@@ -66,7 +66,7 @@
   "demo.device.laptop": "Laptop",
   "demo.qty": "Menge",
   "demo.replay": "Animation erneut abspielen",
-  "trustbar.lead": "Die ursprüngliche geräteübergreifende Warenkorb-App für Shopify – vertraut von {stores} seit 2016.",
+  "trustbar.lead": "Tausende Shopify-Shops vertrauen darauf — darunter Hunderte auf Shopify Plus.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ aus echten Händlerbewertungen",
   "trustbar.plus": "Genutzt von {plusStores}",
@@ -237,5 +237,6 @@
   "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
   "demo.cart.empty": "Ihr Warenkorb ist leer",
   "demo.cart.emptyHint": "Der Handy-Warenkorb blieb zurück",
-  "footer.link.how-it-works": "So funktioniert's"
+  "footer.link.how-it-works": "So funktioniert's",
+  "trust.impact": "{amount} Bestellwert aus synchronisierten Warenkörben — in den letzten 90 Tagen"
 }

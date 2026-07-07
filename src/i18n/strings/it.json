@@ -45,7 +45,7 @@
   "content.ctaBody": "Aggiungi Persistent Cart con un clic — inizi gratis e i tuoi clienti non devono fare nulla.",
   "content.ctaInstall": "Aggiungi Persistent Cart — inizia gratis",
   "content.ctaAudit": "Richiedi un audit gratuito del negozio",
-  "announce.text": "Built for Shopify · Scelto dai negozi Shopify dal 2016 · 4.9★",
+  "announce.text": "Scelto dai negozi Shopify dal 2016 · 4.9★",
   "hero.eyebrow": "Sincronizzazione del carrello tra dispositivi per Shopify",
   "hero.h1.lead": "I tuoi clienti cambiano dispositivo di continuo.",
   "hero.h1.turn": "In un negozio Shopify predefinito, il carrello non li segue.",
@@ -66,7 +66,7 @@
   "demo.device.laptop": "Laptop",
   "demo.qty": "Qtà",
   "demo.replay": "Riavvia animazione",
-  "trustbar.lead": "La prima app di carrello tra dispositivi per Shopify — scelta da {stores} dal 2016.",
+  "trustbar.lead": "Migliaia di negozi Shopify si fidano — comprese centinaia su Shopify Plus.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ da recensioni di commercianti reali",
   "trustbar.plus": "Usata da {plusStores}",
@@ -237,5 +237,6 @@
   "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
   "demo.cart.empty": "Il tuo carrello è vuoto",
   "demo.cart.emptyHint": "Il carrello del telefono è rimasto indietro",
-  "footer.link.how-it-works": "Come funziona"
+  "footer.link.how-it-works": "Come funziona",
+  "trust.impact": "{amount} di ordini da carrelli sincronizzati — negli ultimi 90 giorni"
 }

@@ -1,6 +1,7 @@
 ---
 import Logo from './Logo.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import BfsBadge from './BfsBadge.astro';
 import { PAGES } from '../config/routes';
 import { localizedPath } from '../i18n/routing';
 import { t } from '../i18n';
@@ -22,6 +23,8 @@ const homeHref = localizedPath(locale, '');
 <header class="site-header">
   <div class="announce">
     <div class="container-page announce-inner">
+      <BfsBadge label={t(locale, 'common.builtForShopify')} size={13} />
+      <span class="announce-sep" aria-hidden="true">·</span>
       <span>{t(locale, 'announce.text')}</span>
     </div>
   </div>
@@ -85,8 +88,16 @@ const homeHref = localizedPath(locale, '');
     letter-spacing: 0.01em;
   }
   .announce-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.45rem;
     text-align: center;
     padding-block: 0.45rem;
+  }
+  .announce-sep {
+    opacity: 0.6;
   }
   .nav-row {
     display: flex;

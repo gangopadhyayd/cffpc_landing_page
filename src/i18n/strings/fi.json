@@ -45,7 +45,7 @@
   "content.ctaBody": "Lisää Persistent Cart yhdellä klikkauksella — aloita ilmaiseksi, asiakkaidesi ei tarvitse tehdä mitään.",
   "content.ctaInstall": "Lisää Persistent Cart — aloita ilmaiseksi",
   "content.ctaAudit": "Hanki ilmainen kauppa-analyysi",
-  "announce.text": "Built for Shopify · Shopify-kauppojen luottama vuodesta 2016 · 4.9★",
+  "announce.text": "Shopify-kauppojen luottama vuodesta 2016 · 4.9★",
   "hero.eyebrow": "Laitteiden välinen ostoskorin synkronointi Shopifylle",
   "hero.h1.lead": "Asiakkaat vaihtavat laitetta jatkuvasti.",
   "hero.h1.turn": "Shopifyn oletuskaupassa ostoskori ei seuraa mukana.",
@@ -66,7 +66,7 @@
   "demo.device.laptop": "Kannettava",
   "demo.qty": "Kpl",
   "demo.replay": "Toista animaatio uudelleen",
-  "trustbar.lead": "Alkuperäinen laitteiden välinen ostoskorisovellus Shopifylle — siihen on luottanut {stores} jo vuodesta 2016.",
+  "trustbar.lead": "Tuhannet Shopify-kaupat luottavat sovellukseen — mukana satoja Shopify Plus -kauppoja.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ aitojen kauppiaiden arvosteluista",
   "trustbar.plus": "Sitä käyttää {plusStores}",
@@ -237,5 +237,6 @@
   "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
   "demo.cart.empty": "Ostoskorisi on tyhjä",
   "demo.cart.emptyHint": "Puhelimen ostoskori jäi jälkeen",
-  "footer.link.how-it-works": "Näin se toimii"
+  "footer.link.how-it-works": "Näin se toimii",
+  "trust.impact": "{amount} tilauksia synkronoiduista ostoskoreista — viimeiset 90 päivää"
 }

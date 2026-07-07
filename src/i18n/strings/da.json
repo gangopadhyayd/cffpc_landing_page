@@ -45,7 +45,7 @@
   "content.ctaBody": "Tilføj Persistent Cart med ét klik — start gratis, og dine kunder skal ikke gøre noget.",
   "content.ctaInstall": "Tilføj Persistent Cart — start gratis",
   "content.ctaAudit": "Få et gratis butikstjek",
-  "announce.text": "Built for Shopify · Betroet af Shopify-butikker siden 2016 · 4.9★",
+  "announce.text": "Betroet af Shopify-butikker siden 2016 · 4.9★",
   "hero.eyebrow": "Synkronisering af kurv på tværs af enheder til Shopify",
   "hero.h1.lead": "Kunder skifter enhed hele tiden.",
   "hero.h1.turn": "I en standard Shopify-butik følger indkøbskurven ikke med.",
@@ -66,7 +66,7 @@
   "demo.device.laptop": "Laptop",
   "demo.qty": "Antal",
   "demo.replay": "Afspil animation igen",
-  "trustbar.lead": "Den oprindelige app til kurv på tværs af enheder til Shopify — betroet af {stores} siden 2016.",
+  "trustbar.lead": "Tusindvis af Shopify-butikker stoler på appen — heriblandt hundredvis på Shopify Plus.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ fra ægte forhandleranmeldelser",
   "trustbar.plus": "Brugt af {plusStores}",
@@ -237,5 +237,6 @@
   "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
   "demo.cart.empty": "Din indkøbskurv er tom",
   "demo.cart.emptyHint": "Kurven blev efterladt på mobilen",
-  "footer.link.how-it-works": "Sådan virker det"
+  "footer.link.how-it-works": "Sådan virker det",
+  "trust.impact": "{amount} i ordrer fra synkroniserede kurve — de seneste 90 dage"
 }

@@ -45,7 +45,7 @@
   "content.ctaBody": "一键添加 Persistent Cart — 免费开始，顾客无需任何操作。",
   "content.ctaInstall": "添加 Persistent Cart — 免费开始",
   "content.ctaAudit": "获取免费商店检测",
-  "announce.text": "Built for Shopify · 自 2016 年起深受 Shopify 商店信赖 · 4.9★",
+  "announce.text": "自 2016 年起深受 Shopify 商店信赖 · 4.9★",
   "hero.eyebrow": "为 Shopify 打造的跨设备购物车同步",
   "hero.h1.lead": "顾客总是在不同设备之间切换。",
   "hero.h1.turn": "而在默认的 Shopify 商店里，购物车不会跟着走。",
@@ -66,7 +66,7 @@
   "demo.device.laptop": "笔记本电脑",
   "demo.qty": "数量",
   "demo.replay": "重播动画",
-  "trustbar.lead": "Shopify 上首款跨设备购物车应用 — 自 2016 年起深受 {stores} 信赖。",
+  "trustbar.lead": "数千家 Shopify 商店信赖之选 — 其中数百家为 Shopify Plus。",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★，来自真实商家评价",
   "trustbar.plus": "{plusStores} 正在使用",
@@ -237,5 +237,6 @@
   "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
   "demo.cart.empty": "您的购物车是空的",
   "demo.cart.emptyHint": "手机上的购物车留在了原地",
-  "footer.link.how-it-works": "工作原理"
+  "footer.link.how-it-works": "工作原理",
+  "trust.impact": "过去 90 天 {amount} — 来自同步购物车的订单"
 }

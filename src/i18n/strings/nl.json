@@ -41,7 +41,7 @@
   "content.ctaBody": "Voeg Persistent Cart toe met één klik — gratis beginnen, je klanten hoeven niets te doen.",
   "content.ctaInstall": "Voeg Persistent Cart toe — start gratis",
   "content.ctaAudit": "Vraag een gratis winkelaudit aan",
-  "announce.text": "Built for Shopify · Vertrouwd door Shopify-winkels sinds 2016 · 4.9★",
+  "announce.text": "Vertrouwd door Shopify-winkels sinds 2016 · 4.9★",
   "hero.eyebrow": "Cross-device winkelwagensync voor Shopify",
   "hero.h1.lead": "Shoppers wisselen voortdurend van apparaat.",
   "hero.h1.turn": "In een standaard Shopify-winkel reist de winkelwagen niet mee.",
@@ -62,7 +62,7 @@
   "demo.device.laptop": "Laptop",
   "demo.qty": "Aantal",
   "demo.replay": "Animatie opnieuw afspelen",
-  "trustbar.lead": "De originele cross-device winkelwagen-app voor Shopify — vertrouwd door {stores} sinds 2016.",
+  "trustbar.lead": "Vertrouwd door duizenden Shopify-winkels — waaronder honderden op Shopify Plus.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ uit echte merchant-reviews",
   "trustbar.plus": "Gebruikt door {plusStores}",
@@ -237,5 +237,6 @@
   "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
   "demo.cart.empty": "Je winkelwagen is leeg",
   "demo.cart.emptyHint": "De winkelwagen van de telefoon bleef achter",
-  "footer.link.how-it-works": "Hoe het werkt"
+  "footer.link.how-it-works": "Hoe het werkt",
+  "trust.impact": "{amount} aan bestellingen uit gesynchroniseerde winkelwagens — afgelopen 90 dagen"
 }

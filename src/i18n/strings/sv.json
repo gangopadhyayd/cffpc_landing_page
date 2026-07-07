@@ -45,7 +45,7 @@
   "content.ctaBody": "Lägg till Persistent Cart med ett klick — börja gratis, dina kunder behöver inte göra något.",
   "content.ctaInstall": "Lägg till Persistent Cart — börja gratis",
   "content.ctaAudit": "Få en gratis butiksgranskning",
-  "announce.text": "Built for Shopify · Betrodd av Shopify-butiker sedan 2016 · 4.9★",
+  "announce.text": "Betrodd av Shopify-butiker sedan 2016 · 4.9★",
   "hero.eyebrow": "Den ursprungliga appen för varukorg mellan enheter på Shopify",
   "hero.h1.lead": "Kunder byter enhet hela tiden.",
   "hero.h1.turn": "I en standardbutik på Shopify följer varukorgen inte med.",
@@ -66,7 +66,7 @@
   "demo.device.laptop": "Laptop",
   "demo.qty": "Antal",
   "demo.replay": "Spela upp animationen igen",
-  "trustbar.lead": "Den ursprungliga appen för varukorg mellan enheter på Shopify — betrodd av {stores} sedan 2016.",
+  "trustbar.lead": "Tusentals Shopify-butiker litar på appen — inklusive hundratals på Shopify Plus.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ från riktiga handlarrecensioner",
   "trustbar.plus": "Används av {plusStores}",
@@ -237,5 +237,6 @@
   "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
   "demo.cart.empty": "Din varukorg är tom",
   "demo.cart.emptyHint": "Varukorgen blev kvar i mobilen",
-  "footer.link.how-it-works": "Så fungerar det"
+  "footer.link.how-it-works": "Så fungerar det",
+  "trust.impact": "{amount} i beställningar från synkade varukorgar — senaste 90 dagarna"
 }

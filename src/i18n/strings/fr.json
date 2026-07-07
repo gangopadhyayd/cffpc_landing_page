@@ -45,7 +45,7 @@
   "content.ctaBody": "Ajoutez Persistent Cart en un clic — gratuit pour commencer, rien à faire pour vos clients.",
   "content.ctaInstall": "Ajouter Persistent Cart — commencez gratuitement",
   "content.ctaAudit": "Obtenir un audit gratuit de votre boutique",
-  "announce.text": "Built for Shopify · Adopté par les boutiques Shopify depuis 2016 · 4.9★",
+  "announce.text": "Adopté par les boutiques Shopify depuis 2016 · 4.9★",
   "hero.eyebrow": "Synchronisation du panier entre appareils pour Shopify",
   "hero.h1.lead": "Vos clients changent d'appareil en permanence.",
   "hero.h1.turn": "Sur une boutique Shopify par défaut, leur panier ne suit pas.",
@@ -66,7 +66,7 @@
   "demo.device.laptop": "Ordinateur portable",
   "demo.qty": "Qté",
   "demo.replay": "Rejouer l'animation",
-  "trustbar.lead": "La toute première application de panier entre appareils pour Shopify — adoptée par {stores} depuis 2016.",
+  "trustbar.lead": "Des milliers de boutiques Shopify nous font confiance — dont des centaines sur Shopify Plus.",
   "trustbar.bfs": "Built for Shopify",
   "trustbar.reviews": "{rating}★ d'après de vrais avis de marchands",
   "trustbar.plus": "Utilisée par {plusStores}",
@@ -237,5 +237,6 @@
   "home.problem.statSource": "Google/Ipsos, 2012 · Bazaarvoice Shopper Experience Index, Nov 2024",
   "demo.cart.empty": "Votre panier est vide",
   "demo.cart.emptyHint": "Le panier du téléphone est resté derrière",
-  "footer.link.how-it-works": "Comment ça marche"
+  "footer.link.how-it-works": "Comment ça marche",
+  "trust.impact": "{amount} de commandes issues de paniers synchronisés — sur les 90 derniers jours"
 }
