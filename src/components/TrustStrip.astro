@@ -1,0 +1,134 @@
+---
+/**
+ * The "who vouches" band, directly under the hero. Absorbs the old trust bar:
+ * - lead line: trusted-by (thousands of stores / hundreds on Plus)
+ * - the page's SINGLE official Built-for-Shopify badge (kit guideline:
+ *   one badge instance per webpage, ≥30px tall, clear space ≥ half height)
+ * - the customer-logo row (owner-approved 2026-07-07): ink-duotone marks of
+ *   real stores currently using the app, with a factual mono footnote.
+ * The logo row is toggleable: it renders only when `showCustomerLogos` is true
+ * AND `proof.namedMerchantLogos` is non-empty; the lead + badge always render,
+ * so switching logos off falls back to the old slim trust bar.
+ */
+import BfsBadge from './BfsBadge.astro';
+import { t } from '../i18n';
+import { proof, showCustomerLogos } from '../config/site';
+
+interface Props {
+  locale: string;
+}
+const { locale } = Astro.props;
+
+const logos = proof.namedMerchantLogos;
+const showLogos = showCustomerLogos && logos.length > 0;
+---
+
+<section class="trust-strip">
+  <div class="container-page">
+    <div class="strip-head">
+      <p class="strip-lead">{t(locale, 'trustbar.lead')}</p>
+      <BfsBadge label={t(locale, 'home.trust.stat.bfs')} variant="official" size={32} />
+    </div>
+
+    {showLogos && (
+      <>
+      <ul class="strip-logos" role="list">
+        {logos.map((logo) => (
+          <li>
+            {logo.href ? (
+              <a href={logo.href} target="_blank" rel="noopener nofollow">
+                <img src={logo.src} alt={logo.name} width={logo.w} height={logo.h} loading="lazy" decoding="async" />
+              </a>
+            ) : (
+              <img src={logo.src} alt={logo.name} width={logo.w} height={logo.h} loading="lazy" decoding="async" />
+            )}
+          </li>
+        ))}
+      </ul>
+      <p class="strip-note">{t(locale, 'trustbar.note')}</p>
+      </>
+    )}
+  </div>
+</section>
+
+<style>
+  .trust-strip {
+    border-block: 1px solid var(--color-hairline);
+    background: var(--color-paper);
+    padding-block: 1.9rem;
+  }
+  .strip-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 1.5rem;
+  }
+  .strip-lead {
+    font-weight: 600;
+    max-width: 34rem;
+    text-wrap: balance;
+  }
+  /* Kit guideline: clear space around the badge ≥ half its height (16px @ 32). */
+  .strip-head :global(.bfs-official) {
+    margin: 0.25rem 1rem 0.25rem 0;
+  }
+
+  .strip-logos {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: clamp(1.7rem, 4vw, 3rem);
+    row-gap: 1.15rem;
+    margin-top: 1.9rem;
+    padding: 0;
+  }
+  .strip-logos li {
+    display: flex;
+    align-items: center;
+    height: 26px;
+  }
+  .strip-logos img {
+    height: 100%;
+    width: auto;
+    max-width: 9.5rem;
+    object-fit: contain;
+    /* Ink-duotone: multiply lets white backgrounds fall into the paper,
+       grayscale unifies every mark into the editorial ink family. */
+    mix-blend-mode: multiply;
+    filter: grayscale(1) contrast(1.05) opacity(0.75);
+    transition: filter 0.2s var(--ease-out-soft);
+  }
+  .strip-logos a:hover img,
+  .strip-logos a:focus-visible img {
+    filter: grayscale(1) contrast(1.05) opacity(1);
+  }
+
+  .strip-note {
+    margin-top: 1.35rem;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    color: var(--color-ink-faint);
+  }
+
+  @media (max-width: 640px) {
+    .strip-head {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.9rem;
+    }
+    .strip-logos {
+      margin-top: 1.5rem;
+    }
+    .strip-logos li {
+      height: 21px;
+    }
+    .strip-logos img {
+      max-width: 7.5rem;
+    }
+  }
+</style>

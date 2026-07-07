@@ -4,7 +4,6 @@
   "page.faq.crumb": "FAQ",
   "page.faq.h1": "Persistent Cart, answered.",
   "page.faq.lede": "Straight answers to what merchants ask before installing — how cross-device cart sync works on Shopify, what shoppers experience, and how Persistent Cart fits with the tools you already use.",
-
   "faq.q1.q": "Does Shopify sync carts across devices by default?",
   "faq.q1.a": "No. On a default Shopify store the cart is stored in a browser cookie that lasts about two weeks — not on the customer's account. So when a signed-in shopper switches from phone to laptop, the cart doesn't follow them; it isn't there on the second device. Shopify's own community confirms cross-device cart sync needs custom code or an app.",
   "faq.q2.q": "Will my customers see popups or get emails?",
@@ -30,5 +29,9 @@
   "faq.q12.q": "Which languages and currencies does it support?",
   "faq.q12.a": "It works with multi-currency Shopify stores, and it syncs the cart regardless of language. The app is used by stores around the world — cross-device cart loss isn't specific to any one market.",
   "faq.q13.q": "How do I know it's worth it for my store?",
-  "faq.q13.a": "Test it on your own store before paying: the Free Starter plan runs up to 10 real cart syncs, and any paid plan adds a 30-day trial. On Basic it's $4.99/month — recovering a single mid-sized cross-device order more than covers it. You can watch it work on your own store before a dollar is charged, so you're not guessing."
+  "faq.q13.a": "Test it on your own store before paying: the Free Starter plan runs up to 10 real cart syncs, and any paid plan adds a 30-day trial. On Basic it's $4.99/month — recovering a single mid-sized cross-device order more than covers it. You can watch it work on your own store before a dollar is charged, so you're not guessing.",
+  "faq.q14.q": "Does it work with Shop and Shopify's new customer accounts?",
+  "faq.q14.a": "Yes. Persistent Cart works with Shopify's new customer accounts, and when a shopper signs in through the Shop app their cart is tied to their account just the same. Keep in mind that Shop sign-in by itself doesn't move carts between devices — Persistent Cart is the layer that keeps the cart in sync everywhere the customer signs in.",
+  "faq.q15.q": "How long do saved carts last?",
+  "faq.q15.a": "Until checkout — there's no time limit. The cart is stored against the customer's account and stays there until they buy or change it, whether they come back tomorrow or months later. On default Shopify, by comparison, the cart lives in a browser cookie for about two weeks."
 }

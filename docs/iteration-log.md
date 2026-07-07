@@ -204,6 +204,76 @@ Verify: build 136 pages · typecheck 0 errors · i18n green.
 - **Privacy-policy improvement backlog documented** in owner-inputs §4 (anonymous-cart wording,
   sub-processors, effective date, deletion mechanics) — for the owner's next policy revision.
 
+## Cycle 6 — trust hierarchy · customer-logo strip · hero "live" (2026-07-07)
+
+Owner batch-answered the session questions up front: logo strip = **Extended 11**;
+impact stat = **"$30M+ — last 30 days"** (supersedes $60M/90d; ⚠️ internal 2026-06-03
+measurement was $26.0M/30d — owner owns the delta); all 3 claims approved ("Works with
+Shop" = works with new customer accounts, Shop login ties cart to account, **Shop does
+NOT move carts across devices itself**); dashboard via debug preview URL (token — never
+commit/screenshot it).
+
+### Trust-signal hierarchy (each signal exactly once above the fold, placed by nature)
+- **Announce bar = positioning claim only:** "The original cross-device cart app for
+  Shopify — since 2016." No badge, no rating. Announce is now a *sibling* of the sticky
+  header — it scrolls away (fold gets ~30px back); nav alone sticks. (First attempt
+  nested a sticky div inside the header — sticky can't escape its parent's box; fixed.)
+- **Hero trust row = the numbers:** $30M+/30d (bold, first) + 4.9★ listing link.
+- **TrustStrip (new component, replaces the trust bar) = who vouches:** trustbar.lead +
+  the page's **single** official BFS badge + 11 ink-duotone customer logos + mono
+  footnote "A few of the stores syncing carts with Persistent Cart."
+- **BFS media-kit compliance (read the usage PDF):** "one badge instance per webpage",
+  ≥30px tall, clear space ≥ half height, never altered. The announce bar's redrawn
+  diamond+label pseudo-badge violated "don't alter" and doubled the instance → removed
+  everywhere; `BfsBadge` inline variant now unused on marketing surfaces.
+
+### Customer-logo strip (owner-approved; "Extended 11")
+- `proof.namedMerchantLogos` (now `MerchantLogo[]`: name/domain/src/href?/w/h) +
+  `showCustomerLogos` master switch; strip renders logos only when flag && non-empty,
+  falls back to the slim lead+badge bar when off.
+- Logos: StewMac, Public Goods, Magnolia, Ksubi, FASHIONPHILE, Todd Snyder, Swanson
+  Vitamins, Tannico, momox fashion, Shoebacca, Green Mountain Diapers — all fetched
+  from each brand's own site (sources + grades in design-assets/customer-logos/
+  MANIFEST.md); masters in design-assets/, web copies in public/customer-logos/
+  (StewMac + Tannico recolored to ink — white/light-gray fills vanish on paper; Ksubi
+  svgo'd 114→42KB). Treatment: `mix-blend-mode: multiply` + grayscale (white PNG
+  backgrounds fall into the paper). Excluded as trademark-sensitive: Levi's Korea,
+  LINE FRIENDS, Phoebe Philo (owner can override).
+- **Shopify Plus wordmark: no official public lockup exists** — shopify.com/brand-assets
+  ships only the main Shopify logo; the Plus partner badge is gated to qualified
+  partner tiers. "Shopify Plus" stays text (guideline-safe); 6 official Shopify SVGs
+  saved to design-assets/shopify-plus/ with usage notes.
+
+### Hero round 2 — 4 variants built, owner picked "live"
+- `heroVariant` in src/config/site.ts: 'fork' (cycle-2 baseline) · 'plate' (editorial
+  patent-plate: FIG. 1 mono header, faint dot-grid paper, plate border, SIGNED-IN
+  SHOPPER annotation w/ leader line, bolder paths + origin ring) · **'live' (SHIPPED:
+  plate + sync choreography — a 4th item pops into the phone cart every ~8s, the dot
+  carries it, the laptop cart receives it, subtotals count up $248→$266)** · 'real'
+  (product thumbs, qty steppers, Check out button).
+- Motion discipline holds: markup always encodes the finished 4-item story; JS only
+  winds carts *back* temporarily (IntersectionObserver-gated, prefers-reduced-motion
+  → static complete state). Cycle-2 lesson re-hit and re-fixed in 'real': price column
+  on the phone truncates names — phone rows carry no prices in any variant.
+- Compare method: built each variant, held `dist/index.html` per variant +
+  union of hashed `_astro` assets, served all four at /_compare/ off one preview —
+  owner experienced the motion live instead of picking from static screenshots.
+- Verified desktop 1440 + true-390 (iframe method) for plate/live/real + strip.
+
+### Owner copy wired (×15 locales, hand-authored per register)
+- Stat 90d→30d (mechanical numeral swap preserves native phrasing: trust.impact,
+  home.metrics.1.note), announce.text re-authored, + new keys: trustbar.note,
+  hero.fig.label, hero.annot.signedIn, demo.cart.item.beanie, demo.cart.checkout,
+  pricing.feesNote ("flat monthly — no usage fees, no per-order charges"; also
+  appended to home trialNote), faq.q14 (Works with Shop — states Shop alone doesn't
+  transfer carts), faq.q15 (saved until checkout — no time limit). FAQ page 13→15 Qs.
+- ⚠️ Process scar: a sloppy nested `open(p,'w')` truncated site.ts mid-session —
+  restored from git HEAD + re-applied edits. Scripted config toggles now assert
+  substitution + size and never write the file they're reading.
+
+Verify: build 151 pages · typecheck 0 errors · i18n:check green · dist greps confirm
+q14/q15 (EN+DE), fees line, 30-day stat, single badge instance, zero pseudo-badges.
+
 ### Deployment state (2026-07-06)
 - **Live:** https://persistentcartapp.netlify.app — Netlify project `persistentcartapp`
   (team dgangopa), continuous deploys from `main` of

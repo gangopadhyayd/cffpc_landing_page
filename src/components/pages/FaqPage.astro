@@ -20,7 +20,7 @@ const tt = (k: string) => t(locale, k);
 const title = tt(titleKey('faq'));
 const description = tt(descKey('faq'));
 
-const faqItems = Array.from({ length: 13 }, (_, i) => ({
+const faqItems = Array.from({ length: 15 }, (_, i) => ({
   q: tt(`faq.q${i + 1}.q`),
   a: tt(`faq.q${i + 1}.a`),
 }));

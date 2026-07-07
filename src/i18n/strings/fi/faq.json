@@ -29,5 +29,9 @@
   "faq.q12.q": "Mitä kieliä ja valuuttoja se tukee?",
   "faq.q12.a": "Se toimii monivaluuttaisten Shopify-kauppojen kanssa ja synkronoi ostoskorin kielestä riippumatta. Sovellusta käyttävät kaupat ympäri maailmaa — laitteiden välinen ostoskorien menetys ei ole minkään yksittäisen markkinan erityispiirre.",
   "faq.q13.q": "Mistä tiedän, onko se kauppani väärti?",
-  "faq.q13.a": "Testaa omassa kaupassasi ennen kuin maksat: Free Starter -paketti kattaa jopa 10 oikeaa ostoskorin synkronointia, ja jokainen maksullinen paketti alkaa 30 päivän kokeilulla. Basic maksaa 4,99 $ kuukaudessa — yksi pelastettu keskikokoinen tilaus laitteiden välillä kattaa sen moninkertaisesti. Näet sen toimivan omassa kaupassasi ennen kuin dollariakaan veloitetaan, joten sinun ei tarvitse arvailla."
+  "faq.q13.a": "Testaa omassa kaupassasi ennen kuin maksat: Free Starter -paketti kattaa jopa 10 oikeaa ostoskorin synkronointia, ja jokainen maksullinen paketti alkaa 30 päivän kokeilulla. Basic maksaa 4,99 $ kuukaudessa — yksi pelastettu keskikokoinen tilaus laitteiden välillä kattaa sen moninkertaisesti. Näet sen toimivan omassa kaupassasi ennen kuin dollariakaan veloitetaan, joten sinun ei tarvitse arvailla.",
+  "faq.q14.q": "Toimiiko se Shopin ja Shopifyn uusien asiakastilien kanssa?",
+  "faq.q14.a": "Kyllä. Persistent Cart toimii Shopifyn uusien asiakastilien kanssa, ja kun asiakas kirjautuu Shop-sovelluksella, ostoskori sidotaan tiliin aivan samoin. Huomaa: pelkkä Shop-kirjautuminen ei siirrä ostoskoria laitteelta toiselle — Persistent Cart on kerros, joka pitää korin synkronoituna kaikkialla, missä asiakas kirjautuu sisään.",
+  "faq.q15.q": "Kuinka kauan tallennetut ostoskorit säilyvät?",
+  "faq.q15.a": "Kassalle asti — aikarajaa ei ole. Ostoskori tallennetaan asiakkaan tilille ja säilyy siellä, kunnes asiakas ostaa tai muuttaa sitä — palasi hän sitten huomenna tai kuukausien päästä. Vertailun vuoksi: vakio-Shopifyssa kori elää selaimen evästeessä noin kaksi viikkoa."
 }

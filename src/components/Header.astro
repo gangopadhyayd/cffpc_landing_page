@@ -1,7 +1,6 @@
 ---
 import Logo from './Logo.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
-import BfsBadge from './BfsBadge.astro';
 import { PAGES } from '../config/routes';
 import { localizedPath } from '../i18n/routing';
 import { t } from '../i18n';
@@ -20,15 +19,17 @@ const navItems = PAGES.filter((p) => p.nav)
 const homeHref = localizedPath(locale, '');
 ---
 
-<header class="site-header">
-  <div class="announce">
-    <div class="container-page announce-inner">
-      <BfsBadge label={t(locale, 'common.builtForShopify')} size={13} />
-      <span class="announce-sep" aria-hidden="true">·</span>
-      <span>{t(locale, 'announce.text')}</span>
-    </div>
+{/* Positioning claim — the one place "original / since 2016" lives above the
+    fold. Text only: the official BFS badge appears once per page elsewhere
+    (kit guideline: one badge instance per webpage). A sibling of the sticky
+    header, so it scrolls away and gives the fold its room back. */}
+<div class="announce">
+  <div class="container-page announce-inner">
+    <span>{t(locale, 'announce.text')}</span>
   </div>
+</div>
 
+<header class="site-header">
   <div class="container-page nav-row">
     <a class="brand" href={homeHref} aria-label={t(locale, 'a11y.homeLink')}>
       <Logo />
@@ -73,6 +74,7 @@ const homeHref = localizedPath(locale, '');
 </header>
 
 <style>
+  /* The announce line (sibling above) scrolls away; the header sticks. */
   .site-header {
     position: sticky;
     top: 0;
@@ -95,9 +97,6 @@ const homeHref = localizedPath(locale, '');
     gap: 0.45rem;
     text-align: center;
     padding-block: 0.45rem;
-  }
-  .announce-sep {
-    opacity: 0.6;
   }
   .nav-row {
     display: flex;

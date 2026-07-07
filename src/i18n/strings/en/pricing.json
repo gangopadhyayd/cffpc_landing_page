@@ -4,18 +4,16 @@
   "page.pricing.crumb": "Pricing",
   "page.pricing.h1": "Every feature, on every plan. Priced to your Shopify plan.",
   "page.pricing.lede": "There are no feature tiers to decode. Every plan includes the full app — your price simply matches your Shopify subscription. Start free, then a 30-day free trial on any paid plan.",
-
   "pricing.planHint": "Your plan is selected automatically based on your Shopify subscription. You don't pick a feature tier — you get all of it.",
   "pricing.cta.install": "Add Persistent Cart — start free",
   "pricing.trial": "Free Starter plan · 30-day free trial on all paid plans · cancel anytime",
-
+  "pricing.feesNote": "Every plan is a flat monthly price — no usage fees, no per-order charges.",
   "pricing.tier.free.note": "Test every feature, up to 10 cart syncs",
   "pricing.tier.basic.note": "For stores on the Shopify Basic plan",
   "pricing.tier.grow.note": "For stores on the Shopify Grow plan (formerly \"Shopify\")",
   "pricing.tier.advanced.note": "For stores on the Shopify Advanced plan",
   "pricing.tier.plus.note": "For Shopify Plus stores",
   "pricing.tier.everyPlan": "Every feature included",
-
   "pricing.included.title": "Included on every plan",
   "pricing.included.1": "Automatic cross-device cart sync for signed-in customers",
   "pricing.included.2": "Silent auto-merge by default — no popups, emails, or opt-ins",
@@ -23,14 +21,12 @@
   "pricing.included.4": "One-click install, no theme code",
   "pricing.included.5": "Works across phone, desktop, and return visits",
   "pricing.included.6": "Built for Shopify quality and performance standards",
-
   "pricing.s1.h": "Why it's priced to your plan, not by feature",
   "pricing.s1.b": "Most apps make you choose a tier and ration features. Persistent Cart doesn't — the whole app is the product, so every plan gets every feature. The only thing that changes is price, which tracks your Shopify subscription level. A Basic store pays Basic pricing; a Plus store pays Plus pricing; both get identical functionality. It keeps the decision simple: there's nothing to compare except whether you want it.\n\nLarger Shopify plans mean more orders and more signed-in shoppers switching devices — so the price tracks the value you get back, not a longer feature list.",
   "pricing.s2.h": "Start free, then a 30-day trial",
   "pricing.s2.b": "The Free Starter plan lets you install and test every feature for up to 10 cart syncs — enough to see it work on your own store. When you're ready, any paid plan starts with a 30-day free trial, so you only pay once you've watched it run. There's no long-term contract; cancel anytime from your Shopify admin.",
   "pricing.s3.h": "Is it worth it?",
   "pricing.s3.b": "The honest answer is that it depends on how many of your shoppers sign in and switch devices. Persistent Cart is a low monthly cost designed to recover orders that would otherwise vanish silently — if even a handful of high-value carts survive each month that wouldn't have, it pays for itself. And you don't have to take that on faith: the Free Starter plan and the 30-day trial let you watch it work on your own store before it costs anything.",
-
   "pricing.faq.q1.q": "Do cheaper plans get fewer features?",
   "pricing.faq.q1.a": "No. Every plan includes the complete app. Your price is set by your Shopify subscription level, not by which features you want.",
   "pricing.faq.q2.q": "Is there really a free plan?",

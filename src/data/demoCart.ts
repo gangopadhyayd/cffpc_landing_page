@@ -13,6 +13,17 @@ export const DEMO_ITEMS: DemoItem[] = [
   { id: 'socks', nameKey: 'demo.cart.item.socks', qty: 1, price: 24, swatch: '#1E5B45' },
 ];
 
+/** Fourth item used only by the hero's "live" variant: it pops into the phone
+ *  cart mid-loop and syncs across. Kept out of DEMO_ITEMS so the other demos
+ *  (parity diagram, how-it-works) keep their 3-item cart. */
+export const DEMO_LIVE_ITEM: DemoItem = {
+  id: 'beanie',
+  nameKey: 'demo.cart.item.beanie',
+  qty: 1,
+  price: 18,
+  swatch: '#9C6B3F',
+};
+
 export const DEMO_CURRENCY = '$';
 
 export function cartSubtotal(items: DemoItem[]): number {

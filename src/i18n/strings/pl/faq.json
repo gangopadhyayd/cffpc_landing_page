@@ -29,5 +29,9 @@
   "faq.q12.q": "Jakie języki i waluty obsługuje?",
   "faq.q12.a": "Współpracuje ze sklepami Shopify obsługującymi wiele walut i synchronizuje koszyk niezależnie od języka. Aplikacja jest używana przez sklepy na całym świecie — utrata koszyka między urządzeniami nie dotyczy żadnego konkretnego rynku.",
   "faq.q13.q": "How do I know it's worth it for my store?",
-  "faq.q13.a": "Przetestuj we własnym sklepie, zanim zapłacisz: plan Free Starter obejmuje do 10 prawdziwych synchronizacji koszyka, a każdy płatny plan zaczyna się od 30-dniowego okresu próbnego. Plan Basic kosztuje 4,99 USD miesięcznie — jedno uratowane średniej wielkości zamówienie między urządzeniami pokrywa to z nawiązką. Zobaczysz, jak działa w Twoim sklepie, zanim zostanie naliczony choćby dolar — nie musisz zgadywać."
+  "faq.q13.a": "Przetestuj we własnym sklepie, zanim zapłacisz: plan Free Starter obejmuje do 10 prawdziwych synchronizacji koszyka, a każdy płatny plan zaczyna się od 30-dniowego okresu próbnego. Plan Basic kosztuje 4,99 USD miesięcznie — jedno uratowane średniej wielkości zamówienie między urządzeniami pokrywa to z nawiązką. Zobaczysz, jak działa w Twoim sklepie, zanim zostanie naliczony choćby dolar — nie musisz zgadywać.",
+  "faq.q14.q": "Czy działa z aplikacją Shop i nowymi kontami klientów Shopify?",
+  "faq.q14.a": "Tak. Persistent Cart działa z nowymi kontami klientów Shopify, a gdy klient loguje się przez aplikację Shop, koszyk jest tak samo powiązany z jego kontem. Pamiętaj: samo logowanie przez Shop nie przenosi koszyka między urządzeniami — to Persistent Cart jest warstwą, która utrzymuje koszyk zsynchronizowany wszędzie tam, gdzie klient się zaloguje.",
+  "faq.q15.q": "Jak długo przechowywane są zapisane koszyki?",
+  "faq.q15.a": "Do momentu finalizacji zakupu — nie ma limitu czasu. Koszyk jest zapisany na koncie klienta i pozostaje tam, dopóki klient nie kupi lub go nie zmieni — niezależnie od tego, czy wróci jutro, czy za kilka miesięcy. Dla porównania: w domyślnym Shopify koszyk żyje w pliku cookie przeglądarki przez około dwa tygodnie."
 }

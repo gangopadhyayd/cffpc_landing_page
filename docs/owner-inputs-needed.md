@@ -8,10 +8,12 @@
 >    links it. ⚠️ Two follow-ups flagged for the owner in §4 below.
 > 3. ~~Green Mountain Diapers review~~ **RESOLVED 2026-07-07**: owner confirmed featuring it.
 >
-> **All three v1 launch inputs are now resolved.** New owner directives (2026-07-07): use
-> logos/icons of the biggest stores using the product in a trust strip (make it easy to toggle
-> on/off), and source other Shopify assets (e.g. Shopify Plus logo) from high-quality official
-> sources online — see docs/next-iteration-brief.md.
+> **All three v1 launch inputs are now resolved.** The 2026-07-07 owner directives are also
+> ✅ SHIPPED (cycle 6): customer-logo strip live (Extended 11, toggleable via
+> `showCustomerLogos`), impact stat now **"$30M+ — last 30 days"** (owner-approved; internal
+> June measurement was $26.0M/30d — the number is the owner's), FAQ adds ("Works with Shop",
+> "no time limit") + pricing "no usage fees" line live in all 15 locales. Shopify Plus logo:
+> **no official public lockup exists** — "Shopify Plus" stays text (see brief backlog #5).
 >
 > Everything else below belongs to deferred v2 features (partner terms, audit fulfillment,
 > calculator) or optional integrations — see `docs/v1-recommendation.md`. The v1 site launches

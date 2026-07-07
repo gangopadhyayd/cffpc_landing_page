@@ -40,6 +40,8 @@ const included = [1, 2, 3, 4, 5, 6].map((n) => tt(`pricing.included.${n}`));
   </div>
 
   <p class="pricing-hint"><Icon name="sparkle" size={16} /> {tt('pricing.planHint')}</p>
+  {/* Owner-confirmed 2026-07-07: paid plans are flat monthly — no usage fees. */}
+  <p class="pricing-hint pricing-fees">{tt('pricing.feesNote')}</p>
 
   <div class="pricing-included">
     <h2 class="pricing-included-title">{tt('pricing.included.title')}</h2>
@@ -126,6 +128,11 @@ const included = [1, 2, 3, 4, 5, 6].map((n) => tt(`pricing.included.${n}`));
     margin-top: 1.5rem;
     font-size: 0.9rem;
     color: var(--color-ink-soft);
+  }
+  .pricing-fees {
+    margin-top: 0.4rem;
+    font-weight: 600;
+    color: var(--color-ink);
   }
   .pricing-hint :global(svg) {
     color: var(--color-accent);

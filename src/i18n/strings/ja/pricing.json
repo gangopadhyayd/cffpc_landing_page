@@ -7,6 +7,7 @@
   "pricing.planHint": "プランは、Shopify のサブスクリプションに基づいて自動で選択されます。機能ティアを選ぶ必要はありません — すべてが手に入ります。",
   "pricing.cta.install": "Persistent Cart を追加 — 無料で開始",
   "pricing.trial": "Free Starter プラン · すべての有料プランで30日間の無料トライアル · いつでも解約可能",
+  "pricing.feesNote": "すべてのプランは月額固定です。従量課金や注文ごとの手数料はありません。",
   "pricing.tier.free.note": "最大10回のカート同期まで、全機能をテスト",
   "pricing.tier.basic.note": "Shopify Basic プランのストア向け",
   "pricing.tier.grow.note": "Shopify Grow プラン（旧「Shopify」）のストア向け",

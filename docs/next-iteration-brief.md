@@ -65,73 +65,63 @@ Everything below is current as of 2026-07-07.
 
 ## The owner's outstanding feedback = your backlog (in their priority order)
 
-1. **Trust-signal hierarchy redesign (owner flagged redundancy, 2026-07-07).** The first
-   viewport used to repeat $60M/4.9★/badge in BOTH the hero trust row and the trust bar. A
-   quick de-dup already shipped: hero row = $60M (bold) + 4.9★ link; trust bar = trusted-by
-   lead + official BFS pill + since-2016; announce bar = slim text badge. YOUR JOB: design the
-   proper hierarchy as part of the hero round — each signal should appear exactly once above
-   the fold, strongest placement wins, and the customer-logo strip (backlog #2) likely
-   replaces/absorbs the trust bar. Do not reintroduce duplication.
-2. **Customer-logo trust strip (owner-approved 2026-07-07, permission granted).** Build a
-   logo/icon strip of the BIGGEST stores using Persistent Cart. Sourcing: identify top stores
-   from the app's data — engagement repo (`~/Desktop/cff_projects/cff_pc/engagement`, e.g.
-   techbino ~$264k/30d, vdbparts ~€94k/30d) and the growth repo
-   (`~/dev/CFFPC_Growth_Claude_Project` install/billing CSVs), plus public reviewers (Green
-   Mountain Diapers — testimonial featuring CONFIRMED by owner). Fetch each store's logo/icon
-   from their own site (favicon/press kit quality; prefer SVG/high-res). **Hard requirement:
-   make the section easy to toggle on/off** — wire through `src/config/site.ts`: a boolean
-   `showCustomerLogos` + populate the existing `proof.namedMerchantLogos` array (name, domain,
-   asset path, optional href); section renders only when the flag is on AND the array is
-   non-empty. Grayscale/duotone treatment to fit the editorial system; footer disclaimer
-   already covers third-party marks, but keep the strip factual ("stores using Persistent
-   Cart").
-3. **Hero diagram, creative round 2.** The fork concept is validated (research §2 — Rewind
-   runs the same problem-led genre) and devices are recognizable, but the owner wants
-   *more impactful, creative, polished — still trustworthy, not salesy*. Invoke the
-   `frontend-design` skill; build 2–3 real variants; screenshot-compare desktop + 390px
-   mobile; let the owner pick. Candidate directions: real product-UI screenshot treatment
-   (pairs with #4), richer device illustration, motion-first storytelling (reduced-motion
-   safe, resting state complete — cycle 2's lesson: no entrance-stagger that leaves the
-   diagram half-drawn).
-4. **Dashboard "value-add" section.** cff_pc app dashboard shows recovered-revenue analytics.
-   Flow: owner runs the dashboard preview locally (`/Users/debgangopadhyay/Desktop/cff_projects/cff_pc`
-   — has live tokens in .env files; NEVER read/copy/expose them), agent screenshots the
-   value views (crop chrome, no tokens visible), add a "see what it recovers" section to
-   /how-it-works (or homepage) with real product UI.
-5. **More official Shopify assets — source high-quality ones ONLINE (owner directive).**
-   The Built-for-Shopify media kit 2025 is ALREADY in `design-assets/` and its badge pill is
-   integrated (`BfsBadge.astro` variant="official", assets served from `/badges/`; kit also
-   has a dark pill + social share graphics + usage-guidelines PDF — READ the PDF before new
-   placements). Still needed from the web: an official **Shopify Plus** logo/wordmark for the
-   trusted-by line (check shopify.com/brand-assets / partners resources; respect their brand
-   guidelines; prefer official SVG; never redraw trademarks by hand).
-6. **Implement the research report's ranked list** (docs/research-landing-pages.md §1):
-   pricing "no usage fees / no per-order charges" line (confirm truth: paid plans are flat;
-   Free Starter caps at 10 syncs), FAQ adds "Works with Shop" + "carts saved until checkout —
-   no time limit" (both stated on the owner's live listing; confirm exact behavior with owner
-   first), re-enable calculator + vs-email pages (V1_DEFERRED deletions + restore
-   related-links + re-add homepage teasers if wanted).
+1. ~~Trust-signal hierarchy redesign~~ ✅ **SHIPPED cycle 6 (2026-07-07).** Each signal
+   once above the fold, placed by nature: announce = positioning claim only ("The original
+   … since 2016", text, non-sticky sibling of the sticky nav); hero row = $30M+/30d (bold)
+   + 4.9★ link; TrustStrip (new component, absorbed the trust bar) = trusted-by lead + the
+   page's SINGLE official BFS badge + customer logos. ⚠️ Kit rule enforced sitewide: ONE
+   badge instance per page, ≥30px, never altered — the redrawn announce glyph is gone; do
+   not reintroduce it.
+2. ~~Customer-logo trust strip~~ ✅ **SHIPPED cycle 6** ("Extended 11" owner pick).
+   Toggle: `showCustomerLogos` + `proof.namedMerchantLogos` in src/config/site.ts (flag
+   off → slim lead+badge fallback). Assets: design-assets/customer-logos/MANIFEST.md
+   (sources/grades) → web copies in public/customer-logos/ (StewMac + Tannico ink-recolored;
+   treatment = multiply + grayscale). Excluded as trademark-sensitive: Levi's Korea,
+   LINE FRIENDS, Phoebe Philo. techbino/vdbparts reserved for case studies, not logos.
+3. ~~Hero diagram round 2~~ ✅ **SHIPPED cycle 6 — owner picked 'live'** (plate chrome +
+   sync choreography). All four variants remain switchable via `heroVariant` in
+   src/config/site.ts ('fork'|'plate'|'live'|'real'). Motion rules that survived review:
+   resting markup = complete story; JS only winds back temporarily; no phone price column.
+4. **Dashboard "value-add" section — NOW UNBLOCKED.** Owner supplied a debug
+   dashboard-preview URL pattern (2026-07-07):
+   `persistent-cart.customerfirstfocus.com/debug/dashboard-preview/<store>.myshopify.com?token=…`
+   ⚠️ The token is a secret — never commit it, never show it in screenshots (crop the URL
+   bar). ⚠️ The example store (magnoliamom) is a REAL merchant — real revenue figures need
+   anonymization/owner sign-off, or try `cff-demo-store.myshopify.com` in the path first.
+   Owner notes the views may be dimmed / say "beta" — may need cleanup before screenshots.
+5. ~~Official Shopify assets~~ ✅ RESOLVED with a hard finding: **no official public
+   Shopify Plus lockup exists** (brand-assets ships only the main Shopify logo; the Plus
+   partner badge is gated to Plus-partner tiers). "Shopify Plus" stays as text — this is
+   guideline-correct, stop hunting. 6 official Shopify SVGs + guideline notes in
+   design-assets/shopify-plus/.
+6. **Research ranked list — remaining:** ✅ pricing fees line + FAQ "Works with Shop" +
+   "no time limit" shipped cycle 6 (owner confirmed all three; Shop nuance: Shop login
+   ties the cart to the account, but Shop does NOT move carts between devices itself).
+   STILL OPEN: re-enable calculator + vs-email pages (V1_DEFERRED deletions + restore
+   related-links + homepage teasers if wanted).
 7. **The thorough live audit the owner asked for** — QA, Marketing/UX, SEO, across the LIVE
    site (all pages × key locales, mobile + desktop, Lighthouse/CWV, structured-data
    validation, GSC coverage once crawling starts). Consider parallel sub-agents per lens;
    verify findings before reporting (adversarial check), then fix in priority order.
+   NOTE: OG image still shows the old 3-item fork + old headline framing — refresh it
+   during the audit round if the owner wants parity with the live hero.
 
-## Owner inputs to request at session start (batch them once)
+## Owner inputs (all 2026-07-07 batch answers — resolved)
 
-1. ~~GMD testimonial~~ ✅ confirmed 2026-07-07. ~~Badge kit~~ ✅ in design-assets/.
-   ~~Store-logo permission~~ ✅ granted 2026-07-07 (biggest stores; toggleable section).
-2. Confirm facts: "Works with Shop" meaning; "no time limit" cart retention; "no usage fees
-   on paid plans" phrasing.
-3. $60M/90d vs a 30-day figure for the impact stat (owner hinted "last 30 days" once).
-4. (When ready) run the cff_pc dashboard preview for the screenshot session.
-5. Which stores count as "biggest" for the logo strip if the data is ambiguous — show the
-   owner the candidate list before shipping logos.
+1. Logo strip = Extended 11 ✅ · 2. Claims: all three approved, Shop nuance captured ✅ ·
+3. Impact stat = **"$30M+ — last 30 days"** ✅ ⚠️ standing flag: internal 2026-06-03
+   measurement was $26.0M/30d — surface to the owner if they ever ask to re-verify; the
+   number is theirs. · 4. Dashboard = debug preview URL (see backlog #4). Nothing is
+   currently blocked on the owner except dashboard-content sign-off when that ships.
 
 ## State snapshot
 
 - Repo `main` = production. Branch `iterate-v1-simplification` preserved historical cycles.
 - 151 pages build (9 v1 page types + /privacy-policy, ×15 locales, +404). All checks green.
-- Docs current: iteration-log (cycles 1–5 + tweaks), v1-recommendation, owner-inputs,
+- Homepage above-the-fold (cycle 6): announce → sticky nav → hero (H1/sub/CTAs/numbers row)
+  → live plate diagram → TrustStrip (lead + official badge + 11 logos) → problem section.
+  FAQ = 15 questions; pricing carries the flat-fees line.
+- Docs current: iteration-log (cycles 1–6), v1-recommendation, owner-inputs,
   research-landing-pages, legal-review (pre-publish list mostly cleared; §5.7 partner risk
   parked with deferred pages).
 - Design system: paper #F7F4EE / ink #1C1815 / marigold #D8541E accent, navy #14233A bands,

@@ -7,6 +7,7 @@
   "pricing.planHint": "Seu plano é selecionado automaticamente com base na sua assinatura Shopify. Você não escolhe um nível de recursos — você recebe tudo.",
   "pricing.cta.install": "Adicione o Persistent Cart — comece grátis",
   "pricing.trial": "Plano Starter gratuito · Teste gratuito de 30 dias em todos os planos pagos · cancele quando quiser",
+  "pricing.feesNote": "Todos os planos têm preço mensal fixo — sem taxas por uso, sem cobrança por pedido.",
   "pricing.tier.free.note": "Teste todos os recursos, até 10 sincronizações de carrinho",
   "pricing.tier.basic.note": "Para lojas no plano Shopify Basic",
   "pricing.tier.grow.note": "Para lojas no plano Shopify Grow (antigo \"Shopify\")",

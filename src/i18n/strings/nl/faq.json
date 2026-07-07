@@ -29,5 +29,9 @@
   "faq.q12.q": "Welke talen en valuta ondersteunt het?",
   "faq.q12.a": "Het werkt met Shopify-winkels met meerdere valuta, en het synchroniseert de winkelwagen ongeacht de taal. De app wordt gebruikt door winkels over de hele wereld — cross-device winkelwagenverlies is niet specifiek voor één markt.",
   "faq.q13.q": "How do I know it's worth it for my store?",
-  "faq.q13.a": "Test het op je eigen winkel voordat je betaalt: het Free Starter-plan dekt tot 10 echte winkelwagen-synchronisaties, en elk betaald plan begint met 30 dagen proberen. Basic kost $ 4,99 per maand — één geredde middelgrote bestelling tussen apparaten dekt dat ruimschoots. Je ziet het op je eigen winkel werken voordat er een dollar wordt afgeschreven, dus je hoeft niet te gokken."
+  "faq.q13.a": "Test het op je eigen winkel voordat je betaalt: het Free Starter-plan dekt tot 10 echte winkelwagen-synchronisaties, en elk betaald plan begint met 30 dagen proberen. Basic kost $ 4,99 per maand — één geredde middelgrote bestelling tussen apparaten dekt dat ruimschoots. Je ziet het op je eigen winkel werken voordat er een dollar wordt afgeschreven, dus je hoeft niet te gokken.",
+  "faq.q14.q": "Werkt het met Shop en de nieuwe klantaccounts van Shopify?",
+  "faq.q14.a": "Ja. Persistent Cart werkt met de nieuwe klantaccounts van Shopify, en wanneer een klant inlogt via de Shop-app wordt de winkelwagen net zo goed aan het account gekoppeld. Let op: inloggen met Shop verplaatst de winkelwagen op zichzelf niet tussen apparaten — Persistent Cart is de laag die de winkelwagen overal synchroon houdt waar de klant inlogt.",
+  "faq.q15.q": "Hoe lang blijven opgeslagen winkelwagens bewaard?",
+  "faq.q15.a": "Tot aan het afrekenen — er is geen tijdslimiet. De winkelwagen wordt bij het klantaccount opgeslagen en blijft daar totdat de klant koopt of iets wijzigt, of die nu morgen of maanden later terugkomt. Ter vergelijking: bij standaard Shopify leeft de winkelwagen in een browsercookie van ongeveer twee weken."
 }

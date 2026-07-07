@@ -29,5 +29,9 @@
   "faq.q12.q": "¿Qué idiomas y monedas admite?",
   "faq.q12.a": "Funciona con tiendas Shopify multidivisa y sincroniza el carrito independientemente del idioma. La app la usan tiendas de todo el mundo: la pérdida de carritos entre dispositivos no es exclusiva de ningún mercado concreto.",
   "faq.q13.q": "¿Cómo sé si vale la pena para mi tienda?",
-  "faq.q13.a": "Pruébalo en tu propia tienda antes de pagar: el plan Free Starter cubre hasta 10 sincronizaciones de carrito reales, y cualquier plan de pago empieza con 30 días de prueba. El plan Basic cuesta 4,99 $ al mes — recuperar un solo pedido mediano entre dispositivos lo cubre de sobra. Lo ves funcionar en tu propia tienda antes de que se cobre un dólar, así que no tienes que adivinar."
+  "faq.q13.a": "Pruébalo en tu propia tienda antes de pagar: el plan Free Starter cubre hasta 10 sincronizaciones de carrito reales, y cualquier plan de pago empieza con 30 días de prueba. El plan Basic cuesta 4,99 $ al mes — recuperar un solo pedido mediano entre dispositivos lo cubre de sobra. Lo ves funcionar en tu propia tienda antes de que se cobre un dólar, así que no tienes que adivinar.",
+  "faq.q14.q": "¿Funciona con Shop y las nuevas cuentas de clientes de Shopify?",
+  "faq.q14.a": "Sí. Persistent Cart funciona con las nuevas cuentas de clientes de Shopify, y cuando un cliente inicia sesión a través de la app Shop, su carrito queda vinculado a su cuenta igualmente. Ten en cuenta que iniciar sesión con Shop por sí solo no transfiere el carrito entre dispositivos: Persistent Cart es la capa que lo mantiene sincronizado dondequiera que el cliente inicie sesión.",
+  "faq.q15.q": "¿Cuánto tiempo se conservan los carritos guardados?",
+  "faq.q15.a": "Hasta el checkout: no hay límite de tiempo. El carrito se guarda en la cuenta del cliente y permanece ahí hasta que compra o lo modifica, vuelva mañana o meses después. En comparación, en Shopify por defecto el carrito vive en una cookie del navegador durante unas dos semanas."
 }

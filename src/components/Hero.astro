@@ -3,15 +3,24 @@
  * Hero: leak-first copy on the left; on the right THE FORK — one signed-in
  * shopper switches phone → laptop, and the same cart meets two futures:
  * "Default Shopify" (dashed path that never arrives, empty cart) vs
- * "With Persistent Cart" (marigold path, same cart, synced). Device frames are
- * hand-rolled line drawings (patent-diagram character, mono figure labels).
+ * "With Persistent Cart" (marigold path, same cart, synced).
+ *
+ * Design round 2 (2026-07-07): the diagram ships in selectable creative
+ * variants — set `heroVariant` in src/config/site.ts:
+ *  - 'fork'  cycle-2 baseline: bare fork, dot rides the kept path
+ *  - 'plate' editorial patent-plate: FIG. 1 header, dot-grid paper, plate
+ *            border, "signed-in shopper" annotation, bolder paths
+ *  - 'live'  plate chrome + live sync choreography: a 4th item pops into the
+ *            phone cart, rides the path, lands in the laptop cart while the
+ *            subtotal counts up (loop; resting state is the complete story)
+ *  - 'real'  product-real screens: thumbnails, qty steppers, checkout button
  * No JS required for meaning: the resting state IS the end state; motion is
  * additive and disabled under prefers-reduced-motion.
  */
-import { DEMO_ITEMS, cartSubtotal, formatMoney } from '../data/demoCart';
+import { DEMO_ITEMS, DEMO_LIVE_ITEM, cartSubtotal, formatMoney } from '../data/demoCart';
 import { localizedPath } from '../i18n/routing';
 import { t } from '../i18n';
-import { proof, appStoreLink } from '../config/site';
+import { proof, appStoreLink, heroVariant } from '../config/site';
 
 interface Props {
   locale: string;
@@ -19,8 +28,14 @@ interface Props {
 const { locale } = Astro.props;
 
 const howItWorksHref = localizedPath(locale, 'how-it-works');
-const items = DEMO_ITEMS;
+const variant = heroVariant;
+const isPlate = variant === 'plate' || variant === 'live';
+const isLive = variant === 'live';
+const isReal = variant === 'real';
+
+const items = isLive ? [...DEMO_ITEMS, DEMO_LIVE_ITEM] : DEMO_ITEMS;
 const subtotal = formatMoney(cartSubtotal(items));
+const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start value
 ---
 
 <section class="hero">
@@ -59,7 +74,15 @@ const subtotal = formatMoney(cartSubtotal(items));
     </div>
 
     <div class="hero-visual">
-      <figure class="fork" data-fork>
+      <figure class={`fork fork--${variant}`} data-fork data-variant={variant}>
+        {isPlate && (
+          <div class="plate-head" aria-hidden="true">
+            <span class="fig-no">FIG. 1</span>
+            <span class="fig-rule"></span>
+            <span class="fig-label">{t(locale, 'hero.fig.label')}</span>
+          </div>
+        )}
+
         {/* 1 — the phone where the cart is built */}
         <div class="fork-phone">
           <div class="device device-phone">
@@ -70,32 +93,37 @@ const subtotal = formatMoney(cartSubtotal(items));
               </div>
               <ul class="mc-items">
                 {items.map((item) => (
-                  <li class="mc-item">
-                    <span class="swatch" style={`background:${item.swatch}`}></span>
+                  <li class="mc-item" data-live-item={isLive && item.id === DEMO_LIVE_ITEM.id ? 'phone' : undefined}>
+                    {/* No price column on the phone — names truncate (cycle-2 lesson). */}
+                    <span class={`swatch ${isReal ? 'swatch-thumb' : ''}`} style={`background:${item.swatch}`}></span>
                     <span class="mc-name">{t(locale, item.nameKey)}</span>
                   </li>
                 ))}
               </ul>
               <div class="mc-foot">
                 <span>{t(locale, 'demo.cart.subtotal')}</span>
-                <span class="tabular mc-subtotal">{subtotal}</span>
+                <span class="tabular mc-subtotal" data-live-subtotal={isLive ? 'phone' : undefined}>{subtotal}</span>
               </div>
             </div>
             <span class="homebar" aria-hidden="true"></span>
           </div>
           <span class="device-tag">{t(locale, 'demo.device.phone')}</span>
+          {isPlate && (
+            <span class="annot annot-signedin" aria-hidden="true">{t(locale, 'hero.annot.signedIn')}</span>
+          )}
         </div>
 
         {/* 2 — the switch: two paths out of one phone */}
-        <svg class="fork-paths" viewBox="0 0 560 92" aria-hidden="true" fill="none">
-          <path class="path-lost" d="M280 4 C 280 48, 140 34, 140 58" />
+        <svg class="fork-paths" viewBox="0 0 560 104" aria-hidden="true" fill="none">
+          {isPlate && <circle class="origin-ring" cx="280" cy="7" r="4" />}
+          <path class="path-lost" d="M280 6 C 280 56, 140 40, 140 68" />
           <g class="lost-x">
-            <line x1="133" y1="64" x2="147" y2="78" />
-            <line x1="147" y1="64" x2="133" y2="78" />
+            <line x1="133" y1="76" x2="147" y2="90" />
+            <line x1="147" y1="76" x2="133" y2="90" />
           </g>
-          <path class="path-kept" data-kept d="M280 4 C 280 48, 420 30, 420 84" />
-          <path class="kept-arrow" d="M413 76 L420 86 L427 76" />
-          <circle class="kept-dot" data-dot r="5" cx="280" cy="4" />
+          <path class="path-kept" data-kept d="M280 6 C 280 56, 420 36, 420 96" />
+          <path class="kept-arrow" d="M413 88 L420 98 L427 88" />
+          <circle class="kept-dot" data-dot r="5" cx="280" cy="6" />
         </svg>
 
         {/* 3 — the two futures, side by side */}
@@ -129,7 +157,7 @@ const subtotal = formatMoney(cartSubtotal(items));
               <div class="screen">
                 <div class="mc-head">
                   <span class="mc-title">{t(locale, 'demo.cart.title')}</span>
-                  <span class="sync-badge">
+                  <span class="sync-badge" data-sync-badge>
                     <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                       <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
@@ -138,17 +166,21 @@ const subtotal = formatMoney(cartSubtotal(items));
                 </div>
                 <ul class="mc-items">
                   {items.map((item) => (
-                    <li class="mc-item">
-                      <span class="swatch" style={`background:${item.swatch}`}></span>
-                      <span class="mc-name">{t(locale, item.nameKey)}</span>
+                    <li class="mc-item" data-live-item={isLive && item.id === DEMO_LIVE_ITEM.id ? 'laptop' : undefined}>
+                      <span class={`swatch ${isReal ? 'swatch-thumb' : ''}`} style={`background:${item.swatch}`}></span>
+                      <span class="mc-name">
+                        {t(locale, item.nameKey)}
+                        {isReal && <span class="mc-stepper" aria-hidden="true">−&ensp;1&ensp;+</span>}
+                      </span>
                       <span class="mc-price tabular">{formatMoney(item.price)}</span>
                     </li>
                   ))}
                 </ul>
                 <div class="mc-foot">
                   <span>{t(locale, 'demo.cart.subtotal')}</span>
-                  <span class="tabular mc-subtotal">{subtotal}</span>
+                  <span class="tabular mc-subtotal" data-live-subtotal={isLive ? 'laptop' : undefined}>{subtotal}</span>
                 </div>
+                {isReal && <span class="mc-checkout" aria-hidden="true">{t(locale, 'demo.cart.checkout')}</span>}
               </div>
               <span class="laptop-base" aria-hidden="true"></span>
             </div>
@@ -162,7 +194,7 @@ const subtotal = formatMoney(cartSubtotal(items));
   </div>
 </section>
 
-<style>
+<style define:vars={{ preSubtotal: `"${preSubtotal}"` }}>
   .hero {
     padding-block: clamp(2rem, 4.5vw, 3.75rem) clamp(2.5rem, 5vw, 4.5rem);
     position: relative;
@@ -229,14 +261,111 @@ const subtotal = formatMoney(cartSubtotal(items));
     font-weight: 700;
     color: var(--color-ink);
   }
-  .trust-bfs {
-    font-weight: 600;
-  }
 
   /* ---------- THE FORK ---------- */
   .fork {
     max-width: 32rem;
     margin-inline: auto;
+  }
+
+  /* --- plate chrome ('plate' + 'live'): the diagram becomes an editorial
+         patent plate — bordered, dot-grid paper, mono figure header. --- */
+  .fork--plate,
+  .fork--live {
+    max-width: 34rem;
+    border: 1px solid var(--color-hairline-strong);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-card-soft);
+    background-image: radial-gradient(circle, rgb(28 24 21 / 0.055) 1px, transparent 1px);
+    background-size: 18px 18px;
+    padding: 1.1rem 1.25rem 1.2rem;
+    box-shadow: var(--shadow-card);
+  }
+  .plate-head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.1rem;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .fig-no {
+    color: var(--color-accent-ink);
+    font-weight: 500;
+    flex: none;
+  }
+  .fig-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--color-hairline-strong);
+  }
+  .fig-label {
+    color: var(--color-ink-faint);
+    flex: none;
+  }
+  /* annotation with a leader line — encodes the honest scope: signed-in */
+  .fork-phone {
+    position: relative;
+  }
+  .annot {
+    display: none;
+    position: absolute;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+    max-width: 6.5rem;
+    line-height: 1.5;
+  }
+  .annot-signedin {
+    top: 16%;
+    left: calc(50% + 5.6rem + 2.6rem);
+    right: auto;
+  }
+  .annot-signedin::before {
+    content: '';
+    position: absolute;
+    top: 0.45rem;
+    left: -2.35rem;
+    width: 2rem;
+    height: 1px;
+    background: var(--color-hairline-strong);
+  }
+  .annot-signedin::after {
+    content: '';
+    position: absolute;
+    top: calc(0.45rem - 1.5px);
+    left: -2.35rem;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--color-ink-faint);
+  }
+  @media (min-width: 1120px) {
+    .fork--plate .annot,
+    .fork--live .annot {
+      display: block;
+    }
+  }
+  .fork--plate .demo-caption,
+  .fork--live .demo-caption {
+    border-top: 1px solid var(--color-hairline);
+    padding-top: 0.9rem;
+    margin-top: 1.2rem;
+  }
+  .origin-ring {
+    fill: var(--color-card-soft);
+    stroke: color-mix(in srgb, var(--color-ink) 55%, transparent);
+    stroke-width: 1.6;
+  }
+  .fork--plate .path-kept,
+  .fork--plate .kept-arrow,
+  .fork--live .path-kept,
+  .fork--live .kept-arrow {
+    stroke-width: 3;
   }
 
   /* device line-drawings — unmistakably a phone and laptops */
@@ -288,6 +417,10 @@ const subtotal = formatMoney(cartSubtotal(items));
     border-radius: 3px;
     background: color-mix(in srgb, var(--color-ink) 28%, transparent);
   }
+  /* live: the phone needs a touch more vertical room for the 4th line */
+  .fork--live .device-phone {
+    aspect-ratio: 10 / 16.4;
+  }
   .device-laptop {
     border-radius: 14px 14px 2px 2px;
     padding: 1.15rem 0.75rem 0.8rem;
@@ -306,6 +439,12 @@ const subtotal = formatMoney(cartSubtotal(items));
   }
   .device-laptop .screen {
     min-height: 9.4rem;
+  }
+  .fork--live .device-laptop .screen {
+    min-height: 10.1rem;
+  }
+  .fork--real .device-laptop .screen {
+    min-height: 10.6rem;
   }
   /* the deck: trapezoid base with a thumb scoop */
   .laptop-base {
@@ -382,12 +521,45 @@ const subtotal = formatMoney(cartSubtotal(items));
     border-radius: 5px;
     flex: none;
   }
+  /* 'real': swatches become product thumbnails — a soft object silhouette */
+  .swatch-thumb {
+    width: 23px;
+    height: 23px;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+  .swatch-thumb::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    bottom: -9px;
+    width: 22px;
+    height: 18px;
+    border-radius: 60% 40% 55% 45%;
+    background: rgb(255 255 255 / 0.42);
+  }
   .mc-name {
     font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 0;
+  }
+  .fork--real .mc-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+  }
+  .mc-stepper {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    color: var(--color-ink-faint);
+    border: 1px solid var(--color-hairline);
+    border-radius: 999px;
+    padding: 0.05rem 0.4rem;
+    align-self: flex-start;
+    white-space: nowrap;
   }
   .mc-price {
     margin-left: auto;
@@ -410,6 +582,18 @@ const subtotal = formatMoney(cartSubtotal(items));
     font-weight: 700;
     font-size: 0.86rem;
     color: var(--color-ink);
+  }
+  .mc-checkout {
+    display: block;
+    margin-top: 0.55rem;
+    padding: 0.42rem 0.6rem;
+    border-radius: var(--radius-sm);
+    background: var(--color-ink);
+    color: var(--color-paper);
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-align: center;
+    letter-spacing: 0.01em;
   }
   .sync-badge {
     display: inline-flex;
@@ -527,12 +711,36 @@ const subtotal = formatMoney(cartSubtotal(items));
     margin-inline: auto;
   }
 
-  /* ---------- motion (one gesture: the cart-dot rides the marigold path) ----------
-     The diagram is COMPLETE at rest — no entrance animation, so it is legible at
-     every instant and identical under prefers-reduced-motion / no-JS. */
+  /* ---------- motion ----------
+     The diagram is COMPLETE at rest — no entrance animation, so it is legible
+     at every instant and identical under prefers-reduced-motion / no-JS.
+     'fork'/'plate'/'real': one gesture — the cart-dot rides the marigold path.
+     'live': the sync story loops — a 4th line item pops into the phone cart,
+     the dot carries it across, the laptop cart receives it and the subtotal
+     counts up. The JS only ever winds the carts BACK temporarily; markup
+     always encodes the finished state. */
   @media (prefers-reduced-motion: no-preference) {
     .fork[data-anim] .sync-badge {
       animation: fork-pop 0.4s var(--ease-out-soft) 1.5s both;
+    }
+    .fork--live .mc-item[data-live-item] {
+      transition: opacity 0.32s var(--ease-out-soft), transform 0.32s var(--ease-out-soft),
+        max-height 0.32s var(--ease-out-soft), margin-top 0.32s var(--ease-out-soft);
+      max-height: 25px;
+      overflow: hidden;
+    }
+    .fork--live[data-state='pre'] .mc-item[data-live-item],
+    .fork--live[data-state='sending'] .mc-item[data-live-item='laptop'] {
+      opacity: 0;
+      transform: translateY(5px);
+      max-height: 0;
+      margin-top: -0.42rem; /* collapse the grid gap so the list closes up */
+    }
+    .fork--live [data-sync-badge] {
+      transition: transform 0.3s var(--ease-out-soft);
+    }
+    .fork--live[data-pulse] [data-sync-badge] {
+      animation: fork-pop 0.45s var(--ease-out-soft) both;
     }
   }
   @keyframes fork-pop {
@@ -561,6 +769,10 @@ const subtotal = formatMoney(cartSubtotal(items));
     .device-phone {
       width: min(12rem, 78%);
     }
+    .fork--plate,
+    .fork--live {
+      padding: 0.9rem 0.9rem 1rem;
+    }
   }
 
   @media (min-width: 980px) {
@@ -571,31 +783,80 @@ const subtotal = formatMoney(cartSubtotal(items));
 </style>
 
 <script>
-  // The fork's motion: draw the marigold path and send the cart-dot down it.
-  // Purely additive — without JS (or with reduced motion) the resting markup
-  // already shows the finished story.
+  // Motion director. Reads the variant off the figure; everything here is
+  // additive — without JS (or with reduced motion) the resting markup already
+  // shows the finished story.
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fork = document.querySelector<HTMLElement>('[data-fork]');
   const kept = fork?.querySelector<SVGPathElement>('[data-kept]');
   const dot = fork?.querySelector<SVGCircleElement>('[data-dot]');
 
   if (fork && kept && dot && !prefersReduced) {
+    const isLive = fork.dataset.variant === 'live';
     const len = kept.getTotalLength();
 
-    const travel = () => {
+    const travel = (dur = 1100) =>
+      new Promise<void>((resolve) => {
+        const t0 = performance.now();
+        dot.style.opacity = '1';
+        const step = (now: number) => {
+          const p = Math.min(1, (now - t0) / dur);
+          const ease = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+          const pt = kept.getPointAtLength(ease * len);
+          dot.setAttribute('cx', String(pt.x));
+          dot.setAttribute('cy', String(pt.y));
+          if (p < 1) requestAnimationFrame(step);
+          else {
+            setTimeout(() => {
+              dot.style.opacity = '0';
+            }, 250);
+            resolve();
+          }
+        };
+        requestAnimationFrame(step);
+      });
+
+    const countUp = (el: HTMLElement, from: number, to: number, dur = 480) => {
       const t0 = performance.now();
-      const dur = 1100;
-      dot.style.opacity = '1';
       const step = (now: number) => {
         const p = Math.min(1, (now - t0) / dur);
-        const ease = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
-        const pt = kept.getPointAtLength(ease * len);
-        dot.setAttribute('cx', String(pt.x));
-        dot.setAttribute('cy', String(pt.y));
+        el.textContent = '$' + (from + (to - from) * p).toFixed(2);
         if (p < 1) requestAnimationFrame(step);
-        else setTimeout(() => (dot.style.opacity = '0'), 300);
       };
       requestAnimationFrame(step);
+    };
+
+    const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+    // 'live': one full sync beat — wind back to 3 items, add on the phone,
+    // carry it across, land it on the laptop. Ends in the resting state.
+    const phoneSub = fork.querySelector<HTMLElement>('[data-live-subtotal="phone"]');
+    const laptopSub = fork.querySelector<HTMLElement>('[data-live-subtotal="laptop"]');
+    const restSub = phoneSub ? parseFloat((phoneSub.textContent || '').replace(/[^0-9.]/g, '')) : 0;
+    const preSub = restSub - 18; // DEMO_LIVE_ITEM.price
+
+    let playing = false;
+    const liveBeat = async () => {
+      if (playing || !phoneSub || !laptopSub) return;
+      playing = true;
+      fork.removeAttribute('data-pulse');
+      fork.dataset.state = 'pre'; // both carts wind back to 3 items
+      phoneSub.textContent = '$' + preSub.toFixed(2);
+      laptopSub.textContent = '$' + preSub.toFixed(2);
+      await wait(900);
+      fork.dataset.state = 'sending'; // the 4th item lands in the phone
+      countUp(phoneSub, preSub, restSub, 380);
+      await wait(520);
+      await travel(1100);
+      delete fork.dataset.state; // …and arrives on the laptop
+      countUp(laptopSub, preSub, restSub, 460);
+      fork.setAttribute('data-pulse', '');
+      playing = false;
+    };
+
+    const beat = () => {
+      if (isLive) liveBeat();
+      else travel();
     };
 
     let replay: ReturnType<typeof setInterval> | undefined;
@@ -605,11 +866,11 @@ const subtotal = formatMoney(cartSubtotal(items));
           if (e.isIntersecting && !replay) {
             if (!fork.dataset.anim) {
               fork.dataset.anim = '1';
-              setTimeout(travel, 500);
+              setTimeout(beat, 600);
             }
             replay = setInterval(() => {
-              if (!document.hidden) travel();
-            }, 6500);
+              if (!document.hidden) beat();
+            }, isLive ? 8000 : 6500);
           } else if (!e.isIntersecting && replay) {
             clearInterval(replay);
             replay = undefined;

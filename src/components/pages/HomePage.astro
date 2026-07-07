@@ -10,7 +10,7 @@ import Testimonial from '../Testimonial.astro';
 import FAQ from '../FAQ.astro';
 import CTABand from '../CTABand.astro';
 import Icon from '../Icon.astro';
-import BfsBadge from '../BfsBadge.astro';
+import TrustStrip from '../TrustStrip.astro';
 
 import { t } from '../../i18n';
 import { titleKey, descKey } from '../../config/routes';
@@ -98,16 +98,9 @@ const jsonLd = [
 <Base locale={locale} slug={slug} title={title} description={description} ogType="website" jsonLd={jsonLd}>
   <Hero locale={locale} />
 
-  {/* 2 — Trust bar (signals not already shown in the hero row above) */}
-  <section class="trustbar">
-    <div class="container-page trustbar-inner">
-      <p class="trustbar-lead">{tt('trustbar.lead')}</p>
-      <ul class="trustbar-stats">
-        <li><BfsBadge label={tt('home.trust.stat.bfs')} variant="official" size={34} /></li>
-        <li><Icon name="clock" size={16} /> {tt('home.trust.stat.since')}</li>
-      </ul>
-    </div>
-  </section>
+  {/* 2 — Trust strip: trusted-by lead + the page's single official BFS badge
+      + customer logos (toggle: showCustomerLogos in src/config/site.ts). */}
+  <TrustStrip locale={locale} />
 
   {/* 3 — Problem → aha */}
   <Section eyebrow={tt('home.problem.eyebrow')} heading={tt('home.problem.heading')} intro={tt('home.problem.intro')} bg="soft">
@@ -207,43 +200,6 @@ const jsonLd = [
 </Base>
 
 <style>
-  .trustbar {
-    border-bottom: 1px solid var(--color-hairline);
-    padding-block: 1.5rem;
-    background: var(--color-paper);
-  }
-  .trustbar-inner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem 1.5rem;
-  }
-  .trustbar-lead {
-    font-weight: 600;
-    max-width: 30rem;
-  }
-  .trustbar-stats {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem 1.4rem;
-    font-size: 0.85rem;
-    color: var(--color-ink-soft);
-  }
-  .trustbar-stats li {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-  .trustbar-stats .stat-impact {
-    font-weight: 700;
-    color: var(--color-ink);
-  }
-  .trustbar-stats :global(svg) {
-    color: var(--color-accent);
-  }
-
   .prob-grid {
     display: grid;
     gap: 1.1rem;

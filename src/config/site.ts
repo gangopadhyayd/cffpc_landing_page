@@ -65,11 +65,48 @@ export const proof = {
   // Owner placeholders — render qualitative fallback when null.
   storesServed: null as number | null, // owner-approved wording: "thousands of Shopify stores" (qualitative)
   plusStoresServed: null as number | null, // owner-approved wording: "hundreds of Shopify Plus stores" (qualitative)
-  // OWNER-APPROVED 2026-07-06: "$60M USD in order value from synced carts in the last 90 days."
-  syncedCartRevenue: '$60M+' as string | null,
+  // OWNER-APPROVED 2026-07-07: "$30M+ in order value from synced carts in the last
+  // 30 days" (supersedes the $60M/90d figure). Note for the owner: the internal
+  // 2026-06-03 measurement was $26.0M/30d — owner owns the delta/rounding.
+  syncedCartRevenue: '$30M+' as string | null,
   cartsTransferred: null as string | null, // REQUEST — real: ~8–12k syncs/day (internal)
-  namedMerchantLogos: [] as string[], // REQUEST — permission needed
+  // OWNER-APPROVED 2026-07-07: named-store logo strip ("Extended 11" pick —
+  // active Plus subscribers + public reviewers; techbino/vdbparts stay case-study
+  // material). Assets fetched from each brand's own site (design-assets/customer-logos/
+  // MANIFEST.md has sources); StewMac + Tannico web copies recolored to ink for the
+  // light strip. Toggle with showCustomerLogos below.
+  namedMerchantLogos: [
+    { name: 'StewMac', domain: 'stewmac.com', src: '/customer-logos/stewmac.svg', w: 213, h: 30 },
+    { name: 'Public Goods', domain: 'publicgoods.com', src: '/customer-logos/public-goods.svg', w: 55, h: 24 },
+    { name: 'Magnolia', domain: 'magnolia.com', src: '/customer-logos/magnolia.png', w: 1269, h: 235 },
+    { name: 'Ksubi', domain: 'ksubi.com', src: '/customer-logos/ksubi.svg', w: 79, h: 35 },
+    { name: 'FASHIONPHILE', domain: 'fashionphile.com', src: '/customer-logos/fashionphile.png', w: 535, h: 73 },
+    { name: 'Todd Snyder', domain: 'toddsnyder.com', src: '/customer-logos/todd-snyder.svg', w: 1320, h: 402 },
+    { name: 'Swanson Vitamins', domain: 'swansonvitamins.com', src: '/customer-logos/swanson-vitamins.svg', w: 461, h: 100 },
+    { name: 'Tannico', domain: 'tannico.it', src: '/customer-logos/tannico.svg', w: 187, h: 26 },
+    { name: 'momox fashion', domain: 'momoxfashion.com', src: '/customer-logos/momox-fashion.svg', w: 117, h: 40 },
+    { name: 'Shoebacca', domain: 'shoebacca.com', src: '/customer-logos/shoebacca.png', w: 400, h: 68 },
+    { name: 'Green Mountain Diapers', domain: 'greenmountaindiapers.com', src: '/customer-logos/green-mountain-diapers.png', w: 855, h: 209 },
+  ] as MerchantLogo[],
 } as const;
+
+export interface MerchantLogo {
+  name: string; // brand name (used for alt text)
+  domain: string; // the store's public site (context/verification, not linked by default)
+  src: string; // asset under public/, e.g. /customer-logos/stewmac.svg
+  href?: string; // optional outbound link; omitted = non-interactive mark
+  w?: number; // intrinsic width — set for CLS-safe rendering
+  h?: number; // intrinsic height
+}
+
+/** Master switch for the customer-logo strip (owner-requested toggle).
+ *  The strip renders only when this is true AND namedMerchantLogos is non-empty. */
+export const showCustomerLogos = true;
+
+/** Hero diagram creative variant (design round 2, 2026-07-07):
+ *  'fork' = cycle-2 baseline · 'plate' = editorial patent-plate chrome ·
+ *  'live' = plate + live item-sync choreography · 'real' = product-real cart UI. */
+export const heroVariant: 'fork' | 'plate' | 'live' | 'real' = 'live';
 
 /** Safe qualitative fallbacks used wherever a proof number is null. */
 export const proofFallback = {

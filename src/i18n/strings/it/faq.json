@@ -29,5 +29,9 @@
   "faq.q12.q": "Quali lingue e valute supporta?",
   "faq.q12.a": "Funziona con i negozi Shopify multivaluta, e sincronizza il carrello indipendentemente dalla lingua. L'app è usata da negozi in tutto il mondo — la perdita di carrelli tra dispositivi non è specifica di un singolo mercato.",
   "faq.q13.q": "How do I know it's worth it for my store?",
-  "faq.q13.a": "Provalo sul tuo negozio prima di pagare: il piano Free Starter copre fino a 10 sincronizzazioni reali del carrello, e ogni piano a pagamento parte con 30 giorni di prova. Il piano Basic costa 4,99 $ al mese — recuperare un solo ordine medio tra dispositivi lo copre abbondantemente. Lo vedi funzionare sul tuo negozio prima che venga addebitato un dollaro, quindi non devi indovinare."
+  "faq.q13.a": "Provalo sul tuo negozio prima di pagare: il piano Free Starter copre fino a 10 sincronizzazioni reali del carrello, e ogni piano a pagamento parte con 30 giorni di prova. Il piano Basic costa 4,99 $ al mese — recuperare un solo ordine medio tra dispositivi lo copre abbondantemente. Lo vedi funzionare sul tuo negozio prima che venga addebitato un dollaro, quindi non devi indovinare.",
+  "faq.q14.q": "Funziona con Shop e i nuovi account cliente di Shopify?",
+  "faq.q14.a": "Sì. Persistent Cart funziona con i nuovi account cliente di Shopify e, quando un cliente accede tramite l'app Shop, il carrello viene collegato al suo account allo stesso modo. Da sapere: l'accesso con Shop da solo non trasferisce il carrello tra i dispositivi — è Persistent Cart lo strato che lo mantiene sincronizzato ovunque il cliente acceda.",
+  "faq.q15.q": "Per quanto tempo restano salvati i carrelli?",
+  "faq.q15.a": "Fino al checkout — non c'è alcun limite di tempo. Il carrello è salvato sull'account del cliente e vi rimane finché non acquista o lo modifica, che torni domani o dopo mesi. Per confronto, su Shopify standard il carrello vive in un cookie del browser per circa due settimane."
 }

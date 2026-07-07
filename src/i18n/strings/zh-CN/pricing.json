@@ -7,6 +7,7 @@
   "pricing.planHint": "系统会根据您的 Shopify 订阅自动选定您的套餐。您不必挑选功能层级 — 您拿到的是全部功能。",
   "pricing.cta.install": "添加 Persistent Cart — 免费开始",
   "pricing.trial": "免费 Starter 套餐 · 所有付费套餐享 30 天免费试用 · 随时取消",
+  "pricing.feesNote": "所有套餐均为固定月费——无按量收费，也无按订单收费。",
   "pricing.tier.free.note": "测试每一项功能，最多 10 次购物车同步",
   "pricing.tier.basic.note": "适用于使用 Shopify Basic 套餐的商店",
   "pricing.tier.grow.note": "适用于使用 Shopify Grow 套餐（原“Shopify”）的商店",

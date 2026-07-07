@@ -7,6 +7,7 @@
   "pricing.planHint": "Pakettisi valitaan automaattisesti Shopify-tilauksesi perusteella. Et valitse ominaisuustasoa — saat kaiken.",
   "pricing.cta.install": "Lisää Persistent Cart — aloita ilmaiseksi",
   "pricing.trial": "Free Starter -paketti · 30 päivän ilmainen kokeilu kaikissa maksullisissa paketeissa · peru milloin tahansa",
+  "pricing.feesNote": "Jokainen paketti on kiinteä kuukausihinta — ei käyttömaksuja, ei tilauskohtaisia maksuja.",
   "pricing.tier.free.note": "Testaa jokaista ominaisuutta, enintään 10 ostoskorisynkronointia",
   "pricing.tier.basic.note": "Kaupoille Shopify Basic -paketilla",
   "pricing.tier.grow.note": "Kaupoille Shopify Grow -paketilla (aiemmin \"Shopify\")",
