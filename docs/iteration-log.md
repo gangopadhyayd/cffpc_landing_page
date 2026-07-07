@@ -416,3 +416,11 @@ Verified at 2000/1440/true-390.
 
 Verify: i18n:check green · typecheck 0 errors · 151 pages · screenshots: hero,
 how-it-works lede/headings, navy metric band (reads "~$1M / every day / $30M+ 30d").
+
+**Same-day owner iteration — FINAL stat form (supersedes ~$1M/day above):** back to
+**$30M+ as the headline value with the 30-day window PROMINENT**: hero trust row is
+now a stat lockup (`.impact-value` at display size + "in orders from synced carts —
+**in the last 30 days**" bolded), metric band label carries the window ("In orders
+from synced carts — last 30 days"), note is just "Across stores using the app".
+`trust.impact` split into `trust.impact.qualifier` + `trust.impact.window` (old key
+deleted ×15); `syncedCartRevenueDaily` removed from config. Re-authored ×15.
