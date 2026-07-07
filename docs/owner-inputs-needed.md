@@ -21,6 +21,19 @@
 > your content sign-off on the live section — copy, framing, and figures are exactly per
 > your 2026-07-07 batch answers, so this is confirm-or-tweak, not a blocker.
 >
+> **OPEN — Shopify trust visibility (owner note 2026-07-07: "not even clear this is a
+> Shopify app").** Already shipped same day: hero rating line now reads "4.9★ rating on the
+> **Shopify** App Store" ×15 (also fixed 9 locales that doubled the "4.9★"). What exists
+> today: announce-bar positioning line, "thousands of Shopify stores … hundreds on Shopify
+> Plus" strip lead, official BFS badge at 32px (kit min 30). Your call on going louder:
+> **(a)** enlarge the BFS badge to 40–44px and/or move it left, ahead of the lead
+> (kit-safe, cheap — recommended); **(b)** add Shopify's official dark "Shopify App Store"
+> badge next to the primary hero CTA (different mark from BFS so the one-per-page kit rule
+> doesn't collide; we'd fetch it from Shopify brand assets + read its usage terms —
+> recommended); **(c)** bold "Shopify Plus" inside the strip lead (Plus has no official
+> public lockup — text is the guideline-correct ceiling, cycle-5 finding); **(d)** leave
+> as is. Say the letters and it ships.
+>
 > Everything else below belongs to deferred v2 features (partner terms, audit fulfillment,
 > calculator) or optional integrations — see `docs/v1-recommendation.md`. The v1 site launches
 > safely on placeholders without any of it.
