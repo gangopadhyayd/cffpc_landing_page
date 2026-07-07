@@ -52,17 +52,27 @@ publish any specific number without your explicit OK.*
 - Approve the proposed **new App Store icon + screenshot concepts** (see `docs/app-store-optimization.md`).
 - A default **OG share image** is generated at `public/og/default.png` — replace if you want a custom one.
 
-## 4. Privacy policy ✅ RESOLVED (2026-07-07) — with two flags
+## 4. Privacy policy ✅ RESOLVED (2026-07-07)
 The formal policy was ported **verbatim** from persistify.herokuapp.com/privacy to
 **persistentcartapp.com/privacy-policy** (formatting only; no wording changed). The `/privacy`
-explainer and footer link to it. Two things only you can decide, at your leisure:
-- ⚠️ **Wording tension:** the policy says cart data is "anonymous … without personally
-  identifiable information," while the app keys carts to the customer ID and the site explainer
-  says carts are stored "against the customer's account." Consider updating the policy wording
-  (and adding sub-processors: Netlify hosting, Google Analytics) next time you revise it —
-  see legal-review §3.2/§4.2.
-- ⚠️ **Contact address:** the policy uses support@customerfirstfocus.com; the site uses
-  support@persistentcartapp.com. Confirm both are monitored, or align them.
+explainer and footer link to it.
+- ✅ **Contact address aligned (owner decision 2026-07-07):** the site now uses
+  **support@customerfirstfocus.com everywhere** (no @persistentcartapp.com addresses),
+  matching the policy. The deferred Resend sender examples were updated to
+  noreply@customerfirstfocus.com (DKIM/SPF for customerfirstfocus.com needed when activated).
+
+### Privacy-policy improvements — documented for a future revision (owner-approved backlog)
+When you next revise the policy text (any wording change needs your sign-off):
+1. **"Anonymous cart" wording:** the policy says cart data is "anonymous … without personally
+   identifiable information," while the app keys carts to the customer ID and the site
+   explainer says carts are stored "against the customer's account." Align the policy with
+   the more precise explainer language (legal-review §3.2).
+2. **Sub-processor disclosure:** name the processors behind the site/app (Netlify hosting,
+   Google Analytics — consent-gated; plus Redis/hosting for the app backend) per
+   legal-review §4.2.
+3. **Effective/updated date:** the policy carries no date; add one at the next revision.
+4. **Deletion mechanics:** describe how/when deletion actually happens once the GDPR webhook
+   handlers perform real redaction (currently acknowledgment-only — research-notes §1).
 
 ## 5. Pricing 🟢 (confirm)
 - Confirm the tiers shown: **Free Starter** (≤10 syncs) · Basic **$4.99** · Grow **$8.99** · Advanced

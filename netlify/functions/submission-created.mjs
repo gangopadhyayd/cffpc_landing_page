@@ -32,7 +32,7 @@ export const handler = async (event) => {
     const email = data.email;
 
     const RESEND = process.env.RESEND_API_KEY;
-    const FROM = process.env.EMAIL_FROM || 'noreply@persistentcartapp.com';
+    const FROM = process.env.EMAIL_FROM || 'noreply@customerfirstfocus.com';
     const NOTIFY = process.env.LEAD_NOTIFY_EMAIL;
 
     const isAudit = formName === 'audit';

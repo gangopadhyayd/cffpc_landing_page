@@ -107,7 +107,7 @@ switched on. Everything else stays on a free tier at this scale.
 - **Cost:** $0 (free tier covers v1 volume).
 - **Env vars:**
   - `RESEND_API_KEY` — server-only (Netlify Function). Presence enables confirmation emails.
-  - `EMAIL_FROM` — sender, e.g. `noreply@persistentcartapp.com`.
+  - `EMAIL_FROM` — sender, e.g. `noreply@customerfirstfocus.com`.
 - **Owner registers:** Resend account; **add DKIM / SPF / DMARC DNS records** for
   `persistentcartapp.com` (so confirmation mail authenticates); create the API key.
 

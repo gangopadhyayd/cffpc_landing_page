@@ -192,6 +192,18 @@ Verify: build 136 pages · typecheck 0 errors · i18n green.
   money-proof in hero (done this cycle), named-customer strip (needs owner permission),
   pricing "no usage fees" line, re-enable calculator + vs-email pages for v2.
 
+## Post-launch tweaks (2026-07-07, owner-directed)
+
+- **Formal privacy policy hosted on-domain:** `/privacy-policy` — verbatim port from
+  persistify.herokuapp.com/privacy (formatting only). EN-only content across locales
+  (canonical legal text). Footer + `/privacy` explainer cross-link it; old netlify
+  `/privacy-policy→/privacy` redirect removed. Build 136→151 pages.
+- **Single support address (owner decision):** support@customerfirstfocus.com everywhere —
+  removed all @persistentcartapp.com addresses (site config + contact/support/privacy copy in
+  all 15 locales + deferred Resend sender defaults). Matches the formal policy's contact.
+- **Privacy-policy improvement backlog documented** in owner-inputs §4 (anonymous-cart wording,
+  sub-processors, effective date, deletion mechanics) — for the owner's next policy revision.
+
 ### Deployment state (2026-07-06)
 - **Live:** https://persistentcartapp.netlify.app — Netlify project `persistentcartapp`
   (team dgangopa), continuous deploys from `main` of

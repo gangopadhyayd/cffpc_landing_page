@@ -28,9 +28,11 @@ export const site = {
     youtube: '',
   },
 
-  // --- Contact / support (REQUEST: confirm addresses) ---
-  contactEmail: 'support@persistentcartapp.com', // REQUEST FROM OWNER: confirm
-  supportEmail: 'support@persistentcartapp.com', // REQUEST FROM OWNER: confirm
+  // --- Contact / support ---
+  // OWNER DECISION 2026-07-07: use support@customerfirstfocus.com everywhere;
+  // no @persistentcartapp.com addresses (matches the formal privacy policy).
+  contactEmail: 'support@customerfirstfocus.com',
+  supportEmail: 'support@customerfirstfocus.com',
   founderName: 'Dave', // VERIFIED voice (engagement repo); REQUEST: confirm public use
 
   // --- OG / social card defaults ---
