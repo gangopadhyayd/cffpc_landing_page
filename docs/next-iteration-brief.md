@@ -48,6 +48,12 @@ Everything below is current as of 2026-07-07.
 
 ## Browser/automation gotchas (hard-won; trust these)
 
+- **A PARALLEL Claude session may be working this repo concurrently** (observed 2026-07-07:
+  App-Store listing assets appearing in `design-assets/app-store/` + `scripts/render-app-
+  store-frames.mjs` + `docs/app-store-assets-plan.md` mid-session). NEVER `git add -A`
+  blindly — stage your own paths explicitly and leave the other session's untracked files
+  alone.
+
 - **Headless Chrome clamps its window to ~500px** — a `--window-size=390` screenshot is a
   CROP of a wider layout and looks falsely broken. For mobile truth: write a scratch page
   into `dist/` that iframes "/" at 390px width, screenshot THAT (iframe media queries evaluate
@@ -82,13 +88,22 @@ Everything below is current as of 2026-07-07.
    sync choreography). All four variants remain switchable via `heroVariant` in
    src/config/site.ts ('fork'|'plate'|'live'|'real'). Motion rules that survived review:
    resting markup = complete story; JS only winds back temporarily; no phone price column.
-4. **Dashboard "value-add" section — NOW UNBLOCKED.** Owner supplied a debug
-   dashboard-preview URL pattern (2026-07-07):
-   `persistent-cart.customerfirstfocus.com/debug/dashboard-preview/<store>.myshopify.com?token=…`
-   ⚠️ The token is a secret — never commit it, never show it in screenshots (crop the URL
-   bar). ⚠️ The example store (magnoliamom) is a REAL merchant — real revenue figures need
-   anonymization/owner sign-off, or try `cff-demo-store.myshopify.com` in the path first.
-   Owner notes the views may be dimmed / say "beta" — may need cleanup before screenshots.
+4. **Dashboard "value-add" section — FULLY SPECIFIED, ready to build (owner decisions
+   2026-07-07).** Recreate the app dashboard's **"Cart Transfer Value"** module as faithful
+   DOM on **/how-it-works** (after the mechanism, before the CTA). Three stat cards over a
+   7d/30d period toggle (recreate 30d state): **Cart Transfers** ("Times a customer's saved
+   cart moved to another device.") · **Orders from a Cart Transfer** ("Orders placed after a
+   customer moved a saved cart across devices.") · **Revenue from Cart Transfers** ("Order
+   value from orders with cart transfers."). Owner decisions: use **REAL figures,
+   anonymized** — one unnamed store's actual last-30-days: **8,069 transfers · 1,974 orders
+   · $452,836 revenue** (source: magnoliamom preview, 2026-07-07 — never name the store);
+   **no Beta chip**; Polaris-like styling to read as real product UI inside a device/admin
+   frame. New copy needs ~10 keys × 15 locales (hand-author; module label text above is the
+   app's own UI copy — keep EN verbatim). Recon notes: demo store shows $0 (useless);
+   preview URL pattern `persistent-cart.customerfirstfocus.com/debug/dashboard-preview/
+   <store>.myshopify.com?token=…` — ⚠️ token is a secret, never commit it or show it in
+   screenshots; the operator-preview banner + a personal email appear in raw screenshots —
+   another reason the DOM recreation beats screenshots.
 5. ~~Official Shopify assets~~ ✅ RESOLVED with a hard finding: **no official public
    Shopify Plus lockup exists** (brand-assets ships only the main Shopify logo; the Plus
    partner badge is gated to Plus-partner tiers). "Shopify Plus" stays as text — this is
