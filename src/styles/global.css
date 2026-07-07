@@ -71,6 +71,11 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Pin Fraunces' quirk axes for EVERY use of the display font (ledes,
+       metric values — not just h1–h4): the full-axes font defaults to WONK 1,
+       the swashy descender f the owner rejected. Inherits everywhere; inert
+       on Hanken/Plex Mono, which don't carry these axes. */
+    font-variation-settings: "opsz" 20, "SOFT" 0, "WONK" 0;
   }
 
   body {

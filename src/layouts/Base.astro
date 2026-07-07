@@ -1,7 +1,11 @@
 ---
 import '../styles/global.css';
 // Self-hosted variable fonts (no Google CDN) — privacy + performance.
-import '@fontsource-variable/fraunces';
+// Fraunces MUST be the full-axes build: the default wght-only instance bakes
+// WONK at its default of 1, which is the swashy descender-f the owner rejected.
+// Only full.css ships the WONK/SOFT/opsz axes, so the global.css pin
+// ("opsz" 20, "SOFT" 0, "WONK" 0) is a silent no-op on any lighter build.
+import '@fontsource-variable/fraunces/full.css';
 import '@fontsource-variable/hanken-grotesk';
 import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/ibm-plex-mono/500.css';

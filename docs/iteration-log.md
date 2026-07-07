@@ -329,3 +329,29 @@ Verify: typecheck 0 errors · i18n:check green · build 151 pages · preview scr
 desktop 1440 + true-390 iframe method + ja spot-check (module intact, localized copy
 around EN-verbatim UI) · dist grep: figures present EN+DE, 1 script tag = GA4 loader
 only (component contributes none).
+
+### Cycle 7 addendum — owner-feedback fixes (same day)
+
+Owner flagged three things on the live homepage; root causes + fixes:
+
+1. **Swash/descender f STILL live despite the cycle-6 opsz pin.** Root cause: the
+   Fontsource default import (`@fontsource-variable/fraunces`) ships the **wght-only**
+   instance — no opsz/SOFT/WONK axes — so `font-variation-settings: "opsz" 20, "SOFT" 0,
+   "WONK" 0` was a silent no-op, and the instance bakes WONK at its default of **1**
+   (the wonky descender f). Fix: import `@fontsource-variable/fraunces/full.css`
+   (all axes; latin woff2 37→121 KB, subset-gated) and move the pin from h1–h4 to
+   `html` so ledes/metric values (also Fraunces) are pinned too; h1–h4 rule kept.
+   Verified by pixel comparison: f now terminates at the baseline. ⚠️ Lesson: a
+   font-variation pin proves nothing unless the font FILE carries the axis — check
+   `fvar` (fontTools) not just the CSS.
+2. **"The animation moves the text around":** the live-hero wind-back collapsed the
+   4th cart row (`max-height:0` + negative margin), reflowing the subtotal line in
+   both carts every 8s beat. Fix: the row's slot stays reserved; only opacity/
+   transform animate. Choreography, resting markup, reduced-motion behavior unchanged.
+3. **Under-signaled "this is a Shopify app":** hero rating line said "4.9★ rating on
+   the App Store" (reads as Apple). Re-authored `hero.trust.rating` ×15 to name the
+   **Shopify** App Store — which also fixed a real cycle-6 bug: 9 locales
+   (de/fr/it/nl/zh-CN/ko/da/pl/nb) embedded "4.9★" in the string while Hero.astro
+   prepends the number, so those homepages rendered "4.9★ 4.9★ im App Store".
+   Bigger trust-hierarchy moves (badge prominence, official app-store badge near the
+   CTA) parked as owner decisions — see the report in owner-inputs.

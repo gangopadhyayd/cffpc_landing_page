@@ -723,18 +723,17 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     .fork[data-anim] .sync-badge {
       animation: fork-pop 0.4s var(--ease-out-soft) 1.5s both;
     }
+    /* The incoming row fades in PLACE — its slot stays reserved so the
+       subtotal line and everything below never reflow (owner feedback
+       2026-07-07: the collapse/expand read as "the animation moves the
+       text around"). */
     .fork--live .mc-item[data-live-item] {
-      transition: opacity 0.32s var(--ease-out-soft), transform 0.32s var(--ease-out-soft),
-        max-height 0.32s var(--ease-out-soft), margin-top 0.32s var(--ease-out-soft);
-      max-height: 25px;
-      overflow: hidden;
+      transition: opacity 0.32s var(--ease-out-soft), transform 0.32s var(--ease-out-soft);
     }
     .fork--live[data-state='pre'] .mc-item[data-live-item],
     .fork--live[data-state='sending'] .mc-item[data-live-item='laptop'] {
       opacity: 0;
       transform: translateY(5px);
-      max-height: 0;
-      margin-top: -0.42rem; /* collapse the grid gap so the list closes up */
     }
     .fork--live [data-sync-badge] {
       transition: transform 0.3s var(--ease-out-soft);
