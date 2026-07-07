@@ -6,8 +6,12 @@
 > 2. ~~Privacy policy decision~~ **RESOLVED 2026-07-07**: formal policy ported verbatim from
 >    persistify.herokuapp.com/privacy to **/privacy-policy** on-domain; /privacy explainer
 >    links it. ⚠️ Two follow-ups flagged for the owner in §4 below.
-> 3. **Confirm the Green Mountain Diapers review** may stay featured on the homepage (§2 below)
->    — the last open v1 input.
+> 3. ~~Green Mountain Diapers review~~ **RESOLVED 2026-07-07**: owner confirmed featuring it.
+>
+> **All three v1 launch inputs are now resolved.** New owner directives (2026-07-07): use
+> logos/icons of the biggest stores using the product in a trust strip (make it easy to toggle
+> on/off), and source other Shopify assets (e.g. Shopify Plus logo) from high-quality official
+> sources online — see docs/next-iteration-brief.md.
 >
 > Everything else below belongs to deferred v2 features (partner terms, audit fulfillment,
 > calculator) or optional integrations — see `docs/v1-recommendation.md`. The v1 site launches

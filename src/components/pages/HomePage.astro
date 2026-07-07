@@ -98,14 +98,12 @@ const jsonLd = [
 <Base locale={locale} slug={slug} title={title} description={description} ogType="website" jsonLd={jsonLd}>
   <Hero locale={locale} />
 
-  {/* 2 — Trust bar */}
+  {/* 2 — Trust bar (signals not already shown in the hero row above) */}
   <section class="trustbar">
     <div class="container-page trustbar-inner">
       <p class="trustbar-lead">{tt('trustbar.lead')}</p>
       <ul class="trustbar-stats">
-        <li class="stat-impact"><Icon name="trending-up" size={16} /> {tt('trust.impact', { amount: proof.syncedCartRevenue ?? '' })}</li>
-        <li><Icon name="star" size={16} /> {tt('common.rating', { rating: proof.reviewRating })}</li>
-        <li><BfsBadge label={tt('home.trust.stat.bfs')} size={15} /></li>
+        <li><BfsBadge label={tt('home.trust.stat.bfs')} variant="official" size={34} /></li>
         <li><Icon name="clock" size={16} /> {tt('home.trust.stat.since')}</li>
       </ul>
     </div>

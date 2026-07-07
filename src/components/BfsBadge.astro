@@ -1,17 +1,31 @@
 ---
 /**
- * Official "Built for Shopify" badge — Shopify's diamond glyph (as rendered on
- * our own App Store listing, which holds the certification) + label. Used as a
- * factual certification mark next to trust copy; the footer's global
- * disclaimer covers the trademark attribution.
+ * "Built for Shopify" certification badge.
+ * - variant "official": the badge lockup from Shopify's Built-for-Shopify media
+ *   kit 2025 (owner-provided, design-assets/built-for-shopify-media-kit-2025;
+ *   copies served from /badges/). Use where there's room for the full pill.
+ * - variant "inline" (default): compact diamond glyph + text label for slim
+ *   contexts (announce bar). Glyph matches the official gem.
+ * The footer's global disclaimer covers trademark attribution.
  */
 interface Props {
   label: string;
-  size?: number; // glyph height in px
+  size?: number; // inline: glyph height px · official: pill height px
+  variant?: 'inline' | 'official';
+  /** official variant only: light pill (for light bg) or dark pill */
+  tone?: 'light' | 'dark';
   class?: string;
 }
-const { label, size = 14, class: cls = '' } = Astro.props;
+const { label, size = 14, variant = 'inline', tone = 'light', class: cls = '' } = Astro.props;
+const officialSrc = `/badges/badge-built-for-shopify-${tone}.svg`;
+// Official lockup is 166×44 — keep its aspect ratio at the requested height.
+const officialH = variant === 'official' ? (size === 14 ? 32 : size) : 0;
+const officialW = Math.round(officialH * (166 / 44));
 ---
+
+{variant === 'official' ? (
+  <img class={`bfs-official ${cls}`} src={officialSrc} width={officialW} height={officialH} alt={label} loading="lazy" />
+) : (
 
 <span class={`bfs-badge ${cls}`}>
   <svg width={size * (16 / 14)} height={size} viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -25,6 +39,7 @@ const { label, size = 14, class: cls = '' } = Astro.props;
   </svg>
   <span class="bfs-label">{label}</span>
 </span>
+)}
 
 <style>
   .bfs-badge {
@@ -38,5 +53,9 @@ const { label, size = 14, class: cls = '' } = Astro.props;
   }
   .bfs-label {
     font-weight: 600;
+  }
+  .bfs-official {
+    display: inline-block;
+    border-radius: 4px;
   }
 </style>

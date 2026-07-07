@@ -8,7 +8,6 @@
  * No JS required for meaning: the resting state IS the end state; motion is
  * additive and disabled under prefers-reduced-motion.
  */
-import BfsBadge from './BfsBadge.astro';
 import { DEMO_ITEMS, cartSubtotal, formatMoney } from '../data/demoCart';
 import { localizedPath } from '../i18n/routing';
 import { t } from '../i18n';
@@ -56,7 +55,6 @@ const subtotal = formatMoney(cartSubtotal(items));
             <strong>{proof.reviewRating}★</strong> {t(locale, 'hero.trust.rating')}
           </a>
         </li>
-        <li><BfsBadge label={t(locale, 'hero.trust.bfs')} /></li>
       </ul>
     </div>
 
