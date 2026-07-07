@@ -28,7 +28,7 @@
   "faq.q11.a": "Non. En 2026, le panier est toujours stocké dans un cookie de navigateur plutôt que dans le compte : même avec les nouveaux comptes clients, un panier connecté ne suit donc pas nativement un client entre appareils et navigateurs. Persistent Cart ajoute cette couche.",
   "faq.q12.q": "Quelles langues et devises prend-il en charge ?",
   "faq.q12.a": "Il fonctionne avec les boutiques Shopify multidevises, et il synchronise le panier quelle que soit la langue. L'application est utilisée par des boutiques du monde entier — la perte de paniers entre appareils n'est propre à aucun marché en particulier.",
-  "faq.q13.q": "How do I know it's worth it for my store?",
+  "faq.q13.q": "Comment savoir si ça vaut le coup pour ma boutique ?",
   "faq.q13.a": "Testez-le sur votre propre boutique avant de payer : le plan Free Starter couvre jusqu'à 10 synchronisations de panier réelles, et tout plan payant commence par 30 jours d'essai. Le plan Basic coûte 4,99 $ par mois — une seule commande de taille moyenne récupérée entre appareils le rembourse largement. Vous le voyez fonctionner sur votre boutique avant qu'un seul dollar ne soit facturé : vous ne devinez pas.",
   "faq.q14.q": "Est-ce compatible avec Shop et les nouveaux comptes clients Shopify ?",
   "faq.q14.a": "Oui. Persistent Cart fonctionne avec les nouveaux comptes clients Shopify, et lorsqu'un client se connecte via l'app Shop, son panier est rattaché à son compte de la même façon. À noter : la connexion Shop ne transfère pas à elle seule le panier d'un appareil à l'autre — c'est Persistent Cart qui garde le panier synchronisé partout où le client se connecte.",

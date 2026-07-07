@@ -18,10 +18,12 @@ const included = [1, 2, 3, 4, 5, 6].map((n) => tt(`pricing.included.${n}`));
       pricingTiers.map((tier) => (
         <div class={`ptier ${tier.highlight ? 'is-highlight' : ''}`}>
           {tier.highlight && <span class="ptier-flag">{tt('pricing.tier.everyPlan')}</span>}
-          <span class="ptier-plan">{tier.shopifyPlan}</span>
+          {/* Shopify plan names are brand terms and stay EN; our own chip copy
+              ("Try it" / "Free" / "/mo") is localized (audit 2026-07-07). */}
+          <span class="ptier-plan">{tier.shopifyPlan === 'Try it' ? tt('pricing.chip.tryIt') : tier.shopifyPlan}</span>
           <span class="ptier-price tabular">
-            {tier.price}
-            <span class="ptier-cadence">{tier.cadence}</span>
+            {tier.price === 'Free' ? tt('pricing.chip.free') : tier.price}
+            <span class="ptier-cadence">{tier.cadence === '/mo' ? tt('pricing.chip.mo') : tier.cadence}</span>
           </span>
           <span class="ptier-note">{tt(`pricing.tier.${tier.id}.note`)}</span>
           <a
@@ -118,7 +120,9 @@ const included = [1, 2, 3, 4, 5, 6].map((n) => tt(`pricing.included.${n}`));
     min-height: 2.4em;
   }
   .ptier-cta {
-    margin-top: 0.5rem;
+    /* auto-margin pins every card's CTA to the same baseline even when a
+       note wraps to a second line (audit: Grow card button sat lower). */
+    margin-top: auto;
     width: 100%;
   }
   .pricing-hint {

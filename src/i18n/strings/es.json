@@ -67,9 +67,9 @@
   "demo.cart.emptyHint": "El carrito del móvil se quedó atrás",
   "demo.cart.syncing": "Sincronizando…",
   "demo.cart.added": "Añadido en el móvil",
-  "demo.cart.item.shoes": "Zapatillas de trail",
-  "demo.cart.item.jacket": "Chaqueta impermeable",
-  "demo.cart.item.socks": "Calcetines de merino (pack de 3)",
+  "demo.cart.item.shoes": "Zapatillas trail",
+  "demo.cart.item.jacket": "Chubasquero",
+  "demo.cart.item.socks": "Calcetines merino",
   "demo.cart.item.beanie": "Gorro de lana",
   "demo.device.phone": "Móvil",
   "demo.device.laptop": "Portátil",
@@ -247,5 +247,9 @@
   "home.final.body": "Añade Persistent Cart con un clic — desde ese momento, el carrito de los clientes con sesión iniciada los sigue a todas partes.",
   "home.final.install": "Añade Persistent Cart: empieza gratis",
   "home.final.audit": "Consigue una auditoría gratuita de tu tienda",
-  "home.final.trust": "4.9★ · Built for Shopify · Con la confianza de las tiendas desde 2016 · Prueba gratuita de 30 días en los planes de pago"
+  "home.final.trust": "4.9★ · Built for Shopify · Con la confianza de las tiendas desde 2016 · Prueba gratuita de 30 días en los planes de pago",
+  "demo.account": "Cuenta del cliente",
+  "pricing.chip.tryIt": "Pruébalo",
+  "pricing.chip.free": "Gratis",
+  "pricing.chip.mo": "/mes"
 }

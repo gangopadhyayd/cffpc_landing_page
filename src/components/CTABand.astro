@@ -112,4 +112,28 @@ const { eyebrow, heading, body, actions, trust, bg = 'soft', align = 'center', s
   .btn-invert:hover {
     background: #fff;
   }
+  /* On-dark button overrides (audit 2026-07-07): the global .btn-* palette
+     assumes a light background — on the navy band the ink primary was a
+     1.12:1 slab and ink-text secondary/ghost were invisible. Any action
+     landing in a navy band must read on navy. */
+  .ctaband--navy .btn-primary {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+  .ctaband--navy .btn-primary:hover {
+    background: #fff;
+  }
+  .ctaband--navy .btn-secondary {
+    color: #e7e1d6;
+    border-color: rgb(231 225 214 / 0.4);
+  }
+  .ctaband--navy .btn-ghost {
+    color: #e7e1d6;
+  }
+  .ctaband--navy .btn-secondary:hover,
+  .ctaband--navy .btn-ghost:hover {
+    color: #fff;
+    border-color: #e7e1d6;
+    background: rgb(255 255 255 / 0.06);
+  }
 </style>

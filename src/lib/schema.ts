@@ -19,6 +19,7 @@ export function organizationSchema() {
     '@id': ORG_ID,
     name: site.developer,
     url: site.url,
+    logo: `${site.url}/apple-touch-icon.png`,
     description: `Maker of ${site.fullName}, the cross-device cart sync app for Shopify.`,
     sameAs,
   };

@@ -34,7 +34,7 @@ export function parityCards(locale: string) {
       name: tt('home.parity.amazon.name'),
       quote: tt('home.parity.amazon.quote'),
       source: tt('home.parity.amazon.source'),
-      sourceHref: 'https://www.amazon.com/gp/help/customer/display.html?nodeId=GU235AYZNKC6PDGQ',
+      sourceHref: 'https://www.amazon.sg/gp/help/customer/display.html?nodeId=GU235AYZNKC6PDGQ',
       tone: 'good' as const,
     },
     {

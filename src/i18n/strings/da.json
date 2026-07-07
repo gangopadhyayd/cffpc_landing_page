@@ -15,7 +15,7 @@
   "nav.languageLabel": "Sprog",
   "nav.chooseLanguage": "Vælg dit sprog",
   "cta.install": "Tilføj Persistent Cart — start gratis",
-  "cta.installShort": "Tilføj til Shopify",
+  "cta.installShort": "Start gratis",
   "cta.audit": "Få et gratis butikstjek",
   "cta.auditShort": "Gratis butikstjek",
   "cta.partner": "Tjen på at anbefale den",
@@ -238,7 +238,7 @@
   "home.faq.q5.a": "Den kører let i baggrunden og er Built for Shopify, hvilket betyder, at den lever op til Shopifys standarder for ydeevne og kvalitet. De fleste forhandlere bemærker aldrig, at den kører — og det er hele pointen.",
   "home.faq.q6.q": "Hvordan adskiller dette sig fra min app til mails om forladte kurve?",
   "home.faq.q6.a": "De værktøjer handler, efter en kurv er forladt, og når kun kontakter, der har sagt ja. Persistent Cart handler før — den forhindrer kurven i at forsvinde, når en indlogget kunde skifter enhed. De supplerer hinanden: brug begge.",
-  "home.faq.q7.q": "How do I know it's worth it for my store?",
+  "home.faq.q7.q": "Hvordan ved jeg, om det er det værd for min butik?",
   "home.faq.q7.a": "Test det i din egen butik, før du betaler: Free Starter-planen dækker op til 10 rigtige kurv-synkroniseringer, og alle betalte planer starter med 30 dages prøveperiode. Basic koster 4,99 $ om måneden — én reddet mellemstor ordre på tværs af enheder dækker det rigeligt. Du ser det virke i din egen butik, før der trækkes en eneste dollar, så du behøver ikke gætte.",
   "home.faq.q8.q": "Hvad gør den med mine kunders data?",
   "home.faq.q8.a": "Det minimum, en kurv-synkronisering kræver. Den virker kun for indloggede kunder og gemmer kurvens indhold knyttet til kundekontoen i din butik — ikke mere, end hvad en kurv indeholder. Gæster spores ikke, der sendes ingen mails, der vises ingen samtykkebokse, og data forbliver begrænset til din butik. Vi er Built for Shopify og følger Shopifys påkrævede databeskyttelsesflows.",
@@ -247,5 +247,9 @@
   "home.final.body": "Tilføj Persistent Cart med ét klik — fra det øjeblik følger indloggede kunders kurve med overalt.",
   "home.final.install": "Tilføj Persistent Cart — start gratis",
   "home.final.audit": "Få et gratis butikstjek",
-  "home.final.trust": "4.9★ · Built for Shopify · Betroet siden 2016 · 30 dages gratis prøveperiode på betalte abonnementer"
+  "home.final.trust": "4.9★ · Built for Shopify · Betroet siden 2016 · 30 dages gratis prøveperiode på betalte abonnementer",
+  "demo.account": "Kundekonto",
+  "pricing.chip.tryIt": "Prøv det",
+  "pricing.chip.free": "Gratis",
+  "pricing.chip.mo": "/md."
 }

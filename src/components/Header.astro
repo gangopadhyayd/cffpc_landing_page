@@ -130,6 +130,9 @@ const homeHref = localizedPath(locale, '');
   .btn-sm {
     padding: 0.55rem 0.9rem;
     font-size: 0.875rem;
+    /* The header pill must never stack ("Start / free"; fr wrapped to 3
+       lines at 390 — audit 2026-07-07). */
+    white-space: nowrap;
   }
   .menu-toggle {
     display: inline-flex;

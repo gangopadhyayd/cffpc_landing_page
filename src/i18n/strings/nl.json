@@ -15,7 +15,7 @@
   "nav.languageLabel": "Taal",
   "nav.chooseLanguage": "Kies je taal",
   "cta.install": "Voeg Persistent Cart toe — start gratis",
-  "cta.installShort": "Toevoegen aan Shopify",
+  "cta.installShort": "Start gratis",
   "cta.audit": "Vraag een gratis winkelaudit aan",
   "cta.auditShort": "Gratis winkelaudit",
   "cta.partner": "Verdien door het aan te bevelen",
@@ -247,5 +247,9 @@
   "home.final.body": "Voeg Persistent Cart toe met één klik — vanaf dat moment reist de winkelwagen van ingelogde klanten overal mee.",
   "home.final.install": "Voeg Persistent Cart toe — start gratis",
   "home.final.audit": "Vraag een gratis winkelaudit aan",
-  "home.final.trust": "4.9★ · Built for Shopify · Vertrouwd sinds 2016 · Gratis proefperiode van 30 dagen op betaalde plannen"
+  "home.final.trust": "4.9★ · Built for Shopify · Vertrouwd sinds 2016 · Gratis proefperiode van 30 dagen op betaalde plannen",
+  "demo.account": "Klantaccount",
+  "pricing.chip.tryIt": "Probeer het",
+  "pricing.chip.free": "Gratis",
+  "pricing.chip.mo": "/mnd"
 }

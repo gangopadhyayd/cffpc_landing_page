@@ -21,7 +21,12 @@ const alts = alternates(slug);
 const isStaging = import.meta.env.PUBLIC_STAGING === 'true';
 const indexable = isIndexable(locale) && !isStaging;
 const ogImage = new URL(site.ogImage, site.url).href;
-const ogLocale = locale.replace('-', '_');
+// og:locale wants language_TERRITORY; bare language codes confuse some scrapers.
+const OG_TERRITORY: Record<string, string> = {
+  en: 'en_US', de: 'de_DE', fr: 'fr_FR', es: 'es_ES', it: 'it_IT', nl: 'nl_NL',
+  ja: 'ja_JP', ko: 'ko_KR', sv: 'sv_SE', da: 'da_DK', pl: 'pl_PL', nb: 'nb_NO', fi: 'fi_FI',
+};
+const ogLocale = OG_TERRITORY[locale] ?? locale.replace('-', '_');
 
 const googleVerify = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 const bingVerify = import.meta.env.PUBLIC_BING_SITE_VERIFICATION;
@@ -53,6 +58,9 @@ const bingVerify = import.meta.env.PUBLIC_BING_SITE_VERIFICATION;
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canon} />
 <meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={title} />
 <meta property="og:locale" content={ogLocale} />
 
 {/* Twitter */}

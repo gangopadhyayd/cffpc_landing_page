@@ -15,7 +15,7 @@
   "nav.languageLabel": "Sprache",
   "nav.chooseLanguage": "Sprache wählen",
   "cta.install": "Persistent Cart hinzufügen – kostenlos starten",
-  "cta.installShort": "Zu Shopify hinzufügen",
+  "cta.installShort": "Kostenlos starten",
   "cta.audit": "Kostenlose Shop-Analyse anfordern",
   "cta.auditShort": "Kostenlose Shop-Analyse",
   "cta.partner": "Empfehlen und verdienen",
@@ -247,5 +247,9 @@
   "home.final.body": "Fügen Sie Persistent Cart mit einem Klick hinzu – von da an folgt der Warenkorb Ihren angemeldeten Kunden überallhin.",
   "home.final.install": "Persistent Cart hinzufügen – kostenlos starten",
   "home.final.audit": "Kostenlose Shop-Analyse anfordern",
-  "home.final.trust": "4.9★ · Built for Shopify · Vertraut seit 2016 · 30 Tage kostenlos testen in kostenpflichtigen Tarifen"
+  "home.final.trust": "4.9★ · Built for Shopify · Vertraut seit 2016 · 30 Tage kostenlos testen in kostenpflichtigen Tarifen",
+  "demo.account": "Kundenkonto",
+  "pricing.chip.tryIt": "Ausprobieren",
+  "pricing.chip.free": "Kostenlos",
+  "pricing.chip.mo": "/Monat"
 }

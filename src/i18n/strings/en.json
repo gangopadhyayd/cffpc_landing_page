@@ -42,7 +42,7 @@
   "content.related": "Related reading",
   "content.comparisonTitle": "How they compare",
   "content.parityTitle": "What the biggest stores say",
-  "content.ctaHeading": "Stop losing signed-in carts across devices.",
+  "content.ctaHeading": "Stop losing signed‑in carts across devices.",
   "content.ctaBody": "Add Persistent Cart in one click — free to start, nothing for your shoppers to do.",
   "content.ctaInstall": "Add Persistent Cart — start free",
   "content.ctaAudit": "Get a free store audit",
@@ -247,5 +247,9 @@
   "home.final.body": "Add Persistent Cart in one click — from that moment, signed-in carts follow your customers everywhere.",
   "home.final.install": "Add Persistent Cart — start free",
   "home.final.audit": "Get a free store audit",
-  "home.final.trust": "4.9★ · Built for Shopify · Trusted since 2016 · 30-day free trial on paid plans"
+  "home.final.trust": "4.9★ · Built for Shopify · Trusted since 2016 · 30-day free trial on paid plans",
+  "demo.account": "Customer account",
+  "pricing.chip.tryIt": "Try it",
+  "pricing.chip.free": "Free",
+  "pricing.chip.mo": "/mo"
 }

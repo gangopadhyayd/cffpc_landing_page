@@ -67,9 +67,9 @@
   "demo.cart.emptyHint": "スマホのカートは置き去りに",
   "demo.cart.syncing": "同期中…",
   "demo.cart.added": "スマホで追加",
-  "demo.cart.item.shoes": "トレイルランニングシューズ",
-  "demo.cart.item.jacket": "レインシェルジャケット",
-  "demo.cart.item.socks": "メリノソックス（3足組）",
+  "demo.cart.item.shoes": "トレイルシューズ",
+  "demo.cart.item.jacket": "レインジャケット",
+  "demo.cart.item.socks": "メリノソックス",
   "demo.cart.item.beanie": "ウールビーニー",
   "demo.device.phone": "スマホ",
   "demo.device.laptop": "ノートPC",
@@ -247,5 +247,9 @@
   "home.final.body": "ワンクリックで Persistent Cart を追加 — その瞬間から、ログイン済みのお客様のカートがどこへでもついていきます。",
   "home.final.install": "Persistent Cart を追加 — 無料で開始",
   "home.final.audit": "無料ストア診断を受ける",
-  "home.final.trust": "4.9★ · Built for Shopify · 2016年以来信頼 · 有料プランは30日間の無料トライアル"
+  "home.final.trust": "4.9★ · Built for Shopify · 2016年以来信頼 · 有料プランは30日間の無料トライアル",
+  "demo.account": "顧客アカウント",
+  "pricing.chip.tryIt": "お試し",
+  "pricing.chip.free": "無料",
+  "pricing.chip.mo": "/月"
 }

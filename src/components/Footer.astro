@@ -134,6 +134,7 @@ const year = 2026;
     font-size: 0.84rem;
     color: #d9d2c6;
     transition: color 0.15s;
+    padding-block: 0.3rem;
   }
   .footer-rating:hover {
     color: #fff;
@@ -195,6 +196,9 @@ const year = 2026;
     font-family: var(--font-mono);
     font-size: 0.78rem;
     color: #9a9385;
+    /* ≥24px tap target (audit 2026-07-07) */
+    padding-block: 0.35rem;
+    display: inline-block;
   }
   .footer-mini:hover {
     color: #fff;
@@ -211,6 +215,10 @@ const year = 2026;
     .footer-top {
       grid-template-columns: 1.1fr 2fr;
     }
+  }
+  /* 4-up only when the columns genuinely fit — at tablet width they squeezed
+     to word-per-line wrapping (audit 2026-07-07). */
+  @media (min-width: 1020px) {
     .footer-cols {
       grid-template-columns: repeat(4, 1fr);
     }

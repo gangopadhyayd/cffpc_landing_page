@@ -15,7 +15,7 @@
   "nav.languageLabel": "언어",
   "nav.chooseLanguage": "언어를 선택하세요",
   "cta.install": "Persistent Cart 추가 — 무료로 시작",
-  "cta.installShort": "Shopify에 추가",
+  "cta.installShort": "무료로 시작",
   "cta.audit": "무료 스토어 진단 받기",
   "cta.auditShort": "무료 스토어 진단",
   "cta.partner": "추천하고 수익 올리기",
@@ -87,7 +87,7 @@
   "footer.group.learn": "알아보기",
   "footer.group.programs": "프로그램",
   "footer.group.company": "회사",
-  "footer.rights": "© {year} Customer First focus. All rights reserved.",
+  "footer.rights": "© {year} Customer First focus. 모든 권리 보유.",
   "footer.builtBy": "Customer First focus 제작, 샌프란시스코.",
   "footer.notAffiliated": "Persistent Cart는 독립적인 앱입니다. Shopify는 Shopify Inc.의 상표입니다. Amazon, Walmart 및 기타 소매업체 명칭은 각 소유자의 상표이며, 비교 목적으로만 언급됩니다.",
   "footer.install": "Shopify에 추가",
@@ -238,7 +238,7 @@
   "home.faq.q5.a": "백그라운드에서 가볍게 작동하며 Built for Shopify입니다 — 즉 Shopify의 성능 및 품질 기준을 충족한다는 뜻입니다. 대부분의 판매자는 작동 중이라는 걸 전혀 알아채지 못합니다 — 그게 핵심입니다.",
   "home.faq.q6.q": "제 장바구니 이탈 이메일 앱과는 어떻게 다른가요?",
   "home.faq.q6.a": "그런 도구는 장바구니가 이탈한 뒤에 작동하고 동의한 연락처에만 닿습니다. Persistent Cart는 이전에 작동합니다 — 로그인한 쇼핑객이 기기를 바꿀 때 장바구니가 사라지지 않게 합니다. 둘은 상호 보완적입니다: 함께 쓰세요.",
-  "home.faq.q7.q": "How do I know it's worth it for my store?",
+  "home.faq.q7.q": "우리 스토어에 가치가 있는지 어떻게 알 수 있나요?",
   "home.faq.q7.a": "결제 전에 내 스토어에서 직접 테스트할 수 있습니다. Free Starter 요금제는 실제 장바구니 동기화를 최대 10회까지 지원하고, 모든 유료 요금제에는 30일 무료 체험이 포함됩니다. Basic 요금제는 월 $4.99 — 기기 간에 살려낸 중간 규모 주문 하나면 충분히 회수됩니다. 1달러가 청구되기 전에 내 스토어에서 작동하는 모습을 직접 확인할 수 있으니 짐작할 필요가 없습니다.",
   "home.faq.q8.q": "내 고객의 데이터는 어떻게 처리되나요?",
   "home.faq.q8.a": "장바구니 동기화에 필요한 최소한만 다룹니다. 로그인한 고객에게만 작동하며, 장바구니 내용을 스토어별 고객 계정에 연결해 저장합니다 — 장바구니에 담긴 것 이상은 저장하지 않습니다. 비회원은 추적하지 않고, 이메일을 보내지 않으며, 동의 팝업도 띄우지 않고, 데이터는 내 스토어 범위를 벗어나지 않습니다. Built for Shopify 앱으로서 Shopify가 요구하는 데이터 보호 절차를 따릅니다.",
@@ -247,5 +247,9 @@
   "home.final.body": "클릭 한 번으로 Persistent Cart를 추가하세요 — 그 순간부터 로그인한 고객의 장바구니가 어디든 따라갑니다.",
   "home.final.install": "Persistent Cart 추가 — 무료로 시작",
   "home.final.audit": "무료 스토어 진단 받기",
-  "home.final.trust": "4.9★ · Built for Shopify · 2016년부터 신뢰 · 유료 플랜 30일 무료 체험"
+  "home.final.trust": "4.9★ · Built for Shopify · 2016년부터 신뢰 · 유료 플랜 30일 무료 체험",
+  "demo.account": "고객 계정",
+  "pricing.chip.tryIt": "체험",
+  "pricing.chip.free": "무료",
+  "pricing.chip.mo": "/월"
 }

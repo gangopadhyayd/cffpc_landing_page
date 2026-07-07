@@ -67,9 +67,9 @@
   "demo.cart.emptyHint": "Puhelimen ostoskori jäi jälkeen",
   "demo.cart.syncing": "Synkronoidaan…",
   "demo.cart.added": "Lisätty puhelimella",
-  "demo.cart.item.shoes": "Maastojuoksukengät",
+  "demo.cart.item.shoes": "Maastokengät",
   "demo.cart.item.jacket": "Sadetakki",
-  "demo.cart.item.socks": "Merinovillasukat (3 paria)",
+  "demo.cart.item.socks": "Merinosukat (3)",
   "demo.cart.item.beanie": "Villapipo",
   "demo.device.phone": "Puhelin",
   "demo.device.laptop": "Kannettava",
@@ -247,5 +247,9 @@
   "home.final.body": "Lisää Persistent Cart yhdellä klikkauksella — siitä hetkestä lähtien kirjautuneiden asiakkaiden korit seuraavat heitä kaikkialle.",
   "home.final.install": "Lisää Persistent Cart — aloita ilmaiseksi",
   "home.final.audit": "Hanki ilmainen kauppa-analyysi",
-  "home.final.trust": "4.9★ · Built for Shopify · Luotettu vuodesta 2016 · 30 päivän ilmainen kokeilu maksullisissa paketeissa"
+  "home.final.trust": "4.9★ · Built for Shopify · Luotettu vuodesta 2016 · 30 päivän ilmainen kokeilu maksullisissa paketeissa",
+  "demo.account": "Asiakastili",
+  "pricing.chip.tryIt": "Kokeile",
+  "pricing.chip.free": "Ilmainen",
+  "pricing.chip.mo": "/kk"
 }

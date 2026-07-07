@@ -28,7 +28,7 @@
   "faq.q11.a": "Nej. Pr. 2026 gemmes kurven stadig i en browsercookie frem for på kontoen, så selv med nye kundekonti følger en indlogget kurv ikke en kunde på tværs af enheder og browsere indbygget. Persistent Cart tilføjer det lag.",
   "faq.q12.q": "Hvilke sprog og valutaer understøtter den?",
   "faq.q12.a": "Den virker med Shopify-butikker med flere valutaer, og den synkroniserer kurven uanset sprog. Appen bruges af butikker over hele verden — tab af kurve på tværs af enheder er ikke specifikt for ét enkelt marked.",
-  "faq.q13.q": "How do I know it's worth it for my store?",
+  "faq.q13.q": "Hvordan ved jeg, om det er det værd for min butik?",
   "faq.q13.a": "Test det i din egen butik, før du betaler: Free Starter-planen dækker op til 10 rigtige kurv-synkroniseringer, og alle betalte planer starter med 30 dages prøveperiode. Basic koster 4,99 $ om måneden — én reddet mellemstor ordre på tværs af enheder dækker det rigeligt. Du ser det virke i din egen butik, før der trækkes en eneste dollar, så du behøver ikke gætte.",
   "faq.q14.q": "Virker det med Shop og Shopifys nye kundekonti?",
   "faq.q14.a": "Ja. Persistent Cart virker med Shopifys nye kundekonti, og når en kunde logger ind via Shop-appen, knyttes kurven til kontoen på samme måde. Husk: Shop-login flytter ikke i sig selv kurven mellem enheder — Persistent Cart er laget, der holder kurven synkroniseret, uanset hvor kunden logger ind.",

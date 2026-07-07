@@ -15,7 +15,7 @@
   "nav.languageLabel": "Språk",
   "nav.chooseLanguage": "Velg språk",
   "cta.install": "Legg til Persistent Cart — start gratis",
-  "cta.installShort": "Legg til i Shopify",
+  "cta.installShort": "Start gratis",
   "cta.audit": "Få en gratis butikkgjennomgang",
   "cta.auditShort": "Gratis butikkgjennomgang",
   "cta.partner": "Tjen på å anbefale den",
@@ -247,5 +247,9 @@
   "home.final.body": "Legg til Persistent Cart med ett klikk — fra det øyeblikket følger innloggede kunders kurver med overalt.",
   "home.final.install": "Legg til Persistent Cart — start gratis",
   "home.final.audit": "Få en gratis butikkgjennomgang",
-  "home.final.trust": "4.9★ · Built for Shopify · Betrodd siden 2016 · 30 dagers gratis prøveperiode på betalte planer"
+  "home.final.trust": "4.9★ · Built for Shopify · Betrodd siden 2016 · 30 dagers gratis prøveperiode på betalte planer",
+  "demo.account": "Kundekonto",
+  "pricing.chip.tryIt": "Prøv det",
+  "pricing.chip.free": "Gratis",
+  "pricing.chip.mo": "/mnd"
 }

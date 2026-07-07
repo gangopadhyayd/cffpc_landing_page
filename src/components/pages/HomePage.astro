@@ -60,7 +60,7 @@ const parityCards = [
     name: tt('home.parity.amazon.name'),
     quote: tt('home.parity.amazon.quote'),
     source: tt('home.parity.amazon.source'),
-    sourceHref: 'https://www.amazon.com/gp/help/customer/display.html?nodeId=GU235AYZNKC6PDGQ',
+    sourceHref: 'https://www.amazon.sg/gp/help/customer/display.html?nodeId=GU235AYZNKC6PDGQ',
     tone: 'good' as const,
   },
   {
@@ -134,7 +134,7 @@ const jsonLd = [
     <ParityCards cards={parityCards} />
     <div class="parity-diagram-wrap">
       <ParityDiagram
-        accountLabel={'Customer account'}
+        accountLabel={tt('demo.account')}
         cartLabel={tt('demo.cart.title')}
         phoneLabel={tt('demo.device.phone')}
         laptopLabel={tt('demo.device.laptop')}
@@ -169,8 +169,9 @@ const jsonLd = [
     <div class="pricing-row">
       {pricingTiers.map((tier) => (
         <div class={`price-chip ${tier.highlight ? 'is-highlight' : ''}`}>
-          <span class="price-plan">{tier.shopifyPlan}</span>
-          <span class="price-amount tabular">{tier.price}<span class="price-cadence">{tier.cadence}</span></span>
+          {/* Shopify plan names stay EN (brand terms); our chip copy localizes. */}
+          <span class="price-plan">{tier.shopifyPlan === 'Try it' ? tt('pricing.chip.tryIt') : tier.shopifyPlan}</span>
+          <span class="price-amount tabular">{tier.price === 'Free' ? tt('pricing.chip.free') : tier.price}<span class="price-cadence">{tier.cadence === '/mo' ? tt('pricing.chip.mo') : tier.cadence}</span></span>
         </div>
       ))}
     </div>

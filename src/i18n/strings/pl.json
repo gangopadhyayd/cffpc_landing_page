@@ -15,7 +15,7 @@
   "nav.languageLabel": "Język",
   "nav.chooseLanguage": "Wybierz język",
   "cta.install": "Dodaj Persistent Cart — zacznij za darmo",
-  "cta.installShort": "Dodaj do Shopify",
+  "cta.installShort": "Zacznij za darmo",
   "cta.audit": "Zamów darmowy audyt sklepu",
   "cta.auditShort": "Darmowy audyt sklepu",
   "cta.partner": "Zarabiaj na poleceniach",
@@ -238,7 +238,7 @@
   "home.faq.q5.a": "Działa lekko w tle i ma status Built for Shopify, co oznacza, że spełnia standardy wydajności i jakości Shopify. Większość sprzedawców nawet nie zauważa, że jest uruchomiona — i o to właśnie chodzi.",
   "home.faq.q6.q": "Czym różni się to od mojej aplikacji do e-maili o porzuconym koszyku?",
   "home.faq.q6.a": "Tamte narzędzia działają po porzuceniu koszyka i docierają tylko do kontaktów, które wyraziły zgodę. Persistent Cart działa wcześniej — sprawia, że koszyk nie znika, gdy zalogowany klient zmienia urządzenie. Wzajemnie się uzupełniają: korzystaj z obu.",
-  "home.faq.q7.q": "How do I know it's worth it for my store?",
+  "home.faq.q7.q": "Skąd mam wiedzieć, czy to się opłaca w moim sklepie?",
   "home.faq.q7.a": "Przetestuj we własnym sklepie, zanim zapłacisz: plan Free Starter obejmuje do 10 prawdziwych synchronizacji koszyka, a każdy płatny plan zaczyna się od 30-dniowego okresu próbnego. Plan Basic kosztuje 4,99 USD miesięcznie — jedno uratowane średniej wielkości zamówienie między urządzeniami pokrywa to z nawiązką. Zobaczysz, jak działa w Twoim sklepie, zanim zostanie naliczony choćby dolar — nie musisz zgadywać.",
   "home.faq.q8.q": "Co robi z danymi moich klientów?",
   "home.faq.q8.a": "Tylko minimum potrzebne do synchronizacji koszyka. Działa wyłącznie dla zalogowanych klientów i zapisuje zawartość koszyka powiązaną z kontem klienta w Twoim sklepie — nic ponad to, co zawiera koszyk. Goście nie są śledzeni, żadne e-maile nie są wysyłane, nie pojawiają się prośby o zgodę, a dane pozostają ograniczone do Twojego sklepu. Jesteśmy Built for Shopify i przestrzegamy wymaganych przez Shopify procedur ochrony danych.",
@@ -247,5 +247,9 @@
   "home.final.body": "Dodaj Persistent Cart jednym kliknięciem — od tej chwili koszyki zalogowanych klientów podążają za nimi wszędzie.",
   "home.final.install": "Dodaj Persistent Cart — zacznij za darmo",
   "home.final.audit": "Zamów darmowy audyt sklepu",
-  "home.final.trust": "4.9★ · Built for Shopify · Zaufanie od 2016 roku · 30-dniowy bezpłatny okres próbny w planach płatnych"
+  "home.final.trust": "4.9★ · Built for Shopify · Zaufanie od 2016 roku · 30-dniowy bezpłatny okres próbny w planach płatnych",
+  "demo.account": "Konto klienta",
+  "pricing.chip.tryIt": "Wypróbuj",
+  "pricing.chip.free": "Za darmo",
+  "pricing.chip.mo": "/mies."
 }

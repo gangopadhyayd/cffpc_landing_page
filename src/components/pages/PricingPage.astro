@@ -7,8 +7,8 @@ import CTABand from '../CTABand.astro';
 import { t, paragraphs } from '../../i18n';
 import { titleKey, descKey } from '../../config/routes';
 import { localizedPath, localizedUrl } from '../../i18n/routing';
-import { appStoreLink } from '../../config/site';
-import { webPageSchema, faqPageSchema } from '../../lib/schema';
+import { appStoreLink, site } from '../../config/site';
+import { webPageSchema, faqPageSchema, breadcrumbSchema } from '../../lib/schema';
 
 interface Props {
   locale: string;
@@ -25,6 +25,11 @@ const faqItems = [1, 2, 3, 4].map((n) => ({ q: tt(`pricing.faq.q${n}.q`), a: tt(
 
 const jsonLd = [
   webPageSchema({ url: localizedUrl(locale, slug), name: title, description, locale }),
+  // Only EN subpage that lacked BreadcrumbList (audit 2026-07-07).
+  breadcrumbSchema([
+    { name: tt('crumb.home'), url: site.url + localizedPath(locale, '') },
+    { name: tt('footer.link.pricing'), url: site.url + localizedPath(locale, 'pricing') },
+  ]),
   faqPageSchema(faqItems),
 ];
 ---

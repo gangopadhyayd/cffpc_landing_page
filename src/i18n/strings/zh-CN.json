@@ -15,7 +15,7 @@
   "nav.languageLabel": "语言",
   "nav.chooseLanguage": "选择您的语言",
   "cta.install": "添加 Persistent Cart — 免费开始",
-  "cta.installShort": "添加到 Shopify",
+  "cta.installShort": "免费开始",
   "cta.audit": "获取免费商店检测",
   "cta.auditShort": "免费商店检测",
   "cta.partner": "推荐即可赚取佣金",
@@ -238,7 +238,7 @@
   "home.faq.q5.a": "它在后台轻量运行，并通过 Built for Shopify 认证，这意味着它符合 Shopify 的性能与质量标准。多数商家根本察觉不到它在运行 — 而这正是它的意义所在。",
   "home.faq.q6.q": "这和我的弃购邮件应用有什么不同？",
   "home.faq.q6.a": "那些工具是在购物车被弃购之后才发挥作用，而且只能触达主动订阅的联系人。Persistent Cart 在此之前就发挥作用 — 当已登录购物者切换设备时，它防止购物车消失。两者互为补充：建议同时使用。",
-  "home.faq.q7.q": "How do I know it's worth it for my store?",
+  "home.faq.q7.q": "我怎么知道它对我的商店值不值得？",
   "home.faq.q7.a": "付费前可以先在自己的商店里测试：Free Starter 免费套餐支持最多 10 次真实购物车同步，任何付费套餐都有 30 天免费试用。Basic 套餐每月 4.99 美元 — 只要挽回一笔中等金额的跨设备订单就绰绰有余。在收取任何费用之前，您就能看到它在自己商店里的实际效果，无需猜测。",
   "home.faq.q8.q": "它会如何处理我顾客的数据？",
   "home.faq.q8.a": "只处理购物车同步所需的最少数据。它仅对已登录顾客生效，并将购物车内容与您商店的顾客账户关联保存 — 不超出购物车本身包含的信息。不追踪访客，不发送邮件，不弹出授权提示，数据仅限于您的商店范围内。我们是 Built for Shopify 应用，遵循 Shopify 要求的数据保护流程。",
@@ -247,5 +247,9 @@
   "home.final.body": "一键添加 Persistent Cart — 从那一刻起，已登录顾客的购物车会跟随他们出现在任何设备上。",
   "home.final.install": "添加 Persistent Cart — 免费开始",
   "home.final.audit": "获取免费商店检测",
-  "home.final.trust": "4.9★ · Built for Shopify · 自 2016 年起深受信赖 · 付费套餐享 30 天免费试用"
+  "home.final.trust": "4.9★ · Built for Shopify · 自 2016 年起深受信赖 · 付费套餐享 30 天免费试用",
+  "demo.account": "顾客账户",
+  "pricing.chip.tryIt": "试一试",
+  "pricing.chip.free": "免费",
+  "pricing.chip.mo": "/月"
 }

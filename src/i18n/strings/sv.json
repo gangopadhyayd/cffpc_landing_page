@@ -247,5 +247,9 @@
   "home.final.body": "Lägg till Persistent Cart med ett klick — från det ögonblicket följer inloggade kunders varukorgar med överallt.",
   "home.final.install": "Lägg till Persistent Cart — börja gratis",
   "home.final.audit": "Få en gratis butiksgranskning",
-  "home.final.trust": "4.9★ · Built for Shopify · Betrodd sedan 2016 · 30-dagars gratis provperiod på betalplaner"
+  "home.final.trust": "4.9★ · Built for Shopify · Betrodd sedan 2016 · 30-dagars gratis provperiod på betalplaner",
+  "demo.account": "Kundkonto",
+  "pricing.chip.tryIt": "Prova",
+  "pricing.chip.free": "Gratis",
+  "pricing.chip.mo": "/mån"
 }
