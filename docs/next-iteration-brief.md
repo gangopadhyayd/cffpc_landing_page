@@ -88,22 +88,28 @@ Everything below is current as of 2026-07-07.
    sync choreography). All four variants remain switchable via `heroVariant` in
    src/config/site.ts ('fork'|'plate'|'live'|'real'). Motion rules that survived review:
    resting markup = complete story; JS only winds back temporarily; no phone price column.
-4. **Dashboard "value-add" section — FULLY SPECIFIED, ready to build (owner decisions
-   2026-07-07).** Recreate the app dashboard's **"Cart Transfer Value"** module as faithful
-   DOM on **/how-it-works** (after the mechanism, before the CTA). Three stat cards over a
-   7d/30d period toggle (recreate 30d state): **Cart Transfers** ("Times a customer's saved
-   cart moved to another device.") · **Orders from a Cart Transfer** ("Orders placed after a
-   customer moved a saved cart across devices.") · **Revenue from Cart Transfers** ("Order
-   value from orders with cart transfers."). Owner decisions: use **REAL figures,
-   anonymized** — one unnamed store's actual last-30-days: **8,069 transfers · 1,974 orders
-   · $452,836 revenue** (source: magnoliamom preview, 2026-07-07 — never name the store);
-   **no Beta chip**; Polaris-like styling to read as real product UI inside a device/admin
-   frame. New copy needs ~10 keys × 15 locales (hand-author; module label text above is the
-   app's own UI copy — keep EN verbatim). Recon notes: demo store shows $0 (useless);
-   preview URL pattern `persistent-cart.customerfirstfocus.com/debug/dashboard-preview/
-   <store>.myshopify.com?token=…` — ⚠️ token is a secret, never commit it or show it in
-   screenshots; the operator-preview banner + a personal email appear in raw screenshots —
-   another reason the DOM recreation beats screenshots.
+4. **Dashboard "value-add" section — 🔴 TOP PRIORITY (owner bumped 2026-07-07). FULLY
+   SPECIFIED, ready to build; do this before anything else in this list.** Recreate the app
+   dashboard's **"Cart Transfer Value"** module as faithful DOM on **/how-it-works** (after
+   the mechanism, before the CTA). Three stat cards: **Cart Transfers** ("Times a customer's
+   saved cart moved to another device.") · **Orders from a Cart Transfer** ("Orders placed
+   after a customer moved a saved cart across devices.") · **Revenue from Cart Transfers**
+   ("Order value from orders with cart transfers.").
+   **⚠️ SNAPSHOT, NOT LIVE (owner directive 2026-07-07):** this section is a *fixed
+   snapshot* of the dashboard — **no animation, no count-ups, no IntersectionObserver
+   choreography, no interactive period toggle** (omit the 7d/30d control; the caption
+   carries the window), and no "live"/"real-time"/"updating" framing in the copy. Do not
+   reuse the hero's motion pattern here. Caption it plainly as a snapshot, e.g. "One
+   store's last 30 days" (a "captured July 2026"-style date note is welcome for honesty).
+   Owner decisions: use **REAL figures, anonymized** — one unnamed store's actual
+   last-30-days: **8,069 transfers · 1,974 orders · $452,836 revenue** (source: magnoliamom
+   preview, 2026-07-07 — **never name the store**); **no Beta chip**; Polaris-like styling
+   to read as real product UI inside a device/admin frame. New copy needs ~10 keys × 15
+   locales (hand-author per register; the module labels above are the app's own UI copy —
+   keep EN verbatim). You do NOT need the debug preview URL or its token — every needed
+   figure and label is in this entry; the token must never appear in commits or
+   screenshots. (Recon: demo store shows $0; raw screenshots leak an operator banner + a
+   personal email — the DOM recreation is the only clean route.)
 5. ~~Official Shopify assets~~ ✅ RESOLVED with a hard finding: **no official public
    Shopify Plus lockup exists** (brand-assets ships only the main Shopify logo; the Plus
    partner badge is gated to Plus-partner tiers). "Shopify Plus" stays as text — this is
