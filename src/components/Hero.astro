@@ -67,7 +67,12 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
 
       <ul class="hero-trust">
         <li class="trust-impact">
-          {t(locale, 'trust.impact', { daily: proof.syncedCartRevenueDaily ?? '', amount: proof.syncedCartRevenue ?? '' })}
+          {/* Stat lockup, not a text line — the value AND its 30-day window are
+              the point (owner 2026-07-07: window must be prominent, above the fold). */}
+          <span class="impact-value tabular">{proof.syncedCartRevenue}</span>
+          <span class="impact-text">
+            {t(locale, 'trust.impact.qualifier')} — <strong>{t(locale, 'trust.impact.window')}</strong>
+          </span>
         </li>
         <li>
           <a href={appStoreLink('hero_rating')} target="_blank" rel="noopener" class="trust-rating">
@@ -274,8 +279,26 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     color: var(--color-accent-ink);
   }
   .trust-impact {
-    font-weight: 700;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.2rem 0.55rem;
+    color: var(--color-ink-soft);
+  }
+  .impact-value {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+    font-weight: 620;
+    line-height: 1;
     color: var(--color-ink);
+    letter-spacing: -0.01em;
+  }
+  .impact-text {
+    font-size: 0.9rem;
+  }
+  .impact-text strong {
+    color: var(--color-ink);
+    font-weight: 700;
   }
 
   /* ---------- THE FORK ---------- */

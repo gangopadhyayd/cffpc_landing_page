@@ -74,9 +74,9 @@ const parityCards = [
 ];
 
 const metrics = [
-  // Owner-approved 2026-07-07: daily approx framing (~$1M/day headline, $30M+/30d
-  // substantiation in the note) — the 30-day window was reading as fine print.
-  { value: proof.syncedCartRevenueDaily ?? 'Millions', label: tt('home.metrics.1.label'), note: tt('home.metrics.1.note', { amount: proof.syncedCartRevenue ?? '' }) },
+  // Owner 2026-07-07 (final same-day form): $30M+ headline with the 30-day
+  // window inside the bold label — never fine print.
+  { value: proof.syncedCartRevenue ?? 'Millions', label: tt('home.metrics.1.label'), note: tt('home.metrics.1.note') },
   { value: `${proof.reviewRating}★`, label: tt('home.metrics.2.label'), note: tt('home.metrics.2.note') },
   { value: String(proof.launchedYear), label: tt('home.metrics.3.label'), note: tt('home.metrics.3.note') },
 ];
