@@ -31,5 +31,5 @@ export const CONTENT_CONFIG: Record<string, ContentRender> = {
   changelog: { sectionCount: 4, related: ['cornerstone', 'how-it-works'] },
   contact: { sectionCount: 2, related: ['support', 'faq'] },
   support: { sectionCount: 3, faqCount: 3, related: ['faq', 'how-it-works'] },
-  privacy: { sectionCount: 7, related: ['support', 'contact'] },
+  privacy: { sectionCount: 7, related: ['privacy-policy', 'support', 'contact'] },
 };

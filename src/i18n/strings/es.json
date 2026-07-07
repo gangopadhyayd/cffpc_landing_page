@@ -238,5 +238,6 @@
   "demo.cart.empty": "Tu carrito está vacío",
   "demo.cart.emptyHint": "El carrito del móvil se quedó atrás",
   "footer.link.how-it-works": "Cómo funciona",
-  "trust.impact": "{amount} en pedidos con carritos sincronizados — en los últimos 90 días"
+  "trust.impact": "{amount} en pedidos con carritos sincronizados — en los últimos 90 días",
+  "footer.link.privacy-policy": "Política de privacidad"
 }

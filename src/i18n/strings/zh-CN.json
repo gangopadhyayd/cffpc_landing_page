@@ -238,5 +238,6 @@
   "demo.cart.empty": "您的购物车是空的",
   "demo.cart.emptyHint": "手机上的购物车留在了原地",
   "footer.link.how-it-works": "工作原理",
-  "trust.impact": "过去 90 天 {amount} — 来自同步购物车的订单"
+  "trust.impact": "过去 90 天 {amount} — 来自同步购物车的订单",
+  "footer.link.privacy-policy": "隐私政策"
 }

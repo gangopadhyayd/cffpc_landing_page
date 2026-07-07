@@ -1,11 +1,13 @@
 # Owner Inputs Needed — persistentCartApp.com
 
 > **LEAN-V1 UPDATE (2026-07-04): only 3 inputs matter for the v1 launch.**
-> 1. Approve publishing **"Trusted by 5,000+ Shopify stores since 2016"** (your real figure:
->    5,445 distinct stores) — one yes, wired in `src/config/site.ts`.
-> 2. **Privacy policy decision** — confirm the formal policy URL to link, or send its text
->    to host on-domain (§4 below).
-> 3. **Confirm the Green Mountain Diapers review** may stay featured on the homepage (§2 below).
+> 1. ~~Proof numbers~~ **RESOLVED 2026-07-06**: owner approved "$60M+ synced-cart order value /
+>    90 days" + qualitative "thousands of stores, hundreds on Shopify Plus" — live on site.
+> 2. ~~Privacy policy decision~~ **RESOLVED 2026-07-07**: formal policy ported verbatim from
+>    persistify.herokuapp.com/privacy to **/privacy-policy** on-domain; /privacy explainer
+>    links it. ⚠️ Two follow-ups flagged for the owner in §4 below.
+> 3. **Confirm the Green Mountain Diapers review** may stay featured on the homepage (§2 below)
+>    — the last open v1 input.
 >
 > Everything else below belongs to deferred v2 features (partner terms, audit fulfillment,
 > calculator) or optional integrations — see `docs/v1-recommendation.md`. The v1 site launches
@@ -50,12 +52,17 @@ publish any specific number without your explicit OK.*
 - Approve the proposed **new App Store icon + screenshot concepts** (see `docs/app-store-optimization.md`).
 - A default **OG share image** is generated at `public/og/default.png` — replace if you want a custom one.
 
-## 4. Privacy policy 🔴 (decision)
-The current policy lives at an unpolished heroku URL. The site links `/privacy`, which currently shows a
-transparent **data-handling explainer** (not a formal legal policy). Choose one:
-- (a) Provide the text/URL of a polished formal policy to host on the domain, or
-- (b) Keep linking the heroku policy (we'll point `site.privacyUrl` there).
-*See `docs/legal-review.md` for the claims/wording to confirm.*
+## 4. Privacy policy ✅ RESOLVED (2026-07-07) — with two flags
+The formal policy was ported **verbatim** from persistify.herokuapp.com/privacy to
+**persistentcartapp.com/privacy-policy** (formatting only; no wording changed). The `/privacy`
+explainer and footer link to it. Two things only you can decide, at your leisure:
+- ⚠️ **Wording tension:** the policy says cart data is "anonymous … without personally
+  identifiable information," while the app keys carts to the customer ID and the site explainer
+  says carts are stored "against the customer's account." Consider updating the policy wording
+  (and adding sub-processors: Netlify hosting, Google Analytics) next time you revise it —
+  see legal-review §3.2/§4.2.
+- ⚠️ **Contact address:** the policy uses support@customerfirstfocus.com; the site uses
+  support@persistentcartapp.com. Confirm both are monitored, or align them.
 
 ## 5. Pricing 🟢 (confirm)
 - Confirm the tiers shown: **Free Starter** (≤10 syncs) · Basic **$4.99** · Grow **$8.99** · Advanced

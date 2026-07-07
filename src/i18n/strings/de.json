@@ -238,5 +238,6 @@
   "demo.cart.empty": "Ihr Warenkorb ist leer",
   "demo.cart.emptyHint": "Der Handy-Warenkorb blieb zurück",
   "footer.link.how-it-works": "So funktioniert's",
-  "trust.impact": "{amount} Bestellwert aus synchronisierten Warenkörben — in den letzten 90 Tagen"
+  "trust.impact": "{amount} Bestellwert aus synchronisierten Warenkörben — in den letzten 90 Tagen",
+  "footer.link.privacy-policy": "Datenschutzerklärung"
 }

@@ -238,5 +238,6 @@
   "demo.cart.empty": "Il tuo carrello è vuoto",
   "demo.cart.emptyHint": "Il carrello del telefono è rimasto indietro",
   "footer.link.how-it-works": "Come funziona",
-  "trust.impact": "{amount} di ordini da carrelli sincronizzati — negli ultimi 90 giorni"
+  "trust.impact": "{amount} di ordini da carrelli sincronizzati — negli ultimi 90 giorni",
+  "footer.link.privacy-policy": "Informativa sulla privacy"
 }

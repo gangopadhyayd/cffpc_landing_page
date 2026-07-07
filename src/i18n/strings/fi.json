@@ -238,5 +238,6 @@
   "demo.cart.empty": "Ostoskorisi on tyhjä",
   "demo.cart.emptyHint": "Puhelimen ostoskori jäi jälkeen",
   "footer.link.how-it-works": "Näin se toimii",
-  "trust.impact": "{amount} tilauksia synkronoiduista ostoskoreista — viimeiset 90 päivää"
+  "trust.impact": "{amount} tilauksia synkronoiduista ostoskoreista — viimeiset 90 päivää",
+  "footer.link.privacy-policy": "Tietosuojakäytäntö"
 }

@@ -238,5 +238,6 @@
   "demo.cart.empty": "Twój koszyk jest pusty",
   "demo.cart.emptyHint": "Koszyk z telefonu został w tyle",
   "footer.link.how-it-works": "Jak to działa",
-  "trust.impact": "{amount} w zamówieniach z synchronizowanych koszyków — ostatnie 90 dni"
+  "trust.impact": "{amount} w zamówieniach z synchronizowanych koszyków — ostatnie 90 dni",
+  "footer.link.privacy-policy": "Polityka prywatności"
 }

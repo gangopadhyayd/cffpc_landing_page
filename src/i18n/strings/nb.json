@@ -238,5 +238,6 @@
   "demo.cart.empty": "Handlekurven din er tom",
   "demo.cart.emptyHint": "Kurven ble igjen på mobilen",
   "footer.link.how-it-works": "Slik fungerer det",
-  "trust.impact": "{amount} i bestillinger fra synkroniserte handlekurver — siste 90 dager"
+  "trust.impact": "{amount} i bestillinger fra synkroniserte handlekurver — siste 90 dager",
+  "footer.link.privacy-policy": "Personvernerklæring"
 }

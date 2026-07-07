@@ -238,5 +238,6 @@
   "demo.cart.empty": "Votre panier est vide",
   "demo.cart.emptyHint": "Le panier du téléphone est resté derrière",
   "footer.link.how-it-works": "Comment ça marche",
-  "trust.impact": "{amount} de commandes issues de paniers synchronisés — sur les 90 derniers jours"
+  "trust.impact": "{amount} de commandes issues de paniers synchronisés — sur les 90 derniers jours",
+  "footer.link.privacy-policy": "Politique de confidentialité"
 }

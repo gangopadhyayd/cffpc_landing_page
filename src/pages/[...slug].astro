@@ -22,6 +22,7 @@ import FaqPage from '../components/pages/FaqPage.astro';
 import BigRetailersPage from '../components/pages/BigRetailersPage.astro';
 import VsRecoveryPage from '../components/pages/VsRecoveryPage.astro';
 import CompareEmailPage from '../components/pages/CompareEmailPage.astro';
+import PrivacyPolicyPage from '../components/pages/PrivacyPolicyPage.astro';
 
 // pageKey -> dedicated component (render phase only; never referenced in
 // getStaticPaths, because .astro imports split into a separate chunk).
@@ -36,6 +37,7 @@ const CUSTOM: Record<string, any> = {
   'big-retailers': BigRetailersPage,
   'vs-recovery': VsRecoveryPage,
   'compare-email': CompareEmailPage,
+  'privacy-policy': PrivacyPolicyPage,
 };
 
 export const getStaticPaths = (() => {

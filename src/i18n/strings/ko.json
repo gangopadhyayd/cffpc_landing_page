@@ -238,5 +238,6 @@
   "demo.cart.empty": "장바구니가 비어 있습니다",
   "demo.cart.emptyHint": "휴대폰의 장바구니는 그대로 남았습니다",
   "footer.link.how-it-works": "작동 방식",
-  "trust.impact": "최근 90일 {amount} — 동기화된 장바구니 주문 금액"
+  "trust.impact": "최근 90일 {amount} — 동기화된 장바구니 주문 금액",
+  "footer.link.privacy-policy": "개인정보 처리방침"
 }

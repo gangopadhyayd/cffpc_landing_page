@@ -17,11 +17,7 @@
   status = 301
 
 # Redirect old privacy paths to the on-domain privacy page
-[[redirects]]
-  from = "/privacy-policy"
-  to = "/privacy"
-  status = 301
-
+# (/privacy-policy is now a real page hosting the formal policy)
 [[redirects]]
   from = "/privacy.html"
   to = "/privacy"

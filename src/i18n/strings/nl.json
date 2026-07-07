@@ -238,5 +238,6 @@
   "demo.cart.empty": "Je winkelwagen is leeg",
   "demo.cart.emptyHint": "De winkelwagen van de telefoon bleef achter",
   "footer.link.how-it-works": "Hoe het werkt",
-  "trust.impact": "{amount} aan bestellingen uit gesynchroniseerde winkelwagens — afgelopen 90 dagen"
+  "trust.impact": "{amount} aan bestellingen uit gesynchroniseerde winkelwagens — afgelopen 90 dagen",
+  "footer.link.privacy-policy": "Privacybeleid"
 }

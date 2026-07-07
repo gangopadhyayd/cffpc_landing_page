@@ -89,6 +89,8 @@ const ALL_PAGES: PageDef[] = [
   { key: 'contact', slug: 'contact', cluster: 'core', footer: { group: 'company', order: 1 } },
   { key: 'support', slug: 'support', cluster: 'core', footer: { group: 'company', order: 2 } },
   { key: 'privacy', slug: 'privacy', cluster: 'legal', footer: { group: 'company', order: 4 } },
+  // Formal legal policy (verbatim port from the old heroku host; EN-only content).
+  { key: 'privacy-policy', slug: 'privacy-policy', cluster: 'legal', parent: 'privacy', footer: { group: 'company', order: 5 } },
 ];
 
 /**
@@ -130,6 +132,7 @@ export const ALL_BUILT_KEYS = new Set<string>([
   'contact',
   'support',
   'privacy',
+  'privacy-policy',
 ]);
 export const BUILT_KEYS = new Set<string>([...ALL_BUILT_KEYS].filter((k) => !V1_DEFERRED.has(k)));
 

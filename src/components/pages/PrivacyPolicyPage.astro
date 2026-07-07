@@ -1,0 +1,147 @@
+---
+/**
+ * Formal privacy policy — ported VERBATIM from the previous host
+ * (persistify.herokuapp.com/privacy) on 2026-07-07 at the owner's request.
+ * Only formatting was added (section labels promoted to headings, contact
+ * email linked); the wording itself must not be edited without owner sign-off.
+ * Deliberately English-only across locales (canonical legal text).
+ */
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import { t } from '../../i18n';
+import { localizedPath, localizedUrl } from '../../i18n/routing';
+import { site } from '../../config/site';
+import { webPageSchema, breadcrumbSchema } from '../../lib/schema';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = 'privacy-policy' } = Astro.props;
+
+const title = 'Privacy Policy | Persistent Cart — Sync Devices';
+const description =
+  'The formal privacy policy for the Persistent Cart Shopify app: what the app collects, how it is used, sharing, your rights, data retention, and contact.';
+
+const crumbs = [
+  { label: t(locale, 'crumb.home'), href: localizedPath(locale, '') },
+  { label: 'Privacy Policy', href: localizedPath(locale, 'privacy-policy') },
+];
+
+const jsonLd = [
+  webPageSchema({ url: localizedUrl(locale, slug), name: title, description, locale }),
+  breadcrumbSchema(crumbs.map((c) => ({ name: c.label, url: site.url + c.href }))),
+];
+---
+
+<Base locale={locale} slug={slug} title={title} description={description} ogType="article" jsonLd={jsonLd}>
+  <article class="content container-page policy">
+    <header class="policy-head">
+      <Breadcrumbs items={crumbs} />
+      <h1>Persistent Cart Privacy Policy</h1>
+      <p class="policy-note">
+        This is the formal privacy policy for the Persistent Cart app. For a plain-language
+        overview of how the app handles data, see{' '}
+        <a class="link-underline" href={localizedPath(locale, 'privacy')}>our privacy approach</a>.
+      </p>
+    </header>
+
+    <div class="policy-body">
+      <p>
+        Persistent Cart "the App" provides cart transfer across devices, "the Service," to
+        merchants who use Shopify to power their stores. This Privacy Policy describes how
+        personal information is collected, used, and shared when you install or use the App in
+        connection with your Shopify-supported store.
+      </p>
+
+      <h2>Personal Information the App Collects</h2>
+      <p>
+        When you install the App, we access and store very limited types of information from
+        your Shopify account such as an order identifier when orders are canceled, basic
+        information about the store account and anonymous shopping cart information for logged
+        in customers without personally identifiable information.
+      </p>
+      <p>
+        We collect information through Shopify APIs, and use local browser storage (data in
+        browser) to store temporary anonymous cart information for a browser without any
+        personally identifiable information.
+      </p>
+
+      <h2>How Do We Use Your Personal Information?</h2>
+      <p>
+        We use this personal information of the store admin to to: Communicate with you;
+        Optimize or improve the App; and Provide you with information relating to our products
+        or services.
+      </p>
+
+      <h2>Sharing Your Personal Information</h2>
+      <p>We do not share your personal information or any information collected with third parties.</p>
+      <p>
+        Finally, we may share your Personal Information to comply with applicable laws and
+        regulations, to respond to a subpoena, search warrant or other lawful request for
+        information we receive, or to otherwise protect our rights.
+      </p>
+
+      <h2>Your Rights</h2>
+      <p>
+        If you are a European resident, you have the right to access personal information we
+        hold about you and to ask that your personal information be corrected, updated, or
+        deleted. If you would like to exercise this right, please contact us through the
+        contact information below.
+      </p>
+      <p>
+        Additionally, if you are a European resident we note that we are processing your
+        information in order to fulfill contracts we might have with you (for example if you
+        make an order through the Site), or otherwise to pursue our legitimate business
+        interests listed above. Additionally, please note that your information will be
+        transferred outside of Europe, including to Canada and the United States.
+      </p>
+
+      <h2>Data Retention</h2>
+      <p>
+        We will retain anonymous cart information for transfer across devices until a shopping
+        checkout with the cart occurs or a request for deletion occurs.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        We may update this privacy policy from time to time in order to reflect, for example,
+        changes to our practices or for other operational, legal or regulatory reasons.
+      </p>
+
+      <h2>Contact Us</h2>
+      <p>
+        For more information about our privacy practices, if you have questions, or if you
+        would like to make a complaint, please contact us by e-mail at
+        <a class="link-underline" href="mailto:support@customerfirstfocus.com">support@customerfirstfocus.com</a>
+      </p>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .policy {
+    max-width: 760px;
+    padding-block: clamp(2rem, 5vw, 3.5rem);
+  }
+  .policy-head h1 {
+    font-size: clamp(1.9rem, 4.5vw, 2.7rem);
+    margin: 1rem 0 0.9rem;
+  }
+  .policy-note {
+    color: var(--color-ink-soft);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--color-hairline);
+  }
+  .policy-body h2 {
+    font-size: clamp(1.25rem, 2.6vw, 1.55rem);
+    margin: 2rem 0 0.7rem;
+  }
+  .policy-body p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    max-width: 68ch;
+  }
+</style>
