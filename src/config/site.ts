@@ -69,6 +69,10 @@ export const proof = {
   // 30 days" (supersedes the $60M/90d figure). Note for the owner: the internal
   // 2026-06-03 measurement was $26.0M/30d — owner owns the delta/rounding.
   syncedCartRevenue: '$30M+' as string | null,
+  // OWNER-APPROVED 2026-07-07 (approx framing chosen after the $26.0M/30d internal
+  // flag was surfaced): daily headline derived from the $30M+/30d claim, always
+  // shown with the "~" marker and paired with the 30-day substantiation.
+  syncedCartRevenueDaily: '~$1M' as string | null,
   cartsTransferred: null as string | null, // REQUEST — real: ~8–12k syncs/day (internal)
   // OWNER-APPROVED 2026-07-07: named-store logo strip ("Extended 11" pick —
   // active Plus subscribers + public reviewers; techbino/vdbparts stay case-study

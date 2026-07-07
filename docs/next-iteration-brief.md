@@ -137,6 +137,7 @@ Everything below is current as of 2026-07-07.
   research-landing-pages, legal-review (pre-publish list mostly cleared; §5.7 partner risk
   parked with deferred pages).
 - Design system: paper #F7F4EE / ink #1C1815 / marigold #D8541E accent, navy #14233A bands,
-  evergreen success; Fraunces (opsz pinned to 20 — do NOT restore auto optical sizing, it
-  brings back the swash f the owner rejected) + Hanken Grotesk + IBM Plex Mono; ink primary
-  buttons; no gradients/glows. One signature element per page; restraint elsewhere.
+  evergreen success; **Source Serif 4 display (owner pick 2026-07-07 — replaced Fraunces
+  entirely; self-hosted from public/fonts/, @font-face in global.css, headings wght 560)**
+  + Hanken Grotesk + IBM Plex Mono; ink primary buttons; no gradients/glows. One signature
+  element per page; restraint elsewhere.

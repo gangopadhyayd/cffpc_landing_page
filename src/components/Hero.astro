@@ -67,7 +67,7 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
 
       <ul class="hero-trust">
         <li class="trust-impact">
-          {t(locale, 'trust.impact', { amount: proof.syncedCartRevenue ?? '' })}
+          {t(locale, 'trust.impact', { daily: proof.syncedCartRevenueDaily ?? '', amount: proof.syncedCartRevenue ?? '' })}
         </li>
         <li>
           <a href={appStoreLink('hero_rating')} target="_blank" rel="noopener" class="trust-rating">

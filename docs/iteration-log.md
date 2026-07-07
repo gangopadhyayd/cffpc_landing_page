@@ -395,3 +395,24 @@ the hero eyebrow above the H1 — Shopify banner at the top of the fold (owner a
 TinySEO precedent) and the former gap now carries content. Third BFS instance on
 the homepage (hero/strip/footer) — fine per the owner's soft-guidelines directive.
 Verified at 2000/1440/true-390.
+
+### Cycle 7 addendum 4 — display font → Source Serif 4 · stat reframed ~$1M/day
+
+- **Fraunces is OUT entirely (owner: "I really don't like this font"), replaced by
+  Source Serif 4** — picked from a six-candidate sheet (Fraunces current/opsz-9,
+  SS4, Lora, Newsreader, PT Serif) rendered as the real H1. Self-hosted woff2
+  (latin + latin-ext, opsz+wght variable) in public/fonts/ with @font-face in
+  global.css — deliberately NOT via npm to avoid touching package.json, which the
+  parallel App-Store-assets session holds dirty. Fontsource import removed; all
+  Fraunces axis pins removed; headings wght 460→560 (SS4 runs lighter). ⚠️ U+2248
+  (≈) is outside both SS4 subsets — the approx marker site-wide is ASCII "~".
+- **Impact stat reframed to daily (owner pick: "approx framing") after the required
+  $26.0M/30d internal-measurement flag was surfaced in the decision question.**
+  Hero: "~$1M a day in orders from synced carts — $30M+ in the last 30 days"
+  (trust.impact now takes {daily}+{amount}). Metric band: value ~$1M (new config
+  proof.syncedCartRevenueDaily) · label "...every day" · note "{amount} in the last
+  30 days, across stores using the app" — note interpolates so the figure lives in
+  config, not in 15 strings. All three keys hand re-authored ×15.
+
+Verify: i18n:check green · typecheck 0 errors · 151 pages · screenshots: hero,
+how-it-works lede/headings, navy metric band (reads "~$1M / every day / $30M+ 30d").
