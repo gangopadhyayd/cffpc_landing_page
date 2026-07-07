@@ -13,6 +13,7 @@ import { localizedPath } from '../i18n/routing';
 import { CONTENT_CONFIG } from '../config/pageRender';
 import HomePage from '../components/pages/HomePage.astro';
 import ContentPage from '../components/pages/ContentPage.astro';
+import HowItWorksPage from '../components/pages/HowItWorksPage.astro';
 import PricingPage from '../components/pages/PricingPage.astro';
 import AuditPage from '../components/pages/AuditPage.astro';
 import PartnersPage from '../components/pages/PartnersPage.astro';
@@ -28,6 +29,7 @@ import PrivacyPolicyPage from '../components/pages/PrivacyPolicyPage.astro';
 // getStaticPaths, because .astro imports split into a separate chunk).
 const CUSTOM: Record<string, any> = {
   home: HomePage,
+  'how-it-works': HowItWorksPage,
   pricing: PricingPage,
   'free-audit': AuditPage,
   partners: PartnersPage,

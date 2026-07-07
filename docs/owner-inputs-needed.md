@@ -15,6 +15,12 @@
 > "no time limit") + pricing "no usage fees" line live in all 15 locales. Shopify Plus logo:
 > **no official public lockup exists** — "Shopify Plus" stays text (see brief backlog #5).
 >
+> **NEW (2026-07-07, cycle 7): dashboard "Cart Transfer Value" snapshot is LIVE on
+> /how-it-works** — static recreation, real anonymized figures (8,069 · 1,974 · $452,836,
+> one unnamed store's last 30 days, captioned "snapshot captured July 2026"). ⚠️ Awaiting
+> your content sign-off on the live section — copy, framing, and figures are exactly per
+> your 2026-07-07 batch answers, so this is confirm-or-tweak, not a blocker.
+>
 > Everything else below belongs to deferred v2 features (partner terms, audit fulfillment,
 > calculator) or optional integrations — see `docs/v1-recommendation.md`. The v1 site launches
 > safely on placeholders without any of it.

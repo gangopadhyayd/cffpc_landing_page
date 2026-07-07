@@ -88,28 +88,17 @@ Everything below is current as of 2026-07-07.
    sync choreography). All four variants remain switchable via `heroVariant` in
    src/config/site.ts ('fork'|'plate'|'live'|'real'). Motion rules that survived review:
    resting markup = complete story; JS only winds back temporarily; no phone price column.
-4. **Dashboard "value-add" section — 🔴 TOP PRIORITY (owner bumped 2026-07-07). FULLY
-   SPECIFIED, ready to build; do this before anything else in this list.** Recreate the app
-   dashboard's **"Cart Transfer Value"** module as faithful DOM on **/how-it-works** (after
-   the mechanism, before the CTA). Three stat cards: **Cart Transfers** ("Times a customer's
-   saved cart moved to another device.") · **Orders from a Cart Transfer** ("Orders placed
-   after a customer moved a saved cart across devices.") · **Revenue from Cart Transfers**
-   ("Order value from orders with cart transfers.").
-   **⚠️ SNAPSHOT, NOT LIVE (owner directive 2026-07-07):** this section is a *fixed
-   snapshot* of the dashboard — **no animation, no count-ups, no IntersectionObserver
-   choreography, no interactive period toggle** (omit the 7d/30d control; the caption
-   carries the window), and no "live"/"real-time"/"updating" framing in the copy. Do not
-   reuse the hero's motion pattern here. Caption it plainly as a snapshot, e.g. "One
-   store's last 30 days" (a "captured July 2026"-style date note is welcome for honesty).
-   Owner decisions: use **REAL figures, anonymized** — one unnamed store's actual
-   last-30-days: **8,069 transfers · 1,974 orders · $452,836 revenue** (source: magnoliamom
-   preview, 2026-07-07 — **never name the store**); **no Beta chip**; Polaris-like styling
-   to read as real product UI inside a device/admin frame. New copy needs ~10 keys × 15
-   locales (hand-author per register; the module labels above are the app's own UI copy —
-   keep EN verbatim). You do NOT need the debug preview URL or its token — every needed
-   figure and label is in this entry; the token must never appear in commits or
-   screenshots. (Recon: demo store shows $0; raw screenshots leak an operator banner + a
-   personal email — the DOM recreation is the only clean route.)
+4. ~~Dashboard "value-add" section~~ ✅ **SHIPPED cycle 7 (2026-07-07).** "Cart Transfer
+   Value" module recreated as faithful STATIC DOM on /how-it-works (slot between the
+   mechanism sections and FAQ/CTA): browser-chrome frame → Polaris-like admin canvas →
+   3 stat cards with the real anonymized figures (8,069 · 1,974 · $452,836) → figcaption
+   "One store's last 30 days — snapshot captured July 2026." Zero JS, no toggle, no Beta
+   chip; store never named; no preview URL/token used. New `DashboardSnapshot.astro` +
+   `HowItWorksPage.astro` (how-it-works now in the router CUSTOM map). 13 keys ×15
+   (`page.how-it-works.dash.*`) — 4 marketing keys hand-authored per register; ⚠️ the 9
+   `dash.ui.*` keys are the app's own UI copy, EN verbatim in all locales BY DESIGN —
+   never translate them (native reviewers included). Details: iteration-log cycle 7.
+   Outstanding: owner content sign-off on the live section (flagged in owner-inputs §top).
 5. ~~Official Shopify assets~~ ✅ RESOLVED with a hard finding: **no official public
    Shopify Plus lockup exists** (brand-assets ships only the main Shopify logo; the Plus
    partner badge is gated to Plus-partner tiers). "Shopify Plus" stays as text — this is

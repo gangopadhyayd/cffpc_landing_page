@@ -290,3 +290,42 @@ q14/q15 (EN+DE), fees line, 30-day stat, single badge instance, zero pseudo-badg
   SSL auto-provisions once DNS points; then GSC/Bing verification + sitemap submission.
 
 ---
+
+## Cycle 7 — dashboard "Cart Transfer Value" snapshot on /how-it-works (2026-07-07)
+
+Backlog #4 (owner's top priority, fully specified in next-iteration-brief) shipped.
+
+- **New section on /how-it-works**, after the five mechanism sections, before the
+  FAQ/CTA: eyebrow "From the dashboard" → question-style H2 ("What does the dashboard
+  show you?") → 2-paragraph intro → framed snapshot → honesty figcaption.
+- **Faithful DOM recreation, STATIC by design** (owner directive): zero JS, no
+  count-ups, no IntersectionObserver, no 7d/30d toggle (in-frame "Last 30 days" text
+  carries the window), no "live/real-time" framing, no Beta chip. The figcaption
+  reads "One store's last 30 days — snapshot captured July 2026."
+- **Real figures, anonymized** (owner-approved 2026-07-07): 8,069 transfers ·
+  1,974 orders · $452,836 revenue — one unnamed store's actual last 30 days. The
+  store is never named in code, copy, commits, or docs. Figures + module labels are
+  part of the recreated (English) product UI, so they keep US formatting in all
+  locales. No preview URL or token was needed or used.
+- **Polaris-like styling** inside a browser-chrome frame: mono site-side title bar
+  ("Persistent Cart · Dashboard"), admin-gray #f1f1f1 canvas, three white stat cards
+  (#e3e3e3 border, 12px radius, Inter/system stack, #303030/#616161 text) — hex is
+  deliberately the recreated product's palette, not site tokens. Cards go 3-up ≥640px,
+  stack below.
+- **Structure:** new `DashboardSnapshot.astro` + `HowItWorksPage.astro` (thin wrapper:
+  ContentPage + slotted snapshot — ContentPage's existing `<slot />` sits exactly
+  "after the mechanism, before the FAQ/CTA"). how-it-works moved from CONTENT_CONFIG
+  to the router's CUSTOM map; its sectionCount/faqCount/related now live in the
+  wrapper.
+- **i18n: 13 new keys ×15** (`page.how-it-works.dash.*`). 4 marketing keys (eyebrow/
+  h/b/caption) hand-authored per locale register + terminology (de en-dash + „…“,
+  fr « » + espace before ?, ja のか？ headings, es tú / de Sie, per-locale dashboard
+  word: tableau de bord/panel/pulpit/kojelauta/instrumentpanel/仪表盘/대시보드 etc.).
+  9 `dash.ui.*` keys are the app's own UI copy — **EN verbatim in every locale by
+  owner directive; native reviewers must NOT translate them** (they exist ×15 only so
+  i18n:check stays green).
+
+Verify: typecheck 0 errors · i18n:check green · build 151 pages · preview screenshots
+desktop 1440 + true-390 iframe method + ja spot-check (module intact, localized copy
+around EN-verbatim UI) · dist grep: figures present EN+DE, 1 script tag = GA4 loader
+only (component contributes none).

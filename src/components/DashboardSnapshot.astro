@@ -1,0 +1,202 @@
+---
+/**
+ * Dashboard "Cart Transfer Value" snapshot — a faithful, STATIC recreation of
+ * the app dashboard's reporting module, framed as a browser window over the
+ * Shopify-admin canvas.
+ *
+ * Owner directives (2026-07-07, next-iteration-brief §backlog 4):
+ *  - Snapshot, not live: no JS, no count-ups, no period toggle, no "real-time"
+ *    framing. The figcaption carries the reporting window + capture date.
+ *  - Figures are one unnamed store's REAL last 30 days, owner-approved and
+ *    anonymized. Do not localize their formatting — they are part of the
+ *    recreated (English) product UI, like the module labels.
+ *  - No Beta chip.
+ * In-frame strings are the app's own UI copy: EN verbatim in every locale
+ * (dash.ui.* keys exist ×15 so i18n:check passes, but must not be translated).
+ */
+import { t, paragraphs } from '../i18n';
+
+interface Props {
+  locale: string;
+}
+const { locale } = Astro.props;
+const tt = (k: string) => t(locale, k);
+
+const body = paragraphs(tt('page.how-it-works.dash.b'));
+
+// One unnamed store's actual last-30-days figures (owner-approved 2026-07-07).
+const CARDS = [
+  { value: '8,069', labelKey: 'page.how-it-works.dash.ui.c1.label', descKey: 'page.how-it-works.dash.ui.c1.desc' },
+  { value: '1,974', labelKey: 'page.how-it-works.dash.ui.c2.label', descKey: 'page.how-it-works.dash.ui.c2.desc' },
+  { value: '$452,836', labelKey: 'page.how-it-works.dash.ui.c3.label', descKey: 'page.how-it-works.dash.ui.c3.desc' },
+];
+---
+
+<section class="dash-section">
+  <span class="eyebrow">{tt('page.how-it-works.dash.eyebrow')}</span>
+  <h2>{tt('page.how-it-works.dash.h')}</h2>
+  {body.map((p) => <p>{p}</p>)}
+
+  <figure class="dash-frame">
+    <div class="dash-chrome">
+      <span class="dash-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="dash-chrome-title">{tt('page.how-it-works.dash.ui.app')}</span>
+    </div>
+
+    {/* Recreated admin UI. Hard-coded hex = the recreated product's Polaris
+        palette, deliberately not site tokens. */}
+    <div class="dash-admin">
+      <div class="dash-module-head">
+        <span class="dash-module-title">{tt('page.how-it-works.dash.ui.title')}</span>
+        <span class="dash-period">{tt('page.how-it-works.dash.ui.period')}</span>
+      </div>
+      <div class="dash-cards">
+        {
+          CARDS.map((c) => (
+            <div class="dash-card">
+              <span class="dash-card-label">{tt(c.labelKey)}</span>
+              <span class="dash-card-value tabular">{c.value}</span>
+              <span class="dash-card-desc">{tt(c.descKey)}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <figcaption class="dash-caption">{tt('page.how-it-works.dash.caption')}</figcaption>
+  </figure>
+</section>
+
+<style>
+  .dash-section {
+    margin-bottom: 2.25rem;
+  }
+  .dash-section .eyebrow {
+    margin-bottom: 0.7rem;
+  }
+  .dash-section h2 {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    margin-bottom: 0.9rem;
+  }
+  .dash-section p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: var(--color-ink);
+    max-width: 68ch;
+  }
+
+  /* ---------- the framed snapshot ---------- */
+  .dash-frame {
+    margin-top: 1.5rem;
+    border: 1px solid var(--color-hairline-strong);
+    border-radius: var(--radius-lg);
+    background: var(--color-card-soft);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+  }
+
+  /* browser-window bar — site-side chrome around the recreated UI */
+  .dash-chrome {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--color-hairline);
+  }
+  .dash-dots {
+    display: inline-flex;
+    gap: 0.32rem;
+    flex: none;
+  }
+  .dash-dots i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-hairline-strong);
+  }
+  .dash-chrome-title {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* ---------- recreated Polaris surface ---------- */
+  .dash-admin {
+    background: #f1f1f1;
+    padding: 1rem 1.1rem 1.15rem;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: auto;
+  }
+  .dash-module-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.7rem;
+  }
+  .dash-module-title {
+    font-size: 0.875rem;
+    font-weight: 650;
+    color: #303030;
+    line-height: 1.3;
+  }
+  .dash-period {
+    font-size: 0.78rem;
+    color: #616161;
+    flex: none;
+  }
+  .dash-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+  @media (min-width: 640px) {
+    .dash-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .dash-card {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 0 rgb(26 26 26 / 0.07);
+    padding: 0.85rem 1rem 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.28rem;
+    min-width: 0;
+  }
+  .dash-card-label {
+    font-size: 0.8125rem;
+    font-weight: 550;
+    color: #303030;
+    line-height: 1.35;
+  }
+  .dash-card-value {
+    font-size: 1.5rem;
+    font-weight: 650;
+    color: #303030;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .dash-card-desc {
+    font-size: 0.75rem;
+    color: #616161;
+    line-height: 1.45;
+  }
+
+  /* ---------- honesty caption ---------- */
+  .dash-caption {
+    padding: 0.75rem 1.1rem 0.85rem;
+    border-top: 1px solid var(--color-hairline);
+    font-size: 0.8rem;
+    color: var(--color-ink-soft);
+    text-align: center;
+    text-wrap: balance;
+  }
+</style>

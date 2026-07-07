@@ -1,0 +1,27 @@
+---
+/**
+ * /how-it-works — the generic ContentPage flow plus the dashboard
+ * "Cart Transfer Value" snapshot, slotted after the mechanism sections and
+ * before the FAQ/CTA. Render config lives here (not CONTENT_CONFIG) because
+ * the page is dispatched via the router's CUSTOM map.
+ */
+import ContentPage from './ContentPage.astro';
+import DashboardSnapshot from '../DashboardSnapshot.astro';
+
+interface Props {
+  locale: string;
+  slug?: string;
+}
+const { locale, slug = '' } = Astro.props;
+---
+
+<ContentPage
+  locale={locale}
+  slug={slug}
+  pageKey="how-it-works"
+  sectionCount={5}
+  faqCount={3}
+  related={['cornerstone', 'cart-disappears', 'pricing']}
+>
+  <DashboardSnapshot locale={locale} />
+</ContentPage>

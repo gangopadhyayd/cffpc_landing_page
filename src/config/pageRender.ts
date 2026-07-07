@@ -1,8 +1,9 @@
 /**
  * Render config for pages handled by the generic ContentPage template.
- * Pages with a dedicated component (home, pricing, free-audit, partners,
- * affiliates, calculator, faq, big-retailers, vs-recovery, compare-email) are
- * dispatched in the router's CUSTOM map and are NOT listed here.
+ * Pages with a dedicated component (home, how-it-works, pricing, free-audit,
+ * partners, affiliates, calculator, faq, big-retailers, vs-recovery,
+ * compare-email) are dispatched in the router's CUSTOM map and are NOT listed
+ * here — how-it-works carries its ContentPage config inside HowItWorksPage.
  *
  * `sectionCount` = number of `page.<key>.s{n}.h/.b` blocks the content provides.
  * Keep in sync with the en/<key>.json content file.
@@ -18,7 +19,6 @@ export const CONTENT_CONFIG: Record<string, ContentRender> = {
   // When re-enabling deferred pages (routes.ts V1_DEFERRED), restore the richer
   // cross-links: cornerstone ↔ cross-device/big-retailers, etc.
   cornerstone: { sectionCount: 5, faqCount: 4, related: ['how-it-works', 'cart-disappears', 'faq'] },
-  'how-it-works': { sectionCount: 5, faqCount: 3, related: ['cornerstone', 'cart-disappears', 'pricing'] },
   'cross-device': { sectionCount: 5, faqCount: 3, related: ['cornerstone', 'cart-disappears'] },
   'cart-disappears': { sectionCount: 4, faqCount: 4, related: ['cornerstone', 'how-it-works', 'faq'] },
   b2b: { sectionCount: 5, faqCount: 3, related: ['plus', 'uc-wholesale', 'cornerstone'] },
