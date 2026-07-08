@@ -177,7 +177,7 @@
   "home.testimonial.quote": "如果没有这款应用，客户一旦切换设备就会丢失购物车……而所有大型在线零售网站并不是这样运作的……购物车实际上是跟随客户的账户，而不只是设备。",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "美国 · 使用 Persistent Cart 9 年以上",
-  "home.testimonial.cta": "在 App Store 阅读全部 {count} 条评价",
+  "home.testimonial.cta": "在 Shopify 应用商店阅读全部 {count} 条评价",
   "home.compare.eyebrow": "预防，而不只是挽回",
   "home.compare.heading": "它是您弃购策略中缺失的另一半。",
   "home.compare.intro": "弃购邮件和短信是在购物车已经流失之后才触发的，而且只能触达那些主动订阅的购物者。Persistent Cart 在弃购之前就发挥作用 — 它从一开始就防止购物车消失，覆盖每一位已登录的购物者。两者搭配使用效果最佳。",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/月",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "登录时恢复 — 全自动",
-  "nav.vsEmail": "对比挽回邮件"
+  "nav.vsEmail": "对比挽回邮件",
+  "demo.account.savedLabel": "已保存到账户",
+  "demo.cart.savedChip": "已保存到您的账户",
+  "demo.cart.signedInChip": "已登录",
+  "home.reviews.1.quote": "我知道我们的顾客很喜欢在手机上把商品加入购物车，然后在电脑上无缝完成下单。",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "加拿大 · 使用应用 2 年以上",
+  "home.reviews.2.quote": "我们用这个应用已经几年了。论记住购物车，这是目前最好的购物车应用。",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "美国 · 使用应用近 4 年",
+  "home.reviews.3.quote": "…它为顾客省去了很多挫败感，并提升了转化率…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "加拿大 · 使用应用 5 年以上"
 }

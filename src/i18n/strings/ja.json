@@ -177,7 +177,7 @@
   "home.testimonial.quote": "このアプリがなければ、顧客はデバイスを切り替えるとショッピングカートを失います… これは、大手オンライン小売サイトすべての動作の仕方とは「まったく違います」… カートは事実上、単なる「デバイス」ではなく「顧客アカウント」に紐づいて残るのです。",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "アメリカ · Persistent Cart を9年以上利用",
-  "home.testimonial.cta": "App ストアで {count} 件すべてのレビューを読む",
+  "home.testimonial.cta": "Shopify アプリストアで {count} 件すべてのレビューを読む",
   "home.compare.eyebrow": "回収だけでなく、予防",
   "home.compare.heading": "これは、カゴ落ち対策に欠けていたもう半分です。",
   "home.compare.intro": "カゴ落ちメールや SMS は、カートが失われた後に送られ、オプトインした買い物客にしか届きません。Persistent Cart はカゴ落ちの前に機能します — すべてのログイン中の買い物客に対して、そもそもカートが消えないようにするのです。両者は組み合わせると最も効果を発揮します。",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/月",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "サインイン時に復元 — 自動",
-  "nav.vsEmail": "メール型カゴ落ち対策との比較"
+  "nav.vsEmail": "メール型カゴ落ち対策との比較",
+  "demo.account.savedLabel": "アカウントに保存",
+  "demo.cart.savedChip": "アカウントに保存済み",
+  "demo.cart.signedInChip": "ログイン中",
+  "home.reviews.1.quote": "お客様がモバイルでカートに商品を入れ、デスクトップでそのまま注文を完了できることを、とても喜んでいるのが分かります。",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "カナダ · 利用歴2年以上",
+  "home.reviews.2.quote": "数年前からこのアプリを使っています。カートを覚えておくアプリとしては断トツで最高です。",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "アメリカ · 利用歴4年近く",
+  "home.reviews.3.quote": "…お客様のストレスを大きく減らし、コンバージョンを高めてくれます…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "カナダ · 利用歴5年以上"
 }

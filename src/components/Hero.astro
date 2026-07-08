@@ -74,12 +74,13 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
 
       <ul class="hero-trust">
         <li class="trust-impact">
-          {/* Owner reading order (2026-07-08): value → window (bold) → what it
-              measures. Value is localized (EN spells "Million"). */}
-          <span class="impact-value tabular">{t(locale, 'trust.impact.value')}</span>
-          <span class="impact-text">
-            <strong>{t(locale, 'trust.impact.window')}</strong> — {t(locale, 'trust.impact.qualifier')}
+          {/* Owner 2026-07-08: the window is co-equal with the value — same
+              display size, one line — so "30 days" cannot be missed. */}
+          <span class="impact-line">
+            <span class="impact-value tabular">{t(locale, 'trust.impact.value')}</span>
+            <span class="impact-window">{t(locale, 'trust.impact.window')}</span>
           </span>
+          <span class="impact-text">{t(locale, 'trust.impact.qualifier')}</span>
         </li>
       </ul>
     </div>
@@ -115,6 +116,12 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
                 <span>{t(locale, 'demo.cart.subtotal')}</span>
                 <span class="tabular mc-subtotal" data-live-subtotal={isLive ? 'phone' : undefined}>{subtotal}</span>
               </div>
+              <span class="saved-chip">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                {t(locale, 'demo.cart.savedChip')}
+              </span>
             </div>
             <span class="homebar" aria-hidden="true"></span>
           </div>
@@ -124,18 +131,27 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
           )}
         </div>
 
-        {/* 2 — the switch: two paths out of one phone */}
-        <svg class="fork-paths" viewBox="0 0 560 104" aria-hidden="true" fill="none">
-          {isPlate && <circle class="origin-ring" cx="280" cy="7" r="4" />}
-          <path class="path-lost" d="M280 6 C 280 56, 140 40, 140 68" />
-          <g class="lost-x">
-            <line x1="133" y1="76" x2="147" y2="90" />
-            <line x1="147" y1="76" x2="133" y2="90" />
-          </g>
-          <path class="path-kept" data-kept d="M280 6 C 280 56, 420 36, 420 96" />
-          <path class="kept-arrow" d="M413 88 L420 98 L427 88" />
-          <circle class="kept-dot" data-dot r="5" cx="280" cy="6" />
-        </svg>
+        {/* 2 — the switch: two paths out of one phone. The ACCOUNT NODE on the
+            kept path is the mechanism (borrowed from the app-store hero export):
+            the cart is saved to the login, so it follows the login. */}
+        <div class="fork-switch">
+          <svg class="fork-paths" viewBox="0 0 560 96" aria-hidden="true" fill="none">
+            {isPlate && <circle class="origin-ring" cx="280" cy="7" r="4" />}
+            <path class="path-lost" d="M280 6 C 280 50, 140 36, 140 62" />
+            <g class="lost-x">
+              <line x1="133" y1="70" x2="147" y2="84" />
+              <line x1="147" y1="70" x2="133" y2="84" />
+            </g>
+            <path class="path-kept" data-kept d="M280 6 C 280 50, 420 32, 420 88" />
+            <path class="kept-arrow" d="M413 80 L420 90 L427 80" />
+            <g class="account-node">
+              <circle cx="367" cy="42" r="13" />
+              <path class="account-glyph" d="M367 39.4a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8Zm-6 9.6c.7-3.1 3.1-5 6-5s5.3 1.9 6 5" />
+            </g>
+            <circle class="kept-dot" data-dot r="5" cx="280" cy="6" />
+          </svg>
+          <span class="account-label">{t(locale, 'demo.account.savedLabel')}</span>
+        </div>
 
         {/* 3 — the two futures, side by side */}
         <div class="fork-outcomes">
@@ -166,6 +182,13 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
             <span class="chip chip-kept">{t(locale, 'home.problem.with.label')}</span>
             <div class="device device-laptop">
               <div class="screen">
+                <div class="signedin-row">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2.4" />
+                    <path d="M4 20c1.4-3.6 4.4-5.5 8-5.5s6.6 1.9 8 5.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+                  </svg>
+                  {t(locale, 'demo.cart.signedInChip')}
+                </div>
                 <div class="mc-head">
                   <span class="mc-title">{t(locale, 'demo.cart.title')}</span>
                   <span class="sync-badge" data-sync-badge>
@@ -293,25 +316,32 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
   }
   .trust-impact {
     display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 0.2rem 0.55rem;
+    flex-direction: column;
+    gap: 0.3rem;
     color: var(--color-ink-soft);
   }
-  .impact-value {
+  .impact-line {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.2rem 0.6rem;
+  }
+  .impact-value,
+  .impact-window {
     font-family: var(--font-display);
     font-size: clamp(1.5rem, 2.4vw, 1.9rem);
     font-weight: 620;
-    line-height: 1;
-    color: var(--color-ink);
+    line-height: 1.05;
     letter-spacing: -0.01em;
+  }
+  .impact-value {
+    color: var(--color-ink);
+  }
+  .impact-window {
+    color: var(--color-accent-ink);
   }
   .impact-text {
     font-size: 0.9rem;
-  }
-  .impact-text strong {
-    color: var(--color-ink);
-    font-weight: 700;
   }
 
   /* ---------- THE FORK ---------- */
@@ -494,8 +524,9 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
   }
   .fork--live .device-laptop .screen {
     /* Match the synced cart's natural content height so BOTH laptops render
-       the same size (the empty one looked smaller/odd — owner 2026-07-08). */
-    min-height: 12.1rem;
+       the same size (the empty one looked smaller/odd — owner 2026-07-08).
+       Kept as short as the 4-row cart + signed-in row allow. */
+    min-height: 11.6rem;
   }
   .fork--real .device-laptop .screen {
     min-height: 10.6rem;
@@ -517,6 +548,60 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
         transparent 54.5%
       ),
       color-mix(in srgb, var(--color-ink) 85%, transparent);
+  }
+  /* the switch block: paths + the account node + its label */
+  .fork-switch {
+    position: relative;
+  }
+  .account-node circle {
+    fill: var(--color-card);
+    stroke: var(--color-accent);
+    stroke-width: 2;
+  }
+  .account-node .account-glyph {
+    stroke: var(--color-accent-ink);
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+  }
+  .account-label {
+    position: absolute;
+    right: 2%;
+    top: 22%;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-evergreen);
+    max-width: 9rem;
+    text-align: right;
+    line-height: 1.45;
+  }
+  .saved-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.28rem;
+    margin: 0.3rem auto 0;
+    padding: 0.14rem 0.5rem;
+    border-radius: 99px;
+    background: var(--color-evergreen-tint);
+    color: var(--color-evergreen);
+    font-size: 0.56rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .signedin-row {
+    display: flex;
+    align-items: center;
+    gap: 0.32rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--color-ink-faint);
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.35rem;
+    border-bottom: 1px solid var(--color-hairline);
   }
   .restore-note {
     display: block;
@@ -560,7 +645,7 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     align-items: center;
     justify-content: space-between;
     gap: 0.4rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
   }
   .mc-title {
     font-family: var(--font-display);
@@ -571,7 +656,7 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
   .mc-items {
     list-style: none;
     display: grid;
-    gap: 0.42rem;
+    gap: 0.34rem;
   }
   .mc-item {
     display: flex;
@@ -637,7 +722,7 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid var(--color-hairline);
-    margin-top: 0.55rem;
+    margin-top: 0.45rem;
     padding-top: 0.45rem;
     font-size: 0.74rem;
     color: var(--color-ink-soft);

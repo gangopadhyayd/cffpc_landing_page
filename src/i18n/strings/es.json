@@ -177,7 +177,7 @@
   "home.testimonial.quote": "Sin la aplicación, los clientes pierden su carrito de compra si cambian de dispositivo… Así NO es como funcionan todos los grandes sitios web de venta online… el carrito permanece, en la práctica, vinculado a la CUENTA del cliente y no solo al DISPOSITIVO.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "Estados Unidos · usando Persistent Cart desde hace más de 9 años",
-  "home.testimonial.cta": "Lee las {count} reseñas en la App Store",
+  "home.testimonial.cta": "Lee las {count} reseñas en la App Store de Shopify",
   "home.compare.eyebrow": "Prevención, no solo recuperación",
   "home.compare.heading": "Es la mitad que le falta a tu estrategia de abandono.",
   "home.compare.intro": "Los correos y SMS de carrito abandonado se disparan después de que el carrito ya se ha perdido, y solo llegan a los compradores que dieron su consentimiento. Persistent Cart actúa antes del abandono: evita que el carrito desaparezca, para empezar, para cada comprador con sesión iniciada. Funcionan mejor juntos.",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/mes",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "Restaurado al iniciar sesión — automático",
-  "nav.vsEmail": "Vs. correos de recuperación"
+  "nav.vsEmail": "Vs. correos de recuperación",
+  "demo.account.savedLabel": "Guardado en la cuenta",
+  "demo.cart.savedChip": "Guardado en tu cuenta",
+  "demo.cart.signedInChip": "Sesión iniciada",
+  "home.reviews.1.quote": "Sé que nuestros clientes agradecen poder añadir productos al carrito en el móvil y terminar el pedido en el ordenador sin fricciones.",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "Canadá · más de 2 años usando la app",
+  "home.reviews.2.quote": "Llevamos unos años usando esta app. De lejos, la mejor app de carrito para recordar carritos.",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "Estados Unidos · casi 4 años usando la app",
+  "home.reviews.3.quote": "…ahorra mucha frustración a los clientes y aumenta la conversión…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "Canadá · más de 5 años usando la app"
 }

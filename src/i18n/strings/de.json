@@ -177,7 +177,7 @@
   "home.testimonial.quote": "Ohne die App verlieren Kunden ihren Warenkorb, wenn sie das Gerät wechseln … So funktionieren NICHT alle großen Online-Händler-Websites … der Warenkorb bleibt im Grunde beim KONTO des Kunden und nicht nur beim GERÄT.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "USA · nutzt Persistent Cart seit über 9 Jahren",
-  "home.testimonial.cta": "Alle {count} Bewertungen im App Store lesen",
+  "home.testimonial.cta": "Alle {count} Bewertungen im Shopify App Store lesen",
   "home.compare.eyebrow": "Prävention, nicht nur Rückgewinnung",
   "home.compare.heading": "Es ist die fehlende Hälfte Ihrer Strategie gegen Warenkorbabbrüche.",
   "home.compare.intro": "E-Mails und SMS zu abgebrochenen Warenkörben werden ausgelöst, nachdem ein Warenkorb weg ist, und erreichen nur Käufer mit Opt-in. Persistent Cart wirkt vor dem Abbruch – es verhindert, dass der Warenkorb überhaupt verschwindet, und zwar für jeden angemeldeten Käufer. Am besten funktionieren beide zusammen.",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/Monat",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "Bei Anmeldung wiederhergestellt — automatisch",
-  "nav.vsEmail": "Vs. E-Mail-Recovery"
+  "nav.vsEmail": "Vs. E-Mail-Recovery",
+  "demo.account.savedLabel": "Im Konto gespeichert",
+  "demo.cart.savedChip": "In Ihrem Konto gespeichert",
+  "demo.cart.signedInChip": "Angemeldet",
+  "home.reviews.1.quote": "Ich weiß, dass unsere Kunden es schätzen, Produkte am Handy in den Warenkorb zu legen und die Bestellung nahtlos am Desktop abzuschließen.",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "Kanada · über 2 Jahre mit der App",
+  "home.reviews.2.quote": "Wir nutzen diese App jetzt seit einigen Jahren. Mit Abstand die beste Cart-App, um Warenkörbe zu behalten.",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "USA · fast 4 Jahre mit der App",
+  "home.reviews.3.quote": "…es erspart Kunden viel Frust und steigert die Conversion…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "Kanada · über 5 Jahre mit der App"
 }

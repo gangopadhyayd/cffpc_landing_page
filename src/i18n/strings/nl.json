@@ -177,7 +177,7 @@
   "home.testimonial.quote": "Zonder de app verliezen klanten hun winkelwagen als ze van apparaat wisselen… Zo werken de websites van grote online retailers NIET allemaal… de winkelwagen blijft in feite bij het klantenACCOUNT in plaats van alleen bij het APPARAAT.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "Verenigde Staten · gebruikt Persistent Cart al 9+ jaar",
-  "home.testimonial.cta": "Lees alle {count} reviews in de App Store",
+  "home.testimonial.cta": "Lees alle {count} reviews in de Shopify App Store",
   "home.compare.eyebrow": "Preventie, niet alleen herstel",
   "home.compare.heading": "Het is de ontbrekende helft van je strategie tegen verlaten winkelwagens.",
   "home.compare.intro": "E-mails en sms'jes voor verlaten winkelwagens worden pas verstuurd nadat een winkelwagen weg is, en bereiken alleen shoppers die zich hebben aangemeld. Persistent Cart werkt vóór het verlaten — het voorkomt dat de winkelwagen überhaupt verdwijnt, voor elke ingelogde shopper. Ze werken het beste samen.",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/mnd",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "Hersteld bij inloggen — automatisch",
-  "nav.vsEmail": "Vs. e-mailherstel"
+  "nav.vsEmail": "Vs. e-mailherstel",
+  "demo.account.savedLabel": "Opgeslagen in het account",
+  "demo.cart.savedChip": "Opgeslagen in je account",
+  "demo.cart.signedInChip": "Ingelogd",
+  "home.reviews.1.quote": "Ik weet dat onze klanten het waarderen dat ze producten op mobiel in hun winkelwagen kunnen leggen en de bestelling naadloos op desktop kunnen afronden.",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "Canada · ruim 2 jaar met de app",
+  "home.reviews.2.quote": "We gebruiken deze app nu een paar jaar. Veruit de beste winkelwagen-app om winkelwagens te onthouden.",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "Verenigde Staten · bijna 4 jaar met de app",
+  "home.reviews.3.quote": "…het bespaart klanten veel frustratie en verhoogt de conversie…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "Canada · ruim 5 jaar met de app"
 }

@@ -177,7 +177,7 @@
   "home.testimonial.quote": "Without the app, customers lose their shopping cart if they switch devices… This is NOT how all of the large online retailer websites function… the cart effectively stays with the Customer ACCOUNT rather than just the DEVICE.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "United States · using Persistent Cart for 9+ years",
-  "home.testimonial.cta": "Read all {count} reviews on the App Store",
+  "home.testimonial.cta": "Read all {count} reviews on the Shopify App Store",
   "home.compare.eyebrow": "Prevention, not just recovery",
   "home.compare.heading": "It's the missing half of your abandonment strategy.",
   "home.compare.intro": "Abandoned-cart emails and SMS fire after a cart is gone, and only reach shoppers who opted in. Persistent Cart works before abandonment — it keeps the cart from disappearing in the first place, for every signed-in shopper. They work best together.",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/mo",
   "trust.impact.value": "$30 Million+",
   "demo.cart.restoredNote": "Restored at sign-in — automatic",
-  "nav.vsEmail": "Vs. email recovery"
+  "nav.vsEmail": "Vs. email recovery",
+  "demo.account.savedLabel": "Saved to the account",
+  "demo.cart.savedChip": "Saved to your account",
+  "demo.cart.signedInChip": "Signed in",
+  "home.reviews.1.quote": "I know our customers appreciate being able to add products in their cart on mobile and finish the order on desktop seamlessly.",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "Canada · over 2 years using the app",
+  "home.reviews.2.quote": "We've been using this app for a few years now. Easily the best cart app for remembering carts.",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "United States · almost 4 years using the app",
+  "home.reviews.3.quote": "…it saves customers a lot of frustration and increases conversion…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "Canada · over 5 years using the app"
 }

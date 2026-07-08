@@ -177,7 +177,7 @@
   "home.testimonial.quote": "Uten appen mister kundene handlekurven sin hvis de bytter enhet … Slik fungerer IKKE alle de store nettbutikkene … handlekurven blir i praksis værende hos kundens KONTO i stedet for bare ENHETEN.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "USA · har brukt Persistent Cart i 9+ år",
-  "home.testimonial.cta": "Les alle {count} anmeldelser i App Store",
+  "home.testimonial.cta": "Les alle {count} anmeldelser i Shopify App Store",
   "home.compare.eyebrow": "Forebygging, ikke bare gjenvinning",
   "home.compare.heading": "Det er den manglende halvdelen av strategien din mot forlatte handlekurver.",
   "home.compare.intro": "E-post og SMS for forlatte handlekurver utløses etter at en handlekurv er borte, og når bare kunder som har meldt seg på. Persistent Cart virker før kjøpet forlates — den hindrer at handlekurven forsvinner i utgangspunktet, for hver innlogget kunde. De fungerer best sammen.",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/mnd",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "Gjenopprettet ved innlogging — automatisk",
-  "nav.vsEmail": "Vs. e-postgjenoppretting"
+  "nav.vsEmail": "Vs. e-postgjenoppretting",
+  "demo.account.savedLabel": "Lagret på kontoen",
+  "demo.cart.savedChip": "Lagret på kontoen din",
+  "demo.cart.signedInChip": "Innlogget",
+  "home.reviews.1.quote": "Jeg vet at kundene våre setter pris på å kunne legge varer i handlekurven på mobilen og fullføre bestillingen sømløst på datamaskinen.",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "Canada · over 2 år med appen",
+  "home.reviews.2.quote": "Vi har brukt denne appen i noen år nå. Klart den beste handlekurv-appen for å huske handlekurver.",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "USA · nesten 4 år med appen",
+  "home.reviews.3.quote": "…den sparer kundene for mye frustrasjon og øker konverteringen…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "Canada · over 5 år med appen"
 }

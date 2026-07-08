@@ -177,7 +177,7 @@
   "home.testimonial.quote": "Senza l'app, i clienti perdono il carrello se cambiano dispositivo… NON è così che funzionano tutti i grandi siti di vendita online… il carrello di fatto resta con l'ACCOUNT del cliente anziché solo con il DISPOSITIVO.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "Stati Uniti · usa Persistent Cart da oltre 9 anni",
-  "home.testimonial.cta": "Leggi tutte le {count} recensioni sull'App Store",
+  "home.testimonial.cta": "Leggi tutte le {count} recensioni sull'App Store di Shopify",
   "home.compare.eyebrow": "Prevenzione, non solo recupero",
   "home.compare.heading": "È la metà mancante della tua strategia anti-abbandono.",
   "home.compare.intro": "Le email e gli SMS per i carrelli abbandonati scattano dopo che un carrello è andato perso, e raggiungono solo gli acquirenti che hanno dato il consenso. Persistent Cart agisce prima dell'abbandono — impedisce che il carrello scompaia in primo luogo, per ogni acquirente connesso. Funzionano al meglio insieme.",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/mese",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "Ripristinato all'accesso — automatico",
-  "nav.vsEmail": "Vs. email di recupero"
+  "nav.vsEmail": "Vs. email di recupero",
+  "demo.account.savedLabel": "Salvato sull'account",
+  "demo.cart.savedChip": "Salvato sul tuo account",
+  "demo.cart.signedInChip": "Connesso",
+  "home.reviews.1.quote": "So che i nostri clienti apprezzano poter aggiungere prodotti al carrello da mobile e completare l'ordine da desktop senza intoppi.",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "Canada · oltre 2 anni con l'app",
+  "home.reviews.2.quote": "Usiamo questa app da qualche anno ormai. Di gran lunga la migliore app carrello per ricordare i carrelli.",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "Stati Uniti · quasi 4 anni con l'app",
+  "home.reviews.3.quote": "…evita ai clienti molta frustrazione e aumenta la conversione…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "Canada · oltre 5 anni con l'app"
 }

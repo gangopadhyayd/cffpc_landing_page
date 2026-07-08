@@ -177,7 +177,7 @@
   "home.testimonial.quote": "Utan appen förlorar kunderna sin varukorg om de byter enhet… Så fungerar INTE alla de stora återförsäljarnas webbplatser… varukorgen stannar i praktiken hos kundens KONTO i stället för bara ENHETEN.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "USA · använder Persistent Cart i 9+ år",
-  "home.testimonial.cta": "Läs alla {count} recensioner på App Store",
+  "home.testimonial.cta": "Läs alla {count} recensioner på Shopify App Store",
   "home.compare.eyebrow": "Förebyggande, inte bara återvinning",
   "home.compare.heading": "Det är den saknade halvan av din strategi mot övergivna varukorgar.",
   "home.compare.intro": "Mejl och SMS om övergivna varukorgar skickas efter att en varukorg är borta, och når bara kunder som har gett sitt samtycke. Persistent Cart arbetar innan varukorgen överges — den hindrar varukorgen från att försvinna över huvud taget, för varje inloggad kund. De fungerar bäst tillsammans.",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/mån",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "Återställd vid inloggning — automatiskt",
-  "nav.vsEmail": "Vs. e-poståtervinning"
+  "nav.vsEmail": "Vs. e-poståtervinning",
+  "demo.account.savedLabel": "Sparad på kontot",
+  "demo.cart.savedChip": "Sparad på ditt konto",
+  "demo.cart.signedInChip": "Inloggad",
+  "home.reviews.1.quote": "Jag vet att våra kunder uppskattar att kunna lägga produkter i varukorgen på mobilen och slutföra beställningen på datorn helt sömlöst.",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "Kanada · över 2 år med appen",
+  "home.reviews.2.quote": "Vi har använt den här appen i några år nu. Utan tvekan den bästa varukorgsappen för att komma ihåg varukorgar.",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "USA · nästan 4 år med appen",
+  "home.reviews.3.quote": "…den besparar kunderna mycket frustration och ökar konverteringen…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "Kanada · över 5 år med appen"
 }

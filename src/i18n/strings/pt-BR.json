@@ -177,7 +177,7 @@
   "home.testimonial.quote": "Sem o app, os clientes perdem o carrinho de compras se trocam de dispositivo… NÃO é assim que todos os grandes sites de varejo online funcionam… o carrinho efetivamente fica com a CONTA do cliente, e não apenas com o DISPOSITIVO.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "Estados Unidos · usando o Persistent Cart há mais de 9 anos",
-  "home.testimonial.cta": "Leia todas as {count} avaliações na App Store",
+  "home.testimonial.cta": "Leia todas as {count} avaliações na App Store da Shopify",
   "home.compare.eyebrow": "Prevenção, não apenas recuperação",
   "home.compare.heading": "É a metade que falta na sua estratégia contra o abandono.",
   "home.compare.intro": "E-mails e SMS de carrinho abandonado disparam depois que o carrinho já foi perdido, e só alcançam clientes que deram opt-in. O Persistent Cart age antes do abandono — ele impede que o carrinho desapareça já de início, para todo cliente conectado. Juntos, funcionam melhor.",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/mês",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "Restaurado ao entrar — automático",
-  "nav.vsEmail": "Vs. e-mails de recuperação"
+  "nav.vsEmail": "Vs. e-mails de recuperação",
+  "demo.account.savedLabel": "Salvo na conta",
+  "demo.cart.savedChip": "Salvo na sua conta",
+  "demo.cart.signedInChip": "Conectado",
+  "home.reviews.1.quote": "Sei que nossos clientes valorizam poder adicionar produtos ao carrinho no celular e concluir o pedido no computador sem atritos.",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "Canadá · mais de 2 anos usando o app",
+  "home.reviews.2.quote": "Usamos este app há alguns anos. De longe o melhor app de carrinho para lembrar carrinhos.",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "Estados Unidos · quase 4 anos usando o app",
+  "home.reviews.3.quote": "…poupa muita frustração aos clientes e aumenta a conversão…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "Canadá · mais de 5 anos usando o app"
 }

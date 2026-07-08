@@ -177,7 +177,7 @@
   "home.testimonial.quote": "Bez tej aplikacji klienci tracą koszyk, gdy zmieniają urządzenie… NIE tak działają wszystkie duże sklepy internetowe… koszyk pozostaje przy KONCIE klienta, a nie tylko przy URZĄDZENIU.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "Stany Zjednoczone · korzysta z Persistent Cart od ponad 9 lat",
-  "home.testimonial.cta": "Przeczytaj wszystkie opinie ({count}) w App Store",
+  "home.testimonial.cta": "Przeczytaj wszystkie opinie ({count}) w Shopify App Store",
   "home.compare.eyebrow": "Zapobieganie, nie tylko odzyskiwanie",
   "home.compare.heading": "To brakująca połowa Twojej strategii walki z porzuconymi koszykami.",
   "home.compare.intro": "E-maile i SMS-y o porzuconym koszyku wysyłają się po jego utracie i docierają tylko do klientów, którzy wyrazili zgodę. Persistent Cart działa przed porzuceniem — sprawia, że koszyk w ogóle nie znika, w przypadku każdego zalogowanego klienta. Najlepiej działają razem.",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/mies.",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "Przywrócony przy logowaniu — automatycznie",
-  "nav.vsEmail": "Vs. e-maile ratunkowe"
+  "nav.vsEmail": "Vs. e-maile ratunkowe",
+  "demo.account.savedLabel": "Zapisano na koncie",
+  "demo.cart.savedChip": "Zapisano na Twoim koncie",
+  "demo.cart.signedInChip": "Zalogowano",
+  "home.reviews.1.quote": "Wiem, że nasi klienci doceniają możliwość dodania produktów do koszyka na telefonie i płynnego dokończenia zamówienia na komputerze.",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "Kanada · ponad 2 lata z aplikacją",
+  "home.reviews.2.quote": "Używamy tej aplikacji od kilku lat. Zdecydowanie najlepsza aplikacja koszykowa do zapamiętywania koszyków.",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "Stany Zjednoczone · prawie 4 lata z aplikacją",
+  "home.reviews.3.quote": "…oszczędza klientom mnóstwo frustracji i zwiększa konwersję…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "Kanada · ponad 5 lat z aplikacją"
 }

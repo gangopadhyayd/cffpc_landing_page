@@ -466,3 +466,27 @@ US = no banner + gtag injected; Berlin = banner + no gtag until Accept.
 ⚠️ NOT YET DEPLOYED: Netlify account froze 2026-07-08 ("Skipped due to account
 credit usage exceeded", Free plan, created 07-06, manual CLI deploys also 403) —
 cycles 8+this ship on the first build after the owner upgrades or credits reset.
+
+### Cycle 8 part 2 — figure mechanism v2, co-equal window, real reviews, accuracy sweep
+
+- **Stat**: value + window now co-equal display size on one line ("$30 Million+
+  in the last 30 days", window in accent-ink), qualifier beneath ("order value
+  from carts auto-transferred across devices"). Kept "in the last 30 days"
+  wording — a measured recent window; "every 30 days" would claim an unverified
+  recurring rate.
+- **Figure v2** (borrowed from the app-store hero export): account node (circled
+  person) ON the kept path + evergreen "SAVED TO THE ACCOUNT" label; "✓ Saved to
+  your account" chip on the phone; "Signed in" row in the synced laptop; cart
+  internals compressed (rows/gaps/screen heights) so both laptops match and the
+  figure is shorter. 3 new keys ×15.
+- **Real review cards** (verbatim from the live listing, extracted + verified
+  2026-07-08): SupplementSource.ca (Canada, 2+ yrs), Public Goods (US, ~4 yrs),
+  Nest (Canada, 5+ yrs) under the featured GMD testimonial. Quotes translated
+  ×14 per the existing testimonial precedent; store names verbatim.
+- **Accuracy sweep fixes ×15**: testimonial CTA names the SHOPIFY App Store;
+  /contact lede no longer promises "free audit" (page is deferred);
+  staff-attribution de-personified on cart-disappears + cornerstone ("Shopify's
+  own community answers say…" / "community answers, which note…") — the
+  paraphrases read as official staff statements. Pricing "matches your Shopify
+  subscription" left as-is (accurate — the hidden Advanced tier exists in config
+  at $24.99; showing its card remains an owner decision).

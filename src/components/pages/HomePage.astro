@@ -151,7 +151,8 @@ const jsonLd = [
     <MetricBand items={metrics} bg="navy" />
   </Section>
 
-  {/* 7 — Testimonial */}
+  {/* 7 — Testimonial + real review cards (owner 2026-07-08; quotes verbatim
+      from the live App Store listing, verified same day). */}
   <Section eyebrow={tt('home.testimonial.eyebrow')} bg="soft" align="center">
     <div class="testimonial-center">
       <Testimonial
@@ -161,6 +162,18 @@ const jsonLd = [
         cta={tt('cta.readReviews')}
         href={hrefs.reviews}
       />
+    </div>
+    <div class="review-row">
+      {[1, 2, 3].map((n) => (
+        <figure class="review-card">
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <blockquote class="review-quote">{tt(`home.reviews.${n}.quote`)}</blockquote>
+          <figcaption class="review-meta">
+            <strong>{tt(`home.reviews.${n}.author`)}</strong>
+            <span>{tt(`home.reviews.${n}.meta`)}</span>
+          </figcaption>
+        </figure>
+      ))}
     </div>
   </Section>
 
@@ -283,6 +296,50 @@ const jsonLd = [
   .testimonial-center {
     display: flex;
     justify-content: center;
+  }
+  .review-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+    text-align: left;
+  }
+  @media (min-width: 760px) {
+    .review-row {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .review-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 1.15rem 1.2rem 1.05rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  .review-stars {
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+  }
+  .review-quote {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--color-ink);
+    flex: 1;
+  }
+  .review-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    font-size: 0.8rem;
+    color: var(--color-ink-faint);
+  }
+  .review-meta strong {
+    color: var(--color-ink);
+    font-weight: 650;
   }
 
   .pricing-row {

@@ -177,7 +177,7 @@
   "home.testimonial.quote": "이 앱이 없으면 고객이 기기를 바꿀 때 장바구니를 잃어버립니다… 이는 대형 온라인 소매업체 웹사이트가 작동하는 방식이 전혀 아닙니다… 장바구니가 단순히 '기기'가 아니라 '고객 계정'에 사실상 남아 있게 됩니다.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "미국 · Persistent Cart 9년 이상 사용",
-  "home.testimonial.cta": "App Store에서 리뷰 {count}건 모두 읽기",
+  "home.testimonial.cta": "Shopify 앱스토어에서 리뷰 {count}건 모두 읽기",
   "home.compare.eyebrow": "복구만이 아니라, 예방",
   "home.compare.heading": "당신의 이탈 전략에서 빠져 있던 절반입니다.",
   "home.compare.intro": "장바구니 이탈 이메일과 SMS는 장바구니가 이미 사라진 뒤에 발송되며, 동의한 쇼핑객에게만 닿습니다. Persistent Cart는 이탈 이전에 작동합니다 — 모든 로그인 쇼핑객에 대해 애초에 장바구니가 사라지지 않게 합니다. 둘은 함께 쓸 때 가장 강력합니다.",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/월",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "로그인 시 복원 — 자동",
-  "nav.vsEmail": "이메일 리커버리와 비교"
+  "nav.vsEmail": "이메일 리커버리와 비교",
+  "demo.account.savedLabel": "계정에 저장됨",
+  "demo.cart.savedChip": "회원님의 계정에 저장됨",
+  "demo.cart.signedInChip": "로그인됨",
+  "home.reviews.1.quote": "고객들이 모바일에서 장바구니에 상품을 담고 데스크톱에서 매끄럽게 주문을 마칠 수 있다는 점을 정말 좋아합니다.",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "캐나다 · 앱 사용 2년 이상",
+  "home.reviews.2.quote": "이 앱을 몇 년째 쓰고 있습니다. 장바구니를 기억해 주는 앱 중에서는 단연 최고입니다.",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "미국 · 앱 사용 약 4년",
+  "home.reviews.3.quote": "…고객의 불편을 크게 줄여 주고 전환율을 높여 줍니다…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "캐나다 · 앱 사용 5년 이상"
 }

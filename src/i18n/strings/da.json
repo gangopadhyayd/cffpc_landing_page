@@ -177,7 +177,7 @@
   "home.testimonial.quote": "Uden appen mister kunderne deres indkøbskurv, hvis de skifter enhed… Det er IKKE sådan, alle de store onlineforhandleres websites fungerer… kurven bliver reelt hos kundens KONTO i stedet for blot ENHEDEN.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "USA · har brugt Persistent Cart i 9+ år",
-  "home.testimonial.cta": "Læs alle {count} anmeldelser på App Store",
+  "home.testimonial.cta": "Læs alle {count} anmeldelser på Shopify App Store",
   "home.compare.eyebrow": "Forebyggelse, ikke kun genvinding",
   "home.compare.heading": "Det er den manglende halvdel af din strategi mod forladte kurve.",
   "home.compare.intro": "Mails og SMS'er om forladte kurve udløses, efter en kurv er væk, og når kun kunder, der har sagt ja. Persistent Cart virker før kurven forlades — den forhindrer kurven i at forsvinde i første omgang, for hver eneste indlogget kunde. De fungerer bedst sammen.",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/md.",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "Gendannet ved login — automatisk",
-  "nav.vsEmail": "Vs. e-mail-genopretning"
+  "nav.vsEmail": "Vs. e-mail-genopretning",
+  "demo.account.savedLabel": "Gemt på kontoen",
+  "demo.cart.savedChip": "Gemt på din konto",
+  "demo.cart.signedInChip": "Logget ind",
+  "home.reviews.1.quote": "Jeg ved, at vores kunder sætter pris på at kunne lægge varer i kurven på mobilen og gøre ordren færdig på computeren helt gnidningsfrit.",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "Canada · over 2 år med appen",
+  "home.reviews.2.quote": "Vi har brugt denne app i et par år nu. Klart den bedste kurv-app til at huske kurve.",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "USA · næsten 4 år med appen",
+  "home.reviews.3.quote": "…den sparer kunderne for meget frustration og øger konverteringen…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "Canada · over 5 år med appen"
 }

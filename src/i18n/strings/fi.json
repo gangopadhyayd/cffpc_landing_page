@@ -177,7 +177,7 @@
   "home.testimonial.quote": "Ilman sovellusta asiakkaat menettävät ostoskorinsa, jos he vaihtavat laitetta… Näin EIVÄT toimi kaikki suuret verkkokauppasivustot… ostoskori pysyy käytännössä asiakkaan TILILLÄ eikä pelkästään LAITTEELLA.",
   "home.testimonial.author": "Green Mountain Diapers",
   "home.testimonial.meta": "Yhdysvallat · käyttänyt Persistent Cartia yli 9 vuotta",
-  "home.testimonial.cta": "Lue kaikki {count} arvostelua App Storessa",
+  "home.testimonial.cta": "Lue kaikki {count} arvostelua Shopify App Storessa",
   "home.compare.eyebrow": "Ennaltaehkäisyä, ei vain palautusta",
   "home.compare.heading": "Se on hylkäysstrategiasi puuttuva puolisko.",
   "home.compare.intro": "Hylätyn ostoskorin sähköpostit ja tekstiviestit laukeavat vasta, kun ostoskori on jo mennyt, ja tavoittavat vain ne asiakkaat, jotka antoivat suostumuksensa. Persistent Cart toimii ennen hylkäämistä — se estää ostoskoria katoamasta ensiksikään, jokaiselta kirjautuneelta asiakkaalta. Ne toimivat parhaiten yhdessä.",
@@ -255,5 +255,17 @@
   "pricing.chip.mo": "/kk",
   "trust.impact.value": "$30M+",
   "demo.cart.restoredNote": "Palautettu kirjautuessa — automaattisesti",
-  "nav.vsEmail": "Vs. palautussähköpostit"
+  "nav.vsEmail": "Vs. palautussähköpostit",
+  "demo.account.savedLabel": "Tallennettu tilille",
+  "demo.cart.savedChip": "Tallennettu tilillesi",
+  "demo.cart.signedInChip": "Kirjautunut",
+  "home.reviews.1.quote": "Tiedän, että asiakkaamme arvostavat sitä, että tuotteet voi lisätä koriin puhelimella ja tilauksen voi viimeistellä tietokoneella saumattomasti.",
+  "home.reviews.1.author": "SupplementSource.ca",
+  "home.reviews.1.meta": "Kanada · yli 2 vuotta sovelluksen kanssa",
+  "home.reviews.2.quote": "Olemme käyttäneet tätä sovellusta jo muutaman vuoden. Selvästi paras ostoskorisovellus korien muistamiseen.",
+  "home.reviews.2.author": "Public Goods",
+  "home.reviews.2.meta": "Yhdysvallat · lähes 4 vuotta sovelluksen kanssa",
+  "home.reviews.3.quote": "…se säästää asiakkailta paljon turhautumista ja parantaa konversiota…",
+  "home.reviews.3.author": "Nest",
+  "home.reviews.3.meta": "Kanada · yli 5 vuotta sovelluksen kanssa"
 }
