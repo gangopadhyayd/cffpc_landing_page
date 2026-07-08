@@ -453,3 +453,16 @@ Plan: docs/improvement-plan-2026-07-08.md (general classes + specifics). One dep
   15→17, home schema untouched).
 - Diagrams-vs-text evaluation in the plan doc; how-it-works step-strip is the
   next build item (parked for the next deploy window).
+
+### Cycle 8 addendum — geo-gated analytics consent (owner decision 2026-07-08)
+
+GA4 consent is now geo-gated: visitors in consent-required regions (EU/EEA/UK/CH —
+client-side timezone heuristic `Europe/*` + EU Atlantic zones, deliberate superset,
+fail-safe to needs-consent) keep the banner + GA-after-Accept; everyone else gets
+GA automatically with NO banner. A stored Decline wins everywhere. consent.text
+re-authored ×15 (the old "cookieless analytics by default" claim was inaccurate —
+Plausible was never wired). Verified both paths via TZ-override headless Chrome:
+US = no banner + gtag injected; Berlin = banner + no gtag until Accept.
+⚠️ NOT YET DEPLOYED: Netlify account froze 2026-07-08 ("Skipped due to account
+credit usage exceeded", Free plan, created 07-06, manual CLI deploys also 403) —
+cycles 8+this ship on the first build after the owner upgrades or credits reset.

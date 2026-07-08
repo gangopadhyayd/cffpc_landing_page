@@ -35,7 +35,7 @@
   "common.backToHome": "Retour à l'accueil",
   "common.sourcesNote": "Les sources sont citées en lien dans le texte. Les statistiques sont datées ; les estimations modélisées sont signalées comme telles.",
   "crumb.home": "Accueil",
-  "consent.text": "Par défaut, nous utilisons des statistiques respectueuses de la vie privée et sans cookies. Avec votre accord, nous utiliserons aussi Google Analytics pour améliorer le site. Refusez, et le site fonctionne exactement de la même façon.",
+  "consent.text": "Avec votre accord, nous utilisons Google Analytics pour voir quelles pages aident les marchands — rien d'autre. Si vous refusez, le site fonctionne exactement pareil.",
   "consent.accept": "Accepter",
   "consent.decline": "Refuser",
   "consent.privacy": "Confidentialité",

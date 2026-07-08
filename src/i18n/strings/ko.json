@@ -35,7 +35,7 @@
   "common.backToHome": "홈으로 돌아가기",
   "common.sourcesNote": "출처는 본문에 링크되어 있습니다. 통계에는 날짜가 표기되며, 모델 기반 추정치는 그렇게 명시합니다.",
   "crumb.home": "홈",
-  "consent.text": "저희는 기본적으로 개인정보를 보호하는 쿠키 없는 분석을 사용합니다. 동의해 주시면 사이트 개선을 위해 Google Analytics도 사용합니다. 거부하셔도 사이트는 똑같이 작동합니다.",
+  "consent.text": "동의해 주시면 어떤 페이지가 판매자에게 도움이 되는지 확인하기 위해 Google Analytics를 사용합니다 — 그 외에는 없습니다. 거부해도 사이트는 똑같이 작동합니다.",
   "consent.accept": "동의",
   "consent.decline": "거부",
   "consent.privacy": "개인정보 처리방침",

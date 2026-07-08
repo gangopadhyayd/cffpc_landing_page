@@ -2,8 +2,11 @@
 /**
  * Analytics + conversion tracking — all env-gated and consent-aware.
  * - Plausible (cookieless): loads if PUBLIC_PLAUSIBLE_DOMAIN — no consent needed.
- * - GA4 (cookies): loads ONLY after the visitor accepts (ConsentBanner) and
- *   PUBLIC_GA4_MEASUREMENT_ID is set.
+ * - GA4 (cookies): GEO-GATED CONSENT (owner decision 2026-07-08). Visitors in
+ *   consent-required regions (EU/EEA/UK/CH — detected client-side via timezone,
+ *   conservative superset, fail-safe to "needs consent") get the ConsentBanner
+ *   and GA loads only after Accept. Everyone else gets GA automatically with no
+ *   banner. A stored Decline is respected everywhere, regardless of region.
  * - A tiny tracker forwards [data-event] clicks + lead:submitted + calculator use
  *   to whichever analytics is active. Goal events: install_click, audit_cta,
  *   partner_cta, form_submit/lead_submitted, calculator_used.
@@ -51,7 +54,24 @@ const PLAUSIBLE = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
       window.gtag('config', GA_ID, { anonymize_ip: true });
     };
 
-    if (localStorage.getItem(CONSENT_KEY) === 'granted') window.pcLoadGA();
+    // Consent-required region? Timezone heuristic: Europe/* plus the EU/EEA
+    // Atlantic zones. Deliberately a superset (catches non-EU Europe too) and
+    // fails safe to "needs consent" when the timezone is unreadable.
+    window.pcNeedsConsent = function () {
+      try {
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+        if (/^Europe\//.test(tz)) return true;
+        return ['Atlantic/Canary', 'Atlantic/Madeira', 'Atlantic/Azores', 'Atlantic/Reykjavik', 'Atlantic/Faroe'].indexOf(tz) !== -1;
+      } catch (e) {
+        return true;
+      }
+    };
+
+    const consentChoice = localStorage.getItem(CONSENT_KEY);
+    if (consentChoice === 'granted') window.pcLoadGA();
+    // Outside consent regions: GA runs without a banner (a stored Decline —
+    // e.g. made while travelling in the EU — still wins above).
+    else if (!consentChoice && !window.pcNeedsConsent()) window.pcLoadGA();
 
     // Track outbound + CTA clicks declared with data-event.
     document.addEventListener('click', function (e) {

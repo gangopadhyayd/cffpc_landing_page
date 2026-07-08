@@ -35,7 +35,7 @@
   "common.backToHome": "Back to home",
   "common.sourcesNote": "Sources are linked inline. Statistics are dated; modeled estimates are labeled as such.",
   "crumb.home": "Home",
-  "consent.text": "We use privacy-friendly, cookieless analytics by default. With your OK, we'll also use Google Analytics to improve the site. Decline and the site works exactly the same.",
+  "consent.text": "With your OK, we use Google Analytics to see which pages help merchants — nothing else. Decline and the site works exactly the same.",
   "consent.accept": "Accept",
   "consent.decline": "Decline",
   "consent.privacy": "Privacy",

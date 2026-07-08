@@ -35,7 +35,7 @@
   "common.backToHome": "返回首页",
   "common.sourcesNote": "资料来源以行内链接标注。统计数据均注明日期；模型推算的估算值也已相应标注。",
   "crumb.home": "首页",
-  "consent.text": "我们默认使用注重隐私、无 Cookie 的分析工具。在您同意的情况下，我们还会使用 Google Analytics 来改进本网站。即使您拒绝，网站功能也完全不受影响。",
+  "consent.text": "在您同意后，我们才会使用 Google Analytics 了解哪些页面对商家有帮助 — 仅此而已。拒绝后网站功能完全相同。",
   "consent.accept": "接受",
   "consent.decline": "拒绝",
   "consent.privacy": "隐私",

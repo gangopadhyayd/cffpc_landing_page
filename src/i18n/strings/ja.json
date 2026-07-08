@@ -35,7 +35,7 @@
   "common.backToHome": "ホームに戻る",
   "common.sourcesNote": "出典は本文中にリンクしています。統計には日付を付し、モデルによる推計はその旨を明記しています。",
   "crumb.home": "ホーム",
-  "consent.text": "当サイトは標準で、プライバシーに配慮した Cookie 不使用の分析を利用しています。ご同意いただける場合は、サイト改善のために Google Analytics も利用します。拒否されても、サイトはまったく同じように機能します。",
+  "consent.text": "ご同意いただいた場合のみ、どのページがマーチャントの役に立っているかを知るために Google Analytics を使用します — それ以外には使いません。拒否してもサイトはまったく同じように動作します。",
   "consent.accept": "同意する",
   "consent.decline": "拒否する",
   "consent.privacy": "プライバシー",
