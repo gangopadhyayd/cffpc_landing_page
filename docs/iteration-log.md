@@ -490,3 +490,19 @@ cycles 8+this ship on the first build after the owner upgrades or credits reset.
   paraphrases read as official staff statements. Pricing "matches your Shopify
   subscription" left as-is (accurate — the hidden Advanced tier exists in config
   at $24.99; showing its card remains an owner decision).
+
+### Cycle 8 part 3 — horizontal fork (owner: laptops unequal again + figure too tall)
+
+- **Laptops now provably equal**: fixed `height: 10.6rem` on BOTH live-variant
+  screens (min-height let the synced side drift every time content changed —
+  twice now). Equality asserted programmatically (playwright measure: 170/170).
+- **Figure de-heightened 891→~704px** and rebalanced against the copy column:
+  demo cart slimmed to 3 resting rows (socks item removed from DEMO_ITEMS;
+  subtotal derives → $242 rest / $224 pre), phone aspect tightened, paths block
+  shortened, plate/caption spacing compressed.
+- **Desktop ≥980px: HORIZONTAL composition** (the app-store export's layout):
+  grid phone | switch | stacked outcomes; new horizontal paths SVG (vertical one
+  keeps the stacked mobile layout); dot animation picks the visible path at
+  runtime; phone-side leader annotation hidden in horizontal mode.
+- **Reviews link/count removed** (owner: 47 reads low): testimonial renders
+  without CTA; no "read all reviews" link or review-count mention anywhere.

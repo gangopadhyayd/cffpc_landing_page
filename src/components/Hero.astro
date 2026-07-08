@@ -135,20 +135,38 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
             kept path is the mechanism (borrowed from the app-store hero export):
             the cart is saved to the login, so it follows the login. */}
         <div class="fork-switch">
-          <svg class="fork-paths" viewBox="0 0 560 96" aria-hidden="true" fill="none">
+          {/* vertical paths — stacked/mobile layout */}
+          <svg class="fork-paths fork-paths-v" viewBox="0 0 560 72" aria-hidden="true" fill="none">
             {isPlate && <circle class="origin-ring" cx="280" cy="7" r="4" />}
-            <path class="path-lost" d="M280 6 C 280 50, 140 36, 140 62" />
+            <path class="path-lost" d="M280 5 C 280 38, 140 28, 140 46" />
             <g class="lost-x">
-              <line x1="133" y1="70" x2="147" y2="84" />
-              <line x1="147" y1="70" x2="133" y2="84" />
+              <line x1="133" y1="54" x2="147" y2="68" />
+              <line x1="147" y1="54" x2="133" y2="68" />
             </g>
-            <path class="path-kept" data-kept d="M280 6 C 280 50, 420 32, 420 88" />
-            <path class="kept-arrow" d="M413 80 L420 90 L427 80" />
+            <path class="path-kept" data-kept d="M280 5 C 280 38, 420 24, 420 66" />
+            <path class="kept-arrow" d="M413 58 L420 68 L427 58" />
             <g class="account-node">
-              <circle cx="367" cy="42" r="13" />
-              <path class="account-glyph" d="M367 39.4a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8Zm-6 9.6c.7-3.1 3.1-5 6-5s5.3 1.9 6 5" />
+              <circle cx="367" cy="31" r="12" />
+              <path class="account-glyph" d="M367 28.4a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Zm-5.6 9c.65-2.9 2.9-4.7 5.6-4.7s4.95 1.8 5.6 4.7" />
             </g>
-            <circle class="kept-dot" data-dot r="5" cx="280" cy="6" />
+            <circle class="kept-dot" data-dot r="5" cx="280" cy="5" />
+          </svg>
+          {/* horizontal paths — desktop layout (the app-store-export composition):
+              origin at the phone, splitting right to the two stacked outcomes. */}
+          <svg class="fork-paths fork-paths-h" viewBox="0 0 150 330" aria-hidden="true" fill="none">
+            {isPlate && <circle class="origin-ring" cx="8" cy="165" r="4" />}
+            <path class="path-lost" d="M8 163 C 60 140, 105 110, 136 82" />
+            <g class="lost-x">
+              <line x1="133" y1="62" x2="147" y2="76" />
+              <line x1="147" y1="62" x2="133" y2="76" />
+            </g>
+            <path class="path-kept" data-kept d="M8 167 C 60 196, 108 228, 140 254" />
+            <path class="kept-arrow" d="M128 253 L142 256 L134 243" />
+            <g class="account-node">
+              <circle cx="76" cy="208" r="12" />
+              <path class="account-glyph" d="M76 205.4a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Zm-5.6 9c.65-2.9 2.9-4.7 5.6-4.7s4.95 1.8 5.6 4.7" />
+            </g>
+            <circle class="kept-dot" data-dot r="5" cx="8" cy="167" />
           </svg>
           <span class="account-label">{t(locale, 'demo.account.savedLabel')}</span>
         </div>
@@ -360,14 +378,14 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     background-color: var(--color-card-soft);
     background-image: radial-gradient(circle, rgb(28 24 21 / 0.055) 1px, transparent 1px);
     background-size: 18px 18px;
-    padding: 1.1rem 1.25rem 1.2rem;
+    padding: 0.85rem 1.1rem 0.95rem;
     box-shadow: var(--shadow-card);
   }
   .plate-head {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    margin-bottom: 1.1rem;
+    margin-bottom: 0.8rem;
     font-family: var(--font-mono);
     font-size: 0.62rem;
     letter-spacing: 0.14em;
@@ -435,8 +453,8 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
   .fork--plate .demo-caption,
   .fork--live .demo-caption {
     border-top: 1px solid var(--color-hairline);
-    padding-top: 0.9rem;
-    margin-top: 1.2rem;
+    padding-top: 0.6rem;
+    margin-top: 0.8rem;
   }
   .origin-ring {
     fill: var(--color-card-soft);
@@ -458,11 +476,11 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     box-shadow: var(--shadow-card);
   }
   .device-phone {
-    width: min(11.2rem, 62%);
-    aspect-ratio: 10 / 15.5;
+    width: min(10.4rem, 60%);
+    aspect-ratio: 10 / 14.6;
     margin-inline: auto;
-    border-radius: 26px;
-    padding: 2rem 0.6rem 1.5rem;
+    border-radius: 24px;
+    padding: 1.6rem 0.6rem 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -501,11 +519,11 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
   }
   /* live: the phone needs a touch more vertical room for the 4th line */
   .fork--live .device-phone {
-    aspect-ratio: 10 / 16.4;
+    aspect-ratio: 10 / 15.2;
   }
   .device-laptop {
     border-radius: 14px 14px 2px 2px;
-    padding: 1.15rem 0.75rem 0.8rem;
+    padding: 0.9rem 0.7rem 0.68rem;
   }
   /* webcam dot in the screen bezel */
   .device-laptop::before {
@@ -523,10 +541,11 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     min-height: 9.4rem;
   }
   .fork--live .device-laptop .screen {
-    /* Match the synced cart's natural content height so BOTH laptops render
-       the same size (the empty one looked smaller/odd — owner 2026-07-08).
-       Kept as short as the 4-row cart + signed-in row allow. */
-    min-height: 11.6rem;
+    /* EXACT equal height for both outcomes, measured from the synced cart's
+       natural content (audit-by-measurement — owner flagged unequal laptops
+       twice; min-height lets content drift, fixed height cannot). */
+    height: 10.6rem;
+    min-height: 0;
   }
   .fork--real .device-laptop .screen {
     min-height: 10.6rem;
@@ -568,7 +587,7 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
   .account-label {
     position: absolute;
     right: 2%;
-    top: 22%;
+    top: 16%;
     font-family: var(--font-mono);
     font-size: 0.6rem;
     letter-spacing: 0.1em;
@@ -596,11 +615,11 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     display: flex;
     align-items: center;
     gap: 0.32rem;
-    font-size: 0.6rem;
+    font-size: 0.58rem;
     font-weight: 600;
     color: var(--color-ink-faint);
-    padding-bottom: 0.3rem;
-    margin-bottom: 0.35rem;
+    padding-bottom: 0.22rem;
+    margin-bottom: 0.28rem;
     border-bottom: 1px solid var(--color-hairline);
   }
   .restore-note {
@@ -611,7 +630,7 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-evergreen);
-    margin-top: 0.35rem;
+    margin-top: 0.25rem;
   }
   .device-tag {
     display: flex;
@@ -852,11 +871,11 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
   }
 
   .demo-caption {
-    margin-top: 1.4rem;
+    margin-top: 0.9rem;
     text-align: center;
-    font-size: 0.84rem;
+    font-size: 0.8rem;
     color: var(--color-ink-soft);
-    max-width: 30rem;
+    max-width: 32rem;
     margin-inline: auto;
   }
 
@@ -902,6 +921,80 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     }
   }
 
+  /* Desktop: HORIZONTAL composition (owner 2026-07-08, after the app-store
+     export) — phone | switch | stacked outcomes. Cuts the figure's height to
+     roughly the copy column's; the stacked/vertical layout remains below 980. */
+  .fork-paths-h {
+    display: none;
+  }
+  @media (min-width: 980px) {
+    .fork--plate,
+    .fork--live {
+      display: grid;
+      grid-template-columns: minmax(9.5rem, 10.6rem) minmax(5.5rem, 1fr) minmax(13rem, 15.5rem);
+      grid-template-areas:
+        'head head head'
+        'phone switch outcomes'
+        'caption caption caption';
+      align-items: center;
+      column-gap: 0.7rem;
+      max-width: 40rem;
+    }
+    .fork--plate .plate-head,
+    .fork--live .plate-head {
+      grid-area: head;
+    }
+    .fork--plate .fork-phone,
+    .fork--live .fork-phone {
+      grid-area: phone;
+    }
+    .fork--plate .fork-phone .device-phone,
+    .fork--live .fork-phone .device-phone {
+      width: 100%;
+    }
+    .fork--plate .fork-switch,
+    .fork--live .fork-switch {
+      grid-area: switch;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+    }
+    .fork--plate .fork-outcomes,
+    .fork--live .fork-outcomes {
+      grid-area: outcomes;
+      grid-template-columns: 1fr;
+      gap: 0.85rem;
+    }
+    .fork--plate .demo-caption,
+    .fork--live .demo-caption {
+      grid-area: caption;
+    }
+    .fork--plate .fork-paths-v,
+    .fork--live .fork-paths-v {
+      display: none;
+    }
+    .fork--plate .fork-paths-h,
+    .fork--live .fork-paths-h {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .fork--plate .account-label,
+    .fork--live .account-label {
+      right: auto;
+      left: 4%;
+      top: 60%;
+      bottom: auto;
+      text-align: left;
+      max-width: 7rem;
+    }
+    /* the phone-side leader annotation assumes the vertical geometry */
+    .fork--plate .annot,
+    .fork--live .annot {
+      display: none !important;
+    }
+  }
+
   /* Small screens: the fork stacks — phone, then each future in reading order.
      The connector paths assume side-by-side geometry, so they step aside and
      the labeled chips carry the branching. */
@@ -936,15 +1029,28 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
   // shows the finished story.
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fork = document.querySelector<HTMLElement>('[data-fork]');
-  const kept = fork?.querySelector<SVGPathElement>('[data-kept]');
-  const dot = fork?.querySelector<SVGCircleElement>('[data-dot]');
 
-  if (fork && kept && dot && !prefersReduced) {
+  // Two path SVGs exist (vertical + horizontal desktop); animate the visible one.
+  const activePaths = () => {
+    for (const svg of Array.from(fork?.querySelectorAll<SVGSVGElement>('.fork-paths') ?? [])) {
+      if (svg.getBoundingClientRect().width > 0) {
+        return {
+          kept: svg.querySelector<SVGPathElement>('[data-kept]'),
+          dot: svg.querySelector<SVGCircleElement>('[data-dot]'),
+        };
+      }
+    }
+    return { kept: null, dot: null };
+  };
+
+  if (fork && activePaths().kept && !prefersReduced) {
     const isLive = fork.dataset.variant === 'live';
-    const len = kept.getTotalLength();
 
     const travel = (dur = 1100) =>
       new Promise<void>((resolve) => {
+        const { kept, dot } = activePaths();
+        if (!kept || !dot) return resolve();
+        const len = kept.getTotalLength();
         const t0 = performance.now();
         dot.style.opacity = '1';
         const step = (now: number) => {
