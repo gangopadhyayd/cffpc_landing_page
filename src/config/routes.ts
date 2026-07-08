@@ -36,15 +36,13 @@ export const V1_DEFERRED = new Set<string>([
   'free-audit',
   'partners',
   'affiliates',
-  'cross-device',
+  // 2026-07-08 owner SEO round: cross-device, vs-recovery, b2b, uc-wholesale,
+  // compare-email re-enabled (query intents: abandoned-email alternative,
+  // wholesale/multi-user carts, phone-ad → desktop journey).
   'big-retailers',
-  'vs-recovery',
-  'b2b',
   'plus',
   'uc-high-aov',
   'uc-repeat',
-  'uc-wholesale',
-  'compare-email',
   'resources',
   'summary',
   'changelog',
@@ -55,7 +53,7 @@ const ALL_PAGES: PageDef[] = [
   { key: 'home', slug: '', cluster: 'core', schema: 'SoftwareApplication' },
   { key: 'how-it-works', slug: 'how-it-works', cluster: 'education', nav: { label: 'nav.product', order: 1 }, footer: { group: 'product', order: 2 } },
   { key: 'pricing', slug: 'pricing', cluster: 'core', nav: { label: 'nav.pricing', order: 2 }, footer: { group: 'product', order: 1 } },
-  { key: 'faq', slug: 'faq', cluster: 'education', schema: 'FAQPage', nav: { label: 'nav.faq', order: 3 }, footer: { group: 'learn', order: 2 } },
+  { key: 'faq', slug: 'faq', cluster: 'education', schema: 'FAQPage', nav: { label: 'nav.faq', order: 4 }, footer: { group: 'learn', order: 2 } },
 
   // --- Deferred core/program pages (v2) ---
   { key: 'calculator', slug: 'lost-cart-revenue-calculator', cluster: 'core' },
@@ -66,19 +64,19 @@ const ALL_PAGES: PageDef[] = [
   // --- Education + SEO/GEO (cornerstone + cluster) ---
   { key: 'cornerstone', slug: 'shopify-persistent-cart', cluster: 'education', footer: { group: 'learn', order: 1 } },
   { key: 'cart-disappears', slug: 'shopify-cart-disappears-after-login', cluster: 'education', parent: 'shopify-persistent-cart', footer: { group: 'learn', order: 3 } },
-  { key: 'cross-device', slug: 'shopify-cross-device-cart-sync', cluster: 'education' },
+  { key: 'cross-device', slug: 'shopify-cross-device-cart-sync', cluster: 'education', footer: { group: 'learn', order: 5 } },
   { key: 'big-retailers', slug: 'how-big-retailers-persist-carts', cluster: 'education', parent: 'shopify-persistent-cart' },
-  { key: 'vs-recovery', slug: 'persistent-cart-vs-abandoned-cart-recovery', cluster: 'comparison' },
-  { key: 'b2b', slug: 'shopify-b2b-cart-persistence', cluster: 'education', parent: 'shopify-persistent-cart' },
+  { key: 'vs-recovery', slug: 'persistent-cart-vs-abandoned-cart-recovery', cluster: 'comparison', nav: { label: 'nav.vsEmail', order: 3 }, footer: { group: 'learn', order: 4 } },
+  { key: 'b2b', slug: 'shopify-b2b-cart-persistence', cluster: 'education', parent: 'shopify-persistent-cart', footer: { group: 'learn', order: 6 } },
   { key: 'plus', slug: 'shopify-plus', cluster: 'education', parent: 'shopify-persistent-cart' },
 
   // --- Use cases (deferred) ---
   { key: 'uc-high-aov', slug: 'use-cases/high-aov-stores', cluster: 'usecase', parent: 'shopify-persistent-cart' },
   { key: 'uc-repeat', slug: 'use-cases/repeat-customers', cluster: 'usecase', parent: 'shopify-persistent-cart' },
-  { key: 'uc-wholesale', slug: 'use-cases/wholesale-b2b', cluster: 'usecase', parent: 'shopify-persistent-cart' },
+  { key: 'uc-wholesale', slug: 'use-cases/wholesale-b2b', cluster: 'usecase', parent: 'shopify-persistent-cart', footer: { group: 'learn', order: 7 } },
 
   // --- Comparisons (deferred) ---
-  { key: 'compare-email', slug: 'compare/abandoned-cart-email', cluster: 'comparison', parent: 'persistent-cart-vs-abandoned-cart-recovery' },
+  { key: 'compare-email', slug: 'compare/abandoned-cart-email', cluster: 'comparison', parent: 'persistent-cart-vs-abandoned-cart-recovery', footer: { group: 'learn', order: 8 } },
 
   // --- Answer hubs / resources (deferred) ---
   { key: 'resources', slug: 'resources', cluster: 'core' },

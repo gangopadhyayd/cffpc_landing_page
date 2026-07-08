@@ -424,3 +424,32 @@ now a stat lockup (`.impact-value` at display size + "in orders from synced cart
 from synced carts — last 30 days"), note is just "Across stores using the app".
 `trust.impact` split into `trust.impact.qualifier` + `trust.impact.window` (old key
 deleted ×15); `syncedCartRevenueDaily` removed from config. Re-authored ×15.
+
+## Cycle 8 — owner feedback round (2026-07-08): clarity, mechanism, SEO expansion
+
+Plan: docs/improvement-plan-2026-07-08.md (general classes + specifics). One deploy.
+
+- **Stat final wording** ×15: value now localized key `trust.impact.value` (EN
+  "$30 Million+", others keep numeral form); reading order value → **window bold**
+  → "order value from carts auto-transferred across devices"; metric band label
+  leads with the window.
+- **Figure mechanism**: both laptops now equal (live-variant screen min-height
+  12.1rem — synced content had made one taller, "oddly shaped"); new evergreen
+  mono note under the synced laptop "RESTORED AT SIGN-IN — AUTOMATIC"
+  (`demo.cart.restoredNote` ×15); caption extended: "Restored automatically at
+  sign-in: no popups, no emails."
+- **Clarity rewrites** ×15: benefits heading → "One-click setup — then it works
+  silently in the background." (owner's model line); benefit 3 → "No interruptions
+  for shoppers"; eyebrow → "What you get"; how-it-works s4 meta-sentence
+  ("worth doing this deliberately…") → direct activation note.
+- **Worth-it FAQ answer** (home q7 + faq q13, ×15): dashboard-measured order value
+  + owner's "1,000×+ the subscription" framing; plan prices and the 10-sync
+  free-tier mechanics removed (volatile details).
+- **SEO/AI expansion**: V1_DEFERRED shrunk — **cross-device, vs-recovery, b2b,
+  uc-wholesale, compare-email re-enabled** (already built ×15; build 151→226
+  pages). vs-recovery joins the top nav ("Vs. email recovery", `nav.vsEmail` ×15);
+  footer learn column + related links restored (missing keys filter safely).
+  **Two new FAQs ×15**: cart-as-wishlist; phone-ads → desktop checkout (FAQ page
+  15→17, home schema untouched).
+- Diagrams-vs-text evaluation in the plan doc; how-it-works step-strip is the
+  next build item (parked for the next deploy window).

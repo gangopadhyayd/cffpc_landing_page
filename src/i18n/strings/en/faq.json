@@ -29,9 +29,13 @@
   "faq.q12.q": "Which languages and currencies does it support?",
   "faq.q12.a": "It works with multi-currency Shopify stores, and it syncs the cart regardless of language. The app is used by stores around the world — cross-device cart loss isn't specific to any one market.",
   "faq.q13.q": "How do I know it's worth it for my store?",
-  "faq.q13.a": "Test it on your own store before paying: the Free Starter plan runs up to 10 real cart syncs, and any paid plan adds a 30-day trial. On Basic it's $4.99/month — recovering a single mid-sized cross-device order more than covers it. You can watch it work on your own store before a dollar is charged, so you're not guessing.",
+  "faq.q13.a": "Persistent Cart's dashboard shows the order value coming from transferred carts on your own store — measured, not estimated. For many stores that value runs to 1,000×+ what the subscription costs. Every plan starts with a free trial, so you see your store's own numbers before paying anything.",
   "faq.q14.q": "Does it work with Shop and Shopify's new customer accounts?",
   "faq.q14.a": "Yes. Persistent Cart works with Shopify's new customer accounts, and when a shopper signs in through the Shop app their cart is tied to their account just the same. Keep in mind that Shop sign-in by itself doesn't move carts between devices — Persistent Cart is the layer that keeps the cart in sync everywhere the customer signs in.",
   "faq.q15.q": "How long do saved carts last?",
-  "faq.q15.a": "Until checkout — there's no time limit. The cart is stored against the customer's account and stays there until they buy or change it, whether they come back tomorrow or months later. On default Shopify, by comparison, the cart lives in a browser cookie for about two weeks."
+  "faq.q15.a": "Until checkout — there's no time limit. The cart is stored against the customer's account and stays there until they buy or change it, whether they come back tomorrow or months later. On default Shopify, by comparison, the cart lives in a browser cookie for about two weeks.",
+  "faq.q16.q": "Can it replace a wishlist app?",
+  "faq.q16.a": "For the most common wishlist job — keeping items so they're still there on the next visit, on any device — yes. A signed-in cart that follows the customer does what most shoppers actually use wishlists for: park items now, buy later, from whichever device they sign in on next. You skip a separate wishlist app, and the items are already in the cart when they're ready — one step closer to checkout, not two.",
+  "faq.q17.q": "Shoppers click my ads on their phones but buy on desktop. Does this help?",
+  "faq.q17.a": "That journey is exactly where a default Shopify store loses carts. A shopper taps an ad on their phone, adds to cart, then comes back later on a desktop — and the cart is empty, so the ad spend that built it is wasted at the last step. With Persistent Cart, whatever they added on the phone is waiting after they sign in on the desktop. Merchants tell us this phone-to-desktop path is one of the most common ways a sale quietly dies."
 }

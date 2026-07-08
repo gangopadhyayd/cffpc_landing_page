@@ -29,9 +29,13 @@
   "faq.q12.q": "Vilka språk och valutor stöder den?",
   "faq.q12.a": "Den fungerar med Shopify-butiker som har flera valutor, och den synkroniserar varukorgen oavsett språk. Appen används av butiker över hela världen — förlorade varukorgar mellan enheter är inte specifikt för någon enskild marknad.",
   "faq.q13.q": "Hur vet jag att den är värd det för min butik?",
-  "faq.q13.a": "Testa i din egen butik innan du betalar: Free Starter-planen täcker upp till 10 riktiga varukorgs-synkroniseringar, och alla betalplaner börjar med 30 dagars provperiod. Basic kostar 4,99 $ i månaden — en enda räddad medelstor beställning mellan enheter täcker det med råge. Du ser det fungera i din egen butik innan en enda dollar dras, så du behöver inte gissa.",
+  "faq.q13.a": "Persistent Carts instrumentpanel visar ordervärdet från överförda varukorgar i din egen butik — uppmätt, inte uppskattat. För många butiker överstiger det värdet 1 000× prenumerationskostnaden. Varje plan börjar med en gratis provperiod, så du ser din egen butiks siffror innan du betalar något.",
   "faq.q14.q": "Fungerar det med Shop och Shopifys nya kundkonton?",
   "faq.q14.a": "Ja. Persistent Cart fungerar med Shopifys nya kundkonton, och när en kund loggar in via Shop-appen knyts varukorgen till kontot på samma sätt. Observera: Shop-inloggning i sig flyttar inte varukorgen mellan enheter — Persistent Cart är lagret som håller korgen synkroniserad överallt där kunden loggar in.",
   "faq.q15.q": "Hur länge sparas varukorgarna?",
-  "faq.q15.a": "Fram till kassan — det finns ingen tidsgräns. Varukorgen sparas på kundens konto och ligger kvar tills kunden köper eller ändrar den, oavsett om de kommer tillbaka i morgon eller månader senare. Som jämförelse ligger korgen i standard-Shopify i en webbläsarcookie i ungefär två veckor."
+  "faq.q15.a": "Fram till kassan — det finns ingen tidsgräns. Varukorgen sparas på kundens konto och ligger kvar tills kunden köper eller ändrar den, oavsett om de kommer tillbaka i morgon eller månader senare. Som jämförelse ligger korgen i standard-Shopify i en webbläsarcookie i ungefär två veckor.",
+  "faq.q16.q": "Kan den ersätta en önskelisteapp?",
+  "faq.q16.a": "För önskelistans vanligaste uppgift — att spara varor så att de finns kvar vid nästa besök, på vilken enhet som helst — ja. En inloggad varukorg som följer kunden gör precis det de flesta använder önskelistor till: parkera varor nu, köp senare, från den enhet de loggar in på. Du slipper en separat app, och varorna ligger redan i varukorgen när det är dags — ett steg närmare kassan, inte två.",
+  "faq.q17.q": "Kunder klickar på mina annonser i mobilen men köper på datorn. Hjälper det här?",
+  "faq.q17.a": "Det är exakt på den resan en standardbutik på Shopify tappar varukorgar. En kund trycker på en annons i mobilen, lägger i varukorgen och kommer tillbaka senare på datorn — tom varukorg, och annonspengarna som fyllde den slösas bort i sista steget. Med Persistent Cart väntar allt som lades i på mobilen efter inloggningen på datorn. Handlare berättar att den här mobil-till-dator-resan är ett av de vanligaste sätten en försäljning tyst dör på."
 }

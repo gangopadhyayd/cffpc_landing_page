@@ -74,11 +74,11 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
 
       <ul class="hero-trust">
         <li class="trust-impact">
-          {/* Stat lockup, not a text line — the value AND its 30-day window are
-              the point (owner 2026-07-07: window must be prominent, above the fold). */}
-          <span class="impact-value tabular">{proof.syncedCartRevenue}</span>
+          {/* Owner reading order (2026-07-08): value → window (bold) → what it
+              measures. Value is localized (EN spells "Million"). */}
+          <span class="impact-value tabular">{t(locale, 'trust.impact.value')}</span>
           <span class="impact-text">
-            {t(locale, 'trust.impact.qualifier')} — <strong>{t(locale, 'trust.impact.window')}</strong>
+            <strong>{t(locale, 'trust.impact.window')}</strong> — {t(locale, 'trust.impact.qualifier')}
           </span>
         </li>
       </ul>
@@ -196,6 +196,9 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
               <span class="laptop-base" aria-hidden="true"></span>
             </div>
             <span class="device-tag">{t(locale, 'demo.device.laptop')}</span>
+            {/* The mechanism, stated in the figure itself (owner 2026-07-08):
+                the cart follows the LOGIN, restored automatically at sign-in. */}
+            <span class="restore-note">{t(locale, 'demo.cart.restoredNote')}</span>
           </div>
         </div>
 
@@ -490,7 +493,9 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
     min-height: 9.4rem;
   }
   .fork--live .device-laptop .screen {
-    min-height: 10.1rem;
+    /* Match the synced cart's natural content height so BOTH laptops render
+       the same size (the empty one looked smaller/odd — owner 2026-07-08). */
+    min-height: 12.1rem;
   }
   .fork--real .device-laptop .screen {
     min-height: 10.6rem;
@@ -512,6 +517,16 @@ const preSubtotal = formatMoney(cartSubtotal(DEMO_ITEMS)); // live: loop start v
         transparent 54.5%
       ),
       color-mix(in srgb, var(--color-ink) 85%, transparent);
+  }
+  .restore-note {
+    display: block;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-evergreen);
+    margin-top: 0.35rem;
   }
   .device-tag {
     display: flex;
