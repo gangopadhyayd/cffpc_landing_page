@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hero B — Diptych</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  .row { display: flex; align-items: flex-start; justify-content: space-between; }
+  .top { display: flex; align-items: flex-end; justify-content: space-between; margin-top: 30px; gap: 60px; }
+  .headline { font-size: 64px; max-width: 860px; }
+  .sub { font-size: 24.5px; max-width: 520px; padding-bottom: 6px; }
+
+  .panels { display: flex; gap: 40px; margin-top: 36px; flex: 1; }
+  .panel { flex: 1; display: flex; flex-direction: column; }
+  .panel .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  .panel.without .tag { background: rgb(28 24 21 / 0.06); color: var(--ink-soft); }
+  .panel.with .tag { background: var(--evergreen-tint); color: var(--evergreen); }
+
+  .cartcard {
+    background: var(--card);
+    border: 1.5px solid var(--hairline);
+    border-radius: 18px;
+    box-shadow: var(--shadow-card);
+    padding: 30px 32px 26px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .panel.without .cartcard { box-shadow: none; background: var(--card-soft); }
+  .panel.with .cartcard { box-shadow: var(--shadow-raised); }
+  .cartcard .cart-title { font-family: var(--display); font-variation-settings: 'opsz' 20, 'SOFT' 0, 'WONK' 0; font-weight: 500; font-size: 28px; }
+
+  .empty-state {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    border: 2.5px dashed var(--hairline-strong);
+    border-radius: 14px;
+    margin-top: 18px;
+    color: var(--ink-faint);
+  }
+  .empty-state .e1 { font-size: 24px; font-weight: 650; }
+  .empty-state .e2 { font-size: 17.5px; font-weight: 480; }
+
+  .items { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+  .item { gap: 15px; }
+  .item .swatch { width: 44px; height: 44px; }
+  .item .nm { font-size: 20.5px; }
+  .item .meta { font-size: 16px; }
+  .item .price { font-size: 18.5px; }
+  .divider { border-top: 1.5px solid var(--hairline); margin: 18px 0 12px; }
+  .subtotal { display: flex; justify-content: space-between; align-items: baseline; }
+  .subtotal .lbl { font-weight: 640; font-size: 19px; color: var(--ink-soft); }
+  .subtotal .amt { font-family: var(--mono); font-weight: 500; font-size: 24px; }
+  .sync-pill { font-size: 15.5px; padding: 8px 15px; }
+
+  .aftermath { height: 108px; display: flex; align-items: center; margin-top: 18px; }
+  .gone {
+    width: 100%;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 17px;
+    color: var(--ink-faint);
+  }
+  .banner {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid rgb(28 24 21 / 0.08);
+    border-radius: 14px;
+    box-shadow: var(--shadow-raised);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  .banner .emoji { font-size: 30px; }
+  .banner .btxt { font-size: 18.5px; font-weight: 600; color: #303030; line-height: 1.35; }
+  .banner .btxt .money { font-weight: 800; color: #1a1a1a; font-size: 25px; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="row">
+    <span class="lockup">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10.5" y="6.5" width="17" height="12" rx="1.8" stroke="#1C1815" stroke-width="2"/>
+        <rect x="8" y="20.2" width="22" height="2.6" rx="1.3" fill="#1C1815"/>
+        <rect x="2.6" y="9.5" width="9.6" height="16.5" rx="2.6" fill="#F7F4EE" stroke="#1C1815" stroke-width="2"/>
+        <line x1="6" y1="23.2" x2="8.8" y2="23.2" stroke="#1C1815" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#F7F4EE" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#D8541E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="13.1" cy="21.4" r="1.35" fill="#D8541E"/>
+        <circle cx="18.2" cy="21.4" r="1.35" fill="#D8541E"/>
+      </svg>
+      <span class="word">Persistent<span class="w2"> Cart</span></span>
+    </span>
+    <span class="pill"><span class="dot"></span>Cross-device cart sync<span class="since">&nbsp;· since 2016</span></span>
+  </div>
+
+  <div class="top">
+    <h1 class="display headline">A device switch shouldn't <span class="accent">empty the cart</span></h1>
+    <p class="sub">Persistent Cart restores every signed-in shopper's cart the moment they log in on a new device.</p>
+  </div>
+
+  <div class="panels">
+    <div class="panel without">
+      <span class="tag">Without Persistent Cart</span>
+      <div class="cartcard">
+        <span class="cart-title">Your cart</span>
+        <div class="empty-state">
+          <svg width="46" height="42" viewBox="0 0 32 28" fill="none"><path d="M4 3h3.2l3.1 15.4a2 2 0 0 0 2 1.6h9.6a2 2 0 0 0 2-1.6L26 8H9" stroke="#8A8077" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13.6" cy="24.4" r="2" fill="#8A8077"/><circle cx="22.4" cy="24.4" r="2" fill="#8A8077"/></svg>
+          <span class="e1">Your cart is empty</span>
+          <span class="e2">The phone cart stayed behind</span>
+        </div>
+      </div>
+      <div class="aftermath"><span class="gone">no error · no email · just a lost sale</span></div>
+    </div>
+
+    <div class="panel with">
+      <span class="tag">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2.5 8.5l3.5 3.5 7.5-8" stroke="#1E5B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        With Persistent Cart
+      </span>
+      <div class="cartcard">
+        <div style="display:flex; align-items:baseline; justify-content:space-between;">
+          <span class="cart-title">Your cart</span>
+          <span class="sync-pill">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2.5 8.5l3.5 3.5 7.5-8" stroke="#1E5B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Synced just now
+          </span>
+        </div>
+        <div class="items">
+          <div class="item"><span class="swatch" style="background:#d8541e"></span><span><span class="nm">Trail Runners</span><br><span class="meta">Qty 1</span></span><span class="price tabular">$128.00</span></div>
+          <div class="item"><span class="swatch" style="background:#14233a"></span><span><span class="nm">Rain Shell Jacket</span><br><span class="meta">Qty 1</span></span><span class="price tabular">$96.00</span></div>
+          <div class="item"><span class="swatch" style="background:#1e5b45"></span><span><span class="nm">Merino Socks (3-pack)</span><br><span class="meta">Qty 1</span></span><span class="price tabular">$24.00</span></div>
+        </div>
+        <div class="divider"></div>
+        <div class="subtotal"><span class="lbl">Subtotal</span><span class="amt tabular">$248.00</span></div>
+      </div>
+      <div class="aftermath">
+        <div class="banner">
+          <span class="emoji">🎉</span>
+          <span class="btxt">You've generated <span class="money">$452,098</span> from cart transfers in the last 30 days</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Feature image — A silent leak, a silent fix (split monitor)</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  .row { display: flex; align-items: flex-start; justify-content: space-between; }
+  .content { display: flex; gap: 26px; margin-top: 34px; flex: 1; }
+  .col-copy { width: 434px; flex: none; display: flex; flex-direction: column; gap: 30px; padding-top: 44px; }
+  .headline { font-size: 82px; }
+  .sub { font-size: 24.5px; max-width: 420px; }
+
+  .stage { position: relative; flex: 1; }
+
+  /* origin phone */
+  .origin-cap {
+    position: absolute; left: 2px; top: 30px;
+    font-family: var(--mono); font-size: 13.5px; letter-spacing: 0.05em;
+    color: var(--ink-soft); z-index: 3;
+  }
+  .phone { position: absolute; left: 0; top: 74px; width: 196px; height: 388px; z-index: 2; }
+  .phone .cart { padding: 14px 13px 12px; }
+  .phone .cart .cart-title { font-size: 17px; }
+  .phone .cart .items { display: flex; flex-direction: column; gap: 8px; margin-top: 9px; }
+  .phone .item { gap: 8px; }
+  .phone .item .swatch { width: 24px; height: 24px; }
+  .phone .item .nm { font-size: 12px; }
+  .phone .item .meta { font-size: 10px; }
+  .phone .item .price { font-size: 10.5px; }
+  .phone .cart .divider { margin: 9px 0 7px; }
+  .phone .cart .subtotal .lbl { font-size: 11px; }
+  .phone .cart .subtotal .amt { font-size: 13.5px; }
+
+  .paths { position: absolute; left: 0; top: -36px; width: 996px; height: 732px; z-index: 1; }
+
+  /* ---- the split desktop monitor ---- */
+  .monitor { position: absolute; right: -28px; top: 12px; width: 648px; z-index: 2; }
+  .monitor .bezel {
+    position: relative; height: 392px;
+    background: var(--card);
+    border: 3.5px solid var(--ink);
+    border-radius: 18px;
+    box-shadow: var(--shadow-raised);
+  }
+  .monitor .screen { position: absolute; inset: 13px; border-radius: 8px; overflow: hidden; display: flex; }
+  .monitor .neck { width: 76px; height: 32px; background: var(--ink); margin: 0 auto; }
+  .monitor .foot { width: 252px; height: 13px; background: var(--ink); margin: 0 auto; border-radius: 7px; }
+
+  .half { flex: 1; padding: 15px 18px 16px; display: flex; flex-direction: column; }
+  .half.without { background: #f4f0e7; border-right: 1.5px solid var(--hairline-strong); }
+  .half.with { background: var(--card); }
+  .hlabel { font-family: var(--mono); font-size: 13px; letter-spacing: 0.06em; color: var(--ink-faint); }
+  .hlabel.ok { color: var(--evergreen); }
+
+  /* without half */
+  .half.without .hl-row { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-top: 16px; }
+  .half.without .t { font-size: 20px; font-weight: 650; color: var(--ink-soft); white-space: nowrap; }
+  .half.without .z { font-family: var(--mono); font-size: 19.5px; color: var(--ink-faint); text-decoration: line-through; text-decoration-thickness: 1.5px; }
+  .es-box {
+    flex: 1; margin-top: 13px;
+    border: 2px dashed var(--hairline-strong); border-radius: 10px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+    padding: 0 18px; text-align: center;
+  }
+  .es-box .hint { font-size: 16px; line-height: 1.45; font-weight: 490; color: var(--ink-faint); }
+  .es-box .ghost { opacity: 0.55; }
+
+  /* with half */
+  .half.with .hl-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 14px; }
+  .half.with .cart-title { font-family: var(--display); font-variation-settings: 'opsz' 20, 'SOFT' 0, 'WONK' 0; font-weight: 500; font-size: 21px; letter-spacing: -0.01em; }
+  .sync-pill { font-size: 11.5px; padding: 5px 10px; }
+  .half.with .items { display: flex; flex-direction: column; gap: 9px; margin-top: 13px; }
+  .half.with .item { gap: 9px; }
+  .half.with .item .swatch { width: 22px; height: 22px; border-radius: 6px; }
+  .half.with .item .nm { font-size: 14.5px; }
+  .half.with .item .meta { font-size: 11px; }
+  .half.with .item .price { font-size: 12.5px; }
+  .half.with .divider { margin: 11px 0 9px; }
+  .half.with .subtotal .lbl { font-size: 13px; font-weight: 640; color: var(--ink-soft); }
+  .half.with .subtotal .amt { font-size: 17px; }
+  .half.with .subtotal { display: flex; align-items: baseline; justify-content: space-between; }
+  .half.with .ws-note { font-size: 13px; font-weight: 500; color: var(--ink-soft); margin-top: auto; }
+
+  /* the stats screenshot */
+  .panel {
+    position: absolute;
+    right: -28px; top: 474px; left: 210px;
+    background: #f6f6f7;
+    border: 1px solid rgb(28 24 21 / 0.08);
+    border-radius: 14px;
+    box-shadow: var(--shadow-raised);
+    padding: 15px 20px 13px;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    z-index: 4;
+  }
+  .banner {
+    background: #ffffff;
+    border: 1px solid rgb(28 24 21 / 0.08);
+    border-radius: 10px;
+    padding: 10px 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .banner .emoji { font-size: 19px; }
+  .banner .btxt { font-size: 14.5px; font-weight: 600; color: #303030; line-height: 1.3; }
+  .banner .btxt .money { font-weight: 800; color: #1a1a1a; font-size: 17.5px; font-variant-numeric: tabular-nums; }
+  .sec-title { font-size: 15px; font-weight: 700; color: #1a1a1a; margin: 10px 2px 7px; }
+  .cards { display: flex; gap: 12px; }
+  .stat-card { flex: 1; padding: 11px 13px 9px; }
+  .stat-card .stat-label { font-size: 12px; min-height: 30px; }
+  .stat-card .stat-num { font-size: 28px; margin: 3px 0 3px; font-variant-numeric: tabular-nums; }
+  .stat-card .stat-hint { font-size: 9.5px; line-height: 1.3; }
+  .foot { margin: 7px 2px 0; font-size: 10.5px; color: #616161; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="row">
+    <span class="lockup">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10.5" y="6.5" width="17" height="12" rx="1.8" stroke="#1C1815" stroke-width="2"/>
+        <rect x="8" y="20.2" width="22" height="2.6" rx="1.3" fill="#1C1815"/>
+        <rect x="2.6" y="9.5" width="9.6" height="16.5" rx="2.6" fill="#F7F4EE" stroke="#1C1815" stroke-width="2"/>
+        <line x1="6" y1="23.2" x2="8.8" y2="23.2" stroke="#1C1815" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#F7F4EE" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#D8541E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="13.1" cy="21.4" r="1.35" fill="#D8541E"/>
+        <circle cx="18.2" cy="21.4" r="1.35" fill="#D8541E"/>
+      </svg>
+      <span class="word">Persistent<span class="w2"> Cart</span></span>
+    </span>
+    <span class="pill"><span class="dot"></span>Cross-device cart sync<span class="since">&nbsp;· since 2016</span></span>
+  </div>
+
+  <div class="content">
+    <div class="col-copy">
+      <h1 class="display headline">A silent leak.<br><span class="accent">A silent fix.</span></h1>
+      <p class="sub">Shoppers switch devices and default carts stay behind — quietly costing orders and customers. Persistent Cart brings every signed-in cart along, and counts what it saves.</p>
+    </div>
+
+    <div class="stage">
+      <svg class="paths" viewBox="0 0 996 732" fill="none">
+        <defs>
+          <linearGradient id="die" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#8A8077" stop-opacity="0.8"/>
+            <stop offset="1" stop-color="#8A8077" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- WITHOUT: the cart's journey dies mid-flight, never arrives -->
+        <path d="M206 270 C 256 244, 306 218, 358 190" stroke="url(#die)" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 11"/>
+        <!-- WITH: the journey arcs over and completes on the synced side -->
+        <path d="M140 102 C 320 18, 660 2, 856 42" stroke="#D8541E" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 12"/>
+        <circle cx="858" cy="44" r="7.5" fill="#D8541E"/>
+      </svg>
+
+      <span class="origin-cap">BUILT ON HER PHONE</span>
+      <div class="phone">
+        <div class="screen">
+          <div class="cart">
+            <span class="cart-title">Your cart</span>
+            <div class="items">
+              <div class="item"><span class="swatch" style="background:#d8541e"></span><span><span class="nm">Trail Runners</span><br><span class="meta">Qty 1</span></span><span class="price tabular">$128.00</span></div>
+              <div class="item"><span class="swatch" style="background:#14233a"></span><span><span class="nm">Rain Shell Jacket</span><br><span class="meta">Qty 1</span></span><span class="price tabular">$96.00</span></div>
+              <div class="item"><span class="swatch" style="background:#1e5b45"></span><span><span class="nm">Merino Socks</span><br><span class="meta">Qty 1</span></span><span class="price tabular">$24.00</span></div>
+            </div>
+            <div class="divider"></div>
+            <div class="subtotal"><span class="lbl">Subtotal</span><span class="amt tabular">$248.00</span></div>
+            <span class="sync-pill" style="font-size:10px; padding:5px 9px; margin-top:8px;">
+              <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M2.5 8.5l3.5 3.5 7.5-8" stroke="#1E5B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Saved automatically
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- her desktop, same login: one screen, two worlds -->
+      <div class="monitor">
+        <div class="bezel">
+          <div class="screen">
+            <div class="half without">
+              <span class="hlabel">✕ WITHOUT</span>
+              <div class="hl-row"><span class="t">Your cart is empty</span><span class="z tabular">$248.00</span></div>
+              <div class="es-box">
+                <svg class="ghost" width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M3.5 4h2l2.2 11.2a1.6 1.6 0 0 0 1.57 1.3h7.9a1.6 1.6 0 0 0 1.56-1.24L20.5 8H6.3" stroke="#8A8077" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.2" cy="20.2" r="1.5" stroke="#8A8077" stroke-width="1.6"/><circle cx="16.9" cy="20.2" r="1.5" stroke="#8A8077" stroke-width="1.6"/></svg>
+                <span class="hint">No error. No email.<br>She rebuilds — or leaves.</span>
+              </div>
+            </div>
+            <div class="half with">
+              <span class="hlabel ok">✓ WITH PERSISTENT CART</span>
+              <div class="hl-row">
+                <span class="cart-title">Your cart</span>
+                <span class="sync-pill">
+                  <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M2.5 8.5l3.5 3.5 7.5-8" stroke="#1E5B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Synced just now
+                </span>
+              </div>
+              <div class="items">
+                <div class="item"><span class="swatch" style="background:#d8541e"></span><span><span class="nm">Trail Runners</span></span><span class="price tabular">$128.00</span></div>
+                <div class="item"><span class="swatch" style="background:#14233a"></span><span><span class="nm">Rain Shell Jacket</span></span><span class="price tabular">$96.00</span></div>
+                <div class="item"><span class="swatch" style="background:#1e5b45"></span><span><span class="nm">Merino Socks</span></span><span class="price tabular">$24.00</span></div>
+              </div>
+              <div class="divider"></div>
+              <div class="subtotal"><span class="lbl">Subtotal</span><span class="amt tabular">$248.00</span></div>
+              <span class="ws-note">Restored automatically, in the background.</span>
+            </div>
+          </div>
+        </div>
+        <div class="neck"></div>
+        <div class="foot"></div>
+      </div>
+
+      <div class="panel">
+        <div class="banner">
+          <span class="emoji">🎉</span>
+          <span class="btxt">You've generated <span class="money">$452,098</span> from cart transfers in the last 30 days</span>
+        </div>
+        <div class="sec-title">Cart Transfer Value</div>
+        <div class="cards">
+          <div class="stat-card">
+            <div class="stat-label">Cart Transfers</div>
+            <div class="stat-num">8,041</div>
+            <div class="stat-hint">Times a saved cart moved to another device.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Orders from a Cart Transfer</div>
+            <div class="stat-num">1,968</div>
+            <div class="stat-hint">Orders placed after a cart moved across devices.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Revenue from Cart Transfers</div>
+            <div class="stat-num">$452,098</div>
+            <div class="stat-hint">Order value from orders with cart transfers.</div>
+          </div>
+        </div>
+        <div class="foot">Last updated just now. Showing the last 30 days.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

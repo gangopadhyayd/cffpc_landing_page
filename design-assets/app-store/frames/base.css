@@ -1,0 +1,319 @@
+/* =========================================================================
+   Persistent Cart — App Store listing frames (1600x900)
+   Same design system as the site: paper + ink + ONE marigold accent.
+   No gradients, no glows. Hairline borders, two-tier soft shadows.
+   ========================================================================= */
+
+/* Display = Source Serif 4 (owner pick 2026-07-07, replaced Fraunces —
+   mirrors the site's public/fonts setup exactly). */
+@font-face {
+  font-family: 'Source Serif 4 Variable';
+  src: url('assets/source-serif-4-latin.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hanken Grotesk Variable';
+  src: url('assets/hanken-grotesk-latin-wght-normal.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('assets/ibm-plex-mono-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('assets/ibm-plex-mono-latin-500-normal.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --paper: #f7f4ee;
+  --card: #ffffff;
+  --card-soft: #fcfbf8;
+  --ink: #1c1815;
+  --ink-soft: #5c544b;
+  --ink-faint: #8a8077;
+  --hairline: rgb(28 24 21 / 0.1);
+  --hairline-strong: rgb(28 24 21 / 0.16);
+  --accent: #d8541e;
+  --accent-tint: #f6e6d8;
+  --accent-ink: #7a2c0e;
+  --navy: #14233a;
+  --evergreen: #1e5b45;
+  --evergreen-tint: #e3efe9;
+  --display: 'Source Serif 4 Variable', Georgia, serif;
+  --sans: 'Hanken Grotesk Variable', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --shadow-card: 0 1px 2px rgb(28 24 21 / 0.05), 0 2px 8px rgb(28 24 21 / 0.04);
+  --shadow-raised: 0 2px 4px rgb(28 24 21 / 0.05), 0 16px 48px rgb(28 24 21 / 0.09);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 1600px;
+  height: 900px;
+  overflow: hidden;
+  font-family: var(--sans);
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern', 'liga', 'calt';
+}
+
+.frame {
+  position: relative;
+  width: 1600px;
+  height: 900px;
+  padding: 64px 72px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Display face, weighted like the site's h1-h4 (Source Serif 4 @ 560). */
+.display {
+  font-family: var(--display);
+  font-weight: 560;
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+}
+
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* ---------- brand lockup (top-left corner) ---------- */
+.lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.lockup svg { width: 40px; height: 40px; }
+.lockup .word {
+  font-family: var(--display);
+  font-weight: 540;
+ 
+  font-size: 27px;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.lockup .word .w2 { font-weight: 400; }
+
+/* ---------- eyebrow pill ---------- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 18px;
+  border: 1.5px solid var(--hairline-strong);
+  border-radius: 999px;
+  background: var(--card);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink-soft);
+  width: fit-content;
+}
+.pill .dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+}
+
+/* ---------- headline block ---------- */
+.headline {
+  font-size: 84px;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.headline .accent { color: var(--accent); }
+.sub {
+  font-size: 30px;
+  line-height: 1.42;
+  font-weight: 480;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+/* ---------- proof chip (mono numbers) ---------- */
+.proof-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 20px;
+  color: var(--ink-soft);
+  background: var(--card);
+  border: 1.5px solid var(--hairline);
+  border-radius: 10px;
+  padding: 14px 20px;
+  width: fit-content;
+}
+.proof-chip b { color: var(--ink); font-weight: 500; }
+
+/* ---------- device mockups: ink outline + paper, like the logo mark ------- */
+.phone {
+  position: relative;
+  background: var(--card);
+  border: 3.5px solid var(--ink);
+  border-radius: 34px;
+  box-shadow: var(--shadow-raised);
+}
+.phone::after { /* home bar */
+  content: '';
+  position: absolute;
+  bottom: 10px; left: 50%;
+  transform: translateX(-50%);
+  width: 64px; height: 5px;
+  border-radius: 3px;
+  background: var(--hairline-strong);
+}
+.phone .screen {
+  position: absolute;
+  inset: 14px 12px 26px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.laptop { position: relative; }
+.laptop .lid {
+  position: relative;
+  background: var(--card);
+  border: 3.5px solid var(--ink);
+  border-radius: 18px 18px 0 0;
+  box-shadow: var(--shadow-raised);
+}
+.laptop .screen {
+  position: absolute;
+  inset: 14px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.laptop .base {
+  position: relative;
+  height: 17px;
+  background: var(--ink);
+  border-radius: 4px 4px 12px 12px;
+  margin: 0 -46px;
+}
+.laptop .base::after {
+  content: '';
+  display: block;
+  width: 110px; height: 6px;
+  margin: 0 auto;
+  background: rgb(247 244 238 / 0.35);
+  border-radius: 0 0 6px 6px;
+}
+
+/* ---------- storefront cart UI ---------- */
+.cart {
+  background: var(--card);
+  height: 100%;
+  padding: 26px 26px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.cart .shopbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1.5px solid var(--hairline);
+  margin-bottom: 16px;
+  color: var(--ink-soft);
+}
+.cart .shopbar .shop-name {
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.cart .cart-title {
+  font-family: var(--display);
+  font-weight: 500;
+ 
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.item { display: flex; align-items: center; }
+.item .swatch { border-radius: 8px; flex: none; }
+.item .nm { font-weight: 640; color: var(--ink); }
+.item .meta { font-weight: 500; color: var(--ink-faint); }
+.item .price { font-family: var(--mono); color: var(--ink); margin-left: auto; }
+.cart .divider { border-top: 1.5px solid var(--hairline); }
+.cart .subtotal {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.cart .subtotal .lbl { font-weight: 640; color: var(--ink-soft); }
+.cart .subtotal .amt { font-family: var(--mono); font-weight: 500; color: var(--ink); }
+.sync-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--evergreen-tint);
+  color: var(--evergreen);
+  border-radius: 999px;
+  font-weight: 700;
+  width: fit-content;
+}
+.sync-pill svg { flex: none; }
+
+/* ---------- admin (dashboard) UI ---------- */
+/* Recreated app admin UI — system font like the real embedded dashboard,
+   no browser chrome (Shopify req. 4.4.4). */
+.admin {
+  background: #f6f6f7; /* shopify admin canvas */
+  border: 1px solid rgb(28 24 21 / 0.08);
+  border-radius: 16px;
+  box-shadow: var(--shadow-raised);
+  overflow: hidden;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+.stat-card {
+  background: #ffffff;
+  border: 1px solid rgb(28 24 21 / 0.08);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgb(28 24 21 / 0.04);
+}
+.stat-card .stat-label { font-weight: 650; color: #303030; }
+.stat-card .stat-num {
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+}
+.stat-card .stat-hint { color: #616161; font-weight: 480; }
+
+/* ---------- step cards (setup frame) ---------- */
+.step {
+  background: var(--card);
+  border: 1.5px solid var(--hairline);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  padding: 30px 30px 28px;
+  display: flex;
+  flex-direction: column;
+}
+.step .n {
+  font-family: var(--mono);
+  font-size: 20px;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+.step .t {
+  font-family: var(--display);
+  font-weight: 520;
+ 
+  font-size: 31px;
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+}
+.step .d { font-size: 21px; line-height: 1.4; color: var(--ink-soft); font-weight: 490; }
+
+/* corner watermark spot for frame number during review (stripped for final) */

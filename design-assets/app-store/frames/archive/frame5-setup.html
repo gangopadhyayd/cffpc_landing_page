@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Frame 5 — Setup</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  .row { display: flex; align-items: flex-start; justify-content: space-between; }
+  .top { display: flex; align-items: flex-end; justify-content: space-between; margin-top: 40px; gap: 60px; }
+  .headline { font-size: 76px; max-width: 880px; }
+  .sub { font-size: 26px; max-width: 500px; padding-bottom: 10px; }
+
+  .steps { display: flex; gap: 36px; margin-top: auto; margin-bottom: auto; height: 416px; flex: none; position: relative; }
+  .step { flex: 1; gap: 14px; position: relative; z-index: 2; }
+  .step .t { min-height: 76px; display: flex; align-items: flex-start; }
+  .step .body { margin-top: auto; }
+
+  .connector {
+    position: absolute;
+    top: 46px; left: 30%; right: 30%;
+    border-top: 3px dashed rgb(216 84 30 / 0.45);
+    z-index: 1;
+  }
+
+  /* mini theme-editor mock inside step 2 */
+  .embed-mock {
+    border: 1.5px solid var(--hairline);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fbfbfb;
+  }
+  .embed-mock .em-head {
+    font-size: 15px;
+    font-weight: 700;
+    color: #616161;
+    letter-spacing: 0.04em;
+    padding: 11px 16px;
+    background: #f1f1f1;
+    border-bottom: 1.5px solid var(--hairline);
+  }
+  .embed-mock .em-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    font-size: 18px;
+    font-weight: 650;
+    color: #1a1a1a;
+  }
+  .toggle {
+    width: 58px; height: 32px;
+    border-radius: 999px;
+    background: var(--evergreen);
+    position: relative;
+    flex: none;
+  }
+  .toggle::after {
+    content: '';
+    position: absolute;
+    right: 4px; top: 4px;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: #fff;
+  }
+
+  .install-mock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 12px;
+    padding: 17px;
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .done-mock {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: var(--evergreen-tint);
+    color: var(--evergreen);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 18.5px;
+    font-weight: 700;
+  }
+  .step .after { margin-top: 14px; font-size: 17.5px; color: var(--ink-faint); font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="row">
+    <span class="lockup">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10.5" y="6.5" width="17" height="12" rx="1.8" stroke="#1C1815" stroke-width="2"/>
+        <rect x="8" y="20.2" width="22" height="2.6" rx="1.3" fill="#1C1815"/>
+        <rect x="2.6" y="9.5" width="9.6" height="16.5" rx="2.6" fill="#F7F4EE" stroke="#1C1815" stroke-width="2"/>
+        <line x1="6" y1="23.2" x2="8.8" y2="23.2" stroke="#1C1815" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#F7F4EE" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#D8541E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="13.1" cy="21.4" r="1.35" fill="#D8541E"/>
+        <circle cx="18.2" cy="21.4" r="1.35" fill="#D8541E"/>
+      </svg>
+      <span class="word">Persistent<span class="w2"> Cart</span></span>
+    </span>
+    <span class="pill"><span class="dot"></span>Setup</span>
+  </div>
+
+  <div class="top">
+    <h1 class="display headline">Live in <span class="accent">one click</span>, plus one switch</h1>
+    <p class="sub">No code, no theme surgery — and nothing to maintain afterwards.</p>
+  </div>
+
+  <div class="steps">
+    <div class="connector"></div>
+
+    <div class="step">
+      <span class="n">STEP 01</span>
+      <span class="t display">Install from the App Store</span>
+      <div class="body">
+        <div class="install-mock">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v13m0 0l-5-5m5 5l5-5M4 21h16" stroke="#F7F4EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Install app
+        </div>
+        <div class="after">One click — the app configures itself.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="n">STEP 02</span>
+      <span class="t display">Flip the switch in your theme editor</span>
+      <div class="body">
+        <div class="embed-mock">
+          <div class="em-head">APP EMBEDS</div>
+          <div class="em-row">Persistent Cart <span class="toggle"></span></div>
+        </div>
+        <div class="after">One switch, in your own theme editor.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="n">STEP 03</span>
+      <span class="t display">Done — carts sync from now on</span>
+      <div class="body">
+        <div class="done-mock">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M2.5 8.5l3.5 3.5 7.5-8" stroke="#1E5B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Running in the background
+        </div>
+        <div class="after">Signed-in carts saved on every change.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

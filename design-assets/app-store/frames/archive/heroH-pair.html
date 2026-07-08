@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hero H — Monitor diptych</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  .row { display: flex; align-items: flex-start; justify-content: space-between; }
+  .content { display: flex; gap: 26px; margin-top: 34px; flex: 1; }
+  .col-copy { width: 440px; flex: none; display: flex; flex-direction: column; gap: 30px; padding-top: 44px; }
+  .headline { font-size: 82px; }
+  .sub { font-size: 24.5px; max-width: 424px; }
+
+  .stage { position: relative; flex: 1; }
+
+  .fate-label { position: absolute; top: 12px; font-family: var(--mono); font-size: 14px; letter-spacing: 0.06em; z-index: 3; }
+  .fate-label.without { left: 4px; color: var(--ink-faint); }
+  .fate-label.with { left: 526px; color: var(--evergreen); }
+
+  /* ---- ink-outline desktop monitors, shared geometry ---- */
+  .monitor { position: absolute; top: 46px; width: 468px; z-index: 2; }
+  .monitor.without { left: 0; }
+  .monitor.with { left: 522px; }
+  .monitor .bezel {
+    position: relative; height: 278px;
+    background: var(--card);
+    border: 3.5px solid var(--ink);
+    border-radius: 16px;
+    box-shadow: var(--shadow-raised);
+  }
+  .monitor .screen { position: absolute; inset: 13px; border-radius: 8px; overflow: hidden; }
+  .monitor .neck { width: 68px; height: 30px; background: var(--ink); margin: 0 auto; }
+  .monitor .foot { width: 216px; height: 13px; background: var(--ink); margin: 0 auto; border-radius: 7px; }
+  .monitor.without .bezel { border-color: rgb(28 24 21 / 0.5); box-shadow: var(--shadow-card); }
+  .monitor.without .neck, .monitor.without .foot { background: rgb(28 24 21 / 0.5); }
+
+  /* without screen */
+  .empty-screen { background: var(--card-soft); height: 100%; padding: 18px 20px; display: flex; flex-direction: column; }
+  .empty-screen .es-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .empty-screen .t { font-size: 23px; font-weight: 650; color: var(--ink-soft); }
+  .empty-screen .z { font-family: var(--mono); font-size: 21px; color: var(--ink-faint); text-decoration: line-through; text-decoration-thickness: 1.5px; }
+  .empty-screen .es-box { flex: 1; margin-top: 14px; border: 2px dashed var(--hairline-strong); border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 0 20px; text-align: center; }
+  .empty-screen .hint { font-size: 16.5px; line-height: 1.45; font-weight: 490; color: var(--ink-faint); }
+
+  /* with screen */
+  .with-screen { background: var(--card); height: 100%; padding: 16px 20px 14px; display: flex; flex-direction: column; }
+  .with-screen .hl-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .with-screen .cart-title { font-family: var(--display); font-variation-settings: 'opsz' 20, 'SOFT' 0, 'WONK' 0; font-weight: 500; font-size: 22px; letter-spacing: -0.01em; }
+  .sync-pill { font-size: 12px; padding: 5px 11px; }
+  .with-screen .items { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+  .with-screen .item { gap: 10px; }
+  .with-screen .item .swatch { width: 24px; height: 24px; border-radius: 6px; }
+  .with-screen .item .nm { font-size: 15.5px; }
+  .with-screen .item .price { font-size: 13.5px; }
+  .with-screen .divider { margin: 10px 0 8px; }
+  .with-screen .subtotal { display: flex; align-items: baseline; justify-content: space-between; }
+  .with-screen .subtotal .lbl { font-size: 14px; font-weight: 640; color: var(--ink-soft); }
+  .with-screen .subtotal .amt { font-size: 18px; }
+
+  /* the stats screenshot */
+  .panel {
+    position: absolute;
+    right: -26px; top: 452px; left: 0;
+    background: #f6f6f7;
+    border: 1px solid rgb(28 24 21 / 0.08);
+    border-radius: 14px;
+    box-shadow: var(--shadow-raised);
+    padding: 16px 22px 14px;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    z-index: 4;
+  }
+  .banner { background: #ffffff; border: 1px solid rgb(28 24 21 / 0.08); border-radius: 10px; padding: 11px 15px; display: flex; align-items: center; gap: 10px; }
+  .banner .emoji { font-size: 20px; }
+  .banner .btxt { font-size: 15.5px; font-weight: 600; color: #303030; line-height: 1.3; }
+  .banner .btxt .money { font-weight: 800; color: #1a1a1a; font-size: 19px; font-variant-numeric: tabular-nums; }
+  .sec-title { font-size: 15.5px; font-weight: 700; color: #1a1a1a; margin: 11px 2px 8px; }
+  .cards { display: flex; gap: 14px; }
+  .stat-card { flex: 1; padding: 12px 15px 10px; }
+  .stat-card .stat-label { font-size: 12.5px; min-height: 18px; }
+  .stat-card .stat-num { font-size: 30px; margin: 4px 0 3px; font-variant-numeric: tabular-nums; }
+  .stat-card .stat-hint { font-size: 10px; line-height: 1.3; }
+  .foot { margin: 8px 2px 0; font-size: 11px; color: #616161; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="row">
+    <span class="lockup">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10.5" y="6.5" width="17" height="12" rx="1.8" stroke="#1C1815" stroke-width="2"/>
+        <rect x="8" y="20.2" width="22" height="2.6" rx="1.3" fill="#1C1815"/>
+        <rect x="2.6" y="9.5" width="9.6" height="16.5" rx="2.6" fill="#F7F4EE" stroke="#1C1815" stroke-width="2"/>
+        <line x1="6" y1="23.2" x2="8.8" y2="23.2" stroke="#1C1815" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#F7F4EE" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#D8541E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="13.1" cy="21.4" r="1.35" fill="#D8541E"/>
+        <circle cx="18.2" cy="21.4" r="1.35" fill="#D8541E"/>
+      </svg>
+      <span class="word">Persistent<span class="w2"> Cart</span></span>
+    </span>
+    <span class="pill"><span class="dot"></span>Cross-device cart sync<span class="since">&nbsp;· since 2016</span></span>
+  </div>
+
+  <div class="content">
+    <div class="col-copy">
+      <h1 class="display headline">A silent leak.<br><span class="accent">A silent fix.</span></h1>
+      <p class="sub">Shoppers switch devices and default carts stay behind — quietly costing orders and customers. Persistent Cart brings every signed-in cart along, and counts what it saves.</p>
+    </div>
+
+    <div class="stage">
+      <span class="fate-label without">✕ WITHOUT — THE PHONE CART STAYED BEHIND</span>
+      <div class="monitor without">
+        <div class="bezel">
+          <div class="screen">
+            <div class="empty-screen">
+              <div class="es-row"><span class="t">Your cart is empty</span><span class="z tabular">$248.00</span></div>
+              <div class="es-box"><span class="hint">No error. No email. She rebuilds — or leaves.</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="neck"></div>
+        <div class="foot"></div>
+      </div>
+
+      <span class="fate-label with">✓ WITH PERSISTENT CART — RESTORED AUTOMATICALLY</span>
+      <div class="monitor with">
+        <div class="bezel">
+          <div class="screen">
+            <div class="with-screen">
+              <div class="hl-row">
+                <span class="cart-title">Your cart</span>
+                <span class="sync-pill">
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M2.5 8.5l3.5 3.5 7.5-8" stroke="#1E5B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Synced just now
+                </span>
+              </div>
+              <div class="items">
+                <div class="item"><span class="swatch" style="background:#d8541e"></span><span><span class="nm">Trail Runners</span></span><span class="price tabular">$128.00</span></div>
+                <div class="item"><span class="swatch" style="background:#14233a"></span><span><span class="nm">Rain Shell Jacket</span></span><span class="price tabular">$96.00</span></div>
+                <div class="item"><span class="swatch" style="background:#1e5b45"></span><span><span class="nm">Merino Socks</span></span><span class="price tabular">$24.00</span></div>
+              </div>
+              <div class="divider"></div>
+              <div class="subtotal"><span class="lbl">Subtotal</span><span class="amt tabular">$248.00</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="neck"></div>
+        <div class="foot"></div>
+      </div>
+
+      <div class="panel">
+        <div class="banner">
+          <span class="emoji">🎉</span>
+          <span class="btxt">You've generated <span class="money">$452,098</span> from cart transfers in the last 30 days</span>
+        </div>
+        <div class="sec-title">Cart Transfer Value</div>
+        <div class="cards">
+          <div class="stat-card">
+            <div class="stat-label">Cart Transfers</div>
+            <div class="stat-num">8,041</div>
+            <div class="stat-hint">Times a saved cart moved to another device.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Orders from a Cart Transfer</div>
+            <div class="stat-num">1,968</div>
+            <div class="stat-hint">Orders placed after a cart moved across devices.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Revenue from Cart Transfers</div>
+            <div class="stat-num">$452,098</div>
+            <div class="stat-hint">Order value from orders with cart transfers.</div>
+          </div>
+        </div>
+        <div class="foot">Last updated just now. Showing the last 30 days.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
