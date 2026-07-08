@@ -6,6 +6,10 @@
   command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
+  # Skip builds for commits that only touch docs/markdown — they never change
+  # the built site, and each skipped build saves free-tier credits (owner
+  # flagged a Netlify credits warning, 2026-07-07). Exit 0 = skip build.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)docs' ':(exclude)*.md'"
 
 [build.environment]
   NODE_VERSION = "22"
