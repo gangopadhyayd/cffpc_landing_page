@@ -14,7 +14,9 @@
   /* Ink / text */
   --color-ink: #1c1815;
   --color-ink-soft: #5c544b;
-  --color-ink-faint: #8a8077;
+  /* 5.27:1 on paper / 5.78:1 on white — the previous #8a8077 measured 3.5:1
+     and failed WCAG AA on 52 nodes (axe, audit 2026-07-07). */
+  --color-ink-faint: #6e6459;
 
   /* Lines */
   --color-hairline: rgb(28 24 21 / 0.1);
@@ -177,7 +179,9 @@
   .btn-primary:hover { background: #2c2620; }
 
   .btn-accent {
-    background: var(--color-accent);
+    /* One step darker than the display accent: white label on #d8541e was
+       4.03:1 (axe fail); #c74a15 measures 4.75:1 and reads identically. */
+    background: #c74a15;
     color: #fff;
   }
   .btn-accent:hover { background: var(--color-accent-hover); }

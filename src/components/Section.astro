@@ -66,6 +66,11 @@ const hasHeader = eyebrow || heading || intro;
   .section--navy :global(.section-intro) {
     color: #b8b1a4;
   }
+  /* Global .eyebrow is accent-ink for paper — on navy it measured 1.64:1
+     (near-invisible; axe, audit 2026-07-07). Light accent reads 5.94:1. */
+  .section--navy :global(.eyebrow) {
+    color: #e0895c;
+  }
   .section--accent {
     background: var(--color-accent-tint);
   }

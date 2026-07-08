@@ -23,7 +23,9 @@ const homeHref = localizedPath(locale, '');
     fold. Text only: the official BFS badge appears once per page elsewhere
     (kit guideline: one badge instance per webpage). A sibling of the sticky
     header, so it scrolls away and gives the fold its room back. */}
-<div class="announce">
+{/* role=region: the bar sits outside <header> by design (it must scroll away
+    while the nav sticks), so it needs its own landmark (axe, audit 2026-07-07). */}
+<div class="announce" role="region" aria-label={t(locale, 'a11y.announcement')}>
   <div class="container-page announce-inner">
     <span>{t(locale, 'announce.text')}</span>
   </div>
