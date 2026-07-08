@@ -506,3 +506,18 @@ cycles 8+this ship on the first build after the owner upgrades or credits reset.
   runtime; phone-side leader annotation hidden in horizontal mode.
 - **Reviews link/count removed** (owner: 47 reads low): testimonial renders
   without CTA; no "read all reviews" link or review-count mention anywhere.
+
+---
+
+## v1.0 MILESTONE — first owner-accepted live version (2026-07-08, tag v1.0.0)
+
+Cycles 1–8 complete. Shipped across the arc: lean scope + leak-first message → the
+fork hero (now horizontal on desktop, account-node mechanism, measured-equal
+laptops) → Source Serif 4 → full Shopify branding (badge/glyph/wordmark/platform
+row) → benchmark-driven fold (248→~127 words, proof row on top) → "$30 Million+ /
+in the last 30 days" co-equal stat → dashboard Cart Transfer Value snapshot on
+/how-it-works → verified 8-lens audit (P1s + a11y AA fixed) → geo-gated analytics
+consent → 5 SEO pages re-enabled + 2 new FAQs → 3 verbatim review cards (no count,
+no reviews link) → accuracy sweep. Netlify upgraded to Pro after the free-tier
+credit freeze. App-store listing assets committed (not yet uploaded).
+Forward state + backlog: docs/next-iteration-brief.md (rewritten at this tag).

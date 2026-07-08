@@ -1,143 +1,118 @@
-# Next-Iteration Brief — persistentcartapp.com (post-launch audit + design round)
+# Next-Iteration Brief — persistentcartapp.com (v1.0 LIVE, 2026-07-08)
 
-You are a FRESH agent taking over a LIVE, deployed marketing site. Read this file, then
-`docs/iteration-log.md` (what happened, cycle by cycle), `docs/research-landing-pages.md`
-(13-site competitive analysis with ranked recommendations), `docs/owner-inputs-needed.md`
-(what only the owner can decide), and `docs/research-notes.md` (verified facts + honesty rules).
-Everything below is current as of 2026-07-07.
+**v1.0 is the owner-accepted first live version** (git tag `v1.0.0`). You are a fresh
+agent iterating on a LIVE production site. Read this, then `docs/iteration-log.md`
+(cycles 1–8, every decision + scar), `docs/audit-report-2026-07-07.md` (verified audit +
+the owner queue), `docs/improvement-plan-2026-07-08.md` (the copy/figure/SEO round),
+`docs/research-landing-pages.md` (13-app teardown + live fold benchmark),
+`docs/research-notes.md` (honesty rules), `docs/owner-inputs-needed.md`.
 
-## ⚠️ Read before touching anything
+## ⚠️ Standing rules (owner-set; all still binding)
 
-1. **Pushes to `main` deploy to production.** github.com/gangopadhyayd/cffpc_landing_page →
-   Netlify project `persistentcartapp` (team dgangopa) → **https://persistentcartapp.com**.
-   Verify locally first, always: `npm run build && npm run preview` (serves dist on :4321),
-   screenshot, then push. `npm run check` + `npm run i18n:check` must stay green.
-2. **Honesty rules are absolute** (research-notes §top): never fabricate stats/quotes; owner-
-   approved published numbers are exactly: **4.9★** (plain text, no aggregateRating schema),
-   **"$60M+ in orders from synced carts — last 90 days"**, **"thousands of Shopify stores,
-   hundreds on Shopify Plus"** (qualitative). Say "across devices AND browsers"; never
-   "Shopify doesn't save carts"; install = "one click + one theme-editor switch".
-3. **i18n discipline:** all copy lives in `src/i18n/strings/<locale>.json` (+ per-page
-   subfiles). 15 locales; EN is canonical/indexed, 14 are machine-noindex. `i18n:check` only
-   catches MISSING keys — if you change an EN value's meaning, re-author that key in all 14
-   locales (see scratchpad patch-script pattern in iteration-log cycles 1/2/4/5); if you add a
-   key, add it ×15. Exception: `/privacy-policy` content is deliberately EN-only (legal text).
-4. **The email address everywhere is support@customerfirstfocus.com** (owner decision
-   2026-07-07). Never introduce @persistentcartapp.com addresses.
-5. **V1 scope gate:** `V1_DEFERRED` in `src/config/routes.ts` parks 16 built pages
-   (calculator, partners, big-retailers, etc.). Delete a key from the set to re-enable a page;
-   nav/footer/sitemap/llms.txt follow automatically; restore its `related` links in
-   `src/config/pageRender.ts`.
+1. **Pushes to `main` deploy production** → https://persistentcartapp.com (Netlify
+   project `persistentcartapp`, team `cffpc` — **Pro plan since 2026-07-08** after the
+   free tier froze mid-day; `netlify.toml` skips builds for docs/markdown-only commits;
+   batch pushes anyway). Verify locally first: `npm run check` + `npm run i18n:check` +
+   `PUBLIC_GA4_MEASUREMENT_ID=G-B0XL737D3K npm run build && npm run preview`, screenshot
+   (see gotchas), then push — and **verify the deploy actually landed** (the CLI is
+   authed on the owner's machine: `npx netlify-cli api listSiteDeploys --data
+   '{"site_id":"persistentcartapp.netlify.app","per_page":3}'` → newest `state:"ready"`).
+2. **Honesty rules are absolute** (research-notes). Current approved claims, exactly:
+   **"$30 Million+ · in the last 30 days · order value from carts auto-transferred
+   across devices"** (hero lockup wording; other locales keep "$30M+"), **4.9★** (plain
+   text; **never show or mention the review COUNT** — owner 2026-07-08; the localized
+   `home.testimonial.cta` string with `{count}` is parked for when the count is
+   bigger), "thousands of Shopify stores, hundreds on Shopify Plus" (qualitative),
+   since 2016, "one click + one theme-editor switch". Review quotes must be verbatim
+   from the live listing. Never name the dashboard-snapshot store.
+3. **Brand/kit guidelines are SOFT** (owner 2026-07-07): never hard-block a marketing
+   ask on a third-party usage kit without asking. Honesty rules are NOT covered by this.
+4. **i18n discipline:** 15 locales; EN canonical/indexed, 14 machine-noindex. Change an
+   EN value's meaning → re-author ×14 by hand (patch-script pattern, respect register +
+   established terminology; log cycles have per-locale extracts). New key → ×15.
+   `dash.ui.*` keys and the how-it-works dashboard figures stay EN/US verbatim by
+   design. `/privacy-policy` content is EN-only (legal).
+5. **support@customerfirstfocus.com** everywhere; never @persistentcartapp.com.
+6. **Cloudflare DNS: never re-enable the proxy** (grey-cloud only; breaks Netlify SSL;
+   an old redirect Worker still exists in the account). The 5 eforward MX + SPF/DMARC
+   records run mail forwarding — don't touch.
 
-## Infrastructure map (all live)
+## State snapshot (what's live)
 
-- **DNS: Cloudflare** (account Dave@customerfirstfocus.com), zone persistentcartapp.com:
-  apex CNAME→apex-loadbalancer.netlify.com and www CNAME→persistentcartapp.netlify.app, both
-  **DNS-only (grey cloud) — never re-enable the proxy** (breaks Netlify SSL; and the old
-  App-Store-redirect Worker `persistent-cart-app-redirect` still exists in the account with
-  its routes removed — proxying could tempt someone to re-add them). The 5 eforward MX + SPF
-  TXT records run Namecheap email forwarding — do not touch. DMARC TXT exists (p=quarantine).
-- **GA4:** account "Persistent Cart" → property "persistentcartapp.com", Measurement ID
-  `G-B0XL737D3K`, set as `PUBLIC_GA4_MEASUREMENT_ID` in Netlify env. Consent-gated loader in
-  `Analytics.astro`; events: install_click (with placement source), etc.
-- **Search:** GSC domain property verified (DNS TXT); sitemap-index.xml submitted. Bing
-  Webmaster imported from GSC (Google sign-in dgangopa@gmail.com); sitemap submitted.
-- **UTM:** all UI install links use `appStoreLink(content)` from `src/config/site.ts`
-  (utm_source=persistentcartapp.com&utm_medium=referral&utm_campaign=site&utm_content=<placement>).
-  Schema.org + llms.txt keep the clean URL. Check Shopify Partner analytics for the data.
+- **226 pages** = 15 page types × 15 locales + privacy-policy + 404. Re-enabled
+  2026-07-08: cross-device, vs-recovery (top-nav "Vs. email recovery"), b2b,
+  uc-wholesale, compare-email. Still in `V1_DEFERRED`: calculator, free-audit,
+  partners, affiliates, big-retailers, plus, uc-high-aov, uc-repeat, resources,
+  summary, changelog.
+- **Display font: Source Serif 4** (owner pick; self-hosted `public/fonts/`,
+  @font-face in global.css, headings wght 560). Fraunces is fully removed — its
+  swash-f saga is in iteration-log; don't reintroduce.
+- **Hero**: proof row (BFS badge + 4.9★ glyph chip) above H1 → 25-word sub → CTAs →
+  "$30 Million+ / in the last 30 days" co-equal lockup → the FORK figure — desktop
+  ≥980px is HORIZONTAL (phone | account-node paths | stacked outcomes; from the
+  app-store export), mobile stacks. Both laptop screens are FIXED equal height
+  (10.6rem) — min-height drifted twice; if cart content changes, re-measure and reset
+  the fixed height (playwright measure pattern in iteration-log part 3). Demo cart:
+  DEMO_ITEMS = 2 base items + the animated beanie = 3 rows in the live variant
+  ($242 resting / $224 wound-back).
+- **Homepage flow**: hero → TrustStrip (lead + "Available for [Shopify] | Shopify
+  Plus" + BFS 40px + 11 customer logos) → problem → benefits ("One-click setup — then
+  it works silently in the background.") → parity (Amazon citation points at the live
+  amazon.sg help node — .com node is dead; swap if a working .com URL is found in a
+  real browser) → navy metric band → testimonial + 3 verbatim review cards
+  (SupplementSource.ca, Public Goods, Nest; NO reviews link) → pricing → FAQ (8) →
+  CTA band. /how-it-works carries the Cart Transfer Value dashboard snapshot
+  (8,069 / 1,974 / $452,836 — static, never live-framed).
+- **Analytics: geo-gated consent** (owner decision): EU/EEA/UK/CH (timezone heuristic,
+  fail-safe) see the banner, GA4 after Accept; everyone else gets GA automatically,
+  no banner; stored Decline wins everywhere. Plausible still unwired.
+- **A11y**: WCAG AA contrast tokens shipped (ink-faint #6e6459 etc.); announce bar is
+  a labelled region. Design tokens otherwise per global.css @theme.
+- **App Store listing assets** (parallel workstream, committed at v1.0): frames +
+  upload-ready renders in `design-assets/app-store/` — NOT yet uploaded to the listing.
 
-## Browser/automation gotchas (hard-won; trust these)
+## Gotchas (hard-won; trust these)
 
-- **A PARALLEL Claude session may be working this repo concurrently** (observed 2026-07-07:
-  App-Store listing assets appearing in `design-assets/app-store/` + `scripts/render-app-
-  store-frames.mjs` + `docs/app-store-assets-plan.md` mid-session). NEVER `git add -A`
-  blindly — stage your own paths explicitly and leave the other session's untracked files
-  alone.
+- **Screenshots**: headless-Chrome CLI clamps window width ~500px — for mobile truth
+  use playwright-core (channel:'chrome', real viewport; capture script pattern in
+  scratchpad-era `capture.mjs`, recorded in iteration-log) or the dist-iframe trick.
+  Playwright is now a devDependency.
+- **Measure, don't eyeball, figure geometry** — the owner catches pixel drift.
+- Verify deploys via the Netlify CLI (above); a push is NOT a deploy. GitHub gets no
+  commit statuses from this Netlify site.
+- A PARALLEL session may work this repo — stage explicit paths, never `git add -A`.
+- Cloudflare dashboard hangs for agent navigations; ask the owner to open it.
+- macOS Desktop is TCC-blocked; ask for files via design-assets/.
+- Astro-scoped selectors don't grep-match in built CSS (data-attr suffixes); verify
+  styling visually or via computed styles.
+- amazon.com bot-walls all automation (curl, WebFetch, headless) — verify Amazon
+  pages via search engines or ask the owner.
 
-- **Headless Chrome clamps its window to ~500px** — a `--window-size=390` screenshot is a
-  CROP of a wider layout and looks falsely broken. For mobile truth: write a scratch page
-  into `dist/` that iframes "/" at 390px width, screenshot THAT (iframe media queries evaluate
-  at iframe size). Pattern in iteration-log cycle 3. Remove scratch files before committing.
-- **Cloudflare's dashboard only finishes booting on user-initiated page loads** — agent
-  navigations hang on the spinner forever. Ask the owner to open the page, then drive it.
-- **A password-manager extension overlays focused text inputs** and blocks screenshots/clicks
-  with "Cannot access a chrome-extension:// URL". Avoid clicking into inputs; use the `find`
-  tool + `form_input` (programmatic set) instead. If an input rejects form_input (Bing's did),
-  click+type works — just expect capture failures until focus moves.
-- **The owner's macOS Desktop is TCC-blocked to the shell** — you cannot read
-  /Users/debgangopadhyay/Desktop. Ask the owner to drop files into the repo (design-assets/).
-- Dev server: `npm run dev` daemonizes on :4321/:4322 (`astro dev stop` to stop). Preview
-  (`npm run preview`) serves the last build — rebuild first.
+## Backlog (owner queue first — each needs their call)
 
-## The owner's outstanding feedback = your backlog (in their priority order)
+1. **Privacy-policy revision (P1)**: formal policy says carts are stored "anonymous…"
+   which contradicts the product (account-keyed carts). Legal text; owner edits, then
+   port formatting-only. (owner-inputs §4 has the full revision list.)
+2. Show the hidden Shopify **Advanced** tier card ($24.99, mirrors-listing decision)?
+3. **GMD logo** in the strip is illegible at 26px — swap asset, drop, or accept.
+4. **signed-in vs logged-in** terminology sweep ×15 (recommend "signed-in").
+5. **SERP trims**: home title 72 chars / desc 202 (drafts on request).
+6. **How-it-works step-strip diagram** (save → sign-in → merge) — designed, unbuilt;
+   the next diagrams-over-text move (improvement-plan §Diagrams).
+7. **App Store listing upload** — renders are ready in design-assets/app-store/.
+8. Re-enable next pages when wanted: calculator (needs QA pass), big-retailers, plus,
+   resources/summary/changelog.
 
-1. ~~Trust-signal hierarchy redesign~~ ✅ **SHIPPED cycle 6 (2026-07-07).** Each signal
-   once above the fold, placed by nature: announce = positioning claim only ("The original
-   … since 2016", text, non-sticky sibling of the sticky nav); hero row = $30M+/30d (bold)
-   + 4.9★ link; TrustStrip (new component, absorbed the trust bar) = trusted-by lead + the
-   official BFS badge + customer logos. ⚠️ SUPERSEDED 2026-07-07 (owner directive): brand/
-   kit usage guidelines (e.g. BFS "one instance per page") are SOFT preferences, never hard
-   blockers — ask the owner before letting any external guideline shrink a marketing ask.
-   The footer now carries a second BFS instance + official Shopify marks by owner request.
-   Honesty rules (research-notes) remain absolute.
-2. ~~Customer-logo trust strip~~ ✅ **SHIPPED cycle 6** ("Extended 11" owner pick).
-   Toggle: `showCustomerLogos` + `proof.namedMerchantLogos` in src/config/site.ts (flag
-   off → slim lead+badge fallback). Assets: design-assets/customer-logos/MANIFEST.md
-   (sources/grades) → web copies in public/customer-logos/ (StewMac + Tannico ink-recolored;
-   treatment = multiply + grayscale). Excluded as trademark-sensitive: Levi's Korea,
-   LINE FRIENDS, Phoebe Philo. techbino/vdbparts reserved for case studies, not logos.
-3. ~~Hero diagram round 2~~ ✅ **SHIPPED cycle 6 — owner picked 'live'** (plate chrome +
-   sync choreography). All four variants remain switchable via `heroVariant` in
-   src/config/site.ts ('fork'|'plate'|'live'|'real'). Motion rules that survived review:
-   resting markup = complete story; JS only winds back temporarily; no phone price column.
-4. ~~Dashboard "value-add" section~~ ✅ **SHIPPED cycle 7 (2026-07-07).** "Cart Transfer
-   Value" module recreated as faithful STATIC DOM on /how-it-works (slot between the
-   mechanism sections and FAQ/CTA): browser-chrome frame → Polaris-like admin canvas →
-   3 stat cards with the real anonymized figures (8,069 · 1,974 · $452,836) → figcaption
-   "One store's last 30 days — snapshot captured July 2026." Zero JS, no toggle, no Beta
-   chip; store never named; no preview URL/token used. New `DashboardSnapshot.astro` +
-   `HowItWorksPage.astro` (how-it-works now in the router CUSTOM map). 13 keys ×15
-   (`page.how-it-works.dash.*`) — 4 marketing keys hand-authored per register; ⚠️ the 9
-   `dash.ui.*` keys are the app's own UI copy, EN verbatim in all locales BY DESIGN —
-   never translate them (native reviewers included). Details: iteration-log cycle 7.
-   Outstanding: owner content sign-off on the live section (flagged in owner-inputs §top).
-5. ~~Official Shopify assets~~ ✅ RESOLVED with a hard finding: **no official public
-   Shopify Plus lockup exists** (brand-assets ships only the main Shopify logo; the Plus
-   partner badge is gated to Plus-partner tiers). "Shopify Plus" stays as text — this is
-   guideline-correct, stop hunting. 6 official Shopify SVGs + guideline notes in
-   design-assets/shopify-plus/.
-6. **Research ranked list — remaining:** ✅ pricing fees line + FAQ "Works with Shop" +
-   "no time limit" shipped cycle 6 (owner confirmed all three; Shop nuance: Shop login
-   ties the cart to the account, but Shop does NOT move carts between devices itself).
-   STILL OPEN: re-enable calculator + vs-email pages (V1_DEFERRED deletions + restore
-   related-links + homepage teasers if wanted).
-7. **The thorough live audit the owner asked for** — QA, Marketing/UX, SEO, across the LIVE
-   site (all pages × key locales, mobile + desktop, Lighthouse/CWV, structured-data
-   validation, GSC coverage once crawling starts). Consider parallel sub-agents per lens;
-   verify findings before reporting (adversarial check), then fix in priority order.
-   NOTE: OG image still shows the old 3-item fork + old headline framing — refresh it
-   during the audit round if the owner wants parity with the live hero.
+Parked P2 polish (no decisions needed): FAQPage schema dedupe across home/faq;
+hreflang→noindex tension (resolve at native review); Source Serif 4 subsetting +
+size-adjust fallback (CLS 0.03–0.07 is font-swap); oversized customer-logo PNGs
+(~84KB waste); CJK line-break polish (bundle with native review); `cta.partner`
+translations refresh when partners page returns; hero 'fork'/'plate'/'real' variants
+un-exercised since the horizontal rework — re-verify before switching `heroVariant`.
 
-## Owner inputs (all 2026-07-07 batch answers — resolved)
+## Analytics to watch (first data)
 
-1. Logo strip = Extended 11 ✅ · 2. Claims: all three approved, Shop nuance captured ✅ ·
-3. Impact stat = **"$30M+ — last 30 days"** ✅ ⚠️ standing flag: internal 2026-06-03
-   measurement was $26.0M/30d — surface to the owner if they ever ask to re-verify; the
-   number is theirs. · 4. Dashboard = debug preview URL (see backlog #4). Nothing is
-   currently blocked on the owner except dashboard-content sign-off when that ships.
-
-## State snapshot
-
-- Repo `main` = production. Branch `iterate-v1-simplification` preserved historical cycles.
-- 151 pages build (9 v1 page types + /privacy-policy, ×15 locales, +404). All checks green.
-- Homepage above-the-fold (cycle 6): announce → sticky nav → hero (H1/sub/CTAs/numbers row)
-  → live plate diagram → TrustStrip (lead + official badge + 11 logos) → problem section.
-  FAQ = 15 questions; pricing carries the flat-fees line.
-- Docs current: iteration-log (cycles 1–6), v1-recommendation, owner-inputs,
-  research-landing-pages, legal-review (pre-publish list mostly cleared; §5.7 partner risk
-  parked with deferred pages).
-- Design system: paper #F7F4EE / ink #1C1815 / marigold #D8541E accent, navy #14233A bands,
-  evergreen success; **Source Serif 4 display (owner pick 2026-07-07 — replaced Fraunces
-  entirely; self-hosted from public/fonts/, @font-face in global.css, headings wght 560)**
-  + Hanken Grotesk + IBM Plex Mono; ink primary buttons; no gradients/glows. One signature
-  element per page; restraint elsewhere.
+GSC (domain property verified, sitemap submitted — now 15 EN URLs), Bing, GA4
+(`G-B0XL737D3K`, geo-gated), Shopify Partner analytics for install-click UTMs
+(`utm_content` = placement: hero / footer / pricing_table / home_final / …). The
+fold benchmark and audit baseline (Lighthouse 98–100) are the reference points.
