@@ -210,7 +210,28 @@ for (const f of htmlFiles) {
   }
 }
 
-// 4. i18n locale drift (en → locales).
+// 4. Analytics baked in — deploys are local-first (CI builds stopped
+// 2026-07-09 to save credits), so a missing .env would silently strip GA4
+// from production. If the env declares an ID, the built home page must
+// contain it; if no ID is configured at all, scream.
+let ga4Problem = null;
+let ga4Id = process.env.PUBLIC_GA4_MEASUREMENT_ID;
+if (!ga4Id) {
+  try {
+    const env = await readFile(resolve(ROOT, '.env'), 'utf8');
+    ga4Id = env.match(/^PUBLIC_GA4_MEASUREMENT_ID=(.+)$/m)?.[1]?.trim();
+  } catch {
+    /* no .env */
+  }
+}
+if (ga4Id) {
+  const home = await readFile(resolve(DIST, 'index.html'), 'utf8');
+  if (!home.includes(ga4Id)) ga4Problem = `PUBLIC_GA4_MEASUREMENT_ID=${ga4Id} is configured but absent from dist/index.html — rebuild so Astro bakes it in`;
+} else {
+  ga4Problem = 'PUBLIC_GA4_MEASUREMENT_ID not set (.env missing?) — this dist has NO analytics; deploying it would strip GA4 from production';
+}
+
+// 5. i18n locale drift (en → locales).
 const i18nOk = await runI18nDriftCheck();
 
 // ---------------------------------------------------------------------------
@@ -247,6 +268,13 @@ if (sitemapBroken.length) {
   for (const { loc } of sitemapBroken.slice(0, 20)) console.error(`    ${loc}`);
 } else {
   console.log(`  ✓ all ${sitemapPaths.size} sitemap URLs resolve`);
+}
+
+if (ga4Problem) {
+  failed = true;
+  console.error(`\n✗ ANALYTICS: ${ga4Problem}`);
+} else {
+  console.log(`  ✓ GA4 measurement id baked into the build`);
 }
 
 if (sitemapMissing.length) {

@@ -30,10 +30,10 @@ rendered dist/, checked by machine, on every build.**
 ## Defense layers (what runs now, and when)
 
 ### Layer 1 — static gate on every build: `scripts/qa-gate.mjs`
-Wired into `npm run build` (`astro build && node scripts/qa-gate.mjs`), which
-is also Netlify's build command — so **it runs in CI on every push and a
-failure fails the deploy** (the previous production version stays live).
-Checks, all against the built `dist/`:
+Wired into `npm run build` (`astro build && node scripts/qa-gate.mjs`), so it
+runs on every local build and inside `npm run deploy` — **a failing gate means
+no dist gets deployed** (production stays on the previous version). Checks,
+all against the built `dist/`:
 
 1. **Leaked i18n keys** — raw `x.y.z` key tokens in rendered text, meta
    description/OG copy, or alt/aria/placeholder attributes. Catches the entire
@@ -80,18 +80,34 @@ node scripts/qa-browse.mjs --base https://persistentcartapp.com            # ful
 node scripts/qa-browse.mjs --base https://persistentcartapp.com --filter es # subset
 ```
 
-plus a 10-second confirmation that the deploy actually happened (a push is NOT
-always a deploy — netlify.toml skips docs-only commits):
+plus a 10-second confirmation of what production is actually serving:
 
 ```sh
 curl -s -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
   https://api.netlify.com/api/v1/sites/7a932313-d7bf-4877-85bd-d7944c207fb4 \
-  | jq -r '.published_deploy | .created_at + " " + .commit_ref[0:8] + " " + .title'
+  | jq -r '.published_deploy | .created_at + " " + (.commit_ref // "cli")[0:8] + " " + .title'
 ```
 
-(The CLI token lives in `~/Library/Preferences/netlify/config.json`; the site
-is repo-linked to `gangopadhyayd/cffpc_landing_page@main`, build command
-`npm run build`.)
+(The CLI token lives in `~/Library/Preferences/netlify/config.json`.)
+
+## Deploys & the Netlify-credits policy (owner directive 2026-07-09)
+
+**Owner rule: don't burn Netlify credits.** Build minutes on Netlify's CI are
+the main credit sink, and we build + QA locally anyway, so:
+
+- **Git-triggered builds are STOPPED** (`build_settings.stop_builds = true`,
+  set via API 2026-07-09). **A push to main no longer builds or deploys
+  anything and costs zero credits.**
+- **Deploys are CLI-only**: `npm run deploy` = local build (with the qa-gate
+  inside it) → `netlify-cli deploy --prod --no-build --dir dist`. Uploading a
+  prebuilt dist uses no CI build minutes.
+- Batch work into few deploys — deploy a finished round, not each commit.
+- Prefer sweeping the **local** dist; hit prod only for post-deploy spot
+  checks (bandwidth is cheap but not free).
+- The netlify.toml `ignore` rule (skip docs-only builds) stays as a backstop
+  in case Git builds are ever re-enabled.
+- To re-enable Git builds if ever wanted: Netlify UI → Site configuration →
+  Build & deploy → Stop builds (or PATCH `build_settings.stop_builds=false`).
 
 ## The release checklist
 
@@ -105,13 +121,14 @@ For any change that touches `src/`, `public/`, or config affecting output:
 2. **`npm run qa`** — typecheck, build+gate, full browser sweep. Zero findings.
 3. **Eyeball `qa-report/`** — flick the sample screenshots (mobile EN + the
    pages you touched at all four widths). Machines don't see "ugly".
-4. **Push** to `main` → Netlify builds with the same gate.
-5. **Verify prod**: confirm the published deploy is your commit (curl above),
-   then spot-sweep prod (`--base … --filter <what you changed>`), or minimum
+4. **Push** to `main` (backup/history only — pushes don't build or deploy).
+5. **`npm run deploy`** — rebuilds with the gate, then uploads dist via CLI
+   (`--no-build`, zero CI build credits).
+6. **Verify prod**: confirm the published deploy timestamp (curl above), then
+   spot-sweep prod (`--base … --filter <what you changed>`), or minimum
    `curl -s https://persistentcartapp.com/ | grep -c 'footer\.link\.'` → must be 0.
 
-For docs-only commits: nothing to do (Netlify skips the build via the
-`ignore` rule in netlify.toml).
+For docs-only changes: just commit and push — no deploy needed, nothing spent.
 
 ## Cadence
 
