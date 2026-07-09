@@ -118,6 +118,9 @@ const included = [1, 2, 3, 4, 5, 6].map((n) => tt(`pricing.included.${n}`));
     font-size: 0.84rem;
     color: var(--color-ink-soft);
     min-height: 2.4em;
+    /* long compounds (da/de/fi) must wrap inside the fixed-width track */
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
   .ptier-cta {
     /* auto-margin pins every card's CTA to the same baseline even when a
@@ -177,7 +180,10 @@ const included = [1, 2, 3, 4, 5, 6].map((n) => tt(`pricing.included.${n}`));
   }
   @media (min-width: 720px) {
     .pricing-tiers {
-      grid-template-columns: repeat(4, 1fr);
+      /* minmax(0,…): plain 1fr lets a long unbreakable word (da
+         "kurvsynkroniseringer") set the track minimum and push the row past
+         the viewport at 768 (qa-browse 2026-07-09). */
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 0.75rem;
     }
     .pricing-included ul {
