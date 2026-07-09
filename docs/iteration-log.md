@@ -521,3 +521,23 @@ consent → 5 SEO pages re-enabled + 2 new FAQs → 3 verbatim review cards (no 
 no reviews link) → accuracy sweep. Netlify upgraded to Pro after the free-tier
 credit freeze. App-store listing assets committed (not yet uploaded).
 Forward state + backlog: docs/next-iteration-brief.md (rewritten at this tag).
+
+---
+
+## Post-v1.0 hotfix + QA hardening (2026-07-09)
+
+Owner spotted raw i18n keys in the live footer (`footer.link.cross-device` etc.).
+Root cause: the 2026-07-08 SEO round gave 5 re-enabled pages footer slots, but 4
+of the dynamically-constructed `footer.link.*` keys existed in no catalog — not
+even en — so `t()`'s key-fallback rendered on every page ×15 locales, and no
+check looked at built output. Fixed: 60 strings (4 keys ×15 locales, terminology
+mirrored from each locale's reviewed page titles). A 900-load browser sweep also
+caught `/da/pricing` overflowing at 768px (plain-`1fr` grid + Danish compound
+"kurvsynkroniseringer") — fixed with `minmax(0,1fr)` + hyphenation.
+
+New standing QA (docs/qa-process.md): `qa-gate.mjs` post-build scanner (leaked
+keys in rendered copy, case-sensitive internal link/asset resolution, sitemap,
+i18n drift) now runs inside `npm run build`, so Netlify CI blocks regressing
+deploys; `qa-browse.mjs` sweeps every page ×4 viewports in headless Chromium
+(console errors, overflow, broken imgs, h1/title) locally via `npm run qa` and
+against prod via `--base`.

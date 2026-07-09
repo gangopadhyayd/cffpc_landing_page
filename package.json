@@ -8,13 +8,16 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/qa-gate.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "typecheck": "astro check",
     "lint": "astro check",
     "i18n:sync": "node scripts/i18n-sync.mjs",
-    "i18n:check": "node scripts/i18n-check.mjs"
+    "i18n:check": "node scripts/i18n-check.mjs",
+    "qa:gate": "node scripts/qa-gate.mjs",
+    "qa:browser": "node scripts/qa-browse.mjs",
+    "qa": "npm run typecheck && npm run build && npm run qa:browser"
   },
   "keywords": [],
   "author": "Customer First focus",
