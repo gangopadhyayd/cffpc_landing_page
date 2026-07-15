@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Feature image — Carts leak between devices (account-node fork)</title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+  .frame { padding: 44px 56px; }
+  .row { display: flex; align-items: flex-start; justify-content: space-between; }
+  .content { display: flex; gap: 26px; margin-top: 26px; flex: 1; }
+  .col-copy { width: 560px; flex: none; display: flex; flex-direction: column; gap: 30px; padding-top: 26px; }
+  .headline { font-size: 81px; }
+  .sub { font-size: 28px; max-width: 545px; }
+
+  .stage { position: relative; flex: 1; }
+
+  /* origin phone, vertically centered on the fork */
+  .phone { position: absolute; left: 0; top: 78px; width: 206px; height: 406px; z-index: 2; }
+  .phone .cart { padding: 15px 14px 12px; }
+  .phone .cart .cart-title { font-size: 18.5px; }
+  .phone .cart .items { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+  .phone .item { gap: 9px; }
+  .phone .item .swatch { width: 26px; height: 26px; }
+  .phone .item .nm { font-size: 13px; }
+  .phone .item .meta { font-size: 11px; }
+  .phone .item .price { font-size: 11.5px; }
+  .phone .cart .divider { margin: 10px 0 7px; }
+  .phone .cart .subtotal .lbl { font-size: 12px; }
+  .phone .cart .subtotal .amt { font-size: 15px; }
+
+  /* the fork: two mirror arcs, labels riding the lines.
+     Labels carry a paper halo (bg + padding, negative margins keep the
+     authored position): the line breaks BEHIND the text instead of striking
+     through it — locale-proof, any translation length stays readable. */
+  .paths { position: absolute; left: 0; top: 0; width: 958px; height: 620px; z-index: 1; }
+  .line-label {
+    position: absolute;
+    font-family: var(--mono); font-size: 15.5px; letter-spacing: 0.06em;
+    background: var(--paper); padding: 5px 9px; margin: -5px -9px;
+    z-index: 3;
+  }
+  .line-label.without { left: 300px; top: 186px; color: var(--ink-faint); }
+  .line-label.with { left: 322px; top: 468px; color: var(--evergreen); }
+
+  /* the account station on the marigold path: where the cart lives between devices */
+  .acct-node {
+    position: absolute; left: 344px; top: 352px; width: 62px; height: 62px;
+    background: var(--card);
+    border: 3.5px solid var(--accent);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--shadow-card);
+    z-index: 3;
+  }
+  .acct-caption {
+    position: absolute; left: 245px; top: 316px; width: 260px;
+    font-family: var(--mono); font-size: 15.5px; letter-spacing: 0.06em;
+    color: var(--evergreen); text-align: center;
+    z-index: 3;
+  }
+  .acct-caption .cap-halo {
+    background: var(--paper); padding: 4px 9px;
+    box-decoration-break: clone; -webkit-box-decoration-break: clone;
+  }
+
+  /* ---- two identical desktop monitors, stacked fates ---- */
+  .monitor { position: absolute; left: 556px; width: 374px; z-index: 2; }
+  .monitor.without { top: 0; }
+  .monitor.with { top: 320px; }
+  .monitor .bezel {
+    position: relative; height: 238px;
+    background: var(--card);
+    border: 3.5px solid var(--ink);
+    border-radius: 14px;
+    box-shadow: var(--shadow-raised);
+  }
+  .monitor .screen { position: absolute; inset: 14px; border-radius: 8px; overflow: hidden; }
+  .monitor .neck { width: 62px; height: 26px; background: var(--ink); margin: 0 auto; }
+  .monitor .foot { width: 184px; height: 12px; background: var(--ink); margin: 0 auto; border-radius: 6px; }
+  .monitor.without .bezel { border-color: rgb(28 24 21 / 0.5); box-shadow: var(--shadow-card); }
+  .monitor.without .neck, .monitor.without .foot { background: rgb(28 24 21 / 0.5); }
+
+  /* without screen: the cart never made it */
+  .empty-screen { background: #f4f0e7; height: 100%; padding: 15px 18px; display: flex; flex-direction: column; }
+  .empty-screen .es-row { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .empty-screen .t { font-size: 19.5px; font-weight: 650; color: var(--ink-soft); white-space: nowrap; }
+  .empty-screen .z { font-family: var(--mono); font-size: 18px; color: var(--ink-faint); text-decoration: line-through; text-decoration-thickness: 1.5px; }
+  .es-box {
+    flex: 1; margin-top: 10px;
+    border: 2px dashed var(--hairline-strong); border-radius: 9px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+    padding: 0 16px; text-align: center;
+  }
+  .es-box .hint { font-size: 16px; line-height: 1.45; font-weight: 490; color: var(--ink-faint); }
+  .es-box .ghost { opacity: 0.55; }
+
+  /* with screen: the customer logs in — the same cart is already there */
+  .with-screen { background: var(--card); height: 100%; padding: 11px 16px 10px; display: flex; flex-direction: column; }
+  .acct-row {
+    display: flex; align-items: center; gap: 7px;
+    font-size: 12.5px; font-weight: 600; color: var(--ink-faint);
+    padding-bottom: 7px; border-bottom: 1.5px solid var(--hairline); margin-bottom: 8px;
+  }
+  .acct-row svg { flex: none; }
+  .with-screen .hl-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .with-screen .cart-title { font-family: var(--display); font-weight: 500; font-size: 19px; letter-spacing: -0.01em; }
+  .sync-pill { font-size: 11.5px; padding: 4.5px 10px; }
+  .with-screen .items { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+  .with-screen .item { gap: 9px; }
+  .with-screen .item .swatch { width: 20px; height: 20px; border-radius: 6px; }
+  .with-screen .item .nm { font-size: 14px; }
+  .with-screen .item .price { font-size: 12.5px; }
+  .with-screen .divider { margin: 8px 0 6px; }
+  .with-screen .subtotal { display: flex; align-items: baseline; justify-content: space-between; }
+  .with-screen .subtotal .lbl { font-size: 13.5px; font-weight: 640; color: var(--ink-soft); }
+  .with-screen .subtotal .amt { font-size: 16.5px; }
+
+  /* the stats screenshot — condensed: two cards, no banner.
+     Sits UNDER the with-monitor's stand (z1 < monitors z2): the desk. */
+  .panel {
+    position: absolute;
+    right: -28px; top: 556px; left: 168px;
+    background: #f6f6f7;
+    border: 1px solid rgb(28 24 21 / 0.08);
+    border-radius: 14px;
+    box-shadow: var(--shadow-raised);
+    padding: 16px 22px 12px;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    z-index: 1;
+  }
+  .sec-title { font-size: 17px; font-weight: 700; color: #1a1a1a; margin: 0 2px 9px; }
+  .cards { display: flex; gap: 16px; }
+  .stat-card { flex: 1; padding: 13px 18px 10px; }
+  .stat-card .stat-label { font-size: 14px; }
+  .stat-card .stat-num { font-size: 36px; margin: 4px 0 3px; font-variant-numeric: tabular-nums; }
+  .stat-card .stat-hint { font-size: 11.5px; line-height: 1.3; }
+  .foot { margin: 8px 2px 0; font-size: 12px; color: #616161; }
+</style>
+<style data-l10n="zh-CN">
+:root {
+  --display: 'Source Serif 4 Variable', 'Songti SC', Georgia, serif;
+  --sans: 'Hanken Grotesk Variable', 'PingFang SC', 'Hiragino Sans GB', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', 'PingFang SC', ui-monospace, monospace;
+}
+.display { line-height: 1.24; letter-spacing: 0; }
+.headline { font-size: 78px; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="row">
+    <span class="lockup">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10.5" y="6.5" width="17" height="12" rx="1.8" stroke="#1C1815" stroke-width="2"/>
+        <rect x="8" y="20.2" width="22" height="2.6" rx="1.3" fill="#1C1815"/>
+        <rect x="2.6" y="9.5" width="9.6" height="16.5" rx="2.6" fill="#F7F4EE" stroke="#1C1815" stroke-width="2"/>
+        <line x1="6" y1="23.2" x2="8.8" y2="23.2" stroke="#1C1815" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#F7F4EE" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#D8541E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="13.1" cy="21.4" r="1.35" fill="#D8541E"/>
+        <circle cx="18.2" cy="21.4" r="1.35" fill="#D8541E"/>
+      </svg>
+      <span class="word">Persistent<span class="w2"> Cart</span></span>
+    </span>
+    <span class="pill"><span class="dot"></span>跨设备购物车同步<span class="since">&nbsp;· 自 2016 年</span></span>
+  </div>
+
+  <div class="content">
+    <div class="col-copy">
+      <h1 class="display headline">换个设备，<br>购物车就没了。<br><span class="accent">您的不会。</span></h1>
+      <p class="sub">Persistent Cart 会把每个已登录购物车静默保存到顾客账户。顾客在另一台设备登录时，购物车已经在那里。</p>
+    </div>
+
+    <div class="stage">
+      <svg class="paths" viewBox="0 0 958 620" fill="none">
+                <path d="M210 272 C 320 196, 440 119, 556 119" stroke="#8A8077" stroke-opacity="0.85" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 11"/>
+                <path d="M210 292 C 310 355, 420 420, 542 439" stroke="#D8541E" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 13"/>
+        <circle cx="548" cy="440" r="8" fill="#D8541E"/>
+      </svg>
+      <span class="line-label without">没有 PERSISTENT CART</span>
+      <span class="line-label with">有 PERSISTENT CART</span>
+
+            <span class="acct-caption"><span class="cap-halo">已保存到账户</span></span>
+      <span class="acct-node">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.2" r="3.6" stroke="#1C1815" stroke-width="2.1"/><path d="M4.8 20.2c1.1-3.6 3.9-5.4 7.2-5.4s6.1 1.8 7.2 5.4" stroke="#1C1815" stroke-width="2.1" stroke-linecap="round"/></svg>
+      </span>
+
+      <div class="phone">
+        <div class="screen">
+          <div class="cart">
+            <span class="cart-title">您的购物车</span>
+            <div class="items">
+              <div class="item"><span class="swatch" style="background:#d8541e"></span><span><span class="nm">越野跑鞋</span><br><span class="meta">数量 1</span></span><span class="price tabular">$128.00</span></div>
+              <div class="item"><span class="swatch" style="background:#14233a"></span><span><span class="nm">防雨冲锋衣</span><br><span class="meta">数量 1</span></span><span class="price tabular">$96.00</span></div>
+              <div class="item"><span class="swatch" style="background:#1e5b45"></span><span><span class="nm">美利奴羊毛袜</span><br><span class="meta">数量 1</span></span><span class="price tabular">$24.00</span></div>
+            </div>
+            <div class="divider"></div>
+            <div class="subtotal"><span class="lbl">小计</span><span class="amt tabular">$248.00</span></div>
+            <span class="sync-pill" style="font-size:11px; padding:5px 9px; margin-top:9px; white-space:nowrap;">
+              <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M2.5 8.5l3.5 3.5 7.5-8" stroke="#1E5B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              已保存到您的账户
+            </span>
+          </div>
+        </div>
+      </div>
+
+            <div class="monitor without">
+        <div class="bezel">
+          <div class="screen">
+            <div class="empty-screen">
+              <div class="es-row"><span class="t">您的购物车是空的</span><span class="z tabular">$248.00</span></div>
+              <div class="es-box">
+                <svg class="ghost" width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M3.5 4h2l2.2 11.2a1.6 1.6 0 0 0 1.57 1.3h7.9a1.6 1.6 0 0 0 1.56-1.24L20.5 8H6.3" stroke="#8A8077" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.2" cy="20.2" r="1.5" stroke="#8A8077" stroke-width="1.6"/><circle cx="16.9" cy="20.2" r="1.5" stroke="#8A8077" stroke-width="1.6"/></svg>
+                <span class="hint">没有报错，没有邮件。<br>顾客重新加购——或者离开。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="neck"></div>
+        <div class="foot"></div>
+      </div>
+
+            <div class="monitor with">
+        <div class="bezel">
+          <div class="screen">
+            <div class="with-screen">
+              <div class="acct-row">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.2" r="3.6" stroke="#8A8077" stroke-width="2.2"/><path d="M4.8 20.2c1.1-3.6 3.9-5.4 7.2-5.4s6.1 1.8 7.2 5.4" stroke="#8A8077" stroke-width="2.2" stroke-linecap="round"/></svg>
+                amelia@example.com&nbsp;·&nbsp;已登录
+              </div>
+              <div class="hl-row">
+                <span class="cart-title">您的购物车</span>
+                <span class="sync-pill">
+                  <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M2.5 8.5l3.5 3.5 7.5-8" stroke="#1E5B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  刚刚同步
+                </span>
+              </div>
+              <div class="items">
+                <div class="item"><span class="swatch" style="background:#d8541e"></span><span><span class="nm">越野跑鞋</span></span><span class="price tabular">$128.00</span></div>
+                <div class="item"><span class="swatch" style="background:#14233a"></span><span><span class="nm">防雨冲锋衣</span></span><span class="price tabular">$96.00</span></div>
+                <div class="item"><span class="swatch" style="background:#1e5b45"></span><span><span class="nm">美利奴羊毛袜</span></span><span class="price tabular">$24.00</span></div>
+              </div>
+              <div class="divider"></div>
+              <div class="subtotal"><span class="lbl">小计</span><span class="amt tabular">$248.00</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="neck"></div>
+        <div class="foot"></div>
+      </div>
+
+      <div class="panel">
+        <div class="sec-title">购物车转移价值</div>
+        <div class="cards">
+          <div class="stat-card">
+            <div class="stat-label">购物车转移次数</div>
+            <div class="stat-num">8,041</div>
+            <div class="stat-hint">已保存购物车转移到其他设备的次数。</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">购物车转移带来的收入</div>
+            <div class="stat-num">$452,098</div>
+            <div class="stat-hint">含购物车转移的订单金额。</div>
+          </div>
+        </div>
+        <div class="foot">刚刚更新。显示过去 30 天。</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

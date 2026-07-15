@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>Frame 2 — The receipts</title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+  .row { display: flex; align-items: flex-start; justify-content: space-between; }
+  .content { display: flex; gap: 40px; margin-top: 40px; flex: 1; align-items: center; }
+  .col-copy { width: 545px; flex: none; display: flex; flex-direction: column; gap: 32px; margin-top: -30px; }
+  .headline { font-size: 82px; }
+
+  .col-ui { position: relative; flex: 1; height: 100%; }
+  .admin {
+    position: absolute;
+    left: 0; right: -72px; top: 50%;
+    transform: translateY(-50%);
+    padding: 30px 34px 26px;
+  }
+
+  .banner {
+    background: #ffffff;
+    border: 1px solid rgb(28 24 21 / 0.08);
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgb(28 24 21 / 0.04);
+    padding: 22px 26px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .banner .emoji { font-size: 30px; }
+  .banner .btxt { font-size: 24.5px; font-weight: 700; color: #1a1a1a; letter-spacing: -0.005em; }
+  .banner .btxt .money { font-variant-numeric: tabular-nums; }
+
+  .section-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 26px 2px 14px;
+  }
+  .section-row .sec-title { font-size: 22px; font-weight: 700; color: #1a1a1a; }
+  .period { margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 16px; color: #616161; }
+  .seg { display: flex; border: 1px solid rgb(28 24 21 / 0.16); border-radius: 9px; overflow: hidden; background: #fff; }
+  .seg span { padding: 7px 16px; font-size: 16px; font-weight: 600; color: #444; }
+  .seg .on { background: #e3e3e3; color: #111; }
+
+  .cards { display: flex; gap: 18px; }
+  .stat-card { flex: 1; padding: 24px 24px 20px; }
+  .stat-card .stat-label { font-size: 18.5px; min-height: 50px; }
+  .stat-card .stat-num { font-size: 52px; margin: 10px 0 8px; font-variant-numeric: tabular-nums; }
+  .stat-card .stat-hint { font-size: 15.5px; line-height: 1.35; }
+
+  .foot { margin: 18px 4px 0; font-size: 15.5px; color: #616161; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="row">
+    <span class="lockup">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10.5" y="6.5" width="17" height="12" rx="1.8" stroke="#1C1815" stroke-width="2"/>
+        <rect x="8" y="20.2" width="22" height="2.6" rx="1.3" fill="#1C1815"/>
+        <rect x="2.6" y="9.5" width="9.6" height="16.5" rx="2.6" fill="#F7F4EE" stroke="#1C1815" stroke-width="2"/>
+        <line x1="6" y1="23.2" x2="8.8" y2="23.2" stroke="#1C1815" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#F7F4EE" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#D8541E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="13.1" cy="21.4" r="1.35" fill="#D8541E"/>
+        <circle cx="18.2" cy="21.4" r="1.35" fill="#D8541E"/>
+      </svg>
+      <span class="word">Persistent<span class="w2"> Cart</span></span>
+    </span>
+    <span class="pill"><span class="dot"></span>Indbygget værdianalyse</span>
+  </div>
+
+  <div class="content">
+    <div class="col-copy">
+      <h1 class="display headline">Se, hvad synkede kurve <span class="accent">giver tilbage</span></h1>
+      <p class="sub">Dashboardet tæller hver kurvoverførsel, de ordrer, der følger, og den omsætning, der hører til — i din butiks valuta.</p>
+    </div>
+
+    <div class="col-ui">
+      <div class="admin">
+        <div class="banner">
+          <span class="emoji">🎉</span>
+          <span class="btxt">Seneste 30 dage: <span class="money">$452,098</span> fra kurvoverførsler</span>
+        </div>
+
+        <div class="section-row">
+          <span class="sec-title">Værdi af overførte kurve</span>
+          <span class="period">Periode
+            <span class="seg"><span>7 d</span><span class="on">30 d</span></span>
+          </span>
+        </div>
+
+        <div class="cards">
+          <div class="stat-card">
+            <div class="stat-label">Kurvoverførsler</div>
+            <div class="stat-num">8,041</div>
+            <div class="stat-hint">Antal gange en kundes gemte kurv er flyttet til en anden enhed.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Ordrer efter kurvoverførsel</div>
+            <div class="stat-num">1,968</div>
+            <div class="stat-hint">Ordrer afgivet efter, at en gemt kurv er flyttet mellem enheder.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Omsætning fra kurvoverførsler</div>
+            <div class="stat-num">$452,098</div>
+            <div class="stat-hint">Ordreværdi fra ordrer med kurvoverførsel.</div>
+          </div>
+        </div>
+
+        <div class="foot">Opdateret lige nu. Viser de seneste 30 dage.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

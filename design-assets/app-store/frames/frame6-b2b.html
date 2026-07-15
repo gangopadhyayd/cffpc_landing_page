@@ -11,8 +11,12 @@
   .headline { font-size: 84px; }
 
   .col-ui { position: relative; flex: 1; height: 100%; }
-  .laptop { position: absolute; right: -46px; top: 50%; transform: translateY(-50%); width: 790px; }
-  .laptop .lid { height: 516px; }
+  /* right inset leaves room for the base's ±46px margin: base right edge
+     lands at 1584, inside the canvas (was -46px → base cut flat at 1600). */
+  .laptop { position: absolute; right: -10px; top: 50%; transform: translateY(-50%); width: 790px; }
+  /* 528 (not 516): the 8-row cart runs 487px tall — at 516 the screen clip
+     shaved the subtotal's $/comma descenders by 1.4px (more in CJK). */
+  .laptop .lid { height: 528px; }
 
   .cart-big { background: var(--card); height: 100%; padding: 26px 30px; display: flex; flex-direction: column; }
   .cart-big .head { display: flex; align-items: baseline; justify-content: space-between; }

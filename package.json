@@ -18,7 +18,11 @@
     "qa:gate": "node scripts/qa-gate.mjs",
     "qa:browser": "node scripts/qa-browse.mjs",
     "qa": "npm run typecheck && npm run build && npm run qa:browser",
-    "deploy": "npm run build && npx -y netlify-cli deploy --prod --no-build --dir dist"
+    "deploy": "npm run build && npx -y netlify-cli deploy --prod --no-build --dir dist",
+    "frames:build": "node scripts/build-localized-frames.mjs",
+    "frames:qa": "node scripts/qa-frames.mjs",
+    "frames:render": "node scripts/render-app-store-frames.mjs && node scripts/render-l10n-frames.mjs",
+    "frames": "npm run frames:build && npm run frames:qa && npm run frames:render"
   },
   "keywords": [],
   "author": "Customer First focus",

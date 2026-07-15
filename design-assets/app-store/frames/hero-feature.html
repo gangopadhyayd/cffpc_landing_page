@@ -5,126 +5,136 @@
 <title>Feature image — Carts leak between devices (account-node fork)</title>
 <link rel="stylesheet" href="base.css">
 <style>
+  .frame { padding: 44px 56px; }
   .row { display: flex; align-items: flex-start; justify-content: space-between; }
-  .content { display: flex; gap: 26px; margin-top: 34px; flex: 1; }
-  .col-copy { width: 500px; flex: none; display: flex; flex-direction: column; gap: 28px; padding-top: 36px; }
-  .headline { font-size: 72px; }
-  .sub { font-size: 25px; max-width: 484px; }
+  .content { display: flex; gap: 26px; margin-top: 26px; flex: 1; }
+  .col-copy { width: 560px; flex: none; display: flex; flex-direction: column; gap: 30px; padding-top: 26px; }
+  .headline { font-size: 81px; }
+  .sub { font-size: 28px; max-width: 545px; }
 
   .stage { position: relative; flex: 1; }
 
   /* origin phone, vertically centered on the fork */
-  .phone { position: absolute; left: 0; top: 56px; width: 180px; height: 356px; z-index: 2; }
-  .phone .cart { padding: 13px 12px 11px; }
-  .phone .cart .cart-title { font-size: 16px; }
-  .phone .cart .items { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
-  .phone .item { gap: 8px; }
-  .phone .item .swatch { width: 22px; height: 22px; }
-  .phone .item .nm { font-size: 11.5px; }
-  .phone .item .meta { font-size: 9.5px; }
-  .phone .item .price { font-size: 10px; }
-  .phone .cart .divider { margin: 8px 0 6px; }
-  .phone .cart .subtotal .lbl { font-size: 10.5px; }
-  .phone .cart .subtotal .amt { font-size: 13px; }
+  .phone { position: absolute; left: 0; top: 78px; width: 206px; height: 406px; z-index: 2; }
+  .phone .cart { padding: 15px 14px 12px; }
+  .phone .cart .cart-title { font-size: 18.5px; }
+  .phone .cart .items { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+  .phone .item { gap: 9px; }
+  .phone .item .swatch { width: 26px; height: 26px; }
+  .phone .item .nm { font-size: 13px; }
+  .phone .item .meta { font-size: 11px; }
+  .phone .item .price { font-size: 11.5px; }
+  .phone .cart .divider { margin: 10px 0 7px; }
+  .phone .cart .subtotal .lbl { font-size: 12px; }
+  .phone .cart .subtotal .amt { font-size: 15px; }
 
-  /* the fork: two mirror arcs, labels riding the lines */
-  .paths { position: absolute; left: 0; top: 0; width: 1024px; height: 420px; z-index: 1; }
+  /* the fork: two mirror arcs, labels riding the lines.
+     Labels carry a paper halo (bg + padding, negative margins keep the
+     authored position): the line breaks BEHIND the text instead of striking
+     through it — locale-proof, any translation length stays readable. */
+  .paths { position: absolute; left: 0; top: 0; width: 958px; height: 620px; z-index: 1; }
   .line-label {
     position: absolute;
-    font-family: var(--mono); font-size: 14px; letter-spacing: 0.06em;
+    font-family: var(--mono); font-size: 15.5px; letter-spacing: 0.06em;
+    background: var(--paper); padding: 5px 9px; margin: -5px -9px;
     z-index: 3;
   }
-  .line-label.without { left: 398px; top: 76px; color: var(--ink-faint); }
-  .line-label.with { left: 426px; top: 376px; color: var(--evergreen); }
+  .line-label.without { left: 300px; top: 186px; color: var(--ink-faint); }
+  .line-label.with { left: 322px; top: 468px; color: var(--evergreen); }
 
   /* the account station on the marigold path: where the cart lives between devices */
   .acct-node {
-    position: absolute; left: 351px; top: 300px; width: 54px; height: 54px;
+    position: absolute; left: 344px; top: 352px; width: 62px; height: 62px;
     background: var(--card);
-    border: 3px solid var(--accent);
+    border: 3.5px solid var(--accent);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     box-shadow: var(--shadow-card);
     z-index: 3;
   }
   .acct-caption {
-    position: absolute; left: 286px; top: 268px; width: 186px;
-    font-family: var(--mono); font-size: 14px; letter-spacing: 0.06em;
+    position: absolute; left: 245px; top: 316px; width: 260px;
+    font-family: var(--mono); font-size: 15.5px; letter-spacing: 0.06em;
     color: var(--evergreen); text-align: center;
     z-index: 3;
   }
+  .acct-caption .cap-halo {
+    background: var(--paper); padding: 4px 9px;
+    box-decoration-break: clone; -webkit-box-decoration-break: clone;
+  }
 
   /* ---- two identical desktop monitors, stacked fates ---- */
-  .monitor { position: absolute; left: 635px; width: 319px; z-index: 2; }
-  .monitor.without { top: 4px; }
-  .monitor.with { top: 259px; }
+  .monitor { position: absolute; left: 556px; width: 374px; z-index: 2; }
+  .monitor.without { top: 0; }
+  .monitor.with { top: 320px; }
   .monitor .bezel {
-    position: relative; height: 204px;
+    position: relative; height: 238px;
     background: var(--card);
     border: 3.5px solid var(--ink);
-    border-radius: 13px;
+    border-radius: 14px;
     box-shadow: var(--shadow-raised);
   }
-  .monitor .screen { position: absolute; inset: 13px; border-radius: 7px; overflow: hidden; }
-  .monitor .neck { width: 56px; height: 24px; background: var(--ink); margin: 0 auto; }
-  .monitor .foot { width: 160px; height: 11px; background: var(--ink); margin: 0 auto; border-radius: 5.5px; }
+  .monitor .screen { position: absolute; inset: 14px; border-radius: 8px; overflow: hidden; }
+  .monitor .neck { width: 62px; height: 26px; background: var(--ink); margin: 0 auto; }
+  .monitor .foot { width: 184px; height: 12px; background: var(--ink); margin: 0 auto; border-radius: 6px; }
   .monitor.without .bezel { border-color: rgb(28 24 21 / 0.5); box-shadow: var(--shadow-card); }
   .monitor.without .neck, .monitor.without .foot { background: rgb(28 24 21 / 0.5); }
 
   /* without screen: the cart never made it */
-  .empty-screen { background: #f4f0e7; height: 100%; padding: 13px 15px; display: flex; flex-direction: column; }
+  .empty-screen { background: #f4f0e7; height: 100%; padding: 15px 18px; display: flex; flex-direction: column; }
   .empty-screen .es-row { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
-  .empty-screen .t { font-size: 16.5px; font-weight: 650; color: var(--ink-soft); white-space: nowrap; }
-  .empty-screen .z { font-family: var(--mono); font-size: 15.5px; color: var(--ink-faint); text-decoration: line-through; text-decoration-thickness: 1.5px; }
+  .empty-screen .t { font-size: 19.5px; font-weight: 650; color: var(--ink-soft); white-space: nowrap; }
+  .empty-screen .z { font-family: var(--mono); font-size: 18px; color: var(--ink-faint); text-decoration: line-through; text-decoration-thickness: 1.5px; }
   .es-box {
-    flex: 1; margin-top: 9px;
-    border: 2px dashed var(--hairline-strong); border-radius: 8px;
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
-    padding: 0 14px; text-align: center;
+    flex: 1; margin-top: 10px;
+    border: 2px dashed var(--hairline-strong); border-radius: 9px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+    padding: 0 16px; text-align: center;
   }
-  .es-box .hint { font-size: 13.5px; line-height: 1.45; font-weight: 490; color: var(--ink-faint); }
+  .es-box .hint { font-size: 16px; line-height: 1.45; font-weight: 490; color: var(--ink-faint); }
   .es-box .ghost { opacity: 0.55; }
 
-  /* with screen: she logs in — the same cart is already there */
-  .with-screen { background: var(--card); height: 100%; padding: 9px 13px 8px; display: flex; flex-direction: column; }
+  /* with screen: the customer logs in — the same cart is already there */
+  .with-screen { background: var(--card); height: 100%; padding: 11px 16px 10px; display: flex; flex-direction: column; }
   .acct-row {
-    display: flex; align-items: center; gap: 6px;
-    font-size: 10.5px; font-weight: 600; color: var(--ink-faint);
-    padding-bottom: 6px; border-bottom: 1.5px solid var(--hairline); margin-bottom: 7px;
+    display: flex; align-items: center; gap: 7px;
+    font-size: 12.5px; font-weight: 600; color: var(--ink-faint);
+    padding-bottom: 7px; border-bottom: 1.5px solid var(--hairline); margin-bottom: 8px;
   }
   .acct-row svg { flex: none; }
   .with-screen .hl-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-  .with-screen .cart-title { font-family: var(--display); font-weight: 500; font-size: 16px; letter-spacing: -0.01em; }
-  .sync-pill { font-size: 10px; padding: 3.5px 8px; }
-  .with-screen .items { display: flex; flex-direction: column; gap: 4.5px; margin-top: 7px; }
-  .with-screen .item { gap: 8px; }
-  .with-screen .item .swatch { width: 17px; height: 17px; border-radius: 5px; }
-  .with-screen .item .nm { font-size: 12px; }
-  .with-screen .item .price { font-size: 10.5px; }
-  .with-screen .divider { margin: 7px 0 5px; }
+  .with-screen .cart-title { font-family: var(--display); font-weight: 500; font-size: 19px; letter-spacing: -0.01em; }
+  .sync-pill { font-size: 11.5px; padding: 4.5px 10px; }
+  .with-screen .items { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+  .with-screen .item { gap: 9px; }
+  .with-screen .item .swatch { width: 20px; height: 20px; border-radius: 6px; }
+  .with-screen .item .nm { font-size: 14px; }
+  .with-screen .item .price { font-size: 12.5px; }
+  .with-screen .divider { margin: 8px 0 6px; }
   .with-screen .subtotal { display: flex; align-items: baseline; justify-content: space-between; }
-  .with-screen .subtotal .lbl { font-size: 11.5px; font-weight: 640; color: var(--ink-soft); }
-  .with-screen .subtotal .amt { font-size: 14px; }
+  .with-screen .subtotal .lbl { font-size: 13.5px; font-weight: 640; color: var(--ink-soft); }
+  .with-screen .subtotal .amt { font-size: 16.5px; }
 
-  /* the stats screenshot — condensed: two cards, no banner */
+  /* the stats screenshot — condensed: two cards, no banner.
+     Sits UNDER the with-monitor's stand (z1 < monitors z2): the desk. */
   .panel {
     position: absolute;
-    right: -28px; top: 520px; left: 210px;
+    right: -28px; top: 556px; left: 168px;
     background: #f6f6f7;
     border: 1px solid rgb(28 24 21 / 0.08);
     border-radius: 14px;
     box-shadow: var(--shadow-raised);
-    padding: 14px 20px 11px;
+    padding: 16px 22px 12px;
     font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
-    z-index: 4;
+    z-index: 1;
   }
-  .sec-title { font-size: 15.5px; font-weight: 700; color: #1a1a1a; margin: 0 2px 8px; }
-  .cards { display: flex; gap: 14px; }
-  .stat-card { flex: 1; padding: 12px 16px 9px; }
-  .stat-card .stat-label { font-size: 12.5px; }
-  .stat-card .stat-num { font-size: 31px; margin: 4px 0 3px; font-variant-numeric: tabular-nums; }
-  .stat-card .stat-hint { font-size: 10px; line-height: 1.3; }
-  .foot { margin: 7px 2px 0; font-size: 10.5px; color: #616161; }
+  .sec-title { font-size: 17px; font-weight: 700; color: #1a1a1a; margin: 0 2px 9px; }
+  .cards { display: flex; gap: 16px; }
+  .stat-card { flex: 1; padding: 13px 18px 10px; }
+  .stat-card .stat-label { font-size: 14px; }
+  .stat-card .stat-num { font-size: 36px; margin: 4px 0 3px; font-variant-numeric: tabular-nums; }
+  .stat-card .stat-hint { font-size: 11.5px; line-height: 1.3; }
+  .foot { margin: 8px 2px 0; font-size: 12px; color: #616161; }
 </style>
 </head>
 <body>
@@ -148,23 +158,23 @@
 
   <div class="content">
     <div class="col-copy">
-      <h1 class="display headline">Carts leak between devices. <span class="accent">Yours won&rsquo;t.</span></h1>
-      <p class="sub">Persistent Cart silently saves every signed-in cart to the customer&rsquo;s account. When they log in on another device, it&rsquo;s already there.</p>
+      <h1 class="display headline">Carts leak between devices. <span class="accent">Yours won’t.</span></h1>
+      <p class="sub">Persistent Cart silently saves every signed-in cart to the customer’s account. When they log in on another device, it’s already there.</p>
     </div>
 
     <div class="stage">
-      <svg class="paths" viewBox="0 0 1024 420" fill="none">
+      <svg class="paths" viewBox="0 0 958 620" fill="none">
         <!-- the fork: same phone, two futures. Upper: the cart stays behind. -->
-        <path d="M184 226 C 300 158, 450 106, 644 106" stroke="#8A8077" stroke-opacity="0.85" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="8 10"/>
-        <!-- Lower: saved to her account, restored at log-in. -->
-        <path d="M184 242 C 300 310, 440 362, 622 362" stroke="#D8541E" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 12"/>
-        <circle cx="628" cy="362" r="7" fill="#D8541E"/>
+        <path d="M210 272 C 320 196, 440 119, 556 119" stroke="#8A8077" stroke-opacity="0.85" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 11"/>
+        <!-- Lower: saved to the account, restored at log-in. -->
+        <path d="M210 292 C 310 355, 420 420, 542 439" stroke="#D8541E" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 13"/>
+        <circle cx="548" cy="440" r="8" fill="#D8541E"/>
       </svg>
       <span class="line-label without">WITHOUT PERSISTENT CART</span>
       <span class="line-label with">WITH PERSISTENT CART</span>
 
       <!-- the account: where the saved cart lives between devices -->
-      <span class="acct-caption">SAVED TO HER ACCOUNT</span>
+      <span class="acct-caption"><span class="cap-halo">SAVED TO THEIR ACCOUNT</span></span>
       <span class="acct-node">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8.2" r="3.6" stroke="#1C1815" stroke-width="2.1"/><path d="M4.8 20.2c1.1-3.6 3.9-5.4 7.2-5.4s6.1 1.8 7.2 5.4" stroke="#1C1815" stroke-width="2.1" stroke-linecap="round"/></svg>
       </span>
@@ -180,7 +190,7 @@
             </div>
             <div class="divider"></div>
             <div class="subtotal"><span class="lbl">Subtotal</span><span class="amt tabular">$248.00</span></div>
-            <span class="sync-pill" style="font-size:9px; padding:3.5px 7px; margin-top:7px; white-space:nowrap;">
+            <span class="sync-pill" style="font-size:11px; padding:5px 9px; margin-top:9px; white-space:nowrap;">
               <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M2.5 8.5l3.5 3.5 7.5-8" stroke="#1E5B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Saved to your account
             </span>
@@ -196,7 +206,7 @@
               <div class="es-row"><span class="t">Your cart is empty</span><span class="z tabular">$248.00</span></div>
               <div class="es-box">
                 <svg class="ghost" width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M3.5 4h2l2.2 11.2a1.6 1.6 0 0 0 1.57 1.3h7.9a1.6 1.6 0 0 0 1.56-1.24L20.5 8H6.3" stroke="#8A8077" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10.2" cy="20.2" r="1.5" stroke="#8A8077" stroke-width="1.6"/><circle cx="16.9" cy="20.2" r="1.5" stroke="#8A8077" stroke-width="1.6"/></svg>
-                <span class="hint">No error. No email.<br>She rebuilds — or leaves.</span>
+                <span class="hint">No error. No email.<br>They rebuild — or leave.</span>
               </div>
             </div>
           </div>
@@ -205,7 +215,7 @@
         <div class="foot"></div>
       </div>
 
-      <!-- lower fate: she logs in, the cart is already there -->
+      <!-- lower fate: the customer logs in, the cart is already there -->
       <div class="monitor with">
         <div class="bezel">
           <div class="screen">

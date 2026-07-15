@@ -65,7 +65,8 @@ Round 9 executes the owner's wording + mechanism notes on round 8
 2. **"Show the cart saved to the customer account, transferred on log-in"**
    → an account node now sits ON the marigold path: 54px card-white circle,
    3px marigold ring, ink person glyph, mono evergreen caption "SAVED TO
-   HER ACCOUNT" above it. The WITH monitor gained a storefront account row
+   THEIR ACCOUNT" above it (was "…HER ACCOUNT" until the 2026-07-13
+   de-gendering pass — see QA gate below). The WITH monitor gained a storefront account row
    ("amelia@example.com · Signed in") above the cart title, and the phone's
    pill changed "Saved automatically" → "Saved to your account" — origin,
    middle and arrival now all speak the account/log-in mechanism.
@@ -131,9 +132,9 @@ screenshots — so there is headroom if a frame is ever added back.
 
 | Order | File | Role | Alt text |
 |---|------|------|----------|
-| Feature | `hero-feature` | leak → account → log-in story + value proof | Phone cart saved to her account, restored at log-in, plus stats |
+| Feature | `hero-feature` | leak → account → log-in story + value proof | Cart saved to their account, restored at log-in, plus stats |
 | 1 | `frame2-the-receipts` | analytics proof | Analytics dashboard of cart transfers, orders, revenue |
-| 2 | `frame4-mechanism` | mechanism (log-in → restored) + one-click install | Two screens: customer logs in, her cart is already there |
+| 2 | `frame4-mechanism` | mechanism (log-in → restored) + one-click install | Two screens: customer logs in, their cart is already there |
 | 3 | `frame6-b2b` | differentiator | Large wholesale cart synced across devices |
 | — | `icon` | app icon | (no alt field; square corners, padded, no text) |
 
@@ -150,9 +151,10 @@ Round-9 cuts + rename (2026-07-08, owner-directed):
   one-screen split (log-in and cart on the same laptop screen) as weird —
   same complaint that killed hero round 6. Now two same-size monitors in
   sequence, joined by the hero's marigold dotted hand-off + circled arrow:
-  beat 1 "1 · SHE LOGS IN" (storefront log-in screen), beat 2 "2 · HER CART
-  IS ALREADY THERE" (restored cart, "Restored at log-in" pill). Moment
-  labels are mono — ink-soft for 1, evergreen for the payoff 2.
+  beat 1 "1 · THE CUSTOMER LOGS IN" (storefront log-in screen), beat 2
+  "2 · THEIR CART IS ALREADY THERE" (restored cart, "Restored at log-in"
+  pill; both beats de-gendered 2026-07-13). Moment labels are mono —
+  ink-soft for 1, evergreen for the payoff 2.
 
 Notes for the next editor:
 
@@ -229,3 +231,123 @@ for app listing images", enforced 2026-03-26):
 
 Still open before submission: the flat device-outline style is accepted
 practice but subject to 4.4.4 reviewer discretion — see plan doc.
+
+## Localization (2026-07-08)
+
+Per-locale renders of the 4 live frames for the listing's published
+languages. Locales: `de fr es nl sv da pt-BR zh-CN ja ko` (zh-CN/fr/ja/ko/
+pt-BR/es are live on the listing; de/nl/sv/da staged for a later expansion).
+
+### Pipeline
+
+```bash
+node scripts/build-localized-frames.mjs   # frames/i18n/<locale>.json → frames/build/<locale>/*.html
+node scripts/qa-frames.mjs                # QA GATE — must pass before rendering/uploading
+node scripts/render-l10n-frames.mjs       # frames/build → renders/l10n/<locale>/<frame>.png (1600×900)
+```
+
+npm aliases: `npm run frames` (build → qa → render), or the individual
+`frames:build` / `frames:qa` / `frames:render`.
+
+Both scripts take optional locale args (`… de ja`) to do a subset. Renders
+land in `renders/l10n/<locale>/` (upload-ready) + `renders/l10n/2x/<locale>/`
+(@2x masters). The EN `.since` variant is not produced for locales.
+
+- **English frames stay canonical** — no tokens in them. `frames/i18n/en.json`
+  mirrors every user-visible string as an exact raw-HTML fragment; the build
+  replaces those fragments (single pass, longest-first) with the same key from
+  `frames/i18n/<locale>.json`. If English frame copy drifts from en.json the
+  build fails loudly — update en.json AND all 10 locale files together.
+- Locale values are raw-HTML fragments: keep `&amp;`/`&nbsp;`/`&shy;`, the
+  `<span class="accent">`/`<b>`/`<br>` markup, real ’. CJK headlines set
+  explicit `<br>` breaks (CJK wraps per glyph; kinsoku is enforced for ja via
+  injected `line-break: strict`).
+- Numbers/prices are product-data recreations and NEVER localized ($ and
+  figures identical in every locale) — the build validates every digit/amount
+  in an English value survives translation, plus alt-text lengths (≤64).
+- Per-locale layout overrides live in the locale JSON under `"_css"`
+  (`{"<frame-name>"|"*": css}`), injected as a `<style>` at the end of head —
+  used for headline step-downs (es/pt-BR/zh/ja/ko), the es/nl 2-line account
+  caption lift, de phone-subtotal size, fr f4 pill, ja f6 line-height.
+- Localized alt texts: `frames/i18n/alts.json` (locale → [feature, s1, s2,
+  s3]) for the Partner Dashboard's per-language media alt fields.
+
+### CJK fonts (no font files added)
+
+Source Serif 4 / Hanken Grotesk / IBM Plex Mono cover latin + latin-1
+(de/fr/es/nl/sv/da/pt-BR ship on the brand faces). For zh-CN/ja/ko the build
+injects macOS system fallbacks AFTER the latin families, so latin glyphs
+($ amounts, digits, the lockup) keep the brand faces and only CJK falls back:
+zh-CN → Songti SC (display) + PingFang SC; ja → Hiragino Mincho ProN (display)
++ Hiragino Sans; ko → Apple SD Gothic Neo (display stays gothic — Myungjo
+renders poorly at display weights). Headless Chromium on macOS renders these;
+all three verified tofu-free. Rendering on non-mac CI would need real font
+files instead.
+
+### Per-locale caveats hit during QC (fix = translation first, then _css)
+
+- **de**: staccato headline ("Geräte wechseln. Warenkorb weg.") to hold 3
+  lines at full size; "Zwischensumme" needs 10.5px in the phone subtotal;
+  f4 pill is "Wiederhergestellt" (bare) — "Bei Anmeldung wiederhergestellt"
+  doesn't fit next to "Ihr Warenkorb".
+- **fr**: f4 "Restauré à la connexion" needs the smaller pill (_css);
+  3-pack item is "(×3)" — "(lot de 3)" wraps with an orphan "3)".
+- **es/nl**: (obsolete 2026-07-13) the account caption used to run 2 lines →
+  lifted via _css. The caption box is now 260px wide and every locale's
+  caption fits one line; the lifts were removed.
+- **nl/pt-BR/sv**: hero headline shortened ("lekken weg" / "somem" /
+  "försvinner på vägen") — the full "between devices" clause forces 4 lines;
+  the fork visual carries the device story.
+- **zh-CN**: 您-register per site; explicit `<br>` in all headlines.
+- **ja**: カート / カゴ落ち vocabulary (never literal); `line-break: strict`
+  injected (small-kana was landing at line starts); jacket item is
+  レインウェア (ジャケット orphans ト in the phone column); f6 needs row/title
+  line-height overrides (Hiragino's tall line boxes clipped the subtotal).
+- **ko**: 장바구니 (never 카트), 이전 for "transfer" (site vocabulary);
+  positive-turn headline ("기기를 바꿔도 장바구니는 그대로.") — the
+  leak+negation form doesn't fit hangul metrics at display size.
+
+## QA gate (2026-07-13)
+
+The manual "review all renders" step above failed us: the hero shipped in 11
+languages with the dashed fork line striking straight through "WITHOUT
+PERSISTENT CART", the dotted line clipping the account caption, and an
+arbitrarily gendered shopper ("SAVED TO HER ACCOUNT" / "She rebuilds" /
+"SHE LOGS IN"). The first automated run also caught two latent defects in
+shipped frames: frame6's laptop base painted 20px past the canvas (flat-cut
+right end) and its subtotal's $/comma descenders were shaved ~1.4px by the
+screen clip. All fixed; QA is now a script, not an eyeball:
+
+```bash
+node scripts/qa-frames.mjs             # after every build, before render/upload
+node scripts/qa-frames.mjs --file x.html   # ad-hoc geometry check on one file
+```
+
+Checks (details in the script header): line-through-text via sampled SVG
+path points vs glyph boxes, label-over-artwork/label, clipped-text via
+canvas font metrics (glyph INK vs clip boxes — line-box leading doesn't
+false-positive), art-off-canvas, headline ≤3 lines, mono-labels-never-
+marigold, alt lengths, and a gendered-copy lint. It also regenerates
+`renders/contact-sheet.html` — the human squint pass over every render,
+which stays part of the process (the gate catches geometry and copy rules,
+not taste).
+
+**Copy register rule — never gender the shopper.** EN uses they/their or
+"the customer" (lint = error on she/her/he/his). Locales use their unmarked
+generic form: der Kunde / le client / el cliente / kunden / subject-drop
+(es, pt-BR, zh) / no-subject verb forms (ja, ko). Explicitly feminine-marked
+forms (Kundin, clienta, la cliente, dela, haar, hon/hennes, hun/hendes, 她,
+彼女, 그녀) are lint errors; a grammatically forced case can be allowlisted
+via `"_lint.allow": ["…"]` in the locale JSON. French "son panier" stays —
+son agrees with the noun, not the owner. Named demo data (amelia@example.com)
+is fine; it's account data, not narrative voice.
+
+**Line-riding labels wear paper halos.** `.line-label` and `.acct-caption`
+carry `background: var(--paper)` + padding, so a fork line passes BEHIND the
+text and visibly breaks around it instead of striking through — locale-proof
+at any translation length. Don't remove the halo to "clean up" the CSS; the
+QA gate's line-through-text check is what enforces the result.
+
+The detector is self-tested: reverting the halo + caption fixes on a scratch
+copy of the hero must produce exactly the two original line-through-text
+findings (this was validated when the gate was built).

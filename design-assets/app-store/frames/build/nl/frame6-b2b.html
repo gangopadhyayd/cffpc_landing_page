@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Frame 6 — Large carts</title>
+<link rel="stylesheet" href="../../base.css">
+<style>
+  .row { display: flex; align-items: flex-start; justify-content: space-between; }
+  .content { display: flex; gap: 48px; margin-top: 40px; flex: 1; align-items: center; }
+  .col-copy { width: 590px; flex: none; display: flex; flex-direction: column; gap: 34px; margin-top: -24px; }
+  .headline { font-size: 84px; }
+
+  .col-ui { position: relative; flex: 1; height: 100%; }
+  /* right inset leaves room for the base's ±46px margin: base right edge
+     lands at 1584, inside the canvas (was -46px → base cut flat at 1600). */
+  .laptop { position: absolute; right: -10px; top: 50%; transform: translateY(-50%); width: 790px; }
+  /* 528 (not 516): the 8-row cart runs 487px tall — at 516 the screen clip
+     shaved the subtotal's $/comma descenders by 1.4px (more in CJK). */
+  .laptop .lid { height: 528px; }
+
+  .cart-big { background: var(--card); height: 100%; padding: 26px 30px; display: flex; flex-direction: column; }
+  .cart-big .head { display: flex; align-items: baseline; justify-content: space-between; }
+  .cart-big .cart-title { font-family: var(--display); font-weight: 500; font-size: 27px; }
+  .cart-big .units { font-family: var(--mono); font-size: 15.5px; color: var(--ink-faint); }
+
+  .rows { display: flex; flex-direction: column; margin-top: 14px; }
+  .r {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8.5px 0;
+    border-bottom: 1px solid var(--hairline);
+    font-size: 16.5px;
+  }
+  .r:last-child { border-bottom: none; }
+  .r .sw { width: 26px; height: 26px; border-radius: 6px; flex: none; }
+  .r .nm { font-weight: 640; }
+  .r .qty { font-family: var(--mono); color: var(--ink-faint); margin-left: auto; font-size: 15px; }
+  .r .pr { font-family: var(--mono); width: 120px; text-align: right; font-size: 15.5px; }
+
+  .cart-big .divider { border-top: 1.5px solid var(--hairline); margin: 12px 0 10px; }
+  .cart-big .subtotal { display: flex; justify-content: space-between; align-items: center; }
+  .cart-big .subtotal .lbl { font-weight: 640; font-size: 18px; color: var(--ink-soft); }
+  .cart-big .subtotal .amt { font-family: var(--mono); font-weight: 500; font-size: 27px; }
+  .sync-pill { font-size: 15px; padding: 8px 15px; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="row">
+    <span class="lockup">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10.5" y="6.5" width="17" height="12" rx="1.8" stroke="#1C1815" stroke-width="2"/>
+        <rect x="8" y="20.2" width="22" height="2.6" rx="1.3" fill="#1C1815"/>
+        <rect x="2.6" y="9.5" width="9.6" height="16.5" rx="2.6" fill="#F7F4EE" stroke="#1C1815" stroke-width="2"/>
+        <line x1="6" y1="23.2" x2="8.8" y2="23.2" stroke="#1C1815" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#F7F4EE" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 12.2h9.8l-1.15 5.2a1.3 1.3 0 0 1-1.27 1.02h-4.9a1.3 1.3 0 0 1-1.27-1.02L10.2 10h-1.7" stroke="#D8541E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="13.1" cy="21.4" r="1.35" fill="#D8541E"/>
+        <circle cx="18.2" cy="21.4" r="1.35" fill="#D8541E"/>
+      </svg>
+      <span class="word">Persistent<span class="w2"> Cart</span></span>
+    </span>
+    <span class="pill"><span class="dot"></span>Klaar voor groothandel &amp; B2B</span>
+  </div>
+
+  <div class="content">
+    <div class="col-copy">
+      <h1 class="display headline">Voor grote, <span class="accent">waardevolle</span> winkelwagens</h1>
+      <p class="sub">Grote groothandelswagens met veel regels syncen en voegen moeiteloos samen tussen apparaten — zonder bewaarlimiet blijft de wagen bewaard tot aan de checkout.</p>
+    </div>
+
+    <div class="col-ui">
+      <div class="laptop">
+        <div class="lid">
+          <div class="screen">
+            <div class="cart-big">
+              <div class="head">
+                <span class="cart-title">Je winkelwagen</span>
+                <span class="units tabular">8 producten · 402 stuks</span>
+              </div>
+              <div class="rows">
+                <div class="r"><span class="sw" style="background:#d8b98a"></span><span class="nm">Canvas tas — Naturel</span><span class="qty">× 48</span><span class="pr tabular">$432.00</span></div>
+                <div class="r"><span class="sw" style="background:#6b7b8c"></span><span class="nm">Keramische mok — Spikkel</span><span class="qty">× 72</span><span class="pr tabular">$864.00</span></div>
+                <div class="r"><span class="sw" style="background:#e0b64f"></span><span class="nm">Bijenwaskaars</span><span class="qty">× 120</span><span class="pr tabular">$1,440.00</span></div>
+                <div class="r"><span class="sw" style="background:#9aa88f"></span><span class="nm">Set linnen servetten</span><span class="qty">× 36</span><span class="pr tabular">$1,152.00</span></div>
+                <div class="r"><span class="sw" style="background:#8a6a4f"></span><span class="nm">Serveerplank van walnoot</span><span class="qty">× 24</span><span class="pr tabular">$1,680.00</span></div>
+                <div class="r"><span class="sw" style="background:#b9a6c9"></span><span class="nm">Wollen plaid — Gemêleerd</span><span class="qty">× 18</span><span class="pr tabular">$2,970.00</span></div>
+                <div class="r"><span class="sw" style="background:#c9d4c2"></span><span class="nm">Kan van steengoed</span><span class="qty">× 24</span><span class="pr tabular">$1,200.00</span></div>
+                <div class="r"><span class="sw" style="background:#7d8f6e"></span><span class="nm">Olijfolie — 500 ml</span><span class="qty">× 60</span><span class="pr tabular">$1,500.00</span></div>
+              </div>
+              <div class="divider"></div>
+              <div class="subtotal">
+                <span class="sync-pill">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2.5 8.5l3.5 3.5 7.5-8" stroke="#1E5B45" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Net gesynchroniseerd
+                </span>
+                <span style="display:flex; gap:18px; align-items:baseline;">
+                  <span class="lbl">Subtotaal</span>
+                  <span class="amt tabular">$11,238.00</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="base"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+{
+  "_meta": "Localized alt texts for the listing images, order: [feature (hero-feature), screenshot 1 (frame2-the-receipts), screenshot 2 (frame4-mechanism), screenshot 3 (frame6-b2b)]. Each must be ≤64 characters (validated by scripts/build-localized-frames.mjs). Paste into the Partner Dashboard per-language media alt fields.",
+  "en": [
+    "Cart saved to their account, restored at log-in, plus stats",
+    "Analytics dashboard of cart transfers, orders, revenue",
+    "Two screens: customer logs in, their cart is already there",
+    "Large wholesale cart synced across devices"
+  ],
+  "de": [
+    "Warenkorb im Konto gespeichert, bei Login wieder da, plus Zahlen",
+    "Dashboard mit Warenkorb-Übertragungen, Bestellungen und Umsatz",
+    "Zwei Bildschirme: Kunde loggt sich ein, Warenkorb schon da",
+    "Großer B2B-Warenkorb, zwischen Geräten synchronisiert"
+  ],
+  "fr": [
+    "Panier mobile enregistré sur le compte, restauré à la connexion",
+    "Tableau de bord : transferts de panier, commandes, revenus",
+    "Deux écrans : le client se connecte, son panier est déjà là",
+    "Grand panier B2B synchronisé entre les appareils"
+  ],
+  "es": [
+    "Carrito del móvil guardado en su cuenta y restaurado al entrar",
+    "Panel de analíticas: transferencias, pedidos e ingresos",
+    "Dos pantallas: el cliente inicia sesión y su carrito ya está",
+    "Carrito mayorista grande sincronizado entre dispositivos"
+  ],
+  "nl": [
+    "Telefoonwagen opgeslagen in account, hersteld bij inloggen",
+    "Dashboard met winkelwagen-overdrachten, bestellingen, omzet",
+    "Twee schermen: klant logt in, de winkelwagen staat er al",
+    "Grote groothandelswagen gesynct tussen apparaten"
+  ],
+  "sv": [
+    "Mobilens varukorg sparad på kontot, återställd vid inloggning",
+    "Analyspanel med varukorgsöverföringar, beställningar, intäkter",
+    "Två skärmar: kunden loggar in, varukorgen är redan där",
+    "Stor grossistvarukorg synkad mellan enheter"
+  ],
+  "da": [
+    "Mobilkurv gemt på kontoen, gendannet ved login, plus tal",
+    "Analyse-dashboard med kurvoverførsler, ordrer og omsætning",
+    "To skærme: kunden logger ind, kurven er der allerede",
+    "Stor engroskurv synkroniseret på tværs af enheder"
+  ],
+  "pt-BR": [
+    "Carrinho do celular salvo na conta e restaurado no login",
+    "Painel de análises: transferências, pedidos e receita",
+    "Duas telas: o cliente entra e o carrinho já está lá",
+    "Carrinho grande de atacado sincronizado entre dispositivos"
+  ],
+  "zh-CN": [
+    "手机购物车保存到账户，登录时恢复，另有数据统计",
+    "购物车转移、订单与收入的分析仪表盘",
+    "两个屏幕：顾客登录后购物车已就位",
+    "大型批发购物车跨设备同步"
+  ],
+  "ja": [
+    "スマホのカートをアカウントに保存、ログインで復元 — 実績つき",
+    "カート転送・注文・売上の分析ダッシュボード",
+    "2画面：ログインすると、カートはもうそこに",
+    "大口の卸売カートをデバイス間で同期"
+  ],
+  "ko": [
+    "휴대폰 장바구니를 계정에 저장, 로그인 시 복원 + 통계",
+    "장바구니 이전·주문·매출 분석 대시보드",
+    "두 화면: 로그인하면 장바구니가 이미 그대로",
+    "대형 도매 장바구니를 기기 간 동기화"
+  ]
+}
