@@ -541,3 +541,35 @@ i18n drift) now runs inside `npm run build`, so Netlify CI blocks regressing
 deploys; `qa-browse.mjs` sweeps every page ×4 viewports in headless Chromium
 (console errors, overflow, broken imgs, h1/title) locally via `npm run qa` and
 against prod via `--base`.
+
+## Pricing: Advanced folded into "Advanced & Plus" @ $99 (2026-07-15)
+
+The App Store caps public plans at 4 (verified: the Partner pricing page shows
+"Public plans (4/4)", Add disabled), so Shopify Advanced stores had no visible
+plan anywhere — and the app's billing currently does nothing for them (no
+`shopify-advanced` handle exists; owner is in a testing phase and not charging
+stores upfront). Owner decision (temporary fix): reposition the top card as
+**"Advanced & Plus" at $99/mo** (was "Shopify Plus" $99.99).
+
+Listing side (each save verified by fresh reload): plan-registry `shopify-plus`
+monthly charge $99.99 → $99 (handle unchanged — app code keeps referencing it);
+EN pricing card display name → "Advanced & Plus" (the display-name field caps at
+18 chars, killing "Shopify Advanced & Plus" at 23) + first feature line "For
+Shopify Advanced & Plus stores" (34/40); display names updated on all 10
+localized listings (EN verbatim per glossary). Translated plus feature lines
+existed only on es/fr/ja/ko/pt-BR/zh-CN — updated in each locale's own house
+style (ko/zh use their established "plan or higher" pattern: 어드밴스드 요금제
+이상 / 高级套餐及以上, which covers Advanced+Plus exactly). da/de/nl/sv listings
+carry no feature lines at all. Editing method: native-setter + input/change on
+the React fields, Save via the contextual bar (JS `button.click()` works here,
+unlike the search-terms tag component).
+
+Site side: `pricingTiers` plus tier → 'Advanced & Plus' / '$99' (the commented
+`advanced` tier stays as the revert path); `pricing.tier.plus.note` re-authored
+×15 mirroring each locale's basic-note pattern; deferred `plus.json` +
+`summary.json` got the mechanical $99.99→$99 swap ×15 (a full Advanced-aware
+re-read is owed if those pages ship); proof re-verified 4.9★ / 51 reviews
+(2026-07-15).
+
+⚠️ Open app-side dependency (owner): map Advanced-tier shops → `shopify-plus`
+and charge $99.00, so the display matches billing once charging starts.

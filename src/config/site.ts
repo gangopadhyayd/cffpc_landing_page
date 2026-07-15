@@ -52,8 +52,8 @@ export const site = {
  * figures are surfaced in docs/owner-inputs-needed.md for sign-off.
  */
 export const proof = {
-  reviewRating: 4.9, // VERIFIED 2026-07-06 (live listing)
-  reviewCount: 47, // VERIFIED 2026-07-06; text + listing link only, never headline, no self-review schema
+  reviewRating: 4.9, // VERIFIED 2026-07-15 (live listing)
+  reviewCount: 51, // VERIFIED 2026-07-15; text + listing link only, never headline, no self-review schema
   launchedYear: 2016, // VERIFIED (May 2, 2016)
   yearsActive: 2026 - 2016, // derived (~10 yrs)
   builtForShopify: true, // VERIFIED (badge renders on listing)
@@ -122,8 +122,10 @@ export const proofFallback = {
 /**
  * Pricing tiers — framed "priced to your Shopify plan, every feature included"
  * (code truth: all tiers are "Unlimited", auto-selected by the merchant's plan).
- * Re-verify vs the live listing before publish; Advanced $24.99 is in code but
- * not currently surfaced on the live listing (flagged for owner).
+ * Re-verify vs the live listing before publish. Mirrors the live listing
+ * (verified 2026-07-15): the listing caps public plans at 4, so Advanced is
+ * TEMPORARILY folded into the top card — "Advanced & Plus" at $99 (owner
+ * decision 2026-07-15; was "Shopify Plus" $99.99).
  */
 export const pricingTiers = [
   // No tier is "highlighted": the plan is auto-selected by the merchant's own
@@ -131,12 +133,12 @@ export const pricingTiers = [
   { id: 'free', shopifyPlan: 'Try it', price: 'Free', cadence: '', note: 'Free Starter — test all features, up to 10 cart syncs', highlight: false },
   { id: 'basic', shopifyPlan: 'Shopify Basic', price: '$4.99', cadence: '/mo', note: '', highlight: false },
   { id: 'grow', shopifyPlan: 'Shopify Grow', price: '$8.99', cadence: '/mo', note: 'Formerly the "Shopify" plan', highlight: false },
-  // The Advanced ($24.99) tier exists in code but is NOT surfaced on the live App
-  // Store listing — hidden here to match the listing until the owner confirms.
-  // To show it (website-leads-listing), uncomment + add it to the listing. See
-  // docs/owner-inputs-needed.md §5.
+  // REVERT PATH: if a dedicated Advanced plan returns (listing allows >4 public
+  // plans, or the owner splits it back out), restore this tier AND the listing,
+  // and re-point the "plus" tier back to Shopify Plus only. See iteration-log
+  // 2026-07-15 entry.
   // { id: 'advanced', shopifyPlan: 'Shopify Advanced', price: '$24.99', cadence: '/mo', note: '', highlight: false },
-  { id: 'plus', shopifyPlan: 'Shopify Plus', price: '$99.99', cadence: '/mo', note: '', highlight: false },
+  { id: 'plus', shopifyPlan: 'Advanced & Plus', price: '$99', cadence: '/mo', note: '', highlight: false },
 ] as const;
 
 /**
@@ -166,6 +168,6 @@ export function appStoreLink(content: string): string {
 }
 
 /** Build-stable "last updated" stamp shown on content pages (edit on refresh). */
-export const SITE_UPDATED = '2026-07-06';
+export const SITE_UPDATED = '2026-07-15';
 
 export type PricingTier = (typeof pricingTiers)[number];

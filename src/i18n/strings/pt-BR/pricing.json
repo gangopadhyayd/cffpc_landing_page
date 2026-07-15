@@ -12,7 +12,7 @@
   "pricing.tier.basic.note": "Para lojas no plano Shopify Basic",
   "pricing.tier.grow.note": "Para lojas no plano Shopify Grow (antigo \"Shopify\")",
   "pricing.tier.advanced.note": "Para lojas no plano Shopify Advanced",
-  "pricing.tier.plus.note": "Para lojas Shopify Plus",
+  "pricing.tier.plus.note": "Para lojas no plano Shopify Advanced ou Plus",
   "pricing.tier.everyPlan": "Todos os recursos incluídos",
   "pricing.included.title": "Incluído em todos os planos",
   "pricing.included.1": "Sincronização automática de carrinho entre dispositivos para clientes conectados",

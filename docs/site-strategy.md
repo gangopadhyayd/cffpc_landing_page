@@ -73,8 +73,8 @@ icon/screenshot **concepts** (`docs/app-store-optimization.md`).
 ## 8. Pricing presentation (recommendation → also push to listing)
 **Reframe from "feature tiers" to "priced to your Shopify plan — every feature on every plan."** (Code truth: all
 tiers are "(Unlimited)", auto-selected by the merchant's Shopify plan.) Show: **Free Starter** (try it, ≤10 syncs)
-→ Basic **$4.99** → Grow **$8.99** → Advanced **$24.99** (flag: not on live listing) → Plus **$99.99**, 30-day trial
-on paid. Don't price-fight Casper; win on value (ROI ≫ price; calculator) + proof + incumbency. No invented uplift %.
+→ Basic **$4.99** → Grow **$8.99** → **Advanced & Plus $99** (Advanced folded into the top card 2026-07-15 — the
+listing caps public plans at 4; was Plus $99.99), 30-day trial on paid. Don't price-fight Casper; win on value (ROI ≫ price; calculator) + proof + incumbency. No invented uplift %.
 
 ## 9. Brand decision
 **Keep the name** "Persistent Cart — Sync Devices" (equity + incumbency + exact-match search). **Evolve the visual

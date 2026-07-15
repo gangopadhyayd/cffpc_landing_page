@@ -84,9 +84,12 @@ Bring the site's pricing reframe (site-strategy §8) onto the listing:
 - **Surface the new Free Starter plan** ("Test All Features Up to 10 Cart
   Syncs"), now live (research-notes §8b). This **neutralizes the "no free tier"
   competitive gap** → the listing can say **"Start free."**
-- Live listing prices: Free Starter → Basic **$4.99** → Grow **$8.99** → Plus
-  **$99.99**. **Flag to owner:** Advanced **$24.99** exists in code/site but is
-  **not surfaced on the live listing** — reconcile.
+- Live listing prices (2026-07-15): Free Starter → Basic **$4.99** → Grow
+  **$8.99** → **Advanced & Plus $99** (top card renamed from "Shopify Plus"
+  $99.99 — the listing caps public plans at 4, so Advanced is folded in;
+  temporary, owner decision 2026-07-15). The old "Advanced $24.99 not on the
+  listing" reconcile flag is RESOLVED by this fold-in; revert path lives as the
+  commented tier in `src/config/site.ts`.
 
 ---
 

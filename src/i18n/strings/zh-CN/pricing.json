@@ -12,7 +12,7 @@
   "pricing.tier.basic.note": "适用于使用 Shopify Basic 套餐的商店",
   "pricing.tier.grow.note": "适用于使用 Shopify Grow 套餐（原“Shopify”）的商店",
   "pricing.tier.advanced.note": "适用于使用 Shopify Advanced 套餐的商店",
-  "pricing.tier.plus.note": "适用于 Shopify Plus 商店",
+  "pricing.tier.plus.note": "适用于使用 Shopify Advanced 或 Plus 套餐的商店",
   "pricing.tier.everyPlan": "包含全部功能",
   "pricing.included.title": "每个套餐都包含",
   "pricing.included.1": "面向已登录客户的自动跨设备购物车同步",

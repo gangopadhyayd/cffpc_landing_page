@@ -97,12 +97,15 @@ When you next revise the policy text (any wording change needs your sign-off):
 4. **Deletion mechanics:** describe how/when deletion actually happens once the GDPR webhook
    handlers perform real redaction (currently acknowledgment-only — research-notes §1).
 
-## 5. Pricing 🟢 (confirm)
-- Confirm the tiers shown: **Free Starter** (≤10 syncs) · Basic **$4.99** · Grow **$8.99** · Advanced
-  **$24.99** · Plus **$99.99**, 30-day trial on paid. **Note:** the live listing currently shows Free /
-  $4.99 / $8.99 / $99.99 — the **$24.99 Advanced** tier is in code but not surfaced on the listing.
-  Tell us whether to show Advanced on the site (currently shown) or hide it to match the listing.
-- Approve the framing: **"every feature on every plan, priced to your Shopify plan."**
+## 5. Pricing ✅ (RESOLVED 2026-07-15)
+- Owner decision: the App Store caps public plans at 4, so the Advanced tier is **folded into the top
+  card** — **"Advanced & Plus" at $99/mo** (was "Shopify Plus" $99.99) — as a **temporary fix** until a
+  dedicated Advanced plan is possible. Live tiers now: **Free Starter** (≤10 syncs) · Basic **$4.99** ·
+  Grow **$8.99** · **Advanced & Plus $99**, 30-day trial on paid. Listing (en + 10 locales) and site
+  (×15 locales) both updated 2026-07-15; revert path = the commented `advanced` tier in site.ts.
+- ⚠️ Still owed in the app itself (owner): map Advanced-tier shops → the `shopify-plus` plan handle and
+  charge $99.00. Owner is in a testing phase — stores aren't charged upfront today.
+- Framing approved and kept: **"every feature on every plan, priced to your Shopify plan."**
 
 ## 6. Partner & affiliate program 🔴 (to finalize terms) / 🟢 (forms capture now)
 Provisional terms are shown on `/partners` + `/affiliates`, marked *provisional*: **30% recurring for

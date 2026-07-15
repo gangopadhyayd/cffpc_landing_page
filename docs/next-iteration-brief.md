@@ -9,10 +9,11 @@ the owner queue), `docs/improvement-plan-2026-07-08.md` (the copy/figure/SEO rou
 
 ## ⚠️ Standing rules (owner-set; all still binding)
 
-1. **Pushes to `main` deploy production** → https://persistentcartapp.com (Netlify
-   project `persistentcartapp`, team `cffpc` — **Pro plan since 2026-07-08** after the
-   free tier froze mid-day; `netlify.toml` skips builds for docs/markdown-only commits;
-   batch pushes anyway). Verify locally first: `npm run check` + `npm run i18n:check` +
+1. ~~Pushes to `main` deploy production~~ **UPDATE (commit 33b1783): CI builds are
+   STOPPED to save Netlify credits — a push no longer deploys. Deploy ONLY via
+   `npm run deploy`** (build + qa-gate + `netlify-cli deploy --prod`) →
+   https://persistentcartapp.com (Netlify project `persistentcartapp`, team `cffpc`,
+   Pro plan since 2026-07-08). Verify locally first: `npm run check` + `npm run i18n:check` +
    `PUBLIC_GA4_MEASUREMENT_ID=G-B0XL737D3K npm run build && npm run preview`, screenshot
    (see gotchas), then push — and **verify the deploy actually landed** (the CLI is
    authed on the owner's machine: `npx netlify-cli api listSiteDeploys --data
@@ -93,7 +94,11 @@ the owner queue), `docs/improvement-plan-2026-07-08.md` (the copy/figure/SEO rou
 1. **Privacy-policy revision (P1)**: formal policy says carts are stored "anonymous…"
    which contradicts the product (account-keyed carts). Legal text; owner edits, then
    port formatting-only. (owner-inputs §4 has the full revision list.)
-2. Show the hidden Shopify **Advanced** tier card ($24.99, mirrors-listing decision)?
+2. ✅ Resolved 2026-07-15 — Advanced folded into the top card: **"Advanced & Plus" $99**
+   on listing (en + 10 locales) and site ×15 (was "Shopify Plus" $99.99; the listing caps
+   public plans at 4). TEMPORARY; revert path = commented `advanced` tier in site.ts.
+   Still owed **in the app** (owner): map Advanced shops → `shopify-plus` @ $99.00 —
+   billing does nothing for Advanced stores today (testing phase, no upfront charging).
 3. **GMD logo** in the strip is illegible at 26px — swap asset, drop, or accept.
 4. **signed-in vs logged-in** terminology sweep ×15 (recommend "signed-in").
 5. **SERP trims**: home title 72 chars / desc 202 (drafts on request).
@@ -101,7 +106,8 @@ the owner queue), `docs/improvement-plan-2026-07-08.md` (the copy/figure/SEO rou
    the next diagrams-over-text move (improvement-plan §Diagrams).
 7. **App Store listing upload** — renders are ready in design-assets/app-store/.
 8. Re-enable next pages when wanted: calculator (needs QA pass), big-retailers, plus,
-   resources/summary/changelog.
+   resources/summary/changelog. (plus + summary copy needs an Advanced-aware re-read
+   first — the bare $99.99→$99 price swap is done, the prose is still Plus-only.)
 
 Parked P2 polish (no decisions needed): FAQPage schema dedupe across home/faq;
 hreflang→noindex tension (resolve at native review); Source Serif 4 subsetting +
