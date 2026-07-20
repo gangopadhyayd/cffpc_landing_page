@@ -1,0 +1,120 @@
+---
+/**
+ * Per-lead outreach-token forwarding (outbound-v2 attribution).
+ *
+ * Cold emails link here as
+ *   https://persistentcartapp.com/?utm_source=outreach&utm_medium=email&utm_campaign={c}&utm_content={store_domain}
+ * where utm_content={store_domain} is the per-lead token. The site's App-Store
+ * CTAs are built centrally (src/config/site.ts → appStoreLink) with STATIC UTMs
+ * (utm_source=persistentcartapp.com … utm_content={placement}), so without this
+ * the lead token dies at the site → listing hop.
+ *
+ * This script (inlined, no deps):
+ *  - On load, if the URL carries the token signal (utm_source=outreach WITH a
+ *    utm_content), persists all utm_* to localStorage for 30 days, FIRST-TOUCH
+ *    WINS (never overwrites an unexpired stored token).
+ *  - When a live token exists, rewrites every apps.shopify.com anchor (at
+ *    DOMContentLoaded + a capture-phase click safety net for late-rendered
+ *    links): swaps the static site UTMs for the stored outreach UTMs and moves
+ *    the link's original placement slug into utm_term so the on-site placement
+ *    signal is kept.
+ *  - No live token → anchors are left exactly as built (organic attribution is
+ *    untouched). Only <a> elements are rewritten — JSON-LD / llms.txt keep the
+ *    clean canonical listing URL.
+ *
+ * Privacy: only rewrites our OWN outbound link params; no new trackers, no PII,
+ * nothing that touches the merchant's store.
+ */
+---
+
+<script is:inline>
+  (function () {
+    var KEY = 'pc-lead-token';
+    var TTL = 30 * 24 * 60 * 60 * 1000; // 30 days
+    var HOST = 'apps.shopify.com';
+    var UTMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+
+    // Return the live (unexpired) stored token params, or null. Clears if expired.
+    function liveToken() {
+      try {
+        var raw = localStorage.getItem(KEY);
+        if (!raw) return null;
+        var o = JSON.parse(raw);
+        if (!o || typeof o.exp !== 'number' || o.exp < Date.now() || !o.params) {
+          localStorage.removeItem(KEY);
+          return null;
+        }
+        return o.params;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    // If the landing URL carries the token signal, persist it (first-touch wins).
+    function capture() {
+      var q;
+      try {
+        q = new URLSearchParams(location.search);
+      } catch (e) {
+        return;
+      }
+      if (q.get('utm_source') !== 'outreach' || !q.get('utm_content')) return;
+      if (liveToken()) return; // unexpired token already stored → keep first touch
+      var params = {};
+      UTMS.forEach(function (k) {
+        var v = q.get(k);
+        if (v) params[k] = v;
+      });
+      try {
+        localStorage.setItem(KEY, JSON.stringify({ v: 1, exp: Date.now() + TTL, params: params }));
+      } catch (e) {}
+    }
+
+    // Rewrite one apps.shopify.com anchor to carry the lead's UTMs (idempotent).
+    function rewrite(a, tok) {
+      if (!a || a.getAttribute('data-pc-tokenized')) return;
+      var href = a.getAttribute('href');
+      if (!href) return;
+      var url;
+      try {
+        url = new URL(href, location.href);
+      } catch (e) {
+        return;
+      }
+      if (url.hostname !== HOST) return;
+      var placement = url.searchParams.get('utm_content') || ''; // original site slug
+      UTMS.forEach(function (k) {
+        if (tok[k]) url.searchParams.set(k, tok[k]);
+        else url.searchParams.delete(k);
+      });
+      if (placement) url.searchParams.set('utm_term', placement);
+      else url.searchParams.delete('utm_term');
+      a.setAttribute('href', url.toString());
+      a.setAttribute('data-pc-tokenized', '1');
+    }
+
+    capture();
+    var tok = liveToken();
+    if (!tok) return; // organic visit — leave all links exactly as built
+
+    function rewriteAll() {
+      var links = document.querySelectorAll('a[href*="' + HOST + '"]');
+      for (var i = 0; i < links.length; i++) rewrite(links[i], tok);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', rewriteAll);
+    } else {
+      rewriteAll();
+    }
+    // Safety net: catch late-rendered links before navigation (capture phase).
+    document.addEventListener(
+      'click',
+      function (e) {
+        var t = e.target;
+        var a = t && t.closest ? t.closest('a[href*="' + HOST + '"]') : null;
+        if (a) rewrite(a, tok);
+      },
+      true
+    );
+  })();
+</script>

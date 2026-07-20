@@ -8,6 +8,7 @@ import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/ibm-plex-mono/500.css';
 
 import SEOHead from '../components/SEOHead.astro';
+import LeadToken from '../components/LeadToken.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Analytics from '../components/Analytics.astro';
@@ -50,6 +51,8 @@ const reviewed = isIndexable(locale);
       ogType={ogType}
       jsonLd={jsonLd}
     />
+    {/* Per-lead outreach-token forwarding — must run before CTAs are clickable. */}
+    <LeadToken />
   </head>
   <body class={bodyClass}>
     <a class="skip-link" href="#main">{t(locale, 'a11y.skipToContent')}</a>
