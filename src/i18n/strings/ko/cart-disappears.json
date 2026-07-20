@@ -1,6 +1,6 @@
 {
-  "page.cart-disappears.title": "로그인 후 Shopify 장바구니가 사라지나요? 해결책은 여기 있습니다",
-  "page.cart-disappears.desc": "장바구니가 계정이 아니라 한 브라우저의 쿠키에 살기 때문에, 로그인 후나 다른 기기에서 장바구니가 사라집니다. 이는 버그가 아니라 예상된 Shopify 동작입니다.",
+  "page.cart-disappears.title": "Shopify 장바구니 사라짐 | 원인과 해결책",
+  "page.cart-disappears.desc": "장바구니가 계정이 아니라 브라우저 쿠키에 살기 때문에, 로그인 후나 다른 기기에서 사라집니다. 버그가 아니라 예상된 Shopify 동작입니다.",
   "page.cart-disappears.crumb": "장바구니가 사라져요",
   "page.cart-disappears.h1": "로그인 후 Shopify 장바구니가 사라지는 이유 — 그리고 해결책",
   "page.cart-disappears.lede": "장바구니가 계정이 아니라 그 브라우저의 쿠키에 저장되기 때문에, 다른 기기나 브라우저에서 로그인하면 Shopify 장바구니가 사라집니다. 이것은 버그나 데이터 손실이 아니라 Shopify의 예상된 기본 동작입니다. 영구 장바구니를 추가하면 장바구니가 계정에 저장되어 사라지지 않게 됩니다.",

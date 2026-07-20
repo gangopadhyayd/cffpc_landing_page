@@ -1,6 +1,6 @@
 {
   "page.privacy.title": "Como o Persistent Cart trata os seus dados | App da Shopify",
-  "page.privacy.desc": "O Persistent Cart acessa apenas o carrinho de um cliente conectado — itens, quantidades, observações — para sincronizá-lo entre os dispositivos e navegadores dele. Visitantes não são rastreados.",
+  "page.privacy.desc": "O Persistent Cart acessa apenas o carrinho de um cliente conectado — itens, quantidades — para sincronizá-lo entre dispositivos. Visitantes não rastreados.",
   "page.privacy.crumb": "Dados e privacidade",
   "page.privacy.h1": "Quais dados o Persistent Cart acessa, e por quê",
   "page.privacy.lede": "O Persistent Cart acessa apenas o necessário para fazer seu trabalho: o conteúdo do carrinho de um cliente conectado, para que possa sincronizar esse carrinho entre os dispositivos e navegadores dele. Ele não rastreia visitantes, não envia e-mails de marketing nem captura contatos. Esta página explica o nosso tratamento de dados em linguagem simples; a política de privacidade formal está vinculada à parte.",

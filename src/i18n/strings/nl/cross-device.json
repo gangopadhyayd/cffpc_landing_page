@@ -1,6 +1,6 @@
 {
-  "page.cross-device.title": "Cross-device winkelwagensync voor Shopify: van mobiel naar desktop",
-  "page.cross-device.desc": "Ja — Persistent Cart synchroniseert de winkelwagen van een ingelogde shopper van mobiel naar desktop. Shopify doet dat standaard niet, en mobiele winkelwagens worden het vaakst verlaten (Baymard, 2025).",
+  "page.cross-device.title": "Winkelwagen synchroniseren tussen apparaten — Shopify",
+  "page.cross-device.desc": "Winkelwagen synchroniseren tussen apparaten: Persistent Cart brengt de winkelwagen van mobiel naar desktop — iets wat Shopify standaard niet doet.",
   "page.cross-device.crumb": "Cross-device sync",
   "page.cross-device.h1": "Cross-device winkelwagensync: behoud de winkelwagen van mobiel naar desktop",
   "page.cross-device.lede": "Ja — een ingelogde shopper kan een winkelwagen vullen op zijn telefoon en die klaar vinden op zijn laptop, als je cross-device winkelwagensync toevoegt. Shopify doet dit niet uit zichzelf: de winkelwagen wordt in één browser gehouden. Persistent Cart slaat hem op in het account zodat hij de shopper tussen apparaten volgt.",

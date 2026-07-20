@@ -1,6 +1,6 @@
 {
   "page.uc-wholesale.title": "Persistent Cart til engros- og B2B-kurve på Shopify",
-  "page.uc-wholesale.desc": "Engroskøbere bygger store kurve med mange varelinjer over dage og enheder. Persistent Cart holder en indlogget købers ordre intakt på tværs af sessioner, enheder og browsere.",
+  "page.uc-wholesale.desc": "Engroskøbere bygger store kurve med mange varelinjer over dage og enheder. Persistent Cart holder en indlogget købers ordre intakt på tværs af enheder.",
   "page.uc-wholesale.crumb": "Engros & B2B",
   "page.uc-wholesale.h1": "Engroskøbere bygger ordrer over dage — bevar deres kurve",
   "page.uc-wholesale.lede": "Engros er det segment med mest smerte ved tabte kurve. En B2B-køber sammensætter en stor ordre med mange varelinjer — nogle gange dusinvis af varianter og over hundrede enheder — på tværs af flere sessioner og enheder over en uge. Persistent Cart gemmer den indloggede købers kurv ved hver ændring og genskaber den, uanset hvor de logger ind igen.",

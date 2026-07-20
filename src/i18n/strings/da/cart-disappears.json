@@ -1,6 +1,6 @@
 {
-  "page.cart-disappears.title": "Shopify-kurv forsvinder efter login? Her er løsningen",
-  "page.cart-disappears.desc": "Din kurv forsvinder efter login eller på en anden enhed, fordi den lever i én browsers cookie, ikke på din konto. Det er forventet Shopify-adfærd, ikke en fejl.",
+  "page.cart-disappears.title": "Shopify-indkøbskurv forsvinder efter login? Her er løsningen",
+  "page.cart-disappears.desc": "Din kurv forsvinder efter login eller skift af enhed, fordi den lever i én browsers cookie, ikke på din konto. Forventet Shopify-adfærd, ikke en fejl.",
   "page.cart-disappears.crumb": "Kurv forsvinder",
   "page.cart-disappears.h1": "Hvorfor din Shopify-kurv forsvinder efter login — og løsningen",
   "page.cart-disappears.lede": "Din Shopify-kurv forsvinder, når du logger ind på en anden enhed eller browser, fordi kurven gemmes i den browsers cookie, ikke på din konto. Det er Shopifys forventede standardadfærd, ikke en fejl eller tabte data. Tilføjer du en vedvarende kurv, gemmes kurven på kontoen, så den holder op med at forsvinde.",

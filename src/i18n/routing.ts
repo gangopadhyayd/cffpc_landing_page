@@ -3,7 +3,7 @@
  * every other locale lives under /<path>/. These feed the router, language
  * switcher, hreflang alternates, and canonical generation.
  */
-import { LOCALES, DEFAULT_LOCALE, getLocale } from '../config/locales';
+import { LOCALES, DEFAULT_LOCALE, getLocale, isIndexable } from '../config/locales';
 import { site } from '../config/site';
 
 /** Clean a slug: no leading/trailing slashes. '' = home. */
@@ -25,9 +25,18 @@ export function localizedUrl(localeCode: string, slug = ''): string {
   return site.url + localizedPath(localeCode, slug);
 }
 
-/** hreflang alternates for a page slug across all locales (+ x-default = en). */
+/**
+ * hreflang alternates for a page slug — indexable locales only (+ x-default = en).
+ * Unreviewed locales render noindex, and Google drops noindex targets from the
+ * hreflang cluster anyway — advertising them only burns crawl budget and fills
+ * Search Console with "Excluded by 'noindex'" (seen 2026-07-18). A locale joins
+ * the graph automatically once `reviewed: true` in locales.ts.
+ */
 export function alternates(slug = ''): { hreflang: string; href: string }[] {
-  const list = LOCALES.map((l) => ({ hreflang: l.code, href: localizedUrl(l.code, slug) }));
+  const list = LOCALES.filter((l) => isIndexable(l.code)).map((l) => ({
+    hreflang: l.code,
+    href: localizedUrl(l.code, slug),
+  }));
   list.push({ hreflang: 'x-default', href: localizedUrl(DEFAULT_LOCALE, slug) });
   return list;
 }

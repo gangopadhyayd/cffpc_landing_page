@@ -1,6 +1,6 @@
 {
   "page.privacy.title": "Hur Persistent Cart hanterar din data | Shopify-app",
-  "page.privacy.desc": "Persistent Cart använder endast en inloggad kunds varukorg — varor, antal, anteckningar — för att synkronisera den mellan deras enheter och webbläsare. Gäster spåras inte.",
+  "page.privacy.desc": "Persistent Cart använder bara en inloggad kunds varukorg — varor, antal, anteckningar — för att synka den mellan enheter. Gäster spåras inte.",
   "page.privacy.crumb": "Data och integritet",
   "page.privacy.h1": "Vilken data Persistent Cart använder, och varför",
   "page.privacy.lede": "Persistent Cart använder endast det den behöver för att göra sitt jobb: en inloggad kunds varukorgsinnehåll, så att den kan synkronisera den varukorgen mellan deras enheter och webbläsare. Den spårar inte gäster, skickar inga marknadsföringsmejl och samlar inte in kontakter. Den här sidan förklarar vår datahantering på ett enkelt språk; den formella integritetspolicyn länkas separat.",

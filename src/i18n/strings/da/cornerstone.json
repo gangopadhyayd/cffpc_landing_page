@@ -1,6 +1,6 @@
 {
   "page.cornerstone.title": "Persistent Cart: Sådan virker Shopify-kurve som standard",
-  "page.cornerstone.desc": "En vedvarende kurv gemmer en indlogget kundes kurv på tværs af enheder og browsere. Shopifys standardkurv ligger i en browsercookie på 2 uger, så den kan ikke følge dem.",
+  "page.cornerstone.desc": "En vedvarende kurv gemmer en indlogget kundes kurv på tværs af enheder. Shopifys standardkurv ligger i en browsercookie i 2 uger og følger ikke med.",
   "page.cornerstone.crumb": "Grundlæggende om Persistent Cart",
   "page.cornerstone.h1": "Hvad en vedvarende kurv er, og hvordan standard Shopify-kurve faktisk virker",
   "page.cornerstone.lede": "En vedvarende kurv gemmer en indlogget kundes kurv på deres konto og synkroniserer den på tværs af enheder, browsere og gentagne besøg. Shopify gør ikke dette som standard: en almindelig kurv lever i en browsercookie på omkring to uger, ikke på kontoen, så den kan ikke følge en indlogget kunde fra telefon til laptop.",

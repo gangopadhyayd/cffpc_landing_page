@@ -1,6 +1,6 @@
 {
-  "page.support.title": "Persistent Cart-support: installera, aktivera, åtgärda synkronisering",
-  "page.support.desc": "Behöver du hjälp med Persistent Cart? Installera med ett klick, aktivera sedan appinbäddningen i din temaredigerare för att slå på den. Så här ställer du in och åtgärdar synkronisering.",
+  "page.support.title": "Persistent Cart-support: installation, aktivering, synk",
+  "page.support.desc": "Behöver du hjälp med Persistent Cart? Installera med ett klick, aktivera appinbäddningen i temaredigeraren, och läs hur du felsöker synkroniseringen.",
   "page.support.crumb": "Support",
   "page.support.h1": "Så installerar du, aktiverar och får hjälp",
   "page.support.lede": "Att få Persistent Cart att fungera tar ett klick och en omställare: installera den från Shopify App Store, aktivera sedan appinbäddningen i din temaredigerare. Om synkroniseringen någon gång ser fel ut är det nästan alltid en av två saker — kunden är inte inloggad, eller så stängdes appinbäddningen av. Så här ställer du in, får hjälp och felsöker.",

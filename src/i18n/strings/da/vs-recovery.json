@@ -1,6 +1,6 @@
 {
   "page.vs-recovery.title": "Persistent Cart vs. genvinding af forladte kurve | Shopify",
-  "page.vs-recovery.desc": "Persistent Cart og genvinding af forladte kurve gør forskellige ting: den ene forhindrer indloggede kurve i at forsvinde, den anden vinder allerede tabte kurve tilbage. Brug begge.",
+  "page.vs-recovery.desc": "Persistent Cart og genvinding gør forskellige ting: den ene forhindrer, at indloggede kurve forsvinder, den anden vinder tabte kurve tilbage. Brug begge.",
   "page.vs-recovery.crumb": "Vs. genvinding",
   "page.vs-recovery.h1": "Persistent Cart vs. genvinding af forladte kurve: to forskellige opgaver, bedst løst sammen.",
   "page.vs-recovery.lede": "De er ikke rivaler. Persistent Cart virker, før en kurv forlades — den forhindrer en indlogget kundes kurv i at forsvinde, når de skifter enhed. Mail- og SMS-genvinding virker efter, kurven forlades, og vinder en andel af allerede tabte kurve tilbage. Brugt sammen dækker de hele rejsen — så du kan redde de kurve, dine mailflows aldrig ser.",

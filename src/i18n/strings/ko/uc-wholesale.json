@@ -1,6 +1,6 @@
 {
-  "page.uc-wholesale.title": "도매 및 B2B Shopify 장바구니를 위한 Persistent Cart",
-  "page.uc-wholesale.desc": "도매 바이어는 여러 날과 기기에 걸쳐 큰 다품목 장바구니를 만듭니다. Persistent Cart는 로그인한 바이어의 주문을 세션, 기기, 브라우저 간에 온전히 유지합니다.",
+  "page.uc-wholesale.title": "도매·B2B 장바구니 | Persistent Cart",
+  "page.uc-wholesale.desc": "도매 바이어는 여러 날과 기기에 걸쳐 큰 다품목 장바구니를 만듭니다. Persistent Cart는 로그인 바이어의 주문을 세션과 기기 간에 온전히 유지합니다.",
   "page.uc-wholesale.crumb": "도매 & B2B",
   "page.uc-wholesale.h1": "도매 바이어는 여러 날에 걸쳐 주문을 만듭니다 — 그들의 장바구니를 지키세요",
   "page.uc-wholesale.lede": "도매는 장바구니 손실에서 가장 고통이 큰 부문입니다. B2B 바이어는 큰 다품목 주문 — 때로는 수십 개의 변형과 백 개가 넘는 단위 — 을 일주일에 걸쳐 여러 세션과 기기로 조립합니다. Persistent Cart는 그 로그인한 바이어의 장바구니를 변경마다 저장하고 그들이 다시 로그인하는 곳이라면 어디서든 복원합니다.",

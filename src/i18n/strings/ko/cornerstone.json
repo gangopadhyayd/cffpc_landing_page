@@ -1,6 +1,6 @@
 {
-  "page.cornerstone.title": "Persistent Cart: 기본 Shopify 장바구니는 어떻게 작동하는가",
-  "page.cornerstone.desc": "영구 장바구니는 로그인한 쇼핑객의 장바구니를 기기와 브라우저 간에 저장합니다. Shopify의 기본 장바구니는 2주짜리 브라우저 쿠키에 머물러 따라갈 수 없습니다.",
+  "page.cornerstone.title": "영구 장바구니란? | Persistent Cart",
+  "page.cornerstone.desc": "영구 장바구니는 로그인한 쇼핑객의 장바구니를 기기와 브라우저 간에 저장합니다. Shopify 기본 장바구니는 2주짜리 쿠키에 머물러 따라가지 않습니다.",
   "page.cornerstone.crumb": "Persistent Cart 기초",
   "page.cornerstone.h1": "영구 장바구니란 무엇이며, 기본 Shopify 장바구니는 실제로 어떻게 작동하는가",
   "page.cornerstone.lede": "영구 장바구니는 로그인한 쇼핑객의 장바구니를 그들의 계정에 저장하고 기기, 브라우저, 재방문에 걸쳐 동기화합니다. Shopify는 기본적으로 이를 하지 않습니다: 표준 장바구니는 계정이 아니라 약 2주짜리 브라우저 쿠키에 살기에, 로그인한 쇼핑객을 휴대폰에서 노트북으로 따라갈 수 없습니다.",

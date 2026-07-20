@@ -1,6 +1,6 @@
 {
-  "page.cross-device.title": "Synkronisering av handlekurv mellom enheter for Shopify: fra mobil til datamaskin",
-  "page.cross-device.desc": "Ja — Persistent Cart synkroniserer en innlogget kundes handlekurv fra mobil til datamaskin. Shopify gjør det ikke som standard, og handlekurver på mobil forlates oftest (Baymard, 2025).",
+  "page.cross-device.title": "Synkroniser handlekurv mellom enheter i Shopify",
+  "page.cross-device.desc": "Ja — Persistent Cart synkroniserer en innlogget kundes handlekurv fra mobil til datamaskin. Shopify gjør ikke dette som standard.",
   "page.cross-device.crumb": "Synkronisering mellom enheter",
   "page.cross-device.h1": "Synkronisering av handlekurv mellom enheter: behold handlekurven fra mobil til datamaskin",
   "page.cross-device.lede": "Ja — en innlogget kunde kan fylle en handlekurv på mobilen og finne den ventende på laptopen, hvis du legger til synkronisering av handlekurv mellom enheter. Shopify gjør ikke dette av seg selv: handlekurven holdes i én nettleser. Persistent Cart lagrer den på kontoen, slik at den følger kunden mellom enheter.",

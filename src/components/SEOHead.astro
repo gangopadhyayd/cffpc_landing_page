@@ -48,7 +48,7 @@ const bingVerify = import.meta.env.PUBLIC_BING_SITE_VERIFICATION;
   )
 }
 
-{/* hreflang alternates + x-default — wired even for unreviewed (noindex) locales */}
+{/* hreflang alternates + x-default — indexable (reviewed) locales only; noindex locales stay out */}
 {alts.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
 
 {/* Open Graph */}

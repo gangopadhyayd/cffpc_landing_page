@@ -1,21 +1,21 @@
 {
   "page.compare-email.title": "Persistent Cart vs. 弃购邮件应用 | Shopify",
-  "page.compare-email.desc": "邮件应用和 Persistent Cart 做的是不同的工作：它跨设备恢复已登录购物车 — 无需收集联系方式、获取授权或承担每次发送的成本。两者都用。",
+  "page.compare-email.desc": "邮件应用和 Persistent Cart 做的是不同的工作：它跨设备恢复已登录顾客的购物车 — 无需收集联系方式、获取授权或承担每次发送的成本。建议两者并用。",
   "page.compare-email.crumb": "vs. 邮件应用",
-  "page.compare-email.h1": "Persistent Cart vs. 弃购邮件应用：不同的买家，不同的机制。",
+  "page.compare-email.h1": "Persistent Cart vs. 弃购邮件应用：面向不同的人，机制也完全不同。",
   "page.compare-email.lede": "弃购邮件应用和 Persistent Cart 并非竞争对手 — 它们以不同的机制解决不同的问题。邮件应用通过向主动订阅的联系人发消息，在购物者离开之后把他们挽回。Persistent Cart 在更早、更底层的环节发挥作用：它跨设备恢复已登录购物者的购物车，无需收集联系方式、无需获取授权，也没有每次发送的成本。多数商店两者并用都能受益。",
 
   "page.compare-email.s1.h": "弃购邮件应用和 Persistent Cart 属于同一类吗？",
-  "page.compare-email.s1.b": "不是。它们看起来相邻，是因为两者都和购物车打交道，但机制不同。弃购邮件应用会收集购物者的联系方式、监测弃购行为，然后发送一条消息把他们拉回来。Persistent Cart 从不发送消息 — 它把已登录客户的购物车保存到其账户上，让购物车在任何弃购发生之前就跨设备和浏览器重新出现。\n\n买家往往也不同。邮件和短信应用是您营销与生命周期体系的一部分，通常归运营活动的人管理。Persistent Cart 更接近店面基础设施 — 是对购物车本身行为方式的修复。由于它们位于不同的层级，您不必在两者之间二选一；它们做的是互补的工作。",
+  "page.compare-email.s1.b": "不是。它们看似同类，是因为都和购物车打交道，但机制不同。弃购邮件应用会收集购物者的联系方式、监测弃购行为，然后发送一条消息把他们拉回来。Persistent Cart 从不发送消息 — 它把已登录客户的购物车保存到其账户上，让购物车在任何弃购发生之前就跨设备和浏览器重新出现。\n\n在商家团队里，采购它们的人往往也不同。邮件和短信应用是您营销与生命周期体系的一部分，通常由负责营销活动的人管理。Persistent Cart 更接近店面基础设施 — 是对购物车本身行为方式的修复。由于它们位于不同的层级，您不必在两者之间二选一；它们做的是互补的工作。",
 
   "page.compare-email.s2.h": "Persistent Cart 做了哪些邮件应用并不需要的事？",
   "page.compare-email.s2.b": "它无需邮件流程所依赖的那些前提条件就能运作。没有联系方式需要收集：Persistent Cart 在客户的账户上恢复购物车，所以它不需要邮箱或电话号码就能完成工作。没有授权环节，因为它并不是在向任何人做营销 — 它只是为一位已经登录的购物者保持购物车同步。也没有每次发送的成本；它的价格是与您 Shopify 套餐挂钩的固定月费，而不是按每条消息收费。\n\n这些都不会让邮件应用变得不那么有用 — 它们能触达 Persistent Cart 无法触达的购物者，包括访客以及已经离开的人。这只是意味着 Persistent Cart 覆盖的是一个不同的、更早的时刻，且不会增加任何消息、名单构建或边际成本。",
 
   "page.compare-email.s3.h": "预防还是挽回 — 您该选哪个？",
-  "page.compare-email.s3.b": "理想情况下两者都选 — 可以把它理解为预防加挽回。Persistent Cart 负责预防：它从根本上阻止一种常见而隐形的损失 — 已登录购物者切换设备后发现购物车空空如也。弃购邮件负责挽回：它重新触达离开的购物者，把其中一部分赢回来，这正是精心构建的流程能可靠做到的。\n\n两者并用，便覆盖了整条路径。Persistent Cart 缩小了走失购物车的范围；您的邮件应用则处理那些因保存购物车也无法解决的原因而被弃购的购物车。添加 Persistent Cart 不会改动您的 Klaviyo、Omnisend 或 Recart 设置 — 它没有任何消息、分组或流程会与之冲突。它挽回的，是您邮件流程从未见过的那些购物车。",
+  "page.compare-email.s3.b": "理想情况下两者都选 — 可以把它理解为预防加挽回。Persistent Cart 负责预防：它从根本上阻止一种常见而隐形的损失 — 已登录购物者切换设备后发现购物车空空如也。弃购邮件负责挽回：它重新触达离开的购物者，把其中一部分赢回来，这正是精心构建的流程能可靠做到的。\n\n两者并用，便覆盖了整条路径。Persistent Cart 从源头减少丢失的购物车；您的邮件应用则负责那些原因不在购物车本身的弃购。添加 Persistent Cart 不会改动您的 Klaviyo、Omnisend 或 Recart 设置 — 它没有任何消息、分组或流程会与之冲突。它挽回的，是您邮件流程从未见过的那些购物车。",
 
   "page.compare-email.faq.q1.q": "我同时需要弃购邮件应用和 Persistent Cart 吗？",
-  "page.compare-email.faq.q1.a": "多数商店两者并用都能受益。它们解决不同的问题：Persistent Cart 防止已登录购物车跨设备消失，而邮件应用在购物者弃购之后把他们挽回。Persistent Cart 无需收集联系方式、获取授权或承担每次发送的成本，所以添加它不会改变您的邮件计划 — 它只是消除了您的流程无法触及的损失。",
+  "page.compare-email.faq.q1.a": "多数商店两者并用都能受益。它们解决不同的问题：Persistent Cart 防止已登录顾客的购物车跨设备消失，而邮件应用在购物者弃购之后把他们挽回。Persistent Cart 无需收集联系方式、获取授权或承担每次发送的成本，所以添加它不会改变您的邮件营销体系 — 它只是消除了您的流程无法触及的损失。",
   "page.compare-email.faq.q2.q": "Persistent Cart 会发送弃购邮件吗？",
-  "page.compare-email.faq.q2.a": "不会。Persistent Cart 不发送任何邮件或消息。它在您的店面上跨设备和浏览器恢复已登录客户的购物车，不含任何营销成分。如果您想给弃购的购物者发消息，那是 Klaviyo、Omnisend 或 Recart 这类邮件或短信应用的工作 — Persistent Cart 可以与其中之一并行运行而不冲突。"
+  "page.compare-email.faq.q2.a": "不会。Persistent Cart 不发送任何邮件或消息。它在您的店面上跨设备和浏览器恢复已登录客户的购物车，不含任何营销成分。如果您想给弃购的购物者发消息，那是 Klaviyo、Omnisend 或 Recart 这类邮件或短信应用的工作 — Persistent Cart 可以与它们并行运行，互不冲突。"
 }

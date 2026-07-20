@@ -227,3 +227,10 @@
   }
   .link-underline:hover { color: var(--color-accent-hover); }
 }
+
+/* Korean line-breaking: keep words intact (avoids mid-word wraps in headings).
+   Scoped to ko only; overflow-wrap guards long tokens in narrow containers. */
+html[lang='ko'] {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}

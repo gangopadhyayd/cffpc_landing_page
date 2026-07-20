@@ -1,6 +1,6 @@
 {
-  "page.cross-device.title": "Synkronisering af kurv på tværs af enheder til Shopify: mobil til computer",
-  "page.cross-device.desc": "Ja — Persistent Cart synkroniserer en indlogget kundes kurv fra mobil til computer. Shopify gør det ikke som standard, og mobilkurve forlades oftest (Baymard, 2025).",
+  "page.cross-device.title": "Synkroniser kurv mellem enheder i Shopify | Persistent Cart",
+  "page.cross-device.desc": "Ja — Persistent Cart synkroniserer en indlogget kundes kurv fra mobil til computer. Shopify gør det ikke selv; mobilkurve forlades oftest (Baymard 2025).",
   "page.cross-device.crumb": "Synkronisering på tværs af enheder",
   "page.cross-device.h1": "Synkronisering på tværs af enheder: bevar kurven fra mobil til computer",
   "page.cross-device.lede": "Ja — en indlogget kunde kan fylde en kurv på telefonen og finde den ventende på laptoppen, hvis du tilføjer synkronisering af kurv på tværs af enheder. Shopify gør ikke dette af sig selv: kurven holdes i én browser. Persistent Cart gemmer den på kontoen, så den følger kunden mellem enheder.",

@@ -1,6 +1,6 @@
 {
   "page.uc-wholesale.title": "Persistent Cart för grossist- och B2B-varukorgar på Shopify",
-  "page.uc-wholesale.desc": "Grossistköpare bygger stora varukorgar med många rader över flera dagar och enheter. Persistent Cart håller en inloggad köpares order intakt mellan sessioner, enheter och webbläsare.",
+  "page.uc-wholesale.desc": "Grossistköpare bygger stora varukorgar över flera dagar och enheter. Persistent Cart håller en inloggad köpares order intakt mellan sessioner och enheter.",
   "page.uc-wholesale.crumb": "Grossist och B2B",
   "page.uc-wholesale.h1": "Grossistköpare bygger ordrar över flera dagar — behåll deras varukorgar",
   "page.uc-wholesale.lede": "Grossist är det segment som lider mest av förlorade varukorgar. En B2B-köpare sätter ihop en stor order med många rader — ibland dussintals varianter och över hundra enheter — över flera sessioner och enheter under en vecka. Persistent Cart sparar den inloggade köparens varukorg vid varje ändring och återställer den var de än loggar in igen.",

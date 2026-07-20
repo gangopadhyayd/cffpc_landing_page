@@ -1,6 +1,6 @@
 {
-  "page.b2b.title": "Shopify B2B를 위한 Persistent Cart — 기기 간 장바구니",
-  "page.b2b.desc": "Persistent Cart는 로그인한 B2B 바이어의 장바구니를 기기와 브라우저 간에 복원하여, 며칠에 걸쳐 만든 대규모 다품목 주문이 세션 사이에 사라지지 않게 합니다.",
+  "page.b2b.title": "Shopify B2B 장바구니 동기화",
+  "page.b2b.desc": "Persistent Cart는 로그인한 B2B 바이어의 장바구니를 기기와 브라우저 간에 복원해, 며칠 걸려 만든 대규모 주문이 세션 사이에 사라지지 않게 합니다.",
   "page.b2b.crumb": "Shopify B2B",
   "page.b2b.h1": "대규모 B2B 장바구니를 기기와 세션 간에 온전히 유지하세요",
   "page.b2b.lede": "네 — Persistent Cart는 로그인한 B2B 바이어의 장바구니를 저장하고, 그들이 로그인하는 어떤 기기나 브라우저에서도 복원합니다. 도매 바이어가 여러 세션에 걸쳐 만드는 대규모 다품목 주문이 온전히 유지되므로, 창고 데스크톱에서 시작한 담당자가 장바구니를 다시 만들지 않고 휴대폰에서 마무리할 수 있습니다.",

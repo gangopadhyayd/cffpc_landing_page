@@ -573,3 +573,74 @@ re-read is owed if those pages ship); proof re-verified 4.9★ / 51 reviews
 
 ⚠️ Open app-side dependency (owner): map Advanced-tier shops → `shopify-plus`
 and charge $99.00, so the display matches billing once charging starts.
+
+---
+
+## GSC indexing alert → hreflang gated on indexability (2026-07-20)
+
+Search Console emailed (2026-07-18) two new "pages not indexed" reasons. Diagnosed
+against live site + source; one real defect found and fixed.
+
+- **"Excluded by 'noindex' tag"** = the 14 unreviewed machine locales (~210 pages),
+  noindex **by design** — but every page's head advertised all 15 locales via
+  `<link rel="alternate" hreflang>` ("wired even for unreviewed"), inviting Google
+  to crawl them. Google drops noindex targets from hreflang clusters anyway
+  (zero upside), so the wiring only burned crawl budget and generated the alert.
+- **"Page with redirect"** = intentional 301s (www→apex, http→https, trailing
+  slash, `/sitemap.xml`→`/sitemap-index.xml`, `/privacy.html`→`/privacy`).
+  Correct as-is; no action.
+
+**Change:** `alternates()` (`src/i18n/routing.ts`) now filters to `isIndexable`
+locales + `x-default`; SEOHead comment + `docs/localization.md` updated to match.
+Nothing else touched: sitemap was already gated, language switcher still lists all
+15 for humans (anchor `hreflang` attrs are not an indexing signal), and a locale
+still joins the graph site-wide the moment `reviewed: true` flips.
+
+**Verify:** `astro check` 0 errors; build + qa-gate PASS (226 pages, i18n drift
+clean). dist spot-check: EN pages emit exactly `en` + `x-default` and stay
+`index, follow`; `/de` stays `noindex, follow` with no locale hreflang in head.
+Expectation in GSC: "Excluded by 'noindex'" decays as Google recrawls (residual
+entries via switcher-anchor discovery are normal and harmless); "Page with
+redirect" persists and is fine.
+
+---
+
+## 14-locale release review -> all locales indexable (2026-07-20)
+
+Owner has no native speakers; directed an agent-based release review instead.
+Method: 3 full MQM reviews (es/fr/zh-CN — the deep pass; 169-311 strings each)
++ deterministic guard scripts (dash.ui reset to EN, trust.impact revert, rating
+format, key-parity/JSON validation) + 11 budget "checklist" reviews (sonnet)
+for the rest, driven by the systematic-defect list the deep pass surfaced.
+
+Systematic MT defects found and fixed across locales: dropped footer legal
+disclaimer; dropped partner terms (30%/12mo); invented "live real-time update"
+demo claim; "industry benchmarks" overclaim (EN says illustrative defaults);
+lost "original since 2016" seniority claim; privacy s7.b missing the three
+Shopify webhook types (ko/da/fi/nb/nl); compare-email "different buyer"
+misread as shopper (pt-BR/nb/fr/es/zh); metas over SERP budgets (rewritten,
+query-front-loaded, CJK budgets ~half). Registers enforced: de=du, es=tu,
+it=tu, pt-BR=voce, nl=je, fr=vous, ja=desu/masu, ko=hamnida, zh=nin,
+sv/da/nb=du, pl=ty, fi=sinuttelu.
+
+Ship: reviewed:true x14 in locales.ts -> sitemap 15 -> 225 URLs, hreflang
+cluster 15+x-default on every page, review banners gone. ko got
+word-break:keep-all in global.css (heading mid-word wraps — the parked CJK
+P2). QA: i18n:check + astro check + build/qa-gate PASS; qa:browser 900
+page-loads PASS; owner-side visual inspection of all 14 locale homepages.
+Deployed via npm run deploy; live-verified (/de /ja index,follow; 225 sitemap).
+
+Known follow-ups: deferred de pages still use Sie (fix at un-defer); nl
+app-embed terminology split across deferred files; fi long titles on 9
+low-traffic pages (bundle with EN SERP-trim owner queue #5); EN-source issues
+reported by multiple reviewers (pricing tier.advanced/plus note overlap,
+faq "every plan starts with a free trial" vs paid-only trial wording,
+2012 Google/Ipsos stat, en home.compare.col.feature="" tripping validators,
+EN metas over budget — owner queue). Review quotes on locale pages are
+translations of the verbatim EN quotes — owner may prefer verbatim-EN.
+
+Ops scar: first attempt ran 14 full reviews in parallel on the session model
+(fable) — ~200k+ tokens each, hit the session cap mid-run. Recovery pattern
+(deterministic guards + checklist fan-out on sonnet) cost ~45% of the failed
+attempt and finished the job. Standing rule: set model per agent; warn owner
+before >200k-token fan-outs.

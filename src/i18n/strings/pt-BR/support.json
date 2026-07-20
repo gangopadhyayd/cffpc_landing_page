@@ -1,6 +1,6 @@
 {
-  "page.support.title": "Suporte do Persistent Cart: instalar, ativar, corrigir a sincronização",
-  "page.support.desc": "Precisa de ajuda com o Persistent Cart? Instale em um clique e depois ative a incorporação do app no editor de temas. Veja como configurar e corrigir a sincronização.",
+  "page.support.title": "Suporte do Persistent Cart: instalar e sincronizar carrinho",
+  "page.support.desc": "Sincronizar carrinho entre dispositivos: instale o Persistent Cart, ative a incorporação do app no editor de temas e corrija a sincronização.",
   "page.support.crumb": "Suporte",
   "page.support.h1": "Como instalar, ativar e obter ajuda",
   "page.support.lede": "Colocar o Persistent Cart para funcionar leva um clique e um botão: instale-o na Shopify App Store e depois ative a incorporação do app no editor de temas. Se a sincronização parecer estranha em algum momento, quase sempre é uma de duas coisas — o cliente não está conectado ou a incorporação do app foi desativada. Veja como configurar, obter ajuda e resolver problemas.",

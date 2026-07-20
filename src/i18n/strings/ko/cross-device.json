@@ -1,6 +1,6 @@
 {
-  "page.cross-device.title": "Shopify를 위한 기기 간 장바구니 동기화: 모바일에서 데스크톱으로",
-  "page.cross-device.desc": "네 — Persistent Cart는 로그인한 쇼핑객의 장바구니를 모바일에서 데스크톱으로 동기화합니다. Shopify는 기본적으로 그러지 않으며, 모바일 장바구니가 가장 많이 이탈됩니다(Baymard, 2025).",
+  "page.cross-device.title": "Shopify 장바구니 동기화 | 모바일→데스크톱",
+  "page.cross-device.desc": "Persistent Cart는 로그인 쇼핑객의 장바구니를 모바일에서 데스크톱으로 동기화합니다. 장바구니 이탈은 모바일에서 가장 많이 일어납니다.",
   "page.cross-device.crumb": "기기 간 동기화",
   "page.cross-device.h1": "기기 간 장바구니 동기화: 모바일에서 데스크톱까지 장바구니를 유지하세요",
   "page.cross-device.lede": "네 — 로그인한 쇼핑객이 휴대폰에서 장바구니를 채우고 노트북에서 그것이 기다리는 걸 발견할 수 있습니다. 기기 간 장바구니 동기화를 추가한다면요. Shopify는 자체적으로 이를 하지 않습니다: 장바구니가 한 브라우저에 보관됩니다. Persistent Cart는 그것을 계정에 저장하여 쇼핑객을 기기 간에 따라가게 합니다.",

@@ -18,20 +18,26 @@ all 15.**
   indexable and is the `x-default`.
 - **The other 14 are generated**, never authored by hand — author once in English, fan out via
   `npm run i18n:sync` (glossary-aware machine translation + translation memory).
-- **Every locale is always `hreflang`-wired** (all 15 reference each other + `x-default`), so
-  search engines and the language switcher always see the full set.
+- **Only indexable (reviewed) locales are `hreflang`-wired.** `alternates()` in
+  `src/i18n/routing.ts` filters by `isIndexable`, so unreviewed (`noindex`) locales are never
+  advertised to search engines — Google discards `noindex` hreflang targets anyway, and pointing
+  at them wastes crawl budget and floods Search Console with "Excluded by 'noindex'" reports
+  (GSC alert, 2026-07-18). The language switcher still lists all 15 for humans. Flipping a
+  locale's `reviewed` flag adds it to the hreflang graph site-wide on the next build.
 - **Machine-translated locales render `noindex` until native review.** Each locale carries a
   `reviewed` flag in `locales.ts`. While `reviewed: false`, that locale's pages emit
-  `<meta name="robots" content="noindex">` (hreflang stays wired) and show an in-page review
-  banner. A native reviewer flips `reviewed: true` → the locale becomes indexable. This is
-  enforced by `isIndexable(code)` in `locales.ts`, consumed by `Base.astro` and `SEOHead.astro`.
+  `<meta name="robots" content="noindex">` (and stay out of hreflang + sitemap) and show an
+  in-page review banner. A native reviewer flips `reviewed: true` → the locale becomes indexable.
+  This is enforced by `isIndexable(code)` in `locales.ts`, consumed by `Base.astro`,
+  `SEOHead.astro`, and `src/i18n/routing.ts`.
 - **A page is not shippable until its English source exists AND `i18n:sync` has fanned it out to
   all 15.** CI fails otherwise (see §5).
 
 Why: the category is low-awareness and near-empty in every market, and **no competitor has a
-marketing site in any language**. Shipping all 15 (even machine-quality, `noindex`) wires the
-hreflang graph and lets us flip locales indexable one native review at a time, claim-heavy pages
-first — without ever re-touching the page components.
+marketing site in any language**. Shipping all 15 (even machine-quality, `noindex`) keeps every
+locale usable by humans today and lets us flip locales indexable one native review at a time,
+claim-heavy pages first — without ever re-touching the page components. Search engines only hear
+about a locale once it's flipped (hreflang + sitemap are both gated on `isIndexable`).
 
 ---
 
@@ -44,20 +50,20 @@ native reviewer signs off.
 | #  | Code    | Path     | Native label | English name           | Dir | Indexable at handoff |
 |----|---------|----------|--------------|------------------------|-----|----------------------|
 | 1  | `en`    | `/en`*   | English      | English                | ltr | ✅ canonical          |
-| 2  | `de`    | `/de`    | Deutsch      | German                 | ltr | ⬜ noindex (review)   |
-| 3  | `fr`    | `/fr`    | Français     | French                 | ltr | ⬜ noindex (review)   |
-| 4  | `es`    | `/es`    | Español      | Spanish                | ltr | ⬜ noindex (review)   |
-| 5  | `it`    | `/it`    | Italiano     | Italian                | ltr | ⬜ noindex (review)   |
-| 6  | `pt-BR` | `/pt-br` | Português    | Portuguese (Brazil)    | ltr | ⬜ noindex (review)   |
-| 7  | `nl`    | `/nl`    | Nederlands   | Dutch                  | ltr | ⬜ noindex (review)   |
-| 8  | `ja`    | `/ja`    | 日本語        | Japanese               | ltr | ⬜ noindex (review)   |
-| 9  | `zh-CN` | `/zh-cn` | 简体中文       | Chinese (Simplified)   | ltr | ⬜ noindex (review)   |
-| 10 | `ko`    | `/ko`    | 한국어         | Korean                 | ltr | ⬜ noindex (review)   |
-| 11 | `sv`    | `/sv`    | Svenska      | Swedish                | ltr | ⬜ noindex (review)   |
-| 12 | `da`    | `/da`    | Dansk        | Danish                 | ltr | ⬜ noindex (review)   |
-| 13 | `pl`    | `/pl`    | Polski       | Polish                 | ltr | ⬜ noindex (review)   |
-| 14 | `nb`    | `/nb`    | Norsk        | Norwegian (Bokmål)     | ltr | ⬜ noindex (review)   |
-| 15 | `fi`    | `/fi`    | Suomi        | Finnish                | ltr | ⬜ noindex (review)   |
+| 2  | `de`    | `/de`    | Deutsch      | German                 | ltr | ✅ agent-reviewed 2026-07-20 |
+| 3  | `fr`    | `/fr`    | Français     | French                 | ltr | ✅ agent-reviewed 2026-07-20 |
+| 4  | `es`    | `/es`    | Español      | Spanish                | ltr | ✅ agent-reviewed 2026-07-20 |
+| 5  | `it`    | `/it`    | Italiano     | Italian                | ltr | ✅ agent-reviewed 2026-07-20 |
+| 6  | `pt-BR` | `/pt-br` | Português    | Portuguese (Brazil)    | ltr | ✅ agent-reviewed 2026-07-20 |
+| 7  | `nl`    | `/nl`    | Nederlands   | Dutch                  | ltr | ✅ agent-reviewed 2026-07-20 |
+| 8  | `ja`    | `/ja`    | 日本語        | Japanese               | ltr | ✅ agent-reviewed 2026-07-20 |
+| 9  | `zh-CN` | `/zh-cn` | 简体中文       | Chinese (Simplified)   | ltr | ✅ agent-reviewed 2026-07-20 |
+| 10 | `ko`    | `/ko`    | 한국어         | Korean                 | ltr | ✅ agent-reviewed 2026-07-20 |
+| 11 | `sv`    | `/sv`    | Svenska      | Swedish                | ltr | ✅ agent-reviewed 2026-07-20 |
+| 12 | `da`    | `/da`    | Dansk        | Danish                 | ltr | ✅ agent-reviewed 2026-07-20 |
+| 13 | `pl`    | `/pl`    | Polski       | Polish                 | ltr | ✅ agent-reviewed 2026-07-20 |
+| 14 | `nb`    | `/nb`    | Norsk        | Norwegian (Bokmål)     | ltr | ✅ agent-reviewed 2026-07-20 |
+| 15 | `fi`    | `/fi`    | Suomi        | Finnish                | ltr | ✅ agent-reviewed 2026-07-20 |
 
 \* `en` is the default locale; whether it is also served at the site root is controlled by Astro
 i18n config derived from `locales.ts`. All locales are `ltr` today; the `dir` field exists so an
@@ -114,6 +120,18 @@ Source: `docs/research-notes.md` §5. These are the highest-risk terms; reviewer
 
 If a reviewer changes a term here, update this table so the next `i18n:sync` carries the correction
 into the translation memory for every page.
+
+### 3c. Release-review terminology additions (2026-07-20, agent review round)
+
+Confirmed against Shopify's own localized materials during the review; treat as termbase:
+
+- **de**: "persistent" as a German adjective → **dauerhaft gespeichert**; register = **du** (matches Shopify DE).
+- **fr**: plan = **forfait**; app embed = **intégration d'application**; toggle = **bouton** (never "interrupteur"); storefront = **boutique en ligne** (never "vitrine"); AOV = **panier moyen**; "Free Starter plan" = **forfait Starter gratuit**.
+- **es**: Shopify admin = **panel de control**; draft orders = **pedidos preliminares**; the store = **la Shopify App Store** (EN name kept); popups = **pop-ups**; register = **tú**.
+- **zh-CN**: theme = **模板** (Shopify zh official, not 主题); audit = **诊断**; abandonment = **弃购** (enforced); register = **您**.
+- **ko**: `word-break: keep-all` now set for `html[lang='ko']` in global.css (heading wraps); 카트 count is zero site-wide.
+- **Ratings**: hardcoded rating strings use **4.9 (dot)** in every locale for consistency with the `{rating}` token injected from `site.ts` — if number-format localization is ever wanted, do it at the token source, not per-string.
+- **Stat lockup**: `trust.impact.*` stays the owner-approved short form (**$30M+**) in all locales (standing honesty rule); localized spellings proposed by reviewers were reverted.
 
 ---
 

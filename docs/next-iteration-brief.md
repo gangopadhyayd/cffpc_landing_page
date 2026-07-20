@@ -70,7 +70,10 @@ the owner queue), `docs/improvement-plan-2026-07-08.md` (the copy/figure/SEO rou
 - **A11y**: WCAG AA contrast tokens shipped (ink-faint #6e6459 etc.); announce bar is
   a labelled region. Design tokens otherwise per global.css @theme.
 - **App Store listing assets** (parallel workstream, committed at v1.0): frames +
-  upload-ready renders in `design-assets/app-store/` — NOT yet uploaded to the listing.
+  renders in `design-assets/app-store/`. **UPDATE 2026-07-20: the EN listing IS live
+  with these frames** (visually verified — live hero = `renders/hero-feature.png`).
+  The old "NOT yet uploaded" note was stale. Still open: whether the 10 localized
+  listings + app icon carry their `renders/l10n` variants (not checked).
 
 ## Gotchas (hard-won; trust these)
 
@@ -104,10 +107,23 @@ the owner queue), `docs/improvement-plan-2026-07-08.md` (the copy/figure/SEO rou
 5. **SERP trims**: home title 72 chars / desc 202 (drafts on request).
 6. **How-it-works step-strip diagram** (save → sign-in → merge) — designed, unbuilt;
    the next diagrams-over-text move (improvement-plan §Diagrams).
-7. **App Store listing upload** — renders are ready in design-assets/app-store/.
+7. ~~**App Store listing upload**~~ ✅ DONE — EN listing is live with the new frames
+   (verified 2026-07-20). Only remaining: confirm the 10 localized listings + icon
+   carry their `renders/l10n` variants (owner can check in Partner dashboard).
 8. Re-enable next pages when wanted: calculator (needs QA pass), big-retailers, plus,
    resources/summary/changelog. (plus + summary copy needs an Advanced-aware re-read
    first — the bare $99.99→$99 price swap is done, the prose is still Plus-only.)
+9. **Schema `sameAs` — entity corroboration (owner-gated) [added 2026-07-20].**
+   The `Organization` JSON-LD `sameAs` (in `src/config/site.ts`) currently lists
+   ONLY the App Store URL. That is the last thin spot in the site's entity
+   footprint: Google's Knowledge Graph and AI answer engines corroborate "who
+   Persistent Cart is" from consistent references across independent authoritative
+   profiles, and there's only one. **Blocked on the owner creating the profiles —
+   there's nothing to link to yet; do NOT invent/placeholder them.** When any of
+   LinkedIn (company page), X, YouTube, Facebook, or Crunchbase exist for the app,
+   add the URL(s) to `site.ts` `sameAs` (one-line change, then rebuild) — a ~2-min
+   dev task. Tracked in `docs/distribution-checklist.md` item 10. Low urgency,
+   compounding value for AI-search visibility (see `docs/seo-growth-plan.md` §E1).
 
 Parked P2 polish (no decisions needed): FAQPage schema dedupe across home/faq;
 hreflang→noindex tension (resolve at native review); Source Serif 4 subsetting +
