@@ -181,8 +181,8 @@ const jsonLd = [
       {pricingTiers.map((tier) => (
         <div class={`price-chip ${tier.highlight ? 'is-highlight' : ''}`}>
           {/* Shopify plan names stay EN (brand terms); our chip copy localizes. */}
-          <span class="price-plan">{tier.shopifyPlan === 'Try it' ? tt('pricing.chip.tryIt') : tier.shopifyPlan}</span>
-          <span class="price-amount tabular">{tier.price === 'Free' ? tt('pricing.chip.free') : tier.price}<span class="price-cadence">{tier.cadence === '/mo' ? tt('pricing.chip.mo') : tier.cadence}</span></span>
+          <span class="price-plan">{tier.shopifyPlan}</span>
+          <span class="price-amount tabular">{tier.price}<span class="price-cadence">{tt('pricing.chip.mo')}</span></span>
         </div>
       ))}
     </div>

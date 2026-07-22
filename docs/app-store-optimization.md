@@ -81,15 +81,17 @@ Bring the site's pricing reframe (site-strategy §8) onto the listing:
   gate features — every tier is the identical (Unlimited) feature set,
   auto-selected by the merchant's own Shopify plan (research-notes §1). Stop
   presenting it as feature tiers.
-- **Surface the new Free Starter plan** ("Test All Features Up to 10 Cart
-  Syncs"), now live (research-notes §8b). This **neutralizes the "no free tier"
-  competitive gap** → the listing can say **"Start free."**
-- Live listing prices (2026-07-15): Free Starter → Basic **$4.99** → Grow
-  **$8.99** → **Advanced & Plus $99** (top card renamed from "Shopify Plus"
-  $99.99 — the listing caps public plans at 4, so Advanced is folded in;
-  temporary, owner decision 2026-07-15). The old "Advanced $24.99 not on the
-  listing" reconcile flag is RESOLVED by this fold-in; revert path lives as the
-  commented tier in `src/config/site.ts`.
+- ~~Surface the new Free Starter plan~~ **SUPERSEDED 2026-07-22**: the Free
+  Starter tier is retired — charging is back to approve-on-install. The free
+  lever the listing can still claim is the **30-day free trial on every plan**
+  ("free for 30 days"), not "start free."
+- Target listing prices (owner decision 2026-07-22, reverting the 2026-07-15
+  fold-in): Basic **$4.99** → Grow **$8.99** → Advanced **$24.99** → **Shopify
+  Plus $99.99**, 30-day trial on every plan. The freed 4th public-plan slot
+  (Free Starter's) goes back to the dedicated Advanced plan. ⚠️ The Partner
+  Dashboard listing still shows the 2026-07-15 state until the owner edits it —
+  the site must not deploy ahead of the listing flip. Pre-revert state is
+  tagged `pre-charge-revert-2026-07-22`.
 
 ---
 
@@ -116,7 +118,7 @@ Creations**, handle `persistent-cart-abandoned-cart`, launched **2025-01**, 5.0�
 - Subtitle keyword/outcome framing; the new icon concept; the win-led +
   quantified screenshots and mobile frames; the localized listing copy; the
   "priced to your Shopify plan / every feature included" pricing frame and
-  "start free"; the incumbency-since-2016 positioning; honest scope language.
+  "free for 30 days"; the incumbency-since-2016 positioning; honest scope language.
 
 **CANNOT cross (do not):**
 - **Internal/unapproved numbers** (syncs/day, sync-tied GMV, MRR, store counts)

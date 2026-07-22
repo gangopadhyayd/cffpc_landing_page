@@ -97,11 +97,15 @@ the owner queue), `docs/improvement-plan-2026-07-08.md` (the copy/figure/SEO rou
 1. **Privacy-policy revision (P1)**: formal policy says carts are stored "anonymous…"
    which contradicts the product (account-keyed carts). Legal text; owner edits, then
    port formatting-only. (owner-inputs §4 has the full revision list.)
-2. ✅ Resolved 2026-07-15 — Advanced folded into the top card: **"Advanced & Plus" $99**
-   on listing (en + 10 locales) and site ×15 (was "Shopify Plus" $99.99; the listing caps
-   public plans at 4). TEMPORARY; revert path = commented `advanced` tier in site.ts.
-   Still owed **in the app** (owner): map Advanced shops → `shopify-plus` @ $99.00 —
-   billing does nothing for Advanced stores today (testing phase, no upfront charging).
+2. 🔄 REVERTED 2026-07-22 — testing phase over: charge approved at install again, Free
+   Starter retired, and the freed slot restores a dedicated **Advanced $24.99**; top card
+   back to **"Shopify Plus" $99.99**. Site EN done 2026-07-22 (tag `pre-charge-revert-2026-07-22`
+   holds the prior state); site locales ×14 queued. Still owed (owner) BEFORE deploy:
+   app-side charge re-enable + Advanced-plan mapping, and the Partner Dashboard listing
+   flip (remove Free Starter, add Advanced $24.99, top card → "Shopify Plus" $99.99,
+   en + 10 locales). The 2026-07-15 "map Advanced → shopify-plus @ $99" task is obsolete.
+   Frames/screenshots: check `design-assets/app-store` copy for free-plan claims before
+   any re-upload.
 3. **GMD logo** in the strip is illegible at 26px — swap asset, drop, or accept.
 4. **signed-in vs logged-in** terminology sweep ×15 (recommend "signed-in").
 5. **SERP trims**: home title 72 chars / desc 202 (drafts on request).

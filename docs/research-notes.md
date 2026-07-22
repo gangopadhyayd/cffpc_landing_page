@@ -76,7 +76,7 @@ re-verify time-sensitive web facts (§Parity, §Listing) at publish. Last synthe
 | Advanced-tier stores | **34** | both repos agree | — |
 | Rating | **4.8★** (live 2026-06-30; was 4.9 in brief) | use live listing only | yes (re-verify) |
 | Reviews | **45** (live 2026-06-30; was 46) | don't headline; link to listing | yes (as link) |
-| Pricing from | **Free Starter** (≤10 syncs) then **$4.99/mo**, 30-day trial | NEW free plan live 2026-06-30 → "Start free" | yes |
+| Pricing from | **$4.99/mo**, no free plan, 30-day trial (Free Starter ran 2026-06-30 → 2026-07-22, now retired; charge approved at install) | lead with "free for 30 days", not "start free" | yes (re-verify listing) |
 | **NOT FOUND in growth repo** | carts-transferred count, revenue-influenced, AOV/CR lift | the app repo (§1) HAS syncs/day + sync-tied GMV, but **internal** | owner sign-off |
 
 **Net:** placeholders `storesServed`/`plusStoresServed`/`syncedCartRevenue`/`cartsTransferred` can be backed by

@@ -644,3 +644,42 @@ Ops scar: first attempt ran 14 full reviews in parallel on the session model
 (deterministic guards + checklist fan-out on sonnet) cost ~45% of the failed
 attempt and finished the job. Standing rule: set model per agent; warn owner
 before >200k-token fan-outs.
+
+## Pricing revert: charge-on-install returns, Free Starter retired (2026-07-22)
+
+Owner decision — the no-upfront-charging testing phase is over. The app goes
+back to requiring the application charge at install (approve to launch;
+`trial_days: 30` still gives every plan a 30-day free trial before billing),
+and the plan grid goes back to the pre-testing four paid tiers:
+Basic **$4.99** · Grow **$8.99** · Advanced **$24.99** · **Shopify Plus $99.99**.
+Retiring Free Starter frees the 4th public-plan slot, which is what lets the
+dedicated Advanced plan return within the listing's 4-plan cap — this
+supersedes the 2026-07-15 "Advanced & Plus $99" fold-in AND its owed app-side
+mapping (Advanced shops now get their own plan, not `shopify-plus`).
+
+**Safekeeping**: full pre-revert state tagged `pre-charge-revert-2026-07-22`
+(pushed to origin; restore any file via
+`git checkout pre-charge-revert-2026-07-22 -- <path>`).
+
+**Done this entry (EN only — locales ×14 queued for after owner check):**
+- `site.ts`: free tier removed, `advanced` restored, plus → "Shopify Plus"
+  $99.99; `hasFreePlan: false`; SITE_UPDATED bump.
+- `PricingTable` + `HomePage` chips: dead Free/"Try it" branches removed
+  (would fail `astro check` against the new literal union).
+- `schema.ts`: SoftwareApplication offer was `price: '0'` → `AggregateOffer`
+  $4.99–$99.99 ×4, derived from `pricingTiers` so it can't drift.
+- `llms.txt`: pricing line now "$4.99–$99.99, 30-day free trial".
+- EN strings: en.json (CTAs "start free" → "free for 30 days" / header
+  "Start free trial", pricing intro/trust lines), pricing.json (lede/desc,
+  plus-tier note → "For Shopify Plus stores", new s2 "Approve on install, pay
+  after 30 days", FAQ "free plan?" → "Do I pay the moment I install?"),
+  faq.json q9, and deferred pages plus/summary/calculator/affiliates.
+- Dormant keys kept for i18n parity (prune ×15 in the locale pass):
+  `pricing.tier.free.note`, `pricing.chip.tryIt`, `pricing.chip.free`.
+
+**Sequencing (honesty gate)**: the live listing still shows the 2026-07-15
+state. Do NOT `npm run deploy` until (1) owner re-enables the install charge +
+Advanced mapping in the app, (2) the Partner Dashboard listing is flipped
+(remove Free Starter, add Advanced $24.99, top card → "Shopify Plus" $99.99,
+en + 10 locales), and (3) the site locale pass lands. Also re-check
+`design-assets/app-store` frame copy for free-plan claims before any re-upload.

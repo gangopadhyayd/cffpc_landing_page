@@ -30,7 +30,7 @@
 
   "calc.cta.lead": "Want us to check your actual store instead of benchmarks?",
   "calc.cta.audit": "Get a free store audit",
-  "calc.cta.install": "Add Persistent Cart — start free",
+  "calc.cta.install": "Add Persistent Cart — free for 30 days",
 
   "calc.page.s1.h": "Why a default Shopify store leaks cross-device carts",
   "calc.page.s1.b": "On a standard Shopify store the cart is stored in a browser cookie, not on the customer's account. So a signed-in shopper's cart doesn't follow them from phone to laptop — it simply isn't there on the second device. The shopper either rebuilds a smaller cart from memory or doesn't return at all. Because no error is shown and no email is triggered, most merchants never see the loss in their reports.",

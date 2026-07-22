@@ -5,7 +5,9 @@
  * and won't earn star snippets). The 4.8★ is shown as plain text linking to the
  * App Store listing instead. See docs/research-notes.md §5 / brief §13.
  */
-import { site, proof } from '../config/site';
+import { site, proof, pricingTiers } from '../config/site';
+
+const tierPrices = pricingTiers.map((t) => Number(t.price.replace('$', '')));
 
 const ORG_ID = `${site.url}/#organization`;
 const SITE_ID = `${site.url}/#website`;
@@ -51,10 +53,12 @@ export function softwareApplicationSchema(description: string) {
     description,
     publisher: { '@id': ORG_ID },
     offers: {
-      '@type': 'Offer',
-      price: '0',
+      '@type': 'AggregateOffer',
+      lowPrice: Math.min(...tierPrices).toFixed(2),
+      highPrice: Math.max(...tierPrices).toFixed(2),
+      offerCount: pricingTiers.length,
       priceCurrency: 'USD',
-      description: `Free Starter plan; paid plans from ${proof.pricingFrom} with a ${proof.freeTrialDays}-day free trial.`,
+      description: `Priced to the store's Shopify plan, from ${proof.pricingFrom}; every feature on every plan; ${proof.freeTrialDays}-day free trial.`,
     },
     // No aggregateRating by design (self-serving). 4.8★ shown as text → listing.
   };

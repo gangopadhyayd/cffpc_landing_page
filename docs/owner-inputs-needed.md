@@ -97,14 +97,19 @@ When you next revise the policy text (any wording change needs your sign-off):
 4. **Deletion mechanics:** describe how/when deletion actually happens once the GDPR webhook
    handlers perform real redaction (currently acknowledgment-only — research-notes §1).
 
-## 5. Pricing ✅ (RESOLVED 2026-07-15)
-- Owner decision: the App Store caps public plans at 4, so the Advanced tier is **folded into the top
-  card** — **"Advanced & Plus" at $99/mo** (was "Shopify Plus" $99.99) — as a **temporary fix** until a
-  dedicated Advanced plan is possible. Live tiers now: **Free Starter** (≤10 syncs) · Basic **$4.99** ·
-  Grow **$8.99** · **Advanced & Plus $99**, 30-day trial on paid. Listing (en + 10 locales) and site
-  (×15 locales) both updated 2026-07-15; revert path = the commented `advanced` tier in site.ts.
-- ⚠️ Still owed in the app itself (owner): map Advanced-tier shops → the `shopify-plus` plan handle and
-  charge $99.00. Owner is in a testing phase — stores aren't charged upfront today.
+## 5. Pricing 🔄 (REVERTED 2026-07-22 — owner ending the testing phase)
+- Owner decision 2026-07-22: **charging is back on** — the app charge is approved at install (the app
+  doesn't run without it), the **Free Starter tier is retired**, and its public-plan slot returns the
+  dedicated Advanced plan to the 4-slot cap. Target tiers: Basic **$4.99** · Grow **$8.99** · Advanced
+  **$24.99** · **Shopify Plus $99.99**, 30-day trial on every plan (`trial_days: 30` is in the app).
+  This supersedes the 2026-07-15 "Advanced & Plus $99" temp fix AND its owed follow-up (mapping
+  Advanced shops → `shopify-plus` @ $99.00 is obsolete — Advanced shops get their own plan again).
+- Site: EN updated 2026-07-22 (other locales queued). Pre-revert state tagged `pre-charge-revert-2026-07-22`.
+- ⚠️ Still owed (owner) before the site deploys, so display matches billing:
+  1. **App side**: re-enable the install-time charge; point Advanced-tier shops at the restored
+     Advanced plan ($24.99); retire the free-tier path.
+  2. **Partner Dashboard listing**: remove Free Starter, restore "Shopify Advanced" $24.99, rename/
+     reprice the top card back to "Shopify Plus" $99.99 (en + 10 localized listings).
 - Framing approved and kept: **"every feature on every plan, priced to your Shopify plan."**
 
 ## 6. Partner & affiliate program 🔴 (to finalize terms) / 🟢 (forms capture now)

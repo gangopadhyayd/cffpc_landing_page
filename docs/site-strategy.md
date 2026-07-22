@@ -24,7 +24,7 @@ the levers. "Educate first, then convert" is not a nicety here — it's the whol
 > **Big retailers keep a signed-in shopper's cart on every device. By default, Shopify doesn't.**
 > Sub: *Amazon and Walmart keep a logged-in shopper's cart on every device. Persistent Cart brings that same
 > cross-device sync to Shopify — one click, nothing for your customers to do, no emails or popups.*
-- Primary CTA: **"Add Persistent Cart — start free"** (NEW Free Starter plan → lead with free; 30-day trial on paid).
+- Primary CTA: **"Add Persistent Cart — free for 30 days"** (Free Starter retired 2026-07-22 — charge approved at install; lead with the 30-day trial every plan starts with).
 - Secondary CTA: **"Get a free store audit."**
 - Trust strip: 4.8★ (links to listing) · Built for Shopify · Since 2016.
 - Keep the "signed-in/logged-in" qualifier in the headline (it's what makes the claim true). Avoid never/always.
@@ -72,9 +72,9 @@ icon/screenshot **concepts** (`docs/app-store-optimization.md`).
 
 ## 8. Pricing presentation (recommendation → also push to listing)
 **Reframe from "feature tiers" to "priced to your Shopify plan — every feature on every plan."** (Code truth: all
-tiers are "(Unlimited)", auto-selected by the merchant's Shopify plan.) Show: **Free Starter** (try it, ≤10 syncs)
-→ Basic **$4.99** → Grow **$8.99** → **Advanced & Plus $99** (Advanced folded into the top card 2026-07-15 — the
-listing caps public plans at 4; was Plus $99.99), 30-day trial on paid. Don't price-fight Casper; win on value (ROI ≫ price; calculator) + proof + incumbency. No invented uplift %.
+tiers are "(Unlimited)", auto-selected by the merchant's Shopify plan.) Show: Basic **$4.99** → Grow **$8.99**
+→ Advanced **$24.99** → **Shopify Plus $99.99** (2026-07-22: charge-on-install reverted; Free Starter retired,
+its slot returns Advanced to the listing's 4-plan cap), 30-day trial on every plan. Don't price-fight Casper; win on value (ROI ≫ price; calculator) + proof + incumbency. No invented uplift %.
 
 ## 9. Brand decision
 **Keep the name** "Persistent Cart — Sync Devices" (equity + incumbency + exact-match search). **Evolve the visual

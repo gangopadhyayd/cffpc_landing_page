@@ -37,7 +37,7 @@ export const GET: APIRoute = () => {
   );
   out.push('');
   out.push(`Install: ${site.appStoreUrl}`);
-  out.push(`Pricing: every feature on every plan, priced to your Shopify plan; Free Starter plan + 30-day trial on paid.`);
+  out.push(`Pricing: every feature on every plan, priced to your Shopify plan, from ${proof.pricingFrom} to $99.99/mo; every plan starts with a ${proof.freeTrialDays}-day free trial.`);
   out.push('');
 
   out.push('## Start here');

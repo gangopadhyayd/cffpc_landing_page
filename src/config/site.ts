@@ -58,8 +58,11 @@ export const proof = {
   yearsActive: 2026 - 2016, // derived (~10 yrs)
   builtForShopify: true, // VERIFIED (badge renders on listing)
 
-  hasFreePlan: true, // VERIFIED 2026-06-30 — NEW "Free Starter" (≤10 cart syncs)
-  freeTrialDays: 30, // VERIFIED (paid plans)
+  // OWNER DECISION 2026-07-22: testing phase over — Free Starter retired; the
+  // app charge is approved at install again. Site state pre-dates the listing
+  // flip: re-verify the live listing shows NO free plan before deploying.
+  hasFreePlan: false, // was true (Free Starter, 2026-06-30 → 2026-07-22)
+  freeTrialDays: 30, // VERIFIED in app code (`trial_days: 30`) — billing starts after the trial
   pricingFrom: '$4.99/mo', // VERIFIED — presentation open (priced to Shopify plan)
 
   // Owner placeholders — render qualitative fallback when null.
@@ -122,23 +125,22 @@ export const proofFallback = {
 /**
  * Pricing tiers — framed "priced to your Shopify plan, every feature included"
  * (code truth: all tiers are "Unlimited", auto-selected by the merchant's plan).
- * Re-verify vs the live listing before publish. Mirrors the live listing
- * (verified 2026-07-15): the listing caps public plans at 4, so Advanced is
- * TEMPORARILY folded into the top card — "Advanced & Plus" at $99 (owner
- * decision 2026-07-15; was "Shopify Plus" $99.99).
+ * Re-verify vs the live listing before publish.
+ *
+ * OWNER DECISION 2026-07-22 (reverts the 2026-07-15 temp fix): charging is
+ * back on — the app charge is approved at install, the Free Starter tier is
+ * retired, and its listing slot returns to a dedicated Advanced plan. The four
+ * public-plan slots are now the four paid plans; the top card is "Shopify
+ * Plus" at $99.99 again. Full pre-revert state is tagged
+ * `pre-charge-revert-2026-07-22`; see iteration-log 2026-07-22 entry.
  */
 export const pricingTiers = [
   // No tier is "highlighted": the plan is auto-selected by the merchant's own
   // Shopify subscription, so visually recommending one would contradict that.
-  { id: 'free', shopifyPlan: 'Try it', price: 'Free', cadence: '', note: 'Free Starter — test all features, up to 10 cart syncs', highlight: false },
   { id: 'basic', shopifyPlan: 'Shopify Basic', price: '$4.99', cadence: '/mo', note: '', highlight: false },
   { id: 'grow', shopifyPlan: 'Shopify Grow', price: '$8.99', cadence: '/mo', note: 'Formerly the "Shopify" plan', highlight: false },
-  // REVERT PATH: if a dedicated Advanced plan returns (listing allows >4 public
-  // plans, or the owner splits it back out), restore this tier AND the listing,
-  // and re-point the "plus" tier back to Shopify Plus only. See iteration-log
-  // 2026-07-15 entry.
-  // { id: 'advanced', shopifyPlan: 'Shopify Advanced', price: '$24.99', cadence: '/mo', note: '', highlight: false },
-  { id: 'plus', shopifyPlan: 'Advanced & Plus', price: '$99', cadence: '/mo', note: '', highlight: false },
+  { id: 'advanced', shopifyPlan: 'Shopify Advanced', price: '$24.99', cadence: '/mo', note: '', highlight: false },
+  { id: 'plus', shopifyPlan: 'Shopify Plus', price: '$99.99', cadence: '/mo', note: '', highlight: false },
 ] as const;
 
 /**
@@ -168,6 +170,6 @@ export function appStoreLink(content: string): string {
 }
 
 /** Build-stable "last updated" stamp shown on content pages (edit on refresh). */
-export const SITE_UPDATED = '2026-07-15';
+export const SITE_UPDATED = '2026-07-22';
 
 export type PricingTier = (typeof pricingTiers)[number];
