@@ -99,13 +99,15 @@ the owner queue), `docs/improvement-plan-2026-07-08.md` (the copy/figure/SEO rou
    port formatting-only. (owner-inputs §4 has the full revision list.)
 2. 🔄 REVERTED 2026-07-22 — testing phase over: charge approved at install again, Free
    Starter retired, and the freed slot restores a dedicated **Advanced $24.99**; top card
-   back to **"Shopify Plus" $99.99**. Site EN done 2026-07-22 (tag `pre-charge-revert-2026-07-22`
-   holds the prior state); site locales ×14 queued. Still owed (owner) BEFORE deploy:
-   app-side charge re-enable + Advanced-plan mapping, and the Partner Dashboard listing
-   flip (remove Free Starter, add Advanced $24.99, top card → "Shopify Plus" $99.99,
-   en + 10 locales). The 2026-07-15 "map Advanced → shopify-plus @ $99" task is obsolete.
-   Frames/screenshots: check `design-assets/app-store` copy for free-plan claims before
-   any re-upload.
+   back to **"Shopify Plus" $99.99**. Site EN done (tag `pre-charge-revert-2026-07-22`
+   holds the prior state). **EN LISTING FLIPPED SAME DAY and verified live**: `starter`
+   deleted, `shopify-plus` → $99.99, `shopify-advanced` @ $24.99/30-day created, EN cards
+   renamed/described (iteration-log 2026-07-22 has the full record). Remaining: (a) site
+   locales ×14; (b) localized listings ×10 — they currently show $99.99 under the OLD
+   "Advanced & Plus" localized names with Advanced hidden until each language gets a plan
+   description → do promptly; (c) owner app-side: charge enforcement + Advanced → 
+   `shopify-advanced` mapping + free-path retirement. Frames need no change (no pricing
+   text in screenshots). The 2026-07-15 "map Advanced → shopify-plus @ $99" task is obsolete.
 3. **GMD logo** in the strip is illegible at 26px — swap asset, drop, or accept.
 4. **signed-in vs logged-in** terminology sweep ×15 (recommend "signed-in").
 5. **SERP trims**: home title 72 chars / desc 202 (drafts on request).

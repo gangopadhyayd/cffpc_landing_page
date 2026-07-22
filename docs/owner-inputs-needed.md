@@ -105,11 +105,15 @@ When you next revise the policy text (any wording change needs your sign-off):
   This supersedes the 2026-07-15 "Advanced & Plus $99" temp fix AND its owed follow-up (mapping
   Advanced shops → `shopify-plus` @ $99.00 is obsolete — Advanced shops get their own plan again).
 - Site: EN updated 2026-07-22 (other locales queued). Pre-revert state tagged `pre-charge-revert-2026-07-22`.
-- ⚠️ Still owed (owner) before the site deploys, so display matches billing:
-  1. **App side**: re-enable the install-time charge; point Advanced-tier shops at the restored
-     Advanced plan ($24.99); retire the free-tier path.
-  2. **Partner Dashboard listing**: remove Free Starter, restore "Shopify Advanced" $24.99, rename/
-     reprice the top card back to "Shopify Plus" $99.99 (en + 10 localized listings).
+- ✅ Listing/registry flip DONE for EN (2026-07-22, verified on the public listing): `starter` deleted
+  (existing subscribers unaffected), `shopify-plus` → $99.99, new `shopify-advanced` @ $24.99/30-day
+  created, EN cards renamed ("Shopify Plus") + advanced card described. ⚠️ 10 localized listings are
+  mid-stage: they already show the global $99.99 price under the OLD localized "Advanced & Plus" name,
+  and the Advanced plan stays hidden per language until that language gets a plan description — do the
+  localized pass promptly.
+- ⚠️ Still owed (owner, app side) before the site deploys, so display matches billing:
+  re-enable the install-time charge; point Advanced-tier shops at `shopify-advanced` ($24.99 — the
+  handle now exists in the registry); retire the free-tier code path.
 - Framing approved and kept: **"every feature on every plan, priced to your Shopify plan."**
 
 ## 6. Partner & affiliate program 🔴 (to finalize terms) / 🟢 (forms capture now)

@@ -683,3 +683,39 @@ Advanced mapping in the app, (2) the Partner Dashboard listing is flipped
 (remove Free Starter, add Advanced $24.99, top card → "Shopify Plus" $99.99,
 en + 10 locales), and (3) the site locale pass lands. Also re-check
 `design-assets/app-store` frame copy for free-plan claims before any re-upload.
+
+## App Store listing flip: EN live with charge-on-install pricing (2026-07-22)
+
+Partner Dashboard work (browser session; org Customer First focus → Persistent
+Cart → Distribution → App Store listing). Plan registry ("Manual pricing",
+Public plans 4/4 → edits update the live listing automatically, no re-review):
+
+1. **Deleted `starter` (Free)** — dialog confirmed existing subscribers stay
+   subscribed; freed the 4th public-plan slot.
+2. **`shopify-plus`: $99 → $99.99** (30-day trial unchanged).
+3. **Created `shopify-advanced`** — Monthly recurring, **$24.99**, 30-day
+   trial. Handle chosen to match the handle the app code already references
+   (iteration-log 2026-07-15). New-plan banner: descriptions required per
+   language before the plan displays on that language's listing.
+4. **EN listing cards**: advanced display name "Shopify Advanced" + the 8
+   house-style feature lines ("For stores on Shopify Advanced plan" + 7
+   shared); plus card display name "Advanced & Plus" → "Shopify Plus" and
+   feature 1 → "For Shopify Plus stores". Text set via native-setter + input/
+   change events, saved via the contextual Save bar (same mechanics as
+   [[partner-editor-react-fields]] — worked again).
+
+**Verified on the public listing (curl, fresh fetch):** Basic $4.99 · Grow
+$8.99 · Advanced $24.99 · Plus $99.99, "30-day free trial" ×4, zero hits for
+"Free Starter" / "Advanced &amp; Plus"; header meta now "Free trial
+available". The two "Free plan available" strings on the page belong to
+similar-app recommendation cards (keep-on-hold, nlde-save-for-later), not us.
+
+**Known mid-stage state (10 localized listings)**: registry price is global,
+so they already show **$99.99 with the old localized "Advanced & Plus" display
+name**, and the new Advanced plan is hidden there until each language gets a
+plan description. Name/price mismatch mildly overprices Advanced stores → do
+the localized-listing pass promptly (display names + feature lines per
+language; ko transliterates, see 2026-07-15 entry for per-locale rules).
+
+Still owed (owner, app side): enforce the install-time charge, map Advanced
+shops → `shopify-advanced` @ $24.99, retire the free-tier code path.
