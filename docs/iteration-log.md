@@ -754,3 +754,12 @@ listing (11 languages, live).** Sole remaining item (owner, app code):
 enforce the install-time charge, map Advanced shops → `shopify-advanced`
 @ $24.99, retire the free-tier path. Until that lands, the app itself is the
 only piece not matching the published pricing.
+
+## Owner confirmation: app-side pricing done — revert fully closed (2026-07-22)
+
+Owner confirmed the app-side pricing work is complete (install-time charge,
+Advanced-tier mapping to `shopify-advanced`, free-tier retirement). With that,
+the charge-on-install revert is CLOSED on every surface: app billing, App
+Store listing (11 languages), and site (15 locales, deployed). Display and
+billing match again. Safekeeping tag for the pre-revert world remains
+`pre-charge-revert-2026-07-22`.

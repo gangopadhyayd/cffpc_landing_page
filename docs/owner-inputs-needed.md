@@ -110,9 +110,10 @@ When you next revise the policy text (any wording change needs your sign-off):
   created), EN + all 10 localized listing cards renamed/described and verified on the public
   listings, site ×15 locales updated and DEPLOYED (live-verified). Full record: iteration-log
   2026-07-22 entries.
-- ⚠️ SOLE remaining item (owner, app side) — until it lands, billing behavior won't match the
-  published pricing: re-enable the install-time charge; point Advanced-tier shops at
-  `shopify-advanced` ($24.99 — the handle exists in the registry); retire the free-tier code path.
+- ✅ App side DONE — owner confirmed 2026-07-22: app pricing updated (install-time charge,
+  Advanced-tier mapping, free-tier retirement). **The revert is fully complete**: app billing,
+  listing ×11 languages, and site ×15 locales all match — 4 paid tiers, 30-day trial, charge
+  approved at install.
 - Framing approved and kept: **"every feature on every plan, priced to your Shopify plan."**
 
 ## 6. Partner & affiliate program 🔴 (to finalize terms) / 🟢 (forms capture now)
