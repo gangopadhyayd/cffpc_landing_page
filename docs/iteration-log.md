@@ -719,3 +719,38 @@ language; ko transliterates, see 2026-07-15 entry for per-locale rules).
 
 Still owed (owner, app side): enforce the install-time charge, map Advanced
 shops → `shopify-advanced` @ $24.99, retire the free-tier code path.
+
+## Multilingual completion: site x14 deployed + 10 localized listings flipped (2026-07-22)
+
+Executed per owner instruction with NO session-model (fable) tokens on the bulk
+work: 14 parallel sonnet agents (one per site locale, shared brief) + 1 sonnet
+browser agent (localized listings), orchestration + deterministic verification
+only in the main session.
+
+**Site (commit dd25f2e, 100 files)**: all 14 locales mirror the EN revert —
+CTAs, "Approve on install, pay after 30 days" section, reworked FAQs, pre-fold
+$99.99 prose restored verbatim from 5b69919^ where EN was unchanged, Free
+Starter gone; dormant free-tier keys pruned x15. Notable per-locale calls in
+the commit message. Verified: 378-instance key matrix vs HEAD all changed;
+zero "Free Starter"/bare-$99 in catalogs and dist; build 226 pages + qa-gate
+PASS. **Deployed via npm run deploy** (one credit; IndexNow 225 URLs, HTTP
+200). Live-verified on /pricing x en/de/ja/fr/pl: $24.99 + $99.99 present,
+Free Starter absent.
+
+**Listings (10 languages, browser agent)**: per-language Advanced display
+name added (mostly "Shopify Advanced"; ko "Shopify 어드밴스드" — fits 18) and
+plus card renamed to the language's "Shopify Plus" form; feature lines fixed
+where they exist. **Correction to the 2026-07-15 note**: localized cards
+carry exactly ONE feature line each (the "8" in the editor is capacity, not
+content) — only EN has 8. zh-CN plus line rebuilt as Plus-only (适用于"Plus
+套餐"及以上商店的无限制使用); ko advanced line reuses the old "요금제 이상"
+line verbatim; ko Basic card has a pre-existing leading-space typo (left
+alone). Public-listing curls x10 (zh-CN da nl fr de ja ko pt-BR es sv): all
+four prices present, old names (incl. 어드밴스드 & 플러스) zero, free-plan
+mentions zero.
+
+**State: the revert is COMPLETE on site (15 locales, live) and App Store
+listing (11 languages, live).** Sole remaining item (owner, app code):
+enforce the install-time charge, map Advanced shops → `shopify-advanced`
+@ $24.99, retire the free-tier path. Until that lands, the app itself is the
+only piece not matching the published pricing.
