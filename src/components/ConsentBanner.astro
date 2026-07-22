@@ -88,7 +88,10 @@ const privacyHref = localizedPath(locale, 'privacy');
     function decide(v: string) {
       localStorage.setItem(KEY, v);
       banner.hidden = true;
-      if (v === 'granted' && (window as any).pcLoadGA) (window as any).pcLoadGA();
+      if (v === 'granted') {
+        if ((window as any).pcLoadGA) (window as any).pcLoadGA();
+        if ((window as any).pcLoadOaiq) (window as any).pcLoadOaiq();
+      }
     }
     banner.querySelector('[data-consent-accept]')?.addEventListener('click', () => decide('granted'));
     banner.querySelector('[data-consent-decline]')?.addEventListener('click', () => decide('denied'));

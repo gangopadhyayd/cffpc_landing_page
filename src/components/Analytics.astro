@@ -10,9 +10,14 @@
  * - A tiny tracker forwards [data-event] clicks + lead:submitted + calculator use
  *   to whichever analytics is active. Goal events: install_click, audit_cta,
  *   partner_cta, form_submit/lead_submitted, calculator_used.
+ * - OpenAI Ads pixel (cookies): same consent gate as GA4. Only loads if
+ *   PUBLIC_OPENAI_ADS_PIXEL_ID is set. Forwards only the two key conversions
+ *   (install_click as a custom event, lead_submitted as lead_created) so the
+ *   ads platform optimizes on real outcomes, not soft CTA noise.
  */
 const GA_ID = import.meta.env.PUBLIC_GA4_MEASUREMENT_ID;
 const PLAUSIBLE = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
+const OAIQ_ID = import.meta.env.PUBLIC_OPENAI_ADS_PIXEL_ID;
 ---
 
 {
@@ -26,17 +31,35 @@ const PLAUSIBLE = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
   )
 }
 
-<script define:vars={{ GA_ID, PLAUSIBLE }}>
+<script define:vars={{ GA_ID, PLAUSIBLE, OAIQ_ID }}>
   (function () {
     const CONSENT_KEY = 'pc-consent';
 
-    // Unified event sink → Plausible + GA4 (whichever is loaded).
+    // Unified event sink → Plausible + GA4 + OpenAI Ads (whichever is loaded).
     window.pcTrack = function (name, props) {
       try {
         if (window.plausible) window.plausible(name, props ? { props } : undefined);
       } catch (e) {}
       try {
         if (window.gtag) window.gtag('event', name, props || {});
+      } catch (e) {}
+      try {
+        if (window.oaiq && window.__oaiqLoaded) {
+          const eventId =
+            window.crypto && window.crypto.randomUUID
+              ? window.crypto.randomUUID()
+              : String(Date.now()) + '-' + Math.random().toString(36).slice(2);
+          if (name === 'install_click') {
+            window.oaiq('measure', 'custom', { type: 'custom' }, {
+              custom_event_name: 'install_click',
+              event_id: eventId,
+            });
+          } else if (name === 'lead_submitted') {
+            window.oaiq('measure', 'lead_created', { type: 'customer_action' }, {
+              event_id: eventId,
+            });
+          }
+        }
       } catch (e) {}
     };
 
@@ -67,11 +90,29 @@ const PLAUSIBLE = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
       }
     };
 
+    // Load the OpenAI Ads pixel (only when consented — same gate as GA4).
+    window.pcLoadOaiq = function () {
+      if (!OAIQ_ID || window.__oaiqLoaded) return;
+      window.__oaiqLoaded = true;
+      (function (w, d, s, u) {
+        if (w.oaiq) return;
+        var q = function () { q.q.push(arguments); };
+        q.q = [];
+        w.oaiq = q;
+        var js = d.createElement(s);
+        js.async = true;
+        js.src = u;
+        var f = d.getElementsByTagName(s)[0];
+        f.parentNode.insertBefore(js, f);
+      })(window, document, 'script', 'https://bzrcdn.openai.com/sdk/oaiq.min.js');
+      window.oaiq('init', { pixelId: OAIQ_ID });
+    };
+
     const consentChoice = localStorage.getItem(CONSENT_KEY);
-    if (consentChoice === 'granted') window.pcLoadGA();
-    // Outside consent regions: GA runs without a banner (a stored Decline —
-    // e.g. made while travelling in the EU — still wins above).
-    else if (!consentChoice && !window.pcNeedsConsent()) window.pcLoadGA();
+    if (consentChoice === 'granted') { window.pcLoadGA(); window.pcLoadOaiq(); }
+    // Outside consent regions: GA + ads pixel run without a banner (a stored
+    // Decline — e.g. made while travelling in the EU — still wins above).
+    else if (!consentChoice && !window.pcNeedsConsent()) { window.pcLoadGA(); window.pcLoadOaiq(); }
 
     // Track outbound + CTA clicks declared with data-event.
     document.addEventListener('click', function (e) {
