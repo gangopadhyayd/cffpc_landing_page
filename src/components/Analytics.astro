@@ -94,6 +94,22 @@ const OAIQ_ID = import.meta.env.PUBLIC_OPENAI_ADS_PIXEL_ID;
     window.pcLoadOaiq = function () {
       if (!OAIQ_ID || window.__oaiqLoaded) return;
       window.__oaiqLoaded = true;
+      // WORKAROUND (2026-07-23): OpenAI's edge 503s the pixel SDK's own
+      // no-cors event POSTs, but accepts the identical JSON body as a simple
+      // CORS request (202 accepted_events). Re-send SDK uploads on the
+      // accepted path; fall back to the original request if ours fails.
+      // Remove when /v1/sdk/events returns 2xx without this (OpenAI ticket filed).
+      var pcOrigFetch = window.fetch.bind(window);
+      window.fetch = function (input, init) {
+        try {
+          var u = typeof input === 'string' ? input : (input && input.url) || '';
+          if (u.indexOf('https://bzr.openai.com/v1/sdk/events') === 0 && init && typeof init.body === 'string') {
+            return pcOrigFetch(u, { method: 'POST', mode: 'cors', body: init.body, keepalive: true })
+              .catch(function () { return pcOrigFetch(input, init); });
+          }
+        } catch (e) {}
+        return pcOrigFetch(input, init);
+      };
       (function (w, d, s, u) {
         if (w.oaiq) return;
         var q = function () { q.q.push(arguments); };
