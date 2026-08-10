@@ -1,0 +1,81 @@
+---
+/**
+ * Tracked App Store redirect for the "direct to store" ad test.
+ *
+ * Ads that want to send people straight to the Shopify listing point here
+ * instead of at apps.shopify.com directly — so we still fire GA4 + the OpenAI
+ * pixel (a measurable "reached the store handoff" step, by utm_content) before
+ * forwarding. Shopify never reports install source, so this waypoint is the
+ * best attribution we can keep for a direct-to-store campaign.
+ *
+ * Fires a distinct `appstore_redirect` event (NOT install_click) so the
+ * direct arm doesn't pollute the site's genuine install-CTA conversion.
+ */
+import Analytics from '../../components/Analytics.astro';
+import { appStoreLink } from '../../config/site';
+
+const dest = appStoreLink('chatgpt-direct');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Opening Persistent Cart on the Shopify App Store…</title>
+    <meta http-equiv="refresh" content={`3;url=${dest}`} />
+    <Analytics />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #f7f4ee;
+        color: #1c1815;
+      }
+      .box { text-align: center; padding: 24px; }
+      .spin {
+        width: 34px; height: 34px; margin: 0 auto 18px;
+        border: 3px solid #e4ddd0; border-top-color: #d8541e; border-radius: 50%;
+        animation: r .8s linear infinite;
+      }
+      @keyframes r { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) { .spin { animation: none; } }
+      a { color: #d8541e; }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="spin"></div>
+      <p>Taking you to Persistent Cart on the Shopify App Store…</p>
+      <p><a href={dest}>Continue &rarr;</a></p>
+    </div>
+
+    <script define:vars={{ dest }}>
+      (function () {
+        var done = false;
+        var go = function () {
+          if (done) return;
+          done = true;
+          window.location.replace(dest);
+        };
+        var start = Date.now();
+        (function waitForGA() {
+          if (window.gtag || window.oaiq) {
+            try {
+              if (window.pcTrack) window.pcTrack('appstore_redirect', { source: 'chatgpt-direct' });
+            } catch (e) {}
+            setTimeout(go, 300); // let the beacon flush
+          } else if (Date.now() - start < 1600) {
+            setTimeout(waitForGA, 100);
+          } else {
+            go(); // analytics never loaded (e.g. consent declined) — forward anyway
+          }
+        })();
+      })();
+    </script>
+  </body>
+</html>
