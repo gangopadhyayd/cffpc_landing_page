@@ -13,7 +13,12 @@ import {
 const SITE_URL = 'https://persistentcartapp.com';
 // Locale path segments that are noindex (machine-translated, not yet reviewed) —
 // kept out of the sitemap until native review flips them indexable.
-const NOINDEX_SEGMENTS = LOCALES.filter((l) => !isIndexable(l.code)).map((l) => l.path);
+const NOINDEX_LOCALE_SEGMENTS = LOCALES.filter((l) => !isIndexable(l.code)).map((l) => l.path);
+// Non-locale routes that are noindex by design (tracked outbound redirects like
+// /go/appstore). A noindex URL inside the sitemap is exactly what Search Console
+// flags as "Excluded by 'noindex' tag" for pages in a sitemap (seen 2026-07-28,
+// re-introduced by /go/appstore on 2026-08-10) — keep them out.
+const NOINDEX_SEGMENTS = [...NOINDEX_LOCALE_SEGMENTS, 'go'];
 
 // https://astro.build
 export default defineConfig({
@@ -32,8 +37,9 @@ export default defineConfig({
     mdx(),
     sitemap({
       i18n: { defaultLocale: DEFAULT_LOCALE, locales: SITEMAP_LOCALE_MAP },
-      // Keep unreviewed (noindex) machine-translated locales out of the sitemap
-      // until native review flips them indexable in src/config/locales.ts.
+      // Keep noindex routes out of the sitemap: unreviewed machine-translated
+      // locales (until native review flips them indexable in
+      // src/config/locales.ts) and noindex-by-design routes like /go/*.
       filter: (page) => {
         const path = page.replace(SITE_URL, '').replace(/^\//, '');
         const seg = path.split('/')[0];

@@ -16,7 +16,8 @@
  *   4. i18n locale drift — any English key missing from a locale catalog
  *      (delegates to scripts/i18n-check.mjs).
  *
- * Warnings (reported, never fail): emitted pages absent from the sitemap.
+ * Warnings (reported, never fail): indexable pages absent from the sitemap.
+ * A page that declares noindex is expected to be absent and reports as a pass.
  */
 import { readFile, readdir } from 'node:fs/promises';
 import { resolve, relative, dirname, posix } from 'node:path';
@@ -206,7 +207,13 @@ for (const f of htmlFiles) {
   const asPath = '/' + f.replace(/\.html$/, '').replace(/(^|\/)index$/, '$1');
   const normalized = asPath === '/index' ? '/' : asPath;
   if (!sitemapPaths.has(normalized) && !sitemapPaths.has(normalized + '/') && !sitemapPaths.has('/' + f)) {
-    sitemapMissing.push(normalized);
+    // A page that declares noindex BELONGS out of the sitemap: listing one is
+    // exactly what Search Console flags as "Excluded by 'noindex' tag" for
+    // pages in a sitemap (seen 2026-07-28). Absent + noindex is correct, so
+    // report it as a pass rather than nagging on every build.
+    const html = await readFile(resolve(DIST, f), 'utf8');
+    const noindex = /<meta[^>]+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
+    sitemapMissing.push({ path: normalized, noindex });
   }
 }
 
@@ -277,14 +284,25 @@ if (ga4Problem) {
   console.log(`  ✓ GA4 measurement id baked into the build`);
 }
 
-if (sitemapMissing.length) {
-  const nonLocale = sitemapMissing.filter((p) => !/^\/(?:de|fr|es|it|pt-br|nl|ja|zh-cn|ko|sv|da|pl|nb|fi)(?:\/|$)/.test(p));
+const missingNoindex = sitemapMissing.filter((p) => p.noindex);
+const missingIndexable = sitemapMissing.filter((p) => !p.noindex);
+
+if (missingNoindex.length) {
+  console.log(`  ✓ ${missingNoindex.length} noindex page(s) correctly absent from the sitemap`);
+  for (const p of missingNoindex.slice(0, 10)) console.log(`      ${p.path}`);
+}
+
+if (missingIndexable.length) {
+  const nonLocale = missingIndexable.filter(
+    (p) => !/^\/(?:de|fr|es|it|pt-br|nl|ja|zh-cn|ko|sv|da|pl|nb|fi)(?:\/|$)/.test(p.path)
+  );
   if (nonLocale.length) {
-    console.log(`  ⚠ ${nonLocale.length} non-locale page(s) missing from sitemap:`);
-    for (const p of nonLocale.slice(0, 10)) console.log(`      ${p}`);
-    console.log(`    (+ ${sitemapMissing.length - nonLocale.length} noindex machine-locale pages, expected)`);
+    console.log(`  ⚠ ${nonLocale.length} indexable non-locale page(s) missing from sitemap:`);
+    for (const p of nonLocale.slice(0, 10)) console.log(`      ${p.path}`);
+    const rest = missingIndexable.length - nonLocale.length;
+    if (rest) console.log(`    (+ ${rest} machine-locale page(s))`);
   } else {
-    console.log(`  ⚠ ${sitemapMissing.length} page(s) not in sitemap — all noindex machine locales, expected`);
+    console.log(`  ⚠ ${missingIndexable.length} page(s) not in sitemap — all machine locales`);
   }
 }
 
