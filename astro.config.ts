@@ -9,6 +9,7 @@ import {
   LOCALES,
   isIndexable,
 } from './src/config/locales';
+import { SITE_UPDATED } from './src/config/site';
 
 const SITE_URL = 'https://persistentcartapp.com';
 // Locale path segments that are noindex (machine-translated, not yet reviewed) —
@@ -37,6 +38,13 @@ export default defineConfig({
     mdx(),
     sitemap({
       i18n: { defaultLocale: DEFAULT_LOCALE, locales: SITEMAP_LOCALE_MAP },
+      // <lastmod> on every URL = the same "last updated" stamp the pages show
+      // (SITE_UPDATED). Search Console (2026-11-19) still held 202 locale pages
+      // as "Excluded by noindex" from crawls of Jul 12–18, before the Jul 20
+      // flip — with no lastmod the sitemap gave Google no reason to revisit.
+      // Only bump SITE_UPDATED when page content really changes: Google
+      // ignores lastmod once it stops matching reality.
+      lastmod: new Date(`${SITE_UPDATED}T00:00:00Z`),
       // Keep noindex routes out of the sitemap: unreviewed machine-translated
       // locales (until native review flips them indexable in
       // src/config/locales.ts) and noindex-by-design routes like /go/*.
