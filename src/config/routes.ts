@@ -32,6 +32,10 @@ export interface PageDef {
  * nav/footer placement below). See docs/v1-recommendation.md for the rationale.
  */
 export const V1_DEFERRED = new Set<string>([
+  // 2026-11-19 owner decision: one privacy text only. The plain-language /privacy
+  // explainer contradicted the formal policy, so it is no longer emitted;
+  // /privacy redirects to /privacy-policy (netlify.toml). Remove this line to restore it.
+  'privacy',
   'calculator',
   'free-audit',
   'partners',
@@ -88,7 +92,7 @@ const ALL_PAGES: PageDef[] = [
   { key: 'support', slug: 'support', cluster: 'core', footer: { group: 'company', order: 2 } },
   { key: 'privacy', slug: 'privacy', cluster: 'legal', footer: { group: 'company', order: 4 } },
   // Formal legal policy (verbatim port from the old heroku host; EN-only content).
-  { key: 'privacy-policy', slug: 'privacy-policy', cluster: 'legal', parent: 'privacy', footer: { group: 'company', order: 5 } },
+  { key: 'privacy-policy', slug: 'privacy-policy', cluster: 'legal', footer: { group: 'company', order: 5 } },
 ];
 
 /**

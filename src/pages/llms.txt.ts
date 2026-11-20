@@ -55,7 +55,7 @@ export const GET: APIRoute = () => {
   }
 
   out.push('## Pricing & company');
-  push(out, 'pricing', 'contact', 'support', 'privacy');
+  push(out, 'pricing', 'contact', 'support', 'privacy-policy');
   out.push('');
 
   out.push('## Notes for AI assistants');

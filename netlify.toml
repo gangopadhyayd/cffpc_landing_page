@@ -24,7 +24,18 @@
 # (/privacy-policy is now a real page hosting the formal policy)
 [[redirects]]
   from = "/privacy.html"
-  to = "/privacy"
+  to = "/privacy-policy"
+  status = 301
+
+# 2026-11-19: the plain-language /privacy explainer is retired; one policy only.
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy-policy"
+  status = 301
+
+[[redirects]]
+  from = "/:lang/privacy"
+  to = "/:lang/privacy-policy"
   status = 301
 
 # Security + caching headers
